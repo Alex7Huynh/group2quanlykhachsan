@@ -74,6 +74,13 @@ namespace G2_QLKS.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap backrounđanhmucphong {
+            get {
+                object obj = ResourceManager.GetObject("backrounđanhmucphong", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap book_cd_vide {
             get {
                 object obj = ResourceManager.GetObject("book cd vide", resourceCulture);

@@ -188,7 +188,7 @@
             this.toolStripButton_Sau});
             this.toolStrip_ToolBarChinh.Location = new System.Drawing.Point(0, 24);
             this.toolStrip_ToolBarChinh.Name = "toolStrip_ToolBarChinh";
-            this.toolStrip_ToolBarChinh.Size = new System.Drawing.Size(1251, 25);
+            this.toolStrip_ToolBarChinh.Size = new System.Drawing.Size(1051, 25);
             this.toolStrip_ToolBarChinh.TabIndex = 5;
             this.toolStrip_ToolBarChinh.Text = "ToolBar Chính";
             // 
@@ -228,7 +228,7 @@
             this.toolStripMenuItem_Help});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1251, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1051, 24);
             this.menuStrip1.TabIndex = 6;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -307,11 +307,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.MediumTurquoise;
             this.BackgroundImage = global::G2_QLKS.Properties.Resources.libertador_paracas04low;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1251, 672);
+            this.ClientSize = new System.Drawing.Size(1051, 368);
             this.Controls.Add(this.toolStrip_ToolBarChinh);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.navBarControl);
