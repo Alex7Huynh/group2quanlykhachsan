@@ -43,6 +43,7 @@
     <Reference Include="DevExpress.XtraScheduler.v9.1.Extensions, Version=9.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraSpellChecker.v9.1, Version=9.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraSpellChecker.v9.1.Core, Version=9.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraVerticalGrid.v9.1, Version=9.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
@@ -79,6 +80,12 @@
     <Compile Include="ManHinhChinh.Designer.cs">
       <DependentUpon>ManHinhChinh.cs</DependentUpon>
     </Compile>
+    <Compile Include="ManHinhDatPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManHinhDatPhong.Designer.cs">
+      <DependentUpon>ManHinhDatPhong.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AboutBox.resx">
@@ -91,6 +98,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ManHinhChinh.resx">
       <DependentUpon>ManHinhChinh.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManHinhDatPhong.resx">
+      <DependentUpon>ManHinhDatPhong.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
@@ -140,6 +151,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\backrounđanhmucphong.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\datphong.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -39,7 +39,8 @@ namespace G2_QLKS
         // Nhấn Button chức năng Đặt phòng
         private void simpleButton_DatPhong_Click(object sender, EventArgs e)
         {
-
+            ManHinhDatPhong form = new ManHinhDatPhong();
+            form.Show();
         }
 
 
