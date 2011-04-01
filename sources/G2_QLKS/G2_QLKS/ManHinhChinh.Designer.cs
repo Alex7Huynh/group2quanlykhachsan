@@ -35,29 +35,39 @@
             this.navBarControl = new DevExpress.XtraNavBar.NavBarControl();
             this.navBarGroupControlContainer2 = new DevExpress.XtraNavBar.NavBarGroupControlContainer();
             this.simpleButton_DatPhong = new DevExpress.XtraEditors.SimpleButton();
+            this.navBarGroupControlContainer3 = new DevExpress.XtraNavBar.NavBarGroupControlContainer();
+            this.simpleButton_ThongTinPhong = new DevExpress.XtraEditors.SimpleButton();
             this.navBarGroup_QuanLyThuePhong = new DevExpress.XtraNavBar.NavBarGroup();
+            this.navBarGroup_TraCuu = new DevExpress.XtraNavBar.NavBarGroup();
             this.toolStrip_ToolBarChinh = new System.Windows.Forms.ToolStrip();
             this.toolStripButton_Truoc = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton_Sau = new System.Windows.Forms.ToolStripButton();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem_File = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem_Exit = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem_Edit = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem_View = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem_ViewToolbar = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem_ViewThanhChucNang = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem_Help = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem_About = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem_HelpDiaglog = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem_Exit = new System.Windows.Forms.ToolStripMenuItem();
             this.navBarGroupControlContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.navBarControl)).BeginInit();
             this.navBarControl.SuspendLayout();
             this.navBarGroupControlContainer2.SuspendLayout();
+            this.navBarGroupControlContainer3.SuspendLayout();
             this.toolStrip_ToolBarChinh.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // simpleButton_DieuChinhDanhMucPhong
             // 
-            this.simpleButton_DieuChinhDanhMucPhong.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.simpleButton_DieuChinhDanhMucPhong.Appearance.BackColor = System.Drawing.Color.LemonChiffon;
+            this.simpleButton_DieuChinhDanhMucPhong.Appearance.Options.UseBackColor = true;
+            this.simpleButton_DieuChinhDanhMucPhong.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.simpleButton_DieuChinhDanhMucPhong.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
+            this.simpleButton_DieuChinhDanhMucPhong.Cursor = System.Windows.Forms.Cursors.Hand;
             this.simpleButton_DieuChinhDanhMucPhong.Image = global::G2_QLKS.Properties.Resources.Home1;
             this.simpleButton_DieuChinhDanhMucPhong.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
             this.simpleButton_DieuChinhDanhMucPhong.ImeMode = System.Windows.Forms.ImeMode.On;
@@ -89,16 +99,19 @@
             // 
             this.navBarControl.ActiveGroup = this.navBarGroup_QuanLyPhong;
             this.navBarControl.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.navBarControl.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.navBarControl.ContentButtonHint = null;
             this.navBarControl.Controls.Add(this.navBarGroupControlContainer1);
             this.navBarControl.Controls.Add(this.navBarGroupControlContainer2);
+            this.navBarControl.Controls.Add(this.navBarGroupControlContainer3);
             this.navBarControl.Groups.AddRange(new DevExpress.XtraNavBar.NavBarGroup[] {
             this.navBarGroup_QuanLyPhong,
-            this.navBarGroup_QuanLyThuePhong});
+            this.navBarGroup_QuanLyThuePhong,
+            this.navBarGroup_TraCuu});
             this.navBarControl.Location = new System.Drawing.Point(0, 49);
             this.navBarControl.Name = "navBarControl";
             this.navBarControl.OptionsNavPane.ExpandedWidth = 140;
-            this.navBarControl.Size = new System.Drawing.Size(199, 211);
+            this.navBarControl.Size = new System.Drawing.Size(199, 317);
             this.navBarControl.TabIndex = 4;
             this.navBarControl.Text = "navBarControl1";
             // 
@@ -111,7 +124,11 @@
             // 
             // simpleButton_DatPhong
             // 
+            this.simpleButton_DatPhong.Appearance.BackColor = System.Drawing.Color.LemonChiffon;
+            this.simpleButton_DatPhong.Appearance.Options.UseBackColor = true;
             this.simpleButton_DatPhong.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.simpleButton_DatPhong.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
+            this.simpleButton_DatPhong.Cursor = System.Windows.Forms.Cursors.Hand;
             this.simpleButton_DatPhong.Image = global::G2_QLKS.Properties.Resources.Calendario;
             this.simpleButton_DatPhong.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
             this.simpleButton_DatPhong.ImeMode = System.Windows.Forms.ImeMode.On;
@@ -121,6 +138,29 @@
             this.simpleButton_DatPhong.TabIndex = 3;
             this.simpleButton_DatPhong.Text = "Đặt phòng";
             // 
+            // navBarGroupControlContainer3
+            // 
+            this.navBarGroupControlContainer3.Controls.Add(this.simpleButton_ThongTinPhong);
+            this.navBarGroupControlContainer3.Name = "navBarGroupControlContainer3";
+            this.navBarGroupControlContainer3.Size = new System.Drawing.Size(195, 77);
+            this.navBarGroupControlContainer3.TabIndex = 2;
+            // 
+            // simpleButton_ThongTinPhong
+            // 
+            this.simpleButton_ThongTinPhong.Appearance.BackColor = System.Drawing.Color.LemonChiffon;
+            this.simpleButton_ThongTinPhong.Appearance.Options.UseBackColor = true;
+            this.simpleButton_ThongTinPhong.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.simpleButton_ThongTinPhong.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
+            this.simpleButton_ThongTinPhong.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.simpleButton_ThongTinPhong.Image = global::G2_QLKS.Properties.Resources.book_cd_vide;
+            this.simpleButton_ThongTinPhong.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
+            this.simpleButton_ThongTinPhong.ImeMode = System.Windows.Forms.ImeMode.On;
+            this.simpleButton_ThongTinPhong.Location = new System.Drawing.Point(0, -1);
+            this.simpleButton_ThongTinPhong.Name = "simpleButton_ThongTinPhong";
+            this.simpleButton_ThongTinPhong.Size = new System.Drawing.Size(195, 75);
+            this.simpleButton_ThongTinPhong.TabIndex = 7;
+            this.simpleButton_ThongTinPhong.Text = "Thông tin phòng";
+            // 
             // navBarGroup_QuanLyThuePhong
             // 
             this.navBarGroup_QuanLyThuePhong.Caption = "Quản lý thuê phòng";
@@ -129,6 +169,15 @@
             this.navBarGroup_QuanLyThuePhong.GroupClientHeight = 80;
             this.navBarGroup_QuanLyThuePhong.GroupStyle = DevExpress.XtraNavBar.NavBarGroupStyle.ControlContainer;
             this.navBarGroup_QuanLyThuePhong.Name = "navBarGroup_QuanLyThuePhong";
+            // 
+            // navBarGroup_TraCuu
+            // 
+            this.navBarGroup_TraCuu.Caption = "Tra cứu";
+            this.navBarGroup_TraCuu.ControlContainer = this.navBarGroupControlContainer3;
+            this.navBarGroup_TraCuu.Expanded = true;
+            this.navBarGroup_TraCuu.GroupClientHeight = 79;
+            this.navBarGroup_TraCuu.GroupStyle = DevExpress.XtraNavBar.NavBarGroupStyle.ControlContainer;
+            this.navBarGroup_TraCuu.Name = "navBarGroup_TraCuu";
             // 
             // toolStrip_ToolBarChinh
             // 
@@ -191,6 +240,13 @@
             this.toolStripMenuItem_File.Size = new System.Drawing.Size(37, 20);
             this.toolStripMenuItem_File.Text = "File";
             // 
+            // toolStripMenuItem_Exit
+            // 
+            this.toolStripMenuItem_Exit.Name = "toolStripMenuItem_Exit";
+            this.toolStripMenuItem_Exit.Size = new System.Drawing.Size(92, 22);
+            this.toolStripMenuItem_Exit.Text = "Exit";
+            this.toolStripMenuItem_Exit.Click += new System.EventHandler(this.toolStripMenuItem_Exit_Click);
+            // 
             // toolStripMenuItem_Edit
             // 
             this.toolStripMenuItem_Edit.Name = "toolStripMenuItem_Edit";
@@ -199,9 +255,30 @@
             // 
             // toolStripMenuItem_View
             // 
+            this.toolStripMenuItem_View.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem_ViewToolbar,
+            this.toolStripMenuItem_ViewThanhChucNang});
             this.toolStripMenuItem_View.Name = "toolStripMenuItem_View";
             this.toolStripMenuItem_View.Size = new System.Drawing.Size(44, 20);
             this.toolStripMenuItem_View.Text = "View";
+            // 
+            // toolStripMenuItem_ViewToolbar
+            // 
+            this.toolStripMenuItem_ViewToolbar.Checked = true;
+            this.toolStripMenuItem_ViewToolbar.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.toolStripMenuItem_ViewToolbar.Name = "toolStripMenuItem_ViewToolbar";
+            this.toolStripMenuItem_ViewToolbar.Size = new System.Drawing.Size(167, 22);
+            this.toolStripMenuItem_ViewToolbar.Text = "Toolbar";
+            this.toolStripMenuItem_ViewToolbar.Click += new System.EventHandler(this.toolStripMenuItem_ViewToolbar_Click);
+            // 
+            // toolStripMenuItem_ViewThanhChucNang
+            // 
+            this.toolStripMenuItem_ViewThanhChucNang.Checked = true;
+            this.toolStripMenuItem_ViewThanhChucNang.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.toolStripMenuItem_ViewThanhChucNang.Name = "toolStripMenuItem_ViewThanhChucNang";
+            this.toolStripMenuItem_ViewThanhChucNang.Size = new System.Drawing.Size(167, 22);
+            this.toolStripMenuItem_ViewThanhChucNang.Text = "Thanh chức năng";
+            this.toolStripMenuItem_ViewThanhChucNang.Click += new System.EventHandler(this.toolStripMenuItem_ViewThanhChucNang_Click);
             // 
             // toolStripMenuItem_Help
             // 
@@ -226,13 +303,6 @@
             this.toolStripMenuItem_HelpDiaglog.Text = "Help";
             this.toolStripMenuItem_HelpDiaglog.Click += new System.EventHandler(this.toolStripMenuItem_HelpDiaglog_Click);
             // 
-            // toolStripMenuItem_Exit
-            // 
-            this.toolStripMenuItem_Exit.Name = "toolStripMenuItem_Exit";
-            this.toolStripMenuItem_Exit.Size = new System.Drawing.Size(152, 22);
-            this.toolStripMenuItem_Exit.Text = "Exit";
-            this.toolStripMenuItem_Exit.Click += new System.EventHandler(this.toolStripMenuItem_Exit_Click);
-            // 
             // ManHinhChinh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -255,6 +325,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.navBarControl)).EndInit();
             this.navBarControl.ResumeLayout(false);
             this.navBarGroupControlContainer2.ResumeLayout(false);
+            this.navBarGroupControlContainer3.ResumeLayout(false);
             this.toolStrip_ToolBarChinh.ResumeLayout(false);
             this.toolStrip_ToolBarChinh.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
@@ -284,6 +355,11 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem_About;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem_HelpDiaglog;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem_Exit;
+        private DevExpress.XtraNavBar.NavBarGroupControlContainer navBarGroupControlContainer3;
+        private DevExpress.XtraNavBar.NavBarGroup navBarGroup_TraCuu;
+        private DevExpress.XtraEditors.SimpleButton simpleButton_ThongTinPhong;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem_ViewToolbar;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem_ViewThanhChucNang;
 
 
 

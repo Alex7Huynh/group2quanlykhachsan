@@ -74,6 +74,20 @@ namespace G2_QLKS.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap book_cd_vide {
+            get {
+                object obj = ResourceManager.GetObject("book cd vide", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap btn {
+            get {
+                object obj = ResourceManager.GetObject("btn", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap Calendario {
             get {
                 object obj = ResourceManager.GetObject("Calendario", resourceCulture);
