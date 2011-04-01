@@ -9,11 +9,33 @@ using System.Windows.Forms;
 
 namespace G2_QLKS
 {
-    public partial class Form1 : Form
+    public partial class ManHinhChinh : Form
     {
-        public Form1()
+        public ManHinhChinh()
         {
             InitializeComponent();
         }
+
+        private void ManHinhChinh_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void simpleButton_DieuChinhDanhMucPhong_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void simpleButton_DatPhong_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        
+
+
+       
+
+        
     }
 }
