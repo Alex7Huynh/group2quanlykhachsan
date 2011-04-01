@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>9.0.21022</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{31D503EB-1A8C-4D85-8AB3-8CE81836DD3D}</ProjectGuid>
+    <ProjectGuid>{414AC6B6-68E7-43CD-9EEE-3069336114AF}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>G2_QLKS</RootNamespace>
-    <AssemblyName>G2_QLKS</AssemblyName>
+    <RootNamespace>QLKS_5Star</RootNamespace>
+    <AssemblyName>QLKS_5Star</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -33,20 +33,11 @@
   <ItemGroup>
     <Reference Include="DevExpress.Data.v9.1, Version=9.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Utils.v9.1, Version=9.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraBars.v9.1, Version=9.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraEditors.v9.1, Version=9.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraLayout.v9.1, Version=9.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraNavBar.v9.1, Version=9.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraScheduler.v9.1, Version=9.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraScheduler.v9.1.Core, Version=9.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraScheduler.v9.1.Extensions, Version=9.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraSpellChecker.v9.1, Version=9.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraSpellChecker.v9.1.Core, Version=9.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="System" />
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
-    <Reference Include="System.Design" />
     <Reference Include="System.Xml.Linq">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
@@ -60,16 +51,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ManHinhChinh.cs">
+    <Compile Include="frmManHinhChinh.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ManHinhChinh.Designer.cs">
-      <DependentUpon>ManHinhChinh.cs</DependentUpon>
+    <Compile Include="frmManHinhChinh.Designer.cs">
+      <DependentUpon>frmManHinhChinh.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="ManHinhChinh.resx">
-      <DependentUpon>ManHinhChinh.cs</DependentUpon>
+    <EmbeddedResource Include="frmManHinhChinh.resx">
+      <DependentUpon>frmManHinhChinh.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
@@ -94,19 +85,13 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Home1.png" />
+    <None Include="Resources\Background.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Calendario.png" />
+    <None Include="Resources\Button_themphong.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\libertador_paracas04low.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Arrow-Right.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Arrow-Left.png" />
+    <None Include="Resources\Button_xoaphong.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

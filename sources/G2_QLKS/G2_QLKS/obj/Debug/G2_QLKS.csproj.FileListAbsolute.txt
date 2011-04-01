@@ -1,0 +1,9 @@
+D:\KHTN\Thirth Year (2010-2011)\Semester2\Xay dung PM\BT\Nhom lon\Work Space\sources\G2_QLKS\G2_QLKS\bin\Debug\G2_QLKS.exe
+D:\KHTN\Thirth Year (2010-2011)\Semester2\Xay dung PM\BT\Nhom lon\Work Space\sources\G2_QLKS\G2_QLKS\bin\Debug\G2_QLKS.pdb
+D:\KHTN\Thirth Year (2010-2011)\Semester2\Xay dung PM\BT\Nhom lon\Work Space\sources\G2_QLKS\G2_QLKS\obj\Debug\ResolveAssemblyReference.cache
+D:\KHTN\Thirth Year (2010-2011)\Semester2\Xay dung PM\BT\Nhom lon\Work Space\sources\G2_QLKS\G2_QLKS\obj\Debug\G2_QLKS.ManHinhChinh.resources
+D:\KHTN\Thirth Year (2010-2011)\Semester2\Xay dung PM\BT\Nhom lon\Work Space\sources\G2_QLKS\G2_QLKS\obj\Debug\G2_QLKS.Properties.Resources.resources
+D:\KHTN\Thirth Year (2010-2011)\Semester2\Xay dung PM\BT\Nhom lon\Work Space\sources\G2_QLKS\G2_QLKS\obj\Debug\G2_QLKS.csproj.GenerateResource.Cache
+D:\KHTN\Thirth Year (2010-2011)\Semester2\Xay dung PM\BT\Nhom lon\Work Space\sources\G2_QLKS\G2_QLKS\obj\Debug\G2_QLKS.exe
+D:\KHTN\Thirth Year (2010-2011)\Semester2\Xay dung PM\BT\Nhom lon\Work Space\sources\G2_QLKS\G2_QLKS\obj\Debug\G2_QLKS.pdb
+D:\KHTN\Thirth Year (2010-2011)\Semester2\Xay dung PM\BT\Nhom lon\Work Space\sources\G2_QLKS\G2_QLKS\obj\Debug\G2_QLKS.exe.licenses
