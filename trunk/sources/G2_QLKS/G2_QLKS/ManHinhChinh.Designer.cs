@@ -46,6 +46,7 @@
             this.toolStripMenuItem_Help = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem_About = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem_HelpDiaglog = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem_Exit = new System.Windows.Forms.ToolStripMenuItem();
             this.navBarGroupControlContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.navBarControl)).BeginInit();
             this.navBarControl.SuspendLayout();
@@ -184,6 +185,8 @@
             // 
             // toolStripMenuItem_File
             // 
+            this.toolStripMenuItem_File.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem_Exit});
             this.toolStripMenuItem_File.Name = "toolStripMenuItem_File";
             this.toolStripMenuItem_File.Size = new System.Drawing.Size(37, 20);
             this.toolStripMenuItem_File.Text = "File";
@@ -222,6 +225,13 @@
             this.toolStripMenuItem_HelpDiaglog.Size = new System.Drawing.Size(107, 22);
             this.toolStripMenuItem_HelpDiaglog.Text = "Help";
             this.toolStripMenuItem_HelpDiaglog.Click += new System.EventHandler(this.toolStripMenuItem_HelpDiaglog_Click);
+            // 
+            // toolStripMenuItem_Exit
+            // 
+            this.toolStripMenuItem_Exit.Name = "toolStripMenuItem_Exit";
+            this.toolStripMenuItem_Exit.Size = new System.Drawing.Size(152, 22);
+            this.toolStripMenuItem_Exit.Text = "Exit";
+            this.toolStripMenuItem_Exit.Click += new System.EventHandler(this.toolStripMenuItem_Exit_Click);
             // 
             // ManHinhChinh
             // 
@@ -273,6 +283,7 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem_Help;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem_About;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem_HelpDiaglog;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem_Exit;
 
 
 
