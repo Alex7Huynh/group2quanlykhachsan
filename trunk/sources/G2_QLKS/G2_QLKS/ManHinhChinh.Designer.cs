@@ -137,6 +137,7 @@
             this.simpleButton_DatPhong.Size = new System.Drawing.Size(195, 75);
             this.simpleButton_DatPhong.TabIndex = 3;
             this.simpleButton_DatPhong.Text = "Đặt phòng";
+            this.simpleButton_DatPhong.Click += new System.EventHandler(this.simpleButton_DatPhong_Click);
             // 
             // navBarGroupControlContainer3
             // 
