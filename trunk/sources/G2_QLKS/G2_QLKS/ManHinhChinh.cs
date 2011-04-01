@@ -31,6 +31,33 @@ namespace G2_QLKS
 
         }
 
+        private void toolStripMenuItem_About_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripMenuItem_HelpDiaglog_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripButton_Truoc_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripButton_Sau_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+     
+
+       
+
+        
+
         
 
 

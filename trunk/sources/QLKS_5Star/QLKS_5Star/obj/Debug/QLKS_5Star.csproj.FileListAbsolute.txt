@@ -1,0 +1,5 @@
+D:\KHTN\Thirth Year (2010-2011)\Semester2\Xay dung PM\BT\Nhom lon\Work Space\sources\QLKS_5Star\QLKS_5Star\obj\Debug\ResolveAssemblyReference.cache
+D:\KHTN\Thirth Year (2010-2011)\Semester2\Xay dung PM\BT\Nhom lon\Work Space\sources\QLKS_5Star\QLKS_5Star\obj\Debug\QLKS_5Star.frmManHinhChinh.resources
+D:\KHTN\Thirth Year (2010-2011)\Semester2\Xay dung PM\BT\Nhom lon\Work Space\sources\QLKS_5Star\QLKS_5Star\obj\Debug\QLKS_5Star.Properties.Resources.resources
+D:\KHTN\Thirth Year (2010-2011)\Semester2\Xay dung PM\BT\Nhom lon\Work Space\sources\QLKS_5Star\QLKS_5Star\obj\Debug\QLKS_5Star.csproj.GenerateResource.Cache
+D:\KHTN\Thirth Year (2010-2011)\Semester2\Xay dung PM\BT\Nhom lon\Work Space\sources\QLKS_5Star\QLKS_5Star\obj\Debug\QLKS_5Star.exe.licenses
