@@ -23,7 +23,8 @@ namespace G2_QLKS
 
         private void simpleButton_DieuChinhDanhMucPhong_Click(object sender, EventArgs e)
         {
-
+            DieuChinhDanhMucPhong frmDieuChinhDanhMucPhong = new DieuChinhDanhMucPhong();
+            frmDieuChinhDanhMucPhong.Show();
         }
 
         private void simpleButton_DatPhong_Click(object sender, EventArgs e)
@@ -33,7 +34,8 @@ namespace G2_QLKS
 
         private void toolStripMenuItem_About_Click(object sender, EventArgs e)
         {
-
+            AboutBox dlgAbout = new AboutBox();
+            dlgAbout.ShowDialog();
         }
 
         private void toolStripMenuItem_HelpDiaglog_Click(object sender, EventArgs e)
@@ -49,6 +51,11 @@ namespace G2_QLKS
         private void toolStripButton_Sau_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void toolStripMenuItem_Exit_Click(object sender, EventArgs e)
+        {
+            Close();
         }
 
 
