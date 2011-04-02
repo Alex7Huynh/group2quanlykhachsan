@@ -18,7 +18,8 @@ namespace QLKS_5Star
 
         private void btn_themPhong_Click(object sender, EventArgs e)
         {
-
+            QuanLyPhong quanLyPhong = new QuanLyPhong();
+            int soPhong = quanLyPhong.TimPhongTotNhat(new DateTime(2010, 4, 3), 2);
         }
 
         private void button1_Click(object sender, EventArgs e)
