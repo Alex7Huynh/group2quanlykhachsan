@@ -8,9 +8,9 @@ namespace G2_QLKS
 {
     public class WebServiceLoader
     {
-        private static WebService.Service1SoapClient ws = new Service1SoapClient();
+        private static WebService.WebService1SoapClient ws = new WebService1SoapClient();
 
-        public static WebService.Service1SoapClient Ws
+        public static WebService.WebService1SoapClient Ws
         {
             get { return WebServiceLoader.ws; }
         }
