@@ -16,7 +16,7 @@ namespace DAO
             {
                 link = KetNoi();
                 string chuoiLenh;
-                chuoiLenh = "insert into PHIEUTHUE(MaPhieuThue, MaPhong, NgayThue, SoNgayThue) values(@MaPhieuThue, @MaPhong, @NgayThue, @SoNgayThue)";
+                chuoiLenh = "insert into PHIEUTHUE(MaPhieuThue, MaPhong, NgayThue, SoNgayThue, TenKhachHangDaiDien) values(@MaPhieuThue, @MaPhong, @NgayThue, @SoNgayThue, @TenKhachHangDaiDien)";
                 OleDbCommand lenh = new OleDbCommand(chuoiLenh, link);
 
                 OleDbParameter thamSo = new OleDbParameter("@MP", OleDbType.LongVarChar);
@@ -31,6 +31,9 @@ namespace DAO
                 lenh.Parameters.Add(thamSo);
                 thamSo = new OleDbParameter("@NgayThue", OleDbType.Date);
                 thamSo.Value = phieu.NgayThue;
+                lenh.Parameters.Add(thamSo);
+                thamSo = new OleDbParameter("@TenKhachHangDaiDien", OleDbType.LongVarChar);
+                thamSo.Value = phieu.TenKhachHangDaiDien;
                 lenh.Parameters.Add(thamSo);
 
                 lenh.ExecuteNonQuery();
@@ -84,7 +87,7 @@ namespace DAO
             try
             {
                 link = KetNoi();
-                string chuoiLenh = "select MaPhieuThue, MaPhong, NgayThue, SoNgayThue from PHIEUTHUE where PHIEUTHUE.MaPhong=@MaPhong";
+                string chuoiLenh = "select MaPhieuThue, MaPhong, NgayThue, SoNgayThue, TenKhachHangDaiDien from PHIEUTHUE where PHIEUTHUE.MaPhong=@MaPhong";
                 lenh = new OleDbCommand(chuoiLenh, link);
                 thamSo = new OleDbParameter("@MaPhong", OleDbType.LongVarChar);
                 thamSo.Value = phong.MaPhong;
@@ -98,6 +101,7 @@ namespace DAO
                     phieu.MaPhong = Doc.GetString(1);
                     phieu.NgayThue = Doc.GetDateTime(2);
                     phieu.SoNgayThue = int.Parse(Doc.GetValue(3).ToString());
+                    phieu.TenKhachHangDaiDien = Doc.GetString(4);
                     dsPhieu.Add(phieu);
                 }
             }

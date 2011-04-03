@@ -37,5 +37,13 @@ namespace DTO
             get { return soNgayThue; }
             set { soNgayThue = value; }
         }
+
+        private string tenKhachHangDaiDien;
+
+        public string TenKhachHangDaiDien
+        {
+            get { return tenKhachHangDaiDien; }
+            set { tenKhachHangDaiDien = value; }
+        }
     }
 }

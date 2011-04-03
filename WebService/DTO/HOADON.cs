@@ -14,12 +14,12 @@ namespace DTO
             get { return maHoaDon; }
             set { maHoaDon = value; }
         }
-        private string tenKhachHang;
+        private string tenKhachHangThanhToan;
 
-        public string TenKhachHang
+        public string TenKhachHangThanhToan
         {
-            get { return tenKhachHang; }
-            set { tenKhachHang = value; }
+            get { return tenKhachHangThanhToan; }
+            set { tenKhachHangThanhToan = value; }
         }
         private DateTime ngayThanhToan;
 
