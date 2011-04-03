@@ -16,7 +16,7 @@ namespace DAO
             try
             {
                 link = KetNoi();
-                string chuoiLenh = "select MaHoaDon, TenKhachHang, NgayThanhToan, ThanhTien, MaPhieuThue from HOADON";
+                string chuoiLenh = "select MaHoaDon, TenKhachHangThanhToan, NgayThanhToan, ThanhTien, MaPhieuThue from HOADON";
                 OleDbCommand lenh = new OleDbCommand(chuoiLenh, link);
 
                 OleDbDataReader Doc = lenh.ExecuteReader();
@@ -24,7 +24,7 @@ namespace DAO
                 {
                     HOADON hd = new HOADON();
                     hd.MaHoaDon =Doc.GetString(0);
-                    hd.TenKhachHang =Doc.GetString(1);
+                    hd.TenKhachHangThanhToan =Doc.GetString(1);
                     hd.NgayThanhToan =Doc.GetDateTime(2);
                     hd.Thanhtien =Doc.GetInt32(3);
                     hd.MaPhieuThue = Doc.GetString(4);
