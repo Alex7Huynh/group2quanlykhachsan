@@ -55,6 +55,12 @@ namespace PTTK_WS
         }
         //PHIEUTHUEBUS
         [WebMethod]
+        public static bool ptbToiUuPhieuThue()
+        {
+            //tối ưu các phiếu thuê phòng ở đây.
+            return true;
+        }
+        [WebMethod]
         public static bool ptbThemPhieu(PHIEUTHUE phieu)
         {
             return PHIEUTHUEBUS.ThemPhieu(phieu);

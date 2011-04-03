@@ -232,6 +232,9 @@ namespace G2_QLKS.WebService {
         
         private int SoNgayThueField;
         
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string TenKhachHangDaiDienField;
+        
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
             get {
@@ -290,6 +293,19 @@ namespace G2_QLKS.WebService {
                 if ((this.SoNgayThueField.Equals(value) != true)) {
                     this.SoNgayThueField = value;
                     this.RaisePropertyChanged("SoNgayThue");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public string TenKhachHangDaiDien {
+            get {
+                return this.TenKhachHangDaiDienField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.TenKhachHangDaiDienField, value) != true)) {
+                    this.TenKhachHangDaiDienField = value;
+                    this.RaisePropertyChanged("TenKhachHangDaiDien");
                 }
             }
         }
@@ -426,7 +442,7 @@ namespace G2_QLKS.WebService {
         private string MaHoaDonField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string TenKhachHangField;
+        private string TenKhachHangThanhToanField;
         
         private System.DateTime NgayThanhToanField;
         
@@ -459,14 +475,14 @@ namespace G2_QLKS.WebService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public string TenKhachHang {
+        public string TenKhachHangThanhToan {
             get {
-                return this.TenKhachHangField;
+                return this.TenKhachHangThanhToanField;
             }
             set {
-                if ((object.ReferenceEquals(this.TenKhachHangField, value) != true)) {
-                    this.TenKhachHangField = value;
-                    this.RaisePropertyChanged("TenKhachHang");
+                if ((object.ReferenceEquals(this.TenKhachHangThanhToanField, value) != true)) {
+                    this.TenKhachHangThanhToanField = value;
+                    this.RaisePropertyChanged("TenKhachHangThanhToan");
                 }
             }
         }
