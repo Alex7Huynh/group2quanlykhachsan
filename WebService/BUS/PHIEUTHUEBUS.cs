@@ -17,5 +17,10 @@ namespace BUS
         {
             return PHIEUTHUEDAO.LayDSPhieuThueTheoPhong(phong);
         }
+
+        public static bool ptbToiUuPhieuThue()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
