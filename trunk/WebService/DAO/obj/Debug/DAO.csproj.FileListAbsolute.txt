@@ -1,0 +1,7 @@
+D:\Thuc _Hanh_All\Xay Dung\Do An 2\WebService\DAO\bin\Debug\DAO.dll
+D:\Thuc _Hanh_All\Xay Dung\Do An 2\WebService\DAO\bin\Debug\DAO.pdb
+D:\Thuc _Hanh_All\Xay Dung\Do An 2\WebService\DAO\bin\Debug\DTO.dll
+D:\Thuc _Hanh_All\Xay Dung\Do An 2\WebService\DAO\bin\Debug\DTO.pdb
+D:\Thuc _Hanh_All\Xay Dung\Do An 2\WebService\DAO\obj\Debug\ResolveAssemblyReference.cache
+D:\Thuc _Hanh_All\Xay Dung\Do An 2\WebService\DAO\obj\Debug\DAO.dll
+D:\Thuc _Hanh_All\Xay Dung\Do An 2\WebService\DAO\obj\Debug\DAO.pdb
