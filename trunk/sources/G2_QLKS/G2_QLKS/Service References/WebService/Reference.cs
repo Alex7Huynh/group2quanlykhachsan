@@ -1167,5 +1167,15 @@ namespace G2_QLKS.WebService {
             G2_QLKS.WebService.hdblayDSHoaDonResponse retVal = ((G2_QLKS.WebService.Service1Soap)(this)).hdblayDSHoaDon(inValue);
             return retVal.Body.hdblayDSHoaDonResult;
         }
+
+        internal void ptbToiUuPhieuThue()
+        {
+            throw new NotImplementedException();
+        }
+
+        internal bool ptbThemPhieu(PHIEUTHUE _phieuThue)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
