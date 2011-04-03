@@ -31,6 +31,12 @@ namespace PTTK_WS
         }
 
         [WebMethod]
+        public List<PHONG> pbLayDSPhongTheoLoaiPhong(LOAIPHONG loaiPhong)
+        {
+            return PHONGBUS.LayDSPhongTheoLoaiPhong(loaiPhong);
+        }
+
+        [WebMethod]
         public List<LOAIPHONG> pbLayDSLoaiPhong()
         {
             return PHONGBUS.LayDSLoaiPhong();

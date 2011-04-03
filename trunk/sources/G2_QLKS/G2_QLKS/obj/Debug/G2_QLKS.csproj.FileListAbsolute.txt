@@ -36,3 +36,4 @@ D:\Thuc _Hanh_All\Xay Dung\Do An 2\sources\G2_QLKS\G2_QLKS\obj\Debug\G2_QLKS.UCD
 D:\Thuc _Hanh_All\Xay Dung\Do An 2\sources\G2_QLKS\G2_QLKS\obj\Debug\G2_QLKS.UCXemPhieuThuePhong.resources
 D:\Thuc _Hanh_All\Xay Dung\Do An 2\sources\G2_QLKS\G2_QLKS\obj\Debug\G2_QLKS.csproj.GenerateResource.Cache
 D:\Thuc _Hanh_All\Xay Dung\Do An 2\sources\G2_QLKS\G2_QLKS\obj\Debug\G2_QLKS.exe.licenses
+D:\Thuc _Hanh_All\Xay Dung\Do An 2\sources\G2_QLKS\G2_QLKS\obj\Debug\G2_QLKS.frmReservation.resources

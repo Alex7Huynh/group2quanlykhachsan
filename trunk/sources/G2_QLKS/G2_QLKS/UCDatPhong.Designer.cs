@@ -54,6 +54,7 @@
             this.btnReservation.TabIndex = 4;
             this.btnReservation.Text = "Reservation";
             this.btnReservation.UseVisualStyleBackColor = true;
+            this.btnReservation.Click += new System.EventHandler(this.btnReservation_Click);
             // 
             // btnCheckIn
             // 
@@ -81,6 +82,7 @@
             this.btnPreviousLoaiPhong.TabIndex = 7;
             this.btnPreviousLoaiPhong.Text = "<<<";
             this.btnPreviousLoaiPhong.UseVisualStyleBackColor = true;
+            this.btnPreviousLoaiPhong.Click += new System.EventHandler(this.btnPreviousLoaiPhong_Click);
             // 
             // btnNextLoaiPhong
             // 
@@ -90,6 +92,7 @@
             this.btnNextLoaiPhong.TabIndex = 8;
             this.btnNextLoaiPhong.Text = ">>>";
             this.btnNextLoaiPhong.UseVisualStyleBackColor = true;
+            this.btnNextLoaiPhong.Click += new System.EventHandler(this.btnNextLoaiPhong_Click);
             // 
             // lblLoaiPhong
             // 

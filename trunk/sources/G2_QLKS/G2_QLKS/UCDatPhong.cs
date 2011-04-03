@@ -14,10 +14,28 @@ namespace G2_QLKS
     {
         private List<PHONG> _arrPhong;
 
+        private List<LOAIPHONG> _arrLoaiPhong;
+
+        private int _currentLoaiPhong = 0;
+
+        private void LoadDanhSachLoaiPhong()
+        {
+            _arrLoaiPhong = WebServiceLoader.Ws.pbLayDSLoaiPhong().ToList();
+            _currentLoaiPhong = 0;
+            UpdateDanhSachPhong();
+        }
+
+        private void UpdateDanhSachPhong()
+        {
+            LoadDanhSachPhong(WebServiceLoader.Ws.pbLayDSPhongTheoLoaiPhong(_arrLoaiPhong[_currentLoaiPhong]).ToList());
+            txtLoaiPhong.Text = _arrLoaiPhong[_currentLoaiPhong].TenLoaiPhong;
+        }
+
         public void LoadDanhSachPhong(List<PHONG> dsPhong)
         {
             _arrPhong = dsPhong;
 
+            ucXemPhieuThuePhong.RemoveAll();
             for (int i = 0; i < _arrPhong.Count; i++)
             {
                 ucXemPhieuThuePhong.AddPhong(_arrPhong[i]);
@@ -46,11 +64,34 @@ namespace G2_QLKS
         {
             InitializeComponent();
             UpdateDateTime();
+            LoadDanhSachLoaiPhong();
         }
 
         private void mclCalendar_DateChanged(object sender, DateRangeEventArgs e)
         {
             UpdateDateTime();
+        }
+
+        private void btnNextLoaiPhong_Click(object sender, EventArgs e)
+        {
+            _currentLoaiPhong = (++_currentLoaiPhong) % _arrLoaiPhong.Count;
+            UpdateDanhSachPhong();
+        }
+
+        private void btnPreviousLoaiPhong_Click(object sender, EventArgs e)
+        {
+            if (_currentLoaiPhong == 0)
+            {
+                _currentLoaiPhong = _arrLoaiPhong.Count;
+            }
+            _currentLoaiPhong = (--_currentLoaiPhong) % _arrLoaiPhong.Count;
+            UpdateDanhSachPhong();
+        }
+
+        private void btnReservation_Click(object sender, EventArgs e)
+        {
+            Form frm = new frmReservation();
+            frm.ShowDialog();
         }
     }
 }
