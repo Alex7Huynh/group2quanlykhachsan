@@ -50,7 +50,7 @@ namespace G2_QLKS
                 _cachePhieuThue.RemoveAt(0);
             }
             //UpdateRows();
-            UpdateRowsAndColumns();
+            //UpdateRowsAndColumns();
         }
 
         public void AddDateRange(DateTime BeginDate, DateTime EndDate)

@@ -135,5 +135,10 @@ namespace BUS
         //    }
         //    return arrNgayThue;
         //}
+
+        public static List<PHONG> LayDSPhongTheoLoaiPhong(LOAIPHONG loaiPhong)
+        {
+            return PHONGDAO.LayDSPhongTheoLoaiPhong(loaiPhong);
+        }
     }
 }

@@ -136,5 +136,43 @@ namespace DAO
                     link.Close();
             }
         }
+
+        public static List<PHONG> LayDSPhongTheoLoaiPhong(LOAIPHONG loaiPhong)
+        {
+            OleDbConnection link = null;
+            List<PHONG> dsPhong = new List<PHONG>();
+            try
+            {
+                link = KetNoi();
+                string chuoiLenh = "Select MaPhong,TenPhong,MaLoaiPhong,GhiChu,TinhTrang from PHONG where PHONG.MaLoaiPhong = @MaLoaiPhong";
+                OleDbCommand lenh = new OleDbCommand(chuoiLenh, link);
+                OleDbParameter thamSo = new OleDbParameter("@MaLoaiPhong", OleDbType.LongVarChar);
+                thamSo.Value = loaiPhong.MaLoaiPhong;
+                lenh.Parameters.Add(thamSo);
+
+                OleDbDataReader Doc = lenh.ExecuteReader();
+                while (Doc.Read())
+                {
+                    PHONG phg = new PHONG();
+                    phg.MaPhong = Doc.GetString(0);
+                    phg.TenPhong = Doc.GetString(1);
+                    phg.MaLoaiPhong = Doc.GetString(2);
+                    phg.GhiChu = Doc.GetString(3);
+                    phg.TinhTrang = Doc.GetString(4);
+
+                    dsPhong.Add(phg);
+                }
+            }
+            catch (Exception ex)
+            {
+                dsPhong = new List<PHONG>();
+            }
+            finally
+            {
+                if (link != null && link.State == System.Data.ConnectionState.Open)
+                    link.Close();
+            }
+            return dsPhong;
+        }
     }
 }
