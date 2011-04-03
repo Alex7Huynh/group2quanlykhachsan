@@ -33,13 +33,16 @@
             this.lblTo = new System.Windows.Forms.Label();
             this.dtpEndDate = new System.Windows.Forms.DateTimePicker();
             this.lblDuration = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtDuration = new System.Windows.Forms.TextBox();
             this.lblTen = new System.Windows.Forms.Label();
             this.txtTen = new System.Windows.Forms.TextBox();
             this.lblLoaiPhong = new System.Windows.Forms.Label();
             this.cboLoaiPhong = new System.Windows.Forms.ComboBox();
-            this.cboPhong = new System.Windows.Forms.ComboBox();
-            this.lblPhong = new System.Windows.Forms.Label();
+            this.lblDays = new System.Windows.Forms.Label();
+            this.btnOk = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
+            this.lblDonGia = new System.Windows.Forms.Label();
+            this.txtDonGia = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // dtpBeginDate
@@ -50,11 +53,12 @@
             this.dtpBeginDate.Name = "dtpBeginDate";
             this.dtpBeginDate.Size = new System.Drawing.Size(96, 20);
             this.dtpBeginDate.TabIndex = 0;
+            this.dtpBeginDate.ValueChanged += new System.EventHandler(this.dtpBeginDate_ValueChanged);
             // 
             // lblFrom
             // 
             this.lblFrom.AutoSize = true;
-            this.lblFrom.Location = new System.Drawing.Point(42, 151);
+            this.lblFrom.Location = new System.Drawing.Point(12, 152);
             this.lblFrom.Name = "lblFrom";
             this.lblFrom.Size = new System.Drawing.Size(30, 13);
             this.lblFrom.TabIndex = 1;
@@ -63,7 +67,7 @@
             // lblTo
             // 
             this.lblTo.AutoSize = true;
-            this.lblTo.Location = new System.Drawing.Point(42, 177);
+            this.lblTo.Location = new System.Drawing.Point(12, 177);
             this.lblTo.Name = "lblTo";
             this.lblTo.Size = new System.Drawing.Size(20, 13);
             this.lblTo.TabIndex = 2;
@@ -77,27 +81,29 @@
             this.dtpEndDate.Name = "dtpEndDate";
             this.dtpEndDate.Size = new System.Drawing.Size(96, 20);
             this.dtpEndDate.TabIndex = 3;
+            this.dtpEndDate.ValueChanged += new System.EventHandler(this.dtpEndDate_ValueChanged);
             // 
             // lblDuration
             // 
             this.lblDuration.AutoSize = true;
-            this.lblDuration.Location = new System.Drawing.Point(202, 152);
+            this.lblDuration.Location = new System.Drawing.Point(210, 173);
             this.lblDuration.Name = "lblDuration";
             this.lblDuration.Size = new System.Drawing.Size(47, 13);
             this.lblDuration.TabIndex = 4;
             this.lblDuration.Text = "Duration";
             // 
-            // textBox1
+            // txtDuration
             // 
-            this.textBox1.Location = new System.Drawing.Point(205, 168);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 5;
+            this.txtDuration.Location = new System.Drawing.Point(263, 170);
+            this.txtDuration.Name = "txtDuration";
+            this.txtDuration.ReadOnly = true;
+            this.txtDuration.Size = new System.Drawing.Size(100, 20);
+            this.txtDuration.TabIndex = 5;
             // 
             // lblTen
             // 
             this.lblTen.AutoSize = true;
-            this.lblTen.Location = new System.Drawing.Point(12, 77);
+            this.lblTen.Location = new System.Drawing.Point(12, 68);
             this.lblTen.Name = "lblTen";
             this.lblTen.Size = new System.Drawing.Size(26, 13);
             this.lblTen.TabIndex = 6;
@@ -105,9 +111,9 @@
             // 
             // txtTen
             // 
-            this.txtTen.Location = new System.Drawing.Point(78, 74);
+            this.txtTen.Location = new System.Drawing.Point(78, 65);
             this.txtTen.Name = "txtTen";
-            this.txtTen.Size = new System.Drawing.Size(100, 20);
+            this.txtTen.Size = new System.Drawing.Size(121, 20);
             this.txtTen.TabIndex = 7;
             // 
             // lblLoaiPhong
@@ -126,43 +132,78 @@
             this.cboLoaiPhong.Name = "cboLoaiPhong";
             this.cboLoaiPhong.Size = new System.Drawing.Size(121, 21);
             this.cboLoaiPhong.TabIndex = 9;
+            this.cboLoaiPhong.SelectedIndexChanged += new System.EventHandler(this.cboLoaiPhong_SelectedIndexChanged);
             // 
-            // cboPhong
+            // lblDays
             // 
-            this.cboPhong.FormattingEnabled = true;
-            this.cboPhong.Location = new System.Drawing.Point(311, 12);
-            this.cboPhong.Name = "cboPhong";
-            this.cboPhong.Size = new System.Drawing.Size(121, 21);
-            this.cboPhong.TabIndex = 11;
+            this.lblDays.AutoSize = true;
+            this.lblDays.Location = new System.Drawing.Point(370, 173);
+            this.lblDays.Name = "lblDays";
+            this.lblDays.Size = new System.Drawing.Size(31, 13);
+            this.lblDays.TabIndex = 12;
+            this.lblDays.Text = "Days";
             // 
-            // lblPhong
+            // btnOk
             // 
-            this.lblPhong.AutoSize = true;
-            this.lblPhong.Location = new System.Drawing.Point(244, 15);
-            this.lblPhong.Name = "lblPhong";
-            this.lblPhong.Size = new System.Drawing.Size(38, 13);
-            this.lblPhong.TabIndex = 10;
-            this.lblPhong.Text = "Phòng";
+            this.btnOk.Location = new System.Drawing.Point(62, 229);
+            this.btnOk.Name = "btnOk";
+            this.btnOk.Size = new System.Drawing.Size(75, 23);
+            this.btnOk.TabIndex = 13;
+            this.btnOk.Text = "Ok";
+            this.btnOk.UseVisualStyleBackColor = true;
+            this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.Location = new System.Drawing.Point(288, 229);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(75, 23);
+            this.btnCancel.TabIndex = 14;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // lblDonGia
+            // 
+            this.lblDonGia.AutoSize = true;
+            this.lblDonGia.Location = new System.Drawing.Point(269, 15);
+            this.lblDonGia.Name = "lblDonGia";
+            this.lblDonGia.Size = new System.Drawing.Size(46, 13);
+            this.lblDonGia.TabIndex = 15;
+            this.lblDonGia.Text = "Đơn Giá";
+            // 
+            // txtDonGia
+            // 
+            this.txtDonGia.Location = new System.Drawing.Point(349, 12);
+            this.txtDonGia.Name = "txtDonGia";
+            this.txtDonGia.ReadOnly = true;
+            this.txtDonGia.Size = new System.Drawing.Size(100, 20);
+            this.txtDonGia.TabIndex = 16;
             // 
             // frmReservation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(600, 261);
-            this.Controls.Add(this.cboPhong);
-            this.Controls.Add(this.lblPhong);
+            this.ClientSize = new System.Drawing.Size(460, 264);
+            this.Controls.Add(this.txtDonGia);
+            this.Controls.Add(this.lblDonGia);
+            this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.btnOk);
+            this.Controls.Add(this.lblDays);
             this.Controls.Add(this.cboLoaiPhong);
             this.Controls.Add(this.lblLoaiPhong);
             this.Controls.Add(this.txtTen);
             this.Controls.Add(this.lblTen);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtDuration);
             this.Controls.Add(this.lblDuration);
             this.Controls.Add(this.dtpEndDate);
             this.Controls.Add(this.lblTo);
             this.Controls.Add(this.lblFrom);
             this.Controls.Add(this.dtpBeginDate);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmReservation";
             this.Text = "Reservation";
+            this.Load += new System.EventHandler(this.frmReservation_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -175,12 +216,15 @@
         private System.Windows.Forms.Label lblTo;
         private System.Windows.Forms.DateTimePicker dtpEndDate;
         private System.Windows.Forms.Label lblDuration;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtDuration;
         private System.Windows.Forms.Label lblTen;
         private System.Windows.Forms.TextBox txtTen;
         private System.Windows.Forms.Label lblLoaiPhong;
         private System.Windows.Forms.ComboBox cboLoaiPhong;
-        private System.Windows.Forms.ComboBox cboPhong;
-        private System.Windows.Forms.Label lblPhong;
+        private System.Windows.Forms.Label lblDays;
+        private System.Windows.Forms.Button btnOk;
+        private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.Label lblDonGia;
+        private System.Windows.Forms.TextBox txtDonGia;
     }
 }
