@@ -1,0 +1,11 @@
+D:\Thuc _Hanh_All\Xay Dung\Do An 2\WebService\PTTK_WS\bin\PTTK_WS.dll
+D:\Thuc _Hanh_All\Xay Dung\Do An 2\WebService\PTTK_WS\bin\PTTK_WS.pdb
+D:\Thuc _Hanh_All\Xay Dung\Do An 2\WebService\PTTK_WS\bin\BUS.dll
+D:\Thuc _Hanh_All\Xay Dung\Do An 2\WebService\PTTK_WS\bin\DTO.dll
+D:\Thuc _Hanh_All\Xay Dung\Do An 2\WebService\PTTK_WS\bin\DAO.dll
+D:\Thuc _Hanh_All\Xay Dung\Do An 2\WebService\PTTK_WS\bin\BUS.pdb
+D:\Thuc _Hanh_All\Xay Dung\Do An 2\WebService\PTTK_WS\bin\DAO.pdb
+D:\Thuc _Hanh_All\Xay Dung\Do An 2\WebService\PTTK_WS\bin\DTO.pdb
+D:\Thuc _Hanh_All\Xay Dung\Do An 2\WebService\PTTK_WS\obj\Release\ResolveAssemblyReference.cache
+D:\Thuc _Hanh_All\Xay Dung\Do An 2\WebService\PTTK_WS\obj\Release\PTTK_WS.dll
+D:\Thuc _Hanh_All\Xay Dung\Do An 2\WebService\PTTK_WS\obj\Release\PTTK_WS.pdb
