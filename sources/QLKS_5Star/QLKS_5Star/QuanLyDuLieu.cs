@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Xml;
+using System.Windows.Forms;
 
 namespace QLKS_5Star
 {
@@ -99,7 +100,8 @@ namespace QLKS_5Star
         public int[][] LaySoDoTinhTrangPhong(int iNgay, int iThang, int iNam)
         {
             XmlNode xmlNam = GetXmlNode("Nam", "Giatri", iNam.ToString());
-            int[][] soDoTinhTrangPhong = new int[xmlNam.ChildNodes.Count][];
+            int[][] soDoTinhTrangPhong = new  int[xmlNam.ChildNodes.Count][];
+            //List<List<int>> soDoTinhTrangPhong = new List<List<int>>();
             
             for (int i = 0; i < xmlNam.ChildNodes.Count; i++ )
             {
@@ -157,7 +159,7 @@ namespace QLKS_5Star
             String xPath = "//" + nodeName + "[@" + attName + "= " + "'" + valueOfAtt + "'" + "]";
             return _taiLieu.SelectSingleNode(xPath);
         }
-        /*
+        
         //insert 
         public bool Insert(XmlNode newNode, XmlNode parent)
         {
@@ -168,6 +170,7 @@ namespace QLKS_5Star
             }
             catch (System.Exception e)
             {
+                
                 return false;
             }
         }
@@ -284,6 +287,6 @@ namespace QLKS_5Star
             List<String> ds = GetStringList(parentName, parentAttName, valueOfParentAtt, att);
             cmb.DataSource = ds;
             cmb.DisplayMember = ds[0];
-        }*/
+        }
     }
 }
