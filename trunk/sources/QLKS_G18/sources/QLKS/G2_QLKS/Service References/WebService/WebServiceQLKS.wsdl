@@ -94,7 +94,11 @@
         <s:complexType />
       </s:element>
       <s:element name="ptbToiUuPhieuThue">
-        <s:complexType />
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="loaiPhong" type="tns:LOAIPHONG" />
+          </s:sequence>
+        </s:complexType>
       </s:element>
       <s:element name="ptbToiUuPhieuThueResponse">
         <s:complexType>

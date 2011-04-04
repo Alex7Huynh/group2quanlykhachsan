@@ -79,7 +79,7 @@ namespace G2_QLKS
             {
                 MessageBox.Show("Invalid information!");
             }
-            WebServiceLoader.Ws.ptbToiUuPhieuThue();
+            WebServiceLoader.Ws.ptbToiUuPhieuThue((LOAIPHONG)cboLoaiPhong.Items[cboLoaiPhong.SelectedIndex]);
             if (WebServiceLoader.Ws.ptbThemPhieu(_phieuThue))
             {
                 MessageBox.Show("Da dat phong thanh cong");

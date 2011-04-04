@@ -564,8 +564,9 @@ namespace G2_QLKS.WebService {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/pbXoaPhong", ReplyAction="*")]
         G2_QLKS.WebService.pbXoaPhongResponse pbXoaPhong(G2_QLKS.WebService.pbXoaPhongRequest request);
         
+        // CODEGEN: Generating message contract since element name loaiPhong from namespace http://tempuri.org/ is not marked nillable
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ptbToiUuPhieuThue", ReplyAction="*")]
-        bool ptbToiUuPhieuThue();
+        G2_QLKS.WebService.ptbToiUuPhieuThueResponse ptbToiUuPhieuThue(G2_QLKS.WebService.ptbToiUuPhieuThueRequest request);
         
         // CODEGEN: Generating message contract since element name phieu from namespace http://tempuri.org/ is not marked nillable
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ptbThemPhieu", ReplyAction="*")]
@@ -936,6 +937,70 @@ namespace G2_QLKS.WebService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class ptbToiUuPhieuThueRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="ptbToiUuPhieuThue", Namespace="http://tempuri.org/", Order=0)]
+        public G2_QLKS.WebService.ptbToiUuPhieuThueRequestBody Body;
+        
+        public ptbToiUuPhieuThueRequest() {
+        }
+        
+        public ptbToiUuPhieuThueRequest(G2_QLKS.WebService.ptbToiUuPhieuThueRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class ptbToiUuPhieuThueRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public G2_QLKS.WebService.LOAIPHONG loaiPhong;
+        
+        public ptbToiUuPhieuThueRequestBody() {
+        }
+        
+        public ptbToiUuPhieuThueRequestBody(G2_QLKS.WebService.LOAIPHONG loaiPhong) {
+            this.loaiPhong = loaiPhong;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class ptbToiUuPhieuThueResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="ptbToiUuPhieuThueResponse", Namespace="http://tempuri.org/", Order=0)]
+        public G2_QLKS.WebService.ptbToiUuPhieuThueResponseBody Body;
+        
+        public ptbToiUuPhieuThueResponse() {
+        }
+        
+        public ptbToiUuPhieuThueResponse(G2_QLKS.WebService.ptbToiUuPhieuThueResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class ptbToiUuPhieuThueResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
+        public bool ptbToiUuPhieuThueResult;
+        
+        public ptbToiUuPhieuThueResponseBody() {
+        }
+        
+        public ptbToiUuPhieuThueResponseBody(bool ptbToiUuPhieuThueResult) {
+            this.ptbToiUuPhieuThueResult = ptbToiUuPhieuThueResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class ptbThemPhieuRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="ptbThemPhieu", Namespace="http://tempuri.org/", Order=0)]
@@ -1275,8 +1340,17 @@ namespace G2_QLKS.WebService {
             G2_QLKS.WebService.pbXoaPhongResponse retVal = ((G2_QLKS.WebService.WebServiceQLKSSoap)(this)).pbXoaPhong(inValue);
         }
         
-        public bool ptbToiUuPhieuThue() {
-            return base.Channel.ptbToiUuPhieuThue();
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        G2_QLKS.WebService.ptbToiUuPhieuThueResponse G2_QLKS.WebService.WebServiceQLKSSoap.ptbToiUuPhieuThue(G2_QLKS.WebService.ptbToiUuPhieuThueRequest request) {
+            return base.Channel.ptbToiUuPhieuThue(request);
+        }
+        
+        public bool ptbToiUuPhieuThue(G2_QLKS.WebService.LOAIPHONG loaiPhong) {
+            G2_QLKS.WebService.ptbToiUuPhieuThueRequest inValue = new G2_QLKS.WebService.ptbToiUuPhieuThueRequest();
+            inValue.Body = new G2_QLKS.WebService.ptbToiUuPhieuThueRequestBody();
+            inValue.Body.loaiPhong = loaiPhong;
+            G2_QLKS.WebService.ptbToiUuPhieuThueResponse retVal = ((G2_QLKS.WebService.WebServiceQLKSSoap)(this)).ptbToiUuPhieuThue(inValue);
+            return retVal.Body.ptbToiUuPhieuThueResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
