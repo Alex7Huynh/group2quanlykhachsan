@@ -3,3 +3,8 @@ D:\Thuc _Hanh_All\Xay Dung\Do An 2\WebService\DTO\bin\Release\DTO.pdb
 D:\Thuc _Hanh_All\Xay Dung\Do An 2\WebService\DTO\obj\Release\ResolveAssemblyReference.cache
 D:\Thuc _Hanh_All\Xay Dung\Do An 2\WebService\DTO\obj\Release\DTO.dll
 D:\Thuc _Hanh_All\Xay Dung\Do An 2\WebService\DTO\obj\Release\DTO.pdb
+D:\Thuc _Hanh_All\Xay Dung\Do An 3\WebService\DTO\bin\Release\DTO.dll
+D:\Thuc _Hanh_All\Xay Dung\Do An 3\WebService\DTO\bin\Release\DTO.pdb
+D:\Thuc _Hanh_All\Xay Dung\Do An 3\WebService\DTO\obj\Release\ResolveAssemblyReference.cache
+D:\Thuc _Hanh_All\Xay Dung\Do An 3\WebService\DTO\obj\Release\DTO.dll
+D:\Thuc _Hanh_All\Xay Dung\Do An 3\WebService\DTO\obj\Release\DTO.pdb
