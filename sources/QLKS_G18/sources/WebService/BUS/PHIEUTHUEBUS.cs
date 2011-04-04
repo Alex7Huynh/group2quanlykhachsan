@@ -9,6 +9,15 @@ namespace BUS
 {
     public class PHIEUTHUEBUS
     {
+        static LOAIPHONG _loaiPhongCanToiUu;
+
+        public static LOAIPHONG LoaiPhongCanToiUu
+        {
+            get { return _loaiPhongCanToiUu; }
+            set { _loaiPhongCanToiUu = value; }
+        }
+
+
         public static bool ThemPhieu(PHIEUTHUE phieu)
         {
             return PHIEUTHUEDAO.ThemPhieu(phieu);
@@ -18,9 +27,19 @@ namespace BUS
             return PHIEUTHUEDAO.LayDSPhieuThueTheoPhong(phong);
         }
 
-        public static bool ptbToiUuPhieuThue()
+        public static bool ptbToiUuPhieuThue(LOAIPHONG loaiPhong)
         {
-            throw new NotImplementedException();
+            PHIEUTHUEBUS.LoaiPhongCanToiUu = loaiPhong;
+            return TryToiUuPhieuThue(0);
+        }
+
+        private static bool TryToiUuPhieuThue(int phieuThue)
+        {
+            List<PHONG> dsPhong = PHONGBUS.LayDSPhongTheoLoaiPhong(LoaiPhongCanToiUu);
+            for (int  i = 0; i < dsPhong.Count; i++)
+            {
+            }
+            return false;
         }
     }
 }

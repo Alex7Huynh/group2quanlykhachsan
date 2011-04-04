@@ -62,10 +62,10 @@ namespace PTTK_WS
         }
         //PHIEUTHUEBUS
         [WebMethod]
-        public bool ptbToiUuPhieuThue()
+        public bool ptbToiUuPhieuThue(LOAIPHONG loaiPhong)
         {
             //tối ưu các phiếu thuê phòng ở đây.
-            return PHIEUTHUEBUS.ptbToiUuPhieuThue();
+            return PHIEUTHUEBUS.ptbToiUuPhieuThue(loaiPhong);
         }
         [WebMethod]
         public bool ptbThemPhieu(PHIEUTHUE phieu)
