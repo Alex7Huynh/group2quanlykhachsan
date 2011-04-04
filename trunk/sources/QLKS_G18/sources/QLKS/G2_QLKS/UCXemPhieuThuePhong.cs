@@ -149,7 +149,7 @@ namespace G2_QLKS
             {
                 if (_beginDate.CompareTo(phieu.NgayThue) <= 0 && _endDate.CompareTo(phieu.NgayThue) >= 0)
                 {
-                    if (phieu.NgayThue.Day < (e.ColumnIndex + 1) && (e.ColumnIndex + 1) <= phieu.NgayThue.Day + phieu.SoNgayThue)
+                    if (phieu.NgayThue.Day < (e.ColumnIndex + 1) && (e.ColumnIndex + 1) <= phieu.NgayThue.Day + phieu.SoNgayThue - 1)
                     {
                         e.Value = "";
                         e.FormattingApplied = true;
@@ -173,7 +173,7 @@ namespace G2_QLKS
                     }
                     if (phieu.NgayThue.Day < (e.ColumnIndex + 1))
                     {
-                        if ((e.ColumnIndex + 1) <= phieu.NgayThue.Day + phieu.SoNgayThue)
+                        if ((e.ColumnIndex + 1) <= phieu.NgayThue.Day + phieu.SoNgayThue - 1)
                         {
                             e.AdvancedBorderStyle.Left = DataGridViewAdvancedCellBorderStyle.None;
                             e.CellStyle.BackColor = Color.Pink;
