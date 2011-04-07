@@ -23,17 +23,24 @@ namespace QLKS
 
         #region XacDinhMau
 
-        int[][] _color;
-
         class Dinh
         {
-            string _maSoPhieuThue;  //mã số của phiếu thuê phòng tương ứng.
+            int _x;                 //vị trí của phiếu thuê trong cache
 
-            public string MaSoPhieuThue
+            public int X
             {
-                get { return _maSoPhieuThue; }
-                set { _maSoPhieuThue = value; }
+                get { return _x; }
+                set { _x = value; }
             }
+
+            int _y;                 //vị trí của phiếu thuê trong cache
+
+            public int Y
+            {
+                get { return _y; }
+                set { _y = value; }
+            }
+            
             int _bac;               //bậc của đỉnh, là số phiếu thuê kề với phiếu thuê hiện tại.
 
             public int Bac
@@ -50,36 +57,57 @@ namespace QLKS
             }
         }
 
+        private List<Dinh> _arrDinh = new List<Dinh>();
+
+        private List<List<int>> _arrDinhKe = new List<List<int>>();
+
         private void UpdateColorPhieuThuePhong()
         {
-            List<PHIEUTHUE> arrPhieuThue = new List<PHIEUTHUE>();
+            ChuyenPhieuThuePhongThanhDinh();
 
+            ToMau(_arrDinh);
+        }
+
+        private void ChuyenPhieuThuePhongThanhDinh()
+        {
             for (int i = 0; i < _cachePhieuThue.Count; i++)
+                for (int j = 0; j < _cachePhieuThue[i].Count; j++)
+                {
+                    Dinh dinh = new Dinh();
+                    dinh.X = i;
+                    dinh.Y = j;
+                    dinh.Bac = 0;                                               //khởi tạo bậc của đỉnh
+                    dinh.Color = 0;                                             //khởi tạo _color = 0; tức chưa được tô màu
+                    _arrDinh.Add(dinh);
+                }
+
+            //cập nhật bậc của đỉnh
+            CapNhatDanhSachDinhKe();
+            for (int i = 0; i < _arrDinh.Count; i++)
             {
-                arrPhieuThue.AddRange(_cachePhieuThue[i]);
+                _arrDinh[i].Bac = _arrDinhKe[i].Count;
             }
-
-            List<Dinh> arrDinh = ChuyenPhieuThuePhongThanhDinh(arrPhieuThue);
-
-            ToMau(arrDinh);
         }
 
-        private List<Dinh> ChuyenPhieuThuePhongThanhDinh(List<PHIEUTHUE> arrPhieuThue)
+        private void CapNhatDanhSachDinhKe()
         {
-            List<Dinh> arrDinh = new Dinh[arrPhieuThue.Count].ToList();
-            for (int i = 0; i < arrPhieuThue.Count; i++)
+            for (int i = 0; i < _arrDinh.Count; i++)
             {
-                arrDinh[i].MaSoPhieuThue = arrPhieuThue[i].MaPhieuThue;         //gán mã phiếu thuê phòng
-                arrDinh[i].Bac = LayDanhSachDinhKe(arrDinh[i]).Count;           //tính bậc của đỉnh
-                arrDinh[i].Color = 0;                                           //khởi tạo _color = 0; tức chưa được tô màu
+                List<int> dsDinhKeCuaDinh = new List<int>();
+                for (int j = 0; j < _arrDinh.Count; j++)
+                {
+                    if (La2DinhKeNhau(_arrDinh[i], _arrDinh[j]))
+                    {
+                        dsDinhKeCuaDinh.Add(j);
+                    }
+                }
+                _arrDinhKe.Add(dsDinhKeCuaDinh);
             }
-            return arrDinh;
         }
 
-        private List<Dinh> LayDanhSachDinhKe(Dinh dinh)
+        private bool La2DinhKeNhau(Dinh dinh, Dinh dinh_2)
         {
-            List<Dinh> arrDinh = new List<Dinh>();
-            return arrDinh;
+            throw new NotImplementedException();
         }
 
         private void ToMau(List<Dinh> dsDinh)
