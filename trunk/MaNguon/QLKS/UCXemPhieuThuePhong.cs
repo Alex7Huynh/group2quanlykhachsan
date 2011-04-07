@@ -21,6 +21,81 @@ namespace QLKS
 
         private DateTime _endDate;
 
+        #region XacDinhMau
+
+        int[][] _color;
+
+        class Dinh
+        {
+            string _maSoPhieuThue;  //mã số của phiếu thuê phòng tương ứng.
+
+            public string MaSoPhieuThue
+            {
+                get { return _maSoPhieuThue; }
+                set { _maSoPhieuThue = value; }
+            }
+            int _bac;               //bậc của đỉnh, là số phiếu thuê kề với phiếu thuê hiện tại.
+
+            public int Bac
+            {
+                get { return _bac; }
+                set { _bac = value; }
+            }
+            int _color;             //màu của đỉnh đó
+
+            public int Color
+            {
+                get { return _color; }
+                set { _color = value; }
+            }
+        }
+
+        private void UpdateColorPhieuThuePhong()
+        {
+            List<PHIEUTHUE> arrPhieuThue = new List<PHIEUTHUE>();
+
+            for (int i = 0; i < _cachePhieuThue.Count; i++)
+            {
+                arrPhieuThue.AddRange(_cachePhieuThue[i]);
+            }
+
+            List<Dinh> arrDinh = ChuyenPhieuThuePhongThanhDinh(arrPhieuThue);
+
+            ToMau(arrDinh);
+        }
+
+        private List<Dinh> ChuyenPhieuThuePhongThanhDinh(List<PHIEUTHUE> arrPhieuThue)
+        {
+            List<Dinh> arrDinh = new Dinh[arrPhieuThue.Count].ToList();
+            for (int i = 0; i < arrPhieuThue.Count; i++)
+            {
+                arrDinh[i].MaSoPhieuThue = arrPhieuThue[i].MaPhieuThue;         //gán mã phiếu thuê phòng
+                arrDinh[i].Bac = LayDanhSachDinhKe(arrDinh[i]).Count;           //tính bậc của đỉnh
+                arrDinh[i].Color = 0;                                           //khởi tạo _color = 0; tức chưa được tô màu
+            }
+            return arrDinh;
+        }
+
+        private List<Dinh> LayDanhSachDinhKe(Dinh dinh)
+        {
+            List<Dinh> arrDinh = new List<Dinh>();
+            return arrDinh;
+        }
+
+        private void ToMau(List<Dinh> dsDinh)
+        {
+            //sắp xếp các đỉnh theo thứ tự giảm dần của bậc
+            //color = 1;
+            //while (còn đỉnh chưa được tô màu)
+            //{
+            //      xét lần lượt các đỉnh (đã sắp xếp)
+            //          nếu không có đỉnh nào kề nó có màu color,
+            //              tô màu cho nó là color
+            //      color = color + 1;
+            //}
+        }
+        #endregion
+
         public void AddPhong(PHONG phong)
         {
             _arrPhong.Add(phong);
