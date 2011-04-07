@@ -32,8 +32,16 @@ namespace QLKS
 
         private void frmReservation_Load(object sender, EventArgs e)
         {
+            ////////////////
+            ////0812005- load 
+            ////////////////
             cboLoaiPhong.DataSource = PHONGBUS.LayDSLoaiPhong().ToList();
             cboLoaiPhong.DisplayMember = "TenLoaiPhong";
+            cboLoaiPhong.ValueMember = "MaLoaiPhong";
+            LOAIPHONG a = UCDatPhong.ArrLoaiPhong[UCDatPhong.CurrentLoaiPhong];
+            cboLoaiPhong.SelectedValue = a.MaLoaiPhong;
+            dtpBeginDate.Value = UCXemPhieuThuePhong.Ngaythue;
+            dtpEndDate.Value = UCXemPhieuThuePhong.Kethuc;
         }
 
         private void cboLoaiPhong_SelectedIndexChanged(object sender, EventArgs e)
@@ -50,7 +58,7 @@ namespace QLKS
         private void UpdateDuration()
         {
             TimeSpan ts = _endDate - _beginDate;
-            int differenceInDays = ts.Days;
+            int differenceInDays = ts.Days+1;// tôi nghĩ nên cộng thêm một 
             txtDuration.Text = differenceInDays.ToString();
         }
 

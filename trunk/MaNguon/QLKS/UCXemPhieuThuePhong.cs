@@ -13,6 +13,31 @@ namespace QLKS
 {
     public partial class UCXemPhieuThuePhong : UserControl
     {
+        /// <summary>
+        /// 0812005//////////////////////////////////////////////////
+        /// </summary>
+        private static DateTime _ngaythue = DateTime.Now;
+        private static int _rowdown = -1;
+        private static int _coldown = -1;
+        private static int _rowup = -1;
+        private static int _colup = -1;
+
+        private static DateTime _kethuc = DateTime.Now;
+
+        public static DateTime Kethuc
+        {
+            get { return UCXemPhieuThuePhong._kethuc; }
+            set { UCXemPhieuThuePhong._kethuc = value; }
+        }
+
+        public static DateTime Ngaythue
+        {
+            get { return UCXemPhieuThuePhong._ngaythue; }
+            set { UCXemPhieuThuePhong._ngaythue = value; }
+        }
+        /// <summary>
+        /// ////////////////////////////////////////////////////////
+        /// </summary>
         private List<PHONG> _arrPhong = new List<PHONG>();
 
         private List<List<PHIEUTHUE>> _cachePhieuThue = new List<List<PHIEUTHUE>>();
@@ -404,6 +429,48 @@ namespace QLKS
         {
             UpdateColumns();
             UpdateRows();
+        }
+        /// <summary>
+        /// 0812005////////////////////////////////////////////////
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void dtgTheHienPhieuThuePhong_CellMouseDown(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            _rowdown = e.RowIndex;
+            _coldown = e.ColumnIndex;
+        }
+
+        private void dtgTheHienPhieuThuePhong_CellMouseUp(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            _rowup = e.RowIndex;
+            _colup = e.ColumnIndex;
+            if (kiemtra(_rowup, _rowdown))
+            {
+                _ngaythue = DateTime.Parse(dtgTheHienPhieuThuePhong.Columns[_coldown].Name);
+                _kethuc = DateTime.Parse(dtgTheHienPhieuThuePhong.Columns[_colup].Name);
+
+            }
+            else
+            {
+                MessageBox.Show(" chon sai");
+                return;
+            }
+            frmReservation a = new frmReservation();
+            a.ShowDialog();
+        }
+        /// <summary>
+        /// 0812005-kiểm tra xem có chọn ngày hợp lệ hay không//////////////////////////
+        /// </summary>
+        /// <param name="rowdown"> </param>
+        /// <param name="rowup"></param>
+        /// <returns></returns>
+        private bool kiemtra(int rowdown, int rowup)
+        {
+            if (rowdown == rowup)
+                return true;
+            return false;
+
         }
     }
 
