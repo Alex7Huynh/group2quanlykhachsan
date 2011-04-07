@@ -128,15 +128,66 @@ namespace QLKS
 
         //private void ToMau(List<Dinh> dsDinh)
         //{
-        //    //sắp xếp các đỉnh theo thứ tự giảm dần của bậc
-        //    //color = 1;
-        //    //while (còn đỉnh chưa được tô màu)
-        //    //{
-        //    //      xét lần lượt các đỉnh (đã sắp xếp)
-        //    //          nếu không có đỉnh nào kề nó có màu color,
-        //    //              tô màu cho nó là color
-        //    //      color = color + 1;
-        //    //}
+        //      //sắp xếp các đỉnh theo thứ tự giảm dần của bậc
+        //      SapXepDinh();
+        //      int color = 1;
+        //      while (TinhSoDinhChuaDuocToMau())
+        //      {
+        //          xét lần lượt các đỉnh (đã sắp xếp)
+        //          for (i = 0; i < _arrDinh.Count; i++)
+        //          {
+        //              //nếu không có đỉnh nào kề nó có màu color,
+        //              //bool coTheToMau = false;
+        //              for (j = 0; j < _arrDinhKe[i].Count; j++)
+        //              {
+        //                  if (_arrDinh[_arrDinhKe[i][j]].Color == color)
+        //                  {
+        //                      coTheToMau = false;
+        //                      break;
+        //                  }
+        //                  coTheToMau = true;
+        //              }
+        //              if (coTheToMau)
+        //              {
+        //                  //tô màu cho nó là color
+        //                  _arrDinh[i].Color = color;
+        //                  //loại bỏ đỉnh này ra khỏi danh sách đỉnh cần tô màu
+        //                  _arrDinh.RemoveAt(i);
+        //              }
+        //      //  }
+        //      //  color = color + 1;
+        //      }
+        //}
+
+        //private void SapXepDinh()
+        //{
+        //    for (i = 0; i < _arrDinh.Count - 1; i++)
+        //        for (j = i + 1; j < _arrDinh.Count; j++)
+        //        {
+        //            if (_arrDinh[i]._bac < _arrDinh[j]._bac)
+        //            {
+        //                Dinh temp = new Dinh();
+        //                temp = _arrDinh[i];
+        //                _arrDinh[i] = _arrDinh[j];
+        //                _arrDinh[j] = temp;
+
+        //                List<Dinh> dinhKe_temp = new List<Dinh>();
+        //                dinh_temp = _arrDinhKe[i];
+        //                _arrDinhKe[i] = _arrDinhKe[j];
+        //                _arrDinhKe[j] = dinhKe_temp;
+        //            }
+        //        }
+        //}
+
+        //private int TinhSoDinhChuaDuocToMau()
+        //{
+        //    int soDinhChuaDuocToMau = 0;
+        //    for (i = 0; i < _arrDinh.Count; i++)
+        //    {
+        //        if (_arrDinh[i].Mau == 0)
+        //            soDinhChuaDuocToMau++;
+        //    }
+        //    return soDinhChuaDuocToMau;
         //}
         //#endregion
 
