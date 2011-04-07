@@ -13,12 +13,35 @@ namespace QLKS
 {
     public partial class UCDatPhong : UserControl
     {
-        private List<PHONG> _arrPhong;
+        /// <summary>
+        /// 0812005 thêm thuộc tinh static va property
+        /// </summary>
+        private static List<PHONG> _arrPhong;
 
-        private List<LOAIPHONG> _arrLoaiPhong;
+        public static List<PHONG> ArrPhong
+        {
+            get { return UCDatPhong._arrPhong; }
+            set { UCDatPhong._arrPhong = value; }
+        }
 
-        private int _currentLoaiPhong = 0;
+        private static List<LOAIPHONG> _arrLoaiPhong;
 
+        public static List<LOAIPHONG> ArrLoaiPhong
+        {
+            get { return UCDatPhong._arrLoaiPhong; }
+            set { UCDatPhong._arrLoaiPhong = value; }
+        }
+
+        private static int _currentLoaiPhong = 0;
+
+        public static int CurrentLoaiPhong
+        {
+            get { return UCDatPhong._currentLoaiPhong; }
+            set { UCDatPhong._currentLoaiPhong = value; }
+        }
+        /// <summary>
+        /// 
+        /// </summary>
         private void LoadDanhSachLoaiPhong()
         {
             _arrLoaiPhong = PHONGBUS.LayDSLoaiPhong().ToList();

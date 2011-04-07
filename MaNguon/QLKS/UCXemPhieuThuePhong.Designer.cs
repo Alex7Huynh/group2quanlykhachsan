@@ -48,6 +48,8 @@
             this.dtgTheHienPhieuThuePhong.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dtgTheHienPhieuThuePhong.Size = new System.Drawing.Size(860, 373);
             this.dtgTheHienPhieuThuePhong.TabIndex = 0;
+            this.dtgTheHienPhieuThuePhong.CellMouseUp += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dtgTheHienPhieuThuePhong_CellMouseUp);
+            this.dtgTheHienPhieuThuePhong.CellMouseDown += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dtgTheHienPhieuThuePhong_CellMouseDown);
             this.dtgTheHienPhieuThuePhong.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dtgTheHienPhieuThuePhong_CellFormatting);
             this.dtgTheHienPhieuThuePhong.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.dtgTheHienPhieuThuePhong_CellPainting);
             // 
