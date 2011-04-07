@@ -48,7 +48,7 @@ namespace QLKS
                 get { return _bac; }
                 set { _bac = value; }
             }
-            int _color;             //màu của đỉnh đó
+            int _color;             //màu của đỉnh đó, 0= chưa có màu
 
             public int Color
             {
@@ -96,7 +96,7 @@ namespace QLKS
                 List<int> dsDinhKeCuaDinh = new List<int>();
                 for (int j = 0; j < _arrDinh.Count; j++)
                 {
-                    if (La2DinhKeNhau(_arrDinh[i], _arrDinh[j]))
+                    if (La2DinhKe(_arrDinh[i], _arrDinh[j]))
                     {
                         dsDinhKeCuaDinh.Add(j);
                     }
@@ -105,9 +105,25 @@ namespace QLKS
             }
         }
 
-        private bool La2DinhKeNhau(Dinh dinh, Dinh dinh_2)
+        private bool La2DinhKe(Dinh dinh, Dinh dinh_2)
         {
-            throw new NotImplementedException();
+            //xét dòng
+            if (dinh.X == dinh_2.X || dinh.X == dinh_2.X - 1 || dinh.X == dinh_2.X + 1)
+            {
+                return true;
+            }
+
+            //xét cột
+            DateTime ngayBatDauPT1 = _cachePhieuThue[dinh.X][dinh.Y].NgayThue;
+            DateTime ngayKetThucPT1 = _cachePhieuThue[dinh.X][dinh.Y].NgayThue.AddDays(_cachePhieuThue[dinh.X][dinh.Y].SoNgayThue);
+            DateTime ngayBatDauPT2 = _cachePhieuThue[dinh_2.X][dinh_2.Y].NgayThue;
+            DateTime ngayKetThucPT2 = _cachePhieuThue[dinh_2.X][dinh_2.Y].NgayThue.AddDays(_cachePhieuThue[dinh_2.X][dinh_2.Y].SoNgayThue);
+            if (ngayBatDauPT1.CompareTo(ngayBatDauPT2) <= 0 && ngayKetThucPT1.CompareTo(ngayBatDauPT2) >= 0 ||
+                ngayBatDauPT2.CompareTo(ngayBatDauPT1) <= 0 && ngayKetThucPT2.CompareTo(ngayBatDauPT1) >= 0)
+            {
+                return true;
+            }
+            return false;
         }
 
         private void ToMau(List<Dinh> dsDinh)
