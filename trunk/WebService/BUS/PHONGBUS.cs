@@ -25,6 +25,18 @@ namespace BUS
         {
             PHONGDAO.XoaPhong(maPhong);
         }
+        public static void NhapPhong(string MP, string TP, string LP, string GC, string TT)
+        {
+            PHONGDAO.NhapPhong(MP, TP, LP, GC, TT);
+        }
+        public static PHONG LayPhong(string MP)
+        {
+            return PHONGDAO.LayPhong(MP);
+        }
+        public static void CapNhat(string MP, string TP, string LP, string GC, string TT)
+        {
+            PHONGDAO.CapNhat(MP, TP, LP, GC, TT);
+        }
         //public static List<PHONG> TimPhong( string maphong, string loaiphong, string tenphong, string tinhtrang)
         //{
         //    List<PHONG> temp = new List<PHONG>();
