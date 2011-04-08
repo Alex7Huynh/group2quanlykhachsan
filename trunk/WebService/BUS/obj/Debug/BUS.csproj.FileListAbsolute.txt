@@ -1,9 +1,9 @@
-D:\KHTN\Thirth Year (2010-2011)\Semester2\Xay dung PM\BT\Nhom lon\Work Space\WebService\BUS\bin\Debug\BUS.dll
-D:\KHTN\Thirth Year (2010-2011)\Semester2\Xay dung PM\BT\Nhom lon\Work Space\WebService\BUS\bin\Debug\BUS.pdb
-D:\KHTN\Thirth Year (2010-2011)\Semester2\Xay dung PM\BT\Nhom lon\Work Space\WebService\BUS\bin\Debug\DAO.dll
-D:\KHTN\Thirth Year (2010-2011)\Semester2\Xay dung PM\BT\Nhom lon\Work Space\WebService\BUS\bin\Debug\DTO.dll
-D:\KHTN\Thirth Year (2010-2011)\Semester2\Xay dung PM\BT\Nhom lon\Work Space\WebService\BUS\bin\Debug\DAO.pdb
-D:\KHTN\Thirth Year (2010-2011)\Semester2\Xay dung PM\BT\Nhom lon\Work Space\WebService\BUS\bin\Debug\DTO.pdb
-D:\KHTN\Thirth Year (2010-2011)\Semester2\Xay dung PM\BT\Nhom lon\Work Space\WebService\BUS\obj\Debug\ResolveAssemblyReference.cache
-D:\KHTN\Thirth Year (2010-2011)\Semester2\Xay dung PM\BT\Nhom lon\Work Space\WebService\BUS\obj\Debug\BUS.dll
-D:\KHTN\Thirth Year (2010-2011)\Semester2\Xay dung PM\BT\Nhom lon\Work Space\WebService\BUS\obj\Debug\BUS.pdb
+D:\UNIVERSITY OF SCIENCE\HK_VI\2_Xdpm\BaiTap\NhomLon\BaiTapDoAn\WebService\BUS\bin\Debug\BUS.dll
+D:\UNIVERSITY OF SCIENCE\HK_VI\2_Xdpm\BaiTap\NhomLon\BaiTapDoAn\WebService\BUS\bin\Debug\BUS.pdb
+D:\UNIVERSITY OF SCIENCE\HK_VI\2_Xdpm\BaiTap\NhomLon\BaiTapDoAn\WebService\BUS\bin\Debug\DAO.dll
+D:\UNIVERSITY OF SCIENCE\HK_VI\2_Xdpm\BaiTap\NhomLon\BaiTapDoAn\WebService\BUS\bin\Debug\DTO.dll
+D:\UNIVERSITY OF SCIENCE\HK_VI\2_Xdpm\BaiTap\NhomLon\BaiTapDoAn\WebService\BUS\bin\Debug\DAO.pdb
+D:\UNIVERSITY OF SCIENCE\HK_VI\2_Xdpm\BaiTap\NhomLon\BaiTapDoAn\WebService\BUS\bin\Debug\DTO.pdb
+D:\UNIVERSITY OF SCIENCE\HK_VI\2_Xdpm\BaiTap\NhomLon\BaiTapDoAn\WebService\BUS\obj\Debug\ResolveAssemblyReference.cache
+D:\UNIVERSITY OF SCIENCE\HK_VI\2_Xdpm\BaiTap\NhomLon\BaiTapDoAn\WebService\BUS\obj\Debug\BUS.dll
+D:\UNIVERSITY OF SCIENCE\HK_VI\2_Xdpm\BaiTap\NhomLon\BaiTapDoAn\WebService\BUS\obj\Debug\BUS.pdb
