@@ -13,15 +13,14 @@ namespace QLKS
 {
     public partial class UCXemPhieuThuePhong : UserControl
     {
-        
-        /// <summary>
-        /// 0812005//////////////////////////////////////////////////
-        /// </summary>
+        #region Attribute
+        #region Attribute 0812005
         private static DateTime _ngaythue = DateTime.Now;
         private static int _rowdown = -1;
         private static int _coldown = -1;
         private static int _rowup = -1;
         private static int _colup = -1;
+        #endregion
 
         private static DateTime _kethuc = DateTime.Now;
 
@@ -36,9 +35,6 @@ namespace QLKS
             get { return UCXemPhieuThuePhong._ngaythue; }
             set { UCXemPhieuThuePhong._ngaythue = value; }
         }
-        /// <summary>
-        /// ////////////////////////////////////////////////////////
-        /// </summary>
         private List<PHONG> _arrPhong = new List<PHONG>();
 
         private List<List<PHIEUTHUE>> _cachePhieuThue = new List<List<PHIEUTHUE>>();
@@ -46,7 +42,9 @@ namespace QLKS
         private DateTime _beginDate;
 
         private DateTime _endDate;
+        #endregion
 
+        #region Method
         //#region XacDinhMau 0812517
 
         //class Dinh
@@ -220,6 +218,8 @@ namespace QLKS
             _arrPhong.Add(phong);
             _cachePhieuThue.Add(PHIEUTHUEBUS.LayDSPhieuThueTheoPhong(phong).ToList());
             //UpdateRows();
+            //UpdateColorPhieuThuePhong();
+            UpdateMau();
             UpdateRowsAndColumns();
         }
 
@@ -235,6 +235,8 @@ namespace QLKS
                 }
             }
             //UpdateRows();
+            //UpdateColorPhieuThuePhong();
+            UpdateMau();
             UpdateRowsAndColumns();
         }
 
@@ -259,6 +261,12 @@ namespace QLKS
                 //UpdateColumns();
                 UpdateRowsAndColumns();
             }
+        }
+
+        public void UpdateRowsAndColumns()
+        {
+            UpdateColumns();
+            UpdateRows();
         }
 
         private void UpdateColumns()
@@ -358,19 +366,6 @@ namespace QLKS
 
         private void dtgTheHienPhieuThuePhong_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
         {
-            ///////////////////////0812604             
-            Dinh calculator = new Dinh();
-            List<PHIEUTHUE> dsPhieuTemp = new List<PHIEUTHUE>();
-
-            for (int i = 0; i < _cachePhieuThue.Count; i++)
-                for (int j = 0; j < _cachePhieuThue[i].Count; j++)
-                {
-                    dsPhieuTemp.Add(_cachePhieuThue[i][j]);
-                }
-
-            List<int>  dsMauTo = calculator.TinhMau(dsPhieuTemp);
-            ///////////////////////
-
             if (e.RowIndex < _cachePhieuThue.Count)
             {
                 e.AdvancedBorderStyle.Right = DataGridViewAdvancedCellBorderStyle.None;
@@ -442,11 +437,27 @@ namespace QLKS
             }
         }
 
-        public void UpdateRowsAndColumns()
+        #region Goi Ham To Mau 0812604
+        List<int> dsMauTo = new List<int>();
+
+        private void UpdateMau()
         {
-            UpdateColumns();
-            UpdateRows();
+            ///////////////////////0812604             
+            Dinh calculator = new Dinh();
+            List<PHIEUTHUE> dsPhieuTemp = new List<PHIEUTHUE>();
+
+            for (int i = 0; i < _cachePhieuThue.Count; i++)
+                for (int j = 0; j < _cachePhieuThue[i].Count; j++)
+                {
+                    dsPhieuTemp.Add(_cachePhieuThue[i][j]);
+                }
+
+            dsMauTo = calculator.TinhMau(dsPhieuTemp);
+            ///////////////////////
         }
+        #endregion
+
+        #region Keo Tha 0812005
         /// <summary>
         /// 0812005////////////////////////////////////////////////
         /// </summary>
@@ -489,6 +500,8 @@ namespace QLKS
             return false;
 
         }
+        #endregion
+        #endregion
     }
 
     #region class Dinh (0812604)
