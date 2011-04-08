@@ -13,6 +13,7 @@ namespace QLKS
 {
     public partial class UCXemPhieuThuePhong : UserControl
     {
+        
         /// <summary>
         /// 0812005//////////////////////////////////////////////////
         /// </summary>
@@ -359,7 +360,7 @@ namespace QLKS
 
         private void dtgTheHienPhieuThuePhong_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
         {
-            ///////////////////////0812604
+            ///////////////////////0812604             
             Dinh calculator = new Dinh();
             List<PHIEUTHUE> dsPhieuTemp = new List<PHIEUTHUE>();
 
@@ -369,7 +370,7 @@ namespace QLKS
                     dsPhieuTemp.Add(_cachePhieuThue[i][j]);
                 }
 
-            List<int> dsMauTo = calculator.TinhMau(dsPhieuTemp);
+            List<int>  dsMauTo = calculator.TinhMau(dsPhieuTemp);
             ///////////////////////
 
             if (e.RowIndex < _cachePhieuThue.Count)
@@ -387,13 +388,22 @@ namespace QLKS
 
                             /////////////////////////0812604
                             int index_temp = _cachePhieuThue[e.RowIndex].IndexOf(phieu);
-                            int color_temp = dsMauTo[e.RowIndex * _cachePhieuThue.Count + index_temp];
+                            int index_temp2 = e.RowIndex;
+                            int index_temp_base = 0;
+                            index_temp2--;
+                            while (index_temp2 != -1)
+                            {
+                                index_temp_base += _cachePhieuThue[index_temp2].Count;
+                                index_temp2--;
+                            }
+                            index_temp_base += index_temp;
+                            int color_temp = dsMauTo[index_temp_base];
 
-                            if (index_temp % 3 == 0)
+                            if (index_temp_base % 3 == 0)
                                 e.CellStyle.BackColor = Color.FromArgb(255, color_temp, 0, 0);
-                            if (index_temp % 3 == 1)
+                            if (index_temp_base % 3 == 1)
                                 e.CellStyle.BackColor = Color.FromArgb(255, 0, color_temp, 0);
-                            if (index_temp % 3 == 2)
+                            if (index_temp_base % 3 == 2)
                                 e.CellStyle.BackColor = Color.FromArgb(255, 0, 0, color_temp);
                             //////////////////////////
                         }
@@ -406,13 +416,22 @@ namespace QLKS
 
                                 /////////////////////////0812604
                                 int index_temp = _cachePhieuThue[e.RowIndex].IndexOf(phieu);
-                                int color_temp = dsMauTo[e.RowIndex * _cachePhieuThue.Count + index_temp];
+                                int index_temp2 = e.RowIndex;
+                                int index_temp_base = 0;
+                                index_temp2--;
+                                while (index_temp2 != -1)
+                                {
+                                    index_temp_base += _cachePhieuThue[index_temp2].Count;
+                                    index_temp2--;
+                                }
+                                index_temp_base += index_temp;
+                                int color_temp = dsMauTo[index_temp_base];
 
-                                if (index_temp % 3 == 0)
+                                if (index_temp_base % 3 == 0)
                                     e.CellStyle.BackColor = Color.FromArgb(255, color_temp, 0, 0);
-                                if (index_temp % 3 == 1)
+                                if (index_temp_base % 3 == 1)
                                     e.CellStyle.BackColor = Color.FromArgb(255, 0, color_temp, 0);
-                                if (index_temp % 3 == 2)
+                                if (index_temp_base % 3 == 2)
                                     e.CellStyle.BackColor = Color.FromArgb(255, 0, 0, color_temp);
                                 //////////////////////////
 
