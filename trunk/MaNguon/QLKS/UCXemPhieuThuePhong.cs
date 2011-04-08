@@ -47,7 +47,7 @@ namespace QLKS
 
         private DateTime _endDate;
 
-        //#region XacDinhMau
+        //#region XacDinhMau 0812517
 
         //class Dinh
         //{
@@ -133,23 +133,21 @@ namespace QLKS
 
         //private bool La2DinhKe(Dinh dinh, Dinh dinh_2)
         //{
-        //    //xét dòng
+        //    //2 phòng kề nhau
         //    if (dinh.X == dinh_2.X || dinh.X == dinh_2.X - 1 || dinh.X == dinh_2.X + 1)
         //    {
-        //        return true;
+        //          //2 phiếu thuê phòng có ngày thuê lồng nhau
+        //          DateTime ngayBatDauPT1 = _cachePhieuThue[dinh.X][dinh.Y].NgayThue;
+        //          DateTime ngayKetThucPT1 = _cachePhieuThue[dinh.X][dinh.Y].NgayThue.AddDays(_cachePhieuThue[dinh.X][dinh.Y].SoNgayThue);
+        //          DateTime ngayBatDauPT2 = _cachePhieuThue[dinh_2.X][dinh_2.Y].NgayThue;
+        //          DateTime ngayKetThucPT2 = _cachePhieuThue[dinh_2.X][dinh_2.Y].NgayThue.AddDays(_cachePhieuThue[dinh_2.X][dinh_2.Y].SoNgayThue);
+        //          if (ngayBatDauPT1.CompareTo(ngayBatDauPT2) <= 0 && ngayKetThucPT1.CompareTo(ngayBatDauPT2) >= 0 ||
+        //              ngayBatDauPT2.CompareTo(ngayBatDauPT1) <= 0 && ngayKetThucPT2.CompareTo(ngayBatDauPT1) >= 0)
+        //          {
+        //              return true;
+        //          }
+        //          return false;
         //    }
-
-        //    //xét cột
-        //    DateTime ngayBatDauPT1 = _cachePhieuThue[dinh.X][dinh.Y].NgayThue;
-        //    DateTime ngayKetThucPT1 = _cachePhieuThue[dinh.X][dinh.Y].NgayThue.AddDays(_cachePhieuThue[dinh.X][dinh.Y].SoNgayThue);
-        //    DateTime ngayBatDauPT2 = _cachePhieuThue[dinh_2.X][dinh_2.Y].NgayThue;
-        //    DateTime ngayKetThucPT2 = _cachePhieuThue[dinh_2.X][dinh_2.Y].NgayThue.AddDays(_cachePhieuThue[dinh_2.X][dinh_2.Y].SoNgayThue);
-        //    if (ngayBatDauPT1.CompareTo(ngayBatDauPT2) <= 0 && ngayKetThucPT1.CompareTo(ngayBatDauPT2) >= 0 ||
-        //        ngayBatDauPT2.CompareTo(ngayBatDauPT1) <= 0 && ngayKetThucPT2.CompareTo(ngayBatDauPT1) >= 0)
-        //    {
-        //        return true;
-        //    }
-        //    return false;
         //}
 
         //private void ToMau(List<Dinh> dsDinh)
@@ -159,7 +157,7 @@ namespace QLKS
         //      int color = 1;
         //      while (TinhSoDinhChuaDuocToMau())
         //      {
-        //          xét lần lượt các đỉnh (đã sắp xếp)
+        //          //xét lần lượt các đỉnh (đã sắp xếp)
         //          for (i = 0; i < _arrDinh.Count; i++)
         //          {
         //              //nếu không có đỉnh nào kề nó có màu color,
@@ -493,6 +491,7 @@ namespace QLKS
         }
     }
 
+    #region class Dinh (0812604)
     /// <summary>
     /// 0812604
     /// </summary>
@@ -780,4 +779,5 @@ namespace QLKS
             return dsMau;
         }
     }
+    #endregion
 }
