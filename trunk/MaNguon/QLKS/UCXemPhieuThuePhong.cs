@@ -21,7 +21,13 @@ namespace QLKS
         private static int _rowup = -1;
         private static int _colup = -1;
         #endregion
+        private int _flag = 0;
 
+        public int flag
+        {
+            get { return _flag; }
+            set { _flag = value; }
+        }
         private static DateTime _kethuc = DateTime.Now;
 
         public static DateTime Kethuc
@@ -463,29 +469,50 @@ namespace QLKS
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
+       
         private void dtgTheHienPhieuThuePhong_CellMouseDown(object sender, DataGridViewCellMouseEventArgs e)
         {
-            _rowdown = e.RowIndex;
+            if (e.RowIndex >= 0)
+                _rowdown = e.RowIndex;
+  
             _coldown = e.ColumnIndex;
+       //     dtgTheHienPhieuThuePhong[_coldown, _rowdown].Selected = true;
         }
 
         private void dtgTheHienPhieuThuePhong_CellMouseUp(object sender, DataGridViewCellMouseEventArgs e)
         {
-            _rowup = e.RowIndex;
-            _colup = e.ColumnIndex;
-            if (kiemtra(_rowup, _rowdown))
+            if (e.RowIndex >= 0)
+                _rowup = e.RowIndex;
+            if (e.ColumnIndex >= 0)
+                _colup = e.ColumnIndex;
+            else _colup = 0;
+            if (kiemtra(_rowup, _rowdown)&&(_colup>=0)&&(_coldown>=0))
             {
                 _ngaythue = DateTime.Parse(dtgTheHienPhieuThuePhong.Columns[_coldown].Name);
                 _kethuc = DateTime.Parse(dtgTheHienPhieuThuePhong.Columns[_colup].Name);
-
+                //0812558- kiem tra la ngay ket thuc co nho hon ngay bat dau ko?
+                string phong =(string) dtgTheHienPhieuThuePhong.Rows[_rowup].HeaderCell.Value;
+                PHONG phg = PHONGBUS.LayPhongTheoTenPhong(phong);
+               
+                if (_kethuc < _ngaythue)
+                {
+                    DateTime temp = _ngaythue;
+                    _ngaythue = _kethuc;
+                    _kethuc = temp;
+                }
+                if (kiemTraPhieuThue(phg, _ngaythue, _kethuc))
+                {
+                    frmReservation a = new frmReservation();
+                    a.ShowDialog();
+                }
+  
             }
             else
             {
                 MessageBox.Show(" chon sai");
                 return;
             }
-            frmReservation a = new frmReservation();
-            a.ShowDialog();
+           
         }
         /// <summary>
         /// 0812005-kiểm tra xem có chọn ngày hợp lệ hay không//////////////////////////
@@ -501,6 +528,36 @@ namespace QLKS
 
         }
         #endregion
+        /// <summary>
+        /// 0812558-kiem tra xem co trung voi ngay dat phong ko//////////////////////////
+        /// </summary>
+        /// <param name="phong"> </param>
+        /// <param name="dtbatdau"></param>
+        /// <param name="dtbatdau"></param>
+        /// <returns></returns>
+        private bool kiemTraPhieuThue(PHONG phong, DateTime dtbatdau, DateTime dtketthuc)
+        {
+            List<PHIEUTHUE> dsPhieu = new List<PHIEUTHUE>();
+            dsPhieu = PHIEUTHUEBUS.LayDSPhieuThueTheoPhong(phong).ToList();
+            List<DateTime> dsTGDatPhong = new List<DateTime>();
+            for (int index1 = 0; index1 < dsPhieu.Count; index1++)
+            {
+                DateTime temp = dsPhieu[index1].NgayThue;
+                for (int index2 = 0; index2 < dsPhieu[index1].SoNgayThue; index2++)
+                {
+                    dsTGDatPhong.Add(temp);
+                    temp = temp.AddDays(1);
+                }
+            }
+            DateTime index = dtbatdau;
+            while( index <= dtketthuc)
+            {
+                for(int index1 =0; index1<dsTGDatPhong.Count;index1++)
+                    if(index == dsTGDatPhong[index1]) return false;
+                index = index.AddDays(1.0f);
+            }
+                return true;
+        }
         #endregion
     }
 
