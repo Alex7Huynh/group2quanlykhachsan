@@ -13,6 +13,10 @@ namespace BUS
         {
             return PHONGDAO.LayDSPhong();
         }
+        public static PHONG LayPhongTheoTenPhong(string tenPhong)
+        {
+            return PHONGDAO.LayPhongTheoTenPhong(tenPhong);
+        }
         public static List<LOAIPHONG> LayDSLoaiPhong()
         {
             return PHONGDAO.LayDSLoaiPhong();

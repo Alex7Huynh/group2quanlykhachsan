@@ -20,3 +20,14 @@ D:\Thuc _Hanh_All\Xay Dung\Do An 3\WebService\PTTK_WS\bin\DTO.pdb
 D:\Thuc _Hanh_All\Xay Dung\Do An 3\WebService\PTTK_WS\obj\Debug\ResolveAssemblyReference.cache
 D:\Thuc _Hanh_All\Xay Dung\Do An 3\WebService\PTTK_WS\obj\Debug\PTTK_WS.dll
 D:\Thuc _Hanh_All\Xay Dung\Do An 3\WebService\PTTK_WS\obj\Debug\PTTK_WS.pdb
+D:\XDPM\Project\WebService\PTTK_WS\bin\PTTK_WS.dll
+D:\XDPM\Project\WebService\PTTK_WS\bin\PTTK_WS.pdb
+D:\XDPM\Project\WebService\PTTK_WS\bin\BUS.dll
+D:\XDPM\Project\WebService\PTTK_WS\bin\DTO.dll
+D:\XDPM\Project\WebService\PTTK_WS\bin\DAO.dll
+D:\XDPM\Project\WebService\PTTK_WS\bin\BUS.pdb
+D:\XDPM\Project\WebService\PTTK_WS\bin\DAO.pdb
+D:\XDPM\Project\WebService\PTTK_WS\bin\DTO.pdb
+D:\XDPM\Project\WebService\PTTK_WS\obj\Debug\ResolveAssemblyReference.cache
+D:\XDPM\Project\WebService\PTTK_WS\obj\Debug\PTTK_WS.dll
+D:\XDPM\Project\WebService\PTTK_WS\obj\Debug\PTTK_WS.pdb
