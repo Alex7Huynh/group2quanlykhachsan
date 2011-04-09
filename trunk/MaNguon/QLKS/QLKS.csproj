@@ -88,6 +88,9 @@
     <EmbeddedResource Include="Reservation.resx">
       <DependentUpon>Reservation.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ThemPhong.resx">
+      <DependentUpon>ThemPhong.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UCDatPhong.resx">
       <DependentUpon>UCDatPhong.cs</DependentUpon>
     </EmbeddedResource>
@@ -114,6 +117,12 @@
     </Compile>
     <Compile Include="Reservation.Designer.cs">
       <DependentUpon>Reservation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThemPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThemPhong.Designer.cs">
+      <DependentUpon>ThemPhong.cs</DependentUpon>
     </Compile>
     <Compile Include="UCDatPhong.cs">
       <SubType>UserControl</SubType>
