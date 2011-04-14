@@ -144,5 +144,13 @@ namespace BUS
         {
             return PHONGDAO.LayDSPhongTheoLoaiPhong(loaiPhong);
         }
+        ////////////
+        // 0812033
+        public static List<PHONG> TimPhong(string maPhong, string tenPhong, string loaiPhong, string tinhTrang)
+        {
+            return PHONGDAO.TimPhong(maPhong, tenPhong, loaiPhong, tinhTrang);
+        }
+        ////////////
+
     }
 }
