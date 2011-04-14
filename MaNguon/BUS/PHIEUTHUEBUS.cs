@@ -103,5 +103,15 @@ namespace BUS
             //trả về
             return 0;
         }
+        ///////0812033
+        public static string DatPhieuThue(PHIEUTHUE phieuThue, string strLoaiPhong)
+        {
+            return PHIEUTHUEDAO.DatPhieuThue(phieuThue, strLoaiPhong);
+        }
+        public static string ThemPhieuThue(PHIEUTHUE phieu)
+        {
+            return PHIEUTHUEDAO.ThemPhieuThue(phieu);
+        }
+        ///////////////
     }
 }

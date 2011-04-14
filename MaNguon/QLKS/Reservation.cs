@@ -13,6 +13,7 @@ namespace QLKS
 {
     public partial class frmReservation : Form
     {
+        List<LOAIPHONG> _danhSachLoaiPhong;
         private PHIEUTHUE _phieuThue;
 
         private DateTime _endDate;
@@ -35,7 +36,8 @@ namespace QLKS
             ////////////////
             ////0812005- load 
             ////////////////
-            cboLoaiPhong.DataSource = PHONGBUS.LayDSLoaiPhong().ToList();
+            _danhSachLoaiPhong = PHONGBUS.LayDSLoaiPhong();
+            cboLoaiPhong.DataSource = _danhSachLoaiPhong.ToList();
             cboLoaiPhong.DisplayMember = "TenLoaiPhong";
             cboLoaiPhong.ValueMember = "MaLoaiPhong";
             LOAIPHONG a = UCDatPhong.ArrLoaiPhong[UCDatPhong.CurrentLoaiPhong];
@@ -88,10 +90,11 @@ namespace QLKS
             {
                 MessageBox.Show("Invalid information!");
             }
-            PHIEUTHUEBUS.ToiUuPhieuThue((LOAIPHONG)cboLoaiPhong.Items[cboLoaiPhong.SelectedIndex]);
-            if (PHIEUTHUEBUS.ThemPhieu(_phieuThue))
+            //PHIEUTHUEBUS.ToiUuPhieuThue((LOAIPHONG)cboLoaiPhong.Items[cboLoaiPhong.SelectedIndex]);
+            string phongDuocDat = PHIEUTHUEBUS.DatPhieuThue(_phieuThue, _danhSachLoaiPhong[cboLoaiPhong.SelectedIndex].MaLoaiPhong);
+            if (phongDuocDat != string.Empty)
             {
-                MessageBox.Show("Da dat phong thanh cong");
+                MessageBox.Show("Da dat phong " + phongDuocDat.Substring(2, 4) + " thanh cong");
             }
             else
             {
@@ -101,8 +104,12 @@ namespace QLKS
 
         private void SetInputValue()
         {
+            
             _phieuThue.MaPhieuThue = "";            //sau nay them
-            _phieuThue.MaPhong = "";                //sau nay them
+            ////0812033
+            _phieuThue.MaPhong = _danhSachLoaiPhong[cboLoaiPhong.SelectedIndex].MaLoaiPhong;
+            _phieuThue.TenKhachHangDaiDien = txtTen.Text;
+            /////////////
             _phieuThue.NgayThue = _beginDate;
             _phieuThue.SoNgayThue = int.Parse(txtDuration.Text);
         }

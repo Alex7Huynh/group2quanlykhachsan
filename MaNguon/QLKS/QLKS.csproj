@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.30729</ProductVersion>
+    <ProductVersion>9.0.21022</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{DA610046-C2C8-4454-A35A-63D840276603}</ProjectGuid>
     <OutputType>WinExe</OutputType>
@@ -79,6 +79,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="ManDinhDatPhong.resx">
       <DependentUpon>ManDinhDatPhong.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -87,15 +88,19 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reservation.resx">
       <DependentUpon>Reservation.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="ThemPhong.resx">
-      <DependentUpon>ThemPhong.cs</DependentUpon>
+    <EmbeddedResource Include="TraCuuPhong.resx">
+      <DependentUpon>TraCuuPhong.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="UCDatPhong.resx">
       <DependentUpon>UCDatPhong.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="UCXemPhieuThuePhong.resx">
       <DependentUpon>UCXemPhieuThuePhong.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -118,11 +123,11 @@
     <Compile Include="Reservation.Designer.cs">
       <DependentUpon>Reservation.cs</DependentUpon>
     </Compile>
-    <Compile Include="ThemPhong.cs">
+    <Compile Include="TraCuuPhong.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ThemPhong.Designer.cs">
-      <DependentUpon>ThemPhong.cs</DependentUpon>
+    <Compile Include="TraCuuPhong.designer.cs">
+      <DependentUpon>TraCuuPhong.cs</DependentUpon>
     </Compile>
     <Compile Include="UCDatPhong.cs">
       <SubType>UserControl</SubType>

@@ -235,5 +235,84 @@ namespace DAO
             }
             return dsPhong;
         }
+        ////////////
+        // 0812033
+        /// <summary>
+        /// Tim tat ca cac phong thoa thong tin la cac tham so truyen vao
+        /// </summary>
+        /// <param name="maPhong"> ma phong muon tim </param>
+        /// <param name="tenPhong"> ten phong mun tim </param>
+        /// <param name="loaiPhong"> ma loai phong muon tim </param>
+        /// <param name="tinhTrang"> tinh trang cua phong muon tim </param>
+        /// <returns> danh sach cac phong thoa thong tin </returns>
+        public static List<PHONG> TimPhong(string maPhong, string tenPhong, string loaiPhong, string tinhTrang)
+        {
+            List<PHONG> danhSachPhong = new List<PHONG>();
+            OleDbConnection ketNoi = null;
+            try
+            {
+                string chuoiKetNoi = "SELECT * FROM PHONG WHERE MaPhong like @MAPHONG OR TenPhong like @TENPHONG OR MaLoaiPhong like @MaLoaiPhong OR TinhTrang like @TINHTRANG";
+
+                ketNoi = KetNoi();
+
+                OleDbCommand lenh = new OleDbCommand(chuoiKetNoi, ketNoi);
+                OleDbParameter thamSo = lenh.Parameters.Add("@MAPHONG", OleDbType.VarWChar);
+                if (maPhong != " ")
+                {
+                    thamSo.Value = maPhong + '%';
+                }
+                else
+                    thamSo.Value = maPhong;
+                thamSo = lenh.Parameters.Add("@TENPHONG", OleDbType.VarWChar);
+                if (tenPhong != " ")
+                {
+                    thamSo.Value = tenPhong + '%';
+                }
+                else
+                    thamSo.Value = tenPhong;
+                thamSo = lenh.Parameters.Add("@MaLoaiPhong", OleDbType.VarWChar);
+                if (loaiPhong != " ")
+                {
+                    thamSo.Value = loaiPhong + '%';
+                }
+                else
+                    thamSo.Value = loaiPhong;
+                thamSo = lenh.Parameters.Add("@TINHTRANG", OleDbType.VarWChar);
+                if (tinhTrang != " ")
+                {
+                    thamSo.Value = '%' + tinhTrang + '%';
+                }
+                else
+                    thamSo.Value = tinhTrang;
+
+                OleDbDataReader boDoc = lenh.ExecuteReader();
+                while (boDoc.Read())
+                {
+                    PHONG phong = new PHONG();
+                    if (!boDoc.IsDBNull(0))
+                        phong.MaPhong = boDoc.GetString(0);
+                    if (!boDoc.IsDBNull(1))
+                        phong.TenPhong = boDoc.GetString(1);
+                    if (!boDoc.IsDBNull(2))
+                        phong.MaLoaiPhong = boDoc.GetString(2);
+                    if (!boDoc.IsDBNull(3))
+                        phong.GhiChu = boDoc.GetString(3);
+                    if (!boDoc.IsDBNull(4))
+                        phong.TinhTrang = boDoc.GetString(4);
+                    danhSachPhong.Add(phong);
+                }
+            }
+            catch
+            {
+                danhSachPhong = new List<PHONG>();
+            }
+            finally
+            {
+                if (ketNoi != null && ketNoi.State == System.Data.ConnectionState.Open)
+                    ketNoi.Close();
+            }
+            return danhSachPhong;
+        }
+        ///////////
     }
 }

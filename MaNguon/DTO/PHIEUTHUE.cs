@@ -45,5 +45,12 @@ namespace DTO
             get { return tenKhachHangDaiDien; }
             set { tenKhachHangDaiDien = value; }
         }
+        private bool _dangThue;
+
+        public bool DangThue
+        {
+            get { return _dangThue; }
+            set { _dangThue = value; }
+        }
     }
 }
