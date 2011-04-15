@@ -117,5 +117,10 @@ namespace BUS
             return PHIEUTHUEDAO.XoaPhieuThue(phieuThue);
         }
         ///////////////
+
+        public static List<PHIEUTHUE> TimPhieu(string maPhieuThue, string tenPhong, string tenKhachHangDaiDien, DateTime ngayBatDauThue, int soNgayThue)
+        {
+            return PHIEUTHUEDAO.TimPhieu(maPhieuThue, tenPhong, tenKhachHangDaiDien, ngayBatDauThue, soNgayThue);
+        }
     }
 }

@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.21022</ProductVersion>
+    <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{DA610046-C2C8-4454-A35A-63D840276603}</ProjectGuid>
     <OutputType>WinExe</OutputType>
@@ -90,6 +90,9 @@
       <DependentUpon>Reservation.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="TraCuuPhieuThue.resx">
+      <DependentUpon>TraCuuPhieuThue.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TraCuuPhong.resx">
       <DependentUpon>TraCuuPhong.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -122,6 +125,12 @@
     </Compile>
     <Compile Include="Reservation.Designer.cs">
       <DependentUpon>Reservation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TraCuuPhieuThue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TraCuuPhieuThue.designer.cs">
+      <DependentUpon>TraCuuPhieuThue.cs</DependentUpon>
     </Compile>
     <Compile Include="TraCuuPhong.cs">
       <SubType>Form</SubType>

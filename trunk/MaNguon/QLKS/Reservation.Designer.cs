@@ -49,7 +49,7 @@
             // 
             this.dtpBeginDate.CustomFormat = "DD/MM/YYYY";
             this.dtpBeginDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpBeginDate.Location = new System.Drawing.Point(78, 145);
+            this.dtpBeginDate.Location = new System.Drawing.Point(78, 136);
             this.dtpBeginDate.Name = "dtpBeginDate";
             this.dtpBeginDate.Size = new System.Drawing.Size(96, 20);
             this.dtpBeginDate.TabIndex = 0;
@@ -58,7 +58,7 @@
             // lblFrom
             // 
             this.lblFrom.AutoSize = true;
-            this.lblFrom.Location = new System.Drawing.Point(12, 152);
+            this.lblFrom.Location = new System.Drawing.Point(12, 142);
             this.lblFrom.Name = "lblFrom";
             this.lblFrom.Size = new System.Drawing.Size(30, 13);
             this.lblFrom.TabIndex = 1;
@@ -86,7 +86,7 @@
             // lblDuration
             // 
             this.lblDuration.AutoSize = true;
-            this.lblDuration.Location = new System.Drawing.Point(210, 173);
+            this.lblDuration.Location = new System.Drawing.Point(11, 206);
             this.lblDuration.Name = "lblDuration";
             this.lblDuration.Size = new System.Drawing.Size(47, 13);
             this.lblDuration.TabIndex = 4;
@@ -94,7 +94,7 @@
             // 
             // txtDuration
             // 
-            this.txtDuration.Location = new System.Drawing.Point(263, 170);
+            this.txtDuration.Location = new System.Drawing.Point(78, 203);
             this.txtDuration.Name = "txtDuration";
             this.txtDuration.ReadOnly = true;
             this.txtDuration.Size = new System.Drawing.Size(100, 20);
@@ -137,7 +137,7 @@
             // lblDays
             // 
             this.lblDays.AutoSize = true;
-            this.lblDays.Location = new System.Drawing.Point(370, 173);
+            this.lblDays.Location = new System.Drawing.Point(181, 206);
             this.lblDays.Name = "lblDays";
             this.lblDays.Size = new System.Drawing.Size(31, 13);
             this.lblDays.TabIndex = 12;
