@@ -526,5 +526,118 @@ namespace DAO
         }
 
         //// ket thuc ma nguon cua 0812604
+
+        public static List<PHIEUTHUE> TimPhieu(string maPhieuThue, string tenPhong, string tenKhachHangDaiDien, DateTime ngayBatDauThue, int soNgayThue)
+        {
+            OleDbConnection ketNoi = null;
+            List<PHIEUTHUE> dsPhieuThue = new List<PHIEUTHUE>();
+            string chuoiLenh;
+            try
+            {
+                ketNoi = KetNoi();
+                //tao chuoi lenh truy van co so du lieu
+                chuoiLenh = "select PHIEUTHUE.MaPhieuThue, PHIEUTHUE.MaPhong, PHIEUTHUE.NgayThue, PHIEUTHUE.SoNgayThue, PHIEUTHUE.TenKhachHangDaiDien from PHIEUTHUE, PHONG";
+                string where = " WHERE ";
+
+                string dieuKien = "";
+                if ("".CompareTo(dieuKien) != 0)
+                    dieuKien += " and ";
+                dieuKien += "PHONG.MaPhong = PHIEUTHUE.MaPhong";
+
+                if (maPhieuThue != "")
+                {
+                    if ("".CompareTo(dieuKien) != 0)
+                        dieuKien += " and ";
+                    dieuKien += "MaPhieuThue = @MaPhieuThue";
+                }
+                if (tenPhong != "")
+                {
+                    if ("".CompareTo(dieuKien) != 0)
+                        dieuKien += " and ";
+                    dieuKien += "PHONG.TenPhong like @TenPhong";
+                }
+                if (tenKhachHangDaiDien != "")
+                {
+                    if ("".CompareTo(dieuKien) != 0)
+                        dieuKien += " and ";
+                    dieuKien += "TenKhachHangDaiDien like @tenKhachHangDaiDien";
+                }
+
+                if (soNgayThue > 0)
+                {
+                    if ("".CompareTo(dieuKien) != 0)
+                        dieuKien += " and (";
+                    dieuKien += "date(NgayBatDauThue) = @NgayBatDauThue";
+                    if ("".CompareTo(dieuKien) != 0)
+                        dieuKien += " or ";
+                    dieuKien += "SoNgayThue = @SoNgayThue)";
+                }
+
+                chuoiLenh += where + dieuKien;
+
+                OleDbCommand lenh = new OleDbCommand(chuoiLenh, ketNoi);
+
+                if (maPhieuThue != "")
+                {
+                    OleDbParameter pMaPhieuThue = new OleDbParameter("@MaPhieuThue", OleDbType.LongVarChar);
+                    pMaPhieuThue.Value = maPhieuThue;
+                    lenh.Parameters.Add(pMaPhieuThue);
+                }
+
+                if (tenPhong != "")
+                {
+                    OleDbParameter pTenPhong = new OleDbParameter("@TenPhong", OleDbType.LongVarChar);
+                    pTenPhong.Value = tenPhong;
+                    lenh.Parameters.Add(pTenPhong);
+                }
+
+                if (tenKhachHangDaiDien != "")
+                {
+                    OleDbParameter pTenKhachHangDaiDien = new OleDbParameter("@TenKhachHangDaiDien", OleDbType.LongVarChar);
+                    pTenKhachHangDaiDien.Value = tenKhachHangDaiDien;
+                    lenh.Parameters.Add(pTenKhachHangDaiDien);
+                }
+
+                if (soNgayThue > 0)
+                {
+                    OleDbParameter pNgayBatDauThue = new OleDbParameter("@NgayBatDauThue", OleDbType.Date);
+                    pNgayBatDauThue.Value = ngayBatDauThue;
+                    lenh.Parameters.Add(pNgayBatDauThue);
+
+                    OleDbParameter pSoNgayThue = new OleDbParameter("@SoNgayThue", OleDbType.Integer);
+                    pSoNgayThue.Value = soNgayThue;
+                    lenh.Parameters.Add(pSoNgayThue);
+                }
+
+                OleDbDataReader boDoc = lenh.ExecuteReader();
+
+                while (boDoc.Read())
+                {
+                    PHIEUTHUE phieu = new PHIEUTHUE();
+                    if (!boDoc.IsDBNull(0))
+                        phieu.MaPhieuThue = boDoc.GetString(0);
+                    if (!boDoc.IsDBNull(1))
+                        phieu.MaPhong = boDoc.GetString(1);
+                    phieu.NgayThue = boDoc.GetDateTime(2);
+                    phieu.SoNgayThue = int.Parse(boDoc.GetValue(3).ToString());
+                    if (!boDoc.IsDBNull(4))
+                        phieu.TenKhachHangDaiDien = boDoc.GetString(4);
+
+                    dsPhieuThue.Add(phieu);
+                }
+            }
+            catch (Exception ex)
+            {
+                //lam trong danh sach phong
+                dsPhieuThue = new List<PHIEUTHUE>();
+            }
+            finally
+            {
+                //dong ket noi co so du lieu
+                if (ketNoi != null && ketNoi.State == System.Data.ConnectionState.Open)
+                    ketNoi.Close();
+            }
+            return dsPhieuThue;
+        }
     }
 }
