@@ -178,6 +178,31 @@ namespace DAO
             }
             return true;
         }
+        public static bool XoaPhieuThue(PHIEUTHUE phieuThue)
+        {
+            OleDbConnection link = null;
+            try
+            {
+                link = KetNoi();
+                string chuoiLenh;
+
+                chuoiLenh = "Delete from PHIEUTHUE Where MaPhieuThue = '" + phieuThue.MaPhieuThue + "'";
+                OleDbCommand lenh = new OleDbCommand(chuoiLenh, link);
+
+
+                lenh.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+            finally
+            {
+                if (link != null && link.State == System.Data.ConnectionState.Open)
+                    link.Close();
+            }
+            return true;
+        }
         public static List<PHIEUTHUE> LayDSPhieuThueCanToiUu(PHIEUTHUE phieuThue, string strLoaiPhong)
         {
             OleDbConnection link = null;
@@ -202,8 +227,8 @@ namespace DAO
                     phieu.NgayThue = Doc.GetDateTime(2);
                     phieu.SoNgayThue = int.Parse(Doc.GetValue(3).ToString());
                     phieu.TenKhachHangDaiDien = Doc.GetString(4);
-                    DateTime ngayTraPhongTam = phieuThue.NgayThue.AddDays(phieuThue.SoNgayThue);
-                    DateTime ngayTraPhong = phieu.NgayThue.AddDays(phieu.SoNgayThue);
+                    DateTime ngayTraPhongTam = phieuThue.NgayThue.AddDays(phieuThue.SoNgayThue - 1);
+                    DateTime ngayTraPhong = phieu.NgayThue.AddDays(phieu.SoNgayThue - 1);
 
                     if (ngayTraPhong >= phieuThue.NgayThue && ngayTraPhongTam >= phieu.NgayThue)
                     {
@@ -267,24 +292,30 @@ namespace DAO
             }
             return danhSachPhieuThue[index];
         }
-        private static int TimPhongTotNhat(PHIEUTHUE phieuThue, int viTriLoaiPhong)
+        private static int TimPhongTotNhat(PHIEUTHUE phieuThueMoi, int viTriLoaiPhong)
         {
             int viTriPhong = -1;
             int max = 365;
             int[][] soDoTinhTrangPhong = new int[0][];
             int viTriNgay = 0;
-            soDoTinhTrangPhong = ToiUuPhieuThue(phieuThue, ref viTriNgay);
+            List<PHIEUTHUE> danhSachPhieuThue = LayDSPhieuThueCanToiUu(phieuThueMoi, phieuThueMoi.MaPhong);
+            // neu cac phong deu trong thi mac dinh chon phong thu nhat
+            if (danhSachPhieuThue.Count == 0)
+            {
+                return 0;
+            }
+            soDoTinhTrangPhong = ToiUuPhieuThue(phieuThueMoi, danhSachPhieuThue, ref viTriNgay);
             for (int i = viTriLoaiPhong; i < soDoTinhTrangPhong.Length; i++)
             {
-                if (soDoTinhTrangPhong[i][viTriNgay] == phieuThue.SoNgayThue)
+                if (soDoTinhTrangPhong[i][viTriNgay] == phieuThueMoi.SoNgayThue)
                 {
                     viTriPhong = i;
                     // thoat vong lap
                     i = soDoTinhTrangPhong.Length;
                 }
-                else if (soDoTinhTrangPhong[i][viTriNgay] < max && phieuThue.SoNgayThue < soDoTinhTrangPhong[i][viTriNgay])
+                else if (soDoTinhTrangPhong[i][viTriNgay] < max && phieuThueMoi.SoNgayThue < soDoTinhTrangPhong[i][viTriNgay])
                 {
-                    max = soDoTinhTrangPhong[i][phieuThue.SoNgayThue - 1];
+                    max = soDoTinhTrangPhong[i][phieuThueMoi.SoNgayThue - 1];
                     viTriPhong = i;
                 }
             }
@@ -335,9 +366,8 @@ namespace DAO
                 while (Doc.Read())
                 {
                     string strMaPhieuThue = Doc.GetString(0);
-                    int iMaPhieuThue = int.Parse(strMaPhieuThue.Substring(5));
+                    int iMaPhieuThue = int.Parse(strMaPhieuThue.Substring(6));
                     danhSachMaPhieuThue.Add(iMaPhieuThue);
-                    //maPhieuThue = "PT" + maPhong + (tongSoPhieuThue + 1).ToString("000");
 
                 }
                 maPhieuThue = "PT" + maPhong + (TimSoLonNhat(danhSachMaPhieuThue) + 1).ToString("000");
@@ -345,11 +375,6 @@ namespace DAO
             catch
             {
                 return string.Empty;
-            }
-            finally
-            {
-                // if (link != null && link.State == System.Data.ConnectionState.Open)
-                //   link.Close();
             }
             return maPhieuThue;
         }
@@ -365,78 +390,89 @@ namespace DAO
             }
             return lonNhat;
         }
+        private static void CapNhatPhieuThueDaToiUu(List<PHIEUTHUE> nguon, List<PHIEUTHUE> dich)
+        {
+            for (int i = 0; i < nguon.Count; i++ )
+            {
+                XoaPhieuThue(nguon[i]);
+                ThemPhieuThue(dich[i]);
+            }
+        }
         //// ket thuc ma nguon cua 0812033
 
         //////////////
-        //// 0812604 - Phú
-        public static int[][] ToiUuPhieuThue(PHIEUTHUE phieuThue, ref int viTriNgay)
+        //// 0812 - Phú
+        public static int[][] ToiUuPhieuThue(PHIEUTHUE phieuThueMoi, List<PHIEUTHUE> danhSachPhieuThueCanToiUu, ref int viTriNgay)
         {
             int[][] _data = new int[0][];
             List<PHIEUTHUE> _res = new List<PHIEUTHUE>();
-            List<PHIEUTHUE> _lsPt = new List<PHIEUTHUE>();
+            _res = danhSachPhieuThueCanToiUu;
 
-            _lsPt = LayDSPhieuThueCanToiUu(phieuThue, phieuThue.MaPhong);
-
-            int soPhong = LaySoPhongTheoLoai(phieuThue.MaPhong);
+            int soPhong = LaySoPhongTheoLoai(phieuThueMoi.MaPhong);
             int max = 0;
 
-            DateTime ngayPhieuThueCuNhat = LayNgayPhieuThueCuNhat(_lsPt);
-            PHIEUTHUE phieuThueXaNhat = LayPhieuThueXaNhat(_lsPt);
+            DateTime ngayPhieuThueCuNhat = LayNgayPhieuThueCuNhat(danhSachPhieuThueCanToiUu);
+            PHIEUTHUE phieuThueXaNhat = LayPhieuThueXaNhat(danhSachPhieuThueCanToiUu);
             DateTime ngayPhieuThueMoiNhat = phieuThueXaNhat.NgayThue.AddDays(phieuThueXaNhat.SoNgayThue);
 
             int soNgayThue = ngayPhieuThueMoiNhat.DayOfYear - ngayPhieuThueCuNhat.DayOfYear;
 
-            viTriNgay = phieuThue.NgayThue.DayOfYear - ngayPhieuThueCuNhat.DayOfYear;
+            viTriNgay = phieuThueMoi.NgayThue.DayOfYear - ngayPhieuThueCuNhat.DayOfYear;
 
-            Init(ref _data, _lsPt, soPhong, soNgayThue);
+            Init(ref _data, danhSachPhieuThueCanToiUu, soPhong, soNgayThue);
             Stack<List<PHIEUTHUE>> st = new Stack<List<PHIEUTHUE>>();
             if (Rate(_data, soNgayThue, soPhong) > max)
-                st.Push(_lsPt);
+                st.Push(danhSachPhieuThueCanToiUu);
             while (st.Count != 0)
             {
-                _lsPt = st.Pop();
+                danhSachPhieuThueCanToiUu = st.Pop();
 
-                Init(ref _data, _lsPt, soPhong, soNgayThue);
+                Init(ref _data, danhSachPhieuThueCanToiUu, soPhong, soNgayThue);
                 if (Rate(_data, soNgayThue, soPhong) == max)
                 {
                     _res = new List<PHIEUTHUE>();
-                    for (int ii = 0; ii < _lsPt.Count; ++ii)
+                    for (int ii = 0; ii < danhSachPhieuThueCanToiUu.Count; ++ii)
                     {
-                        _res.Add(new PHIEUTHUE { DangThue = _lsPt[ii].DangThue, MaPhong = _lsPt[ii].MaPhong, NgayThue = _lsPt[ii].NgayThue, SoNgayThue = _lsPt[ii].SoNgayThue });
+                        _res.Add(new PHIEUTHUE { DangThue = danhSachPhieuThueCanToiUu[ii].DangThue, MaPhong = danhSachPhieuThueCanToiUu[ii].MaPhong, NgayThue = danhSachPhieuThueCanToiUu[ii].NgayThue, SoNgayThue = danhSachPhieuThueCanToiUu[ii].SoNgayThue });
                     }
                 }
-                for (int i = 0; i < _lsPt.Count; ++i)
+                for (int i = 0; i < danhSachPhieuThueCanToiUu.Count; ++i)
                 {
                     for (int j = 0; j < soPhong; ++j)
                     {
-                        int maPhong = int.Parse(_lsPt[i].MaPhong.Substring(1));
-                        int ngayBatDau = _lsPt[i].NgayThue.DayOfYear - ngayPhieuThueCuNhat.DayOfYear;
+                        int maPhong = int.Parse(danhSachPhieuThueCanToiUu[i].MaPhong.Substring(1));
+                        int ngayBatDau = danhSachPhieuThueCanToiUu[i].NgayThue.DayOfYear - ngayPhieuThueCuNhat.DayOfYear;
 
-                        if (_lsPt[i].SoNgayThue <= _data[j][/*_lsPt[i].NgayBatDau*/ngayBatDau] && !_lsPt[i].DangThue)
+                        if (danhSachPhieuThueCanToiUu[i].SoNgayThue <= _data[j][/*_lsPt[i].NgayBatDau*/ngayBatDau] && !danhSachPhieuThueCanToiUu[i].DangThue)
                         {
-                            string strMaPhong = _lsPt[i].MaPhong[0].ToString();
-                            _lsPt[i].MaPhong = strMaPhong + (j + 1).ToString("000");
+                            string strMaPhong = danhSachPhieuThueCanToiUu[i].MaPhong[0].ToString();
+                            danhSachPhieuThueCanToiUu[i].MaPhong = strMaPhong + (j + 1).ToString("000");
                             //_lsPt[i].MaPhong = j + 1;
 
-                            Init(ref _data, _lsPt, soPhong, soNgayThue);
+                            Init(ref _data, danhSachPhieuThueCanToiUu, soPhong, soNgayThue);
                             if (Rate(_data, soNgayThue, soPhong) > max)
                             {
                                 max = Rate(_data, soNgayThue, soPhong);
                                 _res = new List<PHIEUTHUE>();
-                                for (int ii = 0; ii < _lsPt.Count; ++ii)
+                                for (int ii = 0; ii < danhSachPhieuThueCanToiUu.Count; ++ii)
                                 {
-                                    _res.Add(new PHIEUTHUE { DangThue = _lsPt[ii].DangThue, MaPhong = _lsPt[ii].MaPhong, NgayThue = _lsPt[ii].NgayThue, SoNgayThue = _lsPt[ii].SoNgayThue });
+                                    _res.Add(new PHIEUTHUE { MaPhieuThue = danhSachPhieuThueCanToiUu[ii].MaPhieuThue,
+                                                            DangThue = danhSachPhieuThueCanToiUu[ii].DangThue, 
+                                                            MaPhong = danhSachPhieuThueCanToiUu[ii].MaPhong, 
+                                                            NgayThue = danhSachPhieuThueCanToiUu[ii].NgayThue, 
+                                                            SoNgayThue = danhSachPhieuThueCanToiUu[ii].SoNgayThue, 
+                                                            TenKhachHangDaiDien = danhSachPhieuThueCanToiUu[ii].TenKhachHangDaiDien });
 
                                 }
-                                st.Push(_lsPt);
+                                st.Push(danhSachPhieuThueCanToiUu);
                             }
                         }
                     }
                 }
 
             }
-
             Init(ref _data, _res, soPhong, soNgayThue);
+            CapNhatPhieuThueDaToiUu(danhSachPhieuThueCanToiUu, _res);
             return _data;
         }
         private static void Init(ref int[][] mangDuLieu, List<PHIEUTHUE> _lsPt, int soPhong, int soNgay)

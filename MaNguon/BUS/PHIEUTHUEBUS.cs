@@ -112,6 +112,10 @@ namespace BUS
         {
             return PHIEUTHUEDAO.ThemPhieuThue(phieu);
         }
+        public static bool XoaPhieuThue(PHIEUTHUE phieuThue)
+        {
+            return PHIEUTHUEDAO.XoaPhieuThue(phieuThue);
+        }
         ///////////////
     }
 }

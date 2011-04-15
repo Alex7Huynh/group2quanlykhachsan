@@ -40,10 +40,10 @@ namespace QLKS
             cboLoaiPhong.DataSource = _danhSachLoaiPhong.ToList();
             cboLoaiPhong.DisplayMember = "TenLoaiPhong";
             cboLoaiPhong.ValueMember = "MaLoaiPhong";
-            LOAIPHONG a = UCDatPhong.ArrLoaiPhong[UCDatPhong.CurrentLoaiPhong];
-            cboLoaiPhong.SelectedValue = a.MaLoaiPhong;
-            dtpBeginDate.Value = UCXemPhieuThuePhong.Ngaythue;
-            dtpEndDate.Value = UCXemPhieuThuePhong.Kethuc;
+            //LOAIPHONG a = UCDatPhong.ArrLoaiPhong[UCDatPhong.CurrentLoaiPhong];
+            //cboLoaiPhong.SelectedValue = a.MaLoaiPhong;
+            //dtpBeginDate.Value = UCXemPhieuThuePhong.Ngaythue;
+           // dtpEndDate.Value = UCXemPhieuThuePhong.Kethuc;
         }
 
         private void cboLoaiPhong_SelectedIndexChanged(object sender, EventArgs e)
@@ -92,6 +92,7 @@ namespace QLKS
             }
             //PHIEUTHUEBUS.ToiUuPhieuThue((LOAIPHONG)cboLoaiPhong.Items[cboLoaiPhong.SelectedIndex]);
             string phongDuocDat = PHIEUTHUEBUS.DatPhieuThue(_phieuThue, _danhSachLoaiPhong[cboLoaiPhong.SelectedIndex].MaLoaiPhong);
+            
             if (phongDuocDat != string.Empty)
             {
                 MessageBox.Show("Da dat phong " + phongDuocDat.Substring(2, 4) + " thanh cong");
@@ -110,7 +111,7 @@ namespace QLKS
             _phieuThue.MaPhong = _danhSachLoaiPhong[cboLoaiPhong.SelectedIndex].MaLoaiPhong;
             _phieuThue.TenKhachHangDaiDien = txtTen.Text;
             /////////////
-            _phieuThue.NgayThue = _beginDate;
+            _phieuThue.NgayThue = _beginDate.Date;
             _phieuThue.SoNgayThue = int.Parse(txtDuration.Text);
         }
 
