@@ -51,8 +51,11 @@ namespace QLKS
 
         private void UpdateDanhSachPhong()
         {
-            LoadDanhSachPhong(PHONGBUS.LayDSPhongTheoLoaiPhong(_arrLoaiPhong[_currentLoaiPhong]).ToList());
-            txtLoaiPhong.Text = _arrLoaiPhong[_currentLoaiPhong].TenLoaiPhong;
+            if (0 < _currentLoaiPhong && _currentLoaiPhong < _arrLoaiPhong.Count)
+            {
+                LoadDanhSachPhong(PHONGBUS.LayDSPhongTheoLoaiPhong(_arrLoaiPhong[_currentLoaiPhong]).ToList());
+                txtLoaiPhong.Text = _arrLoaiPhong[_currentLoaiPhong].TenLoaiPhong;
+            }
         }
 
         public void LoadDanhSachPhong(List<PHONG> dsPhong)

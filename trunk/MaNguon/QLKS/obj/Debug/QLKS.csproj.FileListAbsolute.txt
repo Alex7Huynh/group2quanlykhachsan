@@ -17,3 +17,6 @@ E:\tanbinh\HK2_10-11\XDPM\DA\group2quanlykhachsan\MaNguon\QLKS\obj\Debug\QLKS.cs
 E:\tanbinh\HK2_10-11\XDPM\DA\group2quanlykhachsan\MaNguon\QLKS\obj\Debug\QLKS.exe
 E:\tanbinh\HK2_10-11\XDPM\DA\group2quanlykhachsan\MaNguon\QLKS\obj\Debug\QLKS.pdb
 E:\tanbinh\HK2_10-11\XDPM\DA\group2quanlykhachsan\MaNguon\QLKS\obj\Debug\QLKS.TraCuuPhong.resources
+D:\Thuc _Hanh_All\Xay Dung\Nhom Lon 2\MaNguon\QLKS\bin\Debug\QLKS.exe.config
+D:\Thuc _Hanh_All\Xay Dung\Nhom Lon 2\MaNguon\QLKS\obj\Debug\QLKS.exe
+D:\Thuc _Hanh_All\Xay Dung\Nhom Lon 2\MaNguon\QLKS\obj\Debug\QLKS.pdb
