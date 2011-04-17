@@ -16,7 +16,7 @@ namespace DAO
             try
             {
                 link = KetNoi();
-                string chuoiLenh = "Select MaPhong,TenPhong,MaLoaiPhong,GhiChu,TinhTrang from PHONG";
+                string chuoiLenh = "Select * from PHONG";
                 OleDbCommand lenh = new OleDbCommand(chuoiLenh, link);
 
                 OleDbDataReader Doc = lenh.ExecuteReader();
@@ -28,7 +28,7 @@ namespace DAO
                     phg.MaLoaiPhong = Doc.GetString(2);
                     phg.GhiChu = Doc.GetString(3);
                     phg.TinhTrang = Doc.GetString(4);
-
+                    phg.DaXoa = Doc.GetString(5);
                     dsPhong.Add(phg);
                 }
             }
@@ -80,7 +80,7 @@ namespace DAO
             try
             {
                 link = KetNoi();
-                string chuoiLenh = "insert into PHONG(MaPhong,TenPhong,MaLoaiPhong,TinhTrang,GhiChu) values(@MaPhong,@TenPhong,@MaLoaiPhong,@TinhTrang,@GhiChu)";
+                string chuoiLenh = "insert into PHONG(MaPhong,TenPhong,MaLoaiPhong,TinhTrang,GhiChu,DaXoa) values(@MaPhong,@TenPhong,@MaLoaiPhong,@TinhTrang,@GhiChu,@DaXoa)";
                 OleDbCommand lenh = new OleDbCommand(chuoiLenh, link);
 
                 OleDbParameter thamSo = new OleDbParameter("@MaPhong", OleDbType.LongVarChar);
@@ -97,6 +97,9 @@ namespace DAO
                 lenh.Parameters.Add(thamSo);
                 thamSo = new OleDbParameter("@GhiChu", OleDbType.LongVarChar);
                 thamSo.Value = phong.GhiChu;
+                lenh.Parameters.Add(thamSo);
+                thamSo = new OleDbParameter("@DaXoa", OleDbType.LongVarChar);
+                thamSo.Value = 0;
                 lenh.Parameters.Add(thamSo);
                 lenh.ExecuteNonQuery();
                 OleDbDataAdapter Adapter = new OleDbDataAdapter();
@@ -125,6 +128,73 @@ namespace DAO
                 thamSo.Value = MaPhong;
                 lenh.Parameters.Add(thamSo);
                 lenh.ExecuteNonQuery();
+            }
+            catch
+            {
+
+            }
+            finally
+            {
+                if (link != null && link.State == System.Data.ConnectionState.Open)
+                    link.Close();
+            }
+        }
+        public static void Xoa(string maPhong)
+        {
+            OleDbConnection link = null;
+            try
+            {
+                link = KetNoi();
+
+                string chuoiLenh = "update PHONG set DaXoa=@xoa where MaPhong=@MP";
+                OleDbCommand lenh = new OleDbCommand(chuoiLenh, link);
+                OleDbParameter thamSo = new OleDbParameter("@xoa", OleDbType.LongVarChar);
+                thamSo.Value = "1";
+                lenh.Parameters.Add(thamSo);
+                thamSo = new OleDbParameter("@MP", OleDbType.LongVarChar);
+                thamSo.Value = maPhong;
+                lenh.Parameters.Add(thamSo);
+                lenh.ExecuteNonQuery();
+                OleDbDataAdapter Adapter = new OleDbDataAdapter();
+                Adapter.UpdateCommand = lenh;
+            }
+            catch
+            {
+
+            }
+            finally
+            {
+                if (link != null && link.State == System.Data.ConnectionState.Open)
+                    link.Close();
+            }
+        }
+        public static void CapNhatPhong(string maPhong,string tenPhong,string maLoaiPhong,string tinhTrang,string ghiChu)
+        {
+            OleDbConnection link = null;
+            try
+            {
+                link = KetNoi();
+
+                string chuoiLenh = "update PHONG set TenPhong=@TP,MaLoaiPhong=@MLP,GhiChu=@GC,Tinhtrang=@TT where MaPhong=@MP";
+                OleDbCommand lenh = new OleDbCommand(chuoiLenh, link);
+                OleDbParameter thamSo = new OleDbParameter("@TP", OleDbType.LongVarChar);
+                thamSo.Value = tenPhong;
+                lenh.Parameters.Add(thamSo);
+                thamSo = new OleDbParameter("@MLP", OleDbType.LongVarChar);
+                thamSo.Value = maLoaiPhong;
+                lenh.Parameters.Add(thamSo);
+                thamSo = new OleDbParameter("@GC", OleDbType.LongVarChar);
+                thamSo.Value = ghiChu;
+                lenh.Parameters.Add(thamSo);
+                thamSo = new OleDbParameter("@TT", OleDbType.LongVarChar);
+                thamSo.Value = tinhTrang;
+                lenh.Parameters.Add(thamSo);
+                thamSo = new OleDbParameter("@MP", OleDbType.LongVarChar);
+                thamSo.Value = maPhong;
+                lenh.Parameters.Add(thamSo);
+                lenh.ExecuteNonQuery();
+                OleDbDataAdapter Adapter = new OleDbDataAdapter();
+                Adapter.UpdateCommand = lenh;
             }
             catch
             {
@@ -170,7 +240,57 @@ namespace DAO
                     else
                     {
                         Phong.TinhTrang = "";
-                    }                   
+                    }
+                    Phong.DaXoa = Doc.GetString(5);
+                }
+            }
+            catch (Exception ex)
+            {
+               Phong = new PHONG();
+            }
+            finally
+            {
+                if (link != null && link.State == System.Data.ConnectionState.Open)
+                    link.Close();
+            }
+            return Phong;
+        }
+        public static PHONG LayPhongTheoMa(string maPhong)
+        {
+            OleDbConnection link = null;
+            PHONG Phong = new PHONG();
+            try
+            {
+                link = KetNoi();
+                string chuoiLenh = "Select * from PHONG where MaPhong = @MaPhong";
+                OleDbCommand lenh = new OleDbCommand(chuoiLenh, link);
+                OleDbParameter thamSo = new OleDbParameter("@TenPhong", OleDbType.LongVarChar);
+                thamSo.Value = maPhong;
+                lenh.Parameters.Add(thamSo);
+
+                OleDbDataReader Doc = lenh.ExecuteReader();
+                Doc.Read();
+                {
+                    Phong.MaPhong = Doc.GetString(0);
+                    Phong.TenPhong = Doc.GetString(1);
+                    Phong.MaLoaiPhong = Doc.GetString(2);
+                    if (!Doc.IsDBNull(3))
+                    {
+                        Phong.GhiChu = Doc.GetString(3);
+                    }
+                    else
+                    {
+                        Phong.GhiChu = "";
+                    }
+                    if (!Doc.IsDBNull(3))
+                    {
+                        Phong.TinhTrang = Doc.GetString(4);
+                    }
+                    else
+                    {
+                        Phong.TinhTrang = "";
+                    }
+                    Phong.DaXoa = Doc.GetString(5);
                 }
             }
             catch (Exception ex)
@@ -220,7 +340,7 @@ namespace DAO
                     {
                         phg.TinhTrang = "";
                     }
-
+                    phg.DaXoa = Doc.GetString(5);
                     dsPhong.Add(phg);
                 }
             }
