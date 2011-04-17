@@ -434,5 +434,36 @@ namespace DAO
             return danhSachPhong;
         }
         ///////////
+
+        ///0812388
+        public static List<int> layDSThietBiThang(int thang)
+        {
+            OleDbConnection link = null;
+            List<int> arr = new List<int>();
+            try
+            {
+                link = KetNoi();
+                string chuoiLenh = "Select Tien from THONGKETHIETBI Where  Thang =@thang  order by MaPhong ";
+                OleDbCommand lenh = new OleDbCommand(chuoiLenh, link);
+
+                OleDbParameter thamso = new OleDbParameter("@thang", OleDbType.Integer);
+                thamso.Value = thang;
+                lenh.Parameters.Add(thamso);
+
+                OleDbDataReader Doc = lenh.ExecuteReader();
+
+                while (Doc.Read())
+                {
+                    int i = Doc.GetInt32(0);
+                    arr.Add(i);
+                }
+            }
+            finally
+            {
+                if (link != null && link.State == System.Data.ConnectionState.Open)
+                    link.Close();
+            }
+            return arr;
+        }
     }
 }

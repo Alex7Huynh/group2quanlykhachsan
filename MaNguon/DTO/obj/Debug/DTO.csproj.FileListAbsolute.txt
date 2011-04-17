@@ -3,3 +3,8 @@ D:\XDPM\Project\MaNguon\DTO\bin\Debug\DTO.pdb
 D:\XDPM\Project\MaNguon\DTO\obj\Debug\ResolveAssemblyReference.cache
 D:\XDPM\Project\MaNguon\DTO\obj\Debug\DTO.dll
 D:\XDPM\Project\MaNguon\DTO\obj\Debug\DTO.pdb
+D:\Users\SIEUNHAN\Desktop\XDPM NEW\MaNguon\DTO\bin\Debug\DTO.dll
+D:\Users\SIEUNHAN\Desktop\XDPM NEW\MaNguon\DTO\bin\Debug\DTO.pdb
+D:\Users\SIEUNHAN\Desktop\XDPM NEW\MaNguon\DTO\obj\Debug\ResolveAssemblyReference.cache
+D:\Users\SIEUNHAN\Desktop\XDPM NEW\MaNguon\DTO\obj\Debug\DTO.dll
+D:\Users\SIEUNHAN\Desktop\XDPM NEW\MaNguon\DTO\obj\Debug\DTO.pdb

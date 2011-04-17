@@ -43,5 +43,12 @@ namespace DTO
             get { return maPhieuThue; }
             set { maPhieuThue = value; }
         }
+        private List<CHITIETHOADON> dsCTHD;
+
+        public List<CHITIETHOADON> DsCTHD
+        {
+            get { return dsCTHD; }
+            set { dsCTHD = value; }
+        }
     }
 }
