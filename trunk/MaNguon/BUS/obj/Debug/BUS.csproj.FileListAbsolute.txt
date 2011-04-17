@@ -7,3 +7,12 @@ D:\XDPM\Project\MaNguon\BUS\bin\Debug\DTO.pdb
 D:\XDPM\Project\MaNguon\BUS\obj\Debug\ResolveAssemblyReference.cache
 D:\XDPM\Project\MaNguon\BUS\obj\Debug\BUS.dll
 D:\XDPM\Project\MaNguon\BUS\obj\Debug\BUS.pdb
+D:\Users\SIEUNHAN\Desktop\XDPM NEW\MaNguon\BUS\bin\Debug\BUS.dll
+D:\Users\SIEUNHAN\Desktop\XDPM NEW\MaNguon\BUS\bin\Debug\BUS.pdb
+D:\Users\SIEUNHAN\Desktop\XDPM NEW\MaNguon\BUS\bin\Debug\DAO.dll
+D:\Users\SIEUNHAN\Desktop\XDPM NEW\MaNguon\BUS\bin\Debug\DTO.dll
+D:\Users\SIEUNHAN\Desktop\XDPM NEW\MaNguon\BUS\bin\Debug\DAO.pdb
+D:\Users\SIEUNHAN\Desktop\XDPM NEW\MaNguon\BUS\bin\Debug\DTO.pdb
+D:\Users\SIEUNHAN\Desktop\XDPM NEW\MaNguon\BUS\obj\Debug\ResolveAssemblyReference.cache
+D:\Users\SIEUNHAN\Desktop\XDPM NEW\MaNguon\BUS\obj\Debug\BUS.dll
+D:\Users\SIEUNHAN\Desktop\XDPM NEW\MaNguon\BUS\obj\Debug\BUS.pdb

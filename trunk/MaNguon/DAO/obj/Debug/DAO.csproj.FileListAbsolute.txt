@@ -7,3 +7,12 @@ D:\XDPM\Project\MaNguon\DAO\obj\Debug\DAO.Properties.Resources.resources
 D:\XDPM\Project\MaNguon\DAO\obj\Debug\DAO.csproj.GenerateResource.Cache
 D:\XDPM\Project\MaNguon\DAO\obj\Debug\DAO.dll
 D:\XDPM\Project\MaNguon\DAO\obj\Debug\DAO.pdb
+D:\Users\SIEUNHAN\Desktop\XDPM NEW\MaNguon\DAO\bin\Debug\DAO.dll
+D:\Users\SIEUNHAN\Desktop\XDPM NEW\MaNguon\DAO\bin\Debug\DAO.pdb
+D:\Users\SIEUNHAN\Desktop\XDPM NEW\MaNguon\DAO\bin\Debug\DTO.dll
+D:\Users\SIEUNHAN\Desktop\XDPM NEW\MaNguon\DAO\bin\Debug\DTO.pdb
+D:\Users\SIEUNHAN\Desktop\XDPM NEW\MaNguon\DAO\obj\Debug\ResolveAssemblyReference.cache
+D:\Users\SIEUNHAN\Desktop\XDPM NEW\MaNguon\DAO\obj\Debug\DAO.Properties.Resources.resources
+D:\Users\SIEUNHAN\Desktop\XDPM NEW\MaNguon\DAO\obj\Debug\DAO.csproj.GenerateResource.Cache
+D:\Users\SIEUNHAN\Desktop\XDPM NEW\MaNguon\DAO\obj\Debug\DAO.dll
+D:\Users\SIEUNHAN\Desktop\XDPM NEW\MaNguon\DAO\obj\Debug\DAO.pdb

@@ -164,5 +164,61 @@ namespace BUS
         }
         ////////////
 
+        ///
+        ///0812388
+        ///
+        // 0812388
+        /// <summary>
+        /// Ham lap bao cao doanh thu
+        /// </summary>
+        /// <param name="thang">thang muon lap bao cao</param>
+        /// <returns></returns>
+        public static int[] LapBaoCaoDoanhThu(int thang)
+        {
+            List<HOADON> dsHoaDon = new List<HOADON>();
+            dsHoaDon = HOADONBUS.layDSHoaDon();
+            List<PHONG> dsphg = new List<PHONG>();
+            dsphg = LayDSPhong();
+            int[] arrDoanhThu = new int[dsphg.Count];
+            for (int i = 0; i < dsHoaDon.Count; i++)
+            {
+                if (dsHoaDon[i].NgayThanhToan.Month != thang)
+                {
+                    dsHoaDon.RemoveAt(i);
+                    i--;
+                }
+            }
+            for (int i = 0; i < dsHoaDon.Count; i++)
+            {
+                if (dsHoaDon[i].DsCTHD == null)
+                    continue;
+                List<CHITIETHOADON> dsCT = new List<CHITIETHOADON>();
+                dsCT = dsHoaDon[i].DsCTHD;
+                for (int j = 0; j < dsCT.Count; j++)
+                {
+                    int tienphong = dsCT[j].TongCong;
+
+                    for (int k = 0; k < dsphg.Count(); k++)
+                        if (string.Compare(dsCT[j].Phieuthue.Phong.MaPhong, dsphg[k].MaPhong, true) == 0)
+                        {
+                            arrDoanhThu[k] += tienphong;
+                            break;
+                        }
+                }
+            }
+            return arrDoanhThu;
+        }
+        public static List<int> layDSThietBiThang(int thang)
+        {
+            List<int> arr = new List<int>();
+            arr = PHONGDAO.layDSThietBiThang(thang);
+            List<PHONG> dsphg = new List<PHONG>();
+            dsphg = PHONGDAO.LayDSPhong();
+            int temp = arr.Count;
+            if (temp < dsphg.Count)
+                for (int i = 0; i < dsphg.Count - temp; i++)
+                    arr.Add(0);
+            return arr;
+        }
     }
 }

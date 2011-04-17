@@ -21,3 +21,27 @@ D:\XDPM\Project\MaNguon\QLKS\obj\Debug\QLKS.TraCuuPhong.resources
 D:\XDPM\Project\MaNguon\QLKS\obj\Debug\QLKS.ThemPhong.resources
 D:\XDPM\Project\MaNguon\QLKS\obj\Debug\QLKS.XoaPhong.resources
 D:\XDPM\Project\MaNguon\QLKS\obj\Debug\QLKS.SuaPhong.resources
+D:\Users\SIEUNHAN\Desktop\XDPM NEW\MaNguon\QLKS\bin\Debug\QLKS.exe.config
+D:\Users\SIEUNHAN\Desktop\XDPM NEW\MaNguon\QLKS\obj\Debug\QLKS.exe
+D:\Users\SIEUNHAN\Desktop\XDPM NEW\MaNguon\QLKS\obj\Debug\QLKS.pdb
+D:\Users\SIEUNHAN\Desktop\XDPM NEW\MaNguon\QLKS\bin\Debug\QLKS.exe
+D:\Users\SIEUNHAN\Desktop\XDPM NEW\MaNguon\QLKS\bin\Debug\QLKS.pdb
+D:\Users\SIEUNHAN\Desktop\XDPM NEW\MaNguon\QLKS\bin\Debug\BUS.dll
+D:\Users\SIEUNHAN\Desktop\XDPM NEW\MaNguon\QLKS\bin\Debug\DTO.dll
+D:\Users\SIEUNHAN\Desktop\XDPM NEW\MaNguon\QLKS\bin\Debug\DAO.dll
+D:\Users\SIEUNHAN\Desktop\XDPM NEW\MaNguon\QLKS\bin\Debug\BUS.pdb
+D:\Users\SIEUNHAN\Desktop\XDPM NEW\MaNguon\QLKS\bin\Debug\DAO.pdb
+D:\Users\SIEUNHAN\Desktop\XDPM NEW\MaNguon\QLKS\bin\Debug\DTO.pdb
+D:\Users\SIEUNHAN\Desktop\XDPM NEW\MaNguon\QLKS\obj\Debug\ResolveAssemblyReference.cache
+D:\Users\SIEUNHAN\Desktop\XDPM NEW\MaNguon\QLKS\obj\Debug\QLKS.frmManDinhDatPhong.resources
+D:\Users\SIEUNHAN\Desktop\XDPM NEW\MaNguon\QLKS\obj\Debug\QLKS.Properties.Resources.resources
+D:\Users\SIEUNHAN\Desktop\XDPM NEW\MaNguon\QLKS\obj\Debug\QLKS.frmReservation.resources
+D:\Users\SIEUNHAN\Desktop\XDPM NEW\MaNguon\QLKS\obj\Debug\QLKS.SuaPhong.resources
+D:\Users\SIEUNHAN\Desktop\XDPM NEW\MaNguon\QLKS\obj\Debug\QLKS.ThemPhong.resources
+D:\Users\SIEUNHAN\Desktop\XDPM NEW\MaNguon\QLKS\obj\Debug\QLKS.frmTraCuuPhieuThue.resources
+D:\Users\SIEUNHAN\Desktop\XDPM NEW\MaNguon\QLKS\obj\Debug\QLKS.TraCuuPhong.resources
+D:\Users\SIEUNHAN\Desktop\XDPM NEW\MaNguon\QLKS\obj\Debug\QLKS.UCDatPhong.resources
+D:\Users\SIEUNHAN\Desktop\XDPM NEW\MaNguon\QLKS\obj\Debug\QLKS.UCXemPhieuThuePhong.resources
+D:\Users\SIEUNHAN\Desktop\XDPM NEW\MaNguon\QLKS\obj\Debug\QLKS.XoaPhong.resources
+D:\Users\SIEUNHAN\Desktop\XDPM NEW\MaNguon\QLKS\obj\Debug\QLKS.csproj.GenerateResource.Cache
+D:\Users\SIEUNHAN\Desktop\XDPM NEW\MaNguon\QLKS\obj\Debug\QLKS.frmBaoCaoDoanhThu.resources

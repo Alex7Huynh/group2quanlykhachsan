@@ -29,5 +29,12 @@ namespace DTO
             get { return tongCong; }
             set { tongCong = value; }
         }
+        private PHIEUTHUE phieuthue;
+
+        public PHIEUTHUE Phieuthue
+        {
+            get { return phieuthue; }
+            set { phieuthue = value; }
+        }
     }
 }
