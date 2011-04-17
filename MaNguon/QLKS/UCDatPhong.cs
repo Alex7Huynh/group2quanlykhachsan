@@ -146,5 +146,17 @@ namespace QLKS
             Form frm = new frmReservation();
             frm.ShowDialog();
         }
+
+        private void btnCheckIn_Click(object sender, EventArgs e)
+        {
+            frmCheckin frm = new frmCheckin();
+            frm.ShowDialog();
+        }
+
+        private void btnCheckOut_Click(object sender, EventArgs e)
+        {
+            frmCheckOut frm = new frmCheckOut();
+            frm.ShowDialog();
+        }
     }
 }

@@ -126,5 +126,16 @@ namespace BUS
         {
             return PHIEUTHUEDAO.TimPhieu(kieuTimKiem, maPhieuThue, tenPhong, tenKhachHangDaiDien, ngayBatDauThue, soNgayThue);
         }
+
+        //0812251 nhom 13 them test checkin
+        public static List<PHIEUTHUE> LayDSPhieuThueTheoTinhTrangPhong(PHONG phong)
+        {
+            return PHIEUTHUEDAO.LayDSPhieuThueTheoTinhTrangPhong(phong);
+        }
+
+        public static int layTongSoNgayThue(PHONG phong)
+        {
+            return PHIEUTHUEDAO.layTongSoNgayThue(phong);
+        }
     }
 }

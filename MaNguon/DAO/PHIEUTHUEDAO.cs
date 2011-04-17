@@ -640,5 +640,86 @@ namespace DAO
             }
             return dsPhieuThue;
         }
+
+        //0812251...Nhom 13 them de test chuc nang checkin do chuc nang dat phong chua co. Nen test = tinh trang dang free
+        public static List<PHIEUTHUE> LayDSPhieuThueTheoTinhTrangPhong(PHONG phong)
+        {
+            OleDbConnection link = null;
+            List<PHIEUTHUE> dsPhieu = new List<PHIEUTHUE>();
+            OleDbParameter thamSo = new OleDbParameter();
+            OleDbCommand lenh = new OleDbCommand();
+            try
+            {
+                link = KetNoi();
+                string chuoiLenh = "select pt.MaPhieuThue, p.MaPhong, pt.NgayThue, pt.SoNgayThue, pt.TenKhachHangDaiDien from PHIEUTHUE pt, PHONG p where pt.MaPhong = p.MaPhong and p.Tinhtrang = @TinhTrang ";
+                lenh = new OleDbCommand(chuoiLenh, link);
+                thamSo = new OleDbParameter("@TinhTrang", OleDbType.LongVarChar);
+                thamSo.Value = phong.TinhTrang;
+                lenh.Parameters.Add(thamSo);
+
+                OleDbDataReader Doc = lenh.ExecuteReader();
+                while (Doc.Read())
+                {
+                    PHIEUTHUE phieu = new PHIEUTHUE();
+                    phieu.MaPhieuThue = Doc.GetString(0);
+                    phieu.MaPhong = Doc.GetString(1);
+                    phieu.NgayThue = Doc.GetDateTime(2);
+                    phieu.SoNgayThue = int.Parse(Doc.GetValue(3).ToString());
+                    phieu.TenKhachHangDaiDien = Doc.GetString(4);
+                    dsPhieu.Add(phieu);
+                }
+            }
+            catch (Exception ex)
+            {
+                dsPhieu = new List<PHIEUTHUE>();
+            }
+            finally
+            {
+                if (link != null && link.State == System.Data.ConnectionState.Open)
+                    link.Close();
+            }
+            return dsPhieu;
+        }
+
+        public static int layTongSoNgayThue(PHONG phong)
+        {
+            int ketqua = 0;
+            OleDbConnection link = null;
+            List<PHIEUTHUE> dsPhieu = new List<PHIEUTHUE>();
+            OleDbParameter thamSo = new OleDbParameter();
+            OleDbCommand lenh = new OleDbCommand();
+            try
+            {
+                link = KetNoi();
+                string chuoiLenh = "select MaPhieuThue, MaPhong, NgayThue, SoNgayThue, TenKhachHangDaiDien from PHIEUTHUE where PHIEUTHUE.MaPhong=@MaPhong";
+                lenh = new OleDbCommand(chuoiLenh, link);
+                thamSo = new OleDbParameter("@MaPhong", OleDbType.LongVarChar);
+                thamSo.Value = phong.MaPhong;
+                lenh.Parameters.Add(thamSo);
+
+                OleDbDataReader Doc = lenh.ExecuteReader();
+                while (Doc.Read())
+                {
+                    PHIEUTHUE phieu = new PHIEUTHUE();
+                    phieu.MaPhieuThue = Doc.GetString(0);
+                    phieu.MaPhong = Doc.GetString(1);
+                    phieu.NgayThue = Doc.GetDateTime(2);
+                    phieu.SoNgayThue = int.Parse(Doc.GetValue(3).ToString());
+                    phieu.TenKhachHangDaiDien = Doc.GetString(4);
+                    ketqua += phieu.SoNgayThue;
+                }
+            }
+            catch (Exception ex)
+            {
+
+            }
+            finally
+            {
+                if (link != null && link.State == System.Data.ConnectionState.Open)
+                    link.Close();
+            }
+            return ketqua;
+
+        }
     }
 }

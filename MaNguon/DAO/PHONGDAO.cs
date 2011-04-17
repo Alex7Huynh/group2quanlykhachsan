@@ -465,5 +465,78 @@ namespace DAO
             }
             return arr;
         }
+
+        // 0812251 nhom 13 them test chuc nang checkin
+        public static bool UpdateTinhTrangPhong(PHONG phong)
+        {
+            bool ketQua = true;
+            OleDbConnection link = null;
+            try
+            {
+                link = KetNoi();
+                string chuoiLenh = "UPDATE PHONG SET PHONG.tinhTrang = @tinhTrang WHERE MaPhong = @MaPhong";
+                OleDbCommand lenh = new OleDbCommand(chuoiLenh, link);
+
+                OleDbParameter thamSo;
+                thamSo = new OleDbParameter("@tinhTrang", OleDbType.LongVarChar);
+                thamSo.Value = phong.TinhTrang;
+                lenh.Parameters.Add(thamSo);
+
+                thamSo = new OleDbParameter("@MaPhong", OleDbType.LongVarChar);
+                thamSo.Value = phong.MaPhong;
+                lenh.Parameters.Add(thamSo);
+
+                lenh.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                ketQua = false;
+            }
+            finally
+            {
+                if (link != null && link.State == System.Data.ConnectionState.Open)
+                    link.Close();
+            }
+            return ketQua;
+        }
+
+        public static int LayDonGiaTheoPhong(PHONG phong)
+        {
+            int DonGia = 0;
+            OleDbConnection link = null;
+
+            try
+            {
+                link = KetNoi();
+                string chuoiLenh = "Select lp.MaLoaiPhong,lp.TenLoaiPhong,lp.DonGia,lp.SLKhachToiDa from PHONG p, LOAIPHONG lp where p.MaLoaiPhong = lp.MaLoaiPhong and p.MaPhong = @MaPhong";
+                OleDbCommand lenh = new OleDbCommand(chuoiLenh, link);
+                OleDbParameter thamSo = new OleDbParameter("@MaPhong", OleDbType.LongVarChar);
+                thamSo.Value = phong.MaPhong;
+                lenh.Parameters.Add(thamSo);
+
+                OleDbDataReader Doc = lenh.ExecuteReader();
+                while (Doc.Read())
+                {
+                    LOAIPHONG phg = new LOAIPHONG();
+                    phg.MaLoaiPhong = Doc.GetString(0);
+                    phg.TenLoaiPhong = Doc.GetString(1);
+                    phg.DonGia = int.Parse(Doc.GetValue(2).ToString());
+                    phg.SLKhachToiDa = int.Parse(Doc.GetValue(3).ToString()); ;
+
+                    DonGia = phg.DonGia;
+
+                }
+            }
+            catch (Exception ex)
+            {
+
+            }
+            finally
+            {
+                if (link != null && link.State == System.Data.ConnectionState.Open)
+                    link.Close();
+            }
+            return DonGia;
+        }
     }
 }
