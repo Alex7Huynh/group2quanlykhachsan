@@ -64,7 +64,7 @@ namespace QLKS
         public void LoadDanhSachPhong(List<PHONG> dsPhong)
         {
             _arrPhong =  dsPhong;
-            this.sortDSPhong(_arrPhong);
+            this.sortDSPhong(_arrPhong);//0812005- sap xep lai ds phong theo ten.
             ucXemPhieuThuePhong.RemoveAll();
             for (int i = 0; i < _arrPhong.Count; i++)
             {

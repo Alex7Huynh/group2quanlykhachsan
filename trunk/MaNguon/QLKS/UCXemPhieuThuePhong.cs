@@ -472,44 +472,51 @@ namespace QLKS
        
         private void dtgTheHienPhieuThuePhong_CellMouseDown(object sender, DataGridViewCellMouseEventArgs e)
         {
-            if (e.RowIndex >= 0)
-                _rowdown = e.RowIndex;
-  
-            _coldown = e.ColumnIndex;
+            if (e.Button == MouseButtons.Left)
+            { 
+                if (e.RowIndex >= 0)
+                _rowdown = e.RowIndex; 
+                _coldown = e.ColumnIndex;
+            }
+          
        //     dtgTheHienPhieuThuePhong[_coldown, _rowdown].Selected = true;
         }
 
         private void dtgTheHienPhieuThuePhong_CellMouseUp(object sender, DataGridViewCellMouseEventArgs e)
         {
-            if (e.RowIndex >= 0)
-                _rowup = e.RowIndex;
-            if (e.ColumnIndex >= 0)
-                _colup = e.ColumnIndex;
-            else _colup = 0;          
-            if ( kiemtraPhongThueHopLe(_rowdown,_rowup)&&(_colup>=0)&&(_coldown>=0))
+            if (e.Button == MouseButtons.Left)
             {
-                _ngaythue = DateTime.Parse(dtgTheHienPhieuThuePhong.Columns[_coldown].Name);
-                _kethuc = DateTime.Parse(dtgTheHienPhieuThuePhong.Columns[_colup].Name);
-              
-                if (_kethuc < _ngaythue)     
+                if (e.RowIndex >= 0)
+                    _rowup = e.RowIndex;
+                if (e.ColumnIndex >= 0)
+                    _colup = e.ColumnIndex;
+                else _colup = 0;
+                if (kiemtraPhongThueHopLe(_rowdown, _rowup) && (_colup >= 0) && (_coldown >= 0))
                 {
-                    DateTime temp = _ngaythue;
-                    _ngaythue = _kethuc;
-                    _kethuc = temp;
-                }
-               if (!kiemtraNgayThueHopLe(_ngaythue))
-                   return;
-                 //0812558- kiem tra la ngay ket thuc co nho hon ngay bat dau ko?                    
-                string phong =(string) dtgTheHienPhieuThuePhong.Rows[_rowup].HeaderCell.Value;
-                PHONG phg = PHONGBUS.LayPhongTheoTenPhong(phong);
-               
-                if (kiemTraPhieuThue(phg, _ngaythue, _kethuc))
-                {
-                    frmReservation a = new frmReservation();
-                    a.ShowDialog();
-                }
-  
-            }          
+                    _ngaythue = DateTime.Parse(dtgTheHienPhieuThuePhong.Columns[_coldown].Name);
+                    _kethuc = DateTime.Parse(dtgTheHienPhieuThuePhong.Columns[_colup].Name);
+
+                    if (_kethuc < _ngaythue)
+                    {
+                        DateTime temp = _ngaythue;
+                        _ngaythue = _kethuc;
+                        _kethuc = temp;
+                    }
+                    if (!kiemtraNgayThueHopLe(_ngaythue))
+                        return;
+                    //0812558- kiem tra la ngay ket thuc co nho hon ngay bat dau ko?                    
+                    string phong = (string)dtgTheHienPhieuThuePhong.Rows[_rowup].HeaderCell.Value;
+                    PHONG phg = PHONGBUS.LayPhongTheoTenPhong(phong);
+
+                    if (kiemTraPhieuThue(phg, _ngaythue, _kethuc))
+                    {
+                        frmReservation a = new frmReservation();
+                        a.ShowDialog();
+                    }
+
+                }  
+            }
+                   
            
         }
         /// <summary>
