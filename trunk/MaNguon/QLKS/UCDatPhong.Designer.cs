@@ -64,6 +64,7 @@
             this.btnCheckIn.TabIndex = 5;
             this.btnCheckIn.Text = "Check-In";
             this.btnCheckIn.UseVisualStyleBackColor = true;
+            this.btnCheckIn.Click += new System.EventHandler(this.btnCheckIn_Click);
             // 
             // btnCheckOut
             // 
@@ -73,6 +74,7 @@
             this.btnCheckOut.TabIndex = 6;
             this.btnCheckOut.Text = "Check-Out";
             this.btnCheckOut.UseVisualStyleBackColor = true;
+            this.btnCheckOut.Click += new System.EventHandler(this.btnCheckOut_Click);
             // 
             // btnPreviousLoaiPhong
             // 
@@ -113,6 +115,7 @@
             // 
             // ucXemPhieuThuePhong
             // 
+            this.ucXemPhieuThuePhong.flag = 0;
             this.ucXemPhieuThuePhong.Location = new System.Drawing.Point(0, 161);
             this.ucXemPhieuThuePhong.Name = "ucXemPhieuThuePhong";
             this.ucXemPhieuThuePhong.Size = new System.Drawing.Size(1113, 373);

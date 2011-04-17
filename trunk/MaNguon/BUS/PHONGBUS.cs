@@ -220,5 +220,15 @@ namespace BUS
                     arr.Add(0);
             return arr;
         }
+
+
+        public static bool UpdateTinhTrangPhong(PHONG phong)
+        {
+            return PHONGDAO.UpdateTinhTrangPhong(phong);
+        }
+        public static int LayDonGiaTheoPhong(PHONG phong)
+        {
+            return PHONGDAO.LayDonGiaTheoPhong(phong);
+        }
     }
 }
