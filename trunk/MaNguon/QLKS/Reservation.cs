@@ -40,10 +40,10 @@ namespace QLKS
             cboLoaiPhong.DataSource = _danhSachLoaiPhong.ToList();
             cboLoaiPhong.DisplayMember = "TenLoaiPhong";
             cboLoaiPhong.ValueMember = "MaLoaiPhong";
-            //LOAIPHONG a = UCDatPhong.ArrLoaiPhong[UCDatPhong.CurrentLoaiPhong];
-            //cboLoaiPhong.SelectedValue = a.MaLoaiPhong;
-            //dtpBeginDate.Value = UCXemPhieuThuePhong.Ngaythue;
-           // dtpEndDate.Value = UCXemPhieuThuePhong.Kethuc;
+            LOAIPHONG a = UCDatPhong.ArrLoaiPhong[UCDatPhong.CurrentLoaiPhong];
+             cboLoaiPhong.SelectedValue = a.MaLoaiPhong;
+            dtpBeginDate.Value = UCXemPhieuThuePhong.Ngaythue;
+            dtpEndDate.Value = UCXemPhieuThuePhong.Kethuc;
         }
 
         private void cboLoaiPhong_SelectedIndexChanged(object sender, EventArgs e)

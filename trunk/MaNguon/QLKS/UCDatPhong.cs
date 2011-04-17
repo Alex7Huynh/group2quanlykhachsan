@@ -17,7 +17,6 @@ namespace QLKS
         /// 0812005 thêm thuộc tinh static va property
         /// </summary>
         private static List<PHONG> _arrPhong;
-
         public static List<PHONG> ArrPhong
         {
             get { return UCDatPhong._arrPhong; }
@@ -33,14 +32,13 @@ namespace QLKS
         }
 
         private static int _currentLoaiPhong = 0;
-
         public static int CurrentLoaiPhong
         {
             get { return UCDatPhong._currentLoaiPhong; }
             set { UCDatPhong._currentLoaiPhong = value; }
         }
         /// <summary>
-        /// 
+        /// lay danh sanh loai phong
         /// </summary>
         private void LoadDanhSachLoaiPhong()
         {
@@ -48,7 +46,9 @@ namespace QLKS
             _currentLoaiPhong = 0;
             UpdateDanhSachPhong();
         }
-
+        /// <summary>
+        /// cap nhat lai danh sach phong
+        /// </summary>
         private void UpdateDanhSachPhong()
         {
             if (0 < _currentLoaiPhong && _currentLoaiPhong < _arrLoaiPhong.Count)
@@ -57,18 +57,44 @@ namespace QLKS
                 txtLoaiPhong.Text = _arrLoaiPhong[_currentLoaiPhong].TenLoaiPhong;
             }
         }
-
+        /// <summary>
+        /// lay danh danh phong
+        /// </summary>
+        /// <param name="dsPhong"></param>
         public void LoadDanhSachPhong(List<PHONG> dsPhong)
         {
-            _arrPhong = dsPhong;
-
+            _arrPhong =  dsPhong;
+            this.sortDSPhong(_arrPhong);
             ucXemPhieuThuePhong.RemoveAll();
             for (int i = 0; i < _arrPhong.Count; i++)
             {
                 ucXemPhieuThuePhong.AddPhong(_arrPhong[i]);
             }
-        }
 
+        }
+        /// <summary>
+        /// 0812005- sap xep lai ds phong
+        /// </summary>
+        /// <param name="dsPhong"></param>
+        private void sortDSPhong(List<PHONG> dsPhong)
+        {
+            int _iSoPhong;
+            _iSoPhong = dsPhong.Count;
+           for(int i=0;i<_iSoPhong-1;i++)
+               for (int j = i; j < _iSoPhong; j++)
+               {
+                   if (dsPhong[i].TenPhong.CompareTo(dsPhong[j].TenPhong) > 0)
+                   {
+                       PHONG temp = dsPhong[i];
+                       dsPhong[i] = dsPhong[j];
+                       dsPhong[j] = temp;
+                   }                  
+
+               }
+        }
+        /// <summary>
+        /// 
+        /// </summary>
         private void UpdateDateTime()
         {
             DateTime beginDate = GetFirstDayOfMonth(mclCalendar.SelectionStart);

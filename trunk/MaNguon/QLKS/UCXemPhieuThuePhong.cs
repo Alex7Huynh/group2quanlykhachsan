@@ -485,33 +485,31 @@ namespace QLKS
                 _rowup = e.RowIndex;
             if (e.ColumnIndex >= 0)
                 _colup = e.ColumnIndex;
-            else _colup = 0;
-            if (kiemtra(_rowup, _rowdown)&&(_colup>=0)&&(_coldown>=0))
+            else _colup = 0;          
+            if ( kiemtraPhongThueHopLe(_rowdown,_rowup)&&(_colup>=0)&&(_coldown>=0))
             {
                 _ngaythue = DateTime.Parse(dtgTheHienPhieuThuePhong.Columns[_coldown].Name);
                 _kethuc = DateTime.Parse(dtgTheHienPhieuThuePhong.Columns[_colup].Name);
-                //0812558- kiem tra la ngay ket thuc co nho hon ngay bat dau ko?
-                string phong =(string) dtgTheHienPhieuThuePhong.Rows[_rowup].HeaderCell.Value;
-                PHONG phg = PHONGBUS.LayPhongTheoTenPhong(phong);
-               
-                if (_kethuc < _ngaythue)
+              
+                if (_kethuc < _ngaythue)     
                 {
                     DateTime temp = _ngaythue;
                     _ngaythue = _kethuc;
                     _kethuc = temp;
                 }
+               if (!kiemtraNgayThueHopLe(_ngaythue))
+                   return;
+                 //0812558- kiem tra la ngay ket thuc co nho hon ngay bat dau ko?                    
+                string phong =(string) dtgTheHienPhieuThuePhong.Rows[_rowup].HeaderCell.Value;
+                PHONG phg = PHONGBUS.LayPhongTheoTenPhong(phong);
+               
                 if (kiemTraPhieuThue(phg, _ngaythue, _kethuc))
                 {
                     frmReservation a = new frmReservation();
                     a.ShowDialog();
                 }
   
-            }
-            else
-            {
-                MessageBox.Show(" chon sai");
-                return;
-            }
+            }          
            
         }
         /// <summary>
@@ -520,12 +518,29 @@ namespace QLKS
         /// <param name="rowdown"> </param>
         /// <param name="rowup"></param>
         /// <returns></returns>
-        private bool kiemtra(int rowdown, int rowup)
-        {
-            if (rowdown == rowup)
-                return true;
-            return false;
-
+        private bool kiemtraPhongThueHopLe(int _rowdown,int _rowup)
+        {           
+            if (_rowdown!= _rowup)
+            {
+                MessageBox.Show("khong cung mot phong");
+                return false;                    
+            }           
+            return true;
+        } 
+      /// <summary>
+        /// 0812005-kiem tra ngay thue co nho hon ngay hien tai hok
+      /// </summary>
+      /// <param name="_ngaythue"> ngay dinh thue</param>
+      /// <returns></returns>
+        private bool kiemtraNgayThueHopLe(DateTime _ngaythue)
+        {     
+             
+            if (DateTime.Compare(_ngaythue.Date, DateTime.Now.Date) < 0)
+            {
+                MessageBox.Show("ban hok the chon ngay trong qua khu");
+                return false;
+            }
+            return true;
         }
         #endregion
         /// <summary>
