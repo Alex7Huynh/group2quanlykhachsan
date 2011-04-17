@@ -1,5 +1,5 @@
-E:\XDPM\MaNguon\DTO\bin\Debug\DTO.dll
-E:\XDPM\MaNguon\DTO\bin\Debug\DTO.pdb
-E:\XDPM\MaNguon\DTO\obj\Debug\ResolveAssemblyReference.cache
-E:\XDPM\MaNguon\DTO\obj\Debug\DTO.dll
-E:\XDPM\MaNguon\DTO\obj\Debug\DTO.pdb
+D:\XDPM\Project\MaNguon\DTO\bin\Debug\DTO.dll
+D:\XDPM\Project\MaNguon\DTO\bin\Debug\DTO.pdb
+D:\XDPM\Project\MaNguon\DTO\obj\Debug\ResolveAssemblyReference.cache
+D:\XDPM\Project\MaNguon\DTO\obj\Debug\DTO.dll
+D:\XDPM\Project\MaNguon\DTO\obj\Debug\DTO.pdb
