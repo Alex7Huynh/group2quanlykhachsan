@@ -527,11 +527,12 @@ namespace DAO
 
         //// ket thuc ma nguon cua 0812604
 
-        public static List<PHIEUTHUE> TimPhieu(string maPhieuThue, string tenPhong, string tenKhachHangDaiDien, DateTime ngayBatDauThue, int soNgayThue)
+        public static List<PHIEUTHUE> TimPhieu(string kieuTimKiem, string maPhieuThue, string tenPhong, string tenKhachHangDaiDien, DateTime ngayBatDauThue, int soNgayThue)
         {
             OleDbConnection ketNoi = null;
             List<PHIEUTHUE> dsPhieuThue = new List<PHIEUTHUE>();
             string chuoiLenh;
+            string noiDieuKien = " " + kieuTimKiem + " ";
             try
             {
                 ketNoi = KetNoi();
@@ -541,32 +542,32 @@ namespace DAO
 
                 string dieuKien = "";
                 if ("".CompareTo(dieuKien) != 0)
-                    dieuKien += " and ";
+                    dieuKien += noiDieuKien;
                 dieuKien += "PHONG.MaPhong = PHIEUTHUE.MaPhong";
 
                 if (maPhieuThue != "")
                 {
                     if ("".CompareTo(dieuKien) != 0)
-                        dieuKien += " and ";
+                        dieuKien += noiDieuKien;
                     dieuKien += "MaPhieuThue = @MaPhieuThue";
                 }
                 if (tenPhong != "")
                 {
                     if ("".CompareTo(dieuKien) != 0)
-                        dieuKien += " and ";
-                    dieuKien += "PHONG.TenPhong like @TenPhong";
+                        dieuKien += noiDieuKien;
+                    dieuKien += "PHONG.TenPhong like %@TenPhong%";
                 }
                 if (tenKhachHangDaiDien != "")
                 {
                     if ("".CompareTo(dieuKien) != 0)
-                        dieuKien += " and ";
-                    dieuKien += "TenKhachHangDaiDien like @tenKhachHangDaiDien";
+                        dieuKien += noiDieuKien;
+                    dieuKien += "TenKhachHangDaiDien like @TenKhachHangDaiDien";
                 }
 
                 if (soNgayThue > 0)
                 {
                     if ("".CompareTo(dieuKien) != 0)
-                        dieuKien += " and (";
+                        dieuKien += noiDieuKien + "(";
                     dieuKien += "date(NgayBatDauThue) = @NgayBatDauThue";
                     if ("".CompareTo(dieuKien) != 0)
                         dieuKien += " or ";
