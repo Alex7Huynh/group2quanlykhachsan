@@ -50,15 +50,19 @@
             this.lblSoNgayThue = new System.Windows.Forms.Label();
             this.chbTimTheoNgay = new System.Windows.Forms.CheckBox();
             this.grbTimTheoNgay = new System.Windows.Forms.GroupBox();
+            this.rdoAnd = new System.Windows.Forms.RadioButton();
+            this.rdoOr = new System.Windows.Forms.RadioButton();
+            this.grpKieuTimKiem = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.dtgDanhSachPhieuThue)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudSoNgayThue)).BeginInit();
             this.grbTimTheoNgay.SuspendLayout();
+            this.grpKieuTimKiem.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblMaPhieuThue
             // 
             this.lblMaPhieuThue.AutoSize = true;
-            this.lblMaPhieuThue.Location = new System.Drawing.Point(17, 77);
+            this.lblMaPhieuThue.Location = new System.Drawing.Point(343, 146);
             this.lblMaPhieuThue.Name = "lblMaPhieuThue";
             this.lblMaPhieuThue.Size = new System.Drawing.Size(75, 13);
             this.lblMaPhieuThue.TabIndex = 0;
@@ -67,7 +71,7 @@
             // lblTenKhachDaiDien
             // 
             this.lblTenKhachDaiDien.AutoSize = true;
-            this.lblTenKhachDaiDien.Location = new System.Drawing.Point(343, 120);
+            this.lblTenKhachDaiDien.Location = new System.Drawing.Point(343, 235);
             this.lblTenKhachDaiDien.Name = "lblTenKhachDaiDien";
             this.lblTenKhachDaiDien.Size = new System.Drawing.Size(104, 13);
             this.lblTenKhachDaiDien.TabIndex = 2;
@@ -76,7 +80,7 @@
             // lblTenPhong
             // 
             this.lblTenPhong.AutoSize = true;
-            this.lblTenPhong.Location = new System.Drawing.Point(343, 77);
+            this.lblTenPhong.Location = new System.Drawing.Point(343, 192);
             this.lblTenPhong.Name = "lblTenPhong";
             this.lblTenPhong.Size = new System.Drawing.Size(59, 13);
             this.lblTenPhong.TabIndex = 3;
@@ -84,14 +88,14 @@
             // 
             // txtMaPhieuThue
             // 
-            this.txtMaPhieuThue.Location = new System.Drawing.Point(125, 74);
+            this.txtMaPhieuThue.Location = new System.Drawing.Point(469, 143);
             this.txtMaPhieuThue.Name = "txtMaPhieuThue";
             this.txtMaPhieuThue.Size = new System.Drawing.Size(155, 20);
             this.txtMaPhieuThue.TabIndex = 4;
             // 
             // txtTenPhong
             // 
-            this.txtTenPhong.Location = new System.Drawing.Point(469, 77);
+            this.txtTenPhong.Location = new System.Drawing.Point(469, 192);
             this.txtTenPhong.Name = "txtTenPhong";
             this.txtTenPhong.Size = new System.Drawing.Size(155, 20);
             this.txtTenPhong.TabIndex = 7;
@@ -187,7 +191,7 @@
             // 
             // txtTenKhachDaiDien
             // 
-            this.txtTenKhachDaiDien.Location = new System.Drawing.Point(469, 117);
+            this.txtTenKhachDaiDien.Location = new System.Drawing.Point(469, 232);
             this.txtTenKhachDaiDien.Name = "txtTenKhachDaiDien";
             this.txtTenKhachDaiDien.Size = new System.Drawing.Size(155, 20);
             this.txtTenKhachDaiDien.TabIndex = 15;
@@ -249,11 +253,45 @@
             this.grbTimTheoNgay.TabStop = false;
             this.grbTimTheoNgay.Text = "Tìm Theo Ngày";
             // 
+            // rdoAnd
+            // 
+            this.rdoAnd.AutoSize = true;
+            this.rdoAnd.Location = new System.Drawing.Point(6, 19);
+            this.rdoAnd.Name = "rdoAnd";
+            this.rdoAnd.Size = new System.Drawing.Size(44, 17);
+            this.rdoAnd.TabIndex = 22;
+            this.rdoAnd.TabStop = true;
+            this.rdoAnd.Text = "And";
+            this.rdoAnd.UseVisualStyleBackColor = true;
+            // 
+            // rdoOr
+            // 
+            this.rdoOr.AutoSize = true;
+            this.rdoOr.Location = new System.Drawing.Point(6, 42);
+            this.rdoOr.Name = "rdoOr";
+            this.rdoOr.Size = new System.Drawing.Size(36, 17);
+            this.rdoOr.TabIndex = 23;
+            this.rdoOr.TabStop = true;
+            this.rdoOr.Text = "Or";
+            this.rdoOr.UseVisualStyleBackColor = true;
+            // 
+            // grpKieuTimKiem
+            // 
+            this.grpKieuTimKiem.Controls.Add(this.rdoAnd);
+            this.grpKieuTimKiem.Controls.Add(this.rdoOr);
+            this.grpKieuTimKiem.Location = new System.Drawing.Point(30, 32);
+            this.grpKieuTimKiem.Name = "grpKieuTimKiem";
+            this.grpKieuTimKiem.Size = new System.Drawing.Size(114, 69);
+            this.grpKieuTimKiem.TabIndex = 24;
+            this.grpKieuTimKiem.TabStop = false;
+            this.grpKieuTimKiem.Text = "Kiểu Tìm Kiếm";
+            // 
             // frmTraCuuPhieuThue
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(639, 568);
+            this.Controls.Add(this.grpKieuTimKiem);
             this.Controls.Add(this.chbTimTheoNgay);
             this.Controls.Add(this.grbTimTheoNgay);
             this.Controls.Add(this.txtTenKhachDaiDien);
@@ -275,6 +313,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudSoNgayThue)).EndInit();
             this.grbTimTheoNgay.ResumeLayout(false);
             this.grbTimTheoNgay.PerformLayout();
+            this.grpKieuTimKiem.ResumeLayout(false);
+            this.grpKieuTimKiem.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -304,5 +344,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn clTinhTrang;
         private System.Windows.Forms.CheckBox chbTimTheoNgay;
         private System.Windows.Forms.GroupBox grbTimTheoNgay;
+        private System.Windows.Forms.RadioButton rdoAnd;
+        private System.Windows.Forms.RadioButton rdoOr;
+        private System.Windows.Forms.GroupBox grpKieuTimKiem;
     }
 }

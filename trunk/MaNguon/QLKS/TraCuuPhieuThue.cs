@@ -72,7 +72,17 @@ namespace QLKS
                 soNgayThue = -1;
             }
 
-            List<PHIEUTHUE> danhSachPhieuThue = PHIEUTHUEBUS.TimPhieu(maPhieuThue, tenPhong, tenKhachHangDaiDien, ngayBatDauThue, soNgayThue);
+            string kieuTimKiem = string.Empty;
+            if (rdoAnd.Checked)
+            {
+                kieuTimKiem = "and";
+            }
+            else if (rdoOr.Checked)
+            {
+                kieuTimKiem = "or";
+            }
+
+            List<PHIEUTHUE> danhSachPhieuThue = PHIEUTHUEBUS.TimPhieu(kieuTimKiem, maPhieuThue, tenPhong, tenKhachHangDaiDien, ngayBatDauThue, soNgayThue);
             for (int i = 0; i < danhSachPhieuThue.Count; i++)
                 dtgDanhSachPhieuThue.Rows.Add(danhSachPhieuThue[i].MaPhieuThue, danhSachPhieuThue[i].MaPhong, danhSachPhieuThue[i].NgayThue.ToShortDateString(), danhSachPhieuThue[i].SoNgayThue.ToString(), danhSachPhieuThue[i].TenKhachHangDaiDien, danhSachPhieuThue[i].DangThue?"Đang thuê":"Đặt Chỗ");
         }
@@ -92,6 +102,7 @@ namespace QLKS
         private void frmTraCuuPhieuThue_Load(object sender, EventArgs e)
         {
             chbTimTheoNgay.Checked = true;
+            rdoAnd.Checked = true;
         }
     }
 }

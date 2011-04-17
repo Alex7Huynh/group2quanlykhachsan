@@ -33,6 +33,8 @@ namespace BUS
             return PHIEUTHUEDAO.LayDSPhieuThueTheoPhong(phong);
         }
 
+
+        #region Ma giả thuat toan toi uu 0812517
         public static bool ToiUuPhieuThue(LOAIPHONG loaiPhong)
         {
             //gán loại phòng cần tối ưu các phiếu thuê phòng
@@ -103,6 +105,8 @@ namespace BUS
             //trả về
             return 0;
         }
+        #endregion
+
         ///////0812033
         public static string DatPhieuThue(PHIEUTHUE phieuThue, string strLoaiPhong)
         {
@@ -118,9 +122,9 @@ namespace BUS
         }
         ///////////////
 
-        public static List<PHIEUTHUE> TimPhieu(string maPhieuThue, string tenPhong, string tenKhachHangDaiDien, DateTime ngayBatDauThue, int soNgayThue)
+        public static List<PHIEUTHUE> TimPhieu(string kieuTimKiem, string maPhieuThue, string tenPhong, string tenKhachHangDaiDien, DateTime ngayBatDauThue, int soNgayThue)
         {
-            return PHIEUTHUEDAO.TimPhieu(maPhieuThue, tenPhong, tenKhachHangDaiDien, ngayBatDauThue, soNgayThue);
+            return PHIEUTHUEDAO.TimPhieu(kieuTimKiem, maPhieuThue, tenPhong, tenKhachHangDaiDien, ngayBatDauThue, soNgayThue);
         }
     }
 }
