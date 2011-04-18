@@ -25,3 +25,12 @@ D:\Thuc _Hanh_All\Xay Dung\nhom lon 3\MaNguon\DAO\obj\Debug\DAO.Properties.Resou
 D:\Thuc _Hanh_All\Xay Dung\nhom lon 3\MaNguon\DAO\obj\Debug\DAO.csproj.GenerateResource.Cache
 D:\Thuc _Hanh_All\Xay Dung\nhom lon 3\MaNguon\DAO\obj\Debug\DAO.dll
 D:\Thuc _Hanh_All\Xay Dung\nhom lon 3\MaNguon\DAO\obj\Debug\DAO.pdb
+E:\tanbinh\HK2_10-11\XDPM\DA\doan\MaNguon\DAO\bin\Debug\DAO.dll
+E:\tanbinh\HK2_10-11\XDPM\DA\doan\MaNguon\DAO\bin\Debug\DAO.pdb
+E:\tanbinh\HK2_10-11\XDPM\DA\doan\MaNguon\DAO\bin\Debug\DTO.dll
+E:\tanbinh\HK2_10-11\XDPM\DA\doan\MaNguon\DAO\bin\Debug\DTO.pdb
+E:\tanbinh\HK2_10-11\XDPM\DA\doan\MaNguon\DAO\obj\Debug\ResolveAssemblyReference.cache
+E:\tanbinh\HK2_10-11\XDPM\DA\doan\MaNguon\DAO\obj\Debug\DAO.Properties.Resources.resources
+E:\tanbinh\HK2_10-11\XDPM\DA\doan\MaNguon\DAO\obj\Debug\DAO.csproj.GenerateResource.Cache
+E:\tanbinh\HK2_10-11\XDPM\DA\doan\MaNguon\DAO\obj\Debug\DAO.dll
+E:\tanbinh\HK2_10-11\XDPM\DA\doan\MaNguon\DAO\obj\Debug\DAO.pdb
