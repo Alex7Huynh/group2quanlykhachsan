@@ -311,7 +311,7 @@ namespace DAO
             try
             {
                 link = KetNoi();
-                string chuoiLenh = "Select MaPhong,TenPhong,MaLoaiPhong,GhiChu,TinhTrang from PHONG where PHONG.MaLoaiPhong = @MaLoaiPhong";
+                string chuoiLenh = "Select MaPhong,TenPhong,MaLoaiPhong,GhiChu,TinhTrang, DaXoa from PHONG where PHONG.MaLoaiPhong = @MaLoaiPhong";
                 OleDbCommand lenh = new OleDbCommand(chuoiLenh, link);
                 OleDbParameter thamSo = new OleDbParameter("@MaLoaiPhong", OleDbType.LongVarChar);
                 thamSo.Value = loaiPhong.MaLoaiPhong;

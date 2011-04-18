@@ -45,3 +45,29 @@ D:\Users\SIEUNHAN\Desktop\XDPM NEW\MaNguon\QLKS\obj\Debug\QLKS.UCXemPhieuThuePho
 D:\Users\SIEUNHAN\Desktop\XDPM NEW\MaNguon\QLKS\obj\Debug\QLKS.XoaPhong.resources
 D:\Users\SIEUNHAN\Desktop\XDPM NEW\MaNguon\QLKS\obj\Debug\QLKS.csproj.GenerateResource.Cache
 D:\Users\SIEUNHAN\Desktop\XDPM NEW\MaNguon\QLKS\obj\Debug\QLKS.frmBaoCaoDoanhThu.resources
+D:\Thuc _Hanh_All\Xay Dung\nhom lon 3\MaNguon\QLKS\bin\Debug\QLKS.exe.config
+D:\Thuc _Hanh_All\Xay Dung\nhom lon 3\MaNguon\QLKS\obj\Debug\QLKS.exe
+D:\Thuc _Hanh_All\Xay Dung\nhom lon 3\MaNguon\QLKS\obj\Debug\QLKS.pdb
+D:\Thuc _Hanh_All\Xay Dung\nhom lon 3\MaNguon\QLKS\bin\Debug\QLKS.exe
+D:\Thuc _Hanh_All\Xay Dung\nhom lon 3\MaNguon\QLKS\bin\Debug\QLKS.pdb
+D:\Thuc _Hanh_All\Xay Dung\nhom lon 3\MaNguon\QLKS\bin\Debug\BUS.dll
+D:\Thuc _Hanh_All\Xay Dung\nhom lon 3\MaNguon\QLKS\bin\Debug\DTO.dll
+D:\Thuc _Hanh_All\Xay Dung\nhom lon 3\MaNguon\QLKS\bin\Debug\DAO.dll
+D:\Thuc _Hanh_All\Xay Dung\nhom lon 3\MaNguon\QLKS\bin\Debug\BUS.pdb
+D:\Thuc _Hanh_All\Xay Dung\nhom lon 3\MaNguon\QLKS\bin\Debug\DAO.pdb
+D:\Thuc _Hanh_All\Xay Dung\nhom lon 3\MaNguon\QLKS\bin\Debug\DTO.pdb
+D:\Thuc _Hanh_All\Xay Dung\nhom lon 3\MaNguon\QLKS\obj\Debug\ResolveAssemblyReference.cache
+D:\Thuc _Hanh_All\Xay Dung\nhom lon 3\MaNguon\QLKS\obj\Debug\QLKS.frmCheckin.resources
+D:\Thuc _Hanh_All\Xay Dung\nhom lon 3\MaNguon\QLKS\obj\Debug\QLKS.frmCheckOut.resources
+D:\Thuc _Hanh_All\Xay Dung\nhom lon 3\MaNguon\QLKS\obj\Debug\QLKS.frmManDinhDatPhong.resources
+D:\Thuc _Hanh_All\Xay Dung\nhom lon 3\MaNguon\QLKS\obj\Debug\QLKS.frmBaoCaoDoanhThu.resources
+D:\Thuc _Hanh_All\Xay Dung\nhom lon 3\MaNguon\QLKS\obj\Debug\QLKS.Properties.Resources.resources
+D:\Thuc _Hanh_All\Xay Dung\nhom lon 3\MaNguon\QLKS\obj\Debug\QLKS.frmReservation.resources
+D:\Thuc _Hanh_All\Xay Dung\nhom lon 3\MaNguon\QLKS\obj\Debug\QLKS.SuaPhong.resources
+D:\Thuc _Hanh_All\Xay Dung\nhom lon 3\MaNguon\QLKS\obj\Debug\QLKS.ThemPhong.resources
+D:\Thuc _Hanh_All\Xay Dung\nhom lon 3\MaNguon\QLKS\obj\Debug\QLKS.frmTraCuuPhieuThue.resources
+D:\Thuc _Hanh_All\Xay Dung\nhom lon 3\MaNguon\QLKS\obj\Debug\QLKS.TraCuuPhong.resources
+D:\Thuc _Hanh_All\Xay Dung\nhom lon 3\MaNguon\QLKS\obj\Debug\QLKS.UCDatPhong.resources
+D:\Thuc _Hanh_All\Xay Dung\nhom lon 3\MaNguon\QLKS\obj\Debug\QLKS.UCXemPhieuThuePhong.resources
+D:\Thuc _Hanh_All\Xay Dung\nhom lon 3\MaNguon\QLKS\obj\Debug\QLKS.XoaPhong.resources
+D:\Thuc _Hanh_All\Xay Dung\nhom lon 3\MaNguon\QLKS\obj\Debug\QLKS.csproj.GenerateResource.Cache
