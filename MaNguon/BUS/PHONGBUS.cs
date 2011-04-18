@@ -175,35 +175,24 @@ namespace BUS
         /// <returns></returns>
         public static int[] LapBaoCaoDoanhThu(int thang)
         {
-            List<HOADON> dsHoaDon = new List<HOADON>();
-            dsHoaDon = HOADONBUS.layDSHoaDon();
+            List<HOADON> dsHD = new List<HOADON>();
+            dsHD = HOADONBUS.layDSHoaDon();
             List<PHONG> dsphg = new List<PHONG>();
             dsphg = LayDSPhong();
-            int[] arrDoanhThu = new int[dsphg.Count];
-            for (int i = 0; i < dsHoaDon.Count; i++)
-            {
-                if (dsHoaDon[i].NgayThanhToan.Month != thang)
-                {
-                    dsHoaDon.RemoveAt(i);
-                    i--;
-                }
-            }
-            for (int i = 0; i < dsHoaDon.Count; i++)
-            {
-                if (dsHoaDon[i].DsCTHD == null)
-                    continue;
-                List<CHITIETHOADON> dsCT = new List<CHITIETHOADON>();
-                dsCT = dsHoaDon[i].DsCTHD;
-                for (int j = 0; j < dsCT.Count; j++)
-                {
-                    int tienphong = dsCT[j].TongCong;
+            List<PHIEUTHUE> dsPT = new List<PHIEUTHUE>();
 
-                    for (int k = 0; k < dsphg.Count(); k++)
-                        if (string.Compare(dsCT[j].Phieuthue.Phong.MaPhong, dsphg[k].MaPhong, true) == 0)
-                        {
-                            arrDoanhThu[k] += tienphong;
-                            break;
-                        }
+            int[] arrDoanhThu = new int[dsphg.Count];
+            for (int i = 0; i < dsHD.Count; i++)
+            {
+                if (dsHD[i].NgayThanhToan.Month == thang)
+                {
+                    for (int j = 0; j < dsphg.Count; ++j)
+                    {
+                        dsPT = PHIEUTHUEDAO.LayDSPhieuThueTheoPhong(dsphg[j]);
+                        for (int k = 0; k < dsPT.Count; ++k)
+                            if (dsPT[k].MaPhieuThue == dsHD[i].MaPhieuThue)
+                                arrDoanhThu[j] += dsHD[i].Thanhtien;
+                    }
                 }
             }
             return arrDoanhThu;
