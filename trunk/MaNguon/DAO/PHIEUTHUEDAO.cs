@@ -370,7 +370,12 @@ namespace DAO
                     danhSachMaPhieuThue.Add(iMaPhieuThue);
 
                 }
-                maPhieuThue = "PT" + maPhong + (TimSoLonNhat(danhSachMaPhieuThue) + 1).ToString("000");
+                if (danhSachMaPhieuThue.Count == 0)
+                {
+                    maPhieuThue = "PT" + maPhong + 1.ToString("000");
+                }
+                else
+                    maPhieuThue = "PT" + maPhong + (TimSoLonNhat(danhSachMaPhieuThue) + 1).ToString("000");
             }
             catch
             {

@@ -71,3 +71,30 @@ D:\Thuc _Hanh_All\Xay Dung\nhom lon 3\MaNguon\QLKS\obj\Debug\QLKS.UCDatPhong.res
 D:\Thuc _Hanh_All\Xay Dung\nhom lon 3\MaNguon\QLKS\obj\Debug\QLKS.UCXemPhieuThuePhong.resources
 D:\Thuc _Hanh_All\Xay Dung\nhom lon 3\MaNguon\QLKS\obj\Debug\QLKS.XoaPhong.resources
 D:\Thuc _Hanh_All\Xay Dung\nhom lon 3\MaNguon\QLKS\obj\Debug\QLKS.csproj.GenerateResource.Cache
+E:\tanbinh\HK2_10-11\XDPM\DA\doan\MaNguon\QLKS\bin\Debug\QLKS.exe.config
+E:\tanbinh\HK2_10-11\XDPM\DA\doan\MaNguon\QLKS\obj\Debug\QLKS.exe
+E:\tanbinh\HK2_10-11\XDPM\DA\doan\MaNguon\QLKS\obj\Debug\QLKS.pdb
+E:\tanbinh\HK2_10-11\XDPM\DA\doan\MaNguon\QLKS\bin\Debug\QLKS.exe
+E:\tanbinh\HK2_10-11\XDPM\DA\doan\MaNguon\QLKS\bin\Debug\QLKS.pdb
+E:\tanbinh\HK2_10-11\XDPM\DA\doan\MaNguon\QLKS\bin\Debug\BUS.dll
+E:\tanbinh\HK2_10-11\XDPM\DA\doan\MaNguon\QLKS\bin\Debug\DTO.dll
+E:\tanbinh\HK2_10-11\XDPM\DA\doan\MaNguon\QLKS\bin\Debug\DAO.dll
+E:\tanbinh\HK2_10-11\XDPM\DA\doan\MaNguon\QLKS\bin\Debug\BUS.pdb
+E:\tanbinh\HK2_10-11\XDPM\DA\doan\MaNguon\QLKS\bin\Debug\DAO.pdb
+E:\tanbinh\HK2_10-11\XDPM\DA\doan\MaNguon\QLKS\bin\Debug\DTO.pdb
+E:\tanbinh\HK2_10-11\XDPM\DA\doan\MaNguon\QLKS\obj\Debug\ResolveAssemblyReference.cache
+E:\tanbinh\HK2_10-11\XDPM\DA\doan\MaNguon\QLKS\obj\Debug\QLKS.frmCheckin.resources
+E:\tanbinh\HK2_10-11\XDPM\DA\doan\MaNguon\QLKS\obj\Debug\QLKS.frmCheckOut.resources
+E:\tanbinh\HK2_10-11\XDPM\DA\doan\MaNguon\QLKS\obj\Debug\QLKS.frmManDinhDatPhong.resources
+E:\tanbinh\HK2_10-11\XDPM\DA\doan\MaNguon\QLKS\obj\Debug\QLKS.frmBaoCaoDoanhThu.resources
+E:\tanbinh\HK2_10-11\XDPM\DA\doan\MaNguon\QLKS\obj\Debug\QLKS.Properties.Resources.resources
+E:\tanbinh\HK2_10-11\XDPM\DA\doan\MaNguon\QLKS\obj\Debug\QLKS.frmReservation.resources
+E:\tanbinh\HK2_10-11\XDPM\DA\doan\MaNguon\QLKS\obj\Debug\QLKS.SuaPhong.resources
+E:\tanbinh\HK2_10-11\XDPM\DA\doan\MaNguon\QLKS\obj\Debug\QLKS.ThemPhong.resources
+E:\tanbinh\HK2_10-11\XDPM\DA\doan\MaNguon\QLKS\obj\Debug\QLKS.frmTraCuuPhieuThue.resources
+E:\tanbinh\HK2_10-11\XDPM\DA\doan\MaNguon\QLKS\obj\Debug\QLKS.TraCuuPhong.resources
+E:\tanbinh\HK2_10-11\XDPM\DA\doan\MaNguon\QLKS\obj\Debug\QLKS.UCDatPhong.resources
+E:\tanbinh\HK2_10-11\XDPM\DA\doan\MaNguon\QLKS\obj\Debug\QLKS.UCXemPhieuThuePhong.resources
+E:\tanbinh\HK2_10-11\XDPM\DA\doan\MaNguon\QLKS\obj\Debug\QLKS.XoaPhong.resources
+E:\tanbinh\HK2_10-11\XDPM\DA\doan\MaNguon\QLKS\obj\Debug\QLKS.csproj.GenerateResource.Cache
+E:\tanbinh\HK2_10-11\XDPM\DA\doan\MaNguon\QLKS\obj\Debug\QLKS.MainMenu.resources

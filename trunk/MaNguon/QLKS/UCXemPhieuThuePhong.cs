@@ -510,7 +510,8 @@ namespace QLKS
 
                     if (kiemTraPhieuThue(phg, _ngaythue, _kethuc))
                     {
-                        frmReservation a = new frmReservation();
+                        int soPhong = dtgTheHienPhieuThuePhong.CurrentRow.Index + 1;
+                        frmReservation a = new frmReservation(true, soPhong);
                         a.ShowDialog();
                     }
 

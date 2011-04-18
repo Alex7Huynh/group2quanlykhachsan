@@ -25,11 +25,18 @@ namespace QLKS
             return _phieuThue;
         }
 
-        public frmReservation()
+        ////////////
+        //// 0812033 - bien keo tha the hien co phai dat phong do keo tha(chọn phong truc quan) hay khong
+        private bool _keoTha;
+        private int _soPhongDuocDat; // so phong duoc dat do keo tha
+        public frmReservation(bool keoTha, int soPhong)
         {
             InitializeComponent();
+            _keoTha = keoTha;
+            _soPhongDuocDat = soPhong;
             _phieuThue = new PHIEUTHUE();
         }
+        ////////////////////////
 
         private void frmReservation_Load(object sender, EventArgs e)
         {
@@ -91,15 +98,32 @@ namespace QLKS
                 MessageBox.Show("Invalid information!");
             }
             //PHIEUTHUEBUS.ToiUuPhieuThue((LOAIPHONG)cboLoaiPhong.Items[cboLoaiPhong.SelectedIndex]);
-            string phongDuocDat = PHIEUTHUEBUS.DatPhieuThue(_phieuThue, _danhSachLoaiPhong[cboLoaiPhong.SelectedIndex].MaLoaiPhong);
-            
-            if (phongDuocDat != string.Empty)
+            // cho nay can 1 bien ben UCXemphieuthuephong keoTha kieu bool, neu dat phong do keo tha thi them phieu thue lun ko can toi uu
+            string phongDuocDat = "";
+            if (_keoTha)
             {
-                MessageBox.Show("Da dat phong " + phongDuocDat.Substring(2, 4) + " thanh cong");
+                _phieuThue.MaPhong += _soPhongDuocDat.ToString("000");
+                phongDuocDat = PHIEUTHUEBUS.ThemPhieuThue(_phieuThue);
+                if (phongDuocDat != string.Empty)
+                {
+                    MessageBox.Show("Da dat phong " + _phieuThue.MaPhong + " thanh cong");
+                }
+                else
+                    MessageBox.Show("Khong co phong trong trong thoi gian ban muon thue, vui long dat phong vao ngay khac!");
             }
             else
             {
-                MessageBox.Show("Khong co phong trong trong thoi gian ban muon thue, vui long dat phong vao ngay khac!");
+                phongDuocDat = PHIEUTHUEBUS.DatPhieuThue(_phieuThue, _danhSachLoaiPhong[cboLoaiPhong.SelectedIndex].MaLoaiPhong);
+
+                if (phongDuocDat != string.Empty)
+                {
+                    MessageBox.Show("Da dat phong " + phongDuocDat.Substring(2, 4) + " thanh cong");
+                    //UCXemPhieuThuePhong.
+                }
+                else
+                {
+                    MessageBox.Show("Khong co phong trong trong thoi gian ban muon thue, vui long dat phong vao ngay khac!");
+                }
             }
         }
 
@@ -109,7 +133,13 @@ namespace QLKS
             _phieuThue.MaPhieuThue = "";            //sau nay them
             ////0812033
             _phieuThue.MaPhong = _danhSachLoaiPhong[cboLoaiPhong.SelectedIndex].MaLoaiPhong;
-            _phieuThue.TenKhachHangDaiDien = txtTen.Text;
+            if (txtTen.Text == "")
+            {
+                _phieuThue.TenKhachHangDaiDien = " ";
+            }
+            else
+                _phieuThue.TenKhachHangDaiDien = txtTen.Text;
+            
             /////////////
             _phieuThue.NgayThue = _beginDate.Date;
             _phieuThue.SoNgayThue = int.Parse(txtDuration.Text);

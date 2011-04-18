@@ -143,7 +143,7 @@ namespace QLKS
 
         private void btnReservation_Click(object sender, EventArgs e)
         {
-            Form frm = new frmReservation();
+            Form frm = new frmReservation(false, 0);
             frm.ShowDialog();
         }
 
@@ -157,6 +157,11 @@ namespace QLKS
         {
             frmCheckOut frm = new frmCheckOut();
             frm.ShowDialog();
+        }
+
+        private void txtLoaiPhong_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

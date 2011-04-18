@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.30729</ProductVersion>
+    <ProductVersion>9.0.21022</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{DA610046-C2C8-4454-A35A-63D840276603}</ProjectGuid>
     <OutputType>WinExe</OutputType>
@@ -81,6 +81,12 @@
     <Compile Include="CheckOut.Designer.cs">
       <DependentUpon>CheckOut.cs</DependentUpon>
     </Compile>
+    <Compile Include="MainMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainMenu.designer.cs">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="ManDinhDatPhong.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,9 +103,15 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Checkin.resx">
       <DependentUpon>Checkin.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="CheckOut.resx">
       <DependentUpon>CheckOut.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainMenu.resx">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="ManDinhDatPhong.resx">
       <DependentUpon>ManDinhDatPhong.cs</DependentUpon>
@@ -120,12 +132,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SuaPhong.resx">
       <DependentUpon>SuaPhong.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="ThemPhong.resx">
       <DependentUpon>ThemPhong.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="TraCuuPhieuThue.resx">
       <DependentUpon>TraCuuPhieuThue.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="TraCuuPhong.resx">
       <DependentUpon>TraCuuPhong.cs</DependentUpon>
@@ -141,6 +156,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="XoaPhong.resx">
       <DependentUpon>XoaPhong.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>

@@ -58,6 +58,7 @@
             // 
             // btnCheckIn
             // 
+            this.btnCheckIn.Enabled = false;
             this.btnCheckIn.Location = new System.Drawing.Point(239, 81);
             this.btnCheckIn.Name = "btnCheckIn";
             this.btnCheckIn.Size = new System.Drawing.Size(75, 23);
@@ -68,6 +69,7 @@
             // 
             // btnCheckOut
             // 
+            this.btnCheckOut.Enabled = false;
             this.btnCheckOut.Location = new System.Drawing.Point(239, 122);
             this.btnCheckOut.Name = "btnCheckOut";
             this.btnCheckOut.Size = new System.Drawing.Size(75, 23);
@@ -112,6 +114,7 @@
             this.txtLoaiPhong.ReadOnly = true;
             this.txtLoaiPhong.Size = new System.Drawing.Size(128, 20);
             this.txtLoaiPhong.TabIndex = 10;
+            this.txtLoaiPhong.TextChanged += new System.EventHandler(this.txtLoaiPhong_TextChanged);
             // 
             // ucXemPhieuThuePhong
             // 
