@@ -16,3 +16,12 @@ D:\Users\SIEUNHAN\Desktop\XDPM NEW\MaNguon\BUS\bin\Debug\DTO.pdb
 D:\Users\SIEUNHAN\Desktop\XDPM NEW\MaNguon\BUS\obj\Debug\ResolveAssemblyReference.cache
 D:\Users\SIEUNHAN\Desktop\XDPM NEW\MaNguon\BUS\obj\Debug\BUS.dll
 D:\Users\SIEUNHAN\Desktop\XDPM NEW\MaNguon\BUS\obj\Debug\BUS.pdb
+D:\Thuc _Hanh_All\Xay Dung\nhom lon 3\MaNguon\BUS\bin\Debug\BUS.dll
+D:\Thuc _Hanh_All\Xay Dung\nhom lon 3\MaNguon\BUS\bin\Debug\BUS.pdb
+D:\Thuc _Hanh_All\Xay Dung\nhom lon 3\MaNguon\BUS\bin\Debug\DAO.dll
+D:\Thuc _Hanh_All\Xay Dung\nhom lon 3\MaNguon\BUS\bin\Debug\DTO.dll
+D:\Thuc _Hanh_All\Xay Dung\nhom lon 3\MaNguon\BUS\bin\Debug\DAO.pdb
+D:\Thuc _Hanh_All\Xay Dung\nhom lon 3\MaNguon\BUS\bin\Debug\DTO.pdb
+D:\Thuc _Hanh_All\Xay Dung\nhom lon 3\MaNguon\BUS\obj\Debug\ResolveAssemblyReference.cache
+D:\Thuc _Hanh_All\Xay Dung\nhom lon 3\MaNguon\BUS\obj\Debug\BUS.dll
+D:\Thuc _Hanh_All\Xay Dung\nhom lon 3\MaNguon\BUS\obj\Debug\BUS.pdb
