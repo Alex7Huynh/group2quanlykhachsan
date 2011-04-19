@@ -144,7 +144,7 @@ namespace QLKS
         private void btnReservation_Click(object sender, EventArgs e)
         {
             Form frm = new frmReservation(false, 0);
-            frm.ShowDialog();
+            frm.ShowDialog();            
         }
 
         private void btnCheckIn_Click(object sender, EventArgs e)

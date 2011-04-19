@@ -59,7 +59,7 @@
             this.btnReservation.Location = new System.Drawing.Point(341, 18);
             this.btnReservation.Name = "btnReservation";
             this.btnReservation.Size = new System.Drawing.Size(93, 41);
-            this.btnReservation.TabIndex = 4;
+            this.btnReservation.TabIndex = 2;
             this.btnReservation.Text = "Reservation";
             this.btnReservation.UseVisualStyleBackColor = false;
             this.btnReservation.Click += new System.EventHandler(this.btnReservation_Click);
@@ -74,7 +74,7 @@
             this.btnCheckIn.Location = new System.Drawing.Point(341, 69);
             this.btnCheckIn.Name = "btnCheckIn";
             this.btnCheckIn.Size = new System.Drawing.Size(93, 41);
-            this.btnCheckIn.TabIndex = 5;
+            this.btnCheckIn.TabIndex = 3;
             this.btnCheckIn.Text = "Check-In";
             this.btnCheckIn.UseVisualStyleBackColor = false;
             this.btnCheckIn.Click += new System.EventHandler(this.btnCheckIn_Click);
@@ -89,7 +89,7 @@
             this.btnCheckOut.Location = new System.Drawing.Point(341, 120);
             this.btnCheckOut.Name = "btnCheckOut";
             this.btnCheckOut.Size = new System.Drawing.Size(93, 41);
-            this.btnCheckOut.TabIndex = 6;
+            this.btnCheckOut.TabIndex = 4;
             this.btnCheckOut.Text = "Check-Out";
             this.btnCheckOut.UseVisualStyleBackColor = false;
             this.btnCheckOut.Click += new System.EventHandler(this.btnCheckOut_Click);
@@ -103,7 +103,7 @@
             this.btnPreviousLoaiPhong.Location = new System.Drawing.Point(904, 139);
             this.btnPreviousLoaiPhong.Name = "btnPreviousLoaiPhong";
             this.btnPreviousLoaiPhong.Size = new System.Drawing.Size(65, 23);
-            this.btnPreviousLoaiPhong.TabIndex = 7;
+            this.btnPreviousLoaiPhong.TabIndex = 6;
             this.btnPreviousLoaiPhong.Text = "<<<";
             this.btnPreviousLoaiPhong.UseVisualStyleBackColor = false;
             this.btnPreviousLoaiPhong.Click += new System.EventHandler(this.btnPreviousLoaiPhong_Click);
@@ -117,7 +117,7 @@
             this.btnNextLoaiPhong.Location = new System.Drawing.Point(975, 139);
             this.btnNextLoaiPhong.Name = "btnNextLoaiPhong";
             this.btnNextLoaiPhong.Size = new System.Drawing.Size(63, 23);
-            this.btnNextLoaiPhong.TabIndex = 8;
+            this.btnNextLoaiPhong.TabIndex = 7;
             this.btnNextLoaiPhong.Text = ">>>";
             this.btnNextLoaiPhong.UseVisualStyleBackColor = false;
             this.btnNextLoaiPhong.Click += new System.EventHandler(this.btnNextLoaiPhong_Click);
@@ -144,7 +144,7 @@
             this.txtLoaiPhong.Name = "txtLoaiPhong";
             this.txtLoaiPhong.ReadOnly = true;
             this.txtLoaiPhong.Size = new System.Drawing.Size(201, 23);
-            this.txtLoaiPhong.TabIndex = 10;
+            this.txtLoaiPhong.TabIndex = 5;
             this.txtLoaiPhong.TextChanged += new System.EventHandler(this.txtLoaiPhong_TextChanged);
             // 
             // pictureBox1
@@ -163,7 +163,7 @@
             this.ucXemPhieuThuePhong.Location = new System.Drawing.Point(9, 183);
             this.ucXemPhieuThuePhong.Name = "ucXemPhieuThuePhong";
             this.ucXemPhieuThuePhong.Size = new System.Drawing.Size(1104, 535);
-            this.ucXemPhieuThuePhong.TabIndex = 2;
+            this.ucXemPhieuThuePhong.TabIndex = 8;
             // 
             // UCDatPhong
             // 

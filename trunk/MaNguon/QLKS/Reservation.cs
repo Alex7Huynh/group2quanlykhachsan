@@ -51,6 +51,11 @@ namespace QLKS
              cboLoaiPhong.SelectedValue = a.MaLoaiPhong;
             dtpBeginDate.Value = UCXemPhieuThuePhong.Ngaythue;
             dtpEndDate.Value = UCXemPhieuThuePhong.Kethuc;
+
+            // transparent image
+            Bitmap temp = new Bitmap(PB_Image.BackgroundImage);
+            temp.MakeTransparent(Color.White);
+            PB_Image.BackgroundImage = temp;
         }
 
         private void cboLoaiPhong_SelectedIndexChanged(object sender, EventArgs e)
