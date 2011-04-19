@@ -11,61 +11,103 @@ namespace QLKS
 {
     public partial class MainMenu : Form
     {
+        // Dành cho di chuyển menu
+        Point startPoint = new Point();
+        public Point StartPoint
+        {
+            get { return startPoint; }
+            set { startPoint = value; }
+        }
+
+
         public MainMenu()
         {
             InitializeComponent();
         }
 
-        private void btnTraCuuPhieuThue_Click(object sender, EventArgs e)
+        private void MainMenu_Load(object sender, EventArgs e)
         {
-            frmTraCuuPhieuThue frmTraCuuPT = new frmTraCuuPhieuThue();
-            frmTraCuuPT.Show();
+            //BT_ThemPhong.BackColor = Color.Transparent;
+            BT_ThemPhong.Focus();
         }
 
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnDatPhong_Click(object sender, EventArgs e)
-        {
-            frmManDinhDatPhong frmDatPhong = new frmManDinhDatPhong();
-            frmDatPhong.Show();
-        }
-
-        private void btnThoat_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void btnThemPhong_Click(object sender, EventArgs e)
+        private void PB_ThemPhong_Click(object sender, EventArgs e)
         {
             ThemPhong frmThemPhong = new ThemPhong();
             frmThemPhong.Show();
         }
 
-        private void btnXoaPhong_Click(object sender, EventArgs e)
+        private void PB_XoaPhong_Click(object sender, EventArgs e)
         {
             XoaPhong frmXoaPhong = new XoaPhong();
             frmXoaPhong.Show();
         }
 
-        private void btnSuaPhong_Click(object sender, EventArgs e)
+        private void PB_SuaPhong_Click(object sender, EventArgs e)
         {
             SuaPhong frmSuaPhong = new SuaPhong();
             frmSuaPhong.Show();
         }
 
-        private void btnTraCuuPhong_Click(object sender, EventArgs e)
+        private void PB_TraCuuPhong_Click(object sender, EventArgs e)
         {
             TraCuuPhong frmTraCuuPhong = new TraCuuPhong();
             frmTraCuuPhong.Show();
         }
 
-        private void btnBaoCao_Click(object sender, EventArgs e)
+        private void PB_TraCuuPhieuThue_Click(object sender, EventArgs e)
+        {
+            frmTraCuuPhieuThue frmTraCuuPT = new frmTraCuuPhieuThue();
+            frmTraCuuPT.Show();
+        }
+
+        private void PB_DatPhong_Click(object sender, EventArgs e)
+        {
+            frmManDinhDatPhong frmDatPhong = new frmManDinhDatPhong();
+            frmDatPhong.Show();
+        }
+
+        private void PB_BaoCaoDoanhThu_Click(object sender, EventArgs e)
         {
             frmBaoCaoDoanhThu frmBaoCao = new frmBaoCaoDoanhThu();
             frmBaoCao.Show();
         }
+
+        private void BT_Thoat_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void BT_ThuNho_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void PB_MainMenu_MouseDown(object sender, MouseEventArgs e)
+        {
+            StartPoint = new Point(e.X, e.Y);
+        }
+
+        // Hàm di chuyển menu
+        public void MoveForm(Point distance)
+        {
+            this.Location = new Point(this.Location.X + distance.X, this.Location.Y + distance.Y);
+        }
+
+        private void PB_MainMenu_MouseMove(object sender, MouseEventArgs e)
+        {
+            if(e.Button == MouseButtons.Left)
+            MoveForm(new Point(e.X - StartPoint.X, e.Y - StartPoint.Y));
+        }
+
+        private void BT_ThemPhong_Enter(object sender, EventArgs e)
+        {
+            ((Button)sender).BackColor = Color.GreenYellow;
+        }
+
+        private void BT_ThemPhong_Leave(object sender, EventArgs e)
+        {
+            ((Button)sender).BackColor = Color.Khaki;
+        }       
     }
 }

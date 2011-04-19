@@ -267,6 +267,30 @@
       <Name>DTO</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btthemphong.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnxoaphong.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnsuaphong.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TCphong.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TCphieuthue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\datphong.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BCdoanhthu.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
