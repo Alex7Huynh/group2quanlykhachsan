@@ -66,7 +66,7 @@
             this.ucDatPhong1.Location = new System.Drawing.Point(1, 28);
             this.ucDatPhong1.Name = "ucDatPhong1";
             this.ucDatPhong1.Size = new System.Drawing.Size(1120, 735);
-            this.ucDatPhong1.TabIndex = 0;
+            this.ucDatPhong1.TabIndex = 1;
             // 
             // frmManDinhDatPhong
             // 

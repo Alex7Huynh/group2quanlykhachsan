@@ -35,6 +35,7 @@ namespace QLKS
         private void frmManDinhDatPhong_FormClosing(object sender, FormClosingEventArgs e)
         {
             ParentForm.Visible = true;
+            ParentForm.Location = this.Location;
         }
 
         private void BT_ThuNho_Click(object sender, EventArgs e)

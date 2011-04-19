@@ -109,6 +109,27 @@ namespace QLKS.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap reservation {
+            get {
+                object obj = ResourceManager.GetObject("reservation", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap reservation1 {
+            get {
+                object obj = ResourceManager.GetObject("reservation1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap runningman {
+            get {
+                object obj = ResourceManager.GetObject("runningman", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap TCphieuthue {
             get {
                 object obj = ResourceManager.GetObject("TCphieuthue", resourceCulture);
