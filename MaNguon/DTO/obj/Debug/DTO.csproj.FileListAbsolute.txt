@@ -18,3 +18,8 @@ E:\tanbinh\HK2_10-11\XDPM\DA\doan\MaNguon\DTO\bin\Debug\DTO.pdb
 E:\tanbinh\HK2_10-11\XDPM\DA\doan\MaNguon\DTO\obj\Debug\ResolveAssemblyReference.cache
 E:\tanbinh\HK2_10-11\XDPM\DA\doan\MaNguon\DTO\obj\Debug\DTO.dll
 E:\tanbinh\HK2_10-11\XDPM\DA\doan\MaNguon\DTO\obj\Debug\DTO.pdb
+D:\Hoc tap\tu\XDPM\workspace\group2quanlykhachsan\MaNguon\DTO\bin\Debug\DTO.dll
+D:\Hoc tap\tu\XDPM\workspace\group2quanlykhachsan\MaNguon\DTO\bin\Debug\DTO.pdb
+D:\Hoc tap\tu\XDPM\workspace\group2quanlykhachsan\MaNguon\DTO\obj\Debug\ResolveAssemblyReference.cache
+D:\Hoc tap\tu\XDPM\workspace\group2quanlykhachsan\MaNguon\DTO\obj\Debug\DTO.dll
+D:\Hoc tap\tu\XDPM\workspace\group2quanlykhachsan\MaNguon\DTO\obj\Debug\DTO.pdb

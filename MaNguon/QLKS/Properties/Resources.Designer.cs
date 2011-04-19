@@ -59,5 +59,61 @@ namespace QLKS.Properties {
                 resourceCulture = value;
             }
         }
+        
+        internal static System.Drawing.Bitmap BCdoanhthu {
+            get {
+                object obj = ResourceManager.GetObject("BCdoanhthu", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap btnsuaphong {
+            get {
+                object obj = ResourceManager.GetObject("btnsuaphong", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap btnxoaphong {
+            get {
+                object obj = ResourceManager.GetObject("btnxoaphong", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap btthemphong {
+            get {
+                object obj = ResourceManager.GetObject("btthemphong", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap datphong {
+            get {
+                object obj = ResourceManager.GetObject("datphong", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap Menu {
+            get {
+                object obj = ResourceManager.GetObject("Menu", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap TCphieuthue {
+            get {
+                object obj = ResourceManager.GetObject("TCphieuthue", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap TCphong {
+            get {
+                object obj = ResourceManager.GetObject("TCphong", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }
