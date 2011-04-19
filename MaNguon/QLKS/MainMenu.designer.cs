@@ -47,7 +47,7 @@
             this.PB_MainMenu.Image = global::QLKS.Properties.Resources.Menu;
             this.PB_MainMenu.Location = new System.Drawing.Point(3, 26);
             this.PB_MainMenu.Name = "PB_MainMenu";
-            this.PB_MainMenu.Size = new System.Drawing.Size(1025, 720);
+            this.PB_MainMenu.Size = new System.Drawing.Size(1123, 720);
             this.PB_MainMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PB_MainMenu.TabIndex = 13;
             this.PB_MainMenu.TabStop = false;
@@ -58,7 +58,7 @@
             this.BT_Thoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BT_Thoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.BT_Thoat.ForeColor = System.Drawing.Color.Snow;
-            this.BT_Thoat.Location = new System.Drawing.Point(934, 2);
+            this.BT_Thoat.Location = new System.Drawing.Point(983, 2);
             this.BT_Thoat.Name = "BT_Thoat";
             this.BT_Thoat.Size = new System.Drawing.Size(84, 44);
             this.BT_Thoat.TabIndex = 101;
@@ -72,7 +72,7 @@
             this.BT_ThuNho.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BT_ThuNho.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.BT_ThuNho.ForeColor = System.Drawing.Color.Snow;
-            this.BT_ThuNho.Location = new System.Drawing.Point(845, 2);
+            this.BT_ThuNho.Location = new System.Drawing.Point(894, 2);
             this.BT_ThuNho.Name = "BT_ThuNho";
             this.BT_ThuNho.Size = new System.Drawing.Size(84, 44);
             this.BT_ThuNho.TabIndex = 100;
@@ -91,7 +91,7 @@
             this.BT_ThemPhong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BT_ThemPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.BT_ThemPhong.ForeColor = System.Drawing.Color.Snow;
-            this.BT_ThemPhong.Location = new System.Drawing.Point(324, 285);
+            this.BT_ThemPhong.Location = new System.Drawing.Point(365, 285);
             this.BT_ThemPhong.Name = "BT_ThemPhong";
             this.BT_ThemPhong.Size = new System.Drawing.Size(136, 38);
             this.BT_ThemPhong.TabIndex = 1;
@@ -111,7 +111,7 @@
             this.BT_XoaPhong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BT_XoaPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.BT_XoaPhong.ForeColor = System.Drawing.Color.Snow;
-            this.BT_XoaPhong.Location = new System.Drawing.Point(324, 329);
+            this.BT_XoaPhong.Location = new System.Drawing.Point(365, 329);
             this.BT_XoaPhong.Name = "BT_XoaPhong";
             this.BT_XoaPhong.Size = new System.Drawing.Size(136, 38);
             this.BT_XoaPhong.TabIndex = 2;
@@ -131,7 +131,7 @@
             this.BT_SuaPhong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BT_SuaPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.BT_SuaPhong.ForeColor = System.Drawing.Color.Snow;
-            this.BT_SuaPhong.Location = new System.Drawing.Point(324, 374);
+            this.BT_SuaPhong.Location = new System.Drawing.Point(365, 374);
             this.BT_SuaPhong.Name = "BT_SuaPhong";
             this.BT_SuaPhong.Size = new System.Drawing.Size(136, 38);
             this.BT_SuaPhong.TabIndex = 3;
@@ -150,7 +150,7 @@
             this.BT_TCPhong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BT_TCPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.BT_TCPhong.ForeColor = System.Drawing.Color.Snow;
-            this.BT_TCPhong.Location = new System.Drawing.Point(501, 285);
+            this.BT_TCPhong.Location = new System.Drawing.Point(555, 285);
             this.BT_TCPhong.Name = "BT_TCPhong";
             this.BT_TCPhong.Size = new System.Drawing.Size(136, 38);
             this.BT_TCPhong.TabIndex = 4;
@@ -170,7 +170,7 @@
             this.BT_TCPhieuThue.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BT_TCPhieuThue.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.BT_TCPhieuThue.ForeColor = System.Drawing.Color.Snow;
-            this.BT_TCPhieuThue.Location = new System.Drawing.Point(501, 329);
+            this.BT_TCPhieuThue.Location = new System.Drawing.Point(555, 329);
             this.BT_TCPhieuThue.Name = "BT_TCPhieuThue";
             this.BT_TCPhieuThue.Size = new System.Drawing.Size(136, 38);
             this.BT_TCPhieuThue.TabIndex = 5;
@@ -189,7 +189,7 @@
             this.BT_DatPhong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BT_DatPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.BT_DatPhong.ForeColor = System.Drawing.Color.Snow;
-            this.BT_DatPhong.Location = new System.Drawing.Point(671, 285);
+            this.BT_DatPhong.Location = new System.Drawing.Point(742, 285);
             this.BT_DatPhong.Name = "BT_DatPhong";
             this.BT_DatPhong.Size = new System.Drawing.Size(136, 38);
             this.BT_DatPhong.TabIndex = 6;
@@ -209,7 +209,7 @@
             this.BT_BCDoanhThu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BT_BCDoanhThu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.BT_BCDoanhThu.ForeColor = System.Drawing.Color.Snow;
-            this.BT_BCDoanhThu.Location = new System.Drawing.Point(844, 285);
+            this.BT_BCDoanhThu.Location = new System.Drawing.Point(929, 285);
             this.BT_BCDoanhThu.Name = "BT_BCDoanhThu";
             this.BT_BCDoanhThu.Size = new System.Drawing.Size(136, 38);
             this.BT_BCDoanhThu.TabIndex = 7;
@@ -224,7 +224,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.DimGray;
-            this.ClientSize = new System.Drawing.Size(1030, 749);
+            this.ClientSize = new System.Drawing.Size(1130, 750);
             this.Controls.Add(this.BT_BCDoanhThu);
             this.Controls.Add(this.BT_DatPhong);
             this.Controls.Add(this.BT_TCPhieuThue);
