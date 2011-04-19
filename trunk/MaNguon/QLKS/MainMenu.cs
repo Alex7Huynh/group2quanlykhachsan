@@ -65,6 +65,10 @@ namespace QLKS
         {
             frmManDinhDatPhong frmDatPhong = new frmManDinhDatPhong();
             frmDatPhong.Show();
+
+            frmDatPhong.Location = Location;
+            this.Visible = false;
+            frmDatPhong.ParentForm = this;
         }
 
         private void PB_BaoCaoDoanhThu_Click(object sender, EventArgs e)

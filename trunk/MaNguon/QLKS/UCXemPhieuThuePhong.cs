@@ -349,8 +349,32 @@ namespace QLKS
 
         public UCXemPhieuThuePhong()
         {
-            InitializeComponent();
+            InitializeComponent();            
         }
+
+
+        /// <summary>
+        /// 0812604 sua lai giao dien
+        /// </summary>
+        private void dtgTheHienPhieuThuePhong_Paint(object sender, PaintEventArgs e)
+        {
+            for (int index = 0; index < dtgTheHienPhieuThuePhong.Columns.Count; index++)
+            {
+                dtgTheHienPhieuThuePhong.Columns[index].HeaderCell.Style.ForeColor = Color.White;
+                dtgTheHienPhieuThuePhong.Columns[index].HeaderCell.Style.BackColor = Color.Black;
+            }
+
+            for (int index = 0; index < dtgTheHienPhieuThuePhong.Rows.Count; index++)
+            {
+                dtgTheHienPhieuThuePhong.Rows[index].HeaderCell.Style.ForeColor = Color.White;
+                dtgTheHienPhieuThuePhong.Rows[index].HeaderCell.Style.BackColor = Color.Black;
+                dtgTheHienPhieuThuePhong.Rows[index].Height = 30;
+            }
+        }
+        /// <summary>
+        /// 0812604 sua lai giao dien
+        /// </summary>
+
 
         private void dtgTheHienPhieuThuePhong_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
@@ -581,7 +605,7 @@ namespace QLKS
             }
                 return true;
         }
-        #endregion
+        #endregion       
     }
 
     #region class Dinh (0812604)

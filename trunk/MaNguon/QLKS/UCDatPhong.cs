@@ -163,5 +163,10 @@ namespace QLKS
         {
 
         }
+
+        private void lblLoaiPhong_Paint(object sender, PaintEventArgs e)
+        {
+            lblLoaiPhong.BackColor = Color.FromArgb(234, 146, 6);
+        }
     }
 }
