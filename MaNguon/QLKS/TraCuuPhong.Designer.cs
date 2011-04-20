@@ -45,6 +45,7 @@
             this.cmbLoaiPhong = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtTinhTrang = new System.Windows.Forms.TextBox();
+            this.cbxTimChinhXac = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.dtgDanhSachPhong)).BeginInit();
             this.SuspendLayout();
             // 
@@ -107,7 +108,7 @@
             this.cMaLoaiPhong,
             this.cGhiChu,
             this.cTinhTrang});
-            this.dtgDanhSachPhong.Location = new System.Drawing.Point(30, 151);
+            this.dtgDanhSachPhong.Location = new System.Drawing.Point(30, 176);
             this.dtgDanhSachPhong.Name = "dtgDanhSachPhong";
             this.dtgDanhSachPhong.RowHeadersVisible = false;
             this.dtgDanhSachPhong.Size = new System.Drawing.Size(503, 286);
@@ -144,7 +145,7 @@
             // 
             // btnTim
             // 
-            this.btnTim.Location = new System.Drawing.Point(239, 452);
+            this.btnTim.Location = new System.Drawing.Point(239, 477);
             this.btnTim.Name = "btnTim";
             this.btnTim.Size = new System.Drawing.Size(83, 36);
             this.btnTim.TabIndex = 9;
@@ -154,7 +155,7 @@
             // 
             // btnThoat
             // 
-            this.btnThoat.Location = new System.Drawing.Point(475, 452);
+            this.btnThoat.Location = new System.Drawing.Point(475, 477);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(83, 36);
             this.btnThoat.TabIndex = 10;
@@ -164,6 +165,7 @@
             // 
             // cmbLoaiPhong
             // 
+            this.cmbLoaiPhong.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbLoaiPhong.FormattingEnabled = true;
             this.cmbLoaiPhong.Location = new System.Drawing.Point(391, 73);
             this.cmbLoaiPhong.Name = "cmbLoaiPhong";
@@ -188,11 +190,24 @@
             this.txtTinhTrang.Size = new System.Drawing.Size(155, 20);
             this.txtTinhTrang.TabIndex = 15;
             // 
+            // cbxTimChinhXac
+            // 
+            this.cbxTimChinhXac.AutoSize = true;
+            this.cbxTimChinhXac.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxTimChinhXac.ForeColor = System.Drawing.Color.Red;
+            this.cbxTimChinhXac.Location = new System.Drawing.Point(239, 149);
+            this.cbxTimChinhXac.Name = "cbxTimChinhXac";
+            this.cbxTimChinhXac.Size = new System.Drawing.Size(113, 21);
+            this.cbxTimChinhXac.TabIndex = 17;
+            this.cbxTimChinhXac.Text = "Tìm chính xác";
+            this.cbxTimChinhXac.UseVisualStyleBackColor = true;
+            // 
             // TraCuuPhong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(570, 491);
+            this.ClientSize = new System.Drawing.Size(576, 520);
+            this.Controls.Add(this.cbxTimChinhXac);
             this.Controls.Add(this.txtTinhTrang);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.cmbLoaiPhong);
@@ -234,5 +249,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn cGhiChu;
         private System.Windows.Forms.DataGridViewTextBoxColumn cTinhTrang;
         private System.Windows.Forms.TextBox txtTinhTrang;
+        private System.Windows.Forms.CheckBox cbxTimChinhXac;
     }
 }

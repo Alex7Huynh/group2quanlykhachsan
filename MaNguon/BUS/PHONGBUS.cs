@@ -158,9 +158,9 @@ namespace BUS
         }
         ////////////
         // 0812033
-        public static List<PHONG> TimPhong(string maPhong, string tenPhong, string loaiPhong, string tinhTrang)
+        public static List<PHONG> TimPhong(string maPhong, string tenPhong, string loaiPhong, string tinhTrang, bool timChinhXac)
         {
-            return PHONGDAO.TimPhong(maPhong, tenPhong, loaiPhong, tinhTrang);
+            return PHONGDAO.TimPhong(maPhong, tenPhong, loaiPhong, tinhTrang, timChinhXac);
         }
         ////////////
 
