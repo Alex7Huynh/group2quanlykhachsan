@@ -26,10 +26,18 @@ namespace QLKS
         List<LOAIPHONG> danhSachLoaiPhong ;
         private void TraCuuPhong_Load(object sender, EventArgs e)
         {
-            danhSachLoaiPhong = PHONGBUS.LayDSLoaiPhong();
-            LayDanhSachMaLoaiPhong();
-            LayDanhSachTenLoaiPhong();
-            cmbLoaiPhong.DataSource = danhSachTenLoaiPhong;
+            try
+            {
+                danhSachLoaiPhong = PHONGBUS.LayDSLoaiPhong();
+                LayDanhSachMaLoaiPhong();
+                LayDanhSachTenLoaiPhong();
+                cmbLoaiPhong.DataSource = danhSachTenLoaiPhong;
+            }
+            catch (System.Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
         }
 
         private void btnThoat_Click(object sender, EventArgs e)
@@ -67,9 +75,17 @@ namespace QLKS
             {
                 tinhTrang = txtTinhTrang.Text.Trim();
             }
-            List<PHONG> danhSachPhong = PHONGBUS.TimPhong(maPhong, tenPhong, strDanhSachLoaiPhong[cmbLoaiPhong.SelectedIndex], tinhTrang);
-            for (int i = 0; i < danhSachPhong.Count; i++)
-                dtgDanhSachPhong.Rows.Add(danhSachPhong[i].MaPhong, danhSachPhong[i].TenPhong, danhSachPhong[i].MaLoaiPhong, danhSachPhong[i].GhiChu, danhSachPhong[i].TinhTrang);
+            bool timChinhXac = cbxTimChinhXac.Checked;
+            try
+            {
+                List<PHONG> danhSachPhong = PHONGBUS.TimPhong(maPhong, tenPhong, strDanhSachLoaiPhong[cmbLoaiPhong.SelectedIndex], tinhTrang, timChinhXac);
+                for (int i = 0; i < danhSachPhong.Count; i++)
+                    dtgDanhSachPhong.Rows.Add(danhSachPhong[i].MaPhong, danhSachPhong[i].TenPhong, danhSachPhong[i].MaLoaiPhong, danhSachPhong[i].GhiChu, danhSachPhong[i].TinhTrang);
+            }
+            catch (System.Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
         void LayDanhSachMaLoaiPhong()
         {
