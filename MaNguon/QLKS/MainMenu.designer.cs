@@ -136,6 +136,7 @@
             this.BT_SuaPhong.Size = new System.Drawing.Size(136, 38);
             this.BT_SuaPhong.TabIndex = 3;
             this.BT_SuaPhong.UseVisualStyleBackColor = false;
+            this.BT_SuaPhong.Click += new System.EventHandler(this.BT_SuaPhong_Click);
             this.BT_SuaPhong.Leave += new System.EventHandler(this.BT_ThemPhong_Leave);
             this.BT_SuaPhong.Enter += new System.EventHandler(this.BT_ThemPhong_Enter);
             // 
@@ -224,7 +225,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.DimGray;
-            this.ClientSize = new System.Drawing.Size(1130, 750);
+            this.ClientSize = new System.Drawing.Size(1036, 750);
             this.Controls.Add(this.BT_BCDoanhThu);
             this.Controls.Add(this.BT_DatPhong);
             this.Controls.Add(this.BT_TCPhieuThue);

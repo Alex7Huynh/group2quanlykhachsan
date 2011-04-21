@@ -26,13 +26,13 @@ namespace QLKS
         {
             dtg1.Rows.Clear();
             dsphg = PHONGBUS.LayDSPhong();
-            for (int i = 0; i < dsphg.Count; i++)
-                if (string.Compare(dsphg[i].DaXoa, "0", true) == 0)
-                    dtg1.Rows.Add(dsphg[i].MaPhong,
-                        dsphg[i].TenPhong,
-                        dsphg[i].MaLoaiPhong,
-                        dsphg[i].GhiChu,
-                        dsphg[i].TinhTrang);
+            for (int index = 0; index < dsphg.Count; index++)
+                if (string.Compare(dsphg[index].DaXoa, "0", true) == 0)
+                    dtg1.Rows.Add(dsphg[index].MaPhong,
+                        dsphg[index].TenPhong,
+                        dsphg[index].MaLoaiPhong,
+                        dsphg[index].GhiChu,
+                        dsphg[index].TinhTrang);
         }
         private void btnThoat_Click(object sender, EventArgs e)
         {
