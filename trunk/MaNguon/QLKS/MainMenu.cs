@@ -112,6 +112,12 @@ namespace QLKS
         private void BT_ThemPhong_Leave(object sender, EventArgs e)
         {
             ((Button)sender).BackColor = Color.Khaki;
+        }
+
+        private void BT_SuaPhong_Click(object sender, EventArgs e)
+        {
+            SuaPhong suaphong = new SuaPhong();
+            suaphong.ShowDialog();
         }       
     }
 }

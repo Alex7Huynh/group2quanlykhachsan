@@ -48,25 +48,34 @@ namespace QLKS
                         break;
                     }
                 }
-                if (1 == temp) MessageBox.Show("Ma Phong Da Ton Tai");
-                else if (2 == temp) MessageBox.Show("Ma Phong da co trong danh sach");
-                else if (PHONGBUS.KiemTraLoaiPhong(loaiPhong))
+                char kiTuDau = maPhong[0];
+                if ((kiTuDau >= 'A') && (kiTuDau <= 'Z'))
                 {
-                    dataGridView1.Rows.Add(maPhong, tenPhong, loaiPhong, ghiChu);
                     PHONG phong1 = new PHONG();
                     phong1.MaPhong = maPhong;
                     phong1.TenPhong = tenPhong;
                     phong1.MaLoaiPhong = loaiPhong;
                     phong1.GhiChu = ghiChu;
                     phong1.TinhTrang = tinhTrang;
-                    dsmphg.Add(phong1);
-                    btnXoa.Enabled = true;
-                    btnOK.Enabled = true;
+
+                    ThemPhongVaoDanhSach(temp, phong1);
                 }
-                else MessageBox.Show("Mã loại phòng không có trong CSDL");
+                else MessageBox.Show("Ki tu dau tien phai la chu in hoa");
            }
         }
-
+        private void ThemPhongVaoDanhSach(int temp,PHONG phg)
+        {
+            if (1 == temp) MessageBox.Show("Ma Phong Da Ton Tai");
+            else if (2 == temp) MessageBox.Show("Ma Phong da co trong danh sach");
+            else if (PHONGBUS.KiemTraLoaiPhong(phg.MaLoaiPhong))
+            {
+                dataGridView1.Rows.Add(phg.MaPhong, phg.TenPhong, phg.MaLoaiPhong, phg.GhiChu,phg.TinhTrang);
+                dsmphg.Add(phg);
+                btnXoa.Enabled = true;
+                btnOK.Enabled = true;
+            }
+            else MessageBox.Show("Mã loại phòng không có trong CSDL");
+        }
         private void ThemPhong_Load(object sender, EventArgs e)
         {
             btnXoa.Enabled = false;
