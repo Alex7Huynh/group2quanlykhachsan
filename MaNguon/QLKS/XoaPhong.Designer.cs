@@ -29,15 +29,14 @@
         private void InitializeComponent()
         {
             this.dtg1 = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
             this.clMaPhong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clTenPhong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clLoaiPhong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clGhiChu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clTinhTrang = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label1 = new System.Windows.Forms.Label();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnThoat = new System.Windows.Forms.Button();
-            this.btnRe = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtg1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,15 +55,6 @@
             this.dtg1.TabIndex = 0;
             this.dtg1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.dtg1_MouseMove);
             this.dtg1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.dtg1_MouseUp);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(209, 41);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(112, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "DANH SACH PHONG";
             // 
             // clMaPhong
             // 
@@ -91,6 +81,15 @@
             this.clTinhTrang.HeaderText = "TinhTrang";
             this.clTinhTrang.Name = "clTinhTrang";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(209, 41);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(112, 13);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "DANH SACH PHONG";
+            // 
             // btnXoa
             // 
             this.btnXoa.Location = new System.Drawing.Point(80, 309);
@@ -111,22 +110,11 @@
             this.btnThoat.UseVisualStyleBackColor = true;
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
-            // btnRe
-            // 
-            this.btnRe.Location = new System.Drawing.Point(245, 309);
-            this.btnRe.Name = "btnRe";
-            this.btnRe.Size = new System.Drawing.Size(96, 36);
-            this.btnRe.TabIndex = 3;
-            this.btnRe.Text = "Refest";
-            this.btnRe.UseVisualStyleBackColor = true;
-            this.btnRe.Click += new System.EventHandler(this.btnRe_Click);
-            // 
             // XoaPhong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(578, 357);
-            this.Controls.Add(this.btnRe);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.label1);
@@ -151,6 +139,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn clTinhTrang;
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnThoat;
-        private System.Windows.Forms.Button btnRe;
     }
 }

@@ -38,15 +38,15 @@
             this.label5 = new System.Windows.Forms.Label();
             this.txtTT = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btnThem = new System.Windows.Forms.Button();
-            this.btnXoa = new System.Windows.Forms.Button();
-            this.btnOK = new System.Windows.Forms.Button();
-            this.btnThoat = new System.Windows.Forms.Button();
             this.clMP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clTenPhong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clLoaiPhong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clGhiChu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clTinhTrang = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnThem = new System.Windows.Forms.Button();
+            this.btnXoa = new System.Windows.Forms.Button();
+            this.btnOK = new System.Windows.Forms.Button();
+            this.btnThoat = new System.Windows.Forms.Button();
             this.cmbLoai = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -139,6 +139,31 @@
             this.dataGridView1.Size = new System.Drawing.Size(504, 130);
             this.dataGridView1.TabIndex = 2;
             // 
+            // clMP
+            // 
+            this.clMP.HeaderText = "MaPhong";
+            this.clMP.Name = "clMP";
+            // 
+            // clTenPhong
+            // 
+            this.clTenPhong.HeaderText = "TenPhong";
+            this.clTenPhong.Name = "clTenPhong";
+            // 
+            // clLoaiPhong
+            // 
+            this.clLoaiPhong.HeaderText = "LoaiPhong";
+            this.clLoaiPhong.Name = "clLoaiPhong";
+            // 
+            // clGhiChu
+            // 
+            this.clGhiChu.HeaderText = "GhiChu";
+            this.clGhiChu.Name = "clGhiChu";
+            // 
+            // clTinhTrang
+            // 
+            this.clTinhTrang.HeaderText = "TinhTrang";
+            this.clTinhTrang.Name = "clTinhTrang";
+            // 
             // btnThem
             // 
             this.btnThem.Location = new System.Drawing.Point(72, 308);
@@ -179,43 +204,13 @@
             this.btnThoat.UseVisualStyleBackColor = true;
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
-            // clMP
-            // 
-            this.clMP.HeaderText = "MaPhong";
-            this.clMP.Name = "clMP";
-            // 
-            // clTenPhong
-            // 
-            this.clTenPhong.HeaderText = "TenPhong";
-            this.clTenPhong.Name = "clTenPhong";
-            // 
-            // clLoaiPhong
-            // 
-            this.clLoaiPhong.HeaderText = "LoaiPhong";
-            this.clLoaiPhong.Name = "clLoaiPhong";
-            // 
-            // clGhiChu
-            // 
-            this.clGhiChu.HeaderText = "GhiChu";
-            this.clGhiChu.Name = "clGhiChu";
-            // 
-            // clTinhTrang
-            // 
-            this.clTinhTrang.HeaderText = "TinhTrang";
-            this.clTinhTrang.Name = "clTinhTrang";
-            // 
             // cmbLoai
             // 
             this.cmbLoai.FormattingEnabled = true;
-            this.cmbLoai.Items.AddRange(new object[] {
-            "A",
-            "B",
-            "C"});
             this.cmbLoai.Location = new System.Drawing.Point(83, 81);
             this.cmbLoai.Name = "cmbLoai";
             this.cmbLoai.Size = new System.Drawing.Size(100, 21);
             this.cmbLoai.TabIndex = 4;
-            this.cmbLoai.Text = "A";
             // 
             // ThemPhong
             // 

@@ -48,7 +48,7 @@ namespace QLKS
             if (cmbMP.Text != string.Empty)
             {
                 string loaiPhong = txtLP.Text;
-                if (KiemTraLoaiPhong(loaiPhong))
+                if (PHONGBUS.KiemTraLoaiPhong(loaiPhong))
                 {
                     PHONGBUS.CapNhatPhong(cmbMP.Text, txtTP.Text, loaiPhong
                         , txtTT.Text, txtGC.Text);
@@ -58,13 +58,6 @@ namespace QLKS
             }
             else MessageBox.Show("xin chon phong muon sua");
         }
-        private bool KiemTraLoaiPhong(string loaiPhong)
-        {
-            List<LOAIPHONG> dsloai = PHONGBUS.LayDSLoaiPhong();
-            for(int index =0 ; index < dsloai.Count;index++)
-                if((string.Compare(loaiPhong,dsloai[index].MaLoaiPhong,true)==0))
-                    return true;
-            return false;
-        }
+       
     }
 }
