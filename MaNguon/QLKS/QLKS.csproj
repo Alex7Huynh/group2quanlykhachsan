@@ -191,6 +191,12 @@
     <Compile Include="ThemPhong.Designer.cs">
       <DependentUpon>ThemPhong.cs</DependentUpon>
     </Compile>
+    <Compile Include="TraCuuKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TraCuuKhachHang.Designer.cs">
+      <DependentUpon>TraCuuKhachHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="TraCuuPhieuThue.cs">
       <SubType>Form</SubType>
     </Compile>
