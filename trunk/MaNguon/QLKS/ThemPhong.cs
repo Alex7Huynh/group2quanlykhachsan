@@ -23,53 +23,65 @@ namespace QLKS
             List<PHONG> phg = new List<PHONG>();
             phg = PHONGBUS.LayDSPhong();
             int temp = 0;
-            string MP=txtMP.Text.Trim();
-            string TP =txtTen.Text.Trim();
-            string LP =cmbLoai.Text.Trim();
-            string GC =txtGhiChu.Text.Trim();
-            string TT = txtTT.Text.Trim();
-            if (MP == "")
+            string maPhong=txtMP.Text.Trim();
+            string tenPhong =txtTen.Text.Trim();
+            string loaiPhong =cmbLoai.Text.Trim();
+            string ghiChu =txtGhiChu.Text.Trim();
+            string tinhTrang = txtTT.Text.Trim();
+            if (maPhong == "")
                 MessageBox.Show("Xin Vui long nhap ma phong");
             else
             {
-                for (int i = 0; i < phg.Count; i++)
+                for (int index = 0; index < phg.Count; index++)
                 {
-                    if (string.Compare(MP, phg[i].MaPhong, true) == 0)
+                    if (string.Compare(maPhong, phg[index].MaPhong, true) == 0)
                     {
                         temp = 1;
                         break;
                     }
                 }
-                for (int i = 0; i < dsmphg.Count; i++)
+                for (int index = 0; index < dsmphg.Count; index++)
                 {
-                    if (string.Compare(MP, dsmphg[i].MaPhong, true) == 0)
+                    if (string.Compare(maPhong, dsmphg[index].MaPhong, true) == 0)
                     {
                         temp = 2;
                         break;
                     }
                 }
-                if (temp == 1) MessageBox.Show("Ma Phong Da Ton Tai");
-                else if (temp == 2) MessageBox.Show("Ma Phong da co trong danh sach");
-                else
+                if (1 == temp) MessageBox.Show("Ma Phong Da Ton Tai");
+                else if (2 == temp) MessageBox.Show("Ma Phong da co trong danh sach");
+                else if (PHONGBUS.KiemTraLoaiPhong(loaiPhong))
                 {
-                    dataGridView1.Rows.Add(MP, TP, LP, GC);
-                    PHONG temp1 = new PHONG();
-                    temp1.MaPhong = MP;
-                    temp1.TenPhong = TP;
-                    temp1.MaLoaiPhong = LP;
-                    temp1.GhiChu = GC;
-                    temp1.TinhTrang = TT;
-                    dsmphg.Add(temp1);
+                    dataGridView1.Rows.Add(maPhong, tenPhong, loaiPhong, ghiChu);
+                    PHONG phong1 = new PHONG();
+                    phong1.MaPhong = maPhong;
+                    phong1.TenPhong = tenPhong;
+                    phong1.MaLoaiPhong = loaiPhong;
+                    phong1.GhiChu = ghiChu;
+                    phong1.TinhTrang = tinhTrang;
+                    dsmphg.Add(phong1);
                     btnXoa.Enabled = true;
                     btnOK.Enabled = true;
                 }
-            }
+                else MessageBox.Show("Mã loại phòng không có trong CSDL");
+           }
         }
 
         private void ThemPhong_Load(object sender, EventArgs e)
         {
             btnXoa.Enabled = false;
             btnOK.Enabled = false;
+            List<LOAIPHONG> dsloai = new List<LOAIPHONG>();
+            dsloai = PHONGBUS.LayDSLoaiPhong().ToList();
+            if (0 == dsloai.Count)
+                MessageBox.Show("không có loại phòng trong cơ sở dữ liệu");
+            else
+            {
+                cmbLoai.Text = dsloai[0].MaLoaiPhong;
+                for (int index = 0; index < dsloai.Count; ++index)
+                    cmbLoai.Items.Add(dsloai[index].MaLoaiPhong);
+            }
+            txtMP.TabIndex = 0;
             txtMP.Focus();
         }
 
@@ -83,12 +95,11 @@ namespace QLKS
             }
             catch
             {
-                dataGridView1.Rows.RemoveAt(0);
-                dsmphg.RemoveAt(0);
+                MessageBox.Show("không thể thực hiện"); 
             }
             finally
             {
-                if (dataGridView1.Rows.Count == 1)
+                if (1 == dataGridView1.Rows.Count)
                 {
                     btnXoa.Enabled = false;
                     btnOK.Enabled = false;
@@ -103,10 +114,10 @@ namespace QLKS
 
         private void btnOK_Click(object sender, EventArgs e)
         {
-            for (int i = 0; i < dsmphg.Count; i++)
+            for (int index = 0; index < dsmphg.Count; index++)
             {
                 
-                PHONGBUS.ThemPhong(dsmphg[i]);
+                PHONGBUS.ThemPhong(dsmphg[index]);
             }
 
             dsmphg.RemoveRange(0, dsmphg.Count);

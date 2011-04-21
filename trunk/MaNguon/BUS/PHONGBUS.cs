@@ -219,5 +219,13 @@ namespace BUS
         {
             return PHONGDAO.LayDonGiaTheoPhong(phong);
         }
+        public static bool KiemTraLoaiPhong(string loaiPhong)
+        {
+            List<LOAIPHONG> dsloai = PHONGBUS.LayDSLoaiPhong();
+            for (int index = 0; index < dsloai.Count; index++)
+                if ((string.Compare(loaiPhong, dsloai[index].MaLoaiPhong, true) == 0))
+                    return true;
+            return false;
+        }
     }
 }

@@ -179,3 +179,7 @@ D:\G2_QLKS\MaNguon\QLKS\obj\Debug\QLKS.UCDatPhong.resources
 D:\G2_QLKS\MaNguon\QLKS\obj\Debug\QLKS.UCXemPhieuThuePhong.resources
 D:\G2_QLKS\MaNguon\QLKS\obj\Debug\QLKS.XoaPhong.resources
 D:\G2_QLKS\MaNguon\QLKS\obj\Debug\QLKS.csproj.GenerateResource.Cache
+D:\XDPM\Project\MaNguon\QLKS\obj\Debug\QLKS.frmCheckin.resources
+D:\XDPM\Project\MaNguon\QLKS\obj\Debug\QLKS.frmCheckOut.resources
+D:\XDPM\Project\MaNguon\QLKS\obj\Debug\QLKS.MainMenu.resources
+D:\XDPM\Project\MaNguon\QLKS\obj\Debug\QLKS.frmBaoCaoDoanhThu.resources

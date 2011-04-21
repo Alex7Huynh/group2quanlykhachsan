@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.21022</ProductVersion>
+    <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{DA610046-C2C8-4454-A35A-63D840276603}</ProjectGuid>
     <OutputType>WinExe</OutputType>
@@ -190,12 +190,6 @@
     </Compile>
     <Compile Include="ThemPhong.Designer.cs">
       <DependentUpon>ThemPhong.cs</DependentUpon>
-    </Compile>
-    <Compile Include="TraCuuKhachHang.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TraCuuKhachHang.Designer.cs">
-      <DependentUpon>TraCuuKhachHang.cs</DependentUpon>
     </Compile>
     <Compile Include="TraCuuPhieuThue.cs">
       <SubType>Form</SubType>
