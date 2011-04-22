@@ -183,4 +183,3 @@ D:\XDPM\Project\MaNguon\QLKS\obj\Debug\QLKS.frmCheckin.resources
 D:\XDPM\Project\MaNguon\QLKS\obj\Debug\QLKS.frmCheckOut.resources
 D:\XDPM\Project\MaNguon\QLKS\obj\Debug\QLKS.MainMenu.resources
 D:\XDPM\Project\MaNguon\QLKS\obj\Debug\QLKS.frmBaoCaoDoanhThu.resources
-D:\G2_QLKS\MaNguon\QLKS\obj\Debug\QLKS.TraCuuKhachHang.resources
