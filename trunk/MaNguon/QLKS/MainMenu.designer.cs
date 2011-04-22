@@ -28,29 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.PB_MainMenu = new System.Windows.Forms.PictureBox();
             this.BT_Thoat = new System.Windows.Forms.Button();
             this.BT_ThuNho = new System.Windows.Forms.Button();
-            this.BT_ThemPhong = new System.Windows.Forms.Button();
-            this.BT_XoaPhong = new System.Windows.Forms.Button();
-            this.BT_SuaPhong = new System.Windows.Forms.Button();
-            this.BT_TCPhong = new System.Windows.Forms.Button();
-            this.BT_TCPhieuThue = new System.Windows.Forms.Button();
-            this.BT_DatPhong = new System.Windows.Forms.Button();
+            this.BT_TCKH = new System.Windows.Forms.Button();
             this.BT_BCDoanhThu = new System.Windows.Forms.Button();
+            this.BT_DatPhong = new System.Windows.Forms.Button();
+            this.BT_TCPhieuThue = new System.Windows.Forms.Button();
+            this.BT_TCPhong = new System.Windows.Forms.Button();
+            this.BT_SuaPhong = new System.Windows.Forms.Button();
+            this.BT_XoaPhong = new System.Windows.Forms.Button();
+            this.BT_ThemPhong = new System.Windows.Forms.Button();
+            this.PB_MainMenu = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.PB_MainMenu)).BeginInit();
             this.SuspendLayout();
-            // 
-            // PB_MainMenu
-            // 
-            this.PB_MainMenu.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.PB_MainMenu.Image = global::QLKS.Properties.Resources.Menu;
-            this.PB_MainMenu.Location = new System.Drawing.Point(3, 26);
-            this.PB_MainMenu.Name = "PB_MainMenu";
-            this.PB_MainMenu.Size = new System.Drawing.Size(1123, 720);
-            this.PB_MainMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PB_MainMenu.TabIndex = 13;
-            this.PB_MainMenu.TabStop = false;
             // 
             // BT_Thoat
             // 
@@ -80,124 +70,25 @@
             this.BT_ThuNho.UseVisualStyleBackColor = false;
             this.BT_ThuNho.Click += new System.EventHandler(this.BT_ThuNho_Click);
             // 
-            // BT_ThemPhong
+            // BT_TCKH
             // 
-            this.BT_ThemPhong.BackColor = System.Drawing.Color.Khaki;
-            this.BT_ThemPhong.BackgroundImage = global::QLKS.Properties.Resources.btthemphong;
-            this.BT_ThemPhong.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BT_ThemPhong.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BT_ThemPhong.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.BT_ThemPhong.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
-            this.BT_ThemPhong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BT_ThemPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.BT_ThemPhong.ForeColor = System.Drawing.Color.Snow;
-            this.BT_ThemPhong.Location = new System.Drawing.Point(365, 285);
-            this.BT_ThemPhong.Name = "BT_ThemPhong";
-            this.BT_ThemPhong.Size = new System.Drawing.Size(136, 38);
-            this.BT_ThemPhong.TabIndex = 1;
-            this.BT_ThemPhong.UseVisualStyleBackColor = false;
-            this.BT_ThemPhong.Click += new System.EventHandler(this.PB_ThemPhong_Click);
-            this.BT_ThemPhong.Leave += new System.EventHandler(this.BT_ThemPhong_Leave);
-            this.BT_ThemPhong.Enter += new System.EventHandler(this.BT_ThemPhong_Enter);
-            // 
-            // BT_XoaPhong
-            // 
-            this.BT_XoaPhong.BackColor = System.Drawing.Color.Khaki;
-            this.BT_XoaPhong.BackgroundImage = global::QLKS.Properties.Resources.btnxoaphong;
-            this.BT_XoaPhong.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BT_XoaPhong.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BT_XoaPhong.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.BT_XoaPhong.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
-            this.BT_XoaPhong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BT_XoaPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.BT_XoaPhong.ForeColor = System.Drawing.Color.Snow;
-            this.BT_XoaPhong.Location = new System.Drawing.Point(365, 329);
-            this.BT_XoaPhong.Name = "BT_XoaPhong";
-            this.BT_XoaPhong.Size = new System.Drawing.Size(136, 38);
-            this.BT_XoaPhong.TabIndex = 2;
-            this.BT_XoaPhong.UseVisualStyleBackColor = false;
-            this.BT_XoaPhong.Click += new System.EventHandler(this.PB_XoaPhong_Click);
-            this.BT_XoaPhong.Leave += new System.EventHandler(this.BT_ThemPhong_Leave);
-            this.BT_XoaPhong.Enter += new System.EventHandler(this.BT_ThemPhong_Enter);
-            // 
-            // BT_SuaPhong
-            // 
-            this.BT_SuaPhong.BackColor = System.Drawing.Color.Khaki;
-            this.BT_SuaPhong.BackgroundImage = global::QLKS.Properties.Resources.btnsuaphong;
-            this.BT_SuaPhong.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BT_SuaPhong.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BT_SuaPhong.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.BT_SuaPhong.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
-            this.BT_SuaPhong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BT_SuaPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.BT_SuaPhong.ForeColor = System.Drawing.Color.Snow;
-            this.BT_SuaPhong.Location = new System.Drawing.Point(365, 374);
-            this.BT_SuaPhong.Name = "BT_SuaPhong";
-            this.BT_SuaPhong.Size = new System.Drawing.Size(136, 38);
-            this.BT_SuaPhong.TabIndex = 3;
-            this.BT_SuaPhong.UseVisualStyleBackColor = false;
-            this.BT_SuaPhong.Click += new System.EventHandler(this.BT_SuaPhong_Click);
-            this.BT_SuaPhong.Leave += new System.EventHandler(this.BT_ThemPhong_Leave);
-            this.BT_SuaPhong.Enter += new System.EventHandler(this.BT_ThemPhong_Enter);
-            // 
-            // BT_TCPhong
-            // 
-            this.BT_TCPhong.BackColor = System.Drawing.Color.Khaki;
-            this.BT_TCPhong.BackgroundImage = global::QLKS.Properties.Resources.TCphong;
-            this.BT_TCPhong.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BT_TCPhong.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BT_TCPhong.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.BT_TCPhong.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
-            this.BT_TCPhong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BT_TCPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.BT_TCPhong.ForeColor = System.Drawing.Color.Snow;
-            this.BT_TCPhong.Location = new System.Drawing.Point(555, 285);
-            this.BT_TCPhong.Name = "BT_TCPhong";
-            this.BT_TCPhong.Size = new System.Drawing.Size(136, 38);
-            this.BT_TCPhong.TabIndex = 4;
-            this.BT_TCPhong.UseVisualStyleBackColor = false;
-            this.BT_TCPhong.Click += new System.EventHandler(this.PB_TraCuuPhong_Click);
-            this.BT_TCPhong.Leave += new System.EventHandler(this.BT_ThemPhong_Leave);
-            this.BT_TCPhong.Enter += new System.EventHandler(this.BT_ThemPhong_Enter);
-            // 
-            // BT_TCPhieuThue
-            // 
-            this.BT_TCPhieuThue.BackColor = System.Drawing.Color.Khaki;
-            this.BT_TCPhieuThue.BackgroundImage = global::QLKS.Properties.Resources.TCphieuthue;
-            this.BT_TCPhieuThue.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BT_TCPhieuThue.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BT_TCPhieuThue.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.BT_TCPhieuThue.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
-            this.BT_TCPhieuThue.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BT_TCPhieuThue.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.BT_TCPhieuThue.ForeColor = System.Drawing.Color.Snow;
-            this.BT_TCPhieuThue.Location = new System.Drawing.Point(555, 329);
-            this.BT_TCPhieuThue.Name = "BT_TCPhieuThue";
-            this.BT_TCPhieuThue.Size = new System.Drawing.Size(136, 38);
-            this.BT_TCPhieuThue.TabIndex = 5;
-            this.BT_TCPhieuThue.UseVisualStyleBackColor = false;
-            this.BT_TCPhieuThue.Leave += new System.EventHandler(this.BT_ThemPhong_Leave);
-            this.BT_TCPhieuThue.Enter += new System.EventHandler(this.BT_ThemPhong_Enter);
-            // 
-            // BT_DatPhong
-            // 
-            this.BT_DatPhong.BackColor = System.Drawing.Color.Khaki;
-            this.BT_DatPhong.BackgroundImage = global::QLKS.Properties.Resources.datphong;
-            this.BT_DatPhong.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BT_DatPhong.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BT_DatPhong.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.BT_DatPhong.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
-            this.BT_DatPhong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BT_DatPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.BT_DatPhong.ForeColor = System.Drawing.Color.Snow;
-            this.BT_DatPhong.Location = new System.Drawing.Point(742, 285);
-            this.BT_DatPhong.Name = "BT_DatPhong";
-            this.BT_DatPhong.Size = new System.Drawing.Size(136, 38);
-            this.BT_DatPhong.TabIndex = 6;
-            this.BT_DatPhong.UseVisualStyleBackColor = false;
-            this.BT_DatPhong.Click += new System.EventHandler(this.PB_DatPhong_Click);
-            this.BT_DatPhong.Leave += new System.EventHandler(this.BT_ThemPhong_Leave);
-            this.BT_DatPhong.Enter += new System.EventHandler(this.BT_ThemPhong_Enter);
+            this.BT_TCKH.BackColor = System.Drawing.Color.Khaki;
+            this.BT_TCKH.BackgroundImage = global::QLKS.Properties.Resources.TCKhachHang;
+            this.BT_TCKH.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BT_TCKH.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BT_TCKH.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.BT_TCKH.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
+            this.BT_TCKH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BT_TCKH.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.BT_TCKH.ForeColor = System.Drawing.Color.Snow;
+            this.BT_TCKH.Location = new System.Drawing.Point(555, 374);
+            this.BT_TCKH.Name = "BT_TCKH";
+            this.BT_TCKH.Size = new System.Drawing.Size(136, 38);
+            this.BT_TCKH.TabIndex = 102;
+            this.BT_TCKH.UseVisualStyleBackColor = false;
+            this.BT_TCKH.Click += new System.EventHandler(this.BT_TCKH_Click);
+            this.BT_TCKH.Leave += new System.EventHandler(this.BT_ThemPhong_Leave);
+            this.BT_TCKH.Enter += new System.EventHandler(this.BT_ThemPhong_Enter);
             // 
             // BT_BCDoanhThu
             // 
@@ -219,6 +110,136 @@
             this.BT_BCDoanhThu.Leave += new System.EventHandler(this.BT_ThemPhong_Leave);
             this.BT_BCDoanhThu.Enter += new System.EventHandler(this.BT_ThemPhong_Enter);
             // 
+            // BT_DatPhong
+            // 
+            this.BT_DatPhong.BackColor = System.Drawing.Color.Khaki;
+            this.BT_DatPhong.BackgroundImage = global::QLKS.Properties.Resources.datphong;
+            this.BT_DatPhong.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BT_DatPhong.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BT_DatPhong.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.BT_DatPhong.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
+            this.BT_DatPhong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BT_DatPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.BT_DatPhong.ForeColor = System.Drawing.Color.Snow;
+            this.BT_DatPhong.Location = new System.Drawing.Point(742, 285);
+            this.BT_DatPhong.Name = "BT_DatPhong";
+            this.BT_DatPhong.Size = new System.Drawing.Size(136, 38);
+            this.BT_DatPhong.TabIndex = 6;
+            this.BT_DatPhong.UseVisualStyleBackColor = false;
+            this.BT_DatPhong.Click += new System.EventHandler(this.PB_DatPhong_Click);
+            this.BT_DatPhong.Leave += new System.EventHandler(this.BT_ThemPhong_Leave);
+            this.BT_DatPhong.Enter += new System.EventHandler(this.BT_ThemPhong_Enter);
+            // 
+            // BT_TCPhieuThue
+            // 
+            this.BT_TCPhieuThue.BackColor = System.Drawing.Color.Khaki;
+            this.BT_TCPhieuThue.BackgroundImage = global::QLKS.Properties.Resources.TCphieuthue;
+            this.BT_TCPhieuThue.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BT_TCPhieuThue.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BT_TCPhieuThue.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.BT_TCPhieuThue.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
+            this.BT_TCPhieuThue.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BT_TCPhieuThue.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.BT_TCPhieuThue.ForeColor = System.Drawing.Color.Snow;
+            this.BT_TCPhieuThue.Location = new System.Drawing.Point(555, 329);
+            this.BT_TCPhieuThue.Name = "BT_TCPhieuThue";
+            this.BT_TCPhieuThue.Size = new System.Drawing.Size(136, 38);
+            this.BT_TCPhieuThue.TabIndex = 5;
+            this.BT_TCPhieuThue.UseVisualStyleBackColor = false;
+            this.BT_TCPhieuThue.Leave += new System.EventHandler(this.BT_ThemPhong_Leave);
+            this.BT_TCPhieuThue.Enter += new System.EventHandler(this.BT_ThemPhong_Enter);
+            // 
+            // BT_TCPhong
+            // 
+            this.BT_TCPhong.BackColor = System.Drawing.Color.Khaki;
+            this.BT_TCPhong.BackgroundImage = global::QLKS.Properties.Resources.TCphong;
+            this.BT_TCPhong.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BT_TCPhong.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BT_TCPhong.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.BT_TCPhong.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
+            this.BT_TCPhong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BT_TCPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.BT_TCPhong.ForeColor = System.Drawing.Color.Snow;
+            this.BT_TCPhong.Location = new System.Drawing.Point(555, 285);
+            this.BT_TCPhong.Name = "BT_TCPhong";
+            this.BT_TCPhong.Size = new System.Drawing.Size(136, 38);
+            this.BT_TCPhong.TabIndex = 4;
+            this.BT_TCPhong.UseVisualStyleBackColor = false;
+            this.BT_TCPhong.Click += new System.EventHandler(this.PB_TraCuuPhong_Click);
+            this.BT_TCPhong.Leave += new System.EventHandler(this.BT_ThemPhong_Leave);
+            this.BT_TCPhong.Enter += new System.EventHandler(this.BT_ThemPhong_Enter);
+            // 
+            // BT_SuaPhong
+            // 
+            this.BT_SuaPhong.BackColor = System.Drawing.Color.Khaki;
+            this.BT_SuaPhong.BackgroundImage = global::QLKS.Properties.Resources.btnsuaphong;
+            this.BT_SuaPhong.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BT_SuaPhong.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BT_SuaPhong.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.BT_SuaPhong.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
+            this.BT_SuaPhong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BT_SuaPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.BT_SuaPhong.ForeColor = System.Drawing.Color.Snow;
+            this.BT_SuaPhong.Location = new System.Drawing.Point(365, 374);
+            this.BT_SuaPhong.Name = "BT_SuaPhong";
+            this.BT_SuaPhong.Size = new System.Drawing.Size(136, 38);
+            this.BT_SuaPhong.TabIndex = 3;
+            this.BT_SuaPhong.UseVisualStyleBackColor = false;
+            this.BT_SuaPhong.Click += new System.EventHandler(this.BT_SuaPhong_Click);
+            this.BT_SuaPhong.Leave += new System.EventHandler(this.BT_ThemPhong_Leave);
+            this.BT_SuaPhong.Enter += new System.EventHandler(this.BT_ThemPhong_Enter);
+            // 
+            // BT_XoaPhong
+            // 
+            this.BT_XoaPhong.BackColor = System.Drawing.Color.Khaki;
+            this.BT_XoaPhong.BackgroundImage = global::QLKS.Properties.Resources.btnxoaphong;
+            this.BT_XoaPhong.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BT_XoaPhong.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BT_XoaPhong.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.BT_XoaPhong.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
+            this.BT_XoaPhong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BT_XoaPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.BT_XoaPhong.ForeColor = System.Drawing.Color.Snow;
+            this.BT_XoaPhong.Location = new System.Drawing.Point(365, 329);
+            this.BT_XoaPhong.Name = "BT_XoaPhong";
+            this.BT_XoaPhong.Size = new System.Drawing.Size(136, 38);
+            this.BT_XoaPhong.TabIndex = 2;
+            this.BT_XoaPhong.UseVisualStyleBackColor = false;
+            this.BT_XoaPhong.Click += new System.EventHandler(this.PB_XoaPhong_Click);
+            this.BT_XoaPhong.Leave += new System.EventHandler(this.BT_ThemPhong_Leave);
+            this.BT_XoaPhong.Enter += new System.EventHandler(this.BT_ThemPhong_Enter);
+            // 
+            // BT_ThemPhong
+            // 
+            this.BT_ThemPhong.BackColor = System.Drawing.Color.Khaki;
+            this.BT_ThemPhong.BackgroundImage = global::QLKS.Properties.Resources.btthemphong;
+            this.BT_ThemPhong.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BT_ThemPhong.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BT_ThemPhong.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.BT_ThemPhong.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
+            this.BT_ThemPhong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BT_ThemPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.BT_ThemPhong.ForeColor = System.Drawing.Color.Snow;
+            this.BT_ThemPhong.Location = new System.Drawing.Point(365, 285);
+            this.BT_ThemPhong.Name = "BT_ThemPhong";
+            this.BT_ThemPhong.Size = new System.Drawing.Size(136, 38);
+            this.BT_ThemPhong.TabIndex = 1;
+            this.BT_ThemPhong.UseVisualStyleBackColor = false;
+            this.BT_ThemPhong.Click += new System.EventHandler(this.PB_ThemPhong_Click);
+            this.BT_ThemPhong.Leave += new System.EventHandler(this.BT_ThemPhong_Leave);
+            this.BT_ThemPhong.Enter += new System.EventHandler(this.BT_ThemPhong_Enter);
+            // 
+            // PB_MainMenu
+            // 
+            this.PB_MainMenu.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.PB_MainMenu.Image = global::QLKS.Properties.Resources.Menu;
+            this.PB_MainMenu.Location = new System.Drawing.Point(3, 26);
+            this.PB_MainMenu.Name = "PB_MainMenu";
+            this.PB_MainMenu.Size = new System.Drawing.Size(1123, 720);
+            this.PB_MainMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PB_MainMenu.TabIndex = 13;
+            this.PB_MainMenu.TabStop = false;
+            // 
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -226,6 +247,7 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.DimGray;
             this.ClientSize = new System.Drawing.Size(1036, 750);
+            this.Controls.Add(this.BT_TCKH);
             this.Controls.Add(this.BT_BCDoanhThu);
             this.Controls.Add(this.BT_DatPhong);
             this.Controls.Add(this.BT_TCPhieuThue);
@@ -260,5 +282,6 @@
         private System.Windows.Forms.Button BT_TCPhieuThue;
         private System.Windows.Forms.Button BT_DatPhong;
         private System.Windows.Forms.Button BT_BCDoanhThu;
+        private System.Windows.Forms.Button BT_TCKH;
     }
 }
