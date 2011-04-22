@@ -60,6 +60,21 @@ namespace QLKS
                 MoveForm(new Point(e.X - StartPoint.X, e.Y - StartPoint.Y));
         }
 
+        private void BT_ThuNho_Enter(object sender, EventArgs e)
+        {
+            ((Button)sender).BackColor = Color.Black;
+        }
+
+        private void BT_ThuNho_Leave(object sender, EventArgs e)
+        {
+            ((Button)sender).BackColor = Color.OliveDrab;
+        }
+
+        private void BT_Thoat_Leave(object sender, EventArgs e)
+        {
+            ((Button)sender).BackColor = Color.DarkRed;
+        }  
+
         private void BT_Thoat_Click(object sender, EventArgs e)
         {
             this.Close();

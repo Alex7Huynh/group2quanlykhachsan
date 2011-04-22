@@ -35,6 +35,10 @@ namespace QLKS
         {
             ThemPhong frmThemPhong = new ThemPhong();
             frmThemPhong.Show();
+
+            frmThemPhong.Location = Location;
+            this.Visible = false;
+            frmThemPhong.ParentForm = this;
         }
 
         private void PB_XoaPhong_Click(object sender, EventArgs e)
@@ -124,6 +128,21 @@ namespace QLKS
         {
             TraCuuKhachHang traCuuKH = new TraCuuKhachHang();
             traCuuKH.ShowDialog();
+        }
+
+        private void BT_ThuNho_Enter(object sender, EventArgs e)
+        {
+            ((Button)sender).BackColor = Color.Black;       
+        }
+
+        private void BT_ThuNho_Leave(object sender, EventArgs e)
+        {
+            ((Button)sender).BackColor = Color.OliveDrab;
+        }
+
+        private void BT_Thoat_Leave(object sender, EventArgs e)
+        {
+            ((Button)sender).BackColor = Color.DarkRed;
         }       
     }
 }
