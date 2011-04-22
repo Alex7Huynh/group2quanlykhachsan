@@ -46,6 +46,8 @@
             this.BT_ThuNho.Text = "Thu nhỏ";
             this.BT_ThuNho.UseVisualStyleBackColor = false;
             this.BT_ThuNho.Click += new System.EventHandler(this.BT_ThuNho_Click);
+            this.BT_ThuNho.Leave += new System.EventHandler(this.BT_ThuNho_Leave);
+            this.BT_ThuNho.Enter += new System.EventHandler(this.BT_ThuNho_Enter);
             // 
             // BT_Thoat
             // 
@@ -60,6 +62,8 @@
             this.BT_Thoat.Text = "Thoát";
             this.BT_Thoat.UseVisualStyleBackColor = false;
             this.BT_Thoat.Click += new System.EventHandler(this.BT_Thoat_Click);
+            this.BT_Thoat.Leave += new System.EventHandler(this.BT_Thoat_Leave);
+            this.BT_Thoat.Enter += new System.EventHandler(this.BT_ThuNho_Enter);
             // 
             // ucDatPhong1
             // 

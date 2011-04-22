@@ -13,6 +13,33 @@ namespace QLKS
 {
     public partial class ThemPhong : Form
     {
+        // Dành cho di chuyển
+        Point startPoint = new Point();
+        public Point StartPoint
+        {
+            get { return startPoint; }
+            set { startPoint = value; }
+        }
+
+        public Form ParentForm;
+
+        // Hàm di chuyển menu
+        private void PB_MainMenu_MouseDown(object sender, MouseEventArgs e)
+        {
+            StartPoint = new Point(e.X, e.Y);
+        }
+
+        public void MoveForm(Point distance)
+        {
+            this.Location = new Point(this.Location.X + distance.X, this.Location.Y + distance.Y);
+        }
+
+        private void PB_MainMenu_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+                MoveForm(new Point(e.X - StartPoint.X, e.Y - StartPoint.Y));
+        }
+
         public ThemPhong()
         {
             InitializeComponent();
@@ -78,6 +105,11 @@ namespace QLKS
         }
         private void ThemPhong_Load(object sender, EventArgs e)
         {
+            //giao dien
+            LB_TinhTrang.BackColor = Color.FromArgb(234, 146, 6);
+            LB_TenPhong.BackColor = Color.FromArgb(234, 146, 6);
+            LB_GhiChu.BackColor = Color.FromArgb(234, 146, 6);
+            //
             btnXoa.Enabled = false;
             btnOK.Enabled = false;
             List<LOAIPHONG> dsloai = new List<LOAIPHONG>();
@@ -116,11 +148,6 @@ namespace QLKS
             }
         }
 
-        private void btnThoat_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
         private void btnOK_Click(object sender, EventArgs e)
         {
             for (int index = 0; index < dsmphg.Count; index++)
@@ -133,6 +160,50 @@ namespace QLKS
             dataGridView1.Rows.Clear();
             btnOK.Enabled = false;
             btnXoa.Enabled = false;
+        }
+
+        private void BT_ThuNho_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void BT_Thoat_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void ThemPhong_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            ParentForm.Visible = true;
+            ParentForm.Location = this.Location;
+        }
+
+        private void btnXoa_Enter(object sender, EventArgs e)
+        {
+            ((Button)sender).BackColor = Color.GreenYellow;
+        }
+
+        private void btnXoa_Leave(object sender, EventArgs e)
+        {
+            ((Button)sender).BackColor = Color.Orange;
+        }
+
+        private void dataGridView1_Paint(object sender, PaintEventArgs e)
+        {
+
+            for (int index = 0; index < dataGridView1.Columns.Count; index++)
+            {
+                dataGridView1.Columns[index].HeaderCell.Style.ForeColor = Color.White;
+                dataGridView1.Columns[index].HeaderCell.Style.BackColor = Color.Black;
+                dataGridView1.Columns[index].HeaderCell.Style.Font = new Font("Consolas", 9, FontStyle.Bold);
+            }
+
+            for (int index = 0; index < dataGridView1.Rows.Count; index++)
+            {
+                dataGridView1.Rows[index].HeaderCell.Style.ForeColor = Color.White;
+                dataGridView1.Rows[index].HeaderCell.Style.BackColor = Color.Black;
+                dataGridView1.Rows[index].Height = 30;
+            }            
         }
     }
 }

@@ -55,6 +55,8 @@
             this.BT_Thoat.Text = "Thoát";
             this.BT_Thoat.UseVisualStyleBackColor = false;
             this.BT_Thoat.Click += new System.EventHandler(this.BT_Thoat_Click);
+            this.BT_Thoat.Leave += new System.EventHandler(this.BT_Thoat_Leave);
+            this.BT_Thoat.Enter += new System.EventHandler(this.BT_ThuNho_Enter);
             // 
             // BT_ThuNho
             // 
@@ -69,6 +71,8 @@
             this.BT_ThuNho.Text = "Thu nhỏ";
             this.BT_ThuNho.UseVisualStyleBackColor = false;
             this.BT_ThuNho.Click += new System.EventHandler(this.BT_ThuNho_Click);
+            this.BT_ThuNho.Leave += new System.EventHandler(this.BT_ThuNho_Leave);
+            this.BT_ThuNho.Enter += new System.EventHandler(this.BT_ThuNho_Enter);
             // 
             // BT_TCKH
             // 
@@ -84,7 +88,7 @@
             this.BT_TCKH.Location = new System.Drawing.Point(555, 374);
             this.BT_TCKH.Name = "BT_TCKH";
             this.BT_TCKH.Size = new System.Drawing.Size(136, 38);
-            this.BT_TCKH.TabIndex = 102;
+            this.BT_TCKH.TabIndex = 6;
             this.BT_TCKH.UseVisualStyleBackColor = false;
             this.BT_TCKH.Click += new System.EventHandler(this.BT_TCKH_Click);
             this.BT_TCKH.Leave += new System.EventHandler(this.BT_ThemPhong_Leave);
@@ -104,7 +108,7 @@
             this.BT_BCDoanhThu.Location = new System.Drawing.Point(929, 285);
             this.BT_BCDoanhThu.Name = "BT_BCDoanhThu";
             this.BT_BCDoanhThu.Size = new System.Drawing.Size(136, 38);
-            this.BT_BCDoanhThu.TabIndex = 7;
+            this.BT_BCDoanhThu.TabIndex = 8;
             this.BT_BCDoanhThu.UseVisualStyleBackColor = false;
             this.BT_BCDoanhThu.Click += new System.EventHandler(this.PB_BaoCaoDoanhThu_Click);
             this.BT_BCDoanhThu.Leave += new System.EventHandler(this.BT_ThemPhong_Leave);
@@ -124,7 +128,7 @@
             this.BT_DatPhong.Location = new System.Drawing.Point(742, 285);
             this.BT_DatPhong.Name = "BT_DatPhong";
             this.BT_DatPhong.Size = new System.Drawing.Size(136, 38);
-            this.BT_DatPhong.TabIndex = 6;
+            this.BT_DatPhong.TabIndex = 7;
             this.BT_DatPhong.UseVisualStyleBackColor = false;
             this.BT_DatPhong.Click += new System.EventHandler(this.PB_DatPhong_Click);
             this.BT_DatPhong.Leave += new System.EventHandler(this.BT_ThemPhong_Leave);
@@ -246,7 +250,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.DimGray;
-            this.ClientSize = new System.Drawing.Size(1036, 750);
+            this.ClientSize = new System.Drawing.Size(1130, 750);
             this.Controls.Add(this.BT_TCKH);
             this.Controls.Add(this.BT_BCDoanhThu);
             this.Controls.Add(this.BT_DatPhong);
