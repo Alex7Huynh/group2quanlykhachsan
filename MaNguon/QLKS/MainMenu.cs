@@ -118,6 +118,12 @@ namespace QLKS
         {
             SuaPhong suaphong = new SuaPhong();
             suaphong.ShowDialog();
+        }
+
+        private void BT_TCKH_Click(object sender, EventArgs e)
+        {
+            TraCuuKhachHang traCuuKH = new TraCuuKhachHang();
+            traCuuKH.ShowDialog();
         }       
     }
 }

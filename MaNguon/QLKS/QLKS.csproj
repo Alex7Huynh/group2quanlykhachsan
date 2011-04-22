@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.30729</ProductVersion>
+    <ProductVersion>9.0.21022</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{DA610046-C2C8-4454-A35A-63D840276603}</ProjectGuid>
     <OutputType>WinExe</OutputType>
@@ -138,6 +138,9 @@
       <DependentUpon>ThemPhong.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="TraCuuKhachHang.resx">
+      <DependentUpon>TraCuuKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TraCuuPhieuThue.resx">
       <DependentUpon>TraCuuPhieuThue.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -190,6 +193,12 @@
     </Compile>
     <Compile Include="ThemPhong.Designer.cs">
       <DependentUpon>ThemPhong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TraCuuKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TraCuuKhachHang.Designer.cs">
+      <DependentUpon>TraCuuKhachHang.cs</DependentUpon>
     </Compile>
     <Compile Include="TraCuuPhieuThue.cs">
       <SubType>Form</SubType>
@@ -305,6 +314,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\runningman.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\TCKhachHang.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
