@@ -134,6 +134,7 @@
             this.clSoNgayThue,
             this.clTenKhachHangDaiDien,
             this.clTinhTrang});
+            this.dtgDanhSachPhieuThue.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dtgDanhSachPhieuThue.EnableHeadersVisualStyles = false;
             this.dtgDanhSachPhieuThue.GridColor = System.Drawing.Color.YellowGreen;
             this.dtgDanhSachPhieuThue.Location = new System.Drawing.Point(333, 363);

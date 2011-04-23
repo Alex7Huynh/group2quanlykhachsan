@@ -50,9 +50,9 @@
             this.cmbLoai = new System.Windows.Forms.ComboBox();
             this.BT_ThuNho = new System.Windows.Forms.Button();
             this.BT_Thoat = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.PB_Main = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Main)).BeginInit();
             this.SuspendLayout();
             // 
             // LB_MaPhong
@@ -168,6 +168,7 @@
             this.clLoaiPhong,
             this.clGhiChu,
             this.clTinhTrang});
+            this.dataGridView1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dataGridView1.EnableHeadersVisualStyles = false;
             this.dataGridView1.GridColor = System.Drawing.Color.YellowGreen;
             this.dataGridView1.Location = new System.Drawing.Point(182, 340);
@@ -212,7 +213,7 @@
             this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnThem.ForeColor = System.Drawing.Color.White;
-            this.btnThem.Location = new System.Drawing.Point(56, 423);
+            this.btnThem.Location = new System.Drawing.Point(56, 439);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(95, 58);
             this.btnThem.TabIndex = 7;
@@ -228,7 +229,7 @@
             this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnXoa.ForeColor = System.Drawing.Color.White;
-            this.btnXoa.Location = new System.Drawing.Point(56, 540);
+            this.btnXoa.Location = new System.Drawing.Point(56, 579);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(95, 58);
             this.btnXoa.TabIndex = 8;
@@ -244,7 +245,7 @@
             this.btnOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOK.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnOK.ForeColor = System.Drawing.Color.White;
-            this.btnOK.Location = new System.Drawing.Point(980, 423);
+            this.btnOK.Location = new System.Drawing.Point(980, 439);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(95, 58);
             this.btnOK.TabIndex = 9;
@@ -299,14 +300,14 @@
             this.BT_Thoat.Leave += new System.EventHandler(this.BT_Thoat_Leave);
             this.BT_Thoat.Enter += new System.EventHandler(this.BT_ThuNho_Enter);
             // 
-            // pictureBox1
+            // PB_Main
             // 
-            this.pictureBox1.Image = global::QLKS.Properties.Resources.MHThemPhong;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 28);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1123, 720);
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
+            this.PB_Main.Image = global::QLKS.Properties.Resources.MHThemPhong;
+            this.PB_Main.Location = new System.Drawing.Point(3, 28);
+            this.PB_Main.Name = "PB_Main";
+            this.PB_Main.Size = new System.Drawing.Size(1123, 720);
+            this.PB_Main.TabIndex = 5;
+            this.PB_Main.TabStop = false;
             // 
             // ThemPhong
             // 
@@ -330,7 +331,7 @@
             this.Controls.Add(this.LB_TenPhong);
             this.Controls.Add(this.txtMP);
             this.Controls.Add(this.LB_MaPhong);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.PB_Main);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ThemPhong";
@@ -340,7 +341,7 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ThemPhong_FormClosing);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.PB_MainMenu_MouseMove);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Main)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -362,7 +363,7 @@
         private System.Windows.Forms.Button btnOK;
         private System.Windows.Forms.TextBox txtGhiChu;
         private System.Windows.Forms.ComboBox cmbLoai;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox PB_Main;
         private System.Windows.Forms.Button BT_ThuNho;
         private System.Windows.Forms.Button BT_Thoat;
         private System.Windows.Forms.DataGridViewTextBoxColumn clMP;
