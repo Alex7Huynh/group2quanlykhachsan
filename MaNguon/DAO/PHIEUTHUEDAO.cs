@@ -126,6 +126,8 @@ namespace DAO
             try
             {
                 link = KetNoi();
+                // kiem tra phieu thue 
+                KiemTraPhieuThue(link, phieu);
                 // tu dong lay ma phieu thue cho phieu thue can them vao
                 phongDuocDat = TuDongLayMaPhieuThue(phieu.MaPhong, link);
                 if (phongDuocDat == string.Empty)
@@ -161,6 +163,28 @@ namespace DAO
                     link.Close();
             }
             return phongDuocDat;
+        }
+        /// <summary>
+        /// kiem tra phong con trong hay khong
+        /// </summary>
+        /// <param name="phieu"></param>
+        public static void KiemTraPhieuThue(OleDbConnection ketNoi, PHIEUTHUE phieu)
+        {
+            string chuoiLenh = "select MaPhieuThue From PHIEUTHUE Where MaPhong like " + "'" + phieu.MaPhong + "' and NgayThue like '" + phieu.NgayThue.ToShortDateString() + "'";
+            OleDbCommand lenh = new OleDbCommand(chuoiLenh, ketNoi);
+            OleDbDataReader Doc;
+            string maPhieuThue = "";
+            try
+            {
+                Doc = lenh.ExecuteReader();
+            }
+            catch (System.Exception e)
+            {
+                throw new Exception("Không thể lấy mã phiếu thuê để kiểm tra! Xin vui lòng thử lại.");
+            }
+
+            if (Doc.HasRows)
+                throw new Exception("Phòng " + phieu.MaPhong + " không còn trống! Vui lòng đặt phòng khác.");                
         }
         public static bool CapNhatPhieuThue(PHIEUTHUE phieuThue)
         {

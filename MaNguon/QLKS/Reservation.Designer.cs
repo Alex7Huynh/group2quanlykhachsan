@@ -49,6 +49,8 @@
             // 
             // dtpBeginDate
             // 
+            this.dtpBeginDate.CalendarMonthBackground = System.Drawing.Color.Pink;
+            this.dtpBeginDate.CalendarTitleBackColor = System.Drawing.Color.Pink;
             this.dtpBeginDate.CustomFormat = "DD/MM/YYYY";
             this.dtpBeginDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.dtpBeginDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
@@ -148,6 +150,8 @@
             // cboLoaiPhong
             // 
             this.cboLoaiPhong.BackColor = System.Drawing.Color.Pink;
+            this.cboLoaiPhong.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboLoaiPhong.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cboLoaiPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.cboLoaiPhong.ForeColor = System.Drawing.Color.MidnightBlue;
             this.cboLoaiPhong.FormattingEnabled = true;
