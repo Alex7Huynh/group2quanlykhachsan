@@ -104,7 +104,7 @@ namespace QLKSTestProject
             Assert.AreEqual(expected, actual);
             Assert.Inconclusive("Verify the correctness of this test method.");
         }
-
+        #region Phú - 0812388
         /// <summary>
         ///A test for Init
         ///</summary>
@@ -112,16 +112,32 @@ namespace QLKSTestProject
         [DeploymentItem("BUS.dll")]
         public void InitTest()
         {
-            int[][] mangDuLieu = null; // TODO: Initialize to an appropriate value
-            int[][] mangDuLieuExpected = null; // TODO: Initialize to an appropriate value
-            List<PHIEUTHUE> _lsPt = null; // TODO: Initialize to an appropriate value
-            int soPhong = 0; // TODO: Initialize to an appropriate value
-            int soNgay = 0; // TODO: Initialize to an appropriate value
-            PHIEUTHUEBUS_Accessor.Init(ref mangDuLieu, _lsPt, soPhong, soNgay);
-            Assert.AreEqual(mangDuLieuExpected, mangDuLieu);
-            Assert.Inconclusive("A method that does not return a value cannot be verified.");
-        }
+            int soPhong = 4;
+            int soNgay = 9;
+            int[][] mangDuLieu = new int[4][];
+            int[][] mangDuLieuExpected = new int[4][];
+            mangDuLieuExpected[0] = new int[] { -1, -1, -1, -1, -1, 4, 3, 2, 1 };
+            mangDuLieuExpected[1] = new int[] { 3, 2, 1, -4, -4, -4, -4, -4, -4 };
+            mangDuLieuExpected[2] = new int[] { -5, -5, -5, -5, -5, -5, 3, 2, 1 };
+            mangDuLieuExpected[3] = new int[] { 2, 1, -6, -6, 5, 4, 3, 2, 1 };
 
+            List<PHIEUTHUE> dsPhieuThue = new List<PHIEUTHUE>();
+            dsPhieuThue.Add(new PHIEUTHUE { DangThue = true, MaPhieuThue = "PTA001002", MaPhong = "A001", NgayThue = new DateTime(2011, 4, 20), Phong = null, SoNgayThue = 5, TenKhachHangDaiDien = "" });
+            dsPhieuThue.Add(new PHIEUTHUE { DangThue = true, MaPhieuThue = "PTA002002", MaPhong = "A002", NgayThue = new DateTime(2011, 4, 23), Phong = null, SoNgayThue = 6, TenKhachHangDaiDien = "" });
+            dsPhieuThue.Add(new PHIEUTHUE { DangThue = true, MaPhieuThue = "PTA002003", MaPhong = "A002", NgayThue = new DateTime(2011, 4, 23), Phong = null, SoNgayThue = 6, TenKhachHangDaiDien = "" });
+            dsPhieuThue.Add(new PHIEUTHUE { DangThue = true, MaPhieuThue = "PTA002004", MaPhong = "A002", NgayThue = new DateTime(2011, 4, 23), Phong = null, SoNgayThue = 6, TenKhachHangDaiDien = "" });
+            dsPhieuThue.Add(new PHIEUTHUE { DangThue = true, MaPhieuThue = "PTA003001", MaPhong = "A003", NgayThue = new DateTime(2011, 4, 20), Phong = null, SoNgayThue = 6, TenKhachHangDaiDien = "" });
+            dsPhieuThue.Add(new PHIEUTHUE { DangThue = true, MaPhieuThue = "PTA004002", MaPhong = "A004", NgayThue = new DateTime(2011, 4, 22), Phong = null, SoNgayThue = 2, TenKhachHangDaiDien = "" });
+            
+            
+
+            PHIEUTHUEBUS_Accessor.Init(ref mangDuLieu, dsPhieuThue, soPhong, soNgay);
+            for (int i = 0; i < soPhong; ++i)
+                for (int j = 0; j < soNgay; ++j)
+                    Assert.AreEqual(mangDuLieu[i][j], mangDuLieuExpected[i][j]);
+            //Assert.Inconclusive("A method that does not return a value cannot be verified.");
+        }
+        #endregion
         /// <summary>
         ///A test for LayDSPhieuThueTheoPhong
         ///</summary>
@@ -238,7 +254,7 @@ namespace QLKSTestProject
             Assert.AreEqual(expected, actual);
             Assert.Inconclusive("Verify the correctness of this test method.");
         }
-
+        #region Phú - 0812388
         /// <summary>
         ///A test for Rate
         ///</summary>
@@ -246,16 +262,21 @@ namespace QLKSTestProject
         [DeploymentItem("BUS.dll")]
         public void RateTest()
         {
-            int[][] mangDuLieu = null; // TODO: Initialize to an appropriate value
-            int soNgay = 0; // TODO: Initialize to an appropriate value
-            int soPhong = 0; // TODO: Initialize to an appropriate value
-            int expected = 0; // TODO: Initialize to an appropriate value
+            int[][] mangDuLieu = new int[4][];
+            mangDuLieu[0] = new int[] { -1, -1, -1, -1, -1, 4, 3, 2, 1 };
+            mangDuLieu[1] = new int[] { 3, 2, 1, -4, -4, -4, -4, -4, -4 };
+            mangDuLieu[2] = new int[] { -5, -5, -5, -5, -5, -5, 3, 2, 1 };
+            mangDuLieu[3] = new int[] { 2, 1, -6, -6, 5, 4, 3, 2, 1 };
+
+            int soNgay = 9; 
+            int soPhong = 4; 
+            int expected = 40; 
+
             int actual;
             actual = PHIEUTHUEBUS_Accessor.Rate(mangDuLieu, soNgay, soPhong);
-            Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
+            Assert.AreEqual(expected, actual);            
         }
-
+        #endregion
         /// <summary>
         ///A test for ThemPhieu
         ///</summary>
@@ -355,7 +376,7 @@ namespace QLKSTestProject
             Assert.AreEqual(expected, actual);
             Assert.Inconclusive("Verify the correctness of this test method.");
         }
-
+        #region Phú - 0812388
         /// <summary>
         ///A test for ToiUuPhieuThue
         ///author: 0812033
@@ -363,18 +384,29 @@ namespace QLKSTestProject
         [TestMethod()]
         public void ToiUuPhieuThueTest()
         {
-            PHIEUTHUE phieuThueMoi = null; // TODO: Initialize to an appropriate value
-            List<PHIEUTHUE> danhSachPhieuThueCanToiUu = null; // TODO: Initialize to an appropriate value
-            int viTriNgay = 0; // TODO: Initialize to an appropriate value
-            int viTriNgayExpected = 0; // TODO: Initialize to an appropriate value
-            int[][] expected = null; // TODO: Initialize to an appropriate value
+            PHIEUTHUE phieuThueMoi = new PHIEUTHUE { DangThue = false, MaPhieuThue = "", MaPhong = "A", NgayThue = new DateTime(2011,04,29), Phong = null, SoNgayThue = 1, TenKhachHangDaiDien = ""};
+            List<PHIEUTHUE> danhSachPhieuThueCanToiUu = new List<PHIEUTHUE>();
+            danhSachPhieuThueCanToiUu.Add(new PHIEUTHUE { DangThue = true, MaPhieuThue = "PTA004004", MaPhong = "A004", NgayThue = new DateTime(2011, 04, 25), Phong = null, SoNgayThue = 5, TenKhachHangDaiDien = "" });
+            danhSachPhieuThueCanToiUu.Add(new PHIEUTHUE { DangThue = true, MaPhieuThue = "PTA003002", MaPhong = "A003", NgayThue = new DateTime(2011, 04, 26), Phong = null, SoNgayThue = 4, TenKhachHangDaiDien = "" });
+            danhSachPhieuThueCanToiUu.Add(new PHIEUTHUE { DangThue = true, MaPhieuThue = "PTA001006", MaPhong = "A001", NgayThue = new DateTime(2011, 04, 29), Phong = null, SoNgayThue = 1, TenKhachHangDaiDien = "" });
+            int viTriNgay = 0; 
+            int viTriNgayExpected = 4;
+            int[][] expected = new int[4][];
+            expected[0] = new int[] { 4, 3, 2, 1, -3 };
+            expected[1] = new int[] { 5, 4, 3, 2, 1 };
+            expected[2] = new int[] { 1, -2, -2, -2, -2 };
+            expected[3] = new int[] { -1, -1, -1, -1, -1 };
+
             int[][] actual;
             actual = PHIEUTHUEBUS.ToiUuPhieuThue(phieuThueMoi, danhSachPhieuThueCanToiUu, ref viTriNgay);
             Assert.AreEqual(viTriNgayExpected, viTriNgay);
-            Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
-        }
+            for (int i = 0; i < expected.Length; ++i)
+                for (int j = 0; j < expected[i].Length; ++j)
+                    Assert.AreEqual(expected[i][j], actual[i][j]);
 
+            //Assert.Inconclusive("Verify the correctness of this test method.");
+        }
+        #endregion
         /// <summary>
         ///A test for TryToiUuPhieuThue
         ///</summary>
