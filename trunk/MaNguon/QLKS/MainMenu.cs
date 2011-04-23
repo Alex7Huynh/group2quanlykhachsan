@@ -45,6 +45,10 @@ namespace QLKS
         {
             XoaPhong frmXoaPhong = new XoaPhong();
             frmXoaPhong.Show();
+
+            frmXoaPhong.Location = Location;
+            this.Visible = false;
+            frmXoaPhong.ParentForm = this;
         }
 
         private void PB_SuaPhong_Click(object sender, EventArgs e)
@@ -61,6 +65,10 @@ namespace QLKS
         {
             TraCuuPhong frmTraCuuPhong = new TraCuuPhong();
             frmTraCuuPhong.Show();
+
+            frmTraCuuPhong.Location = Location;
+            this.Visible = false;
+            frmTraCuuPhong.ParentForm = this;
         }
 
         private void PB_TraCuuPhieuThue_Click(object sender, EventArgs e)
