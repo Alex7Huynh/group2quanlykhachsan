@@ -73,7 +73,7 @@ namespace QLKSTestProject
             OleDbConnection expected = null; // TODO: Initialize to an appropriate value
             OleDbConnection actual;
             actual = ABSDAO.KetNoi();
-            Assert.AreEqual(expected, actual);
+            Assert.AreNotEqual(expected, actual);
             Assert.Inconclusive("Verify the correctness of this test method.");
         }
 

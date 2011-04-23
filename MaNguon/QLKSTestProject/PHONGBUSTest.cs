@@ -103,16 +103,24 @@ namespace QLKSTestProject
 
         /// <summary>
         ///A test for TimPhong
+        ///author:0812033
         ///</summary>
         [TestMethod()]
         public void TimPhongTest()
         {
-            string maPhong = string.Empty; // TODO: Initialize to an appropriate value
-            string tenPhong = string.Empty; // TODO: Initialize to an appropriate value
-            string loaiPhong = string.Empty; // TODO: Initialize to an appropriate value
-            string tinhTrang = string.Empty; // TODO: Initialize to an appropriate value
-            bool timChinhXac = false; // TODO: Initialize to an appropriate value
-            List<PHONG> expected = null; // TODO: Initialize to an appropriate value
+            string maPhong = "C002"; // TODO: Initialize to an appropriate value
+            string tenPhong = "C017-Bussiness"; // TODO: Initialize to an appropriate value
+            string loaiPhong = "C"; // TODO: Initialize to an appropriate value
+            string tinhTrang = " "; // TODO: Initialize to an appropriate value
+            bool timChinhXac = true; // TODO: Initialize to an appropriate value
+            List<PHONG> expected = new List<PHONG>();
+            expected.Add(new PHONG
+            {
+                MaPhong = maPhong,
+                TenPhong = tenPhong,
+                MaLoaiPhong = maPhong,
+                TinhTrang = "on dinh"
+            }); // TODO: Initialize to an appropriate value
             List<PHONG> actual;
             actual = PHONGBUS.TimPhong(maPhong, tenPhong, loaiPhong, tinhTrang, timChinhXac);
             Assert.AreEqual(expected, actual);
