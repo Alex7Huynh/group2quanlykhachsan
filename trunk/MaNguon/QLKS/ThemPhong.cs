@@ -185,7 +185,7 @@ namespace QLKS
 
         private void btnXoa_Leave(object sender, EventArgs e)
         {
-            ((Button)sender).BackColor = Color.Orange;
+            ((Button)sender).BackColor = Color.RoyalBlue;
         }
 
         private void dataGridView1_Paint(object sender, PaintEventArgs e)

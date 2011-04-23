@@ -404,9 +404,13 @@ namespace QLKS
                 foreach (PHIEUTHUE phieu in _cachePhieuThue[e.RowIndex])
                 {
                     if (DateTime.Compare(_beginDate, phieu.NgayThue) <= 0 && DateTime.Compare(phieu.NgayThue, _endDate) <= 0)
-                    {
+                    {        
                         if (phieu.NgayThue.Day == (e.ColumnIndex + 1))
                         {
+                            //dung cho tooltip
+                            (dtgTheHienPhieuThuePhong[e.ColumnIndex, e.RowIndex]).Tag = phieu.MaPhieuThue;
+                            //
+
                             //e.CellStyle.BackColor = Color.Pink;
 
                             /////////////////////////0812604
@@ -421,17 +425,22 @@ namespace QLKS
                             }
                             index_temp_base += index_temp;
                             int color_temp = dsMauTo[index_temp_base];
+                            int blue = color_temp % 255;
 
-                            if (index_temp_base % 3 == 0)
-                                e.CellStyle.BackColor = Color.FromArgb(255, color_temp, 0, 0);
-                            if (index_temp_base % 3 == 1)
-                                e.CellStyle.BackColor = Color.FromArgb(255, 0, color_temp, 0);
-                            if (index_temp_base % 3 == 2)
-                                e.CellStyle.BackColor = Color.FromArgb(255, 0, 0, color_temp);
+                            color_temp = color_temp / 255;
+                            int green = color_temp % 255;
+
+                            color_temp = color_temp / 255;
+                            int red = color_temp % 255;
+
+                            e.CellStyle.BackColor = Color.FromArgb(255, red, green, blue);
                             //////////////////////////
                         }
                         if (phieu.NgayThue.Day < (e.ColumnIndex + 1))
                         {
+                            //dung cho tooltip
+                            (dtgTheHienPhieuThuePhong[e.ColumnIndex, e.RowIndex]).Tag = phieu.MaPhieuThue;
+                            //
                             if ((e.ColumnIndex + 1) <= phieu.NgayThue.Day + phieu.SoNgayThue - 1)
                             {
                                 e.AdvancedBorderStyle.Left = DataGridViewAdvancedCellBorderStyle.None;
@@ -449,13 +458,15 @@ namespace QLKS
                                 }
                                 index_temp_base += index_temp;
                                 int color_temp = dsMauTo[index_temp_base];
+                                int blue = color_temp % 255;
 
-                                if (index_temp_base % 3 == 0)
-                                    e.CellStyle.BackColor = Color.FromArgb(255, color_temp, 0, 0);
-                                if (index_temp_base % 3 == 1)
-                                    e.CellStyle.BackColor = Color.FromArgb(255, 0, color_temp, 0);
-                                if (index_temp_base % 3 == 2)
-                                    e.CellStyle.BackColor = Color.FromArgb(255, 0, 0, color_temp);
+                                color_temp = color_temp / 255;
+                                int green = color_temp % 255;
+
+                                color_temp = color_temp / 255;
+                                int red = color_temp % 255;
+
+                                e.CellStyle.BackColor = Color.FromArgb(255, red, green, blue);
                                 //////////////////////////
 
                                 return;
@@ -479,7 +490,9 @@ namespace QLKS
             for (int i = 0; i < _cachePhieuThue.Count; i++)
                 for (int j = 0; j < _cachePhieuThue[i].Count; j++)
                 {
-                    dsPhieuTemp.Add(_cachePhieuThue[i][j]);
+                    //if (!(_cachePhieuThue[i][j].NgayThue.Month == _beginDate.Month &&
+                    //    (_cachePhieuThue[i][j].NgayThue.AddDays(_cachePhieuThue[i][j].SoNgayThue)).Month == _endDate.Month))
+                        dsPhieuTemp.Add(_cachePhieuThue[i][j]);
                 }
 
             dsMauTo = calculator.TinhMau(dsPhieuTemp);
@@ -606,6 +619,41 @@ namespace QLKS
                 return true;
         }
         #endregion       
+
+        /// <summary>
+        /// 0812604-hien thi tooltip cho cell
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void dtgTheHienPhieuThuePhong_CellMouseEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            //dtgTheHienPhieuThuePhong[e.ColumnIndex, e.RowIndex].ToolTipText = "aaaa";
+            //TTip_MaPhieuThue.Show(e.ColumnIndex.ToString() + "-" + e.RowIndex.ToString(), dtgTheHienPhieuThuePhong);
+            //TTip_MaPhieuThue.SetToolTip(dtgTheHienPhieuThuePhong, "mmm");
+            //MessageBox.Show(e.ColumnIndex.ToString() + "-" + e.RowIndex.ToString());
+
+            Point mousePos = PointToClient(MousePosition);
+            String tip = "";
+            
+            if(e.ColumnIndex >= 0 && e.RowIndex >= 0)
+                if (dtgTheHienPhieuThuePhong[e.ColumnIndex, e.RowIndex].Tag != null)
+                {
+                    tip = (dtgTheHienPhieuThuePhong[e.ColumnIndex, e.RowIndex]).Tag.ToString();
+                    TTip_MaPhieuThue.Show(tip, dtgTheHienPhieuThuePhong, mousePos);
+                }
+        }
+
+        private void TTip_MaPhieuThue_Draw(object sender, DrawToolTipEventArgs e)
+        {
+            e.Graphics.FillRectangle(Brushes.Black, e.Bounds);
+            //e.Graphics.DrawRectangle(Pens.Chocolate, new Rectangle(0, 0, e.Bounds.Width - 3, e.Bounds.Height - 3));
+            e.Graphics.DrawString(TTip_MaPhieuThue.ToolTipTitle + "\n " + e.ToolTipText, new Font("Consolas", 10, FontStyle.Bold), Brushes.White, e.Bounds);
+        }
+
+        private void dtgTheHienPhieuThuePhong_CellMouseLeave(object sender, DataGridViewCellEventArgs e)
+        {
+            TTip_MaPhieuThue.Hide(dtgTheHienPhieuThuePhong);
+        }
     }
 
     #region class Dinh (0812604)
@@ -795,26 +843,26 @@ namespace QLKS
             // nếu cùng phòng
             if (phieu1.MaPhong == phieu2.MaPhong)
             {
-                if (phieu1.NgayThue.AddDays(phieu1.SoNgayThue + 1) == phieu2.NgayThue ||
-                    phieu2.NgayThue.AddDays(phieu2.SoNgayThue + 1) == phieu1.NgayThue)
+                //if (phieu1.NgayThue.AddDays(phieu1.SoNgayThue) == phieu2.NgayThue ||
+                //    phieu2.NgayThue.AddDays(phieu2.SoNgayThue) == phieu1.NgayThue)
                     return true;
             }
 
-            // nếu khác phòng và 2 phòng có mã số gần nhau           
-            //else if (int.Parse(lastchar1) - int.Parse(lastchar2) == 1 ||
-            //    int.Parse(lastchar1) - int.Parse(lastchar2) == -1)
-            else
+            //nếu khác phòng và 2 phòng có mã số gần nhau           
+            else if (int.Parse(lastchar1) - int.Parse(lastchar2) == 1 ||
+                int.Parse(lastchar1) - int.Parse(lastchar2) == -1)
+            //else
             {
-                if (phieu1.NgayThue == phieu2.NgayThue ||
-                    phieu1.NgayThue.AddDays(phieu1.SoNgayThue) == phieu2.NgayThue.AddDays(phieu2.SoNgayThue))
-                    return true;
+                //if (phieu1.NgayThue == phieu2.NgayThue ||
+                //    phieu1.NgayThue.AddDays(phieu1.SoNgayThue) == phieu2.NgayThue.AddDays(phieu2.SoNgayThue))
+                //    return true;
 
-                if (phieu1.NgayThue < phieu2.NgayThue &&
-                    phieu1.NgayThue.AddDays(phieu1.SoNgayThue) > phieu2.NgayThue)
-                    return true;
+                //if (phieu1.NgayThue < phieu2.NgayThue &&
+                //    phieu1.NgayThue.AddDays(phieu1.SoNgayThue) > phieu2.NgayThue)
+                //    return true;
 
-                if (phieu1.NgayThue > phieu2.NgayThue &&
-                    phieu2.NgayThue.AddDays(phieu2.SoNgayThue) > phieu1.NgayThue)
+                //if (phieu1.NgayThue > phieu2.NgayThue &&
+                //    phieu2.NgayThue.AddDays(phieu2.SoNgayThue) > phieu1.NgayThue)
                     return true;
             }
 
@@ -873,7 +921,7 @@ namespace QLKS
             if (dsTemp.Count == 0)
                 return null;
 
-            int range = 255 / dsTemp.Count;
+            int range = (255 * 255 * 255) / (dsTemp.Count + 1);
 
             for (int i = 0; i < dsDinh.Count; i++)
             {
