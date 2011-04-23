@@ -43,6 +43,19 @@ namespace QLKS
         public TraCuuKhachHang()
         {
             InitializeComponent();
+            List<LOAIKHACH> dsLoaiKH = new List<LOAIKHACH>();
+            try
+            {
+                dsLoaiKH = LOAIKHACHBUS.layDSLoaiKhach();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Lỗi truy xuất dữ liệu\n" + ex.ToString());
+            }
+            for (int i = 0; i < dsLoaiKH.Count; i++)
+            {
+                cbLoaiKH.Items.Add(dsLoaiKH[i].TenLoaiKH);
+            }
         }
 
         private void rbtnMaKH_CheckedChanged(object sender, EventArgs e)
@@ -172,6 +185,29 @@ namespace QLKS
                     }
                     if (dsKH.Count == 0)
                         MessageBox.Show("Không tìm thấy khách hàng có địa chỉ này");
+                    else
+                        for (int i = 0; i < dsKH.Count; i++)
+                            dataGrid_ThongTinKH.Rows.Add(dsKH[i].MaKH, dsKH[i].HoTen, dsKH[i].MaLoaiKH, dsKH[i].SoGiayTo, dsKH[i].DiaChi);
+                    return;
+                }
+            }
+
+            //Nếu tra cứu theo loại khách hàng
+            if (cbLoaiKH.Enabled)
+            {
+                if (cbLoaiKH.Text != "")
+                {
+                    List<KHACHHANG> dsKH = new List<KHACHHANG>();
+                    try
+                    {
+                        dsKH = KHACHHANGBUS.LayDSKhachTheoLoaiKH(cbLoaiKH.SelectedItem.ToString());
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Quá trình truy vấn xuất hiện lỗi:\n" + ex.ToString());
+                    }
+                    if (dsKH.Count == 0)
+                        MessageBox.Show("Không tìm thấy khách hàng của loại khách hàng này");
                     else
                         for (int i = 0; i < dsKH.Count; i++)
                             dataGrid_ThongTinKH.Rows.Add(dsKH[i].MaKH, dsKH[i].HoTen, dsKH[i].MaLoaiKH, dsKH[i].SoGiayTo, dsKH[i].DiaChi);
