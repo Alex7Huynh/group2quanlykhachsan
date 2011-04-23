@@ -316,6 +316,7 @@
     <None Include="Resources\MHXoaPhong.png" />
     <None Include="Resources\MHTCPhong.png" />
     <None Include="Resources\MHTCPhieuThue.png" />
+    <None Include="Resources\MHTCKhachHang.png" />
     <Content Include="Resources\TCKhachHang.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

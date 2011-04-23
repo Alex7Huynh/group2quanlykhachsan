@@ -81,6 +81,16 @@ namespace QLKS
             frmTraCuuPT.ParentForm = this;
         }
 
+        private void BT_TCKH_Click(object sender, EventArgs e)
+        {
+            TraCuuKhachHang traCuuKH = new TraCuuKhachHang();
+            traCuuKH.Show();
+
+            traCuuKH.Location = Location;
+            this.Visible = false;
+            traCuuKH.ParentForm = this;
+        }
+
         private void PB_DatPhong_Click(object sender, EventArgs e)
         {
             frmManDinhDatPhong frmDatPhong = new frmManDinhDatPhong();
@@ -132,13 +142,7 @@ namespace QLKS
         private void BT_ThemPhong_Leave(object sender, EventArgs e)
         {
             ((Button)sender).BackColor = Color.Khaki;
-        }
-
-        private void BT_TCKH_Click(object sender, EventArgs e)
-        {
-            TraCuuKhachHang traCuuKH = new TraCuuKhachHang();
-            traCuuKH.ShowDialog();
-        }
+        }        
 
         private void BT_ThuNho_Enter(object sender, EventArgs e)
         {
