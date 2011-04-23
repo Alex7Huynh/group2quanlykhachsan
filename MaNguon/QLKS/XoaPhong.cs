@@ -13,6 +13,33 @@ namespace QLKS
 {
     public partial class XoaPhong : Form
     {
+        // Dành cho di chuyển
+        Point startPoint = new Point();
+        public Point StartPoint
+        {
+            get { return startPoint; }
+            set { startPoint = value; }
+        }
+
+        public Form ParentForm;
+
+        // Hàm di chuyển menu
+        private void PB_MainMenu_MouseDown(object sender, MouseEventArgs e)
+        {
+            StartPoint = new Point(e.X, e.Y);
+        }
+
+        public void MoveForm(Point distance)
+        {
+            this.Location = new Point(this.Location.X + distance.X, this.Location.Y + distance.Y);
+        }
+
+        private void PB_MainMenu_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+                MoveForm(new Point(e.X - StartPoint.X, e.Y - StartPoint.Y));
+        }
+
         public XoaPhong()
         {
             InitializeComponent();
@@ -21,6 +48,9 @@ namespace QLKS
         private void XoaPhong_Load(object sender, EventArgs e)
         {
             ReLoad();
+
+            //0812604 giao dien
+            LB_DSPhong.BackColor = Color.FromArgb(234, 146, 6);
         }
         private void ReLoad()
         {
@@ -63,19 +93,68 @@ namespace QLKS
             }
         }
 
-        private void dtg1_MouseUp(object sender, MouseEventArgs e)
-        {
-
-        }
-
-        private void dtg1_MouseMove(object sender, MouseEventArgs e)
-        {
-
-        }
-
         private void btnRe_Click(object sender, EventArgs e)
         {
             ReLoad();
+        }
+
+        //0812604-giao dien
+        private void dtg1_Paint(object sender, PaintEventArgs e)
+        {
+            for (int index = 0; index < dtg1.Columns.Count; index++)
+            {
+                dtg1.Columns[index].HeaderCell.Style.ForeColor = Color.White;
+                dtg1.Columns[index].HeaderCell.Style.BackColor = Color.Black;
+                dtg1.Columns[index].HeaderCell.Style.Font = new Font("Consolas", 10, FontStyle.Bold);
+            }
+
+            for (int index = 0; index < dtg1.Rows.Count; index++)
+            {
+                dtg1.Rows[index].HeaderCell.Style.ForeColor = Color.White;
+                dtg1.Rows[index].HeaderCell.Style.BackColor = Color.Black;
+                dtg1.Rows[index].Height = 30;
+            } 
+        }
+
+        private void BT_ThuNho_Enter(object sender, EventArgs e)
+        {
+            ((Button)sender).BackColor = Color.Black;
+        }
+
+        private void BT_ThuNho_Leave(object sender, EventArgs e)
+        {
+            ((Button)sender).BackColor = Color.OliveDrab;
+        }
+
+        private void BT_Thoat_Leave(object sender, EventArgs e)
+        {
+            ((Button)sender).BackColor = Color.DarkRed;
+        }
+
+        private void BT_ThuNho_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void BT_Thoat_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void XoaPhong_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            ParentForm.Visible = true;
+            ParentForm.Location = this.Location;
+        }
+
+        private void btnXoa_Enter(object sender, EventArgs e)
+        {
+            ((Button)sender).BackColor = Color.GreenYellow;
+        }
+
+        private void btnXoa_Leave(object sender, EventArgs e)
+        {
+            ((Button)sender).BackColor = Color.CornflowerBlue;
         }
     }
 }

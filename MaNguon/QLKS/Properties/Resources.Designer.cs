@@ -116,9 +116,23 @@ namespace QLKS.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap MHTCPhong {
+            get {
+                object obj = ResourceManager.GetObject("MHTCPhong", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap MHThemPhong {
             get {
                 object obj = ResourceManager.GetObject("MHThemPhong", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap MHXoaPhong {
+            get {
+                object obj = ResourceManager.GetObject("MHXoaPhong", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

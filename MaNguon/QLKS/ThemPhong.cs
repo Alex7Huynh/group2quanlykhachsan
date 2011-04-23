@@ -195,7 +195,7 @@ namespace QLKS
             {
                 dataGridView1.Columns[index].HeaderCell.Style.ForeColor = Color.White;
                 dataGridView1.Columns[index].HeaderCell.Style.BackColor = Color.Black;
-                dataGridView1.Columns[index].HeaderCell.Style.Font = new Font("Consolas", 9, FontStyle.Bold);
+                dataGridView1.Columns[index].HeaderCell.Style.Font = new Font("Consolas", 10, FontStyle.Bold);
             }
 
             for (int index = 0; index < dataGridView1.Rows.Count; index++)

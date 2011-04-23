@@ -102,35 +102,7 @@ namespace QLKSTestProject
             target.InitializeComponent();
             Assert.Inconclusive("A method that does not return a value cannot be verified.");
         }
-
-        /// <summary>
-        ///A test for dtg1_MouseUp
-        ///</summary>
-        [TestMethod()]
-        [DeploymentItem("QLKS.exe")]
-        public void dtg1_MouseUpTest()
-        {
-            XoaPhong_Accessor target = new XoaPhong_Accessor(); // TODO: Initialize to an appropriate value
-            object sender = null; // TODO: Initialize to an appropriate value
-            MouseEventArgs e = null; // TODO: Initialize to an appropriate value
-            target.dtg1_MouseUp(sender, e);
-            Assert.Inconclusive("A method that does not return a value cannot be verified.");
-        }
-
-        /// <summary>
-        ///A test for dtg1_MouseMove
-        ///</summary>
-        [TestMethod()]
-        [DeploymentItem("QLKS.exe")]
-        public void dtg1_MouseMoveTest()
-        {
-            XoaPhong_Accessor target = new XoaPhong_Accessor(); // TODO: Initialize to an appropriate value
-            object sender = null; // TODO: Initialize to an appropriate value
-            MouseEventArgs e = null; // TODO: Initialize to an appropriate value
-            target.dtg1_MouseMove(sender, e);
-            Assert.Inconclusive("A method that does not return a value cannot be verified.");
-        }
-
+        
         /// <summary>
         ///A test for Dispose
         ///</summary>
