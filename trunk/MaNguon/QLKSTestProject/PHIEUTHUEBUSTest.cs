@@ -95,9 +95,10 @@ namespace QLKSTestProject
         [TestMethod()]
         public void DatPhieuThueTest()
         {
-            PHIEUTHUE phieuThue = null; // TODO: Initialize to an appropriate value
-            string strLoaiPhong = string.Empty; // TODO: Initialize to an appropriate value
-            string expected = string.Empty; // TODO: Initialize to an appropriate value
+            PHIEUTHUE phieuThue = new PHIEUTHUE{MaPhieuThue = "", MaPhong = "C", NgayThue = new DateTime(2011, 4,23), SoNgayThue = 1, 
+                TenKhachHangDaiDien = "Nguyen", DangThue = false}; // TODO: Initialize to an appropriate value
+            string strLoaiPhong = "C"; // TODO: Initialize to an appropriate value
+            string expected = "PTC001001"; // TODO: Initialize to an appropriate value
             string actual;
             actual = PHIEUTHUEBUS.DatPhieuThue(phieuThue, strLoaiPhong);
             Assert.AreEqual(expected, actual);
@@ -151,13 +152,18 @@ namespace QLKSTestProject
 
         /// <summary>
         ///A test for LayNgayPhieuThueCuNhat
+        ///author: 0812033
         ///</summary>
         [TestMethod()]
         [DeploymentItem("BUS.dll")]
         public void LayNgayPhieuThueCuNhatTest()
         {
-            List<PHIEUTHUE> danhSachPhieuThue = null; // TODO: Initialize to an appropriate value
-            DateTime expected = new DateTime(); // TODO: Initialize to an appropriate value
+            PHIEUTHUE phieu1 = new PHIEUTHUE{NgayThue = new DateTime(2011, 4, 1)};
+            PHIEUTHUE phieu2 = new PHIEUTHUE{NgayThue = new DateTime(2011, 4, 2)};
+            List<PHIEUTHUE> danhSachPhieuThue = new List<PHIEUTHUE>(); // TODO: Initialize to an appropriate value
+            danhSachPhieuThue.Add(phieu1);
+            danhSachPhieuThue.Add(phieu2);
+            DateTime expected = phieu1.NgayThue; // TODO: Initialize to an appropriate value
             DateTime actual;
             actual = PHIEUTHUEBUS_Accessor.LayNgayPhieuThueCuNhat(danhSachPhieuThue);
             Assert.AreEqual(expected, actual);
@@ -166,13 +172,18 @@ namespace QLKSTestProject
 
         /// <summary>
         ///A test for LayNgayPhieuThueXaNhat
+        ///author: 0812033
         ///</summary>
         [TestMethod()]
         [DeploymentItem("BUS.dll")]
         public void LayNgayPhieuThueXaNhatTest()
         {
-            List<PHIEUTHUE> danhSachPhieuThue = null; // TODO: Initialize to an appropriate value
-            DateTime expected = new DateTime(); // TODO: Initialize to an appropriate value
+            PHIEUTHUE phieu1 = new PHIEUTHUE { NgayThue = new DateTime(2011, 4, 1) };
+            PHIEUTHUE phieu2 = new PHIEUTHUE { NgayThue = new DateTime(2011, 4, 2) };
+            List<PHIEUTHUE> danhSachPhieuThue = new List<PHIEUTHUE>(); // TODO: Initialize to an appropriate value
+            danhSachPhieuThue.Add(phieu1);
+            danhSachPhieuThue.Add(phieu2);
+            DateTime expected = phieu2.NgayThue; // TODO: Initialize to an appropriate value
             DateTime actual;
             actual = PHIEUTHUEBUS_Accessor.LayNgayPhieuThueXaNhat(danhSachPhieuThue);
             Assert.AreEqual(expected, actual);
@@ -181,13 +192,18 @@ namespace QLKSTestProject
 
         /// <summary>
         ///A test for LayPhieuThueXaNhat
+        ///author: 0812033
         ///</summary>
         [TestMethod()]
         [DeploymentItem("BUS.dll")]
         public void LayPhieuThueXaNhatTest()
         {
-            List<PHIEUTHUE> danhSachPhieuThue = null; // TODO: Initialize to an appropriate value
-            PHIEUTHUE expected = null; // TODO: Initialize to an appropriate value
+            PHIEUTHUE phieu1 = new PHIEUTHUE { NgayThue = new DateTime(2011, 4, 1) };
+            PHIEUTHUE phieu2 = new PHIEUTHUE { NgayThue = new DateTime(2011, 4, 2) };
+            List<PHIEUTHUE> danhSachPhieuThue = new List<PHIEUTHUE>(); // TODO: Initialize to an appropriate value
+            danhSachPhieuThue.Add(phieu1);
+            danhSachPhieuThue.Add(phieu2);
+            PHIEUTHUE expected = phieu2; // TODO: Initialize to an appropriate value
             PHIEUTHUE actual;
             actual = PHIEUTHUEBUS_Accessor.LayPhieuThueXaNhat(danhSachPhieuThue);
             Assert.AreEqual(expected, actual);
@@ -256,12 +272,21 @@ namespace QLKSTestProject
 
         /// <summary>
         ///A test for ThemPhieuThue
+        ///author: 0812033
         ///</summary>
         [TestMethod()]
         public void ThemPhieuThueTest()
         {
-            PHIEUTHUE phieu = null; // TODO: Initialize to an appropriate value
-            string expected = string.Empty; // TODO: Initialize to an appropriate value
+            PHIEUTHUE phieu = new PHIEUTHUE
+            {
+                MaPhieuThue = "",
+                MaPhong = "C002",
+                NgayThue = new DateTime(2011, 4, 23),
+                SoNgayThue = 1,
+                TenKhachHangDaiDien = "Nguyen",
+                DangThue = false
+            }; // TODO: Initialize to an appropriate value
+            string expected = "PTCOO2OO4"; // TODO: Initialize to an appropriate value
             string actual;
             actual = PHIEUTHUEBUS.ThemPhieuThue(phieu);
             Assert.AreEqual(expected, actual);
@@ -333,6 +358,7 @@ namespace QLKSTestProject
 
         /// <summary>
         ///A test for ToiUuPhieuThue
+        ///author: 0812033
         ///</summary>
         [TestMethod()]
         public void ToiUuPhieuThueTest()

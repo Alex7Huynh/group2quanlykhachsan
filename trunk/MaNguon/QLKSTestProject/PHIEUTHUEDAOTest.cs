@@ -133,12 +133,21 @@ namespace QLKSTestProject
 
         /// <summary>
         ///A test for ThemPhieuThue
+        ///author:0812033
         ///</summary>
         [TestMethod()]
         public void ThemPhieuThueTest()
         {
-            PHIEUTHUE phieu = null; // TODO: Initialize to an appropriate value
-            string expected = string.Empty; // TODO: Initialize to an appropriate value
+            PHIEUTHUE phieu = new PHIEUTHUE
+            {
+                MaPhieuThue = "",
+                MaPhong = "C002",
+                NgayThue = new DateTime(2011, 4, 23),
+                SoNgayThue = 1,
+                TenKhachHangDaiDien = "Nguyen",
+                DangThue = false
+            }; // TODO: Initialize to an appropriate value
+            string expected = "PTCOO2OO4"; // TODO: Initialize to an appropriate value
             string actual;
             actual = PHIEUTHUEDAO.ThemPhieuThue(phieu);
             Assert.AreEqual(expected, actual);
@@ -214,33 +223,62 @@ namespace QLKSTestProject
 
         /// <summary>
         ///A test for LayDSPhieuThueCanToiUu
+        ///author:0812033
         ///</summary>
         [TestMethod()]
         public void LayDSPhieuThueCanToiUuTest()
         {
-            PHIEUTHUE phieuThue = null; // TODO: Initialize to an appropriate value
-            string strLoaiPhong = string.Empty; // TODO: Initialize to an appropriate value
-            List<PHIEUTHUE> expected = null; // TODO: Initialize to an appropriate value
+            PHIEUTHUE phieu = new PHIEUTHUE
+            {
+                MaPhieuThue = "",
+                MaPhong = "C",
+                NgayThue = new DateTime(2010, 8, 14),
+                SoNgayThue = 1,
+                TenKhachHangDaiDien = "Nguyen",
+                DangThue = false
+            }; // TODO: Initialize to an appropriate value
+            string strLoaiPhong = "C"; // TODO: Initialize to an appropriate value
+            List<PHIEUTHUE> expected = new List<PHIEUTHUE>(); // TODO: Initialize to an appropriate value
+            PHIEUTHUE phieuMongDoi = new PHIEUTHUE
+            {
+                MaPhieuThue = "PTCOO2003",
+                MaPhong = "C002",
+                NgayThue = new DateTime(2010, 8, 14),
+                SoNgayThue = 2,
+                TenKhachHangDaiDien = "Doremon",
+                DangThue = false
+            };
+            expected.Add(phieuMongDoi);
             List<PHIEUTHUE> actual;
-            actual = PHIEUTHUEDAO.LayDSPhieuThueCanToiUu(phieuThue, strLoaiPhong);
+            actual = PHIEUTHUEDAO.LayDSPhieuThueCanToiUu(phieu, strLoaiPhong);
             Assert.AreEqual(expected, actual);
             Assert.Inconclusive("Verify the correctness of this test method.");
         }
 
         /// <summary>
         ///A test for KiemTraPhieuThue
+        ///author:0812033
         ///</summary>
         [TestMethod()]
         public void KiemTraPhieuThueTest()
         {
-            OleDbConnection ketNoi = null; // TODO: Initialize to an appropriate value
-            PHIEUTHUE phieu = null; // TODO: Initialize to an appropriate value
+            OleDbConnection ketNoi = ABSDAO.KetNoi(); // TODO: Initialize to an appropriate value
+            PHIEUTHUE phieu = new PHIEUTHUE 
+            {
+                MaPhieuThue = "PTCOO2003",
+                MaPhong = "C003",
+                NgayThue = new DateTime(2010, 8, 14),
+                SoNgayThue = 2,
+                TenKhachHangDaiDien = "Doremon",
+                DangThue = false
+            }; // TODO: Initialize to an appropriate value
             PHIEUTHUEDAO.KiemTraPhieuThue(ketNoi, phieu);
             Assert.Inconclusive("A method that does not return a value cannot be verified.");
         }
 
         /// <summary>
         ///A test for CapNhatPhieuThue
+        ///author:0812033
         ///</summary>
         [TestMethod()]
         public void CapNhatPhieuThueTest()
