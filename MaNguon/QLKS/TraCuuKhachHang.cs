@@ -13,6 +13,33 @@ namespace QLKS
 {
     public partial class TraCuuKhachHang : Form
     {
+        // Dành cho di chuyển
+        Point startPoint = new Point();
+        public Point StartPoint
+        {
+            get { return startPoint; }
+            set { startPoint = value; }
+        }
+
+        public Form ParentForm;
+
+        // Hàm di chuyển menu
+        private void PB_MainMenu_MouseDown(object sender, MouseEventArgs e)
+        {
+            StartPoint = new Point(e.X, e.Y);
+        }
+
+        public void MoveForm(Point distance)
+        {
+            this.Location = new Point(this.Location.X + distance.X, this.Location.Y + distance.Y);
+        }
+
+        private void PB_MainMenu_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+                MoveForm(new Point(e.X - StartPoint.X, e.Y - StartPoint.Y));
+        }
+
         public TraCuuKhachHang()
         {
             InitializeComponent();
@@ -152,5 +179,103 @@ namespace QLKS
                 }
             }
         }
+
+        /// <summary>
+        /// 0812604 - giao dien
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void dataGrid_ThongTinKH_Paint(object sender, PaintEventArgs e)
+        {
+            for (int index = 0; index < dataGrid_ThongTinKH.Columns.Count; index++)
+            {
+                dataGrid_ThongTinKH.Columns[index].HeaderCell.Style.ForeColor = Color.White;
+                dataGrid_ThongTinKH.Columns[index].HeaderCell.Style.BackColor = Color.Black;
+                dataGrid_ThongTinKH.Columns[index].HeaderCell.Style.Font = new Font("Consolas", 9, FontStyle.Bold);
+            }
+
+            for (int index = 0; index < dataGrid_ThongTinKH.Rows.Count; index++)
+            {
+                dataGrid_ThongTinKH.Rows[index].HeaderCell.Style.ForeColor = Color.White;
+                dataGrid_ThongTinKH.Rows[index].HeaderCell.Style.BackColor = Color.Black;
+                dataGrid_ThongTinKH.Rows[index].Height = 30;
+            }
+        }
+
+        private void BT_ThuNho_Enter(object sender, EventArgs e)
+        {
+            ((Button)sender).BackColor = Color.Black;
+        }
+
+        private void BT_ThuNho_Leave(object sender, EventArgs e)
+        {
+            ((Button)sender).BackColor = Color.OliveDrab;
+        }
+
+        private void BT_Thoat_Leave(object sender, EventArgs e)
+        {
+            ((Button)sender).BackColor = Color.DarkRed;
+        }
+
+        private void TraCuuPhong_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            ParentForm.Visible = true;
+            ParentForm.Location = this.Location;
+        }
+
+        private void BT_Thoat_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void BT_ThuNho_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void txtMaPhong_Enter(object sender, EventArgs e)
+        {
+            ((TextBox)sender).BackColor = Color.RoyalBlue;
+        }
+
+        private void txtMaPhong_Leave(object sender, EventArgs e)
+        {
+            ((TextBox)sender).BackColor = Color.OliveDrab;
+        }
+
+        private void btnTim_Enter(object sender, EventArgs e)
+        {
+            ((Button)sender).BackColor = Color.GreenYellow;
+        }
+
+        private void btnTim_Leave(object sender, EventArgs e)
+        {
+            ((Button)sender).BackColor = Color.CornflowerBlue;
+        }
+
+        private void nudSoNgayThue_Enter(object sender, EventArgs e)
+        {
+            ((NumericUpDown)sender).BackColor = Color.RoyalBlue;
+        }
+
+        private void nudSoNgayThue_Leave(object sender, EventArgs e)
+        {
+            ((NumericUpDown)sender).BackColor = Color.OliveDrab;
+        }
+
+        private void btnQuayLai_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void cbLoaiKH_Enter(object sender, EventArgs e)
+        {
+            ((ComboBox)sender).BackColor = Color.RoyalBlue;
+        }
+
+        private void cbLoaiKH_Leave(object sender, EventArgs e)
+        {
+            ((ComboBox)sender).BackColor = Color.OliveDrab;
+        } 
     }
 }

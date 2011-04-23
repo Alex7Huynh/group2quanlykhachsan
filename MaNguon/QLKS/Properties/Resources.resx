@@ -160,6 +160,9 @@
   <data name="btthemphong" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\btthemphong.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="MHTCPhieuThue" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MHTCPhieuThue.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="reservation" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\reservation.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -169,7 +172,7 @@
   <data name="MHSuaPhong" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MHSuaPhong.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="MHTCPhieuThue" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MHTCPhieuThue.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="MHTCKhachHang" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MHTCKhachHang.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
