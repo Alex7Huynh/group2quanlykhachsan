@@ -116,6 +116,13 @@ namespace QLKS.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap MHTCPhieuThue {
+            get {
+                object obj = ResourceManager.GetObject("MHTCPhieuThue", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap MHTCPhong {
             get {
                 object obj = ResourceManager.GetObject("MHTCPhong", resourceCulture);

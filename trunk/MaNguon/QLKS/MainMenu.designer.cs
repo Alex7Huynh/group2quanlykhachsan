@@ -151,6 +151,7 @@
             this.BT_TCPhieuThue.Size = new System.Drawing.Size(136, 38);
             this.BT_TCPhieuThue.TabIndex = 5;
             this.BT_TCPhieuThue.UseVisualStyleBackColor = false;
+            this.BT_TCPhieuThue.Click += new System.EventHandler(this.PB_TraCuuPhieuThue_Click);
             this.BT_TCPhieuThue.Leave += new System.EventHandler(this.BT_ThemPhong_Leave);
             this.BT_TCPhieuThue.Enter += new System.EventHandler(this.BT_ThemPhong_Enter);
             // 

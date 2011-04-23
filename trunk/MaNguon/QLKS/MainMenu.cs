@@ -75,6 +75,10 @@ namespace QLKS
         {
             frmTraCuuPhieuThue frmTraCuuPT = new frmTraCuuPhieuThue();
             frmTraCuuPT.Show();
+
+            frmTraCuuPT.Location = Location;
+            this.Visible = false;
+            frmTraCuuPT.ParentForm = this;
         }
 
         private void PB_DatPhong_Click(object sender, EventArgs e)
@@ -149,6 +153,6 @@ namespace QLKS
         private void BT_Thoat_Leave(object sender, EventArgs e)
         {
             ((Button)sender).BackColor = Color.DarkRed;
-        }       
+        }             
     }
 }
