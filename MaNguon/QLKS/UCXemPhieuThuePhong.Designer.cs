@@ -28,7 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.dtgTheHienPhieuThuePhong = new System.Windows.Forms.DataGridView();
+            this.TTip_MaPhieuThue = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dtgTheHienPhieuThuePhong)).BeginInit();
             this.SuspendLayout();
             // 
@@ -50,13 +52,28 @@
             this.dtgTheHienPhieuThuePhong.RowHeadersWidth = 100;
             this.dtgTheHienPhieuThuePhong.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dtgTheHienPhieuThuePhong.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.dtgTheHienPhieuThuePhong.ShowCellToolTips = false;
             this.dtgTheHienPhieuThuePhong.Size = new System.Drawing.Size(860, 504);
             this.dtgTheHienPhieuThuePhong.TabIndex = 0;
             this.dtgTheHienPhieuThuePhong.CellMouseUp += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dtgTheHienPhieuThuePhong_CellMouseUp);
+            this.dtgTheHienPhieuThuePhong.CellMouseLeave += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgTheHienPhieuThuePhong_CellMouseLeave);
             this.dtgTheHienPhieuThuePhong.CellMouseDown += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dtgTheHienPhieuThuePhong_CellMouseDown);
             this.dtgTheHienPhieuThuePhong.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dtgTheHienPhieuThuePhong_CellFormatting);
+            this.dtgTheHienPhieuThuePhong.CellMouseEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgTheHienPhieuThuePhong_CellMouseEnter);
             this.dtgTheHienPhieuThuePhong.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.dtgTheHienPhieuThuePhong_CellPainting);
             this.dtgTheHienPhieuThuePhong.Paint += new System.Windows.Forms.PaintEventHandler(this.dtgTheHienPhieuThuePhong_Paint);
+            // 
+            // TTip_MaPhieuThue
+            // 
+            this.TTip_MaPhieuThue.AutoPopDelay = 5000;
+            this.TTip_MaPhieuThue.BackColor = System.Drawing.Color.Orchid;
+            this.TTip_MaPhieuThue.ForeColor = System.Drawing.Color.White;
+            this.TTip_MaPhieuThue.InitialDelay = 50;
+            this.TTip_MaPhieuThue.OwnerDraw = true;
+            this.TTip_MaPhieuThue.ReshowDelay = 100;
+            this.TTip_MaPhieuThue.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.TTip_MaPhieuThue.ToolTipTitle = " MPT";
+            this.TTip_MaPhieuThue.Draw += new System.Windows.Forms.DrawToolTipEventHandler(this.TTip_MaPhieuThue_Draw);
             // 
             // UCXemPhieuThuePhong
             // 
@@ -73,5 +90,6 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dtgTheHienPhieuThuePhong;
+        private System.Windows.Forms.ToolTip TTip_MaPhieuThue;
     }
 }
