@@ -38,7 +38,7 @@
             this.dtgTheHienPhieuThuePhong.AllowUserToDeleteRows = false;
             this.dtgTheHienPhieuThuePhong.AllowUserToResizeColumns = false;
             this.dtgTheHienPhieuThuePhong.AllowUserToResizeRows = false;
-            this.dtgTheHienPhieuThuePhong.BackgroundColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.dtgTheHienPhieuThuePhong.BackgroundColor = System.Drawing.Color.Indigo;
             this.dtgTheHienPhieuThuePhong.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgTheHienPhieuThuePhong.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dtgTheHienPhieuThuePhong.Dock = System.Windows.Forms.DockStyle.Fill;

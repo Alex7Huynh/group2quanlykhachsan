@@ -36,17 +36,17 @@
             this.txtMaPhong = new System.Windows.Forms.TextBox();
             this.txtTenPhong = new System.Windows.Forms.TextBox();
             this.dtgDanhSachPhong = new System.Windows.Forms.DataGridView();
+            this.cMaPhong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cTenPhong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cMaLoaiPhong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cGhiChu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cTinhTrang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnTim = new System.Windows.Forms.Button();
             this.btnThoat = new System.Windows.Forms.Button();
             this.cmbLoaiPhong = new System.Windows.Forms.ComboBox();
             this.txtTinhTrang = new System.Windows.Forms.TextBox();
             this.cbxTimChinhXac = new System.Windows.Forms.CheckBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.cMaPhong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cTenPhong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cMaLoaiPhong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cGhiChu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cTinhTrang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BT_ThuNho = new System.Windows.Forms.Button();
             this.BT_Thoat = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtgDanhSachPhong)).BeginInit();
@@ -133,6 +133,7 @@
             this.cMaLoaiPhong,
             this.cGhiChu,
             this.cTinhTrang});
+            this.dtgDanhSachPhong.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dtgDanhSachPhong.EnableHeadersVisualStyles = false;
             this.dtgDanhSachPhong.GridColor = System.Drawing.Color.Orange;
             this.dtgDanhSachPhong.Location = new System.Drawing.Point(175, 372);
@@ -141,6 +142,41 @@
             this.dtgDanhSachPhong.Size = new System.Drawing.Size(780, 342);
             this.dtgDanhSachPhong.TabIndex = 8;
             this.dtgDanhSachPhong.Paint += new System.Windows.Forms.PaintEventHandler(this.dtgDanhSachPhong_Paint);
+            // 
+            // cMaPhong
+            // 
+            this.cMaPhong.HeaderText = "Mã phòng";
+            this.cMaPhong.Name = "cMaPhong";
+            this.cMaPhong.ReadOnly = true;
+            this.cMaPhong.Width = 120;
+            // 
+            // cTenPhong
+            // 
+            this.cTenPhong.HeaderText = "Tên phòng";
+            this.cTenPhong.Name = "cTenPhong";
+            this.cTenPhong.ReadOnly = true;
+            this.cTenPhong.Width = 200;
+            // 
+            // cMaLoaiPhong
+            // 
+            this.cMaLoaiPhong.HeaderText = "Mã loại phòng";
+            this.cMaLoaiPhong.Name = "cMaLoaiPhong";
+            this.cMaLoaiPhong.ReadOnly = true;
+            this.cMaLoaiPhong.Width = 120;
+            // 
+            // cGhiChu
+            // 
+            this.cGhiChu.HeaderText = "Ghi chú";
+            this.cGhiChu.Name = "cGhiChu";
+            this.cGhiChu.ReadOnly = true;
+            this.cGhiChu.Width = 180;
+            // 
+            // cTinhTrang
+            // 
+            this.cTinhTrang.HeaderText = "Tình trạng";
+            this.cTinhTrang.Name = "cTinhTrang";
+            this.cTinhTrang.ReadOnly = true;
+            this.cTinhTrang.Width = 150;
             // 
             // btnTim
             // 
@@ -222,41 +258,6 @@
             this.pictureBox1.Size = new System.Drawing.Size(1123, 720);
             this.pictureBox1.TabIndex = 18;
             this.pictureBox1.TabStop = false;
-            // 
-            // cMaPhong
-            // 
-            this.cMaPhong.HeaderText = "Mã phòng";
-            this.cMaPhong.Name = "cMaPhong";
-            this.cMaPhong.ReadOnly = true;
-            this.cMaPhong.Width = 120;
-            // 
-            // cTenPhong
-            // 
-            this.cTenPhong.HeaderText = "Tên phòng";
-            this.cTenPhong.Name = "cTenPhong";
-            this.cTenPhong.ReadOnly = true;
-            this.cTenPhong.Width = 200;
-            // 
-            // cMaLoaiPhong
-            // 
-            this.cMaLoaiPhong.HeaderText = "Mã loại phòng";
-            this.cMaLoaiPhong.Name = "cMaLoaiPhong";
-            this.cMaLoaiPhong.ReadOnly = true;
-            this.cMaLoaiPhong.Width = 120;
-            // 
-            // cGhiChu
-            // 
-            this.cGhiChu.HeaderText = "Ghi chú";
-            this.cGhiChu.Name = "cGhiChu";
-            this.cGhiChu.ReadOnly = true;
-            this.cGhiChu.Width = 180;
-            // 
-            // cTinhTrang
-            // 
-            this.cTinhTrang.HeaderText = "Tình trạng";
-            this.cTinhTrang.Name = "cTinhTrang";
-            this.cTinhTrang.ReadOnly = true;
-            this.cTinhTrang.Width = 150;
             // 
             // BT_ThuNho
             // 

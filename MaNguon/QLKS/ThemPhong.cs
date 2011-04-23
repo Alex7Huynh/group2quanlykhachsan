@@ -239,6 +239,6 @@ namespace QLKS
         private void BT_Thoat_Leave(object sender, EventArgs e)
         {
             ((Button)sender).BackColor = Color.DarkRed;
-        }  
+        }
     }
 }

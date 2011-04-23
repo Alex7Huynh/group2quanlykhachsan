@@ -40,15 +40,15 @@
             this.rbtnDiaChi = new System.Windows.Forms.RadioButton();
             this.tbDiaChi = new System.Windows.Forms.TextBox();
             this.dataGrid_ThongTinKH = new System.Windows.Forms.DataGridView();
-            this.btnTraCuuNangCao = new System.Windows.Forms.Button();
-            this.btnTraCuu = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnQuayLai = new System.Windows.Forms.Button();
             this.MaKH = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HoTen = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LoaiKH = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SoGiayTo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnTraCuuNangCao = new System.Windows.Forms.Button();
+            this.btnTraCuu = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnQuayLai = new System.Windows.Forms.Button();
             this.BT_ThuNho = new System.Windows.Forms.Button();
             this.BT_Thoat = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid_ThongTinKH)).BeginInit();
@@ -207,6 +207,7 @@
             this.LoaiKH,
             this.SoGiayTo,
             this.DiaChi});
+            this.dataGrid_ThongTinKH.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dataGrid_ThongTinKH.EnableHeadersVisualStyles = false;
             this.dataGrid_ThongTinKH.GridColor = System.Drawing.Color.YellowGreen;
             this.dataGrid_ThongTinKH.Location = new System.Drawing.Point(81, 394);
@@ -216,6 +217,40 @@
             this.dataGrid_ThongTinKH.Size = new System.Drawing.Size(968, 333);
             this.dataGrid_ThongTinKH.TabIndex = 14;
             this.dataGrid_ThongTinKH.Paint += new System.Windows.Forms.PaintEventHandler(this.dataGrid_ThongTinKH_Paint);
+            // 
+            // MaKH
+            // 
+            this.MaKH.HeaderText = "Mã khách hàng";
+            this.MaKH.Name = "MaKH";
+            this.MaKH.ReadOnly = true;
+            this.MaKH.Width = 120;
+            // 
+            // HoTen
+            // 
+            this.HoTen.HeaderText = "Họ tên";
+            this.HoTen.Name = "HoTen";
+            this.HoTen.ReadOnly = true;
+            this.HoTen.Width = 200;
+            // 
+            // LoaiKH
+            // 
+            this.LoaiKH.HeaderText = "Loại khách hàng";
+            this.LoaiKH.Name = "LoaiKH";
+            this.LoaiKH.ReadOnly = true;
+            this.LoaiKH.Width = 180;
+            // 
+            // SoGiayTo
+            // 
+            this.SoGiayTo.HeaderText = "Số giấy tờ";
+            this.SoGiayTo.Name = "SoGiayTo";
+            this.SoGiayTo.ReadOnly = true;
+            // 
+            // DiaChi
+            // 
+            this.DiaChi.HeaderText = "Địa chỉ";
+            this.DiaChi.Name = "DiaChi";
+            this.DiaChi.ReadOnly = true;
+            this.DiaChi.Width = 350;
             // 
             // btnTraCuuNangCao
             // 
@@ -272,40 +307,6 @@
             this.btnQuayLai.Click += new System.EventHandler(this.btnQuayLai_Click);
             this.btnQuayLai.Leave += new System.EventHandler(this.btnTim_Leave);
             this.btnQuayLai.Enter += new System.EventHandler(this.btnTim_Enter);
-            // 
-            // MaKH
-            // 
-            this.MaKH.HeaderText = "Mã khách hàng";
-            this.MaKH.Name = "MaKH";
-            this.MaKH.ReadOnly = true;
-            this.MaKH.Width = 120;
-            // 
-            // HoTen
-            // 
-            this.HoTen.HeaderText = "Họ tên";
-            this.HoTen.Name = "HoTen";
-            this.HoTen.ReadOnly = true;
-            this.HoTen.Width = 200;
-            // 
-            // LoaiKH
-            // 
-            this.LoaiKH.HeaderText = "Loại khách hàng";
-            this.LoaiKH.Name = "LoaiKH";
-            this.LoaiKH.ReadOnly = true;
-            this.LoaiKH.Width = 180;
-            // 
-            // SoGiayTo
-            // 
-            this.SoGiayTo.HeaderText = "Số giấy tờ";
-            this.SoGiayTo.Name = "SoGiayTo";
-            this.SoGiayTo.ReadOnly = true;
-            // 
-            // DiaChi
-            // 
-            this.DiaChi.HeaderText = "Địa chỉ";
-            this.DiaChi.Name = "DiaChi";
-            this.DiaChi.ReadOnly = true;
-            this.DiaChi.Width = 350;
             // 
             // BT_ThuNho
             // 
