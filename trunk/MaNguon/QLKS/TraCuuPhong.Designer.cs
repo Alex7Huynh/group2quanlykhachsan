@@ -35,17 +35,17 @@
             this.txtMaPhong = new System.Windows.Forms.TextBox();
             this.txtTenPhong = new System.Windows.Forms.TextBox();
             this.dtgDanhSachPhong = new System.Windows.Forms.DataGridView();
-            this.cMaPhong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cTenPhong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cMaLoaiPhong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cGhiChu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cTinhTrang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnTim = new System.Windows.Forms.Button();
             this.btnThoat = new System.Windows.Forms.Button();
             this.cmbLoaiPhong = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtTinhTrang = new System.Windows.Forms.TextBox();
             this.cbxTimChinhXac = new System.Windows.Forms.CheckBox();
+            this.cMaPhong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cTenPhong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cMaLoaiPhong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cGhiChu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cTinhTrang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dtgDanhSachPhong)).BeginInit();
             this.SuspendLayout();
             // 
@@ -114,35 +114,6 @@
             this.dtgDanhSachPhong.Size = new System.Drawing.Size(503, 286);
             this.dtgDanhSachPhong.TabIndex = 8;
             // 
-            // cMaPhong
-            // 
-            this.cMaPhong.HeaderText = "MaPhong";
-            this.cMaPhong.Name = "cMaPhong";
-            this.cMaPhong.ReadOnly = true;
-            // 
-            // cTenPhong
-            // 
-            this.cTenPhong.HeaderText = "Tên Phòng";
-            this.cTenPhong.Name = "cTenPhong";
-            this.cTenPhong.ReadOnly = true;
-            // 
-            // cMaLoaiPhong
-            // 
-            this.cMaLoaiPhong.HeaderText = "Mã Loại Phòng";
-            this.cMaLoaiPhong.Name = "cMaLoaiPhong";
-            this.cMaLoaiPhong.ReadOnly = true;
-            // 
-            // cGhiChu
-            // 
-            this.cGhiChu.HeaderText = "Ghi Chú";
-            this.cGhiChu.Name = "cGhiChu";
-            this.cGhiChu.ReadOnly = true;
-            // 
-            // cTinhTrang
-            // 
-            this.cTinhTrang.HeaderText = "Tình Trạng";
-            this.cTinhTrang.Name = "cTinhTrang";
-            // 
             // btnTim
             // 
             this.btnTim.Location = new System.Drawing.Point(239, 477);
@@ -202,6 +173,36 @@
             this.cbxTimChinhXac.Text = "Tìm chính xác";
             this.cbxTimChinhXac.UseVisualStyleBackColor = true;
             // 
+            // cMaPhong
+            // 
+            this.cMaPhong.HeaderText = "MaPhong";
+            this.cMaPhong.Name = "cMaPhong";
+            this.cMaPhong.ReadOnly = true;
+            // 
+            // cTenPhong
+            // 
+            this.cTenPhong.HeaderText = "Tên Phòng";
+            this.cTenPhong.Name = "cTenPhong";
+            this.cTenPhong.ReadOnly = true;
+            // 
+            // cMaLoaiPhong
+            // 
+            this.cMaLoaiPhong.HeaderText = "Mã Loại Phòng";
+            this.cMaLoaiPhong.Name = "cMaLoaiPhong";
+            this.cMaLoaiPhong.ReadOnly = true;
+            // 
+            // cGhiChu
+            // 
+            this.cGhiChu.HeaderText = "Ghi Chú";
+            this.cGhiChu.Name = "cGhiChu";
+            this.cGhiChu.ReadOnly = true;
+            // 
+            // cTinhTrang
+            // 
+            this.cTinhTrang.HeaderText = "Tình Trạng";
+            this.cTinhTrang.Name = "cTinhTrang";
+            this.cTinhTrang.ReadOnly = true;
+            // 
             // TraCuuPhong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -243,12 +244,12 @@
         private System.Windows.Forms.Button btnThoat;
         private System.Windows.Forms.ComboBox cmbLoaiPhong;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txtTinhTrang;
+        private System.Windows.Forms.CheckBox cbxTimChinhXac;
         private System.Windows.Forms.DataGridViewTextBoxColumn cMaPhong;
         private System.Windows.Forms.DataGridViewTextBoxColumn cTenPhong;
         private System.Windows.Forms.DataGridViewTextBoxColumn cMaLoaiPhong;
         private System.Windows.Forms.DataGridViewTextBoxColumn cGhiChu;
         private System.Windows.Forms.DataGridViewTextBoxColumn cTinhTrang;
-        private System.Windows.Forms.TextBox txtTinhTrang;
-        private System.Windows.Forms.CheckBox cbxTimChinhXac;
     }
 }

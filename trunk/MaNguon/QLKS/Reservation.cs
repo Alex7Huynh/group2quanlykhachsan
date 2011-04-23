@@ -71,8 +71,17 @@ namespace QLKS
 
         private void UpdateDuration()
         {
-            TimeSpan ts = _endDate - _beginDate;
-            int differenceInDays = ts.Days+1;// tôi nghĩ nên cộng thêm một 
+            int differenceInDays = 0;
+            if (_endDate >= _beginDate)
+            {
+                TimeSpan ts = _endDate - _beginDate;
+                differenceInDays = ts.Days + 1;// tôi nghĩ nên cộng thêm một 
+            }
+            else
+            {
+                TimeSpan ts = _beginDate - _endDate;
+                differenceInDays = ts.Days*-1 - 2;
+            }
             txtDuration.Text = differenceInDays.ToString();
         }
 
@@ -94,7 +103,7 @@ namespace QLKS
 
         private void btnOk_Click(object sender, EventArgs e)
         {
-            if (CheckInputValue())
+            /*if (CheckInputValue())
             {
                 SetInputValue();
                 //PHIEUTHUEBUS.ToiUuPhieuThue((LOAIPHONG)cboLoaiPhong.Items[cboLoaiPhong.SelectedIndex]);
@@ -142,7 +151,61 @@ namespace QLKS
             else
             {
                 MessageBox.Show("Vui lòng kiểm tra lại thông tin nhập vào!");
+            }*/
+
+            ////0812033
+            try
+            {
+                CheckInputValue();
+                SetInputValue();
+                //PHIEUTHUEBUS.ToiUuPhieuThue((LOAIPHONG)cboLoaiPhong.Items[cboLoaiPhong.SelectedIndex]);
+                // cho nay can 1 bien ben UCXemphieuthuephong keoTha kieu bool, neu dat phong do keo tha thi them phieu thue lun ko can toi uu
+                string phongDuocDat = "";
+                if (_keoTha)
+                {
+                    _phieuThue.MaPhong += _soPhongDuocDat.ToString("000");
+                    try
+                    {
+                        phongDuocDat = PHIEUTHUEBUS.ThemPhieuThue(_phieuThue);
+                        if (phongDuocDat != string.Empty)
+                        {
+                            MessageBox.Show("Da dat phong " + _phieuThue.MaPhong + " thanh cong");
+                        }
+                        else
+                            MessageBox.Show("Khong co phong trong trong thoi gian ban muon thue, vui long dat phong vao ngay khac!");
+                    }
+                    catch (System.Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                }
+                else
+                {
+                    try
+                    {
+                        phongDuocDat = PHIEUTHUEBUS.DatPhieuThue(_phieuThue, _danhSachLoaiPhong[cboLoaiPhong.SelectedIndex].MaLoaiPhong);
+                        if (phongDuocDat != string.Empty)
+                        {
+                            MessageBox.Show("Da dat phong " + phongDuocDat.Substring(2, 4) + " thanh cong");
+                            //UCXemPhieuThuePhong.
+                        }
+                        else
+                        {
+                            MessageBox.Show("Khong co phong trong trong thoi gian ban muon thue, vui long dat phong vao ngay khac!");
+                        }
+                    }
+                    catch (System.Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                }
             }
+            catch (System.Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
+            ////end 0812033
         }
 
         private void SetInputValue()
@@ -163,13 +226,17 @@ namespace QLKS
             _phieuThue.SoNgayThue = int.Parse(txtDuration.Text);
         }
 
-        private bool CheckInputValue()
+        private void CheckInputValue()
         {
-            if (int.Parse(txtDuration.Text) >= 0)
+           /* if (int.Parse(txtDuration.Text) >= 0)
             {
                 return true;
             }
-            return false;
+            return false;*/
+            if (int.Parse(txtDuration.Text) < 0)
+            {
+                throw new Exception("Ngày đặt phòng không lớn hơn ngày trả.");
+            }
         }
     }
 }
