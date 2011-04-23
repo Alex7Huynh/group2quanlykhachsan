@@ -69,5 +69,19 @@ namespace BUS
             }
             return dsKH;
         }
+
+        public static List<KHACHHANG> LayDSKhachTheoLoaiKH(string LoaiKH)
+        {
+            List<KHACHHANG> dsKH = new List<KHACHHANG>();
+            try
+            {
+                dsKH = KHACHHANGDAO.LayDSKhachTheoLoaiKH(LoaiKH);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return dsKH;
+        }
     }
 }

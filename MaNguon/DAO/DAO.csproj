@@ -48,6 +48,7 @@
     <Compile Include="ABSDAO.cs" />
     <Compile Include="HOADONDAO.cs" />
     <Compile Include="KHACHHANGDAO.cs" />
+    <Compile Include="LOAIKHACHDAO.cs" />
     <Compile Include="PHIEUTHUEDAO.cs" />
     <Compile Include="PHONGDAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
