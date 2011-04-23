@@ -312,6 +312,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\MHThemPhong.png" />
+    <None Include="Resources\MHSuaPhong.png" />
     <Content Include="Resources\TCKhachHang.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

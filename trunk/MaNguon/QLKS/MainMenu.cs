@@ -51,6 +51,10 @@ namespace QLKS
         {
             SuaPhong frmSuaPhong = new SuaPhong();
             frmSuaPhong.Show();
+
+            frmSuaPhong.Location = Location;
+            this.Visible = false;
+            frmSuaPhong.ParentForm = this;
         }
 
         private void PB_TraCuuPhong_Click(object sender, EventArgs e)
@@ -116,12 +120,6 @@ namespace QLKS
         private void BT_ThemPhong_Leave(object sender, EventArgs e)
         {
             ((Button)sender).BackColor = Color.Khaki;
-        }
-
-        private void BT_SuaPhong_Click(object sender, EventArgs e)
-        {
-            SuaPhong suaphong = new SuaPhong();
-            suaphong.ShowDialog();
         }
 
         private void BT_TCKH_Click(object sender, EventArgs e)
