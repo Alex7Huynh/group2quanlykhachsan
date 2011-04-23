@@ -72,7 +72,7 @@ namespace QLKSTestProject
         [TestMethod()]
         public void StartPointTest()
         {
-            MainMenu target = new MainMenu(); // TODO: Initialize to an appropriate value
+            QLKS.MainMenu target = new QLKS.MainMenu(); // TODO: Initialize to an appropriate value
             Point expected = new Point(); // TODO: Initialize to an appropriate value
             Point actual;
             target.StartPoint = expected;
@@ -213,7 +213,7 @@ namespace QLKSTestProject
         [TestMethod()]
         public void MoveFormTest()
         {
-            MainMenu target = new MainMenu(); // TODO: Initialize to an appropriate value
+            QLKS.MainMenu target = new QLKS.MainMenu(); // TODO: Initialize to an appropriate value
             Point distance = new Point(); // TODO: Initialize to an appropriate value
             target.MoveForm(distance);
             Assert.Inconclusive("A method that does not return a value cannot be verified.");
@@ -326,21 +326,7 @@ namespace QLKSTestProject
             EventArgs e = null; // TODO: Initialize to an appropriate value
             target.BT_TCKH_Click(sender, e);
             Assert.Inconclusive("A method that does not return a value cannot be verified.");
-        }
-
-        /// <summary>
-        ///A test for BT_SuaPhong_Click
-        ///</summary>
-        [TestMethod()]
-        [DeploymentItem("QLKS.exe")]
-        public void BT_SuaPhong_ClickTest()
-        {
-            MainMenu_Accessor target = new MainMenu_Accessor(); // TODO: Initialize to an appropriate value
-            object sender = null; // TODO: Initialize to an appropriate value
-            EventArgs e = null; // TODO: Initialize to an appropriate value
-            target.BT_SuaPhong_Click(sender, e);
-            Assert.Inconclusive("A method that does not return a value cannot be verified.");
-        }
+        }        
 
         /// <summary>
         ///A test for MainMenu Constructor
@@ -348,7 +334,7 @@ namespace QLKSTestProject
         [TestMethod()]
         public void MainMenuConstructorTest()
         {
-            MainMenu target = new MainMenu();
+            QLKS.MainMenu target = new QLKS.MainMenu();
             Assert.Inconclusive("TODO: Implement code to verify target");
         }
     }

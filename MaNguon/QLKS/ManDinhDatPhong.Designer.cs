@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmManDinhDatPhong));
             this.BT_ThuNho = new System.Windows.Forms.Button();
             this.BT_Thoat = new System.Windows.Forms.Button();
             this.ucDatPhong1 = new QLKS.UCDatPhong();
@@ -82,6 +83,7 @@
             this.Controls.Add(this.BT_Thoat);
             this.Controls.Add(this.ucDatPhong1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "frmManDinhDatPhong";
             this.Text = "ManDinhDatPhong";

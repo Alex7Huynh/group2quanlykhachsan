@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainMenu));
             this.BT_Thoat = new System.Windows.Forms.Button();
             this.BT_ThuNho = new System.Windows.Forms.Button();
             this.BT_TCKH = new System.Windows.Forms.Button();
@@ -189,7 +190,7 @@
             this.BT_SuaPhong.Size = new System.Drawing.Size(136, 38);
             this.BT_SuaPhong.TabIndex = 3;
             this.BT_SuaPhong.UseVisualStyleBackColor = false;
-            this.BT_SuaPhong.Click += new System.EventHandler(this.BT_SuaPhong_Click);
+            this.BT_SuaPhong.Click += new System.EventHandler(this.PB_SuaPhong_Click);
             this.BT_SuaPhong.Leave += new System.EventHandler(this.BT_ThemPhong_Leave);
             this.BT_SuaPhong.Enter += new System.EventHandler(this.BT_ThemPhong_Enter);
             // 
@@ -263,6 +264,7 @@
             this.Controls.Add(this.BT_Thoat);
             this.Controls.Add(this.PB_MainMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "MainMenu";
             this.Text = "Quản Lý Khách Sạn";

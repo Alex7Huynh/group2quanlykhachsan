@@ -205,5 +205,40 @@ namespace QLKS
                 dataGridView1.Rows[index].Height = 30;
             }            
         }
+
+        private void txtMP_Enter(object sender, EventArgs e)
+        {
+            ((TextBox)sender).BackColor = Color.RoyalBlue;
+        }
+
+        private void cmbLoai_Enter(object sender, EventArgs e)
+        {
+            ((ComboBox)sender).BackColor = Color.RoyalBlue;
+        }
+
+        private void cmbLoai_Leave(object sender, EventArgs e)
+        {
+            ((ComboBox)sender).BackColor = Color.OliveDrab;
+        }
+
+        private void txtMP_Leave(object sender, EventArgs e)
+        {
+            ((TextBox)sender).BackColor = Color.OliveDrab;
+        }
+
+        private void BT_ThuNho_Enter(object sender, EventArgs e)
+        {
+            ((Button)sender).BackColor = Color.Black;
+        }
+
+        private void BT_ThuNho_Leave(object sender, EventArgs e)
+        {
+            ((Button)sender).BackColor = Color.OliveDrab;
+        }
+
+        private void BT_Thoat_Leave(object sender, EventArgs e)
+        {
+            ((Button)sender).BackColor = Color.DarkRed;
+        }  
     }
 }

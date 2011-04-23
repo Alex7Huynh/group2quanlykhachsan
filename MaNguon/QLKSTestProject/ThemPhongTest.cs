@@ -130,21 +130,7 @@ namespace QLKSTestProject
             EventArgs e = null; // TODO: Initialize to an appropriate value
             target.btnXoa_Click(sender, e);
             Assert.Inconclusive("A method that does not return a value cannot be verified.");
-        }
-
-        /// <summary>
-        ///A test for btnThoat_Click
-        ///</summary>
-        [TestMethod()]
-        [DeploymentItem("QLKS.exe")]
-        public void btnThoat_ClickTest()
-        {
-            ThemPhong_Accessor target = new ThemPhong_Accessor(); // TODO: Initialize to an appropriate value
-            object sender = null; // TODO: Initialize to an appropriate value
-            EventArgs e = null; // TODO: Initialize to an appropriate value
-            target.btnThoat_Click(sender, e);
-            Assert.Inconclusive("A method that does not return a value cannot be verified.");
-        }
+        }       
 
         /// <summary>
         ///A test for btnThem_Click
