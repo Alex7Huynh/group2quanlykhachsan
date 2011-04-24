@@ -209,7 +209,23 @@ namespace BUS
                     arr.Add(0);
             return arr;
         }
-
+        public static bool KiemTraMaPhongHopLe(string maPhong)
+        {
+            if ((maPhong.Length > 4)||(maPhong[0] < 'A') || (maPhong[0] > 'Z'))
+            {
+                return false;
+            }
+            try
+            {
+                int index = int.Parse(maPhong.Substring(1));
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+         
+        }
 
         public static bool UpdateTinhTrangPhong(PHONG phong)
         {
