@@ -75,8 +75,8 @@ namespace QLKS
                         break;
                     }
                 }
-                char kiTuDau = maPhong[0];
-                if ((kiTuDau >= 'A') && (kiTuDau <= 'Z'))
+                
+                if (PHONGBUS.KiemTraMaPhongHopLe(maPhong))
                 {
                     PHONG phong1 = new PHONG();
                     phong1.MaPhong = maPhong;
@@ -87,7 +87,7 @@ namespace QLKS
 
                     ThemPhongVaoDanhSach(temp, phong1);
                 }
-                else MessageBox.Show("Ki tu dau tien phai la chu in hoa");
+                else MessageBox.Show("Ma Phong Khong Hop Le");
            }
         }
         private void ThemPhongVaoDanhSach(int temp,PHONG phg)
