@@ -51,6 +51,7 @@
             this.BT_ThuNho = new System.Windows.Forms.Button();
             this.BT_Thoat = new System.Windows.Forms.Button();
             this.PB_Main = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Main)).BeginInit();
             this.SuspendLayout();
@@ -309,12 +310,22 @@
             this.PB_Main.TabIndex = 5;
             this.PB_Main.TabStop = false;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(205, 220);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(305, 13);
+            this.label1.TabIndex = 104;
+            this.label1.Text = "(Maphong theo dang : Axxx---A:Loai Phong , xxx:Ma So Phong)";
+            // 
             // ThemPhong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
-            this.ClientSize = new System.Drawing.Size(1130, 750);
+            this.ClientSize = new System.Drawing.Size(1036, 750);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.BT_ThuNho);
             this.Controls.Add(this.BT_Thoat);
             this.Controls.Add(this.cmbLoai);
@@ -371,5 +382,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn clLoaiPhong;
         private System.Windows.Forms.DataGridViewTextBoxColumn clGhiChu;
         private System.Windows.Forms.DataGridViewTextBoxColumn clTinhTrang;
+        private System.Windows.Forms.Label label1;
     }
 }
