@@ -282,5 +282,61 @@ namespace QLKSTestProject
             Assert.AreEqual(expected, actual);
             Assert.Inconclusive("Verify the correctness of this test method.");
         }
+
+        /// <summary>
+        ///A test for KiemTraLoaiPhong
+        ///</summary>
+        [TestMethod()]
+        public void KiemTraLoaiPhongTest1()
+        {
+            string loaiPhong = string.Empty; // TODO: Initialize to an appropriate value
+            bool expected = false; // TODO: Initialize to an appropriate value
+            bool actual;
+            actual = PHONGBUS.KiemTraLoaiPhong(loaiPhong);
+            Assert.AreEqual(expected, actual);
+            Assert.Inconclusive("Verify the correctness of this test method.");
+        }
+
+        /// <summary>
+        ///A test for KiemTraMaPhong
+        ///</summary>
+        [TestMethod()]
+        public void KiemTraMaPhongTest()
+        {
+            string maPhong = string.Empty; // TODO: Initialize to an appropriate value
+            bool expected = false; // TODO: Initialize to an appropriate value
+            bool actual;
+            actual = PHONGBUS.KiemTraMaPhong(maPhong);
+            Assert.AreEqual(expected, actual);
+            Assert.Inconclusive("Verify the correctness of this test method.");
+        }
+
+        /// <summary>
+        ///A test for KiemTraPhong
+        ///</summary>
+        [TestMethod()]
+        public void KiemTraPhongTest()
+        {
+            PHONG phong = null; // TODO: Initialize to an appropriate value
+            bool expected = false; // TODO: Initialize to an appropriate value
+            bool actual;
+            actual = PHONGBUS.KiemTraPhong(phong);
+            Assert.AreEqual(expected, actual);
+            Assert.Inconclusive("Verify the correctness of this test method.");
+        }
+
+        /// <summary>
+        ///A test for KiemTraMaPhongHopLe
+        ///</summary>
+        [TestMethod()]
+        public void KiemTraMaPhongHopLeTest()
+        {
+            string maPhong = string.Empty; // TODO: Initialize to an appropriate value
+            bool expected = false; // TODO: Initialize to an appropriate value
+            bool actual;
+            actual = PHONGBUS.KiemTraMaPhongHopLe(maPhong);
+            Assert.AreEqual(expected, actual);
+            Assert.Inconclusive("Verify the correctness of this test method.");
+        }
     }
 }

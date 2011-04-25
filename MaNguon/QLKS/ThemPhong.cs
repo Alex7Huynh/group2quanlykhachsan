@@ -75,19 +75,18 @@ namespace QLKS
                         break;
                     }
                 }
-                
-                if (PHONGBUS.KiemTraMaPhongHopLe(maPhong))
-                {
-                    PHONG phong1 = new PHONG();
-                    phong1.MaPhong = maPhong;
-                    phong1.TenPhong = tenPhong;
-                    phong1.MaLoaiPhong = loaiPhong;
-                    phong1.GhiChu = ghiChu;
-                    phong1.TinhTrang = tinhTrang;
-
+                PHONG phong1 = new PHONG();
+                phong1.MaPhong = maPhong;
+                phong1.TenPhong = tenPhong;
+                phong1.MaLoaiPhong = loaiPhong;
+                phong1.GhiChu = ghiChu;
+                phong1.TinhTrang = tinhTrang;
+                bool kiemtra =PHONGBUS.KiemTraMaPhongHopLe(maPhong);
+                if ((!kiemtra)||(tenPhong.Length>255)||(ghiChu.Length>255)||(tinhTrang.Length>255))
+                    if(!kiemtra) MessageBox.Show("Ma Phong Khong Hop Le");
+                   else MessageBox.Show("Cac du lieu truyen vao qua lon");                    
+                else
                     ThemPhongVaoDanhSach(temp, phong1);
-                }
-                else MessageBox.Show("Ma Phong Khong Hop Le");
            }
         }
         private void ThemPhongVaoDanhSach(int temp,PHONG phg)
