@@ -247,7 +247,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
-            this.ClientSize = new System.Drawing.Size(1130, 750);
+            this.ClientSize = new System.Drawing.Size(1036, 750);
             this.Controls.Add(this.btnHuyBo);
             this.Controls.Add(this.BT_ThuNho);
             this.Controls.Add(this.BT_Thoat);

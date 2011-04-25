@@ -37,9 +37,9 @@ namespace BUS
         {
             return PHONGDAO.LayPhongTheoMa(maPhong);
         }
-        public static void CapNhatPhong(string maPhong, string tenPhong, string maLoaiPhong, string tinhTrang, string ghiChu)
+        public static void CapNhatPhong(PHONG phong)
         {
-            PHONGDAO.CapNhatPhong(maPhong, tenPhong, maLoaiPhong, tinhTrang, ghiChu);
+            PHONGDAO.CapNhatPhong(phong);
         }
         //public static List<PHONG> TimPhong( string maphong, string loaiphong, string tenphong, string tinhtrang)
         //{
@@ -211,7 +211,7 @@ namespace BUS
         }
         public static bool KiemTraMaPhongHopLe(string maPhong)
         {
-            if ((maPhong.Length > 4)||(maPhong[0] < 'A') || (maPhong[0] > 'Z'))
+            if ((maPhong.Length > 5)||(maPhong[0] < 'A') || (maPhong[0] > 'Z'))
             {
                 return false;
             }
@@ -226,7 +226,14 @@ namespace BUS
             }
          
         }
-
+        public static bool KiemTraPhong(PHONG phong)
+        {
+            string loaiPhong = phong.MaLoaiPhong.Trim();
+            if ((!KiemTraMaPhong(phong.MaPhong)) || (phong.TenPhong.Length > 255) || (phong.TinhTrang.Length > 255)
+                || (phong.GhiChu.Length > 255)||(!KiemTraLoaiPhong(loaiPhong)))
+                return false;
+            return true;
+        }
         public static bool UpdateTinhTrangPhong(PHONG phong)
         {
             return PHONGDAO.UpdateTinhTrangPhong(phong);
@@ -237,9 +244,19 @@ namespace BUS
         }
         public static bool KiemTraLoaiPhong(string loaiPhong)
         {
+            if (loaiPhong.Length > 50) return false;
             List<LOAIPHONG> dsloai = PHONGBUS.LayDSLoaiPhong();
-            for (int index = 0; index < dsloai.Count; index++)
-                if ((string.Compare(loaiPhong, dsloai[index].MaLoaiPhong, true) == 0))
+            for (int index = dsloai.Count; index >0 ; --index)
+                if ((string.Compare(loaiPhong, dsloai[index-1].MaLoaiPhong, false) == 0))
+                    return true;
+            return false;
+        }
+        public static bool KiemTraMaPhong(string maPhong)
+        {
+            if (maPhong.Length > 255) return false;
+            List<PHONG> dsphg = LayDSPhong();
+            for (int index = dsphg.Count;0 < index  ; --index)
+                if ((string.Compare(maPhong, dsphg[index-1].MaPhong, false) == 0))
                     return true;
             return false;
         }
