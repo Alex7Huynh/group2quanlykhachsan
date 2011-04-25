@@ -79,7 +79,7 @@ namespace QLKS
                 phong.TenPhong = txtTP.Text.Trim();
                 phong.MaLoaiPhong =txtLP.Text.Trim();
                 phong.TinhTrang= txtTT.Text.Trim();
-                phong.GhiChu=txtGC.Text.Trim();
+                phong.GhiChu=txtGC.Text.Trim();  
                 if (PHONGBUS.KiemTraPhong(phong))
                 {
                     PHONGBUS.CapNhatPhong(phong);
