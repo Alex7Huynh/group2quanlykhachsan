@@ -168,7 +168,7 @@ namespace DAO
                     link.Close();
             }
         }
-        public static void CapNhatPhong(string maPhong,string tenPhong,string maLoaiPhong,string tinhTrang,string ghiChu)
+        public static void CapNhatPhong(PHONG phong)
         {
             OleDbConnection link = null;
             try
@@ -178,19 +178,19 @@ namespace DAO
                 string chuoiLenh = "update PHONG set TenPhong=@TP,MaLoaiPhong=@MLP,GhiChu=@GC,Tinhtrang=@TT where MaPhong=@MP";
                 OleDbCommand lenh = new OleDbCommand(chuoiLenh, link);
                 OleDbParameter thamSo = new OleDbParameter("@TP", OleDbType.LongVarChar);
-                thamSo.Value = tenPhong;
+                thamSo.Value = phong.TenPhong;
                 lenh.Parameters.Add(thamSo);
                 thamSo = new OleDbParameter("@MLP", OleDbType.LongVarChar);
-                thamSo.Value = maLoaiPhong;
+                thamSo.Value = phong.MaLoaiPhong;
                 lenh.Parameters.Add(thamSo);
                 thamSo = new OleDbParameter("@GC", OleDbType.LongVarChar);
-                thamSo.Value = ghiChu;
+                thamSo.Value = phong.GhiChu;
                 lenh.Parameters.Add(thamSo);
                 thamSo = new OleDbParameter("@TT", OleDbType.LongVarChar);
-                thamSo.Value = tinhTrang;
+                thamSo.Value = phong.TinhTrang;
                 lenh.Parameters.Add(thamSo);
                 thamSo = new OleDbParameter("@MP", OleDbType.LongVarChar);
-                thamSo.Value = maPhong;
+                thamSo.Value = phong.MaPhong;
                 lenh.Parameters.Add(thamSo);
                 lenh.ExecuteNonQuery();
                 OleDbDataAdapter Adapter = new OleDbDataAdapter();

@@ -196,12 +196,8 @@ namespace QLKSTestProject
         [TestMethod()]
         public void CapNhatPhongTest()
         {
-            string maPhong = string.Empty; // TODO: Initialize to an appropriate value
-            string tenPhong = string.Empty; // TODO: Initialize to an appropriate value
-            string maLoaiPhong = string.Empty; // TODO: Initialize to an appropriate value
-            string tinhTrang = string.Empty; // TODO: Initialize to an appropriate value
-            string ghiChu = string.Empty; // TODO: Initialize to an appropriate value
-            PHONGBUS.CapNhatPhong(maPhong, tenPhong, maLoaiPhong, tinhTrang, ghiChu);
+            PHONG phong = null; // TODO: Initialize to an appropriate value
+            PHONGBUS.CapNhatPhong(phong);
             Assert.Inconclusive("A method that does not return a value cannot be verified.");
         }
 

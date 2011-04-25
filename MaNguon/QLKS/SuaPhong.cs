@@ -74,14 +74,18 @@ namespace QLKS
         {
             if (cmbMP.Text != string.Empty)
             {
-                string loaiPhong = txtLP.Text;
-                if (PHONGBUS.KiemTraLoaiPhong(loaiPhong))
+                PHONG phong = new PHONG();
+                phong.MaPhong = cmbMP.Text.Trim();
+                phong.TenPhong = txtTP.Text.Trim();
+                phong.MaLoaiPhong =txtLP.Text.Trim();
+                phong.TinhTrang= txtTT.Text.Trim();
+                phong.GhiChu=txtGC.Text.Trim();
+                if (PHONGBUS.KiemTraPhong(phong))
                 {
-                    PHONGBUS.CapNhatPhong(cmbMP.Text, txtTP.Text, loaiPhong
-                        , txtTT.Text, txtGC.Text);
+                    PHONGBUS.CapNhatPhong(phong);
                     MessageBox.Show("Da Sua Xong");
                 }
-                else MessageBox.Show("Ma Loai Phong Khong ton tai");
+                else MessageBox.Show("That Bai");
             }
             else MessageBox.Show("xin chon phong muon sua");
         }
