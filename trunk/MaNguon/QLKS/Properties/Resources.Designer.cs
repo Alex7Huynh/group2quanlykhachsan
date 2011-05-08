@@ -60,9 +60,23 @@ namespace QLKS.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap add {
+            get {
+                object obj = ResourceManager.GetObject("add", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap BCdoanhthu {
             get {
                 object obj = ResourceManager.GetObject("BCdoanhthu", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap bookroom {
+            get {
+                object obj = ResourceManager.GetObject("bookroom", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -88,9 +102,23 @@ namespace QLKS.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap customer {
+            get {
+                object obj = ResourceManager.GetObject("customer", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap datphong {
             get {
                 object obj = ResourceManager.GetObject("datphong", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap fix {
+            get {
+                object obj = ResourceManager.GetObject("fix", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -151,6 +179,13 @@ namespace QLKS.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap MoneyReport {
+            get {
+                object obj = ResourceManager.GetObject("MoneyReport", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap reservation {
             get {
                 object obj = ResourceManager.GetObject("reservation", resourceCulture);
@@ -165,9 +200,23 @@ namespace QLKS.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap room {
+            get {
+                object obj = ResourceManager.GetObject("room", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap runningman {
             get {
                 object obj = ResourceManager.GetObject("runningman", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap subtract {
+            get {
+                object obj = ResourceManager.GetObject("subtract", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -189,6 +238,13 @@ namespace QLKS.Properties {
         internal static System.Drawing.Bitmap TCphong {
             get {
                 object obj = ResourceManager.GetObject("TCphong", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap tick {
+            get {
+                object obj = ResourceManager.GetObject("tick", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

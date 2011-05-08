@@ -56,20 +56,26 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.BT_ThuNho = new System.Windows.Forms.Button();
             this.BT_Thoat = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dtgDanhSachPhieuThue)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudSoNgayThue)).BeginInit();
             this.grbTimTheoNgay.SuspendLayout();
             this.grpKieuTimKiem.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblMaPhieuThue
             // 
             this.lblMaPhieuThue.AutoSize = true;
-            this.lblMaPhieuThue.BackColor = System.Drawing.Color.Black;
+            this.lblMaPhieuThue.BackColor = System.Drawing.Color.White;
             this.lblMaPhieuThue.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblMaPhieuThue.ForeColor = System.Drawing.Color.Gold;
-            this.lblMaPhieuThue.Location = new System.Drawing.Point(369, 188);
+            this.lblMaPhieuThue.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.lblMaPhieuThue.Location = new System.Drawing.Point(48, 14);
             this.lblMaPhieuThue.Name = "lblMaPhieuThue";
             this.lblMaPhieuThue.Size = new System.Drawing.Size(111, 17);
             this.lblMaPhieuThue.TabIndex = 0;
@@ -78,10 +84,10 @@
             // lblTenKhachDaiDien
             // 
             this.lblTenKhachDaiDien.AutoSize = true;
-            this.lblTenKhachDaiDien.BackColor = System.Drawing.Color.Black;
+            this.lblTenKhachDaiDien.BackColor = System.Drawing.Color.White;
             this.lblTenKhachDaiDien.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblTenKhachDaiDien.ForeColor = System.Drawing.Color.Gold;
-            this.lblTenKhachDaiDien.Location = new System.Drawing.Point(369, 308);
+            this.lblTenKhachDaiDien.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.lblTenKhachDaiDien.Location = new System.Drawing.Point(48, 134);
             this.lblTenKhachDaiDien.Name = "lblTenKhachDaiDien";
             this.lblTenKhachDaiDien.Size = new System.Drawing.Size(153, 17);
             this.lblTenKhachDaiDien.TabIndex = 2;
@@ -90,10 +96,10 @@
             // lblTenPhong
             // 
             this.lblTenPhong.AutoSize = true;
-            this.lblTenPhong.BackColor = System.Drawing.Color.Black;
+            this.lblTenPhong.BackColor = System.Drawing.Color.White;
             this.lblTenPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblTenPhong.ForeColor = System.Drawing.Color.Gold;
-            this.lblTenPhong.Location = new System.Drawing.Point(369, 248);
+            this.lblTenPhong.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.lblTenPhong.Location = new System.Drawing.Point(48, 74);
             this.lblTenPhong.Name = "lblTenPhong";
             this.lblTenPhong.Size = new System.Drawing.Size(86, 17);
             this.lblTenPhong.TabIndex = 3;
@@ -104,7 +110,7 @@
             this.txtMaPhieuThue.BackColor = System.Drawing.Color.OliveDrab;
             this.txtMaPhieuThue.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtMaPhieuThue.ForeColor = System.Drawing.Color.White;
-            this.txtMaPhieuThue.Location = new System.Drawing.Point(558, 185);
+            this.txtMaPhieuThue.Location = new System.Drawing.Point(207, 11);
             this.txtMaPhieuThue.Name = "txtMaPhieuThue";
             this.txtMaPhieuThue.Size = new System.Drawing.Size(284, 23);
             this.txtMaPhieuThue.TabIndex = 1;
@@ -116,7 +122,7 @@
             this.txtTenPhong.BackColor = System.Drawing.Color.OliveDrab;
             this.txtTenPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtTenPhong.ForeColor = System.Drawing.Color.White;
-            this.txtTenPhong.Location = new System.Drawing.Point(558, 245);
+            this.txtTenPhong.Location = new System.Drawing.Point(207, 71);
             this.txtTenPhong.Name = "txtTenPhong";
             this.txtTenPhong.Size = new System.Drawing.Size(284, 23);
             this.txtTenPhong.TabIndex = 2;
@@ -192,7 +198,7 @@
             this.btnTim.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTim.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnTim.ForeColor = System.Drawing.Color.White;
-            this.btnTim.Location = new System.Drawing.Point(935, 188);
+            this.btnTim.Location = new System.Drawing.Point(61, 14);
             this.btnTim.Name = "btnTim";
             this.btnTim.Size = new System.Drawing.Size(107, 52);
             this.btnTim.TabIndex = 10;
@@ -208,7 +214,7 @@
             this.btnThoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnThoat.ForeColor = System.Drawing.Color.White;
-            this.btnThoat.Location = new System.Drawing.Point(935, 273);
+            this.btnThoat.Location = new System.Drawing.Point(61, 99);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(107, 52);
             this.btnThoat.TabIndex = 11;
@@ -223,7 +229,7 @@
             this.txtTenKhachDaiDien.BackColor = System.Drawing.Color.OliveDrab;
             this.txtTenKhachDaiDien.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtTenKhachDaiDien.ForeColor = System.Drawing.Color.White;
-            this.txtTenKhachDaiDien.Location = new System.Drawing.Point(558, 305);
+            this.txtTenKhachDaiDien.Location = new System.Drawing.Point(207, 131);
             this.txtTenKhachDaiDien.Name = "txtTenKhachDaiDien";
             this.txtTenKhachDaiDien.Size = new System.Drawing.Size(284, 23);
             this.txtTenKhachDaiDien.TabIndex = 3;
@@ -273,10 +279,10 @@
             // chbTimTheoNgay
             // 
             this.chbTimTheoNgay.AutoSize = true;
-            this.chbTimTheoNgay.BackColor = System.Drawing.Color.Black;
+            this.chbTimTheoNgay.BackColor = System.Drawing.Color.White;
             this.chbTimTheoNgay.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.chbTimTheoNgay.ForeColor = System.Drawing.Color.White;
-            this.chbTimTheoNgay.Location = new System.Drawing.Point(30, 346);
+            this.chbTimTheoNgay.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.chbTimTheoNgay.Location = new System.Drawing.Point(10, 40);
             this.chbTimTheoNgay.Name = "chbTimTheoNgay";
             this.chbTimTheoNgay.Size = new System.Drawing.Size(137, 21);
             this.chbTimTheoNgay.TabIndex = 6;
@@ -286,16 +292,16 @@
             // 
             // grbTimTheoNgay
             // 
-            this.grbTimTheoNgay.BackColor = System.Drawing.Color.Brown;
+            this.grbTimTheoNgay.BackColor = System.Drawing.Color.White;
             this.grbTimTheoNgay.Controls.Add(this.lblSoNgayThue);
             this.grbTimTheoNgay.Controls.Add(this.lblNgayBatDauThue);
             this.grbTimTheoNgay.Controls.Add(this.nudSoNgayThue);
             this.grbTimTheoNgay.Controls.Add(this.dtmNgayBatDauThue);
             this.grbTimTheoNgay.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.grbTimTheoNgay.ForeColor = System.Drawing.Color.White;
+            this.grbTimTheoNgay.ForeColor = System.Drawing.Color.MidnightBlue;
             this.grbTimTheoNgay.Location = new System.Drawing.Point(30, 397);
             this.grbTimTheoNgay.Name = "grbTimTheoNgay";
-            this.grbTimTheoNgay.Size = new System.Drawing.Size(282, 245);
+            this.grbTimTheoNgay.Size = new System.Drawing.Size(282, 341);
             this.grbTimTheoNgay.TabIndex = 7;
             this.grbTimTheoNgay.TabStop = false;
             this.grbTimTheoNgay.Text = "Tìm Theo Ngày";
@@ -326,14 +332,14 @@
             // 
             // grpKieuTimKiem
             // 
-            this.grpKieuTimKiem.BackColor = System.Drawing.Color.Brown;
+            this.grpKieuTimKiem.BackColor = System.Drawing.Color.White;
             this.grpKieuTimKiem.Controls.Add(this.rdoAnd);
             this.grpKieuTimKiem.Controls.Add(this.rdoOr);
             this.grpKieuTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.grpKieuTimKiem.ForeColor = System.Drawing.Color.White;
+            this.grpKieuTimKiem.ForeColor = System.Drawing.Color.MidnightBlue;
             this.grpKieuTimKiem.Location = new System.Drawing.Point(30, 188);
             this.grpKieuTimKiem.Name = "grpKieuTimKiem";
-            this.grpKieuTimKiem.Size = new System.Drawing.Size(157, 88);
+            this.grpKieuTimKiem.Size = new System.Drawing.Size(282, 88);
             this.grpKieuTimKiem.TabIndex = 4;
             this.grpKieuTimKiem.TabStop = false;
             this.grpKieuTimKiem.Text = "Kiểu Tìm Kiếm";
@@ -379,26 +385,53 @@
             this.BT_Thoat.Leave += new System.EventHandler(this.BT_Thoat_Leave);
             this.BT_Thoat.Enter += new System.EventHandler(this.BT_ThuNho_Enter);
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.chbTimTheoNgay);
+            this.panel1.Location = new System.Drawing.Point(30, 291);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(282, 100);
+            this.panel1.TabIndex = 108;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.txtMaPhieuThue);
+            this.panel2.Controls.Add(this.lblMaPhieuThue);
+            this.panel2.Controls.Add(this.lblTenKhachDaiDien);
+            this.panel2.Controls.Add(this.lblTenPhong);
+            this.panel2.Controls.Add(this.txtTenPhong);
+            this.panel2.Controls.Add(this.txtTenKhachDaiDien);
+            this.panel2.Location = new System.Drawing.Point(333, 188);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(538, 164);
+            this.panel2.TabIndex = 109;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.Controls.Add(this.btnTim);
+            this.panel3.Controls.Add(this.btnThoat);
+            this.panel3.Location = new System.Drawing.Point(877, 188);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(228, 164);
+            this.panel3.TabIndex = 110;
+            // 
             // frmTraCuuPhieuThue
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DimGray;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1130, 750);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.BT_ThuNho);
             this.Controls.Add(this.BT_Thoat);
             this.Controls.Add(this.grpKieuTimKiem);
-            this.Controls.Add(this.chbTimTheoNgay);
             this.Controls.Add(this.grbTimTheoNgay);
-            this.Controls.Add(this.txtTenKhachDaiDien);
-            this.Controls.Add(this.btnThoat);
-            this.Controls.Add(this.btnTim);
             this.Controls.Add(this.dtgDanhSachPhieuThue);
-            this.Controls.Add(this.txtTenPhong);
-            this.Controls.Add(this.txtMaPhieuThue);
-            this.Controls.Add(this.lblTenPhong);
-            this.Controls.Add(this.lblTenKhachDaiDien);
-            this.Controls.Add(this.lblMaPhieuThue);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -416,8 +449,12 @@
             this.grpKieuTimKiem.ResumeLayout(false);
             this.grpKieuTimKiem.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -450,5 +487,8 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button BT_ThuNho;
         private System.Windows.Forms.Button BT_Thoat;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel3;
     }
 }

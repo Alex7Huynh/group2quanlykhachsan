@@ -105,9 +105,6 @@ namespace QLKS
         private void ThemPhong_Load(object sender, EventArgs e)
         {
             //giao dien
-            LB_TinhTrang.BackColor = Color.FromArgb(234, 146, 6);
-            LB_TenPhong.BackColor = Color.FromArgb(234, 146, 6);
-            LB_GhiChu.BackColor = Color.FromArgb(234, 146, 6);
             //
             btnXoa.Enabled = false;
             btnOK.Enabled = false;

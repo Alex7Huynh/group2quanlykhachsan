@@ -157,6 +157,26 @@ namespace QLKS
         private void BT_Thoat_Leave(object sender, EventArgs e)
         {
             ((Button)sender).BackColor = Color.DarkRed;
-        }             
+        }
+
+        private void PB_Add_MouseDown(object sender, MouseEventArgs e)
+        {
+            PictureBox pb = (PictureBox)sender;
+
+            pb.Width -= 4;
+            pb.Height -= 4;
+
+            pb.Location = new Point(pb.Location.X + 2, pb.Location.Y + 2);
+        }
+
+        private void PB_Add_MouseUp(object sender, MouseEventArgs e)
+        {
+            PictureBox pb = (PictureBox)sender;
+
+            pb.Width += 4;
+            pb.Height += 4;
+
+            pb.Location = new Point(pb.Location.X - 2, pb.Location.Y - 2);
+        }         
     }
 }
