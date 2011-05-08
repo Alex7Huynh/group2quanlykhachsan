@@ -274,59 +274,83 @@ namespace QLKS
             UpdateColumns();
             UpdateRows();
         }
-
+        /// <summary>
+        /// 0812005-Ham Update Columns. Hàm cũ bị sai rùi
+        /// </summary>
         private void UpdateColumns()
         {
-            //add columns
+            dtgTheHienPhieuThuePhong.Columns.Clear();
             TimeSpan ts = _endDate - _beginDate;
             int differenceInDays = ts.Days;
-            if (dtgTheHienPhieuThuePhong.Columns.Count > 0)
-            {
-                if (dtgTheHienPhieuThuePhong.Columns.Count < (differenceInDays + 1))
-                {
-                    int numberOfColumns = dtgTheHienPhieuThuePhong.Columns.Count;
-                    int numberOfColumnsToAdd = (differenceInDays + 1) - dtgTheHienPhieuThuePhong.Columns.Count;
-                    DataGridViewTextBoxColumn[] columns = new DataGridViewTextBoxColumn[numberOfColumnsToAdd];
 
-                    for (int i = 0; i < numberOfColumnsToAdd; i++)
-                    {
-                        columns[i] = new DataGridViewTextBoxColumn();
-                        columns[i].AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-                        columns[i].HeaderText = _beginDate.AddDays(numberOfColumns + i).Day.ToString();
-                        columns[i].Name = _beginDate.AddDays(numberOfColumns + i).ToString();
-                        columns[i].ReadOnly = true;
-                        columns[i].ValueType = typeof(string);
-                        columns[i].SortMode = DataGridViewColumnSortMode.NotSortable;
-                        dtgTheHienPhieuThuePhong.Columns.Add(columns[i]);
-                    }
-                }
-                else if (dtgTheHienPhieuThuePhong.Columns.Count > (differenceInDays + 1))
-                {
-                    int numberOfColumnsToRemove = dtgTheHienPhieuThuePhong.Columns.Count - (differenceInDays + 1);
-
-                    for (int i = 0; i < numberOfColumnsToRemove; i++)
-                    {
-                        dtgTheHienPhieuThuePhong.Columns.RemoveAt(dtgTheHienPhieuThuePhong.Columns.Count - 1);
-                    }
-                }
-            }
-            else
+            //DataGridViewTextBoxColumn[] columns = new DataGridViewTextBoxColumn[33];
+            int numberOfColumn = differenceInDays + 1;
+            DataGridViewTextBoxColumn[] columns = new DataGridViewTextBoxColumn[numberOfColumn];
+            for (int i = 0; i < numberOfColumn; i++)
             {
-                int numberOfColumn = differenceInDays + 1;
-                DataGridViewTextBoxColumn[] columns = new DataGridViewTextBoxColumn[numberOfColumn];
-                for (int i = 0; i < numberOfColumn; i++)
-                {
-                    columns[i] = new DataGridViewTextBoxColumn();
-                    columns[i].AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-                    columns[i].HeaderText = _beginDate.AddDays(i).Day.ToString();
-                    columns[i].Name = _beginDate.AddDays(i).ToString();
-                    columns[i].ReadOnly = true;
-                    columns[i].ValueType = typeof(string);
-                    columns[i].SortMode = DataGridViewColumnSortMode.NotSortable;
-                    dtgTheHienPhieuThuePhong.Columns.Add(columns[i]);
-                }
+                columns[i] = new DataGridViewTextBoxColumn();
+                columns[i].AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+                columns[i].HeaderText = _beginDate.AddDays(i).Day.ToString();
+                columns[i].Name = _beginDate.AddDays(i).ToString();
+                columns[i].ReadOnly = true;
+                columns[i].ValueType = typeof(string);
+                columns[i].SortMode = DataGridViewColumnSortMode.NotSortable;
+                dtgTheHienPhieuThuePhong.Columns.Add(columns[i]);
             }
+
         }
+        //private void UpdateColumns()
+        //{
+        //    //add columns
+        //    TimeSpan ts = _endDate - _beginDate;
+        //    int differenceInDays = ts.Days;
+        //    if (dtgTheHienPhieuThuePhong.Columns.Count > 0)
+        //    {
+        //        if (dtgTheHienPhieuThuePhong.Columns.Count < (differenceInDays + 1))
+        //        {
+        //            int numberOfColumns = dtgTheHienPhieuThuePhong.Columns.Count;
+        //            int numberOfColumnsToAdd = (differenceInDays + 1) - dtgTheHienPhieuThuePhong.Columns.Count;
+        //            DataGridViewTextBoxColumn[] columns = new DataGridViewTextBoxColumn[numberOfColumnsToAdd];
+
+        //            for (int i = 0; i < numberOfColumnsToAdd; i++)
+        //            {
+        //                columns[i] = new DataGridViewTextBoxColumn();
+        //                columns[i].AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+        //                columns[i].HeaderText = _beginDate.AddDays(numberOfColumns + i).Day.ToString();
+        //                columns[i].Name = _beginDate.AddDays(numberOfColumns + i).ToString();
+        //                columns[i].ReadOnly = true;
+        //                columns[i].ValueType = typeof(string);
+        //                columns[i].SortMode = DataGridViewColumnSortMode.NotSortable;
+        //                dtgTheHienPhieuThuePhong.Columns.Add(columns[i]);
+        //            }
+        //        }
+        //        else if (dtgTheHienPhieuThuePhong.Columns.Count > (differenceInDays + 1))
+        //        {
+        //            int numberOfColumnsToRemove = dtgTheHienPhieuThuePhong.Columns.Count - (differenceInDays + 1);
+
+        //            for (int i = 0; i < numberOfColumnsToRemove; i++)
+        //            {
+        //                dtgTheHienPhieuThuePhong.Columns.RemoveAt(dtgTheHienPhieuThuePhong.Columns.Count - 1);
+        //            }
+        //        }
+        //    }
+        //    else
+        //    {
+        //        int numberOfColumn = differenceInDays + 1;
+        //        DataGridViewTextBoxColumn[] columns = new DataGridViewTextBoxColumn[numberOfColumn];
+        //        for (int i = 0; i < numberOfColumn; i++)
+        //        {
+        //            columns[i] = new DataGridViewTextBoxColumn();
+        //            columns[i].AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+        //            columns[i].HeaderText = _beginDate.AddDays(i).Day.ToString();
+        //            columns[i].Name = _beginDate.AddDays(i).ToString();
+        //            columns[i].ReadOnly = true;
+        //            columns[i].ValueType = typeof(string);
+        //            columns[i].SortMode = DataGridViewColumnSortMode.NotSortable;
+        //            dtgTheHienPhieuThuePhong.Columns.Add(columns[i]);
+        //        }
+        //    }
+        //}
 
         private void UpdateRows()
         {

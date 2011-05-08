@@ -419,5 +419,17 @@ namespace BUS
         {
             return PHIEUTHUEDAO.layTongSoNgayThue(phong);
         }
+        public static List<PHIEUTHUE> LayDSPhieuThueChuaCheckin()
+        {
+            return PHIEUTHUEDAO.LayDSPhieuThueChuaCheckin();
+        }
+        public static List<PHIEUTHUE> LayPhieuThueTheoMa(string _maphieuthue)
+        {
+            return PHIEUTHUEDAO.LayPhieuThueTheoMa(_maphieuthue);
+        }
+        public static bool UpdateCheckin(PHIEUTHUE pt, bool _Dangthue)
+        {
+            return PHIEUTHUEDAO.UpdateCheckin(pt, _Dangthue);
+        }
     }
 }
