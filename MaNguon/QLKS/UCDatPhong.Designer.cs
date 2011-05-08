@@ -44,7 +44,7 @@
             // mclCalendar
             // 
             this.mclCalendar.BackColor = System.Drawing.SystemColors.Window;
-            this.mclCalendar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.mclCalendar.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.mclCalendar.Location = new System.Drawing.Point(57, 9);
             this.mclCalendar.Name = "mclCalendar";
             this.mclCalendar.TabIndex = 1;
@@ -54,11 +54,11 @@
             // 
             this.btnReservation.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.btnReservation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReservation.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnReservation.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnReservation.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnReservation.Location = new System.Drawing.Point(341, 18);
             this.btnReservation.Name = "btnReservation";
-            this.btnReservation.Size = new System.Drawing.Size(93, 41);
+            this.btnReservation.Size = new System.Drawing.Size(105, 41);
             this.btnReservation.TabIndex = 2;
             this.btnReservation.Text = "Reservation";
             this.btnReservation.UseVisualStyleBackColor = false;
@@ -69,11 +69,11 @@
             this.btnCheckIn.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.btnCheckIn.Enabled = false;
             this.btnCheckIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCheckIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnCheckIn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnCheckIn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnCheckIn.Location = new System.Drawing.Point(341, 69);
             this.btnCheckIn.Name = "btnCheckIn";
-            this.btnCheckIn.Size = new System.Drawing.Size(93, 41);
+            this.btnCheckIn.Size = new System.Drawing.Size(105, 41);
             this.btnCheckIn.TabIndex = 3;
             this.btnCheckIn.Text = "Check-In";
             this.btnCheckIn.UseVisualStyleBackColor = false;
@@ -84,11 +84,11 @@
             this.btnCheckOut.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.btnCheckOut.Enabled = false;
             this.btnCheckOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCheckOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnCheckOut.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnCheckOut.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnCheckOut.Location = new System.Drawing.Point(341, 120);
             this.btnCheckOut.Name = "btnCheckOut";
-            this.btnCheckOut.Size = new System.Drawing.Size(93, 41);
+            this.btnCheckOut.Size = new System.Drawing.Size(105, 41);
             this.btnCheckOut.TabIndex = 4;
             this.btnCheckOut.Text = "Check-Out";
             this.btnCheckOut.UseVisualStyleBackColor = false;
@@ -98,7 +98,7 @@
             // 
             this.btnPreviousLoaiPhong.BackColor = System.Drawing.Color.IndianRed;
             this.btnPreviousLoaiPhong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPreviousLoaiPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnPreviousLoaiPhong.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnPreviousLoaiPhong.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnPreviousLoaiPhong.Location = new System.Drawing.Point(904, 139);
             this.btnPreviousLoaiPhong.Name = "btnPreviousLoaiPhong";
@@ -112,7 +112,7 @@
             // 
             this.btnNextLoaiPhong.BackColor = System.Drawing.Color.IndianRed;
             this.btnNextLoaiPhong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNextLoaiPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnNextLoaiPhong.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnNextLoaiPhong.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnNextLoaiPhong.Location = new System.Drawing.Point(975, 139);
             this.btnNextLoaiPhong.Name = "btnNextLoaiPhong";
@@ -126,11 +126,11 @@
             // 
             this.lblLoaiPhong.AutoSize = true;
             this.lblLoaiPhong.BackColor = System.Drawing.Color.Orange;
-            this.lblLoaiPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblLoaiPhong.ForeColor = System.Drawing.Color.ForestGreen;
+            this.lblLoaiPhong.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblLoaiPhong.ForeColor = System.Drawing.Color.Black;
             this.lblLoaiPhong.Location = new System.Drawing.Point(545, 140);
             this.lblLoaiPhong.Name = "lblLoaiPhong";
-            this.lblLoaiPhong.Size = new System.Drawing.Size(104, 20);
+            this.lblLoaiPhong.Size = new System.Drawing.Size(83, 16);
             this.lblLoaiPhong.TabIndex = 9;
             this.lblLoaiPhong.Text = "Loại Phòng:";
             this.lblLoaiPhong.Paint += new System.Windows.Forms.PaintEventHandler(this.lblLoaiPhong_Paint);
@@ -138,12 +138,12 @@
             // txtLoaiPhong
             // 
             this.txtLoaiPhong.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.txtLoaiPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtLoaiPhong.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtLoaiPhong.ForeColor = System.Drawing.Color.White;
             this.txtLoaiPhong.Location = new System.Drawing.Point(663, 138);
             this.txtLoaiPhong.Name = "txtLoaiPhong";
             this.txtLoaiPhong.ReadOnly = true;
-            this.txtLoaiPhong.Size = new System.Drawing.Size(201, 23);
+            this.txtLoaiPhong.Size = new System.Drawing.Size(213, 23);
             this.txtLoaiPhong.TabIndex = 5;
             this.txtLoaiPhong.TextChanged += new System.EventHandler(this.txtLoaiPhong_TextChanged);
             // 

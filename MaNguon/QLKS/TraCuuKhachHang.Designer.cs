@@ -63,7 +63,7 @@
             // 
             this.tbMaKH.BackColor = System.Drawing.Color.OliveDrab;
             this.tbMaKH.Enabled = false;
-            this.tbMaKH.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.tbMaKH.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.tbMaKH.ForeColor = System.Drawing.Color.White;
             this.tbMaKH.Location = new System.Drawing.Point(149, 25);
             this.tbMaKH.Name = "tbMaKH";
@@ -76,11 +76,11 @@
             // 
             this.rbtnMaKH.AutoSize = true;
             this.rbtnMaKH.BackColor = System.Drawing.Color.White;
-            this.rbtnMaKH.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.rbtnMaKH.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.rbtnMaKH.ForeColor = System.Drawing.Color.MidnightBlue;
             this.rbtnMaKH.Location = new System.Drawing.Point(13, 26);
             this.rbtnMaKH.Name = "rbtnMaKH";
-            this.rbtnMaKH.Size = new System.Drawing.Size(115, 21);
+            this.rbtnMaKH.Size = new System.Drawing.Size(101, 20);
             this.rbtnMaKH.TabIndex = 1;
             this.rbtnMaKH.TabStop = true;
             this.rbtnMaKH.Text = "Theo Mã KH";
@@ -91,11 +91,11 @@
             // 
             this.rbtnHoTen.AutoSize = true;
             this.rbtnHoTen.BackColor = System.Drawing.Color.White;
-            this.rbtnHoTen.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.rbtnHoTen.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.rbtnHoTen.ForeColor = System.Drawing.Color.MidnightBlue;
             this.rbtnHoTen.Location = new System.Drawing.Point(13, 86);
             this.rbtnHoTen.Name = "rbtnHoTen";
-            this.rbtnHoTen.Size = new System.Drawing.Size(121, 21);
+            this.rbtnHoTen.Size = new System.Drawing.Size(105, 20);
             this.rbtnHoTen.TabIndex = 3;
             this.rbtnHoTen.TabStop = true;
             this.rbtnHoTen.Text = "Theo Họ Tên";
@@ -106,7 +106,7 @@
             // 
             this.tbHoTen.BackColor = System.Drawing.Color.OliveDrab;
             this.tbHoTen.Enabled = false;
-            this.tbHoTen.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.tbHoTen.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.tbHoTen.ForeColor = System.Drawing.Color.White;
             this.tbHoTen.Location = new System.Drawing.Point(149, 85);
             this.tbHoTen.Name = "tbHoTen";
@@ -119,11 +119,11 @@
             // 
             this.rbtnLoaiKH.AutoSize = true;
             this.rbtnLoaiKH.BackColor = System.Drawing.Color.White;
-            this.rbtnLoaiKH.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.rbtnLoaiKH.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.rbtnLoaiKH.ForeColor = System.Drawing.Color.MidnightBlue;
             this.rbtnLoaiKH.Location = new System.Drawing.Point(13, 146);
             this.rbtnLoaiKH.Name = "rbtnLoaiKH";
-            this.rbtnLoaiKH.Size = new System.Drawing.Size(125, 21);
+            this.rbtnLoaiKH.Size = new System.Drawing.Size(108, 20);
             this.rbtnLoaiKH.TabIndex = 5;
             this.rbtnLoaiKH.TabStop = true;
             this.rbtnLoaiKH.Text = "Theo Loại KH";
@@ -134,7 +134,7 @@
             // 
             this.cbLoaiKH.BackColor = System.Drawing.Color.OliveDrab;
             this.cbLoaiKH.Enabled = false;
-            this.cbLoaiKH.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.cbLoaiKH.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.cbLoaiKH.ForeColor = System.Drawing.Color.White;
             this.cbLoaiKH.FormattingEnabled = true;
             this.cbLoaiKH.Location = new System.Drawing.Point(149, 145);
@@ -148,11 +148,11 @@
             // 
             this.rbtnSoGiayTo.AutoSize = true;
             this.rbtnSoGiayTo.BackColor = System.Drawing.Color.White;
-            this.rbtnSoGiayTo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.rbtnSoGiayTo.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.rbtnSoGiayTo.ForeColor = System.Drawing.Color.MidnightBlue;
             this.rbtnSoGiayTo.Location = new System.Drawing.Point(348, 26);
             this.rbtnSoGiayTo.Name = "rbtnSoGiayTo";
-            this.rbtnSoGiayTo.Size = new System.Drawing.Size(141, 21);
+            this.rbtnSoGiayTo.Size = new System.Drawing.Size(126, 20);
             this.rbtnSoGiayTo.TabIndex = 7;
             this.rbtnSoGiayTo.TabStop = true;
             this.rbtnSoGiayTo.Text = "Theo Số giấy tờ";
@@ -163,7 +163,7 @@
             // 
             this.tbSoGiayTo.BackColor = System.Drawing.Color.OliveDrab;
             this.tbSoGiayTo.Enabled = false;
-            this.tbSoGiayTo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.tbSoGiayTo.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.tbSoGiayTo.ForeColor = System.Drawing.Color.White;
             this.tbSoGiayTo.Location = new System.Drawing.Point(497, 25);
             this.tbSoGiayTo.Name = "tbSoGiayTo";
@@ -176,11 +176,11 @@
             // 
             this.rbtnDiaChi.AutoSize = true;
             this.rbtnDiaChi.BackColor = System.Drawing.Color.White;
-            this.rbtnDiaChi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.rbtnDiaChi.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.rbtnDiaChi.ForeColor = System.Drawing.Color.MidnightBlue;
             this.rbtnDiaChi.Location = new System.Drawing.Point(348, 86);
             this.rbtnDiaChi.Name = "rbtnDiaChi";
-            this.rbtnDiaChi.Size = new System.Drawing.Size(118, 21);
+            this.rbtnDiaChi.Size = new System.Drawing.Size(104, 20);
             this.rbtnDiaChi.TabIndex = 9;
             this.rbtnDiaChi.TabStop = true;
             this.rbtnDiaChi.Text = "Theo Địa chỉ";
@@ -191,7 +191,7 @@
             // 
             this.tbDiaChi.BackColor = System.Drawing.Color.OliveDrab;
             this.tbDiaChi.Enabled = false;
-            this.tbDiaChi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.tbDiaChi.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.tbDiaChi.ForeColor = System.Drawing.Color.White;
             this.tbDiaChi.Location = new System.Drawing.Point(497, 85);
             this.tbDiaChi.Multiline = true;
@@ -260,7 +260,7 @@
             // 
             this.btnTraCuuNangCao.BackColor = System.Drawing.Color.CornflowerBlue;
             this.btnTraCuuNangCao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTraCuuNangCao.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnTraCuuNangCao.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnTraCuuNangCao.ForeColor = System.Drawing.Color.White;
             this.btnTraCuuNangCao.Location = new System.Drawing.Point(38, 110);
             this.btnTraCuuNangCao.Name = "btnTraCuuNangCao";
@@ -275,7 +275,7 @@
             // 
             this.btnTraCuu.BackColor = System.Drawing.Color.CornflowerBlue;
             this.btnTraCuu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTraCuu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnTraCuu.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnTraCuu.ForeColor = System.Drawing.Color.White;
             this.btnTraCuu.Location = new System.Drawing.Point(38, 24);
             this.btnTraCuu.Name = "btnTraCuu";
@@ -300,7 +300,7 @@
             // 
             this.btnQuayLai.BackColor = System.Drawing.Color.CornflowerBlue;
             this.btnQuayLai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnQuayLai.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnQuayLai.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnQuayLai.ForeColor = System.Drawing.Color.White;
             this.btnQuayLai.Location = new System.Drawing.Point(138, 24);
             this.btnQuayLai.Name = "btnQuayLai";
@@ -316,7 +316,7 @@
             // 
             this.BT_ThuNho.BackColor = System.Drawing.Color.OliveDrab;
             this.BT_ThuNho.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BT_ThuNho.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.BT_ThuNho.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.BT_ThuNho.ForeColor = System.Drawing.Color.Snow;
             this.BT_ThuNho.Location = new System.Drawing.Point(891, 5);
             this.BT_ThuNho.Name = "BT_ThuNho";
@@ -332,7 +332,7 @@
             // 
             this.BT_Thoat.BackColor = System.Drawing.Color.DarkRed;
             this.BT_Thoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BT_Thoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.BT_Thoat.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.BT_Thoat.ForeColor = System.Drawing.Color.Snow;
             this.BT_Thoat.Location = new System.Drawing.Point(980, 5);
             this.BT_Thoat.Name = "BT_Thoat";
@@ -358,6 +358,7 @@
             this.panel1.Controls.Add(this.tbDiaChi);
             this.panel1.Controls.Add(this.tbSoGiayTo);
             this.panel1.Controls.Add(this.rbtnDiaChi);
+            this.panel1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.panel1.Location = new System.Drawing.Point(81, 193);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(689, 195);
