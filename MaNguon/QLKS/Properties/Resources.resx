@@ -121,8 +121,14 @@
   <data name="btnsuaphong" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\btnsuaphong.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="MHTCKhachHang" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MHTCKhachHang.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="MHXoaPhong" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MHXoaPhong.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bookroom" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bookroom.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="MHThemPhong" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MHThemPhong.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -130,8 +136,20 @@
   <data name="TCphong" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\TCphong.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="fix" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fix.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="reservation" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\reservation.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="BCdoanhthu" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BCdoanhthu.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="add" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\add.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="room" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\room.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="reservation1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\reservation.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -154,6 +172,9 @@
   <data name="TCKhachHang" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\TCKhachHang.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="tick" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tick.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="datphong" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\datphong.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -163,16 +184,19 @@
   <data name="MHTCPhieuThue" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MHTCPhieuThue.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="reservation" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\reservation.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="customer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\customer.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="btnxoaphong" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\btnxoaphong.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="subtract" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\subtract.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="MHSuaPhong" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MHSuaPhong.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="MHTCKhachHang" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MHTCKhachHang.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="MoneyReport" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MoneyReport.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

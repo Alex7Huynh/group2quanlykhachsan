@@ -51,8 +51,12 @@
             this.btnQuayLai = new System.Windows.Forms.Button();
             this.BT_ThuNho = new System.Windows.Forms.Button();
             this.BT_Thoat = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid_ThongTinKH)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // tbMaKH
@@ -61,7 +65,7 @@
             this.tbMaKH.Enabled = false;
             this.tbMaKH.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.tbMaKH.ForeColor = System.Drawing.Color.White;
-            this.tbMaKH.Location = new System.Drawing.Point(239, 216);
+            this.tbMaKH.Location = new System.Drawing.Point(149, 25);
             this.tbMaKH.Name = "tbMaKH";
             this.tbMaKH.Size = new System.Drawing.Size(178, 23);
             this.tbMaKH.TabIndex = 2;
@@ -71,10 +75,10 @@
             // rbtnMaKH
             // 
             this.rbtnMaKH.AutoSize = true;
-            this.rbtnMaKH.BackColor = System.Drawing.Color.Black;
+            this.rbtnMaKH.BackColor = System.Drawing.Color.White;
             this.rbtnMaKH.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.rbtnMaKH.ForeColor = System.Drawing.Color.White;
-            this.rbtnMaKH.Location = new System.Drawing.Point(103, 217);
+            this.rbtnMaKH.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.rbtnMaKH.Location = new System.Drawing.Point(13, 26);
             this.rbtnMaKH.Name = "rbtnMaKH";
             this.rbtnMaKH.Size = new System.Drawing.Size(115, 21);
             this.rbtnMaKH.TabIndex = 1;
@@ -86,10 +90,10 @@
             // rbtnHoTen
             // 
             this.rbtnHoTen.AutoSize = true;
-            this.rbtnHoTen.BackColor = System.Drawing.Color.Black;
+            this.rbtnHoTen.BackColor = System.Drawing.Color.White;
             this.rbtnHoTen.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.rbtnHoTen.ForeColor = System.Drawing.Color.White;
-            this.rbtnHoTen.Location = new System.Drawing.Point(103, 277);
+            this.rbtnHoTen.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.rbtnHoTen.Location = new System.Drawing.Point(13, 86);
             this.rbtnHoTen.Name = "rbtnHoTen";
             this.rbtnHoTen.Size = new System.Drawing.Size(121, 21);
             this.rbtnHoTen.TabIndex = 3;
@@ -104,7 +108,7 @@
             this.tbHoTen.Enabled = false;
             this.tbHoTen.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.tbHoTen.ForeColor = System.Drawing.Color.White;
-            this.tbHoTen.Location = new System.Drawing.Point(239, 276);
+            this.tbHoTen.Location = new System.Drawing.Point(149, 85);
             this.tbHoTen.Name = "tbHoTen";
             this.tbHoTen.Size = new System.Drawing.Size(178, 23);
             this.tbHoTen.TabIndex = 4;
@@ -114,10 +118,10 @@
             // rbtnLoaiKH
             // 
             this.rbtnLoaiKH.AutoSize = true;
-            this.rbtnLoaiKH.BackColor = System.Drawing.Color.Black;
+            this.rbtnLoaiKH.BackColor = System.Drawing.Color.White;
             this.rbtnLoaiKH.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.rbtnLoaiKH.ForeColor = System.Drawing.Color.White;
-            this.rbtnLoaiKH.Location = new System.Drawing.Point(103, 337);
+            this.rbtnLoaiKH.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.rbtnLoaiKH.Location = new System.Drawing.Point(13, 146);
             this.rbtnLoaiKH.Name = "rbtnLoaiKH";
             this.rbtnLoaiKH.Size = new System.Drawing.Size(125, 21);
             this.rbtnLoaiKH.TabIndex = 5;
@@ -133,7 +137,7 @@
             this.cbLoaiKH.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.cbLoaiKH.ForeColor = System.Drawing.Color.White;
             this.cbLoaiKH.FormattingEnabled = true;
-            this.cbLoaiKH.Location = new System.Drawing.Point(239, 336);
+            this.cbLoaiKH.Location = new System.Drawing.Point(149, 145);
             this.cbLoaiKH.Name = "cbLoaiKH";
             this.cbLoaiKH.Size = new System.Drawing.Size(178, 24);
             this.cbLoaiKH.TabIndex = 6;
@@ -143,10 +147,10 @@
             // rbtnSoGiayTo
             // 
             this.rbtnSoGiayTo.AutoSize = true;
-            this.rbtnSoGiayTo.BackColor = System.Drawing.Color.Black;
+            this.rbtnSoGiayTo.BackColor = System.Drawing.Color.White;
             this.rbtnSoGiayTo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.rbtnSoGiayTo.ForeColor = System.Drawing.Color.White;
-            this.rbtnSoGiayTo.Location = new System.Drawing.Point(475, 217);
+            this.rbtnSoGiayTo.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.rbtnSoGiayTo.Location = new System.Drawing.Point(348, 26);
             this.rbtnSoGiayTo.Name = "rbtnSoGiayTo";
             this.rbtnSoGiayTo.Size = new System.Drawing.Size(141, 21);
             this.rbtnSoGiayTo.TabIndex = 7;
@@ -161,7 +165,7 @@
             this.tbSoGiayTo.Enabled = false;
             this.tbSoGiayTo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.tbSoGiayTo.ForeColor = System.Drawing.Color.White;
-            this.tbSoGiayTo.Location = new System.Drawing.Point(624, 216);
+            this.tbSoGiayTo.Location = new System.Drawing.Point(497, 25);
             this.tbSoGiayTo.Name = "tbSoGiayTo";
             this.tbSoGiayTo.Size = new System.Drawing.Size(178, 23);
             this.tbSoGiayTo.TabIndex = 8;
@@ -171,10 +175,10 @@
             // rbtnDiaChi
             // 
             this.rbtnDiaChi.AutoSize = true;
-            this.rbtnDiaChi.BackColor = System.Drawing.Color.Black;
+            this.rbtnDiaChi.BackColor = System.Drawing.Color.White;
             this.rbtnDiaChi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.rbtnDiaChi.ForeColor = System.Drawing.Color.White;
-            this.rbtnDiaChi.Location = new System.Drawing.Point(475, 277);
+            this.rbtnDiaChi.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.rbtnDiaChi.Location = new System.Drawing.Point(348, 86);
             this.rbtnDiaChi.Name = "rbtnDiaChi";
             this.rbtnDiaChi.Size = new System.Drawing.Size(118, 21);
             this.rbtnDiaChi.TabIndex = 9;
@@ -189,7 +193,7 @@
             this.tbDiaChi.Enabled = false;
             this.tbDiaChi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.tbDiaChi.ForeColor = System.Drawing.Color.White;
-            this.tbDiaChi.Location = new System.Drawing.Point(624, 276);
+            this.tbDiaChi.Location = new System.Drawing.Point(497, 85);
             this.tbDiaChi.Multiline = true;
             this.tbDiaChi.Name = "tbDiaChi";
             this.tbDiaChi.Size = new System.Drawing.Size(178, 20);
@@ -258,7 +262,7 @@
             this.btnTraCuuNangCao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTraCuuNangCao.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnTraCuuNangCao.ForeColor = System.Drawing.Color.White;
-            this.btnTraCuuNangCao.Location = new System.Drawing.Point(832, 312);
+            this.btnTraCuuNangCao.Location = new System.Drawing.Point(38, 110);
             this.btnTraCuuNangCao.Name = "btnTraCuuNangCao";
             this.btnTraCuuNangCao.Size = new System.Drawing.Size(195, 59);
             this.btnTraCuuNangCao.TabIndex = 12;
@@ -273,7 +277,7 @@
             this.btnTraCuu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTraCuu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnTraCuu.ForeColor = System.Drawing.Color.White;
-            this.btnTraCuu.Location = new System.Drawing.Point(832, 226);
+            this.btnTraCuu.Location = new System.Drawing.Point(38, 24);
             this.btnTraCuu.Name = "btnTraCuu";
             this.btnTraCuu.Size = new System.Drawing.Size(95, 59);
             this.btnTraCuu.TabIndex = 11;
@@ -298,7 +302,7 @@
             this.btnQuayLai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnQuayLai.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnQuayLai.ForeColor = System.Drawing.Color.White;
-            this.btnQuayLai.Location = new System.Drawing.Point(932, 226);
+            this.btnQuayLai.Location = new System.Drawing.Point(138, 24);
             this.btnQuayLai.Name = "btnQuayLai";
             this.btnQuayLai.Size = new System.Drawing.Size(95, 59);
             this.btnQuayLai.TabIndex = 13;
@@ -340,28 +344,48 @@
             this.BT_Thoat.Leave += new System.EventHandler(this.BT_Thoat_Leave);
             this.BT_Thoat.Enter += new System.EventHandler(this.BT_ThuNho_Enter);
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.tbHoTen);
+            this.panel1.Controls.Add(this.tbMaKH);
+            this.panel1.Controls.Add(this.rbtnMaKH);
+            this.panel1.Controls.Add(this.rbtnHoTen);
+            this.panel1.Controls.Add(this.rbtnLoaiKH);
+            this.panel1.Controls.Add(this.cbLoaiKH);
+            this.panel1.Controls.Add(this.rbtnSoGiayTo);
+            this.panel1.Controls.Add(this.tbDiaChi);
+            this.panel1.Controls.Add(this.tbSoGiayTo);
+            this.panel1.Controls.Add(this.rbtnDiaChi);
+            this.panel1.Location = new System.Drawing.Point(81, 193);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(689, 195);
+            this.panel1.TabIndex = 108;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.btnTraCuuNangCao);
+            this.panel2.Controls.Add(this.btnTraCuu);
+            this.panel2.Controls.Add(this.btnQuayLai);
+            this.panel2.Location = new System.Drawing.Point(776, 193);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(273, 195);
+            this.panel2.TabIndex = 109;
+            // 
             // TraCuuKhachHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DimGray;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1130, 750);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.BT_ThuNho);
             this.Controls.Add(this.BT_Thoat);
-            this.Controls.Add(this.btnQuayLai);
-            this.Controls.Add(this.btnTraCuu);
-            this.Controls.Add(this.btnTraCuuNangCao);
             this.Controls.Add(this.dataGrid_ThongTinKH);
-            this.Controls.Add(this.tbDiaChi);
-            this.Controls.Add(this.rbtnDiaChi);
-            this.Controls.Add(this.tbSoGiayTo);
-            this.Controls.Add(this.rbtnSoGiayTo);
-            this.Controls.Add(this.cbLoaiKH);
-            this.Controls.Add(this.rbtnLoaiKH);
-            this.Controls.Add(this.tbHoTen);
-            this.Controls.Add(this.rbtnHoTen);
-            this.Controls.Add(this.rbtnMaKH);
-            this.Controls.Add(this.tbMaKH);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -372,8 +396,10 @@
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.PB_MainMenu_MouseMove);
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid_ThongTinKH)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -401,6 +427,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn DiaChi;
         private System.Windows.Forms.Button BT_ThuNho;
         private System.Windows.Forms.Button BT_Thoat;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
 
     }
 }

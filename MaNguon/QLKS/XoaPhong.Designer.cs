@@ -41,8 +41,12 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.BT_ThuNho = new System.Windows.Forms.Button();
             this.BT_Thoat = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dtg1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // dtg1
@@ -95,9 +99,10 @@
             // LB_DSPhong
             // 
             this.LB_DSPhong.AutoSize = true;
+            this.LB_DSPhong.BackColor = System.Drawing.Color.White;
             this.LB_DSPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.LB_DSPhong.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.LB_DSPhong.Location = new System.Drawing.Point(361, 254);
+            this.LB_DSPhong.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.LB_DSPhong.Location = new System.Drawing.Point(40, 33);
             this.LB_DSPhong.Name = "LB_DSPhong";
             this.LB_DSPhong.Size = new System.Drawing.Size(135, 17);
             this.LB_DSPhong.TabIndex = 1;
@@ -109,7 +114,7 @@
             this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnXoa.ForeColor = System.Drawing.Color.White;
-            this.btnXoa.Location = new System.Drawing.Point(620, 235);
+            this.btnXoa.Location = new System.Drawing.Point(75, 17);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(87, 53);
             this.btnXoa.TabIndex = 2;
@@ -125,7 +130,7 @@
             this.btnThoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnThoat.ForeColor = System.Drawing.Color.White;
-            this.btnThoat.Location = new System.Drawing.Point(782, 236);
+            this.btnThoat.Location = new System.Drawing.Point(262, 17);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(87, 53);
             this.btnThoat.TabIndex = 3;
@@ -176,17 +181,37 @@
             this.BT_Thoat.Leave += new System.EventHandler(this.BT_Thoat_Leave);
             this.BT_Thoat.Enter += new System.EventHandler(this.BT_ThuNho_Enter);
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.LB_DSPhong);
+            this.panel1.Location = new System.Drawing.Point(192, 219);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(215, 84);
+            this.panel1.TabIndex = 106;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.btnXoa);
+            this.panel2.Controls.Add(this.btnThoat);
+            this.panel2.Location = new System.Drawing.Point(521, 215);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(426, 88);
+            this.panel2.TabIndex = 107;
+            // 
             // XoaPhong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DimGray;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1130, 750);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.BT_ThuNho);
             this.Controls.Add(this.BT_Thoat);
-            this.Controls.Add(this.btnThoat);
-            this.Controls.Add(this.btnXoa);
-            this.Controls.Add(this.LB_DSPhong);
             this.Controls.Add(this.dtg1);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -199,8 +224,10 @@
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.PB_MainMenu_MouseMove);
             ((System.ComponentModel.ISupportInitialize)(this.dtg1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -218,5 +245,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn clTinhTrang;
         private System.Windows.Forms.Button BT_ThuNho;
         private System.Windows.Forms.Button BT_Thoat;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
     }
 }

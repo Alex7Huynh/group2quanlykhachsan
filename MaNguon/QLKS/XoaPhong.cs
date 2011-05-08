@@ -50,7 +50,6 @@ namespace QLKS
             ReLoad();
 
             //0812604 giao dien
-            LB_DSPhong.BackColor = Color.FromArgb(234, 146, 6);
         }
         private void ReLoad()
         {
