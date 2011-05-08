@@ -45,7 +45,7 @@ namespace DTO
             get { return tenKhachHangDaiDien; }
             set { tenKhachHangDaiDien = value; }
         }
-        private bool _dangThue;
+        private bool _dangThue = false;
 
         public bool DangThue
         {

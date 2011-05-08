@@ -102,7 +102,20 @@ namespace QLKS
         }
 
         private void btnOk_Click(object sender, EventArgs e)
-        {
+        { 
+            //0812005
+            if (DateTime.Compare(dtpBeginDate.Value.Date, DateTime.Now.Date) < 0)
+            {
+                MessageBox.Show(" Ngày Bắt đầu thuê không hợp lệ, vui lòng chọn ngày khác");
+                dtpBeginDate.Focus();
+                return;
+            }
+            if (DateTime.Compare(dtpEndDate.Value.Date, DateTime.Now.Date) < 0)
+            {
+                MessageBox.Show(" Ngày kết thúc thuê không hợp lệ, vui lòng chọn ngày khác");
+                dtpEndDate.Focus();
+                return;
+            }
             /*if (CheckInputValue())
             {
                 SetInputValue();
