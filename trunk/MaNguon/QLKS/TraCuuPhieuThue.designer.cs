@@ -73,11 +73,11 @@
             // 
             this.lblMaPhieuThue.AutoSize = true;
             this.lblMaPhieuThue.BackColor = System.Drawing.Color.White;
-            this.lblMaPhieuThue.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblMaPhieuThue.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lblMaPhieuThue.ForeColor = System.Drawing.Color.MidnightBlue;
             this.lblMaPhieuThue.Location = new System.Drawing.Point(48, 14);
             this.lblMaPhieuThue.Name = "lblMaPhieuThue";
-            this.lblMaPhieuThue.Size = new System.Drawing.Size(111, 17);
+            this.lblMaPhieuThue.Size = new System.Drawing.Size(100, 16);
             this.lblMaPhieuThue.TabIndex = 0;
             this.lblMaPhieuThue.Text = "Mã phiếu thuê";
             // 
@@ -85,11 +85,11 @@
             // 
             this.lblTenKhachDaiDien.AutoSize = true;
             this.lblTenKhachDaiDien.BackColor = System.Drawing.Color.White;
-            this.lblTenKhachDaiDien.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblTenKhachDaiDien.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lblTenKhachDaiDien.ForeColor = System.Drawing.Color.MidnightBlue;
             this.lblTenKhachDaiDien.Location = new System.Drawing.Point(48, 134);
             this.lblTenKhachDaiDien.Name = "lblTenKhachDaiDien";
-            this.lblTenKhachDaiDien.Size = new System.Drawing.Size(153, 17);
+            this.lblTenKhachDaiDien.Size = new System.Drawing.Size(131, 16);
             this.lblTenKhachDaiDien.TabIndex = 2;
             this.lblTenKhachDaiDien.Text = "Tên Khách Đại Diện";
             // 
@@ -97,18 +97,18 @@
             // 
             this.lblTenPhong.AutoSize = true;
             this.lblTenPhong.BackColor = System.Drawing.Color.White;
-            this.lblTenPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblTenPhong.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lblTenPhong.ForeColor = System.Drawing.Color.MidnightBlue;
             this.lblTenPhong.Location = new System.Drawing.Point(48, 74);
             this.lblTenPhong.Name = "lblTenPhong";
-            this.lblTenPhong.Size = new System.Drawing.Size(86, 17);
+            this.lblTenPhong.Size = new System.Drawing.Size(75, 16);
             this.lblTenPhong.TabIndex = 3;
             this.lblTenPhong.Text = "Tên phòng";
             // 
             // txtMaPhieuThue
             // 
             this.txtMaPhieuThue.BackColor = System.Drawing.Color.OliveDrab;
-            this.txtMaPhieuThue.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtMaPhieuThue.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtMaPhieuThue.ForeColor = System.Drawing.Color.White;
             this.txtMaPhieuThue.Location = new System.Drawing.Point(207, 11);
             this.txtMaPhieuThue.Name = "txtMaPhieuThue";
@@ -120,7 +120,7 @@
             // txtTenPhong
             // 
             this.txtTenPhong.BackColor = System.Drawing.Color.OliveDrab;
-            this.txtTenPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtTenPhong.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtTenPhong.ForeColor = System.Drawing.Color.White;
             this.txtTenPhong.Location = new System.Drawing.Point(207, 71);
             this.txtTenPhong.Name = "txtTenPhong";
@@ -196,7 +196,7 @@
             // 
             this.btnTim.BackColor = System.Drawing.Color.CornflowerBlue;
             this.btnTim.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTim.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnTim.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnTim.ForeColor = System.Drawing.Color.White;
             this.btnTim.Location = new System.Drawing.Point(61, 14);
             this.btnTim.Name = "btnTim";
@@ -212,7 +212,7 @@
             // 
             this.btnThoat.BackColor = System.Drawing.Color.CornflowerBlue;
             this.btnThoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnThoat.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnThoat.ForeColor = System.Drawing.Color.White;
             this.btnThoat.Location = new System.Drawing.Point(61, 99);
             this.btnThoat.Name = "btnThoat";
@@ -227,7 +227,7 @@
             // txtTenKhachDaiDien
             // 
             this.txtTenKhachDaiDien.BackColor = System.Drawing.Color.OliveDrab;
-            this.txtTenKhachDaiDien.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtTenKhachDaiDien.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtTenKhachDaiDien.ForeColor = System.Drawing.Color.White;
             this.txtTenKhachDaiDien.Location = new System.Drawing.Point(207, 131);
             this.txtTenKhachDaiDien.Name = "txtTenKhachDaiDien";
@@ -238,6 +238,7 @@
             // 
             // dtmNgayBatDauThue
             // 
+            this.dtmNgayBatDauThue.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.dtmNgayBatDauThue.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtmNgayBatDauThue.Location = new System.Drawing.Point(10, 76);
             this.dtmNgayBatDauThue.Name = "dtmNgayBatDauThue";
@@ -247,17 +248,17 @@
             // lblNgayBatDauThue
             // 
             this.lblNgayBatDauThue.AutoSize = true;
-            this.lblNgayBatDauThue.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblNgayBatDauThue.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lblNgayBatDauThue.Location = new System.Drawing.Point(7, 46);
             this.lblNgayBatDauThue.Name = "lblNgayBatDauThue";
-            this.lblNgayBatDauThue.Size = new System.Drawing.Size(150, 17);
+            this.lblNgayBatDauThue.Size = new System.Drawing.Size(131, 16);
             this.lblNgayBatDauThue.TabIndex = 17;
             this.lblNgayBatDauThue.Text = "Ngày Bắt Đầu Thuê";
             // 
             // nudSoNgayThue
             // 
             this.nudSoNgayThue.BackColor = System.Drawing.Color.OliveDrab;
-            this.nudSoNgayThue.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.nudSoNgayThue.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.nudSoNgayThue.ForeColor = System.Drawing.Color.White;
             this.nudSoNgayThue.Location = new System.Drawing.Point(10, 166);
             this.nudSoNgayThue.Name = "nudSoNgayThue";
@@ -269,10 +270,10 @@
             // lblSoNgayThue
             // 
             this.lblSoNgayThue.AutoSize = true;
-            this.lblSoNgayThue.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblSoNgayThue.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lblSoNgayThue.Location = new System.Drawing.Point(7, 135);
             this.lblSoNgayThue.Name = "lblSoNgayThue";
-            this.lblSoNgayThue.Size = new System.Drawing.Size(111, 17);
+            this.lblSoNgayThue.Size = new System.Drawing.Size(95, 16);
             this.lblSoNgayThue.TabIndex = 19;
             this.lblSoNgayThue.Text = "Số Ngày Thuê";
             // 
@@ -280,11 +281,11 @@
             // 
             this.chbTimTheoNgay.AutoSize = true;
             this.chbTimTheoNgay.BackColor = System.Drawing.Color.White;
-            this.chbTimTheoNgay.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.chbTimTheoNgay.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.chbTimTheoNgay.ForeColor = System.Drawing.Color.MidnightBlue;
             this.chbTimTheoNgay.Location = new System.Drawing.Point(10, 40);
             this.chbTimTheoNgay.Name = "chbTimTheoNgay";
-            this.chbTimTheoNgay.Size = new System.Drawing.Size(137, 21);
+            this.chbTimTheoNgay.Size = new System.Drawing.Size(119, 20);
             this.chbTimTheoNgay.TabIndex = 6;
             this.chbTimTheoNgay.Text = "Tìm Theo Ngày";
             this.chbTimTheoNgay.UseVisualStyleBackColor = false;
@@ -297,7 +298,7 @@
             this.grbTimTheoNgay.Controls.Add(this.lblNgayBatDauThue);
             this.grbTimTheoNgay.Controls.Add(this.nudSoNgayThue);
             this.grbTimTheoNgay.Controls.Add(this.dtmNgayBatDauThue);
-            this.grbTimTheoNgay.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.grbTimTheoNgay.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.grbTimTheoNgay.ForeColor = System.Drawing.Color.MidnightBlue;
             this.grbTimTheoNgay.Location = new System.Drawing.Point(30, 397);
             this.grbTimTheoNgay.Name = "grbTimTheoNgay";
@@ -309,10 +310,10 @@
             // rdoAnd
             // 
             this.rdoAnd.AutoSize = true;
-            this.rdoAnd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.rdoAnd.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.rdoAnd.Location = new System.Drawing.Point(6, 19);
             this.rdoAnd.Name = "rdoAnd";
-            this.rdoAnd.Size = new System.Drawing.Size(54, 21);
+            this.rdoAnd.Size = new System.Drawing.Size(52, 20);
             this.rdoAnd.TabIndex = 4;
             this.rdoAnd.TabStop = true;
             this.rdoAnd.Text = "And";
@@ -321,10 +322,10 @@
             // rdoOr
             // 
             this.rdoOr.AutoSize = true;
-            this.rdoOr.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.rdoOr.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.rdoOr.Location = new System.Drawing.Point(6, 42);
             this.rdoOr.Name = "rdoOr";
-            this.rdoOr.Size = new System.Drawing.Size(44, 21);
+            this.rdoOr.Size = new System.Drawing.Size(41, 20);
             this.rdoOr.TabIndex = 5;
             this.rdoOr.TabStop = true;
             this.rdoOr.Text = "Or";
@@ -335,7 +336,7 @@
             this.grpKieuTimKiem.BackColor = System.Drawing.Color.White;
             this.grpKieuTimKiem.Controls.Add(this.rdoAnd);
             this.grpKieuTimKiem.Controls.Add(this.rdoOr);
-            this.grpKieuTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.grpKieuTimKiem.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.grpKieuTimKiem.ForeColor = System.Drawing.Color.MidnightBlue;
             this.grpKieuTimKiem.Location = new System.Drawing.Point(30, 188);
             this.grpKieuTimKiem.Name = "grpKieuTimKiem";
@@ -357,7 +358,7 @@
             // 
             this.BT_ThuNho.BackColor = System.Drawing.Color.OliveDrab;
             this.BT_ThuNho.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BT_ThuNho.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.BT_ThuNho.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.BT_ThuNho.ForeColor = System.Drawing.Color.Snow;
             this.BT_ThuNho.Location = new System.Drawing.Point(919, 5);
             this.BT_ThuNho.Name = "BT_ThuNho";
@@ -373,7 +374,7 @@
             // 
             this.BT_Thoat.BackColor = System.Drawing.Color.DarkRed;
             this.BT_Thoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BT_Thoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.BT_Thoat.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.BT_Thoat.ForeColor = System.Drawing.Color.Snow;
             this.BT_Thoat.Location = new System.Drawing.Point(1008, 5);
             this.BT_Thoat.Name = "BT_Thoat";
@@ -389,6 +390,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.chbTimTheoNgay);
+            this.panel1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.panel1.Location = new System.Drawing.Point(30, 291);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(282, 100);
@@ -403,6 +405,7 @@
             this.panel2.Controls.Add(this.lblTenPhong);
             this.panel2.Controls.Add(this.txtTenPhong);
             this.panel2.Controls.Add(this.txtTenKhachDaiDien);
+            this.panel2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.panel2.Location = new System.Drawing.Point(333, 188);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(538, 164);

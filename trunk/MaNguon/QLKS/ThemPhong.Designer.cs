@@ -68,18 +68,18 @@
             // 
             this.LB_MaPhong.AutoSize = true;
             this.LB_MaPhong.BackColor = System.Drawing.Color.White;
-            this.LB_MaPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.LB_MaPhong.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.LB_MaPhong.ForeColor = System.Drawing.Color.MidnightBlue;
             this.LB_MaPhong.Location = new System.Drawing.Point(21, 18);
             this.LB_MaPhong.Name = "LB_MaPhong";
-            this.LB_MaPhong.Size = new System.Drawing.Size(89, 17);
+            this.LB_MaPhong.Size = new System.Drawing.Size(80, 16);
             this.LB_MaPhong.TabIndex = 0;
             this.LB_MaPhong.Text = "Mã phòng :";
             // 
             // txtMP
             // 
             this.txtMP.BackColor = System.Drawing.Color.OliveDrab;
-            this.txtMP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtMP.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtMP.ForeColor = System.Drawing.Color.White;
             this.txtMP.Location = new System.Drawing.Point(126, 15);
             this.txtMP.Name = "txtMP";
@@ -92,18 +92,18 @@
             // 
             this.LB_TenPhong.AutoSize = true;
             this.LB_TenPhong.BackColor = System.Drawing.Color.White;
-            this.LB_TenPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.LB_TenPhong.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.LB_TenPhong.ForeColor = System.Drawing.Color.MidnightBlue;
             this.LB_TenPhong.Location = new System.Drawing.Point(385, 18);
             this.LB_TenPhong.Name = "LB_TenPhong";
-            this.LB_TenPhong.Size = new System.Drawing.Size(96, 17);
+            this.LB_TenPhong.Size = new System.Drawing.Size(84, 16);
             this.LB_TenPhong.TabIndex = 0;
             this.LB_TenPhong.Text = "Tên phòng :";
             // 
             // txtTen
             // 
             this.txtTen.BackColor = System.Drawing.Color.OliveDrab;
-            this.txtTen.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtTen.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtTen.Location = new System.Drawing.Point(484, 15);
             this.txtTen.Name = "txtTen";
             this.txtTen.Size = new System.Drawing.Size(249, 23);
@@ -115,29 +115,29 @@
             // 
             this.LB_LoaiPhong.AutoSize = true;
             this.LB_LoaiPhong.BackColor = System.Drawing.Color.White;
-            this.LB_LoaiPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.LB_LoaiPhong.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.LB_LoaiPhong.ForeColor = System.Drawing.Color.MidnightBlue;
             this.LB_LoaiPhong.Location = new System.Drawing.Point(21, 71);
             this.LB_LoaiPhong.Name = "LB_LoaiPhong";
-            this.LB_LoaiPhong.Size = new System.Drawing.Size(99, 17);
+            this.LB_LoaiPhong.Size = new System.Drawing.Size(87, 16);
             this.LB_LoaiPhong.TabIndex = 0;
             this.LB_LoaiPhong.Text = "Loại phòng :";
             // 
             // LB_GhiChu
             // 
             this.LB_GhiChu.AutoSize = true;
-            this.LB_GhiChu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.LB_GhiChu.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.LB_GhiChu.ForeColor = System.Drawing.Color.MidnightBlue;
             this.LB_GhiChu.Location = new System.Drawing.Point(385, 71);
             this.LB_GhiChu.Name = "LB_GhiChu";
-            this.LB_GhiChu.Size = new System.Drawing.Size(74, 17);
+            this.LB_GhiChu.Size = new System.Drawing.Size(63, 16);
             this.LB_GhiChu.TabIndex = 0;
             this.LB_GhiChu.Text = "Ghi chú :";
             // 
             // txtGhiChu
             // 
             this.txtGhiChu.BackColor = System.Drawing.Color.OliveDrab;
-            this.txtGhiChu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtGhiChu.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtGhiChu.Location = new System.Drawing.Point(484, 68);
             this.txtGhiChu.Name = "txtGhiChu";
             this.txtGhiChu.Size = new System.Drawing.Size(249, 23);
@@ -148,18 +148,18 @@
             // LB_TinhTrang
             // 
             this.LB_TinhTrang.AutoSize = true;
-            this.LB_TinhTrang.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.LB_TinhTrang.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.LB_TinhTrang.ForeColor = System.Drawing.Color.MidnightBlue;
             this.LB_TinhTrang.Location = new System.Drawing.Point(385, 121);
             this.LB_TinhTrang.Name = "LB_TinhTrang";
-            this.LB_TinhTrang.Size = new System.Drawing.Size(93, 17);
+            this.LB_TinhTrang.Size = new System.Drawing.Size(83, 16);
             this.LB_TinhTrang.TabIndex = 0;
             this.LB_TinhTrang.Text = "Tình trạng :";
             // 
             // txtTT
             // 
             this.txtTT.BackColor = System.Drawing.Color.OliveDrab;
-            this.txtTT.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtTT.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtTT.ForeColor = System.Drawing.Color.White;
             this.txtTT.Location = new System.Drawing.Point(484, 118);
             this.txtTT.Name = "txtTT";
@@ -221,7 +221,7 @@
             // 
             this.btnThem.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnThem.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnThem.ForeColor = System.Drawing.Color.White;
             this.btnThem.Location = new System.Drawing.Point(30, 17);
             this.btnThem.Name = "btnThem";
@@ -237,7 +237,7 @@
             // 
             this.btnXoa.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnXoa.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnXoa.ForeColor = System.Drawing.Color.White;
             this.btnXoa.Location = new System.Drawing.Point(29, 16);
             this.btnXoa.Name = "btnXoa";
@@ -253,7 +253,7 @@
             // 
             this.btnOK.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOK.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnOK.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnOK.ForeColor = System.Drawing.Color.White;
             this.btnOK.Location = new System.Drawing.Point(25, 16);
             this.btnOK.Name = "btnOK";
@@ -268,7 +268,7 @@
             // cmbLoai
             // 
             this.cmbLoai.BackColor = System.Drawing.Color.OliveDrab;
-            this.cmbLoai.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.cmbLoai.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.cmbLoai.ForeColor = System.Drawing.Color.White;
             this.cmbLoai.FormattingEnabled = true;
             this.cmbLoai.Location = new System.Drawing.Point(126, 68);
@@ -282,7 +282,7 @@
             // 
             this.BT_ThuNho.BackColor = System.Drawing.Color.OliveDrab;
             this.BT_ThuNho.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BT_ThuNho.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.BT_ThuNho.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.BT_ThuNho.ForeColor = System.Drawing.Color.Snow;
             this.BT_ThuNho.Location = new System.Drawing.Point(911, 4);
             this.BT_ThuNho.Name = "BT_ThuNho";
@@ -298,7 +298,7 @@
             // 
             this.BT_Thoat.BackColor = System.Drawing.Color.DarkRed;
             this.BT_Thoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BT_Thoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.BT_Thoat.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.BT_Thoat.ForeColor = System.Drawing.Color.Snow;
             this.BT_Thoat.Location = new System.Drawing.Point(1000, 4);
             this.BT_Thoat.Name = "BT_Thoat";
@@ -322,9 +322,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label1.Location = new System.Drawing.Point(70, 45);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(305, 13);
+            this.label1.Size = new System.Drawing.Size(370, 16);
             this.label1.TabIndex = 104;
             this.label1.Text = "(Maphong theo dang : Axxx---A:Loai Phong , xxx:Ma So Phong)";
             // 

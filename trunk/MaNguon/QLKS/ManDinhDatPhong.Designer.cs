@@ -38,7 +38,7 @@
             // 
             this.BT_ThuNho.BackColor = System.Drawing.Color.OliveDrab;
             this.BT_ThuNho.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BT_ThuNho.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.BT_ThuNho.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.BT_ThuNho.ForeColor = System.Drawing.Color.Snow;
             this.BT_ThuNho.Location = new System.Drawing.Point(891, 2);
             this.BT_ThuNho.Name = "BT_ThuNho";
@@ -54,7 +54,7 @@
             // 
             this.BT_Thoat.BackColor = System.Drawing.Color.DarkRed;
             this.BT_Thoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BT_Thoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.BT_Thoat.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.BT_Thoat.ForeColor = System.Drawing.Color.Snow;
             this.BT_Thoat.Location = new System.Drawing.Point(980, 2);
             this.BT_Thoat.Name = "BT_Thoat";
@@ -82,6 +82,7 @@
             this.Controls.Add(this.BT_ThuNho);
             this.Controls.Add(this.BT_Thoat);
             this.Controls.Add(this.ucDatPhong1);
+            this.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;

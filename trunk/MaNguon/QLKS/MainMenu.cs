@@ -104,7 +104,7 @@ namespace QLKS
         private void PB_BaoCaoDoanhThu_Click(object sender, EventArgs e)
         {
             frmBaoCaoDoanhThu frmBaoCao = new frmBaoCaoDoanhThu();
-            frmBaoCao.Show();
+            frmBaoCao.ShowDialog();
         }
 
         private void BT_Thoat_Click(object sender, EventArgs e)

@@ -60,6 +60,13 @@ namespace QLKS.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap _20101109033253_report {
+            get {
+                object obj = ResourceManager.GetObject("20101109033253_report", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap add {
             get {
                 object obj = ResourceManager.GetObject("add", resourceCulture);
@@ -168,6 +175,13 @@ namespace QLKS.Properties {
         internal static System.Drawing.Bitmap MHThemPhong {
             get {
                 object obj = ResourceManager.GetObject("MHThemPhong", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap MHTiepNhanDatPhong {
+            get {
+                object obj = ResourceManager.GetObject("MHTiepNhanDatPhong", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -54,7 +54,7 @@
             // cmbMP
             // 
             this.cmbMP.BackColor = System.Drawing.Color.OliveDrab;
-            this.cmbMP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.cmbMP.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.cmbMP.ForeColor = System.Drawing.Color.White;
             this.cmbMP.FormattingEnabled = true;
             this.cmbMP.Location = new System.Drawing.Point(183, 29);
@@ -69,11 +69,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.White;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label1.ForeColor = System.Drawing.Color.MidnightBlue;
             this.label1.Location = new System.Drawing.Point(29, 32);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(89, 17);
+            this.label1.Size = new System.Drawing.Size(80, 16);
             this.label1.TabIndex = 1;
             this.label1.Text = "Mã phòng :";
             // 
@@ -81,11 +81,11 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.White;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label2.ForeColor = System.Drawing.Color.MidnightBlue;
             this.label2.Location = new System.Drawing.Point(29, 114);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(96, 17);
+            this.label2.Size = new System.Drawing.Size(84, 16);
             this.label2.TabIndex = 1;
             this.label2.Text = "Tên phòng :";
             // 
@@ -93,11 +93,11 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.White;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label3.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label3.ForeColor = System.Drawing.Color.MidnightBlue;
             this.label3.Location = new System.Drawing.Point(494, 31);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(93, 17);
+            this.label3.Size = new System.Drawing.Size(83, 16);
             this.label3.TabIndex = 1;
             this.label3.Text = "Tình trạng :";
             // 
@@ -105,11 +105,11 @@
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.White;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label4.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label4.ForeColor = System.Drawing.Color.MidnightBlue;
             this.label4.Location = new System.Drawing.Point(29, 196);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(120, 17);
+            this.label4.Size = new System.Drawing.Size(106, 16);
             this.label4.TabIndex = 1;
             this.label4.Text = "Mã loại phòng :";
             // 
@@ -117,18 +117,18 @@
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.White;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label5.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label5.ForeColor = System.Drawing.Color.MidnightBlue;
             this.label5.Location = new System.Drawing.Point(494, 113);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(74, 17);
+            this.label5.Size = new System.Drawing.Size(63, 16);
             this.label5.TabIndex = 1;
             this.label5.Text = "Ghi chú :";
             // 
             // txtTP
             // 
             this.txtTP.BackColor = System.Drawing.Color.OliveDrab;
-            this.txtTP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtTP.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtTP.ForeColor = System.Drawing.Color.White;
             this.txtTP.Location = new System.Drawing.Point(183, 111);
             this.txtTP.Name = "txtTP";
@@ -140,7 +140,7 @@
             // txtTT
             // 
             this.txtTT.BackColor = System.Drawing.Color.OliveDrab;
-            this.txtTT.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtTT.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtTT.ForeColor = System.Drawing.Color.White;
             this.txtTT.Location = new System.Drawing.Point(613, 29);
             this.txtTT.Name = "txtTT";
@@ -152,7 +152,7 @@
             // txtLP
             // 
             this.txtLP.BackColor = System.Drawing.Color.OliveDrab;
-            this.txtLP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtLP.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtLP.ForeColor = System.Drawing.Color.White;
             this.txtLP.Location = new System.Drawing.Point(183, 193);
             this.txtLP.Name = "txtLP";
@@ -164,7 +164,7 @@
             // txtGC
             // 
             this.txtGC.BackColor = System.Drawing.Color.OliveDrab;
-            this.txtGC.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtGC.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtGC.ForeColor = System.Drawing.Color.White;
             this.txtGC.Location = new System.Drawing.Point(613, 111);
             this.txtGC.Name = "txtGC";
@@ -177,7 +177,7 @@
             // 
             this.btnSua.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnSua.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnSua.ForeColor = System.Drawing.Color.White;
             this.btnSua.Location = new System.Drawing.Point(244, 35);
             this.btnSua.Name = "btnSua";
@@ -193,7 +193,7 @@
             // 
             this.BT_ThuNho.BackColor = System.Drawing.Color.OliveDrab;
             this.BT_ThuNho.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BT_ThuNho.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.BT_ThuNho.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.BT_ThuNho.ForeColor = System.Drawing.Color.Snow;
             this.BT_ThuNho.Location = new System.Drawing.Point(909, 5);
             this.BT_ThuNho.Name = "BT_ThuNho";
@@ -209,7 +209,7 @@
             // 
             this.BT_Thoat.BackColor = System.Drawing.Color.DarkRed;
             this.BT_Thoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BT_Thoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.BT_Thoat.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.BT_Thoat.ForeColor = System.Drawing.Color.Snow;
             this.BT_Thoat.Location = new System.Drawing.Point(998, 5);
             this.BT_Thoat.Name = "BT_Thoat";
@@ -225,7 +225,7 @@
             // 
             this.btnHuyBo.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnHuyBo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHuyBo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnHuyBo.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnHuyBo.ForeColor = System.Drawing.Color.White;
             this.btnHuyBo.Location = new System.Drawing.Point(505, 35);
             this.btnHuyBo.Name = "btnHuyBo";

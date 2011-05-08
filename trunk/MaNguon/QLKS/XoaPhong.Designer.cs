@@ -100,11 +100,11 @@
             // 
             this.LB_DSPhong.AutoSize = true;
             this.LB_DSPhong.BackColor = System.Drawing.Color.White;
-            this.LB_DSPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.LB_DSPhong.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.LB_DSPhong.ForeColor = System.Drawing.Color.MidnightBlue;
             this.LB_DSPhong.Location = new System.Drawing.Point(40, 33);
             this.LB_DSPhong.Name = "LB_DSPhong";
-            this.LB_DSPhong.Size = new System.Drawing.Size(135, 17);
+            this.LB_DSPhong.Size = new System.Drawing.Size(119, 16);
             this.LB_DSPhong.TabIndex = 1;
             this.LB_DSPhong.Text = "Danh sách phòng";
             // 
@@ -112,7 +112,7 @@
             // 
             this.btnXoa.BackColor = System.Drawing.Color.CornflowerBlue;
             this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnXoa.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnXoa.ForeColor = System.Drawing.Color.White;
             this.btnXoa.Location = new System.Drawing.Point(75, 17);
             this.btnXoa.Name = "btnXoa";
@@ -128,7 +128,7 @@
             // 
             this.btnThoat.BackColor = System.Drawing.Color.CornflowerBlue;
             this.btnThoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnThoat.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnThoat.ForeColor = System.Drawing.Color.White;
             this.btnThoat.Location = new System.Drawing.Point(262, 17);
             this.btnThoat.Name = "btnThoat";
@@ -153,7 +153,7 @@
             // 
             this.BT_ThuNho.BackColor = System.Drawing.Color.OliveDrab;
             this.BT_ThuNho.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BT_ThuNho.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.BT_ThuNho.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.BT_ThuNho.ForeColor = System.Drawing.Color.Snow;
             this.BT_ThuNho.Location = new System.Drawing.Point(906, 5);
             this.BT_ThuNho.Name = "BT_ThuNho";
@@ -169,7 +169,7 @@
             // 
             this.BT_Thoat.BackColor = System.Drawing.Color.DarkRed;
             this.BT_Thoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BT_Thoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.BT_Thoat.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.BT_Thoat.ForeColor = System.Drawing.Color.Snow;
             this.BT_Thoat.Location = new System.Drawing.Point(997, 5);
             this.BT_Thoat.Name = "BT_Thoat";
