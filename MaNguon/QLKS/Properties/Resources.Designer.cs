@@ -207,6 +207,20 @@ namespace QLKS.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap ButtonQuayLai {
+            get {
+                object obj = ResourceManager.GetObject("ButtonQuayLai", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap ButtonQuayLaiFocus {
+            get {
+                object obj = ResourceManager.GetObject("ButtonQuayLaiFocus", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap ButtonRoom {
             get {
                 object obj = ResourceManager.GetObject("ButtonRoom", resourceCulture);

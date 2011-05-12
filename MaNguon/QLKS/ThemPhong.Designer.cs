@@ -53,6 +53,7 @@
             // txtMP
             // 
             this.txtMP.BackColor = System.Drawing.Color.Gray;
+            this.txtMP.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.txtMP.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtMP.ForeColor = System.Drawing.Color.White;
             this.txtMP.Location = new System.Drawing.Point(48, 221);
@@ -63,6 +64,7 @@
             // txtTen
             // 
             this.txtTen.BackColor = System.Drawing.Color.Gray;
+            this.txtTen.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.txtTen.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtTen.ForeColor = System.Drawing.Color.White;
             this.txtTen.Location = new System.Drawing.Point(48, 302);
@@ -73,9 +75,10 @@
             // txtGhiChu
             // 
             this.txtGhiChu.BackColor = System.Drawing.Color.Gray;
+            this.txtGhiChu.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.txtGhiChu.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtGhiChu.ForeColor = System.Drawing.Color.White;
-            this.txtGhiChu.Location = new System.Drawing.Point(283, 302);
+            this.txtGhiChu.Location = new System.Drawing.Point(288, 302);
             this.txtGhiChu.Name = "txtGhiChu";
             this.txtGhiChu.Size = new System.Drawing.Size(217, 23);
             this.txtGhiChu.TabIndex = 4;
@@ -83,9 +86,10 @@
             // txtTT
             // 
             this.txtTT.BackColor = System.Drawing.Color.Gray;
+            this.txtTT.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.txtTT.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtTT.ForeColor = System.Drawing.Color.White;
-            this.txtTT.Location = new System.Drawing.Point(517, 222);
+            this.txtTT.Location = new System.Drawing.Point(526, 222);
             this.txtTT.Name = "txtTT";
             this.txtTT.Size = new System.Drawing.Size(217, 23);
             this.txtTT.TabIndex = 5;
@@ -143,10 +147,11 @@
             // cmbLoai
             // 
             this.cmbLoai.BackColor = System.Drawing.Color.Gray;
+            this.cmbLoai.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.cmbLoai.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.cmbLoai.ForeColor = System.Drawing.Color.White;
             this.cmbLoai.FormattingEnabled = true;
-            this.cmbLoai.Location = new System.Drawing.Point(283, 221);
+            this.cmbLoai.Location = new System.Drawing.Point(288, 221);
             this.cmbLoai.Name = "cmbLoai";
             this.cmbLoai.Size = new System.Drawing.Size(217, 24);
             this.cmbLoai.TabIndex = 2;

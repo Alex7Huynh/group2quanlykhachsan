@@ -114,22 +114,7 @@ namespace QLKS
                 dtg1.Rows[index].Height = 30;
             } 
         }
-
-        private void BT_ThuNho_Enter(object sender, EventArgs e)
-        {
-            ((Button)sender).BackColor = Color.Black;
-        }
-
-        private void BT_ThuNho_Leave(object sender, EventArgs e)
-        {
-            ((Button)sender).BackColor = Color.OliveDrab;
-        }
-
-        private void BT_Thoat_Leave(object sender, EventArgs e)
-        {
-            ((Button)sender).BackColor = Color.DarkRed;
-        }
-
+        
         private void BT_ThuNho_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
@@ -146,14 +131,29 @@ namespace QLKS
             ParentForm.Location = this.Location;
         }
 
-        private void btnXoa_Enter(object sender, EventArgs e)
+        private void BT_ThuNho_MouseEnter(object sender, EventArgs e)
         {
-            ((Button)sender).BackColor = Color.GreenYellow;
+            ((Button)sender).Image = Properties.Resources.ButtonMinimizeFocus;
         }
 
-        private void btnXoa_Leave(object sender, EventArgs e)
+        private void BT_Thoat_MouseEnter(object sender, EventArgs e)
         {
-            ((Button)sender).BackColor = Color.CornflowerBlue;
+            ((Button)sender).Image = Properties.Resources.ButtonExitFocus;
+        }
+
+        private void BT_Thoat_MouseLeave(object sender, EventArgs e)
+        {
+            ((Button)sender).Image = null;
+        }
+
+        private void btnThoat_MouseEnter(object sender, EventArgs e)
+        {
+            ((Button)sender).Image = Properties.Resources.ButtonQuayLaiFocus;
+        }
+
+        private void btnXoa_MouseEnter(object sender, EventArgs e)
+        {
+            ((Button)sender).Image = Properties.Resources.ButtonXoaFocus;
         }
     }
 }

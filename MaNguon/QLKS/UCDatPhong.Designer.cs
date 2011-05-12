@@ -95,6 +95,7 @@
             // txtLoaiPhong
             // 
             this.txtLoaiPhong.BackColor = System.Drawing.Color.Gray;
+            this.txtLoaiPhong.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.txtLoaiPhong.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtLoaiPhong.ForeColor = System.Drawing.Color.White;
             this.txtLoaiPhong.Location = new System.Drawing.Point(317, 207);

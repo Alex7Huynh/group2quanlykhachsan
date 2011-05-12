@@ -128,16 +128,10 @@
     <value>..\Resources\ButtonCustomerFocus.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="MHXoaPhong" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MHXoaPhong.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ButtonMoneyReportFocus" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ButtonMoneyReportFocus.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Resources\MHXoaPhong1.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ButtonRoom" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ButtonRoom.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="MHSuaPhong" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MHSuaPhong.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ButtonXoaFocus" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ButtonXoaFocus.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -148,11 +142,17 @@
   <data name="ButtonToi" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ButtonToi.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ButtonXacNhan" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ButtonXacNhan.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="MHTiepNhanDatPhong" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MHTiepNhanDatPhong.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ButtonFocus_Lui" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ButtonFocus_Lui.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="reservation" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\reservation.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ButtonFix" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ButtonFix.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -184,9 +184,6 @@
   <data name="ButtonAdd" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ButtonAdd.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ButtonXacNhanFocus" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ButtonXacNhanFocus.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="ButtonTickFocus" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ButtonTickFocus.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -196,20 +193,26 @@
   <data name="ButtonRoomFocus" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ButtonRoomFocus.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="reservation" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\reservation.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ButtonMoneyReportFocus" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ButtonMoneyReportFocus.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ButtonExitFocus" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ButtonExitFocus.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ButtonQuayLaiFocus" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ButtonQuayLaiFocus.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="ButtonCheckedFocus" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ButtonCheckedFocus.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="MHThemPhong" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MHThemPhong.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ButtonXacNhanFocus" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ButtonXacNhanFocus.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="runningman" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\runningman.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ButtonQuayLai" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ButtonQuayLai.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="MHTCPhong" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MHTCPhong.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -229,6 +232,9 @@
   <data name="ButtonDelete" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ButtonDelete.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="MHThemPhong" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MHThemPhong.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="ButtonAddFocus" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ButtonAddFocus.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -247,7 +253,7 @@
   <data name="ButtonLui" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ButtonLui.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ButtonXacNhan" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ButtonXacNhan.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="MHSuaPhong" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MHSuaPhong1.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
