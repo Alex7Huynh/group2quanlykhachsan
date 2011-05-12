@@ -221,6 +221,20 @@ namespace QLKS.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap ButtonThem {
+            get {
+                object obj = ResourceManager.GetObject("ButtonThem", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap ButtonThemFocus {
+            get {
+                object obj = ResourceManager.GetObject("ButtonThemFocus", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap ButtonTick {
             get {
                 object obj = ResourceManager.GetObject("ButtonTick", resourceCulture);
@@ -238,6 +252,34 @@ namespace QLKS.Properties {
         internal static System.Drawing.Bitmap ButtonToi {
             get {
                 object obj = ResourceManager.GetObject("ButtonToi", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap ButtonXacNhan {
+            get {
+                object obj = ResourceManager.GetObject("ButtonXacNhan", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap ButtonXacNhanFocus {
+            get {
+                object obj = ResourceManager.GetObject("ButtonXacNhanFocus", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap ButtonXoa {
+            get {
+                object obj = ResourceManager.GetObject("ButtonXoa", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap ButtonXoaFocus {
+            get {
+                object obj = ResourceManager.GetObject("ButtonXoaFocus", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
