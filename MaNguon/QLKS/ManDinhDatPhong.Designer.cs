@@ -94,7 +94,6 @@
             this.MaximizeBox = false;
             this.Name = "frmManDinhDatPhong";
             this.Text = "ManDinhDatPhong";
-            this.Load += new System.EventHandler(this.frmManDinhDatPhong_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PB_MainMenu_MouseDown);
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmManDinhDatPhong_FormClosing);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.PB_MainMenu_MouseMove);

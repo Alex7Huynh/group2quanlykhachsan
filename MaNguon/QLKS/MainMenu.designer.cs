@@ -61,8 +61,6 @@
             this.BT_TCKH.UseVisualStyleBackColor = false;
             this.BT_TCKH.MouseLeave += new System.EventHandler(this.BT_ThemPhong_MouseLeave);
             this.BT_TCKH.Click += new System.EventHandler(this.BT_TCKH_Click);
-            this.BT_TCKH.Leave += new System.EventHandler(this.BT_ThemPhong_Leave);
-            this.BT_TCKH.Enter += new System.EventHandler(this.BT_ThemPhong_Enter);
             this.BT_TCKH.MouseEnter += new System.EventHandler(this.BT_TCKH_MouseEnter);
             // 
             // BT_BCDoanhThu
@@ -83,8 +81,6 @@
             this.BT_BCDoanhThu.UseVisualStyleBackColor = false;
             this.BT_BCDoanhThu.MouseLeave += new System.EventHandler(this.BT_ThemPhong_MouseLeave);
             this.BT_BCDoanhThu.Click += new System.EventHandler(this.PB_BaoCaoDoanhThu_Click);
-            this.BT_BCDoanhThu.Leave += new System.EventHandler(this.BT_ThemPhong_Leave);
-            this.BT_BCDoanhThu.Enter += new System.EventHandler(this.BT_ThemPhong_Enter);
             this.BT_BCDoanhThu.MouseEnter += new System.EventHandler(this.BT_BCDoanhThu_MouseEnter);
             // 
             // BT_DatPhong
@@ -105,8 +101,6 @@
             this.BT_DatPhong.UseVisualStyleBackColor = false;
             this.BT_DatPhong.MouseLeave += new System.EventHandler(this.BT_ThemPhong_MouseLeave);
             this.BT_DatPhong.Click += new System.EventHandler(this.PB_DatPhong_Click);
-            this.BT_DatPhong.Leave += new System.EventHandler(this.BT_ThemPhong_Leave);
-            this.BT_DatPhong.Enter += new System.EventHandler(this.BT_ThemPhong_Enter);
             this.BT_DatPhong.MouseEnter += new System.EventHandler(this.BT_DatPhong_MouseEnter);
             // 
             // BT_TCPhieuThue
@@ -127,8 +121,6 @@
             this.BT_TCPhieuThue.UseVisualStyleBackColor = false;
             this.BT_TCPhieuThue.MouseLeave += new System.EventHandler(this.BT_ThemPhong_MouseLeave);
             this.BT_TCPhieuThue.Click += new System.EventHandler(this.PB_TraCuuPhieuThue_Click);
-            this.BT_TCPhieuThue.Leave += new System.EventHandler(this.BT_ThemPhong_Leave);
-            this.BT_TCPhieuThue.Enter += new System.EventHandler(this.BT_ThemPhong_Enter);
             this.BT_TCPhieuThue.MouseEnter += new System.EventHandler(this.BT_TCPhieuThue_MouseEnter);
             // 
             // BT_TCPhong
@@ -149,8 +141,6 @@
             this.BT_TCPhong.UseVisualStyleBackColor = false;
             this.BT_TCPhong.MouseLeave += new System.EventHandler(this.BT_ThemPhong_MouseLeave);
             this.BT_TCPhong.Click += new System.EventHandler(this.PB_TraCuuPhong_Click);
-            this.BT_TCPhong.Leave += new System.EventHandler(this.BT_ThemPhong_Leave);
-            this.BT_TCPhong.Enter += new System.EventHandler(this.BT_ThemPhong_Enter);
             this.BT_TCPhong.MouseEnter += new System.EventHandler(this.BT_TCPhong_MouseEnter);
             // 
             // BT_SuaPhong
@@ -171,8 +161,6 @@
             this.BT_SuaPhong.UseVisualStyleBackColor = false;
             this.BT_SuaPhong.MouseLeave += new System.EventHandler(this.BT_ThemPhong_MouseLeave);
             this.BT_SuaPhong.Click += new System.EventHandler(this.PB_SuaPhong_Click);
-            this.BT_SuaPhong.Leave += new System.EventHandler(this.BT_ThemPhong_Leave);
-            this.BT_SuaPhong.Enter += new System.EventHandler(this.BT_ThemPhong_Enter);
             this.BT_SuaPhong.MouseEnter += new System.EventHandler(this.BT_SuaPhong_MouseEnter);
             // 
             // BT_XoaPhong
@@ -193,8 +181,6 @@
             this.BT_XoaPhong.UseVisualStyleBackColor = false;
             this.BT_XoaPhong.MouseLeave += new System.EventHandler(this.BT_ThemPhong_MouseLeave);
             this.BT_XoaPhong.Click += new System.EventHandler(this.PB_XoaPhong_Click);
-            this.BT_XoaPhong.Leave += new System.EventHandler(this.BT_ThemPhong_Leave);
-            this.BT_XoaPhong.Enter += new System.EventHandler(this.BT_ThemPhong_Enter);
             this.BT_XoaPhong.MouseEnter += new System.EventHandler(this.BT_XoaPhong_MouseEnter);
             // 
             // BT_ThemPhong
@@ -215,8 +201,6 @@
             this.BT_ThemPhong.UseVisualStyleBackColor = false;
             this.BT_ThemPhong.MouseLeave += new System.EventHandler(this.BT_ThemPhong_MouseLeave);
             this.BT_ThemPhong.Click += new System.EventHandler(this.PB_ThemPhong_Click);
-            this.BT_ThemPhong.Leave += new System.EventHandler(this.BT_ThemPhong_Leave);
-            this.BT_ThemPhong.Enter += new System.EventHandler(this.BT_ThemPhong_Enter);
             this.BT_ThemPhong.MouseEnter += new System.EventHandler(this.BT_ThemPhong_MouseEnter);
             // 
             // BT_ThuNho
@@ -234,8 +218,6 @@
             this.BT_ThuNho.UseVisualStyleBackColor = false;
             this.BT_ThuNho.MouseLeave += new System.EventHandler(this.BT_ThemPhong_MouseLeave);
             this.BT_ThuNho.Click += new System.EventHandler(this.BT_ThuNho_Click);
-            this.BT_ThuNho.Leave += new System.EventHandler(this.BT_ThuNho_Leave);
-            this.BT_ThuNho.Enter += new System.EventHandler(this.BT_ThuNho_Enter);
             this.BT_ThuNho.MouseEnter += new System.EventHandler(this.BT_ThuNho_MouseEnter);
             // 
             // BT_Thoat
@@ -253,8 +235,6 @@
             this.BT_Thoat.UseVisualStyleBackColor = false;
             this.BT_Thoat.MouseLeave += new System.EventHandler(this.BT_ThemPhong_MouseLeave);
             this.BT_Thoat.Click += new System.EventHandler(this.BT_Thoat_Click);
-            this.BT_Thoat.Leave += new System.EventHandler(this.BT_Thoat_Leave);
-            this.BT_Thoat.Enter += new System.EventHandler(this.BT_ThuNho_Enter);
             this.BT_Thoat.MouseEnter += new System.EventHandler(this.BT_Thoat_MouseEnter);
             // 
             // PB_MainMenu

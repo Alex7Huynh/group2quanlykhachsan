@@ -28,10 +28,6 @@ namespace QLKS
             InitializeComponent();
         }
 
-        private void frmManDinhDatPhong_Load(object sender, EventArgs e)
-        {            
-        }
-
         private void frmManDinhDatPhong_FormClosing(object sender, FormClosingEventArgs e)
         {
             ParentForm.Visible = true;

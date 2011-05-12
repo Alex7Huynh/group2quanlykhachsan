@@ -285,35 +285,7 @@ namespace QLKSTestProject
             target.BT_Thoat_Click(sender, e);
             Assert.Inconclusive("A method that does not return a value cannot be verified.");
         }
-
-        /// <summary>
-        ///A test for BT_ThemPhong_Leave
-        ///</summary>
-        [TestMethod()]
-        [DeploymentItem("QLKS.exe")]
-        public void BT_ThemPhong_LeaveTest()
-        {
-            MainMenu_Accessor target = new MainMenu_Accessor(); // TODO: Initialize to an appropriate value
-            object sender = null; // TODO: Initialize to an appropriate value
-            EventArgs e = null; // TODO: Initialize to an appropriate value
-            target.BT_ThemPhong_Leave(sender, e);
-            Assert.Inconclusive("A method that does not return a value cannot be verified.");
-        }
-
-        /// <summary>
-        ///A test for BT_ThemPhong_Enter
-        ///</summary>
-        [TestMethod()]
-        [DeploymentItem("QLKS.exe")]
-        public void BT_ThemPhong_EnterTest()
-        {
-            MainMenu_Accessor target = new MainMenu_Accessor(); // TODO: Initialize to an appropriate value
-            object sender = null; // TODO: Initialize to an appropriate value
-            EventArgs e = null; // TODO: Initialize to an appropriate value
-            target.BT_ThemPhong_Enter(sender, e);
-            Assert.Inconclusive("A method that does not return a value cannot be verified.");
-        }
-
+        
         /// <summary>
         ///A test for BT_TCKH_Click
         ///</summary>

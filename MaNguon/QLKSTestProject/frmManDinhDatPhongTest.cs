@@ -132,21 +132,7 @@ namespace QLKSTestProject
             target.InitializeComponent();
             Assert.Inconclusive("A method that does not return a value cannot be verified.");
         }
-
-        /// <summary>
-        ///A test for frmManDinhDatPhong_Load
-        ///</summary>
-        [TestMethod()]
-        [DeploymentItem("QLKS.exe")]
-        public void frmManDinhDatPhong_LoadTest()
-        {
-            frmManDinhDatPhong_Accessor target = new frmManDinhDatPhong_Accessor(); // TODO: Initialize to an appropriate value
-            object sender = null; // TODO: Initialize to an appropriate value
-            EventArgs e = null; // TODO: Initialize to an appropriate value
-            target.frmManDinhDatPhong_Load(sender, e);
-            Assert.Inconclusive("A method that does not return a value cannot be verified.");
-        }
-
+        
         /// <summary>
         ///A test for frmManDinhDatPhong_FormClosing
         ///</summary>

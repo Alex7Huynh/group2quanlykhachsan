@@ -97,7 +97,7 @@
             this.txtLoaiPhong.BackColor = System.Drawing.Color.Gray;
             this.txtLoaiPhong.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtLoaiPhong.ForeColor = System.Drawing.Color.White;
-            this.txtLoaiPhong.Location = new System.Drawing.Point(317, 236);
+            this.txtLoaiPhong.Location = new System.Drawing.Point(317, 207);
             this.txtLoaiPhong.Name = "txtLoaiPhong";
             this.txtLoaiPhong.ReadOnly = true;
             this.txtLoaiPhong.Size = new System.Drawing.Size(220, 23);
@@ -108,6 +108,7 @@
             this.btnNextLoaiPhong.BackColor = System.Drawing.Color.IndianRed;
             this.btnNextLoaiPhong.BackgroundImage = global::QLKS.Properties.Resources.ButtonToi;
             this.btnNextLoaiPhong.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnNextLoaiPhong.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnNextLoaiPhong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNextLoaiPhong.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnNextLoaiPhong.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -125,6 +126,7 @@
             this.btnPreviousLoaiPhong.BackColor = System.Drawing.Color.IndianRed;
             this.btnPreviousLoaiPhong.BackgroundImage = global::QLKS.Properties.Resources.ButtonLui;
             this.btnPreviousLoaiPhong.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnPreviousLoaiPhong.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPreviousLoaiPhong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPreviousLoaiPhong.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnPreviousLoaiPhong.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
