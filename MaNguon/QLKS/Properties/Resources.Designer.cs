@@ -109,6 +109,13 @@ namespace QLKS.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap ButtonLui {
+            get {
+                object obj = ResourceManager.GetObject("ButtonLui", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap ButtonMinimize {
             get {
                 object obj = ResourceManager.GetObject("ButtonMinimize", resourceCulture);
@@ -133,6 +140,13 @@ namespace QLKS.Properties {
         internal static System.Drawing.Bitmap ButtonTick {
             get {
                 object obj = ResourceManager.GetObject("ButtonTick", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap ButtonToi {
+            get {
+                object obj = ResourceManager.GetObject("ButtonToi", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
