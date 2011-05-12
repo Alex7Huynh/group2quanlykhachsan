@@ -67,72 +67,79 @@ namespace QLKS.Properties {
             }
         }
         
-        internal static System.Drawing.Bitmap add {
+        internal static System.Drawing.Bitmap ButtonAdd {
             get {
-                object obj = ResourceManager.GetObject("add", resourceCulture);
+                object obj = ResourceManager.GetObject("ButtonAdd", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
         
-        internal static System.Drawing.Bitmap BCdoanhthu {
+        internal static System.Drawing.Bitmap ButtonChecked {
             get {
-                object obj = ResourceManager.GetObject("BCdoanhthu", resourceCulture);
+                object obj = ResourceManager.GetObject("ButtonChecked", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
         
-        internal static System.Drawing.Bitmap bookroom {
+        internal static System.Drawing.Bitmap ButtonCustomer {
             get {
-                object obj = ResourceManager.GetObject("bookroom", resourceCulture);
+                object obj = ResourceManager.GetObject("ButtonCustomer", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
         
-        internal static System.Drawing.Bitmap btnsuaphong {
+        internal static System.Drawing.Bitmap ButtonDelete {
             get {
-                object obj = ResourceManager.GetObject("btnsuaphong", resourceCulture);
+                object obj = ResourceManager.GetObject("ButtonDelete", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
         
-        internal static System.Drawing.Bitmap btnxoaphong {
+        internal static System.Drawing.Bitmap ButtonExit {
             get {
-                object obj = ResourceManager.GetObject("btnxoaphong", resourceCulture);
+                object obj = ResourceManager.GetObject("ButtonExit", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
         
-        internal static System.Drawing.Bitmap btthemphong {
+        internal static System.Drawing.Bitmap ButtonFix {
             get {
-                object obj = ResourceManager.GetObject("btthemphong", resourceCulture);
+                object obj = ResourceManager.GetObject("ButtonFix", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
         
-        internal static System.Drawing.Bitmap customer {
+        internal static System.Drawing.Bitmap ButtonMinimize {
             get {
-                object obj = ResourceManager.GetObject("customer", resourceCulture);
+                object obj = ResourceManager.GetObject("ButtonMinimize", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
         
-        internal static System.Drawing.Bitmap datphong {
+        internal static System.Drawing.Bitmap ButtonMoneyReport {
             get {
-                object obj = ResourceManager.GetObject("datphong", resourceCulture);
+                object obj = ResourceManager.GetObject("ButtonMoneyReport", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
         
-        internal static System.Drawing.Bitmap fix {
+        internal static System.Drawing.Bitmap ButtonRoom {
             get {
-                object obj = ResourceManager.GetObject("fix", resourceCulture);
+                object obj = ResourceManager.GetObject("ButtonRoom", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
         
-        internal static System.Drawing.Bitmap Menu {
+        internal static System.Drawing.Bitmap ButtonTick {
             get {
-                object obj = ResourceManager.GetObject("Menu", resourceCulture);
+                object obj = ResourceManager.GetObject("ButtonTick", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap MainMenu {
+            get {
+                object obj = ResourceManager.GetObject("MainMenu", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -193,13 +200,6 @@ namespace QLKS.Properties {
             }
         }
         
-        internal static System.Drawing.Bitmap MoneyReport {
-            get {
-                object obj = ResourceManager.GetObject("MoneyReport", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
         internal static System.Drawing.Bitmap reservation {
             get {
                 object obj = ResourceManager.GetObject("reservation", resourceCulture);
@@ -214,51 +214,9 @@ namespace QLKS.Properties {
             }
         }
         
-        internal static System.Drawing.Bitmap room {
-            get {
-                object obj = ResourceManager.GetObject("room", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
         internal static System.Drawing.Bitmap runningman {
             get {
                 object obj = ResourceManager.GetObject("runningman", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        internal static System.Drawing.Bitmap subtract {
-            get {
-                object obj = ResourceManager.GetObject("subtract", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        internal static System.Drawing.Bitmap TCKhachHang {
-            get {
-                object obj = ResourceManager.GetObject("TCKhachHang", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        internal static System.Drawing.Bitmap TCphieuthue {
-            get {
-                object obj = ResourceManager.GetObject("TCphieuthue", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        internal static System.Drawing.Bitmap TCphong {
-            get {
-                object obj = ResourceManager.GetObject("TCphong", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        internal static System.Drawing.Bitmap tick {
-            get {
-                object obj = ResourceManager.GetObject("tick", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
