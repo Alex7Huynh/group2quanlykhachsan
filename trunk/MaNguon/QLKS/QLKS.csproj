@@ -350,6 +350,17 @@
     <None Include="Resources\MoneyReport.png" />
     <None Include="Resources\MHTiepNhanDatPhong.png" />
     <None Include="Resources\20101109033253_report.jpg" />
+    <None Include="Resources\MainMenu.png" />
+    <None Include="Resources\ButtonAdd.png" />
+    <None Include="Resources\ButtonDelete.png" />
+    <None Include="Resources\ButtonFix.png" />
+    <None Include="Resources\ButtonRoom.png" />
+    <None Include="Resources\ButtonTick.png" />
+    <None Include="Resources\ButtonCustomer.png" />
+    <None Include="Resources\ButtonChecked.png" />
+    <None Include="Resources\ButtonMoneyReport.png" />
+    <None Include="Resources\ButtonMinimize.png" />
+    <None Include="Resources\ButtonExit.png" />
     <Content Include="Resources\TCKhachHang.png" />
     <None Include="Resources\tick.png" />
   </ItemGroup>
