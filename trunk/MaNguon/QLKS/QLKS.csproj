@@ -302,30 +302,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Menu.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\btthemphong.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\btnxoaphong.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\btnsuaphong.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\TCphong.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\TCphieuthue.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\datphong.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\BCdoanhthu.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\MHDatPhong.png" />
   </ItemGroup>
   <ItemGroup>
@@ -341,13 +317,6 @@
     <None Include="Resources\MHTCPhong.png" />
     <None Include="Resources\MHTCPhieuThue.png" />
     <None Include="Resources\MHTCKhachHang.png" />
-    <None Include="Resources\add.png" />
-    <None Include="Resources\subtract.png" />
-    <None Include="Resources\fix.png" />
-    <None Include="Resources\room.png" />
-    <None Include="Resources\customer.png" />
-    <None Include="Resources\bookroom.png" />
-    <None Include="Resources\MoneyReport.png" />
     <None Include="Resources\MHTiepNhanDatPhong.png" />
     <None Include="Resources\20101109033253_report.jpg" />
     <None Include="Resources\MainMenu.png" />
@@ -361,11 +330,18 @@
     <None Include="Resources\ButtonMoneyReport.png" />
     <None Include="Resources\ButtonMinimize.png" />
     <None Include="Resources\ButtonExit.png" />
-    <Content Include="Resources\TCKhachHang.png" />
-    <None Include="Resources\tick.png" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MHDatPhong1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ButtonLui.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ButtonToi.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

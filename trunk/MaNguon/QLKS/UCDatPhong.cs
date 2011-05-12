@@ -158,15 +158,5 @@ namespace QLKS
             frmCheckOut frm = new frmCheckOut();
             frm.ShowDialog();
         }
-
-        private void txtLoaiPhong_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblLoaiPhong_Paint(object sender, PaintEventArgs e)
-        {
-            lblLoaiPhong.BackColor = Color.FromArgb(234, 146, 6);
-        }
     }
 }

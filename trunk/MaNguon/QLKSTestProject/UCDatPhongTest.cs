@@ -132,21 +132,7 @@ namespace QLKSTestProject
             target.UpdateDanhSachPhong();
             Assert.Inconclusive("A method that does not return a value cannot be verified.");
         }
-
-        /// <summary>
-        ///A test for txtLoaiPhong_TextChanged
-        ///</summary>
-        [TestMethod()]
-        [DeploymentItem("QLKS.exe")]
-        public void txtLoaiPhong_TextChangedTest()
-        {
-            UCDatPhong_Accessor target = new UCDatPhong_Accessor(); // TODO: Initialize to an appropriate value
-            object sender = null; // TODO: Initialize to an appropriate value
-            EventArgs e = null; // TODO: Initialize to an appropriate value
-            target.txtLoaiPhong_TextChanged(sender, e);
-            Assert.Inconclusive("A method that does not return a value cannot be verified.");
-        }
-
+              
         /// <summary>
         ///A test for sortDSPhong
         ///</summary>
@@ -195,20 +181,6 @@ namespace QLKSTestProject
         {
             UCDatPhong_Accessor target = new UCDatPhong_Accessor(); // TODO: Initialize to an appropriate value
             target.LoadDanhSachLoaiPhong();
-            Assert.Inconclusive("A method that does not return a value cannot be verified.");
-        }
-
-        /// <summary>
-        ///A test for lblLoaiPhong_Paint
-        ///</summary>
-        [TestMethod()]
-        [DeploymentItem("QLKS.exe")]
-        public void lblLoaiPhong_PaintTest()
-        {
-            UCDatPhong_Accessor target = new UCDatPhong_Accessor(); // TODO: Initialize to an appropriate value
-            object sender = null; // TODO: Initialize to an appropriate value
-            PaintEventArgs e = null; // TODO: Initialize to an appropriate value
-            target.lblLoaiPhong_Paint(sender, e);
             Assert.Inconclusive("A method that does not return a value cannot be verified.");
         }
 
