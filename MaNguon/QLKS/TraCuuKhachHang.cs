@@ -237,22 +237,7 @@ namespace QLKS
                 dataGrid_ThongTinKH.Rows[index].Height = 30;
             }
         }
-
-        private void BT_ThuNho_Enter(object sender, EventArgs e)
-        {
-            ((Button)sender).BackColor = Color.Black;
-        }
-
-        private void BT_ThuNho_Leave(object sender, EventArgs e)
-        {
-            ((Button)sender).BackColor = Color.OliveDrab;
-        }
-
-        private void BT_Thoat_Leave(object sender, EventArgs e)
-        {
-            ((Button)sender).BackColor = Color.DarkRed;
-        }
-
+        
         private void TraCuuPhong_FormClosing(object sender, FormClosingEventArgs e)
         {
             ParentForm.Visible = true;
@@ -269,49 +254,34 @@ namespace QLKS
             this.WindowState = FormWindowState.Minimized;
         }
 
-        private void txtMaPhong_Enter(object sender, EventArgs e)
-        {
-            ((TextBox)sender).BackColor = Color.RoyalBlue;
-        }
-
-        private void txtMaPhong_Leave(object sender, EventArgs e)
-        {
-            ((TextBox)sender).BackColor = Color.OliveDrab;
-        }
-
-        private void btnTim_Enter(object sender, EventArgs e)
-        {
-            ((Button)sender).BackColor = Color.GreenYellow;
-        }
-
-        private void btnTim_Leave(object sender, EventArgs e)
-        {
-            ((Button)sender).BackColor = Color.CornflowerBlue;
-        }
-
-        private void nudSoNgayThue_Enter(object sender, EventArgs e)
-        {
-            ((NumericUpDown)sender).BackColor = Color.RoyalBlue;
-        }
-
-        private void nudSoNgayThue_Leave(object sender, EventArgs e)
-        {
-            ((NumericUpDown)sender).BackColor = Color.OliveDrab;
-        }
-
         private void btnQuayLai_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void cbLoaiKH_Enter(object sender, EventArgs e)
+        private void BT_Thoat_MouseLeave(object sender, EventArgs e)
         {
-            ((ComboBox)sender).BackColor = Color.RoyalBlue;
+            ((Button)sender).Image = null;
         }
 
-        private void cbLoaiKH_Leave(object sender, EventArgs e)
+        private void BT_Thoat_MouseEnter(object sender, EventArgs e)
         {
-            ((ComboBox)sender).BackColor = Color.OliveDrab;
-        } 
+            ((Button)sender).Image = Properties.Resources.ButtonExitFocus;
+        }
+
+        private void BT_ThuNho_MouseEnter(object sender, EventArgs e)
+        {
+            ((Button)sender).Image = Properties.Resources.ButtonMinimizeFocus;
+        }
+
+        private void btnTraCuu_MouseEnter(object sender, EventArgs e)
+        {
+            ((Button)sender).Image = Properties.Resources.ButtonSearchFocus;
+        }
+
+        private void btnQuayLai_MouseEnter(object sender, EventArgs e)
+        {
+            ((Button)sender).Image = Properties.Resources.ButtonQuayLaiFocus;
+        }
     }
 }
