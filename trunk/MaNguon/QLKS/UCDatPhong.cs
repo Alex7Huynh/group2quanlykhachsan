@@ -158,5 +158,20 @@ namespace QLKS
             frmCheckOut frm = new frmCheckOut();
             frm.ShowDialog();
         }
+
+        private void btnPreviousLoaiPhong_MouseLeave(object sender, EventArgs e)
+        {
+            ((Button)sender).Image = null;
+        }
+
+        private void btnNextLoaiPhong_MouseEnter(object sender, EventArgs e)
+        {
+            ((Button)sender).Image = Properties.Resources.ButtonFocus_Toi;
+        }
+
+        private void btnPreviousLoaiPhong_MouseEnter(object sender, EventArgs e)
+        {
+            ((Button)sender).Image = Properties.Resources.ButtonFocus_Lui;
+        }
     }
 }

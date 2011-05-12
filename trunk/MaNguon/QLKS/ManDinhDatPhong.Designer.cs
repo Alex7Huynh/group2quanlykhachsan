@@ -44,12 +44,14 @@
             this.BT_ThuNho.ForeColor = System.Drawing.Color.Snow;
             this.BT_ThuNho.Location = new System.Drawing.Point(870, 3);
             this.BT_ThuNho.Name = "BT_ThuNho";
-            this.BT_ThuNho.Size = new System.Drawing.Size(60, 35);
+            this.BT_ThuNho.Size = new System.Drawing.Size(60, 36);
             this.BT_ThuNho.TabIndex = 102;
             this.BT_ThuNho.UseVisualStyleBackColor = false;
+            this.BT_ThuNho.MouseLeave += new System.EventHandler(this.BT_Thoat_MouseLeave);
             this.BT_ThuNho.Click += new System.EventHandler(this.BT_ThuNho_Click);
             this.BT_ThuNho.Leave += new System.EventHandler(this.BT_ThuNho_Leave);
             this.BT_ThuNho.Enter += new System.EventHandler(this.BT_ThuNho_Enter);
+            this.BT_ThuNho.MouseEnter += new System.EventHandler(this.BT_ThuNho_MouseEnter);
             // 
             // BT_Thoat
             // 
@@ -61,12 +63,14 @@
             this.BT_Thoat.ForeColor = System.Drawing.Color.Snow;
             this.BT_Thoat.Location = new System.Drawing.Point(940, 3);
             this.BT_Thoat.Name = "BT_Thoat";
-            this.BT_Thoat.Size = new System.Drawing.Size(60, 35);
+            this.BT_Thoat.Size = new System.Drawing.Size(60, 36);
             this.BT_Thoat.TabIndex = 103;
             this.BT_Thoat.UseVisualStyleBackColor = false;
+            this.BT_Thoat.MouseLeave += new System.EventHandler(this.BT_Thoat_MouseLeave);
             this.BT_Thoat.Click += new System.EventHandler(this.BT_Thoat_Click);
             this.BT_Thoat.Leave += new System.EventHandler(this.BT_Thoat_Leave);
             this.BT_Thoat.Enter += new System.EventHandler(this.BT_ThuNho_Enter);
+            this.BT_Thoat.MouseEnter += new System.EventHandler(this.BT_Thoat_MouseEnter);
             // 
             // ucDatPhong1
             // 
