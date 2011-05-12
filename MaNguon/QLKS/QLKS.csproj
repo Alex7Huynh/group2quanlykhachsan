@@ -343,6 +343,45 @@
   <ItemGroup>
     <None Include="Resources\ButtonToi.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ButtonAddFocus.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ButtonCustomerFocus.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ButtonCheckedFocus.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ButtonDeleteFocus.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ButtonExitFocus.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ButtonFixFocus.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ButtonFocus.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ButtonFocus_Lui.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ButtonFocus_Toi.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ButtonMinimizeFocus.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ButtonMoneyReportFocus.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ButtonRoomFocus.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ButtonTickFocus.gif" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -177,6 +177,61 @@ namespace QLKS
             pb.Height += 4;
 
             pb.Location = new Point(pb.Location.X - 2, pb.Location.Y - 2);
+        }
+
+        private void BT_ThemPhong_MouseEnter(object sender, EventArgs e)
+        {
+            ((Button)sender).Image = Properties.Resources.ButtonAddFocus;
+        }
+
+        private void BT_ThemPhong_MouseLeave(object sender, EventArgs e)
+        {
+            ((Button)sender).Image = null;
+        }
+
+        private void BT_XoaPhong_MouseEnter(object sender, EventArgs e)
+        {
+            ((Button)sender).Image = Properties.Resources.ButtonDeleteFocus;
+        }
+
+        private void BT_SuaPhong_MouseEnter(object sender, EventArgs e)
+        {
+            ((Button)sender).Image = Properties.Resources.ButtonFixFocus;
+        }
+
+        private void BT_TCPhong_MouseEnter(object sender, EventArgs e)
+        {
+            ((Button)sender).Image = Properties.Resources.ButtonRoomFocus;
+        }
+
+        private void BT_TCPhieuThue_MouseEnter(object sender, EventArgs e)
+        {
+            ((Button)sender).Image = Properties.Resources.ButtonTickFocus;
+        }
+
+        private void BT_TCKH_MouseEnter(object sender, EventArgs e)
+        {
+            ((Button)sender).Image = Properties.Resources.ButtonCustomerFocus;
+        }
+
+        private void BT_DatPhong_MouseEnter(object sender, EventArgs e)
+        {
+            ((Button)sender).Image = Properties.Resources.ButtonCheckedFocus;
+        }
+
+        private void BT_BCDoanhThu_MouseEnter(object sender, EventArgs e)
+        {
+            ((Button)sender).Image = Properties.Resources.ButtonMoneyReportFocus;
+        }
+
+        private void BT_ThuNho_MouseEnter(object sender, EventArgs e)
+        {
+            ((Button)sender).Image = Properties.Resources.ButtonMinimizeFocus;
+        }
+
+        private void BT_Thoat_MouseEnter(object sender, EventArgs e)
+        {
+            ((Button)sender).Image = Properties.Resources.ButtonExitFocus;
         }         
     }
 }

@@ -33,10 +33,10 @@
             this.btnCheckIn = new System.Windows.Forms.Button();
             this.btnCheckOut = new System.Windows.Forms.Button();
             this.txtLoaiPhong = new System.Windows.Forms.TextBox();
-            this.ucXemPhieuThuePhong = new QLKS.UCXemPhieuThuePhong();
             this.btnNextLoaiPhong = new System.Windows.Forms.Button();
             this.btnPreviousLoaiPhong = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.ucXemPhieuThuePhong = new QLKS.UCXemPhieuThuePhong();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -103,15 +103,6 @@
             this.txtLoaiPhong.Size = new System.Drawing.Size(220, 23);
             this.txtLoaiPhong.TabIndex = 5;
             // 
-            // ucXemPhieuThuePhong
-            // 
-            this.ucXemPhieuThuePhong.flag = 0;
-            this.ucXemPhieuThuePhong.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.ucXemPhieuThuePhong.Location = new System.Drawing.Point(51, 351);
-            this.ucXemPhieuThuePhong.Name = "ucXemPhieuThuePhong";
-            this.ucXemPhieuThuePhong.Size = new System.Drawing.Size(924, 348);
-            this.ucXemPhieuThuePhong.TabIndex = 8;
-            // 
             // btnNextLoaiPhong
             // 
             this.btnNextLoaiPhong.BackColor = System.Drawing.Color.IndianRed;
@@ -122,10 +113,12 @@
             this.btnNextLoaiPhong.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnNextLoaiPhong.Location = new System.Drawing.Point(433, 286);
             this.btnNextLoaiPhong.Name = "btnNextLoaiPhong";
-            this.btnNextLoaiPhong.Size = new System.Drawing.Size(104, 34);
+            this.btnNextLoaiPhong.Size = new System.Drawing.Size(104, 35);
             this.btnNextLoaiPhong.TabIndex = 7;
             this.btnNextLoaiPhong.UseVisualStyleBackColor = false;
+            this.btnNextLoaiPhong.MouseLeave += new System.EventHandler(this.btnPreviousLoaiPhong_MouseLeave);
             this.btnNextLoaiPhong.Click += new System.EventHandler(this.btnNextLoaiPhong_Click);
+            this.btnNextLoaiPhong.MouseEnter += new System.EventHandler(this.btnNextLoaiPhong_MouseEnter);
             // 
             // btnPreviousLoaiPhong
             // 
@@ -137,10 +130,12 @@
             this.btnPreviousLoaiPhong.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnPreviousLoaiPhong.Location = new System.Drawing.Point(317, 286);
             this.btnPreviousLoaiPhong.Name = "btnPreviousLoaiPhong";
-            this.btnPreviousLoaiPhong.Size = new System.Drawing.Size(104, 34);
+            this.btnPreviousLoaiPhong.Size = new System.Drawing.Size(104, 35);
             this.btnPreviousLoaiPhong.TabIndex = 6;
             this.btnPreviousLoaiPhong.UseVisualStyleBackColor = false;
+            this.btnPreviousLoaiPhong.MouseLeave += new System.EventHandler(this.btnPreviousLoaiPhong_MouseLeave);
             this.btnPreviousLoaiPhong.Click += new System.EventHandler(this.btnPreviousLoaiPhong_Click);
+            this.btnPreviousLoaiPhong.MouseEnter += new System.EventHandler(this.btnPreviousLoaiPhong_MouseEnter);
             // 
             // pictureBox1
             // 
@@ -150,6 +145,15 @@
             this.pictureBox1.Size = new System.Drawing.Size(1024, 768);
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
+            // 
+            // ucXemPhieuThuePhong
+            // 
+            this.ucXemPhieuThuePhong.flag = 0;
+            this.ucXemPhieuThuePhong.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.ucXemPhieuThuePhong.Location = new System.Drawing.Point(51, 351);
+            this.ucXemPhieuThuePhong.Name = "ucXemPhieuThuePhong";
+            this.ucXemPhieuThuePhong.Size = new System.Drawing.Size(924, 348);
+            this.ucXemPhieuThuePhong.TabIndex = 8;
             // 
             // UCDatPhong
             // 

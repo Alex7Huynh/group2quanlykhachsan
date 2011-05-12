@@ -74,9 +74,23 @@ namespace QLKS.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap ButtonAddFocus {
+            get {
+                object obj = ResourceManager.GetObject("ButtonAddFocus", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap ButtonChecked {
             get {
                 object obj = ResourceManager.GetObject("ButtonChecked", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap ButtonCheckedFocus {
+            get {
+                object obj = ResourceManager.GetObject("ButtonCheckedFocus", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -88,9 +102,23 @@ namespace QLKS.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap ButtonCustomerFocus {
+            get {
+                object obj = ResourceManager.GetObject("ButtonCustomerFocus", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap ButtonDelete {
             get {
                 object obj = ResourceManager.GetObject("ButtonDelete", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap ButtonDeleteFocus {
+            get {
+                object obj = ResourceManager.GetObject("ButtonDeleteFocus", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -102,9 +130,44 @@ namespace QLKS.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap ButtonExitFocus {
+            get {
+                object obj = ResourceManager.GetObject("ButtonExitFocus", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap ButtonFix {
             get {
                 object obj = ResourceManager.GetObject("ButtonFix", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap ButtonFixFocus {
+            get {
+                object obj = ResourceManager.GetObject("ButtonFixFocus", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap ButtonFocus {
+            get {
+                object obj = ResourceManager.GetObject("ButtonFocus", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap ButtonFocus_Lui {
+            get {
+                object obj = ResourceManager.GetObject("ButtonFocus_Lui", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap ButtonFocus_Toi {
+            get {
+                object obj = ResourceManager.GetObject("ButtonFocus_Toi", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -123,9 +186,23 @@ namespace QLKS.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap ButtonMinimizeFocus {
+            get {
+                object obj = ResourceManager.GetObject("ButtonMinimizeFocus", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap ButtonMoneyReport {
             get {
                 object obj = ResourceManager.GetObject("ButtonMoneyReport", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap ButtonMoneyReportFocus {
+            get {
+                object obj = ResourceManager.GetObject("ButtonMoneyReportFocus", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -137,9 +214,23 @@ namespace QLKS.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap ButtonRoomFocus {
+            get {
+                object obj = ResourceManager.GetObject("ButtonRoomFocus", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap ButtonTick {
             get {
                 object obj = ResourceManager.GetObject("ButtonTick", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap ButtonTickFocus {
+            get {
+                object obj = ResourceManager.GetObject("ButtonTickFocus", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -79,5 +79,20 @@ namespace QLKS
         {
             this.Close();
         }
+
+        private void BT_ThuNho_MouseEnter(object sender, EventArgs e)
+        {
+            ((Button)sender).Image = Properties.Resources.ButtonMinimizeFocus;
+        }
+
+        private void BT_Thoat_MouseEnter(object sender, EventArgs e)
+        {
+            ((Button)sender).Image = Properties.Resources.ButtonExitFocus;
+        }
+
+        private void BT_Thoat_MouseLeave(object sender, EventArgs e)
+        {
+            ((Button)sender).Image = null;
+        }
     }
 }
