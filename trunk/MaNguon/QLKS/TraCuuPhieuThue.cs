@@ -118,11 +118,13 @@ namespace QLKS
         {
             if (chbTimTheoNgay.Checked)
             {
-                grbTimTheoNgay.Enabled = true;
+                dtmNgayBatDauThue.Enabled = true;
+                nudSoNgayThue.Enabled = true;
             }
             else
             {
-                grbTimTheoNgay.Enabled = false;
+                dtmNgayBatDauThue.Enabled = true;
+                nudSoNgayThue.Enabled = true;
             }
         }
 
@@ -154,21 +156,6 @@ namespace QLKS
             }
         }
 
-        private void BT_ThuNho_Enter(object sender, EventArgs e)
-        {
-            ((Button)sender).BackColor = Color.Black;
-        }
-
-        private void BT_ThuNho_Leave(object sender, EventArgs e)
-        {
-            ((Button)sender).BackColor = Color.OliveDrab;
-        }
-
-        private void BT_Thoat_Leave(object sender, EventArgs e)
-        {
-            ((Button)sender).BackColor = Color.DarkRed;
-        }
-
         private void TraCuuPhong_FormClosing(object sender, FormClosingEventArgs e)
         {
             ParentForm.Visible = true;
@@ -184,35 +171,30 @@ namespace QLKS
         {
             this.WindowState = FormWindowState.Minimized;
         }
-
-        private void txtMaPhong_Enter(object sender, EventArgs e)
+        
+        private void BT_Thoat_MouseLeave(object sender, EventArgs e)
         {
-            ((TextBox)sender).BackColor = Color.RoyalBlue;
+            ((Button)sender).Image = null;
         }
 
-        private void txtMaPhong_Leave(object sender, EventArgs e)
+        private void BT_Thoat_MouseEnter(object sender, EventArgs e)
         {
-            ((TextBox)sender).BackColor = Color.OliveDrab;
+            ((Button)sender).Image = Properties.Resources.ButtonExitFocus;
         }
 
-        private void btnTim_Enter(object sender, EventArgs e)
+        private void BT_ThuNho_MouseEnter(object sender, EventArgs e)
         {
-            ((Button)sender).BackColor = Color.GreenYellow;
+            ((Button)sender).Image = Properties.Resources.ButtonMinimizeFocus;
         }
 
-        private void btnTim_Leave(object sender, EventArgs e)
+        private void btnTim_MouseEnter(object sender, EventArgs e)
         {
-            ((Button)sender).BackColor = Color.CornflowerBlue;
+            ((Button)sender).Image = Properties.Resources.ButtonSearchFocus;
         }
 
-        private void nudSoNgayThue_Enter(object sender, EventArgs e)
+        private void btnThoat_MouseEnter(object sender, EventArgs e)
         {
-            ((NumericUpDown)sender).BackColor = Color.RoyalBlue;
-        }
-
-        private void nudSoNgayThue_Leave(object sender, EventArgs e)
-        {
-            ((NumericUpDown)sender).BackColor = Color.OliveDrab;
+            ((Button)sender).Image = Properties.Resources.ButtonQuayLaiFocus;
         } 
     }
 }

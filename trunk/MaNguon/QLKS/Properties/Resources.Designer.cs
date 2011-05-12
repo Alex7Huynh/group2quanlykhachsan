@@ -235,6 +235,20 @@ namespace QLKS.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap ButtonSearch {
+            get {
+                object obj = ResourceManager.GetObject("ButtonSearch", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap ButtonSearchFocus {
+            get {
+                object obj = ResourceManager.GetObject("ButtonSearchFocus", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap ButtonThem {
             get {
                 object obj = ResourceManager.GetObject("ButtonThem", resourceCulture);
@@ -319,27 +333,6 @@ namespace QLKS.Properties {
             }
         }
         
-        internal static System.Drawing.Bitmap MHTCKhachHang {
-            get {
-                object obj = ResourceManager.GetObject("MHTCKhachHang", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        internal static System.Drawing.Bitmap MHTCPhieuThue {
-            get {
-                object obj = ResourceManager.GetObject("MHTCPhieuThue", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        internal static System.Drawing.Bitmap MHTCPhong {
-            get {
-                object obj = ResourceManager.GetObject("MHTCPhong", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
         internal static System.Drawing.Bitmap MHThemPhong {
             get {
                 object obj = ResourceManager.GetObject("MHThemPhong", resourceCulture);
@@ -350,6 +343,27 @@ namespace QLKS.Properties {
         internal static System.Drawing.Bitmap MHTiepNhanDatPhong {
             get {
                 object obj = ResourceManager.GetObject("MHTiepNhanDatPhong", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap MHTraCuuKhachHang {
+            get {
+                object obj = ResourceManager.GetObject("MHTraCuuKhachHang", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap MHTraCuuPhieuThue {
+            get {
+                object obj = ResourceManager.GetObject("MHTraCuuPhieuThue", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap MHTraCuuPhong {
+            get {
+                object obj = ResourceManager.GetObject("MHTraCuuPhong", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

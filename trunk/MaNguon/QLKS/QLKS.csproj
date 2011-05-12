@@ -412,6 +412,21 @@
   <ItemGroup>
     <None Include="Resources\MHSuaPhong1.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MHTraCuuPhong.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ButtonSearchFocus.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ButtonSearch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MHTraCuuPhieuThue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MHTraCuuKhachHang.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
