@@ -48,6 +48,7 @@
     <Compile Include="HOADONBUS.cs" />
     <Compile Include="KHACHHANGBUS.cs" />
     <Compile Include="LOAIKHACHBUS.cs" />
+    <Compile Include="NhomBUS.cs" />
     <Compile Include="PHIEUTHUEBUS.cs" />
     <Compile Include="PHONGBUS.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

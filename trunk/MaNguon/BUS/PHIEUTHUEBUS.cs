@@ -346,6 +346,10 @@ namespace BUS
         {
             return PHIEUTHUEDAO.XoaPhieuThue(dsMaPhieuThue);
         }
+        public static bool XoaTamPhieuThue(List<string> dsMaPhieuThue)
+        {
+            return PHIEUTHUEDAO.XoaTamPhieuThue(dsMaPhieuThue);
+        }
         #endregion
 
         #region 0812388 - Phú
