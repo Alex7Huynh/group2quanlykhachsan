@@ -255,7 +255,7 @@ namespace DAO
             }
             return true;
         }
-        public static bool XoaPhieuThue(List<string> dsMaPhieuThue)
+        public static bool XoaTamPhieuThue(List<string> dsMaPhieuThue)
         {
             OleDbConnection link = null;
             try
@@ -265,6 +265,41 @@ namespace DAO
                 for (int i = 0; i < dsMaPhieuThue.Count; i++)
                 {
                     chuoiLenh = "Update PHIEUTHUE Set DaXoa = 1 Where MaPhieuThue = '" + dsMaPhieuThue[i] + "'";
+                    OleDbCommand lenh = new OleDbCommand(chuoiLenh, link);
+
+
+                    try
+                    {
+                        lenh.ExecuteNonQuery();
+                    }
+                    catch (System.Exception e)
+                    {
+                        throw new Exception("Xóa thất bại! Vui lòng kiểm tra lại thông tin và làm lại 1 lần nữa.");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+                return false;
+            }
+            finally
+            {
+                if (link != null && link.State == System.Data.ConnectionState.Open)
+                    link.Close();
+            }
+            return true;
+        }
+        public static bool XoaPhieuThue(List<string> dsMaPhieuThue)
+        {
+            OleDbConnection link = null;
+            try
+            {
+                link = KetNoi();
+                string chuoiLenh;
+                for (int i = 0; i < dsMaPhieuThue.Count; i++)
+                {
+                    chuoiLenh = "Delete from PHIEUTHUE Where MaPhieuThue = '" + dsMaPhieuThue[i] + "'";
                     OleDbCommand lenh = new OleDbCommand(chuoiLenh, link);
 
 

@@ -52,7 +52,13 @@ namespace DTO
             get { return _dangThue; }
             set { _dangThue = value; }
         }
+        private int _maNhom;
 
+        public int MaNhom
+        {
+            get { return _maNhom; }
+            set { _maNhom = value; }
+        }
         private PHONG phong;
 
         public PHONG Phong

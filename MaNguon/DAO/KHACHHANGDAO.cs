@@ -238,5 +238,90 @@ namespace DAO
             }
             return dsKH;
         }
+        //0812033
+        public static string TuDongLayMaKhachHang()
+        {
+            string maKhachHang = "";
+            OleDbConnection link = null;
+            try
+            {
+                link = KetNoi();
+                string chuoiLenh;
+                chuoiLenh = "select MaKH From KHACHHANG";
+                OleDbCommand lenh = new OleDbCommand(chuoiLenh, link);
+                OleDbDataReader Doc = lenh.ExecuteReader();
+                List<int> danhSachMaKhachHang = new List<int>();
+                while (Doc.Read())
+                {
+                    string strMaKhachHang = Doc.GetString(0);
+                    int iMaKhachHang = int.Parse(strMaKhachHang.Substring(2));
+                    danhSachMaKhachHang.Add(iMaKhachHang);
+
+                }
+                if (danhSachMaKhachHang.Count == 0)
+                {
+                    maKhachHang = "KH" + 1.ToString("000");
+                }
+                else
+                    maKhachHang = "KH" + (TimSoLonNhat(danhSachMaKhachHang) + 1).ToString("000");
+            }
+            catch
+            {
+                throw new Exception("Không lấy được mã khách hàng");
+            }
+            return maKhachHang;
+        }
+        private static int TimSoLonNhat(List<int> danhSach)
+        {
+            int lonNhat = danhSach[0];
+            for (int i = 1; i < danhSach.Count; i++)
+            {
+                if (danhSach[i] > lonNhat)
+                {
+                    lonNhat = danhSach[i];
+                }
+            }
+            return lonNhat;
+        }
+        public static void ThemKhachHang(KHACHHANG khachHang)
+        {
+            OleDbConnection link = null;
+            try
+            {
+                link = KetNoi();
+                string chuoiLenh = "insert into KhachHang values(@MaKhachHang,@TenKhachHang,@MaLoaiKhachHang,@DiaChi,@SoGiayTo)";
+                OleDbCommand lenh = new OleDbCommand(chuoiLenh, link);
+
+                OleDbParameter thamSo = new OleDbParameter("@MaKhachHang", OleDbType.LongVarChar);
+                thamSo.Value = khachHang.MaKH;
+                lenh.Parameters.Add(thamSo);
+                thamSo = new OleDbParameter("@TenKhachHang", OleDbType.LongVarChar);
+                thamSo.Value = khachHang.HoTen;
+                lenh.Parameters.Add(thamSo);
+                thamSo = new OleDbParameter("@MaLoaiKhachHang", OleDbType.LongVarChar);
+                thamSo.Value = khachHang.MaLoaiKH;
+                lenh.Parameters.Add(thamSo);
+                thamSo = new OleDbParameter("@DiaChi", OleDbType.LongVarChar);
+                thamSo.Value = khachHang.DiaChi;
+                lenh.Parameters.Add(thamSo);
+                thamSo = new OleDbParameter("@SoGiayTo", OleDbType.LongVarChar);
+                thamSo.Value = khachHang.SoGiayTo;
+                lenh.Parameters.Add(thamSo);
+                /*thamSo = new OleDbParameter("@DaXoa", OleDbType.LongVarChar);
+                thamSo.Value = 0;
+                lenh.Parameters.Add(thamSo);*/
+                lenh.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Không thêm khách hàng được");
+            }
+            finally
+            {
+                if (link != null && link.State == System.Data.ConnectionState.Open)
+                    link.Close();
+            }
+        }
+        //end 0812033
     }
 }

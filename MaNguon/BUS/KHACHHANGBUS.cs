@@ -83,5 +83,31 @@ namespace BUS
             }
             return dsKH;
         }
+        //0812033
+        public static string TuDongLayMaKhachHang()
+        {
+            try
+            {
+                return KHACHHANGDAO.TuDongLayMaKhachHang();
+            }
+            catch (System.Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+            
+        }
+        public static void ThemKhachHang(KHACHHANG khachHang)
+        {
+            try
+            {
+                KHACHHANGDAO.ThemKhachHang(khachHang);
+            }
+            catch (System.Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+            
+        }
+        //end 0812033
     }
 }
