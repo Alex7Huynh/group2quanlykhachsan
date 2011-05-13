@@ -170,27 +170,42 @@ namespace QLKS
         
         private void BT_Thoat_MouseLeave(object sender, EventArgs e)
         {
-            ((Button)sender).Image = null;
+            Button button_temp = (Button)sender;
+            button_temp.Location = new Point(button_temp.Location.X + 1, button_temp.Location.Y + 1);
+            button_temp.Size = new Size(button_temp.Size.Width - 2, button_temp.Size.Height - 2);
+            button_temp.Image = null;
         }
 
         private void BT_Thoat_MouseEnter(object sender, EventArgs e)
         {
-            ((Button)sender).Image = Properties.Resources.ButtonExitFocus;
+            Button button_temp = (Button)sender;
+            button_temp.Location = new Point(button_temp.Location.X - 1, button_temp.Location.Y - 1);
+            button_temp.Size = new Size(button_temp.Size.Width + 2, button_temp.Size.Height + 2);
+            button_temp.Image = Properties.Resources.ButtonExitFocus;
         }
 
         private void BT_ThuNho_MouseEnter(object sender, EventArgs e)
         {
-            ((Button)sender).Image = Properties.Resources.ButtonMinimizeFocus;
+            Button button_temp = (Button)sender;
+            button_temp.Location = new Point(button_temp.Location.X - 1, button_temp.Location.Y - 1);
+            button_temp.Size = new Size(button_temp.Size.Width + 2, button_temp.Size.Height + 2);
+            button_temp.Image = Properties.Resources.ButtonMinimizeFocus;
         }
 
         private void btnTim_MouseEnter(object sender, EventArgs e)
         {
-            ((Button)sender).Image = Properties.Resources.ButtonSearchFocus;
+            Button button_temp = (Button)sender;
+            button_temp.Location = new Point(button_temp.Location.X - 1, button_temp.Location.Y - 1);
+            button_temp.Size = new Size(button_temp.Size.Width + 2, button_temp.Size.Height + 2);
+            button_temp.Image = Properties.Resources.ButtonSearchFocus;
         }
 
         private void btnThoat_MouseEnter(object sender, EventArgs e)
         {
-            ((Button)sender).Image = Properties.Resources.ButtonQuayLaiFocus;
+            Button button_temp = (Button)sender;
+            button_temp.Location = new Point(button_temp.Location.X - 1, button_temp.Location.Y - 1);
+            button_temp.Size = new Size(button_temp.Size.Width + 2, button_temp.Size.Height + 2);
+            button_temp.Image = Properties.Resources.ButtonQuayLaiFocus;
         }
     }
 }

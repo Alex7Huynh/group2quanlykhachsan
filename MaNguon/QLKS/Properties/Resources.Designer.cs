@@ -109,6 +109,20 @@ namespace QLKS.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap ButtonDatPhong {
+            get {
+                object obj = ResourceManager.GetObject("ButtonDatPhong", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap ButtonDatPhongFocus {
+            get {
+                object obj = ResourceManager.GetObject("ButtonDatPhongFocus", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap ButtonDelete {
             get {
                 object obj = ResourceManager.GetObject("ButtonDelete", resourceCulture);
@@ -175,6 +189,20 @@ namespace QLKS.Properties {
         internal static System.Drawing.Bitmap ButtonLui {
             get {
                 object obj = ResourceManager.GetObject("ButtonLui", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap ButtonMatrixTick {
+            get {
+                object obj = ResourceManager.GetObject("ButtonMatrixTick", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap ButtonMatrixTickFocus {
+            get {
+                object obj = ResourceManager.GetObject("ButtonMatrixTickFocus", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

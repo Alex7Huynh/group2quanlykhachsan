@@ -56,11 +56,11 @@
             // 
             // tbMaKH
             // 
-            this.tbMaKH.BackColor = System.Drawing.Color.Gray;
-            this.tbMaKH.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.tbMaKH.BackColor = System.Drawing.Color.White;
+            this.tbMaKH.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbMaKH.Enabled = false;
             this.tbMaKH.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.tbMaKH.ForeColor = System.Drawing.Color.White;
+            this.tbMaKH.ForeColor = System.Drawing.Color.Black;
             this.tbMaKH.Location = new System.Drawing.Point(48, 220);
             this.tbMaKH.Name = "tbMaKH";
             this.tbMaKH.Size = new System.Drawing.Size(219, 23);
@@ -96,11 +96,11 @@
             // 
             // tbHoTen
             // 
-            this.tbHoTen.BackColor = System.Drawing.Color.Gray;
-            this.tbHoTen.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.tbHoTen.BackColor = System.Drawing.Color.White;
+            this.tbHoTen.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbHoTen.Enabled = false;
             this.tbHoTen.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.tbHoTen.ForeColor = System.Drawing.Color.White;
+            this.tbHoTen.ForeColor = System.Drawing.Color.Black;
             this.tbHoTen.Location = new System.Drawing.Point(48, 301);
             this.tbHoTen.Name = "tbHoTen";
             this.tbHoTen.Size = new System.Drawing.Size(219, 23);
@@ -122,11 +122,11 @@
             // 
             // cbLoaiKH
             // 
-            this.cbLoaiKH.BackColor = System.Drawing.Color.Gray;
+            this.cbLoaiKH.BackColor = System.Drawing.Color.White;
             this.cbLoaiKH.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.cbLoaiKH.Enabled = false;
             this.cbLoaiKH.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.cbLoaiKH.ForeColor = System.Drawing.Color.White;
+            this.cbLoaiKH.ForeColor = System.Drawing.Color.Black;
             this.cbLoaiKH.FormattingEnabled = true;
             this.cbLoaiKH.Location = new System.Drawing.Point(287, 220);
             this.cbLoaiKH.Name = "cbLoaiKH";
@@ -149,11 +149,11 @@
             // 
             // tbSoGiayTo
             // 
-            this.tbSoGiayTo.BackColor = System.Drawing.Color.Gray;
-            this.tbSoGiayTo.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.tbSoGiayTo.BackColor = System.Drawing.Color.White;
+            this.tbSoGiayTo.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbSoGiayTo.Enabled = false;
             this.tbSoGiayTo.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.tbSoGiayTo.ForeColor = System.Drawing.Color.White;
+            this.tbSoGiayTo.ForeColor = System.Drawing.Color.Black;
             this.tbSoGiayTo.Location = new System.Drawing.Point(287, 301);
             this.tbSoGiayTo.Name = "tbSoGiayTo";
             this.tbSoGiayTo.Size = new System.Drawing.Size(217, 23);
@@ -175,11 +175,11 @@
             // 
             // tbDiaChi
             // 
-            this.tbDiaChi.BackColor = System.Drawing.Color.Gray;
-            this.tbDiaChi.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.tbDiaChi.BackColor = System.Drawing.Color.White;
+            this.tbDiaChi.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbDiaChi.Enabled = false;
             this.tbDiaChi.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.tbDiaChi.ForeColor = System.Drawing.Color.White;
+            this.tbDiaChi.ForeColor = System.Drawing.Color.Black;
             this.tbDiaChi.Location = new System.Drawing.Point(526, 220);
             this.tbDiaChi.Multiline = true;
             this.tbDiaChi.Name = "tbDiaChi";
@@ -246,10 +246,11 @@
             this.btnTraCuu.BackColor = System.Drawing.Color.CornflowerBlue;
             this.btnTraCuu.BackgroundImage = global::QLKS.Properties.Resources.ButtonSearch;
             this.btnTraCuu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnTraCuu.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnTraCuu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTraCuu.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnTraCuu.ForeColor = System.Drawing.Color.White;
-            this.btnTraCuu.Location = new System.Drawing.Point(779, 203);
+            this.btnTraCuu.Location = new System.Drawing.Point(777, 200);
             this.btnTraCuu.Name = "btnTraCuu";
             this.btnTraCuu.Size = new System.Drawing.Size(188, 47);
             this.btnTraCuu.TabIndex = 11;
@@ -272,10 +273,11 @@
             this.btnQuayLai.BackColor = System.Drawing.Color.CornflowerBlue;
             this.btnQuayLai.BackgroundImage = global::QLKS.Properties.Resources.ButtonQuayLai;
             this.btnQuayLai.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnQuayLai.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnQuayLai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnQuayLai.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnQuayLai.ForeColor = System.Drawing.Color.White;
-            this.btnQuayLai.Location = new System.Drawing.Point(779, 267);
+            this.btnQuayLai.Location = new System.Drawing.Point(777, 272);
             this.btnQuayLai.Name = "btnQuayLai";
             this.btnQuayLai.Size = new System.Drawing.Size(188, 47);
             this.btnQuayLai.TabIndex = 13;

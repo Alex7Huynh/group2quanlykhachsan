@@ -34,20 +34,20 @@
             this.txtTT = new System.Windows.Forms.TextBox();
             this.txtLP = new System.Windows.Forms.TextBox();
             this.txtGC = new System.Windows.Forms.TextBox();
+            this.btnHuyBo = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.BT_ThuNho = new System.Windows.Forms.Button();
             this.BT_Thoat = new System.Windows.Forms.Button();
-            this.btnHuyBo = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // cmbMP
             // 
-            this.cmbMP.BackColor = System.Drawing.Color.Gray;
+            this.cmbMP.BackColor = System.Drawing.Color.White;
             this.cmbMP.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.cmbMP.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.cmbMP.ForeColor = System.Drawing.Color.White;
+            this.cmbMP.ForeColor = System.Drawing.Color.Black;
             this.cmbMP.FormattingEnabled = true;
             this.cmbMP.Location = new System.Drawing.Point(48, 221);
             this.cmbMP.Name = "cmbMP";
@@ -57,10 +57,10 @@
             // 
             // txtTP
             // 
-            this.txtTP.BackColor = System.Drawing.Color.Gray;
-            this.txtTP.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.txtTP.BackColor = System.Drawing.Color.White;
+            this.txtTP.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtTP.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtTP.ForeColor = System.Drawing.Color.White;
+            this.txtTP.ForeColor = System.Drawing.Color.Black;
             this.txtTP.Location = new System.Drawing.Point(48, 303);
             this.txtTP.Name = "txtTP";
             this.txtTP.Size = new System.Drawing.Size(218, 23);
@@ -68,46 +68,65 @@
             // 
             // txtTT
             // 
-            this.txtTT.BackColor = System.Drawing.Color.Gray;
-            this.txtTT.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.txtTT.BackColor = System.Drawing.Color.White;
+            this.txtTT.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtTT.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtTT.ForeColor = System.Drawing.Color.White;
-            this.txtTT.Location = new System.Drawing.Point(526, 222);
+            this.txtTT.ForeColor = System.Drawing.Color.Black;
+            this.txtTT.Location = new System.Drawing.Point(513, 221);
             this.txtTT.Name = "txtTT";
             this.txtTT.Size = new System.Drawing.Size(218, 23);
             this.txtTT.TabIndex = 4;
             // 
             // txtLP
             // 
-            this.txtLP.BackColor = System.Drawing.Color.Gray;
-            this.txtLP.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.txtLP.BackColor = System.Drawing.Color.White;
+            this.txtLP.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtLP.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtLP.ForeColor = System.Drawing.Color.White;
-            this.txtLP.Location = new System.Drawing.Point(287, 222);
+            this.txtLP.ForeColor = System.Drawing.Color.Black;
+            this.txtLP.Location = new System.Drawing.Point(280, 221);
             this.txtLP.Name = "txtLP";
             this.txtLP.Size = new System.Drawing.Size(218, 23);
             this.txtLP.TabIndex = 3;
             // 
             // txtGC
             // 
-            this.txtGC.BackColor = System.Drawing.Color.Gray;
-            this.txtGC.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.txtGC.BackColor = System.Drawing.Color.White;
+            this.txtGC.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtGC.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtGC.ForeColor = System.Drawing.Color.White;
-            this.txtGC.Location = new System.Drawing.Point(287, 303);
+            this.txtGC.ForeColor = System.Drawing.Color.Black;
+            this.txtGC.Location = new System.Drawing.Point(280, 303);
             this.txtGC.Name = "txtGC";
             this.txtGC.Size = new System.Drawing.Size(218, 23);
             this.txtGC.TabIndex = 5;
+            // 
+            // btnHuyBo
+            // 
+            this.btnHuyBo.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnHuyBo.BackgroundImage = global::QLKS.Properties.Resources.ButtonQuayLai;
+            this.btnHuyBo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnHuyBo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnHuyBo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHuyBo.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnHuyBo.ForeColor = System.Drawing.Color.White;
+            this.btnHuyBo.Location = new System.Drawing.Point(768, 272);
+            this.btnHuyBo.Name = "btnHuyBo";
+            this.btnHuyBo.Size = new System.Drawing.Size(188, 47);
+            this.btnHuyBo.TabIndex = 7;
+            this.btnHuyBo.UseVisualStyleBackColor = false;
+            this.btnHuyBo.MouseLeave += new System.EventHandler(this.BT_Thoat_MouseLeave);
+            this.btnHuyBo.Click += new System.EventHandler(this.btnHuyBo_Click);
+            this.btnHuyBo.MouseEnter += new System.EventHandler(this.btnHuyBo_MouseEnter);
             // 
             // btnSua
             // 
             this.btnSua.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnSua.BackgroundImage = global::QLKS.Properties.Resources.ButtonFix;
             this.btnSua.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSua.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSua.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnSua.ForeColor = System.Drawing.Color.White;
-            this.btnSua.Location = new System.Drawing.Point(781, 199);
+            this.btnSua.Location = new System.Drawing.Point(768, 198);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(188, 47);
             this.btnSua.TabIndex = 6;
@@ -150,26 +169,9 @@
             this.BT_Thoat.Click += new System.EventHandler(this.BT_Thoat_Click);
             this.BT_Thoat.MouseEnter += new System.EventHandler(this.BT_Thoat_MouseEnter);
             // 
-            // btnHuyBo
-            // 
-            this.btnHuyBo.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnHuyBo.BackgroundImage = global::QLKS.Properties.Resources.ButtonQuayLai;
-            this.btnHuyBo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnHuyBo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHuyBo.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnHuyBo.ForeColor = System.Drawing.Color.White;
-            this.btnHuyBo.Location = new System.Drawing.Point(781, 272);
-            this.btnHuyBo.Name = "btnHuyBo";
-            this.btnHuyBo.Size = new System.Drawing.Size(188, 47);
-            this.btnHuyBo.TabIndex = 7;
-            this.btnHuyBo.UseVisualStyleBackColor = false;
-            this.btnHuyBo.MouseLeave += new System.EventHandler(this.BT_Thoat_MouseLeave);
-            this.btnHuyBo.Click += new System.EventHandler(this.btnHuyBo_Click);
-            this.btnHuyBo.MouseEnter += new System.EventHandler(this.btnHuyBo_MouseEnter);
-            // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Image = global::QLKS.Properties.Resources.MHSuaPhong;
             this.pictureBox1.Location = new System.Drawing.Point(0, 21);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(1024, 768);
