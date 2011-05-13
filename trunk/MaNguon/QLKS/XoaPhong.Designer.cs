@@ -96,10 +96,11 @@
             this.btnThoat.BackColor = System.Drawing.Color.CornflowerBlue;
             this.btnThoat.BackgroundImage = global::QLKS.Properties.Resources.ButtonQuayLai;
             this.btnThoat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnThoat.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnThoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThoat.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnThoat.ForeColor = System.Drawing.Color.White;
-            this.btnThoat.Location = new System.Drawing.Point(609, 183);
+            this.btnThoat.Location = new System.Drawing.Point(624, 183);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(188, 47);
             this.btnThoat.TabIndex = 3;
@@ -113,10 +114,11 @@
             this.btnXoa.BackColor = System.Drawing.Color.CornflowerBlue;
             this.btnXoa.BackgroundImage = global::QLKS.Properties.Resources.ButtonXoa;
             this.btnXoa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnXoa.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnXoa.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnXoa.ForeColor = System.Drawing.Color.White;
-            this.btnXoa.Location = new System.Drawing.Point(228, 183);
+            this.btnXoa.Location = new System.Drawing.Point(232, 183);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(188, 47);
             this.btnXoa.TabIndex = 2;

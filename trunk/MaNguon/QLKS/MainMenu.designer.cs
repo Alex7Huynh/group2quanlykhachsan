@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainMenu));
+            this.BT_SoDoPhieuThue = new System.Windows.Forms.Button();
             this.BT_TCKH = new System.Windows.Forms.Button();
             this.BT_BCDoanhThu = new System.Windows.Forms.Button();
             this.BT_DatPhong = new System.Windows.Forms.Button();
@@ -40,9 +41,25 @@
             this.BT_ThuNho = new System.Windows.Forms.Button();
             this.BT_Thoat = new System.Windows.Forms.Button();
             this.PB_MainMenu = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.PB_MainMenu)).BeginInit();
             this.SuspendLayout();
+            // 
+            // BT_SoDoPhieuThue
+            // 
+            this.BT_SoDoPhieuThue.BackgroundImage = global::QLKS.Properties.Resources.ButtonMatrixTick;
+            this.BT_SoDoPhieuThue.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BT_SoDoPhieuThue.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BT_SoDoPhieuThue.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BT_SoDoPhieuThue.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.BT_SoDoPhieuThue.ForeColor = System.Drawing.Color.Snow;
+            this.BT_SoDoPhieuThue.Location = new System.Drawing.Point(541, 368);
+            this.BT_SoDoPhieuThue.Name = "BT_SoDoPhieuThue";
+            this.BT_SoDoPhieuThue.Size = new System.Drawing.Size(188, 47);
+            this.BT_SoDoPhieuThue.TabIndex = 102;
+            this.BT_SoDoPhieuThue.UseVisualStyleBackColor = true;
+            this.BT_SoDoPhieuThue.MouseLeave += new System.EventHandler(this.BT_ThemPhong_MouseLeave);
+            this.BT_SoDoPhieuThue.Click += new System.EventHandler(this.PB_DatPhong_Click);
+            this.BT_SoDoPhieuThue.MouseEnter += new System.EventHandler(this.BT_SoDoPhieuThue_MouseEnter);
             // 
             // BT_TCKH
             // 
@@ -55,7 +72,7 @@
             this.BT_TCKH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BT_TCKH.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.BT_TCKH.ForeColor = System.Drawing.Color.Snow;
-            this.BT_TCKH.Location = new System.Drawing.Point(307, 441);
+            this.BT_TCKH.Location = new System.Drawing.Point(307, 423);
             this.BT_TCKH.Name = "BT_TCKH";
             this.BT_TCKH.Size = new System.Drawing.Size(188, 47);
             this.BT_TCKH.TabIndex = 6;
@@ -75,7 +92,7 @@
             this.BT_BCDoanhThu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BT_BCDoanhThu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.BT_BCDoanhThu.ForeColor = System.Drawing.Color.Snow;
-            this.BT_BCDoanhThu.Location = new System.Drawing.Point(773, 323);
+            this.BT_BCDoanhThu.Location = new System.Drawing.Point(773, 314);
             this.BT_BCDoanhThu.Name = "BT_BCDoanhThu";
             this.BT_BCDoanhThu.Size = new System.Drawing.Size(188, 47);
             this.BT_BCDoanhThu.TabIndex = 8;
@@ -95,13 +112,13 @@
             this.BT_DatPhong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BT_DatPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.BT_DatPhong.ForeColor = System.Drawing.Color.Snow;
-            this.BT_DatPhong.Location = new System.Drawing.Point(541, 323);
+            this.BT_DatPhong.Location = new System.Drawing.Point(541, 314);
             this.BT_DatPhong.Name = "BT_DatPhong";
             this.BT_DatPhong.Size = new System.Drawing.Size(188, 47);
             this.BT_DatPhong.TabIndex = 7;
             this.BT_DatPhong.UseVisualStyleBackColor = false;
             this.BT_DatPhong.MouseLeave += new System.EventHandler(this.BT_ThemPhong_MouseLeave);
-            this.BT_DatPhong.Click += new System.EventHandler(this.PB_DatPhong_Click);
+            this.BT_DatPhong.Click += new System.EventHandler(this.button1_Click);
             this.BT_DatPhong.MouseEnter += new System.EventHandler(this.BT_DatPhong_MouseEnter);
             // 
             // BT_TCPhieuThue
@@ -115,7 +132,7 @@
             this.BT_TCPhieuThue.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BT_TCPhieuThue.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.BT_TCPhieuThue.ForeColor = System.Drawing.Color.Snow;
-            this.BT_TCPhieuThue.Location = new System.Drawing.Point(307, 382);
+            this.BT_TCPhieuThue.Location = new System.Drawing.Point(307, 368);
             this.BT_TCPhieuThue.Name = "BT_TCPhieuThue";
             this.BT_TCPhieuThue.Size = new System.Drawing.Size(188, 47);
             this.BT_TCPhieuThue.TabIndex = 5;
@@ -135,7 +152,7 @@
             this.BT_TCPhong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BT_TCPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.BT_TCPhong.ForeColor = System.Drawing.Color.Snow;
-            this.BT_TCPhong.Location = new System.Drawing.Point(307, 323);
+            this.BT_TCPhong.Location = new System.Drawing.Point(307, 314);
             this.BT_TCPhong.Name = "BT_TCPhong";
             this.BT_TCPhong.Size = new System.Drawing.Size(188, 47);
             this.BT_TCPhong.TabIndex = 4;
@@ -155,7 +172,7 @@
             this.BT_SuaPhong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BT_SuaPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.BT_SuaPhong.ForeColor = System.Drawing.Color.Snow;
-            this.BT_SuaPhong.Location = new System.Drawing.Point(73, 441);
+            this.BT_SuaPhong.Location = new System.Drawing.Point(73, 423);
             this.BT_SuaPhong.Name = "BT_SuaPhong";
             this.BT_SuaPhong.Size = new System.Drawing.Size(188, 47);
             this.BT_SuaPhong.TabIndex = 3;
@@ -175,7 +192,7 @@
             this.BT_XoaPhong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BT_XoaPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.BT_XoaPhong.ForeColor = System.Drawing.Color.Snow;
-            this.BT_XoaPhong.Location = new System.Drawing.Point(73, 382);
+            this.BT_XoaPhong.Location = new System.Drawing.Point(73, 368);
             this.BT_XoaPhong.Name = "BT_XoaPhong";
             this.BT_XoaPhong.Size = new System.Drawing.Size(188, 47);
             this.BT_XoaPhong.TabIndex = 2;
@@ -195,7 +212,7 @@
             this.BT_ThemPhong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BT_ThemPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.BT_ThemPhong.ForeColor = System.Drawing.Color.Snow;
-            this.BT_ThemPhong.Location = new System.Drawing.Point(73, 323);
+            this.BT_ThemPhong.Location = new System.Drawing.Point(73, 314);
             this.BT_ThemPhong.Name = "BT_ThemPhong";
             this.BT_ThemPhong.Size = new System.Drawing.Size(188, 47);
             this.BT_ThemPhong.TabIndex = 1;
@@ -249,16 +266,6 @@
             this.PB_MainMenu.TabIndex = 13;
             this.PB_MainMenu.TabStop = false;
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(593, 382);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 102;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -266,7 +273,7 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1024, 784);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.BT_SoDoPhieuThue);
             this.Controls.Add(this.BT_TCKH);
             this.Controls.Add(this.BT_BCDoanhThu);
             this.Controls.Add(this.BT_DatPhong);
@@ -304,6 +311,6 @@
         private System.Windows.Forms.Button BT_DatPhong;
         private System.Windows.Forms.Button BT_BCDoanhThu;
         private System.Windows.Forms.Button BT_TCKH;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button BT_SoDoPhieuThue;
     }
 }

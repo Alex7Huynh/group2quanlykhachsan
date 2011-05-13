@@ -32,15 +32,15 @@
             this.txtMaPhong = new System.Windows.Forms.TextBox();
             this.txtTenPhong = new System.Windows.Forms.TextBox();
             this.dtgDanhSachPhong = new System.Windows.Forms.DataGridView();
-            this.btnThoat = new System.Windows.Forms.Button();
-            this.cmbLoaiPhong = new System.Windows.Forms.ComboBox();
-            this.txtTinhTrang = new System.Windows.Forms.TextBox();
-            this.cbxTimChinhXac = new System.Windows.Forms.CheckBox();
             this.cMaPhong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cTenPhong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cMaLoaiPhong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cGhiChu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cTinhTrang = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cmbLoaiPhong = new System.Windows.Forms.ComboBox();
+            this.txtTinhTrang = new System.Windows.Forms.TextBox();
+            this.cbxTimChinhXac = new System.Windows.Forms.CheckBox();
+            this.btnThoat = new System.Windows.Forms.Button();
             this.btnTim = new System.Windows.Forms.Button();
             this.BT_ThuNho = new System.Windows.Forms.Button();
             this.BT_Thoat = new System.Windows.Forms.Button();
@@ -51,24 +51,24 @@
             // 
             // txtMaPhong
             // 
-            this.txtMaPhong.BackColor = System.Drawing.Color.Gray;
-            this.txtMaPhong.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.txtMaPhong.BackColor = System.Drawing.Color.White;
+            this.txtMaPhong.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtMaPhong.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtMaPhong.ForeColor = System.Drawing.Color.White;
-            this.txtMaPhong.Location = new System.Drawing.Point(48, 222);
+            this.txtMaPhong.ForeColor = System.Drawing.Color.Black;
+            this.txtMaPhong.Location = new System.Drawing.Point(51, 222);
             this.txtMaPhong.Name = "txtMaPhong";
-            this.txtMaPhong.Size = new System.Drawing.Size(273, 23);
+            this.txtMaPhong.Size = new System.Drawing.Size(193, 23);
             this.txtMaPhong.TabIndex = 1;
             // 
             // txtTenPhong
             // 
-            this.txtTenPhong.BackColor = System.Drawing.Color.Gray;
-            this.txtTenPhong.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.txtTenPhong.BackColor = System.Drawing.Color.White;
+            this.txtTenPhong.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtTenPhong.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtTenPhong.ForeColor = System.Drawing.Color.White;
-            this.txtTenPhong.Location = new System.Drawing.Point(48, 303);
+            this.txtTenPhong.ForeColor = System.Drawing.Color.Black;
+            this.txtTenPhong.Location = new System.Drawing.Point(51, 303);
             this.txtTenPhong.Name = "txtTenPhong";
-            this.txtTenPhong.Size = new System.Drawing.Size(273, 23);
+            this.txtTenPhong.Size = new System.Drawing.Size(193, 23);
             this.txtTenPhong.TabIndex = 2;
             // 
             // dtgDanhSachPhong
@@ -84,66 +84,12 @@
             this.dtgDanhSachPhong.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dtgDanhSachPhong.EnableHeadersVisualStyles = false;
             this.dtgDanhSachPhong.GridColor = System.Drawing.Color.Orange;
-            this.dtgDanhSachPhong.Location = new System.Drawing.Point(48, 426);
+            this.dtgDanhSachPhong.Location = new System.Drawing.Point(49, 372);
             this.dtgDanhSachPhong.Name = "dtgDanhSachPhong";
             this.dtgDanhSachPhong.RowHeadersVisible = false;
-            this.dtgDanhSachPhong.Size = new System.Drawing.Size(929, 295);
+            this.dtgDanhSachPhong.Size = new System.Drawing.Size(927, 349);
             this.dtgDanhSachPhong.TabIndex = 8;
             this.dtgDanhSachPhong.Paint += new System.Windows.Forms.PaintEventHandler(this.dtgDanhSachPhong_Paint);
-            // 
-            // btnThoat
-            // 
-            this.btnThoat.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnThoat.BackgroundImage = global::QLKS.Properties.Resources.ButtonQuayLai;
-            this.btnThoat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnThoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThoat.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnThoat.ForeColor = System.Drawing.Color.White;
-            this.btnThoat.Location = new System.Drawing.Point(721, 264);
-            this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(188, 47);
-            this.btnThoat.TabIndex = 7;
-            this.btnThoat.UseVisualStyleBackColor = false;
-            this.btnThoat.MouseLeave += new System.EventHandler(this.BT_Thoat_MouseLeave);
-            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
-            this.btnThoat.MouseEnter += new System.EventHandler(this.btnThoat_MouseEnter);
-            // 
-            // cmbLoaiPhong
-            // 
-            this.cmbLoaiPhong.BackColor = System.Drawing.Color.Gray;
-            this.cmbLoaiPhong.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.cmbLoaiPhong.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbLoaiPhong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbLoaiPhong.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.cmbLoaiPhong.ForeColor = System.Drawing.Color.White;
-            this.cmbLoaiPhong.FormattingEnabled = true;
-            this.cmbLoaiPhong.Location = new System.Drawing.Point(346, 222);
-            this.cmbLoaiPhong.Name = "cmbLoaiPhong";
-            this.cmbLoaiPhong.Size = new System.Drawing.Size(272, 24);
-            this.cmbLoaiPhong.TabIndex = 3;
-            // 
-            // txtTinhTrang
-            // 
-            this.txtTinhTrang.BackColor = System.Drawing.Color.Gray;
-            this.txtTinhTrang.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.txtTinhTrang.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtTinhTrang.ForeColor = System.Drawing.Color.White;
-            this.txtTinhTrang.Location = new System.Drawing.Point(346, 303);
-            this.txtTinhTrang.Name = "txtTinhTrang";
-            this.txtTinhTrang.Size = new System.Drawing.Size(272, 23);
-            this.txtTinhTrang.TabIndex = 4;
-            // 
-            // cbxTimChinhXac
-            // 
-            this.cbxTimChinhXac.AutoSize = true;
-            this.cbxTimChinhXac.BackColor = System.Drawing.Color.White;
-            this.cbxTimChinhXac.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.cbxTimChinhXac.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.cbxTimChinhXac.Location = new System.Drawing.Point(432, 376);
-            this.cbxTimChinhXac.Name = "cbxTimChinhXac";
-            this.cbxTimChinhXac.Size = new System.Drawing.Size(15, 14);
-            this.cbxTimChinhXac.TabIndex = 5;
-            this.cbxTimChinhXac.UseVisualStyleBackColor = false;
             // 
             // cMaPhong
             // 
@@ -180,15 +126,71 @@
             this.cTinhTrang.ReadOnly = true;
             this.cTinhTrang.Width = 150;
             // 
+            // cmbLoaiPhong
+            // 
+            this.cmbLoaiPhong.BackColor = System.Drawing.Color.White;
+            this.cmbLoaiPhong.Cursor = System.Windows.Forms.Cursors.Default;
+            this.cmbLoaiPhong.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbLoaiPhong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbLoaiPhong.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.cmbLoaiPhong.ForeColor = System.Drawing.Color.Black;
+            this.cmbLoaiPhong.FormattingEnabled = true;
+            this.cmbLoaiPhong.Location = new System.Drawing.Point(283, 222);
+            this.cmbLoaiPhong.Name = "cmbLoaiPhong";
+            this.cmbLoaiPhong.Size = new System.Drawing.Size(194, 24);
+            this.cmbLoaiPhong.TabIndex = 3;
+            // 
+            // txtTinhTrang
+            // 
+            this.txtTinhTrang.BackColor = System.Drawing.Color.White;
+            this.txtTinhTrang.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTinhTrang.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtTinhTrang.ForeColor = System.Drawing.Color.Black;
+            this.txtTinhTrang.Location = new System.Drawing.Point(283, 303);
+            this.txtTinhTrang.Name = "txtTinhTrang";
+            this.txtTinhTrang.Size = new System.Drawing.Size(194, 23);
+            this.txtTinhTrang.TabIndex = 4;
+            // 
+            // cbxTimChinhXac
+            // 
+            this.cbxTimChinhXac.AutoSize = true;
+            this.cbxTimChinhXac.BackColor = System.Drawing.Color.White;
+            this.cbxTimChinhXac.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.cbxTimChinhXac.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.cbxTimChinhXac.Location = new System.Drawing.Point(545, 190);
+            this.cbxTimChinhXac.Name = "cbxTimChinhXac";
+            this.cbxTimChinhXac.Size = new System.Drawing.Size(15, 14);
+            this.cbxTimChinhXac.TabIndex = 5;
+            this.cbxTimChinhXac.UseVisualStyleBackColor = false;
+            // 
+            // btnThoat
+            // 
+            this.btnThoat.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnThoat.BackgroundImage = global::QLKS.Properties.Resources.ButtonQuayLai;
+            this.btnThoat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnThoat.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnThoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThoat.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnThoat.ForeColor = System.Drawing.Color.White;
+            this.btnThoat.Location = new System.Drawing.Point(768, 272);
+            this.btnThoat.Name = "btnThoat";
+            this.btnThoat.Size = new System.Drawing.Size(188, 47);
+            this.btnThoat.TabIndex = 7;
+            this.btnThoat.UseVisualStyleBackColor = false;
+            this.btnThoat.MouseLeave += new System.EventHandler(this.BT_Thoat_MouseLeave);
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
+            this.btnThoat.MouseEnter += new System.EventHandler(this.btnThoat_MouseEnter);
+            // 
             // btnTim
             // 
             this.btnTim.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnTim.BackgroundImage = global::QLKS.Properties.Resources.ButtonSearch;
             this.btnTim.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnTim.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnTim.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTim.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnTim.ForeColor = System.Drawing.Color.White;
-            this.btnTim.Location = new System.Drawing.Point(721, 198);
+            this.btnTim.Location = new System.Drawing.Point(768, 198);
             this.btnTim.Name = "btnTim";
             this.btnTim.Size = new System.Drawing.Size(188, 47);
             this.btnTim.TabIndex = 6;

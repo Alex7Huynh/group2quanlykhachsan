@@ -427,6 +427,18 @@
   <ItemGroup>
     <None Include="Resources\MHTraCuuKhachHang.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ButtonMatrixTick.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ButtonMatrixTickFocus.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ButtonDatPhong.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ButtonDatPhongFocus.gif" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

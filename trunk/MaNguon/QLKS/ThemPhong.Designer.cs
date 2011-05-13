@@ -52,44 +52,44 @@
             // 
             // txtMP
             // 
-            this.txtMP.BackColor = System.Drawing.Color.Gray;
-            this.txtMP.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.txtMP.BackColor = System.Drawing.Color.White;
+            this.txtMP.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtMP.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtMP.ForeColor = System.Drawing.Color.White;
-            this.txtMP.Location = new System.Drawing.Point(48, 221);
+            this.txtMP.ForeColor = System.Drawing.Color.Black;
+            this.txtMP.Location = new System.Drawing.Point(49, 221);
             this.txtMP.Name = "txtMP";
             this.txtMP.Size = new System.Drawing.Size(217, 23);
             this.txtMP.TabIndex = 1;
             // 
             // txtTen
             // 
-            this.txtTen.BackColor = System.Drawing.Color.Gray;
-            this.txtTen.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.txtTen.BackColor = System.Drawing.Color.White;
+            this.txtTen.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtTen.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtTen.ForeColor = System.Drawing.Color.White;
-            this.txtTen.Location = new System.Drawing.Point(48, 302);
+            this.txtTen.ForeColor = System.Drawing.Color.Black;
+            this.txtTen.Location = new System.Drawing.Point(49, 302);
             this.txtTen.Name = "txtTen";
             this.txtTen.Size = new System.Drawing.Size(217, 23);
             this.txtTen.TabIndex = 3;
             // 
             // txtGhiChu
             // 
-            this.txtGhiChu.BackColor = System.Drawing.Color.Gray;
-            this.txtGhiChu.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.txtGhiChu.BackColor = System.Drawing.Color.White;
+            this.txtGhiChu.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtGhiChu.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtGhiChu.ForeColor = System.Drawing.Color.White;
-            this.txtGhiChu.Location = new System.Drawing.Point(288, 302);
+            this.txtGhiChu.ForeColor = System.Drawing.Color.Black;
+            this.txtGhiChu.Location = new System.Drawing.Point(294, 302);
             this.txtGhiChu.Name = "txtGhiChu";
             this.txtGhiChu.Size = new System.Drawing.Size(217, 23);
             this.txtGhiChu.TabIndex = 4;
             // 
             // txtTT
             // 
-            this.txtTT.BackColor = System.Drawing.Color.Gray;
-            this.txtTT.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.txtTT.BackColor = System.Drawing.Color.White;
+            this.txtTT.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtTT.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtTT.ForeColor = System.Drawing.Color.White;
-            this.txtTT.Location = new System.Drawing.Point(526, 222);
+            this.txtTT.ForeColor = System.Drawing.Color.Black;
+            this.txtTT.Location = new System.Drawing.Point(539, 222);
             this.txtTT.Name = "txtTT";
             this.txtTT.Size = new System.Drawing.Size(217, 23);
             this.txtTT.TabIndex = 5;
@@ -107,10 +107,10 @@
             this.dataGridView1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dataGridView1.EnableHeadersVisualStyles = false;
             this.dataGridView1.GridColor = System.Drawing.Color.YellowGreen;
-            this.dataGridView1.Location = new System.Drawing.Point(48, 369);
+            this.dataGridView1.Location = new System.Drawing.Point(48, 361);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.Size = new System.Drawing.Size(929, 351);
+            this.dataGridView1.Size = new System.Drawing.Size(929, 359);
             this.dataGridView1.TabIndex = 6;
             this.dataGridView1.Paint += new System.Windows.Forms.PaintEventHandler(this.dataGridView1_Paint);
             // 
@@ -146,12 +146,12 @@
             // 
             // cmbLoai
             // 
-            this.cmbLoai.BackColor = System.Drawing.Color.Gray;
-            this.cmbLoai.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.cmbLoai.BackColor = System.Drawing.Color.White;
+            this.cmbLoai.Cursor = System.Windows.Forms.Cursors.Default;
             this.cmbLoai.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.cmbLoai.ForeColor = System.Drawing.Color.White;
+            this.cmbLoai.ForeColor = System.Drawing.Color.Black;
             this.cmbLoai.FormattingEnabled = true;
-            this.cmbLoai.Location = new System.Drawing.Point(288, 221);
+            this.cmbLoai.Location = new System.Drawing.Point(294, 221);
             this.cmbLoai.Name = "cmbLoai";
             this.cmbLoai.Size = new System.Drawing.Size(217, 24);
             this.cmbLoai.TabIndex = 2;
@@ -165,7 +165,7 @@
             this.btnOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOK.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnOK.ForeColor = System.Drawing.Color.White;
-            this.btnOK.Location = new System.Drawing.Point(778, 287);
+            this.btnOK.Location = new System.Drawing.Point(786, 289);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(188, 47);
             this.btnOK.TabIndex = 9;
@@ -183,7 +183,7 @@
             this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnXoa.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnXoa.ForeColor = System.Drawing.Color.White;
-            this.btnXoa.Location = new System.Drawing.Point(778, 233);
+            this.btnXoa.Location = new System.Drawing.Point(786, 234);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(188, 47);
             this.btnXoa.TabIndex = 8;
@@ -201,7 +201,7 @@
             this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThem.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnThem.ForeColor = System.Drawing.Color.White;
-            this.btnThem.Location = new System.Drawing.Point(778, 181);
+            this.btnThem.Location = new System.Drawing.Point(786, 180);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(188, 47);
             this.btnThem.TabIndex = 7;

@@ -156,63 +156,107 @@ namespace QLKS
 
         private void BT_ThemPhong_MouseEnter(object sender, EventArgs e)
         {
-            ((Button)sender).Image = Properties.Resources.ButtonAddFocus;
+            Button button_temp = (Button)sender;
+            button_temp.Location = new Point(button_temp.Location.X - 1, button_temp.Location.Y - 1);
+            button_temp.Size = new Size(button_temp.Size.Width + 2, button_temp.Size.Height + 2);
+            button_temp.Image = Properties.Resources.ButtonAddFocus;
         }
 
         private void BT_ThemPhong_MouseLeave(object sender, EventArgs e)
         {
-            ((Button)sender).Image = null;
+            Button button_temp = (Button)sender;
+            button_temp.Location = new Point(button_temp.Location.X + 1, button_temp.Location.Y + 1);
+            button_temp.Size = new Size(button_temp.Size.Width - 2, button_temp.Size.Height - 2);
+            button_temp.Image = null;
         }
 
         private void BT_XoaPhong_MouseEnter(object sender, EventArgs e)
         {
-            ((Button)sender).Image = Properties.Resources.ButtonDeleteFocus;
+            Button button_temp = (Button)sender;
+            button_temp.Location = new Point(button_temp.Location.X - 1, button_temp.Location.Y - 1);
+            button_temp.Size = new Size(button_temp.Size.Width + 2, button_temp.Size.Height + 2);
+            button_temp.Image = Properties.Resources.ButtonDeleteFocus;
         }
 
         private void BT_SuaPhong_MouseEnter(object sender, EventArgs e)
         {
-            ((Button)sender).Image = Properties.Resources.ButtonFixFocus;
+            Button button_temp = (Button)sender;
+            button_temp.Location = new Point(button_temp.Location.X - 1, button_temp.Location.Y - 1);
+            button_temp.Size = new Size(button_temp.Size.Width + 2, button_temp.Size.Height + 2);
+            button_temp.Image = Properties.Resources.ButtonFixFocus;
         }
 
         private void BT_TCPhong_MouseEnter(object sender, EventArgs e)
         {
-            ((Button)sender).Image = Properties.Resources.ButtonRoomFocus;
+            Button button_temp = (Button)sender;
+            button_temp.Location = new Point(button_temp.Location.X - 1, button_temp.Location.Y - 1);
+            button_temp.Size = new Size(button_temp.Size.Width + 2, button_temp.Size.Height + 2);
+            button_temp.Image = Properties.Resources.ButtonRoomFocus;
         }
 
         private void BT_TCPhieuThue_MouseEnter(object sender, EventArgs e)
         {
-            ((Button)sender).Image = Properties.Resources.ButtonTickFocus;
+            Button button_temp = (Button)sender;
+            button_temp.Location = new Point(button_temp.Location.X - 1, button_temp.Location.Y - 1);
+            button_temp.Size = new Size(button_temp.Size.Width + 2, button_temp.Size.Height + 2);
+            button_temp.Image = Properties.Resources.ButtonTickFocus;
         }
 
         private void BT_TCKH_MouseEnter(object sender, EventArgs e)
         {
-            ((Button)sender).Image = Properties.Resources.ButtonCustomerFocus;
+            Button button_temp = (Button)sender;
+            button_temp.Location = new Point(button_temp.Location.X - 1, button_temp.Location.Y - 1);
+            button_temp.Size = new Size(button_temp.Size.Width + 2, button_temp.Size.Height + 2);
+            button_temp.Image = Properties.Resources.ButtonCustomerFocus;
         }
 
         private void BT_DatPhong_MouseEnter(object sender, EventArgs e)
         {
-            ((Button)sender).Image = Properties.Resources.ButtonCheckedFocus;
+            Button button_temp = (Button)sender;
+            button_temp.Location = new Point(button_temp.Location.X - 1, button_temp.Location.Y - 1);
+            button_temp.Size = new Size(button_temp.Size.Width + 2, button_temp.Size.Height + 2);
+            button_temp.Image = Properties.Resources.ButtonCheckedFocus;
         }
 
         private void BT_BCDoanhThu_MouseEnter(object sender, EventArgs e)
         {
-            ((Button)sender).Image = Properties.Resources.ButtonMoneyReportFocus;
+            Button button_temp = (Button)sender;
+            button_temp.Location = new Point(button_temp.Location.X - 1, button_temp.Location.Y - 1);
+            button_temp.Size = new Size(button_temp.Size.Width + 2, button_temp.Size.Height + 2);
+            button_temp.Image = Properties.Resources.ButtonMoneyReportFocus;
         }
 
         private void BT_ThuNho_MouseEnter(object sender, EventArgs e)
         {
-            ((Button)sender).Image = Properties.Resources.ButtonMinimizeFocus;
+            Button button_temp = (Button)sender;
+            button_temp.Location = new Point(button_temp.Location.X - 1, button_temp.Location.Y - 1);
+            button_temp.Size = new Size(button_temp.Size.Width + 2, button_temp.Size.Height + 2);
+            button_temp.Image = Properties.Resources.ButtonMinimizeFocus;
         }
 
         private void BT_Thoat_MouseEnter(object sender, EventArgs e)
         {
-            ((Button)sender).Image = Properties.Resources.ButtonExitFocus;
+            Button button_temp = (Button)sender;
+            button_temp.Location = new Point(button_temp.Location.X - 1, button_temp.Location.Y - 1);
+            button_temp.Size = new Size(button_temp.Size.Width + 2, button_temp.Size.Height + 2);
+            button_temp.Image = Properties.Resources.ButtonExitFocus;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             TiepNhanDatPhong frmDatPhong = new TiepNhanDatPhong();
             frmDatPhong.Show();
+            frmDatPhong.Location = Location;
+            frmDatPhong.ParentForm = this;
+            this.Visible = false;
+        }
+
+        private void BT_SoDoPhieuThue_MouseEnter(object sender, EventArgs e)
+        {
+            Button button_temp = (Button)sender;
+            button_temp.Location = new Point(button_temp.Location.X - 1, button_temp.Location.Y - 1);
+            button_temp.Size = new Size(button_temp.Size.Width + 2, button_temp.Size.Height + 2);
+            button_temp.Image = Properties.Resources.ButtonMatrixTickFocus;
         }         
     }
 }

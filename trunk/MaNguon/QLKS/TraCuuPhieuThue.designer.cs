@@ -56,10 +56,10 @@
             // 
             // txtMaPhieuThue
             // 
-            this.txtMaPhieuThue.BackColor = System.Drawing.Color.Gray;
-            this.txtMaPhieuThue.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.txtMaPhieuThue.BackColor = System.Drawing.Color.White;
+            this.txtMaPhieuThue.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtMaPhieuThue.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtMaPhieuThue.ForeColor = System.Drawing.Color.White;
+            this.txtMaPhieuThue.ForeColor = System.Drawing.Color.Black;
             this.txtMaPhieuThue.Location = new System.Drawing.Point(48, 221);
             this.txtMaPhieuThue.Name = "txtMaPhieuThue";
             this.txtMaPhieuThue.Size = new System.Drawing.Size(225, 23);
@@ -67,10 +67,10 @@
             // 
             // txtTenPhong
             // 
-            this.txtTenPhong.BackColor = System.Drawing.Color.Gray;
-            this.txtTenPhong.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.txtTenPhong.BackColor = System.Drawing.Color.White;
+            this.txtTenPhong.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtTenPhong.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtTenPhong.ForeColor = System.Drawing.Color.White;
+            this.txtTenPhong.ForeColor = System.Drawing.Color.Black;
             this.txtTenPhong.Location = new System.Drawing.Point(48, 361);
             this.txtTenPhong.Name = "txtTenPhong";
             this.txtTenPhong.Size = new System.Drawing.Size(225, 23);
@@ -144,6 +144,7 @@
             this.btnTim.BackColor = System.Drawing.Color.CornflowerBlue;
             this.btnTim.BackgroundImage = global::QLKS.Properties.Resources.ButtonSearch;
             this.btnTim.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnTim.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnTim.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTim.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnTim.ForeColor = System.Drawing.Color.White;
@@ -161,6 +162,7 @@
             this.btnThoat.BackColor = System.Drawing.Color.CornflowerBlue;
             this.btnThoat.BackgroundImage = global::QLKS.Properties.Resources.ButtonQuayLai;
             this.btnThoat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnThoat.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnThoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThoat.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnThoat.ForeColor = System.Drawing.Color.White;
@@ -175,10 +177,10 @@
             // 
             // txtTenKhachDaiDien
             // 
-            this.txtTenKhachDaiDien.BackColor = System.Drawing.Color.Gray;
-            this.txtTenKhachDaiDien.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.txtTenKhachDaiDien.BackColor = System.Drawing.Color.White;
+            this.txtTenKhachDaiDien.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtTenKhachDaiDien.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtTenKhachDaiDien.ForeColor = System.Drawing.Color.White;
+            this.txtTenKhachDaiDien.ForeColor = System.Drawing.Color.Black;
             this.txtTenKhachDaiDien.Location = new System.Drawing.Point(288, 361);
             this.txtTenKhachDaiDien.Name = "txtTenKhachDaiDien";
             this.txtTenKhachDaiDien.Size = new System.Drawing.Size(220, 23);
@@ -195,10 +197,10 @@
             // 
             // nudSoNgayThue
             // 
-            this.nudSoNgayThue.BackColor = System.Drawing.Color.Gray;
-            this.nudSoNgayThue.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.nudSoNgayThue.BackColor = System.Drawing.Color.White;
+            this.nudSoNgayThue.Cursor = System.Windows.Forms.Cursors.Default;
             this.nudSoNgayThue.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.nudSoNgayThue.ForeColor = System.Drawing.Color.White;
+            this.nudSoNgayThue.ForeColor = System.Drawing.Color.Black;
             this.nudSoNgayThue.Location = new System.Drawing.Point(523, 361);
             this.nudSoNgayThue.Name = "nudSoNgayThue";
             this.nudSoNgayThue.Size = new System.Drawing.Size(218, 23);
