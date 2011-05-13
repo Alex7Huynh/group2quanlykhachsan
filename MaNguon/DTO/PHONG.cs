@@ -44,6 +44,13 @@ namespace DTO
             set { tinhTrang = value; }
         }
         private string daXoa;
+        private int soNguoiToiDa;
+
+        public int SoNguoiToiDa
+        {
+            get { return soNguoiToiDa; }
+            set { soNguoiToiDa = value; }
+        }
 
         public string DaXoa
         {

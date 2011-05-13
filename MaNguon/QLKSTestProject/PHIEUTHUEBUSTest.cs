@@ -344,7 +344,7 @@ namespace QLKSTestProject
             int viTriLoaiPhong = 0; // TODO: Initialize to an appropriate value
             int expected = 0; // TODO: Initialize to an appropriate value
             int actual;
-            actual = PHIEUTHUEBUS_Accessor.TimPhongTotNhat(phieuThueMoi, viTriLoaiPhong);
+            actual = PHIEUTHUEBUS_Accessor.TimPhongTotNhat(phieuThueMoi, null, viTriLoaiPhong);
             Assert.AreEqual(expected, actual);
             Assert.Inconclusive("Verify the correctness of this test method.");
         }
@@ -398,7 +398,7 @@ namespace QLKSTestProject
             expected[3] = new int[] { -1, -1, -1, -1, -1 };
 
             int[][] actual;
-            actual = PHIEUTHUEBUS.ToiUuPhieuThue(phieuThueMoi, danhSachPhieuThueCanToiUu, ref viTriNgay);
+            actual = PHIEUTHUEBUS.ToiUuPhieuThue(phieuThueMoi, phieuThueMoi.MaPhong, danhSachPhieuThueCanToiUu, ref viTriNgay);
             Assert.AreEqual(viTriNgayExpected, viTriNgay);
             for (int i = 0; i < expected.Length; ++i)
                 for (int j = 0; j < expected[i].Length; ++j)

@@ -207,6 +207,12 @@ namespace QLKS
         private void BT_Thoat_MouseEnter(object sender, EventArgs e)
         {
             ((Button)sender).Image = Properties.Resources.ButtonExitFocus;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            TiepNhanDatPhong frmDatPhong = new TiepNhanDatPhong();
+            frmDatPhong.Show();
         }         
     }
 }

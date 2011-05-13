@@ -435,6 +435,7 @@ namespace DAO
                             phong.GhiChu = boDoc.GetString(3);
                         if (!boDoc.IsDBNull(4))
                             phong.TinhTrang = boDoc.GetString(4);
+                        phong.SoNguoiToiDa = boDoc.GetInt32(5);
                     }
                     catch (System.Exception e)
                     {
@@ -455,7 +456,34 @@ namespace DAO
             }
             return danhSachPhong;
         }
-        ///////////
+        public static int LaySoNguoiToiDa(string maPhong)
+        {
+            OleDbConnection link = null;
+            int soNguoi = 0;
+            try
+            {
+                link = KetNoi();
+                string chuoiLenh = "Select SoNguoiToiDa from PHONG where MaPhong = '" + maPhong + "'";
+                OleDbCommand lenh = new OleDbCommand(chuoiLenh, link);
+
+                OleDbDataReader Doc = lenh.ExecuteReader();
+                while (Doc.Read())
+                {
+                    soNguoi = Doc.GetInt32(0);
+                }
+            }
+            catch (Exception ex)
+            {
+                soNguoi = 0;
+                throw new Exception(ex.Message);
+            }
+            finally
+            {
+                if (link != null && link.State == System.Data.ConnectionState.Open)
+                    link.Close();
+            }
+            return soNguoi;
+        }
         #endregion
 
         ///0812388

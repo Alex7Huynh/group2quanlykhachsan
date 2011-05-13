@@ -139,9 +139,9 @@ namespace DAO
                 phieu.MaPhieuThue = phongDuocDat;
                 string chuoiLenh;
 
-                chuoiLenh = "insert into PHIEUTHUE(MaPhieuThue, MaPhong, NgayThue, SoNgayThue, TenKhachHangDaiDien) values('"
-                    + phieu.MaPhieuThue + "', '" + phieu.MaPhong + "', '" + phieu.NgayThue + "', '" + phieu.SoNgayThue
-                    + "', '" + phieu.TenKhachHangDaiDien + "')";
+                chuoiLenh = "insert into PHIEUTHUE values('"
+                    + phieu.MaPhieuThue + "', '" + phieu.MaPhong + "', '" + phieu.NgayThue + "'," + phieu.SoNgayThue
+                    + ", '" + phieu.TenKhachHangDaiDien + "', 0," +phieu.SoNgayThue + ",0)";
                 OleDbCommand lenh = new OleDbCommand(chuoiLenh, link);
 
                 try
@@ -186,26 +186,28 @@ namespace DAO
             }
 
             if (Doc.HasRows)
-                throw new Exception("Phòng " + phieu.MaPhong + " không còn trống! Vui lòng đặt phòng khác.");                
+                throw new Exception("Phòng không còn trống! Vui lòng đặt phòng khác.");
         }
-        public static bool CapNhatPhieuThue(PHIEUTHUE phieuThue)
+        public static bool CapNhatPhieuThue(List<PHIEUTHUE> danhSachCapNhat)
         {
             OleDbConnection link = null;
             try
             {
                 link = KetNoi();
                 string chuoiLenh;
-
-                chuoiLenh = "Update from PHIEUTHUE Set MaPhieuThue = '" + phieuThue.MaPhieuThue + "', '" + phieuThue.MaPhong + "' Where ";
-                OleDbCommand lenh = new OleDbCommand(chuoiLenh, link);
-
-                try
+                for (int i = 0; i < danhSachCapNhat.Count; i++ )
                 {
-                    lenh.ExecuteNonQuery();
-                }
-                catch (System.Exception e)
-                {
-                    throw new Exception("Cập nhật thất bại! Vui lòng kiểm tra lại thông tin và làm lại 1 lần nữa.");
+                    chuoiLenh = "Update PHIEUTHUE Set MaPhong = '" + danhSachCapNhat[i].MaPhong + "' Where MaPhieuThue = '" + danhSachCapNhat[i].MaPhieuThue + "'";
+                    OleDbCommand lenh = new OleDbCommand(chuoiLenh, link);
+
+                    try
+                    {
+                        lenh.ExecuteNonQuery();
+                    }
+                    catch (System.Exception e)
+                    {
+                        throw new Exception("Cập nhật thất bại! Vui lòng kiểm tra lại thông tin và làm lại 1 lần nữa.");
+                    }
                 }
             }
             catch (Exception ex)
@@ -228,7 +230,7 @@ namespace DAO
                 link = KetNoi();
                 string chuoiLenh;
 
-                chuoiLenh = "Delete from PHIEUTHUE Where MaPhieuThue = '" + phieuThue.MaPhieuThue + "'";
+                chuoiLenh = "Update PHIEUTHUE Set DaXoa = 1 Where MaPhieuThue = '" + phieuThue.MaPhieuThue + "'";
                 OleDbCommand lenh = new OleDbCommand(chuoiLenh, link);
 
 
@@ -253,6 +255,41 @@ namespace DAO
             }
             return true;
         }
+        public static bool XoaPhieuThue(List<string> dsMaPhieuThue)
+        {
+            OleDbConnection link = null;
+            try
+            {
+                link = KetNoi();
+                string chuoiLenh;
+                for (int i = 0; i < dsMaPhieuThue.Count; i++)
+                {
+                    chuoiLenh = "Update PHIEUTHUE Set DaXoa = 1 Where MaPhieuThue = '" + dsMaPhieuThue[i] + "'";
+                    OleDbCommand lenh = new OleDbCommand(chuoiLenh, link);
+
+
+                    try
+                    {
+                        lenh.ExecuteNonQuery();
+                    }
+                    catch (System.Exception e)
+                    {
+                        throw new Exception("Xóa thất bại! Vui lòng kiểm tra lại thông tin và làm lại 1 lần nữa.");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+                return false;
+            }
+            finally
+            {
+                if (link != null && link.State == System.Data.ConnectionState.Open)
+                    link.Close();
+            }
+            return true;
+        }
         public static List<PHIEUTHUE> LayDSPhieuThueCanToiUu(PHIEUTHUE phieuThue, string strLoaiPhong)
         {
             OleDbConnection link = null;
@@ -262,7 +299,7 @@ namespace DAO
             try
             {
                 link = KetNoi();
-                string chuoiLenh = "select MaPhieuThue, MaPhong, NgayThue, SoNgayThue, TenKhachHangDaiDien from PHIEUTHUE Where MaPhong like @LoaiPhong";
+                string chuoiLenh = "select MaPhieuThue, MaPhong, NgayThue, SoNgayThue, TenKhachHangDaiDien from PHIEUTHUE Where MaPhong like @LoaiPhong and DaXoa = 0";
                 lenh = new OleDbCommand(chuoiLenh, link);
                 thamSo = new OleDbParameter("@LoaiPhong", OleDbType.LongVarChar);
                 thamSo.Value = strLoaiPhong + "%";
@@ -294,7 +331,10 @@ namespace DAO
                     }
                     DateTime ngayTraPhongTam = phieuThue.NgayThue.AddDays(phieuThue.SoNgayThue - 1);
                     DateTime ngayTraPhong = phieu.NgayThue.AddDays(phieu.SoNgayThue - 1);
-
+                    if (phieu.NgayThue.Month == 5)
+                    {
+                        int a = 0;
+                    }
                     if (ngayTraPhong >= phieuThue.NgayThue && ngayTraPhongTam >= phieu.NgayThue)
                     {
                         if (phieu.NgayThue <= phieuThue.NgayThue)
@@ -325,6 +365,38 @@ namespace DAO
             try
             {
                 //link = KetNoi();
+                string chuoiLenh;
+                chuoiLenh = "select MaPhieuThue From PHIEUTHUE Where MaPhong = " + "'" + maPhong + "'";
+                OleDbCommand lenh = new OleDbCommand(chuoiLenh, link);
+                OleDbDataReader Doc = lenh.ExecuteReader();
+                List<int> danhSachMaPhieuThue = new List<int>();
+                while (Doc.Read())
+                {
+                    string strMaPhieuThue = Doc.GetString(0);
+                    int iMaPhieuThue = int.Parse(strMaPhieuThue.Substring(6));
+                    danhSachMaPhieuThue.Add(iMaPhieuThue);
+
+                }
+                if (danhSachMaPhieuThue.Count == 0)
+                {
+                    maPhieuThue = "PT" + maPhong + 1.ToString("000");
+                }
+                else
+                    maPhieuThue = "PT" + maPhong + (TimSoLonNhat(danhSachMaPhieuThue) + 1).ToString("000");
+            }
+            catch
+            {
+                return string.Empty;
+            }
+            return maPhieuThue;
+        }
+        public static string TuDongLayMaPhieuThue(string maPhong)
+        {
+            string maPhieuThue = "";
+            OleDbConnection link = null;
+            try
+            {
+                link = KetNoi();
                 string chuoiLenh;
                 chuoiLenh = "select MaPhieuThue From PHIEUTHUE Where MaPhong = " + "'" + maPhong + "'";
                 OleDbCommand lenh = new OleDbCommand(chuoiLenh, link);
