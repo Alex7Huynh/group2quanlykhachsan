@@ -109,19 +109,6 @@ namespace BUS
 
         #region 0812033 - Bình
         ///////0812033
-        /*
-        public static string DatPhieuThue(PHIEUTHUE phieuThue, string strLoaiPhong)
-                {
-                    try
-                    {
-                        return PHIEUTHUEDAO.DatPhieuThue(phieuThue, strLoaiPhong);
-                    }
-                    catch (System.Exception e)
-                    {
-                        throw new Exception(e.Message);
-                    }
-                }*/
-
         public static string ThemPhieuThue(PHIEUTHUE phieu)
         {
             try
@@ -183,74 +170,182 @@ namespace BUS
             }
             return danhSachPhieuThue[index];
         }
-        private static int TimPhongTotNhat(PHIEUTHUE phieuThueMoi, int viTriLoaiPhong)
+        private static int TimPhongTotNhat(PHIEUTHUE phieuThueMoi, string maPhong, int viTriLoaiPhong)
         {
             int viTriPhong = -1;
             int max = 365;
             int[][] soDoTinhTrangPhong = new int[0][];
             int viTriNgay = 0;
-            List<PHIEUTHUE> danhSachPhieuThue = PHIEUTHUEDAO.LayDSPhieuThueCanToiUu(phieuThueMoi, phieuThueMoi.MaPhong);
-            // neu cac phong deu trong thi mac dinh chon phong thu nhat
-            if (danhSachPhieuThue.Count == 0)
+            try
             {
-                return 0;
+                List<PHIEUTHUE> danhSachPhieuThue = PHIEUTHUEDAO.LayDSPhieuThueCanToiUu(phieuThueMoi, maPhong);
+                // neu cac phong deu trong thi mac dinh chon phong thu nhat
+                if (danhSachPhieuThue.Count == 0)
+                {
+                    return 0;
+                }
+                soDoTinhTrangPhong = ToiUuPhieuThue(phieuThueMoi, maPhong, danhSachPhieuThue, ref viTriNgay);
+                if (soDoTinhTrangPhong.Length > 0)
+                {
+                    for (int i = 0; i < soDoTinhTrangPhong.Length; i++)
+                    {
+                        if (soDoTinhTrangPhong[i][viTriNgay] == phieuThueMoi.SoNgayThue)
+                        {
+                            viTriPhong = i;
+                            // thoat vong lap
+                            i = soDoTinhTrangPhong.Length;
+                        }
+                        else if (soDoTinhTrangPhong[i][viTriNgay] < max && phieuThueMoi.SoNgayThue < soDoTinhTrangPhong[i][viTriNgay])
+                        {
+                            max = soDoTinhTrangPhong[i][phieuThueMoi.SoNgayThue - 1];
+                            viTriPhong = i;
+                        }
+                    }
+                }
+                return viTriPhong;
             }
-            soDoTinhTrangPhong = ToiUuPhieuThue(phieuThueMoi, danhSachPhieuThue, ref viTriNgay);
-            for (int i = viTriLoaiPhong; i < soDoTinhTrangPhong.Length; i++)
+            catch (System.Exception ex)
             {
-                if (soDoTinhTrangPhong[i][viTriNgay] == phieuThueMoi.SoNgayThue)
-                {
-                    viTriPhong = i;
-                    // thoat vong lap
-                    i = soDoTinhTrangPhong.Length;
-                }
-                else if (soDoTinhTrangPhong[i][viTriNgay] < max && phieuThueMoi.SoNgayThue < soDoTinhTrangPhong[i][viTriNgay])
-                {
-                    max = soDoTinhTrangPhong[i][phieuThueMoi.SoNgayThue - 1];
-                    viTriPhong = i;
-                }
+                throw new Exception(ex.Message);
             }
 
-            return viTriPhong;
         }
         public static string DatPhieuThue(PHIEUTHUE phieuThue, string strLoaiPhong)
         {
             string phongDuocDat = string.Empty;
-            List<PHONG> danhSachLoaiPhong = PHONGDAO.LayDSPhong();
-            int viTriPhongThue = 0;
-            for (int i = 0; i < danhSachLoaiPhong.Count; i++)
+            try
             {
-                if (danhSachLoaiPhong[i].MaPhong.Substring(0, 1).CompareTo(strLoaiPhong) == 0)
+                List<PHONG> danhSachLoaiPhong = PHONGDAO.LayDSPhong();
+                int viTriPhongThue = 0;
+                for (int i = 0; i < danhSachLoaiPhong.Count; i++)
                 {
-                    viTriPhongThue = i;
-                    i = danhSachLoaiPhong.Count;
+                    if (danhSachLoaiPhong[i].MaPhong.Substring(0, 1).CompareTo(strLoaiPhong) == 0)
+                    {
+                        viTriPhongThue = i;
+                        i = danhSachLoaiPhong.Count;
+                    }
                 }
+                int phongTotNhat = TimPhongTotNhat(phieuThue, strLoaiPhong, viTriPhongThue);
+                if (phongTotNhat != -1)
+                {
+                    string maPhong = strLoaiPhong + (phongTotNhat + 1).ToString("000");
+                    phieuThue.MaPhong = maPhong;
+                    phongDuocDat = PHIEUTHUEDAO.ThemPhieuThue(phieuThue);
+                }
+                return phongDuocDat;
             }
-            int phongTotNhat = TimPhongTotNhat(phieuThue, viTriPhongThue);
-            if (phongTotNhat != -1)
+            catch (System.Exception ex)
             {
-                string maPhong = strLoaiPhong + (phongTotNhat + 1).ToString("000");
-                phieuThue.MaPhong = maPhong;
-                phongDuocDat = PHIEUTHUEDAO.ThemPhieuThue(phieuThue);
+                throw new Exception(ex.Message);
             }
-            return phongDuocDat;
+
+        }
+        public static string KiemTraDatPhieuThue(PHIEUTHUE phieuThue, string strLoaiPhong, ref List<string> dsMaPhieuThueDuocDat)
+        {
+            string phongDuocDat = string.Empty;
+            try
+            {
+                List<PHONG> danhSachLoaiPhong = PHONGDAO.LayDSPhong();
+                int viTriPhongThue = 0;
+                for (int i = 0; i < danhSachLoaiPhong.Count; i++)
+                {
+                    if (danhSachLoaiPhong[i].MaPhong.Substring(0, 1).CompareTo(strLoaiPhong) == 0)
+                    {
+                        viTriPhongThue = i;
+                        i = danhSachLoaiPhong.Count;
+                    }
+                }
+                int phongTotNhat = TimPhongTotNhat(phieuThue, strLoaiPhong, viTriPhongThue);
+                if (phongTotNhat != -1)
+                {
+                    string maPhong = strLoaiPhong + (phongTotNhat + 1).ToString("000");
+                    phieuThue.MaPhong = maPhong;
+                    phongDuocDat = maPhong;
+                    string maPhieuThue = PHIEUTHUEDAO.ThemPhieuThue(phieuThue);
+                    dsMaPhieuThueDuocDat.Add(maPhieuThue);
+                }
+                return phongDuocDat;
+            }
+            catch (System.Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+
         }
         // dieu chinh thuoc tinh dangThue cua danh sach phieu thue
         private static int LaySoPhongTheoLoai(string strLoaiPhong)
         {
             LOAIPHONG loaiPhong = new LOAIPHONG();
             loaiPhong.MaLoaiPhong = strLoaiPhong;
-            return PHONGDAO.LayDSPhongTheoLoaiPhong(loaiPhong).Count;
+            try
+            {
+                return PHONGDAO.LayDSPhongTheoLoaiPhong(loaiPhong).Count;
+            }
+            catch (System.Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+
         }
         private static void CapNhatPhieuThueDaToiUu(List<PHIEUTHUE> nguon, List<PHIEUTHUE> dich)
         {
             for (int i = 0; i < nguon.Count; i++)
             {
-                PHIEUTHUEDAO.XoaPhieuThue(nguon[i]);
-                PHIEUTHUEDAO.ThemPhieuThue(dich[i]);
+                try
+                {
+                    PHIEUTHUEDAO.XoaPhieuThue(nguon[i]);
+                    PHIEUTHUEDAO.ThemPhieuThue(dich[i]);
+                }
+                catch (System.Exception ex)
+                {
+                    throw new Exception(ex.Message);
+                }
+
             }
         }
-        ///////////////
+        private static void CapNhatPhieuThueDaToiUu(List<PHIEUTHUE> dich)
+        {
+                try
+                {
+                    PHIEUTHUEDAO.CapNhatPhieuThue(dich);
+                }
+                catch (System.Exception ex)
+                {
+                    throw new Exception(ex.Message);
+                }
+        }
+        public static List<string> KiemTra(PHIEUTHUE phieu, ref int soNguoi, ref List<string> dsMaPhieuThueDuocDat)
+        {
+            List<string> dsPhongDuocDat = new List<string>();
+            string phongDuocDat = " ";
+            string maPhong = phieu.MaPhong;
+            try
+            {
+                while (phongDuocDat != string.Empty)
+                {
+                    phongDuocDat = KiemTraDatPhieuThue(phieu, maPhong, ref dsMaPhieuThueDuocDat);
+                    if (phongDuocDat != string.Empty)
+                    {
+                        int soNguoiToiDaCuaPhong = PHONGDAO.LaySoNguoiToiDa(phongDuocDat);
+                        soNguoi -= soNguoiToiDaCuaPhong;
+                        dsPhongDuocDat.Add(phongDuocDat);
+                        if (soNguoi <= 0)
+                        {
+                            break;
+                        }
+                    }
+                }
+            }
+            catch (System.Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+            return dsPhongDuocDat;
+        }
+        public static bool XoaPhieuThue(List<string> dsMaPhieuThue)
+        {
+            return PHIEUTHUEDAO.XoaPhieuThue(dsMaPhieuThue);
+        }
         #endregion
 
         #region 0812388 - Phú
@@ -263,13 +358,13 @@ namespace BUS
         /// <param name="danhSachPhieuThueCanToiUu">Danh sách các phiếu thuê hiện có và muốn tối ưu trên các phiếu thuê này</param>
         /// <param name="viTriNgay">Ngay muốn tối ưu</param>
         /// <returns>Sơ đồ tình trạng phòng</returns>
-        public static int[][] ToiUuPhieuThue(PHIEUTHUE phieuThueMoi, List<PHIEUTHUE> danhSachPhieuThueCanToiUu, ref int viTriNgay)
+        public static int[][] ToiUuPhieuThue(PHIEUTHUE phieuThueMoi, string maLoaiPhong, List<PHIEUTHUE> danhSachPhieuThueCanToiUu, ref int viTriNgay)
         {
             int[][] soDoTinhTrangPhong = new int[0][];
             List<PHIEUTHUE> ketQua = new List<PHIEUTHUE>();
             ketQua = danhSachPhieuThueCanToiUu;
 
-            int soPhong = LaySoPhongTheoLoai(phieuThueMoi.MaPhong);
+            int soPhong = LaySoPhongTheoLoai(maLoaiPhong);
             int max = 0;
 
             DateTime ngayPhieuThueCuNhat = LayNgayPhieuThueCuNhat(danhSachPhieuThueCanToiUu);
@@ -277,6 +372,10 @@ namespace BUS
             DateTime ngayPhieuThueMoiNhat = phieuThueXaNhat.NgayThue.AddDays(phieuThueXaNhat.SoNgayThue);
 
             int soNgayThue = ngayPhieuThueMoiNhat.DayOfYear - ngayPhieuThueCuNhat.DayOfYear;
+            if (soNgayThue < phieuThueMoi.SoNgayThue)
+            {
+                soNgayThue = phieuThueMoi.SoNgayThue;
+            }
 
             viTriNgay = phieuThueMoi.NgayThue.DayOfYear - ngayPhieuThueCuNhat.DayOfYear;
 
@@ -336,7 +435,8 @@ namespace BUS
 
             }
             Init(ref soDoTinhTrangPhong, ketQua, soPhong, soNgayThue);
-            CapNhatPhieuThueDaToiUu(danhSachPhieuThueCanToiUu, ketQua);
+            //CapNhatPhieuThueDaToiUu(danhSachPhieuThueCanToiUu, ketQua);
+            CapNhatPhieuThueDaToiUu(ketQua);
             return soDoTinhTrangPhong;
         }
         /// <summary>

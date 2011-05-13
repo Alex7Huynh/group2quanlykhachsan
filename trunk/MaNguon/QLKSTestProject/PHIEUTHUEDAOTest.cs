@@ -283,12 +283,12 @@ namespace QLKSTestProject
         [TestMethod()]
         public void CapNhatPhieuThueTest()
         {
-            PHIEUTHUE phieuThue = null; // TODO: Initialize to an appropriate value
+            /*PHIEUTHUE phieuThue = null; // TODO: Initialize to an appropriate value
             bool expected = false; // TODO: Initialize to an appropriate value
             bool actual;
             actual = PHIEUTHUEDAO.CapNhatPhieuThue(phieuThue);
             Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
+            Assert.Inconclusive("Verify the correctness of this test method.");*/
         }
 
         /// <summary>
