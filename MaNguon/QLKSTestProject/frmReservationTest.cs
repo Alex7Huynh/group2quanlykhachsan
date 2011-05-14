@@ -111,7 +111,7 @@ namespace QLKSTestProject
         public void GetPhieuThueTest()
         {
             bool keoTha = false; // TODO: Initialize to an appropriate value
-            int soPhong = 0; // TODO: Initialize to an appropriate value
+            string soPhong = "A111"; // TODO: Initialize to an appropriate value
             frmReservation target = new frmReservation(keoTha, soPhong); // TODO: Initialize to an appropriate value
             PHIEUTHUE expected = null; // TODO: Initialize to an appropriate value
             PHIEUTHUE actual;
@@ -259,7 +259,7 @@ namespace QLKSTestProject
         public void frmReservationConstructorTest()
         {
             bool keoTha = false; // TODO: Initialize to an appropriate value
-            int soPhong = 0; // TODO: Initialize to an appropriate value
+            string soPhong = "A111"; // TODO: Initialize to an appropriate value
             frmReservation target = new frmReservation(keoTha, soPhong);
             Assert.Inconclusive("TODO: Implement code to verify target");
         }

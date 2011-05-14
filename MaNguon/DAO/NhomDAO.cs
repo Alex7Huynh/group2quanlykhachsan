@@ -56,7 +56,7 @@ namespace DAO
             {
                 link = KetNoi();
                 string chuoiLenh;
-                chuoiLenh = "insert into Nhom values (" + ma.ToString() + ", '" + nhom.MaKhacHang + "', 0)";
+                chuoiLenh = "insert into Nhom values (" + nhom.MaNhom.ToString() + ", '" + nhom.MaKhacHang + "', 0)";
                 OleDbCommand lenh = new OleDbCommand(chuoiLenh, link);
 
                 try
