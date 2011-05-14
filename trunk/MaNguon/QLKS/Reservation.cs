@@ -28,12 +28,12 @@ namespace QLKS
         ////////////
         //// 0812033 - bien keo tha the hien co phai dat phong do keo tha(chọn phong truc quan) hay khong
         private bool _keoTha;
-        private int _soPhongDuocDat; // so phong duoc dat do keo tha
-        public frmReservation(bool keoTha, int soPhong)
+        private string _maPhongDuocDat; // so phong duoc dat do keo tha
+        public frmReservation(bool keoTha, string maPhong)
         {
             InitializeComponent();
             _keoTha = keoTha;
-            _soPhongDuocDat = soPhong;
+            _maPhongDuocDat = maPhong;
             _phieuThue = new PHIEUTHUE();
         }
         ////////////////////////
@@ -176,7 +176,7 @@ namespace QLKS
                 string phongDuocDat = "";
                 if (_keoTha)
                 {
-                    _phieuThue.MaPhong += _soPhongDuocDat.ToString("000");
+                    _phieuThue.MaPhong = _maPhongDuocDat;
                     try
                     {
                         phongDuocDat = PHIEUTHUEBUS.ThemPhieuThue(_phieuThue);

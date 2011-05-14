@@ -106,8 +106,17 @@ namespace QLKS
             {
                 try
                 {
+                    khachHangDaiDien.MaKH = KHACHHANGBUS.TuDongLayMaKhachHang();
+                    if (txtTenKhachHang.Text == "")
+                    {
+                        throw new Exception("Chưa nhập tên khách hàng");
+                    }
                     khachHangDaiDien.HoTen = txtTenKhachHang.Text.Trim();
                     khachHangDaiDien.DiaChi = txtDiaChi.Text.Trim();
+                    if (txtCMND_PassPort.Text == "")
+                    {
+                        throw new Exception("Chưa nhập CMND/Passport");
+                    }
                     khachHangDaiDien.SoGiayTo = txtCMND_PassPort.Text.Trim();
                     khachHangDaiDien.MaLoaiKH = dsLoaiKhach[cmbLoaiKhacHang.SelectedIndex].MaLoaiKH;
                     phieuThue.NgayThue = dtpNgayThue.Value.Date;
@@ -117,19 +126,22 @@ namespace QLKS
                     throw new Exception("Lỗi đọc dự liệu");
                 }
 
-/*
                 //tao nhom moi
                 NhomDTO nhom = new NhomDTO();
-                int maNhom = 0;
+                int maNhom = NhomBUS.TuDongLayMaNhom();
 
 
-
+                if (maNhom <= 0)
+                {
+                    throw new Exception("Không lấy mã nhóm được");
+                }
                 nhom.MaNhom = maNhom;
-                nhom.MaKhacHang = 0;*/
+                nhom.MaKhacHang = khachHangDaiDien.MaKH;
+
                 // lay thong tin dat phong
 
                 phieuThue.TenKhachHangDaiDien = khachHangDaiDien.HoTen;
-
+                phieuThue.MaNhom = nhom.MaNhom;
                 try
                 {
                     phieuThue.SoNgayThue = int.Parse(txtSoNgay.Text.Trim());
@@ -148,9 +160,9 @@ namespace QLKS
                 {
                     throw new Exception("số người không phải là số hoặc quá nhiều");
                 }
-                if(soNguoi <0)
+                if (soNguoi < 0)
                     throw new Exception("số người không được âm");
-                int temp = soNguoi;
+                int soNguoiLucDau = soNguoi;
                 // goi ham kiem tra
                 try
                 {
@@ -163,9 +175,9 @@ namespace QLKS
                         {
                             result = MessageBox.Show("Phiếu thuê có thể được đặt. Bạn có muốn đặt phiếu thuê này không?", "Thông Báo", MessageBoxButtons.YesNo);
                         }
-                        else if (soNguoi != temp)
+                        else if (soNguoi != soNguoiLucDau)
                         {
-                            result = MessageBox.Show("Phiếu thuê chỉ được đặt cho " + (temp - soNguoi).ToString() + "người. Xin vui lòng chọn loại phòng khác cho số khách còn lại. Bạn có muốn đặt phiếu thuê này không?", "Thông Báo", MessageBoxButtons.YesNo);
+                            result = MessageBox.Show("Phiếu thuê chỉ được đặt cho " + (soNguoiLucDau - soNguoi).ToString() + "người. Xin vui lòng chọn loại phòng khác cho số khách còn lại. Bạn có muốn đặt phiếu thuê này không?", "Thông Báo", MessageBoxButtons.YesNo);
                         }
                         else
                         {
@@ -173,7 +185,8 @@ namespace QLKS
                         }
                         if (result == DialogResult.Yes)
                         {
-
+                            KHACHHANGBUS.ThemKhachHang(khachHangDaiDien);
+                            NhomBUS.ThemNhom(nhom);
                         }
                         else if (result == DialogResult.No)
                         {
@@ -240,6 +253,59 @@ namespace QLKS
             button_temp.Location = new Point(button_temp.Location.X - 1, button_temp.Location.Y - 1);
             button_temp.Size = new Size(button_temp.Size.Width + 2, button_temp.Size.Height + 2);
             button_temp.Image = Properties.Resources.ButtonQuayLaiFocus;
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dtpNgayThue_ValueChanged(object sender, EventArgs e)
+        {
+            int soNgayThue = 0;
+            try
+            {
+                soNgayThue = int.Parse(txtSoNgay.Text.Trim());
+                if (soNgayThue < 1)
+                {
+                    throw new Exception();
+                }
+                DateTime ngayTra = dtpNgayThue.Value.AddDays(soNgayThue);
+                txtNgayTra.Text = ngayTra.ToShortDateString();
+            }
+            catch
+            {
+            	MessageBox.Show("Lỗi ở số ngày");
+            }
+        }
+
+        private void txtSoNgay_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void txtSoNgay_Leave(object sender, EventArgs e)
+        {
+            int soNgayThue = 0;
+            try
+            {
+                soNgayThue = int.Parse(txtSoNgay.Text.Trim());
+                if (soNgayThue < 1)
+                {
+                    throw new Exception();
+                }
+                DateTime ngayTra = dtpNgayThue.Value.AddDays(soNgayThue);
+                txtNgayTra.Text = ngayTra.ToShortDateString();
+            }
+            catch
+            {
+                MessageBox.Show("Lỗi ở số ngày");
+            }
+        }
+
+        private void txtSoNgay_ModifiedChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }

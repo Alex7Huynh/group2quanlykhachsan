@@ -32,7 +32,6 @@
             this.txtDiaChi = new System.Windows.Forms.TextBox();
             this.cmbLoaiKhacHang = new System.Windows.Forms.ComboBox();
             this.txtTenKhachHang = new System.Windows.Forms.TextBox();
-            this.dtpNgayTra = new System.Windows.Forms.DateTimePicker();
             this.txtSoNgay = new System.Windows.Forms.TextBox();
             this.dtpNgayThue = new System.Windows.Forms.DateTimePicker();
             this.cmbLoaiPhong = new System.Windows.Forms.ComboBox();
@@ -42,6 +41,7 @@
             this.btnThoat = new System.Windows.Forms.Button();
             this.btnDatPhong = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.txtNgayTra = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -89,14 +89,6 @@
             this.txtTenKhachHang.Size = new System.Drawing.Size(318, 23);
             this.txtTenKhachHang.TabIndex = 5;
             // 
-            // dtpNgayTra
-            // 
-            this.dtpNgayTra.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.dtpNgayTra.Location = new System.Drawing.Point(691, 543);
-            this.dtpNgayTra.Name = "dtpNgayTra";
-            this.dtpNgayTra.Size = new System.Drawing.Size(286, 23);
-            this.dtpNgayTra.TabIndex = 17;
-            // 
             // txtSoNgay
             // 
             this.txtSoNgay.BackColor = System.Drawing.Color.White;
@@ -107,14 +99,19 @@
             this.txtSoNgay.Name = "txtSoNgay";
             this.txtSoNgay.Size = new System.Drawing.Size(311, 23);
             this.txtSoNgay.TabIndex = 15;
+            this.txtSoNgay.TextChanged += new System.EventHandler(this.txtSoNgay_TextChanged);
+            this.txtSoNgay.Leave += new System.EventHandler(this.txtSoNgay_Leave);
+            this.txtSoNgay.ModifiedChanged += new System.EventHandler(this.txtSoNgay_ModifiedChanged);
             // 
             // dtpNgayThue
             // 
             this.dtpNgayThue.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.dtpNgayThue.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpNgayThue.Location = new System.Drawing.Point(49, 656);
             this.dtpNgayThue.Name = "dtpNgayThue";
             this.dtpNgayThue.Size = new System.Drawing.Size(319, 23);
             this.dtpNgayThue.TabIndex = 14;
+            this.dtpNgayThue.ValueChanged += new System.EventHandler(this.dtpNgayThue_ValueChanged);
             // 
             // cmbLoaiPhong
             // 
@@ -217,16 +214,29 @@
             this.pictureBox1.Size = new System.Drawing.Size(1024, 768);
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // txtNgayTra
+            // 
+            this.txtNgayTra.BackColor = System.Drawing.Color.White;
+            this.txtNgayTra.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtNgayTra.ForeColor = System.Drawing.Color.Black;
+            this.txtNgayTra.Location = new System.Drawing.Point(691, 543);
+            this.txtNgayTra.Multiline = true;
+            this.txtNgayTra.Name = "txtNgayTra";
+            this.txtNgayTra.ReadOnly = true;
+            this.txtNgayTra.Size = new System.Drawing.Size(286, 23);
+            this.txtNgayTra.TabIndex = 104;
             // 
             // TiepNhanDatPhong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1024, 790);
+            this.ClientSize = new System.Drawing.Size(1024, 784);
+            this.Controls.Add(this.txtNgayTra);
             this.Controls.Add(this.BT_ThuNho);
             this.Controls.Add(this.BT_Thoat);
-            this.Controls.Add(this.dtpNgayTra);
             this.Controls.Add(this.txtCMND_PassPort);
             this.Controls.Add(this.txtSoNgay);
             this.Controls.Add(this.btnThoat);
@@ -261,11 +271,11 @@
         private System.Windows.Forms.Button btnThoat;
         private System.Windows.Forms.ComboBox cmbLoaiKhacHang;
         private System.Windows.Forms.ComboBox cmbLoaiPhong;
-        private System.Windows.Forms.DateTimePicker dtpNgayTra;
         private System.Windows.Forms.TextBox txtSoNgay;
         private System.Windows.Forms.DateTimePicker dtpNgayThue;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button BT_ThuNho;
         private System.Windows.Forms.Button BT_Thoat;
+        private System.Windows.Forms.TextBox txtNgayTra;
     }
 }
