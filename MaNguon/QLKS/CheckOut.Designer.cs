@@ -28,130 +28,215 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label2 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtCMND2 = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.gbTraPhongDoan = new System.Windows.Forms.GroupBox();
+            this.gbTraPhongDon = new System.Windows.Forms.GroupBox();
+            this.rdoCMND = new System.Windows.Forms.RadioButton();
+            this.rdoTenPhong = new System.Windows.Forms.RadioButton();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtCMND1 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtTenPhong = new System.Windows.Forms.TextBox();
+            this.btnTraPhong = new System.Windows.Forms.Button();
+            this.gbThanhTien = new System.Windows.Forms.GroupBox();
+            this.txtThanhTien = new System.Windows.Forms.TextBox();
+            this.rdoTraPhongDon = new System.Windows.Forms.RadioButton();
+            this.rdoTraPhongDoan = new System.Windows.Forms.RadioButton();
+            this.btnThoat = new System.Windows.Forms.Button();
+            this.gbTraPhongDoan.SuspendLayout();
+            this.gbTraPhongDon.SuspendLayout();
+            this.gbThanhTien.SuspendLayout();
             this.SuspendLayout();
             // 
-            // button1
+            // txtCMND2
             // 
-            this.button1.Location = new System.Drawing.Point(294, 6);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(108, 23);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "CheckOut";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.txtCMND2.Location = new System.Drawing.Point(240, 32);
+            this.txtCMND2.Name = "txtCMND2";
+            this.txtCMND2.Size = new System.Drawing.Size(162, 20);
+            this.txtCMND2.TabIndex = 16;
             // 
-            // Column5
+            // label5
             // 
-            this.Column5.HeaderText = "Tên khách đại diện";
-            this.Column5.Name = "Column5";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(116, 77);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(156, 13);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "Thông tin phiếu thuê tương ứng";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(134, 8);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 6;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Số ngày thuê";
-            this.Column4.Name = "Column4";
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Ngày thuê";
-            this.Column3.Name = "Column3";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Mã phiếu thuê";
-            this.Column2.Name = "Column2";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5});
-            this.dataGridView1.Location = new System.Drawing.Point(0, 100);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(545, 150);
-            this.dataGridView1.TabIndex = 8;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Mã phòng";
-            this.Column1.Name = "Column1";
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(32, 32);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(202, 17);
+            this.label5.TabIndex = 15;
+            this.label5.Text = "CMND/PassPort người đại diện";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(-3, 14);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Blue;
+            this.label1.Location = new System.Drawing.Point(213, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(131, 13);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "Các phòng cần check out";
+            this.label1.Size = new System.Drawing.Size(133, 26);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "Nhận Phòng";
             // 
-            // label4
+            // gbTraPhongDoan
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(32, 273);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(58, 13);
-            this.label4.TabIndex = 12;
-            this.label4.Text = "Thành tiền";
+            this.gbTraPhongDoan.Controls.Add(this.rdoTraPhongDoan);
+            this.gbTraPhongDoan.Controls.Add(this.label5);
+            this.gbTraPhongDoan.Controls.Add(this.txtCMND2);
+            this.gbTraPhongDoan.Location = new System.Drawing.Point(53, 200);
+            this.gbTraPhongDoan.Name = "gbTraPhongDoan";
+            this.gbTraPhongDoan.Size = new System.Drawing.Size(408, 71);
+            this.gbTraPhongDoan.TabIndex = 17;
+            this.gbTraPhongDoan.TabStop = false;
+            this.gbTraPhongDoan.Text = "       Trả phòng theo đoàn";
             // 
-            // textBox1
+            // gbTraPhongDon
             // 
-            this.textBox1.Location = new System.Drawing.Point(96, 270);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(342, 20);
-            this.textBox1.TabIndex = 13;
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.gbTraPhongDon.Controls.Add(this.rdoTraPhongDon);
+            this.gbTraPhongDon.Controls.Add(this.rdoCMND);
+            this.gbTraPhongDon.Controls.Add(this.rdoTenPhong);
+            this.gbTraPhongDon.Controls.Add(this.label3);
+            this.gbTraPhongDon.Controls.Add(this.txtCMND1);
+            this.gbTraPhongDon.Controls.Add(this.label2);
+            this.gbTraPhongDon.Controls.Add(this.txtTenPhong);
+            this.gbTraPhongDon.Location = new System.Drawing.Point(53, 77);
+            this.gbTraPhongDon.Name = "gbTraPhongDon";
+            this.gbTraPhongDon.Size = new System.Drawing.Size(408, 100);
+            this.gbTraPhongDon.TabIndex = 18;
+            this.gbTraPhongDon.TabStop = false;
+            this.gbTraPhongDon.Text = "       Trả phòng đơn";
+            // 
+            // rdoCMND
+            // 
+            this.rdoCMND.AutoSize = true;
+            this.rdoCMND.Location = new System.Drawing.Point(12, 69);
+            this.rdoCMND.Name = "rdoCMND";
+            this.rdoCMND.Size = new System.Drawing.Size(14, 13);
+            this.rdoCMND.TabIndex = 20;
+            this.rdoCMND.TabStop = true;
+            this.rdoCMND.UseVisualStyleBackColor = true;
+            // 
+            // rdoTenPhong
+            // 
+            this.rdoTenPhong.AutoSize = true;
+            this.rdoTenPhong.Location = new System.Drawing.Point(12, 35);
+            this.rdoTenPhong.Name = "rdoTenPhong";
+            this.rdoTenPhong.Size = new System.Drawing.Size(14, 13);
+            this.rdoTenPhong.TabIndex = 19;
+            this.rdoTenPhong.TabStop = true;
+            this.rdoTenPhong.UseVisualStyleBackColor = true;
+            this.rdoTenPhong.CheckedChanged += new System.EventHandler(this.rdoTenPhong_CheckedChanged);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(32, 66);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(202, 17);
+            this.label3.TabIndex = 17;
+            this.label3.Text = "CMND/PassPort người đại diện";
+            // 
+            // txtCMND1
+            // 
+            this.txtCMND1.Location = new System.Drawing.Point(240, 66);
+            this.txtCMND1.Name = "txtCMND1";
+            this.txtCMND1.Size = new System.Drawing.Size(162, 20);
+            this.txtCMND1.TabIndex = 18;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(32, 32);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(78, 17);
+            this.label2.TabIndex = 15;
+            this.label2.Text = "Tên Phòng";
+            // 
+            // txtTenPhong
+            // 
+            this.txtTenPhong.Location = new System.Drawing.Point(240, 32);
+            this.txtTenPhong.Name = "txtTenPhong";
+            this.txtTenPhong.Size = new System.Drawing.Size(162, 20);
+            this.txtTenPhong.TabIndex = 16;
+            // 
+            // btnTraPhong
+            // 
+            this.btnTraPhong.Location = new System.Drawing.Point(120, 434);
+            this.btnTraPhong.Name = "btnTraPhong";
+            this.btnTraPhong.Size = new System.Drawing.Size(75, 23);
+            this.btnTraPhong.TabIndex = 19;
+            this.btnTraPhong.Text = "Trả Phòng";
+            this.btnTraPhong.UseVisualStyleBackColor = true;
+            // 
+            // gbThanhTien
+            // 
+            this.gbThanhTien.Controls.Add(this.txtThanhTien);
+            this.gbThanhTien.Location = new System.Drawing.Point(53, 321);
+            this.gbThanhTien.Name = "gbThanhTien";
+            this.gbThanhTien.Size = new System.Drawing.Size(408, 71);
+            this.gbThanhTien.TabIndex = 18;
+            this.gbThanhTien.TabStop = false;
+            this.gbThanhTien.Text = "Thành Tiền";
+            // 
+            // txtThanhTien
+            // 
+            this.txtThanhTien.Location = new System.Drawing.Point(240, 32);
+            this.txtThanhTien.Name = "txtThanhTien";
+            this.txtThanhTien.ReadOnly = true;
+            this.txtThanhTien.Size = new System.Drawing.Size(162, 20);
+            this.txtThanhTien.TabIndex = 16;
+            // 
+            // rdoTraPhongDon
+            // 
+            this.rdoTraPhongDon.AutoSize = true;
+            this.rdoTraPhongDon.Location = new System.Drawing.Point(12, 0);
+            this.rdoTraPhongDon.Name = "rdoTraPhongDon";
+            this.rdoTraPhongDon.Size = new System.Drawing.Size(14, 13);
+            this.rdoTraPhongDon.TabIndex = 20;
+            this.rdoTraPhongDon.TabStop = true;
+            this.rdoTraPhongDon.UseVisualStyleBackColor = true;
+            // 
+            // rdoTraPhongDoan
+            // 
+            this.rdoTraPhongDoan.AutoSize = true;
+            this.rdoTraPhongDoan.Location = new System.Drawing.Point(12, 0);
+            this.rdoTraPhongDoan.Name = "rdoTraPhongDoan";
+            this.rdoTraPhongDoan.Size = new System.Drawing.Size(14, 13);
+            this.rdoTraPhongDoan.TabIndex = 21;
+            this.rdoTraPhongDoan.TabStop = true;
+            this.rdoTraPhongDoan.UseVisualStyleBackColor = true;
+            // 
+            // btnThoat
+            // 
+            this.btnThoat.Location = new System.Drawing.Point(350, 434);
+            this.btnThoat.Name = "btnThoat";
+            this.btnThoat.Size = new System.Drawing.Size(75, 23);
+            this.btnThoat.TabIndex = 20;
+            this.btnThoat.Text = "Thoát";
+            this.btnThoat.UseVisualStyleBackColor = true;
             // 
             // frmCheckOut
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(545, 349);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.dataGridView1);
+            this.ClientSize = new System.Drawing.Size(545, 503);
+            this.Controls.Add(this.btnThoat);
+            this.Controls.Add(this.gbThanhTien);
+            this.Controls.Add(this.btnTraPhong);
+            this.Controls.Add(this.gbTraPhongDon);
+            this.Controls.Add(this.gbTraPhongDoan);
             this.Controls.Add(this.label1);
             this.Name = "frmCheckOut";
             this.Text = "CheckOut";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.frmCheckOut_Load);
+            this.gbTraPhongDoan.ResumeLayout(false);
+            this.gbTraPhongDoan.PerformLayout();
+            this.gbTraPhongDon.ResumeLayout(false);
+            this.gbTraPhongDon.PerformLayout();
+            this.gbThanhTien.ResumeLayout(false);
+            this.gbThanhTien.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -159,17 +244,22 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.TextBox txtCMND2;
+        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.GroupBox gbTraPhongDoan;
+        private System.Windows.Forms.GroupBox gbTraPhongDon;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtTenPhong;
+        private System.Windows.Forms.Button btnTraPhong;
+        private System.Windows.Forms.GroupBox gbThanhTien;
+        private System.Windows.Forms.TextBox txtThanhTien;
+        private System.Windows.Forms.RadioButton rdoCMND;
+        private System.Windows.Forms.RadioButton rdoTenPhong;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtCMND1;
+        private System.Windows.Forms.RadioButton rdoTraPhongDoan;
+        private System.Windows.Forms.RadioButton rdoTraPhongDon;
+        private System.Windows.Forms.Button btnThoat;
     }
 }
