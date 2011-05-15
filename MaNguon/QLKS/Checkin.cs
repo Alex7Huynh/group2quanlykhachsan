@@ -18,6 +18,14 @@ namespace QLKS
         {
             InitializeComponent();
             
+        }
+
+        private void btnTim_Click(object sender, EventArgs e)
+        {
+            List<KHACHHANG> dsKhachHang = BUS.KHACHHANGBUS.LayDSKhachTheoSoGiayTo(txtCMND.Text);
+            if (dsKhachHang.Count != 1)
+                return;
+            MessageBox.Show("I'm here");
         }                      
 
         
