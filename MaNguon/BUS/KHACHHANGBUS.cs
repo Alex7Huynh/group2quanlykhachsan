@@ -109,5 +109,10 @@ namespace BUS
             
         }
         //end 0812033
+        // 0812388
+        public static KHACHHANG LayKhachTheoSoGiayToChinhXac(string p)
+        {
+            return DAO.KHACHHANGDAO.LayKhachTheoSoGiayToChinhXac(p);
+        }
     }
 }

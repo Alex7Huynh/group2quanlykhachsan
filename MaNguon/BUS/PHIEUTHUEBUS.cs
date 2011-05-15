@@ -535,5 +535,15 @@ namespace BUS
         {
             return PHIEUTHUEDAO.UpdateCheckin(pt, _Dangthue);
         }
+        // 0812388
+        public static List<PHIEUTHUE> LayDSPhieuThueTheoMaNhom(int p)
+        {
+            return DAO.PHIEUTHUEDAO.LayDSPhieuThueTheoMaNhom(p);
+        }
+
+        public static bool CheckinPhieuThue(string p)
+        {
+            return DAO.PHIEUTHUEDAO.CheckinPhieuThue(p);
+        }
     }
 }

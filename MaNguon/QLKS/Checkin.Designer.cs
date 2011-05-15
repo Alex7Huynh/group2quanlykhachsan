@@ -80,6 +80,7 @@
             this.btnNhanPhong.TabIndex = 9;
             this.btnNhanPhong.Text = "Nhận Phòng";
             this.btnNhanPhong.UseVisualStyleBackColor = true;
+            this.btnNhanPhong.Click += new System.EventHandler(this.btnNhanPhong_Click);
             // 
             // btnThoat
             // 
@@ -89,6 +90,7 @@
             this.btnThoat.TabIndex = 10;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = true;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // dgvDanhSachPhieuThue
             // 
@@ -102,6 +104,7 @@
             this.dgvDanhSachPhieuThue.Location = new System.Drawing.Point(20, 167);
             this.dgvDanhSachPhieuThue.Name = "dgvDanhSachPhieuThue";
             this.dgvDanhSachPhieuThue.RowHeadersVisible = false;
+            this.dgvDanhSachPhieuThue.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvDanhSachPhieuThue.Size = new System.Drawing.Size(502, 253);
             this.dgvDanhSachPhieuThue.TabIndex = 12;
             // 
@@ -148,6 +151,7 @@
             this.btnNhanHet.TabIndex = 14;
             this.btnNhanHet.Text = "Nhận hết";
             this.btnNhanHet.UseVisualStyleBackColor = true;
+            this.btnNhanHet.Click += new System.EventHandler(this.btnNhanHet_Click);
             // 
             // frmCheckin
             // 
