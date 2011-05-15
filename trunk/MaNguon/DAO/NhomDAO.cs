@@ -80,5 +80,51 @@ namespace DAO
             }
             return ma;
         }
+
+        //0812388
+        /// <summary>
+        /// Lay danh sach nhom theo khach hang
+        /// </summary>
+        /// <param name="maKH">ma khach hang tuong ung</param>
+        /// <returns>danh sach cac nhom ma khach hang nay lam chu</returns>
+        public static List<NhomDTO> LayDSNhomTheoMaKhach(string maKH)
+        {
+            List<NhomDTO> ret = null;
+
+            OleDbConnection link = null;
+            try
+            {
+                ret = new List<NhomDTO>();
+                link = KetNoi();
+                string chuoiLenh;
+                chuoiLenh = "select * from Nhom where MaKhachHangDaiDien = @MaKhachHangDaiDien";
+                OleDbCommand lenh = new OleDbCommand(chuoiLenh, link);
+                lenh.Parameters.AddWithValue("@MaKhachHangDaiDien", maKH);
+                OleDbDataReader reader = lenh.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    ret.Add(new NhomDTO
+                    {
+                        MaKhacHang = reader.GetString(1),
+                        MaNhom = reader.GetInt32(0)
+                    });
+                }
+                reader.Close();
+                link.Close();
+                return ret;
+            }
+            catch
+            {
+                if (link != null && link.State == System.Data.ConnectionState.Connecting)
+                    link.Close();
+                return null;
+                
+            }
+            finally
+            {
+               
+            }
+        }
     }
 }

@@ -767,5 +767,69 @@ namespace DAO
 
 
             }
+        // 0812388
+        public static List<PHIEUTHUE> LayDSPhieuThueTheoMaNhom(int p)
+        {
+            OleDbConnection link = null;
+            List<PHIEUTHUE> dsPhieu = new List<PHIEUTHUE>();
+           
+            OleDbCommand lenh = new OleDbCommand();
+            try
+            {
+                link = KetNoi();
+                string chuoiLenh = "select * from PHIEUTHUE where MaNhom=@MaNhom";
+                lenh = new OleDbCommand(chuoiLenh, link);
+                lenh.Parameters.AddWithValue("@MaNhom", p);
+                OleDbDataReader boDoc = lenh.ExecuteReader();
+                while (boDoc.Read())
+                {
+                    dsPhieu.Add(new PHIEUTHUE
+                    {
+                        MaPhieuThue = boDoc.GetString(0),
+                        MaPhong = boDoc.GetString(1),
+                        NgayThue = boDoc.GetDateTime(2),
+                        SoNgayThue = int.Parse(boDoc.GetValue(3).ToString()),
+                        TenKhachHangDaiDien = boDoc.GetString(4),
+                        DangThue = boDoc.GetBoolean(5),
+                        MaNhom = boDoc.GetInt32(6),
+                    });
+                }
+            }
+            catch (Exception ex)
+            {
+                dsPhieu = new List<PHIEUTHUE>();
+            }
+            finally
+            {
+                if (link != null && link.State == System.Data.ConnectionState.Open)
+                    link.Close();
+            }
+            return dsPhieu;
+        }
+
+        public static bool CheckinPhieuThue(string p)
+        {
+            OleDbConnection link = null;
+            OleDbCommand lenh = new OleDbCommand();
+            try
+            {
+                link = KetNoi();
+                string chuoiLenh = "UPDATE PHIEUTHUE SET DangThue = true where MaPhieuThue=@MaPhieuThue";
+                lenh = new OleDbCommand(chuoiLenh, link);
+                lenh.Parameters.AddWithValue("@MaPhieuThue", p);
+                lenh.ExecuteNonQuery();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+            finally
+            {
+                if (link != null && link.State == System.Data.ConnectionState.Open)
+                    link.Close();
+            }
+            return true;
+        }
     }
 }

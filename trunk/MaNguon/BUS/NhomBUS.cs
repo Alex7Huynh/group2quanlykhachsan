@@ -35,5 +35,11 @@ namespace BUS
             }
             
         }
+        // 0812388
+
+        public static List<NhomDTO> LayDSNhomTheoMaKhach(string p)
+        {
+            return DAO.NhomDAO.LayDSNhomTheoMaKhach(p);
+        }
     }
 }

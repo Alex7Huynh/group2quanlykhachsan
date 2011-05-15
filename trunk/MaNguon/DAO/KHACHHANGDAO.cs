@@ -168,6 +168,46 @@ namespace DAO
             }
             return dsKH;
         }
+        #region 0812388
+        /// <summary>
+        /// Lay chinh xac khach hang theo so giay to tuy than
+        /// </summary>
+        /// <param name="SoGiayTo">so giay to tuy than</param>
+        /// <returns>khach hang tuong ung</returns>
+        public static KHACHHANG LayKhachTheoSoGiayToChinhXac(string SoGiayTo)
+        {
+            OleDbConnection link = null;
+            KHACHHANG kh = null;
+            try
+            {
+                link = KetNoi();
+                string chuoiLenh = "Select * from KHACHHANG where SoGiayTo = '" + SoGiayTo + "'";
+                OleDbCommand lenh = new OleDbCommand(chuoiLenh, link);
+
+                OleDbDataReader Doc = lenh.ExecuteReader();
+                while (Doc.Read())
+                {
+                    kh = new KHACHHANG();
+                    kh.MaKH = Doc.GetString(0);
+                    kh.HoTen = Doc.GetString(1);
+                    kh.MaLoaiKH = Doc.GetString(2);
+                    kh.DiaChi = Doc.GetString(3);
+                    kh.SoGiayTo = Doc.GetString(4);
+                    
+                }
+            }
+            catch (Exception ex)
+            {
+                kh = null;
+            }
+            finally
+            {
+                if (link != null && link.State == System.Data.ConnectionState.Open)
+                    link.Close();
+            }
+            return kh;
+        }
+        #endregion
 
         public static List<KHACHHANG> LayDSKhachTheoDiaChi(string DiaChi)
         {
