@@ -70,24 +70,35 @@ namespace QLKS
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            int index = dtg1.CurrentRow.Index;
-            if (index >= 0)
+            int index =0;
+            try
             {
-                DialogResult result;
-                try
+                index = dtg1.CurrentRow.Index;
+            }
+            catch
+            {
+                index = -1;
+            }
+            finally
+            {
+                if (index >= 0)
                 {
-                    string MaPhong = dtg1.Rows[index].Cells[0].Value.ToString();
-                    result = MessageBox.Show("BAN CO CHAC LA XOA PHONG NAY", "Canh Bao", MessageBoxButtons.YesNo);
-                    if ((result == DialogResult.Yes) && (MaPhong != string.Empty))
+                    DialogResult result;
+                    try
                     {
-                        PHONGBUS.Xoa(MaPhong);
-                        MessageBox.Show("Da Xoa Phong");
-                        ReLoad();
+                        string MaPhong = dtg1.Rows[index].Cells[0].Value.ToString();
+                        result = MessageBox.Show("BAN CO CHAC LA XOA PHONG NAY", "Canh Bao", MessageBoxButtons.YesNo);
+                        if ((result == DialogResult.Yes) && (MaPhong != string.Empty))
+                        {
+                            PHONGBUS.Xoa(MaPhong);
+                            MessageBox.Show("Da Xoa Phong");
+                            ReLoad();
+                        }
                     }
-                }
-                catch
-                {
-                    MessageBox.Show("Khong Co Phong de xoa");
+                    catch
+                    {
+                        MessageBox.Show("Khong Co Phong de xoa");
+                    }
                 }
             }
         }
@@ -169,6 +180,29 @@ namespace QLKS
             button_temp.Location = new Point(button_temp.Location.X - 1, button_temp.Location.Y - 1);
             button_temp.Size = new Size(button_temp.Size.Width + 2, button_temp.Size.Height + 2);
             button_temp.Image = Properties.Resources.ButtonXoaFocus;
+        }
+
+        private void dtg1_SelectionChanged(object sender, EventArgs e)
+        {
+            int index = 0;
+            try
+            {
+
+                if ((dtg1.Rows.Count > 1) && (index == dtg1.Rows.Count - 1))
+                {
+                    dtg1.CurrentRow.Selected = false;
+                    index = 0;
+                }
+                else index = dtg1.CurrentCell.RowIndex;
+            }
+            catch
+            {
+                index = 0;
+            }
+            finally
+            {
+                dtg1.Rows[index].Selected = true;
+            }
         }
     }
 }
