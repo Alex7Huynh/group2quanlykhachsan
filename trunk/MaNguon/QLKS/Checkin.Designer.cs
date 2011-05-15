@@ -39,6 +39,8 @@
             this.ngayThue = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.soNgayThue = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tenKH = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnTim = new System.Windows.Forms.Button();
+            this.btnNhanHet = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDanhSachPhieuThue)).BeginInit();
             this.SuspendLayout();
             // 
@@ -65,7 +67,7 @@
             // 
             // txtCMND
             // 
-            this.txtCMND.Location = new System.Drawing.Point(277, 82);
+            this.txtCMND.Location = new System.Drawing.Point(219, 79);
             this.txtCMND.Name = "txtCMND";
             this.txtCMND.Size = new System.Drawing.Size(200, 20);
             this.txtCMND.TabIndex = 7;
@@ -128,11 +130,32 @@
             this.tenKH.HeaderText = "Tên khách đại diện";
             this.tenKH.Name = "tenKH";
             // 
+            // btnTim
+            // 
+            this.btnTim.Location = new System.Drawing.Point(434, 77);
+            this.btnTim.Name = "btnTim";
+            this.btnTim.Size = new System.Drawing.Size(75, 23);
+            this.btnTim.TabIndex = 13;
+            this.btnTim.Text = "Tìm";
+            this.btnTim.UseVisualStyleBackColor = true;
+            this.btnTim.Click += new System.EventHandler(this.btnTim_Click);
+            // 
+            // btnNhanHet
+            // 
+            this.btnNhanHet.Location = new System.Drawing.Point(219, 449);
+            this.btnNhanHet.Name = "btnNhanHet";
+            this.btnNhanHet.Size = new System.Drawing.Size(75, 23);
+            this.btnNhanHet.TabIndex = 14;
+            this.btnNhanHet.Text = "Nhận hết";
+            this.btnNhanHet.UseVisualStyleBackColor = true;
+            // 
             // frmCheckin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(543, 484);
+            this.Controls.Add(this.btnNhanHet);
+            this.Controls.Add(this.btnTim);
             this.Controls.Add(this.dgvDanhSachPhieuThue);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.btnNhanPhong);
@@ -160,6 +183,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ngayThue;
         private System.Windows.Forms.DataGridViewTextBoxColumn soNgayThue;
         private System.Windows.Forms.DataGridViewTextBoxColumn tenKH;
+        private System.Windows.Forms.Button btnTim;
+        private System.Windows.Forms.Button btnNhanHet;
 
 
 
