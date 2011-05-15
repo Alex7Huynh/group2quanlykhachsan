@@ -173,5 +173,37 @@ namespace QLKS
         {
             ((Button)sender).Image = Properties.Resources.ButtonFocus_Lui;
         }
+
+        private void btnReservation_MouseLeave(object sender, EventArgs e)
+        {
+            Button button_temp = (Button)sender;
+            button_temp.Location = new Point(button_temp.Location.X + 1, button_temp.Location.Y + 1);
+            button_temp.Size = new Size(button_temp.Size.Width - 2, button_temp.Size.Height - 2);
+            button_temp.Image = null;
+        }
+
+        private void btnReservation_MouseEnter(object sender, EventArgs e)
+        {
+            Button button_temp = (Button)sender;
+            button_temp.Location = new Point(button_temp.Location.X - 1, button_temp.Location.Y - 1);
+            button_temp.Size = new Size(button_temp.Size.Width + 2, button_temp.Size.Height + 2);
+            button_temp.Image = Properties.Resources.ButtonDatPhongFocus;
+        }
+
+        private void btnCheckOut_MouseEnter(object sender, EventArgs e)
+        {
+            Button button_temp = (Button)sender;
+            button_temp.Location = new Point(button_temp.Location.X - 1, button_temp.Location.Y - 1);
+            button_temp.Size = new Size(button_temp.Size.Width + 2, button_temp.Size.Height + 2);
+            button_temp.Image = Properties.Resources.ButtonTraPhongFocus;
+        }
+
+        private void btnCheckIn_MouseEnter(object sender, EventArgs e)
+        {
+            Button button_temp = (Button)sender;
+            button_temp.Location = new Point(button_temp.Location.X - 1, button_temp.Location.Y - 1);
+            button_temp.Size = new Size(button_temp.Size.Width + 2, button_temp.Size.Height + 2);
+            button_temp.Image = Properties.Resources.ButtonNhanPhongFocus;
+        }
     }
 }

@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.mclCalendar = new System.Windows.Forms.MonthCalendar();
-            this.btnReservation = new System.Windows.Forms.Button();
-            this.btnCheckIn = new System.Windows.Forms.Button();
-            this.btnCheckOut = new System.Windows.Forms.Button();
             this.txtLoaiPhong = new System.Windows.Forms.TextBox();
             this.btnNextLoaiPhong = new System.Windows.Forms.Button();
             this.btnPreviousLoaiPhong = new System.Windows.Forms.Button();
+            this.btnCheckOut = new System.Windows.Forms.Button();
+            this.btnCheckIn = new System.Windows.Forms.Button();
+            this.btnReservation = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.ucXemPhieuThuePhong = new QLKS.UCXemPhieuThuePhong();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -49,59 +49,16 @@
             this.mclCalendar.TabIndex = 1;
             this.mclCalendar.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.mclCalendar_DateChanged);
             // 
-            // btnReservation
-            // 
-            this.btnReservation.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.btnReservation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReservation.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnReservation.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnReservation.Location = new System.Drawing.Point(870, 158);
-            this.btnReservation.Name = "btnReservation";
-            this.btnReservation.Size = new System.Drawing.Size(105, 41);
-            this.btnReservation.TabIndex = 2;
-            this.btnReservation.Text = "Reservation";
-            this.btnReservation.UseVisualStyleBackColor = false;
-            this.btnReservation.Click += new System.EventHandler(this.btnReservation_Click);
-            // 
-            // btnCheckIn
-            // 
-            this.btnCheckIn.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.btnCheckIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCheckIn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnCheckIn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnCheckIn.Location = new System.Drawing.Point(870, 218);
-            this.btnCheckIn.Name = "btnCheckIn";
-            this.btnCheckIn.Size = new System.Drawing.Size(105, 41);
-            this.btnCheckIn.TabIndex = 3;
-            this.btnCheckIn.Text = "Check-In";
-            this.btnCheckIn.UseVisualStyleBackColor = false;
-            this.btnCheckIn.Click += new System.EventHandler(this.btnCheckIn_Click);
-            // 
-            // btnCheckOut
-            // 
-            this.btnCheckOut.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.btnCheckOut.Enabled = false;
-            this.btnCheckOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCheckOut.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnCheckOut.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnCheckOut.Location = new System.Drawing.Point(870, 279);
-            this.btnCheckOut.Name = "btnCheckOut";
-            this.btnCheckOut.Size = new System.Drawing.Size(105, 41);
-            this.btnCheckOut.TabIndex = 4;
-            this.btnCheckOut.Text = "Check-Out";
-            this.btnCheckOut.UseVisualStyleBackColor = false;
-            this.btnCheckOut.Click += new System.EventHandler(this.btnCheckOut_Click);
-            // 
             // txtLoaiPhong
             // 
             this.txtLoaiPhong.BackColor = System.Drawing.Color.Gray;
             this.txtLoaiPhong.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.txtLoaiPhong.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtLoaiPhong.ForeColor = System.Drawing.Color.White;
-            this.txtLoaiPhong.Location = new System.Drawing.Point(317, 207);
+            this.txtLoaiPhong.Location = new System.Drawing.Point(320, 202);
             this.txtLoaiPhong.Name = "txtLoaiPhong";
             this.txtLoaiPhong.ReadOnly = true;
-            this.txtLoaiPhong.Size = new System.Drawing.Size(220, 23);
+            this.txtLoaiPhong.Size = new System.Drawing.Size(217, 23);
             this.txtLoaiPhong.TabIndex = 5;
             // 
             // btnNextLoaiPhong
@@ -113,7 +70,7 @@
             this.btnNextLoaiPhong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNextLoaiPhong.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnNextLoaiPhong.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnNextLoaiPhong.Location = new System.Drawing.Point(433, 286);
+            this.btnNextLoaiPhong.Location = new System.Drawing.Point(431, 283);
             this.btnNextLoaiPhong.Name = "btnNextLoaiPhong";
             this.btnNextLoaiPhong.Size = new System.Drawing.Size(104, 35);
             this.btnNextLoaiPhong.TabIndex = 7;
@@ -131,7 +88,7 @@
             this.btnPreviousLoaiPhong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPreviousLoaiPhong.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnPreviousLoaiPhong.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnPreviousLoaiPhong.Location = new System.Drawing.Point(317, 286);
+            this.btnPreviousLoaiPhong.Location = new System.Drawing.Point(320, 283);
             this.btnPreviousLoaiPhong.Name = "btnPreviousLoaiPhong";
             this.btnPreviousLoaiPhong.Size = new System.Drawing.Size(104, 35);
             this.btnPreviousLoaiPhong.TabIndex = 6;
@@ -139,6 +96,58 @@
             this.btnPreviousLoaiPhong.MouseLeave += new System.EventHandler(this.btnPreviousLoaiPhong_MouseLeave);
             this.btnPreviousLoaiPhong.Click += new System.EventHandler(this.btnPreviousLoaiPhong_Click);
             this.btnPreviousLoaiPhong.MouseEnter += new System.EventHandler(this.btnPreviousLoaiPhong_MouseEnter);
+            // 
+            // btnCheckOut
+            // 
+            this.btnCheckOut.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.btnCheckOut.BackgroundImage = global::QLKS.Properties.Resources.ButtonTraPhong;
+            this.btnCheckOut.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCheckOut.Enabled = false;
+            this.btnCheckOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCheckOut.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnCheckOut.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnCheckOut.Location = new System.Drawing.Point(675, 270);
+            this.btnCheckOut.Name = "btnCheckOut";
+            this.btnCheckOut.Size = new System.Drawing.Size(188, 47);
+            this.btnCheckOut.TabIndex = 4;
+            this.btnCheckOut.UseVisualStyleBackColor = false;
+            this.btnCheckOut.MouseLeave += new System.EventHandler(this.btnReservation_MouseLeave);
+            this.btnCheckOut.Click += new System.EventHandler(this.btnCheckOut_Click);
+            this.btnCheckOut.MouseEnter += new System.EventHandler(this.btnCheckOut_MouseEnter);
+            // 
+            // btnCheckIn
+            // 
+            this.btnCheckIn.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.btnCheckIn.BackgroundImage = global::QLKS.Properties.Resources.ButtonNhanPhong;
+            this.btnCheckIn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCheckIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCheckIn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnCheckIn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnCheckIn.Location = new System.Drawing.Point(675, 214);
+            this.btnCheckIn.Name = "btnCheckIn";
+            this.btnCheckIn.Size = new System.Drawing.Size(188, 47);
+            this.btnCheckIn.TabIndex = 3;
+            this.btnCheckIn.UseVisualStyleBackColor = false;
+            this.btnCheckIn.MouseLeave += new System.EventHandler(this.btnReservation_MouseLeave);
+            this.btnCheckIn.Click += new System.EventHandler(this.btnCheckIn_Click);
+            this.btnCheckIn.MouseEnter += new System.EventHandler(this.btnCheckIn_MouseEnter);
+            // 
+            // btnReservation
+            // 
+            this.btnReservation.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.btnReservation.BackgroundImage = global::QLKS.Properties.Resources.ButtonDatPhong;
+            this.btnReservation.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnReservation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReservation.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnReservation.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnReservation.Location = new System.Drawing.Point(675, 159);
+            this.btnReservation.Name = "btnReservation";
+            this.btnReservation.Size = new System.Drawing.Size(188, 47);
+            this.btnReservation.TabIndex = 2;
+            this.btnReservation.UseVisualStyleBackColor = false;
+            this.btnReservation.MouseLeave += new System.EventHandler(this.btnReservation_MouseLeave);
+            this.btnReservation.Click += new System.EventHandler(this.btnReservation_Click);
+            this.btnReservation.MouseEnter += new System.EventHandler(this.btnReservation_MouseEnter);
             // 
             // pictureBox1
             // 

@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.txtCMND = new System.Windows.Forms.TextBox();
             this.btnNhanPhong = new System.Windows.Forms.Button();
             this.btnThoat = new System.Windows.Forms.Button();
@@ -44,56 +42,45 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvDanhSachPhieuThue)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Blue;
-            this.label1.Location = new System.Drawing.Point(214, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(133, 26);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Nhận Phòng";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(51, 82);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(109, 17);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "CMND/PassPort";
-            // 
             // txtCMND
             // 
-            this.txtCMND.Location = new System.Drawing.Point(219, 79);
+            this.txtCMND.Location = new System.Drawing.Point(17, 146);
+            this.txtCMND.Multiline = true;
             this.txtCMND.Name = "txtCMND";
-            this.txtCMND.Size = new System.Drawing.Size(200, 20);
+            this.txtCMND.Size = new System.Drawing.Size(211, 45);
             this.txtCMND.TabIndex = 7;
             // 
             // btnNhanPhong
             // 
-            this.btnNhanPhong.Location = new System.Drawing.Point(114, 449);
+            this.btnNhanPhong.BackgroundImage = global::QLKS.Properties.Resources.ButtonNhanPhong;
+            this.btnNhanPhong.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnNhanPhong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNhanPhong.Location = new System.Drawing.Point(444, 167);
             this.btnNhanPhong.Name = "btnNhanPhong";
-            this.btnNhanPhong.Size = new System.Drawing.Size(75, 23);
+            this.btnNhanPhong.Size = new System.Drawing.Size(188, 47);
             this.btnNhanPhong.TabIndex = 9;
-            this.btnNhanPhong.Text = "Nhận Phòng";
             this.btnNhanPhong.UseVisualStyleBackColor = true;
+            this.btnNhanPhong.MouseLeave += new System.EventHandler(this.btnTim_MouseLeave);
             this.btnNhanPhong.Click += new System.EventHandler(this.btnNhanPhong_Click);
+            this.btnNhanPhong.MouseEnter += new System.EventHandler(this.btnNhanPhong_MouseEnter);
             // 
             // btnThoat
             // 
-            this.btnThoat.Location = new System.Drawing.Point(330, 449);
+            this.btnThoat.BackgroundImage = global::QLKS.Properties.Resources.ButtonQuayLai;
+            this.btnThoat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnThoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThoat.Location = new System.Drawing.Point(444, 269);
             this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(75, 23);
+            this.btnThoat.Size = new System.Drawing.Size(188, 47);
             this.btnThoat.TabIndex = 10;
-            this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = true;
+            this.btnThoat.MouseLeave += new System.EventHandler(this.btnTim_MouseLeave);
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
+            this.btnThoat.MouseEnter += new System.EventHandler(this.btnThoat_MouseEnter);
             // 
             // dgvDanhSachPhieuThue
             // 
+            this.dgvDanhSachPhieuThue.BackgroundColor = System.Drawing.Color.Indigo;
             this.dgvDanhSachPhieuThue.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDanhSachPhieuThue.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.maPhong,
@@ -101,11 +88,11 @@
             this.ngayThue,
             this.soNgayThue,
             this.tenKH});
-            this.dgvDanhSachPhieuThue.Location = new System.Drawing.Point(20, 167);
+            this.dgvDanhSachPhieuThue.Location = new System.Drawing.Point(18, 215);
             this.dgvDanhSachPhieuThue.Name = "dgvDanhSachPhieuThue";
             this.dgvDanhSachPhieuThue.RowHeadersVisible = false;
             this.dgvDanhSachPhieuThue.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDanhSachPhieuThue.Size = new System.Drawing.Size(502, 253);
+            this.dgvDanhSachPhieuThue.Size = new System.Drawing.Size(402, 157);
             this.dgvDanhSachPhieuThue.TabIndex = 12;
             // 
             // maPhong
@@ -135,39 +122,49 @@
             // 
             // btnTim
             // 
-            this.btnTim.Location = new System.Drawing.Point(434, 77);
+            this.btnTim.BackgroundImage = global::QLKS.Properties.Resources.ButtonSearch;
+            this.btnTim.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnTim.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTim.Location = new System.Drawing.Point(232, 145);
             this.btnTim.Name = "btnTim";
-            this.btnTim.Size = new System.Drawing.Size(75, 23);
+            this.btnTim.Size = new System.Drawing.Size(188, 47);
             this.btnTim.TabIndex = 13;
-            this.btnTim.Text = "Tìm";
             this.btnTim.UseVisualStyleBackColor = true;
+            this.btnTim.MouseLeave += new System.EventHandler(this.btnTim_MouseLeave);
             this.btnTim.Click += new System.EventHandler(this.btnTim_Click);
+            this.btnTim.MouseEnter += new System.EventHandler(this.btnTim_MouseEnter);
             // 
             // btnNhanHet
             // 
-            this.btnNhanHet.Location = new System.Drawing.Point(219, 449);
+            this.btnNhanHet.BackgroundImage = global::QLKS.Properties.Resources.ButtonNhanHet;
+            this.btnNhanHet.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnNhanHet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNhanHet.Location = new System.Drawing.Point(444, 218);
             this.btnNhanHet.Name = "btnNhanHet";
-            this.btnNhanHet.Size = new System.Drawing.Size(75, 23);
+            this.btnNhanHet.Size = new System.Drawing.Size(188, 47);
             this.btnNhanHet.TabIndex = 14;
-            this.btnNhanHet.Text = "Nhận hết";
             this.btnNhanHet.UseVisualStyleBackColor = true;
+            this.btnNhanHet.MouseLeave += new System.EventHandler(this.btnTim_MouseLeave);
             this.btnNhanHet.Click += new System.EventHandler(this.btnNhanHet_Click);
+            this.btnNhanHet.MouseEnter += new System.EventHandler(this.btnNhanHet_MouseEnter);
             // 
             // frmCheckin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(543, 484);
+            this.BackgroundImage = global::QLKS.Properties.Resources.NhanPhong;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(649, 387);
             this.Controls.Add(this.btnNhanHet);
             this.Controls.Add(this.btnTim);
             this.Controls.Add(this.dgvDanhSachPhieuThue);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.btnNhanPhong);
             this.Controls.Add(this.txtCMND);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label1);
+            this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmCheckin";
-            this.Text = "Nhận Phòng";
+            this.Text = "Nhận phòng";
             ((System.ComponentModel.ISupportInitialize)(this.dgvDanhSachPhieuThue)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -176,8 +173,6 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtCMND;
         private System.Windows.Forms.Button btnNhanPhong;
         private System.Windows.Forms.Button btnThoat;
