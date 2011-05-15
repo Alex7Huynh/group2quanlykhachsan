@@ -63,18 +63,6 @@ namespace QLKSTestProject
         //
         #endregion
 
-
-        /// <summary>
-        ///A test for KhoiTaoComboBox
-        ///</summary>
-        [TestMethod()]
-        public void KhoiTaoComboBoxTest()
-        {
-            frmCheckOut target = new frmCheckOut(); // TODO: Initialize to an appropriate value
-            target.KhoiTaoComboBox();
-            Assert.Inconclusive("A method that does not return a value cannot be verified.");
-        }
-
         /// <summary>
         ///A test for InitializeComponent
         ///</summary>
@@ -97,34 +85,6 @@ namespace QLKSTestProject
             frmCheckOut_Accessor target = new frmCheckOut_Accessor(); // TODO: Initialize to an appropriate value
             bool disposing = false; // TODO: Initialize to an appropriate value
             target.Dispose(disposing);
-            Assert.Inconclusive("A method that does not return a value cannot be verified.");
-        }
-
-        /// <summary>
-        ///A test for comboBox1_SelectedIndexChanged
-        ///</summary>
-        [TestMethod()]
-        [DeploymentItem("QLKS.exe")]
-        public void comboBox1_SelectedIndexChangedTest()
-        {
-            frmCheckOut_Accessor target = new frmCheckOut_Accessor(); // TODO: Initialize to an appropriate value
-            object sender = null; // TODO: Initialize to an appropriate value
-            EventArgs e = null; // TODO: Initialize to an appropriate value
-            target.comboBox1_SelectedIndexChanged(sender, e);
-            Assert.Inconclusive("A method that does not return a value cannot be verified.");
-        }
-
-        /// <summary>
-        ///A test for button1_Click
-        ///</summary>
-        [TestMethod()]
-        [DeploymentItem("QLKS.exe")]
-        public void button1_ClickTest()
-        {
-            frmCheckOut_Accessor target = new frmCheckOut_Accessor(); // TODO: Initialize to an appropriate value
-            object sender = null; // TODO: Initialize to an appropriate value
-            EventArgs e = null; // TODO: Initialize to an appropriate value
-            target.button1_Click(sender, e);
             Assert.Inconclusive("A method that does not return a value cannot be verified.");
         }
 

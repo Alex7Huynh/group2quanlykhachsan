@@ -60,13 +60,6 @@ namespace QLKS.Properties {
             }
         }
         
-        internal static System.Drawing.Bitmap _20101109033253_report {
-            get {
-                object obj = ResourceManager.GetObject("20101109033253_report", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
         internal static System.Drawing.Bitmap ButtonAdd {
             get {
                 object obj = ResourceManager.GetObject("ButtonAdd", resourceCulture);
@@ -165,13 +158,6 @@ namespace QLKS.Properties {
             }
         }
         
-        internal static System.Drawing.Bitmap ButtonFocus {
-            get {
-                object obj = ResourceManager.GetObject("ButtonFocus", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
         internal static System.Drawing.Bitmap ButtonFocus_Lui {
             get {
                 object obj = ResourceManager.GetObject("ButtonFocus_Lui", resourceCulture);
@@ -231,6 +217,34 @@ namespace QLKS.Properties {
         internal static System.Drawing.Bitmap ButtonMoneyReportFocus {
             get {
                 object obj = ResourceManager.GetObject("ButtonMoneyReportFocus", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap ButtonNhanHet {
+            get {
+                object obj = ResourceManager.GetObject("ButtonNhanHet", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap ButtonNhanHetFocus {
+            get {
+                object obj = ResourceManager.GetObject("ButtonNhanHetFocus", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap ButtonNhanPhong {
+            get {
+                object obj = ResourceManager.GetObject("ButtonNhanPhong", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap ButtonNhanPhongFocus {
+            get {
+                object obj = ResourceManager.GetObject("ButtonNhanPhongFocus", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -312,6 +326,20 @@ namespace QLKS.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap ButtonTraPhong {
+            get {
+                object obj = ResourceManager.GetObject("ButtonTraPhong", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap ButtonTraPhongFocus {
+            get {
+                object obj = ResourceManager.GetObject("ButtonTraPhongFocus", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap ButtonXacNhan {
             get {
                 object obj = ResourceManager.GetObject("ButtonXacNhan", resourceCulture);
@@ -343,6 +371,13 @@ namespace QLKS.Properties {
         internal static System.Drawing.Bitmap MainMenu {
             get {
                 object obj = ResourceManager.GetObject("MainMenu", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap MHBCDoanhThuThang {
+            get {
+                object obj = ResourceManager.GetObject("MHBCDoanhThuThang", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -403,6 +438,13 @@ namespace QLKS.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap NhanPhong {
+            get {
+                object obj = ResourceManager.GetObject("NhanPhong", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap reservation {
             get {
                 object obj = ResourceManager.GetObject("reservation", resourceCulture);
@@ -413,13 +455,6 @@ namespace QLKS.Properties {
         internal static System.Drawing.Bitmap reservation1 {
             get {
                 object obj = ResourceManager.GetObject("reservation1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        internal static System.Drawing.Bitmap runningman {
-            get {
-                object obj = ResourceManager.GetObject("runningman", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
