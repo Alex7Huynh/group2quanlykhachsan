@@ -80,10 +80,9 @@
             // 
             // gbTraPhongDoan
             // 
-            this.gbTraPhongDoan.Controls.Add(this.rdoTraPhongDoan);
             this.gbTraPhongDoan.Controls.Add(this.label5);
             this.gbTraPhongDoan.Controls.Add(this.txtCMND2);
-            this.gbTraPhongDoan.Location = new System.Drawing.Point(53, 200);
+            this.gbTraPhongDoan.Location = new System.Drawing.Point(53, 228);
             this.gbTraPhongDoan.Name = "gbTraPhongDoan";
             this.gbTraPhongDoan.Size = new System.Drawing.Size(408, 71);
             this.gbTraPhongDoan.TabIndex = 17;
@@ -92,14 +91,13 @@
             // 
             // gbTraPhongDon
             // 
-            this.gbTraPhongDon.Controls.Add(this.rdoTraPhongDon);
             this.gbTraPhongDon.Controls.Add(this.rdoCMND);
             this.gbTraPhongDon.Controls.Add(this.rdoTenPhong);
             this.gbTraPhongDon.Controls.Add(this.label3);
             this.gbTraPhongDon.Controls.Add(this.txtCMND1);
             this.gbTraPhongDon.Controls.Add(this.label2);
             this.gbTraPhongDon.Controls.Add(this.txtTenPhong);
-            this.gbTraPhongDon.Location = new System.Drawing.Point(53, 77);
+            this.gbTraPhongDon.Location = new System.Drawing.Point(53, 84);
             this.gbTraPhongDon.Name = "gbTraPhongDon";
             this.gbTraPhongDon.Size = new System.Drawing.Size(408, 100);
             this.gbTraPhongDon.TabIndex = 18;
@@ -163,7 +161,7 @@
             // 
             // btnTraPhong
             // 
-            this.btnTraPhong.Location = new System.Drawing.Point(120, 434);
+            this.btnTraPhong.Location = new System.Drawing.Point(120, 410);
             this.btnTraPhong.Name = "btnTraPhong";
             this.btnTraPhong.Size = new System.Drawing.Size(75, 23);
             this.btnTraPhong.TabIndex = 19;
@@ -173,7 +171,7 @@
             // gbThanhTien
             // 
             this.gbThanhTien.Controls.Add(this.txtThanhTien);
-            this.gbThanhTien.Location = new System.Drawing.Point(53, 321);
+            this.gbThanhTien.Location = new System.Drawing.Point(53, 317);
             this.gbThanhTien.Name = "gbThanhTien";
             this.gbThanhTien.Size = new System.Drawing.Size(408, 71);
             this.gbThanhTien.TabIndex = 18;
@@ -191,26 +189,30 @@
             // rdoTraPhongDon
             // 
             this.rdoTraPhongDon.AutoSize = true;
-            this.rdoTraPhongDon.Location = new System.Drawing.Point(12, 0);
+            this.rdoTraPhongDon.Location = new System.Drawing.Point(65, 59);
             this.rdoTraPhongDon.Name = "rdoTraPhongDon";
-            this.rdoTraPhongDon.Size = new System.Drawing.Size(14, 13);
+            this.rdoTraPhongDon.Size = new System.Drawing.Size(96, 17);
             this.rdoTraPhongDon.TabIndex = 20;
             this.rdoTraPhongDon.TabStop = true;
+            this.rdoTraPhongDon.Text = "Trả phòng đơn";
             this.rdoTraPhongDon.UseVisualStyleBackColor = true;
+            this.rdoTraPhongDon.CheckedChanged += new System.EventHandler(this.rdoTraPhongDon_CheckedChanged);
             // 
             // rdoTraPhongDoan
             // 
             this.rdoTraPhongDoan.AutoSize = true;
-            this.rdoTraPhongDoan.Location = new System.Drawing.Point(12, 0);
+            this.rdoTraPhongDoan.Location = new System.Drawing.Point(65, 203);
             this.rdoTraPhongDoan.Name = "rdoTraPhongDoan";
-            this.rdoTraPhongDoan.Size = new System.Drawing.Size(14, 13);
+            this.rdoTraPhongDoan.Size = new System.Drawing.Size(126, 17);
             this.rdoTraPhongDoan.TabIndex = 21;
             this.rdoTraPhongDoan.TabStop = true;
+            this.rdoTraPhongDoan.Text = "Trả phòng theo đoàn";
             this.rdoTraPhongDoan.UseVisualStyleBackColor = true;
+            this.rdoTraPhongDoan.CheckedChanged += new System.EventHandler(this.rdoTraPhongDoan_CheckedChanged);
             // 
             // btnThoat
             // 
-            this.btnThoat.Location = new System.Drawing.Point(350, 434);
+            this.btnThoat.Location = new System.Drawing.Point(350, 410);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(75, 23);
             this.btnThoat.TabIndex = 20;
@@ -221,7 +223,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(545, 503);
+            this.ClientSize = new System.Drawing.Size(545, 453);
+            this.Controls.Add(this.rdoTraPhongDoan);
+            this.Controls.Add(this.rdoTraPhongDon);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.gbThanhTien);
             this.Controls.Add(this.btnTraPhong);

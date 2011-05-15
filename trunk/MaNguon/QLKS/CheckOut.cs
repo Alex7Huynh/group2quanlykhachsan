@@ -34,7 +34,26 @@ namespace QLKS
 
         private void frmCheckOut_Load(object sender, EventArgs e)
         {
+            rdoTraPhongDon.Checked = true;
+            rdoTenPhong.Checked = true;
+        }
 
+        private void rdoTraPhongDon_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rdoTraPhongDon.Checked == true)
+            {
+                rdoTraPhongDoan.Checked = false;
+                gbTraPhongDoan.Enabled = false;
+            }
+        }
+
+        private void rdoTraPhongDoan_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rdoTraPhongDoan.Checked == true)
+            {
+                rdoTraPhongDon.Checked = false;
+                gbTraPhongDon.Enabled = false;
+            }
         }
 
         
