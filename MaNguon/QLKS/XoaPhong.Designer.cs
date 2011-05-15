@@ -60,6 +60,7 @@
             this.dtg1.Size = new System.Drawing.Size(928, 410);
             this.dtg1.TabIndex = 1;
             this.dtg1.Paint += new System.Windows.Forms.PaintEventHandler(this.dtg1_Paint);
+            this.dtg1.SelectionChanged += new System.EventHandler(this.dtg1_SelectionChanged);
             // 
             // clMaPhong
             // 
@@ -175,7 +176,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1024, 790);
+            this.ClientSize = new System.Drawing.Size(1024, 780);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.BT_ThuNho);

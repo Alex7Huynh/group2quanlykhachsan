@@ -28,7 +28,8 @@ namespace DAO
                     phg.MaLoaiPhong = Doc.GetString(2);
                     phg.GhiChu = Doc.GetString(3);
                     phg.TinhTrang = Doc.GetString(4);
-                    phg.DaXoa = Doc.GetString(5);
+                    phg.SoNguoiToiDa = Doc.GetInt32(5);
+                    phg.DaXoa = Doc.GetString(6);
                     dsPhong.Add(phg);
                 }
             }
@@ -241,7 +242,8 @@ namespace DAO
                     {
                         Phong.TinhTrang = "";
                     }
-                    Phong.DaXoa = Doc.GetString(5);
+                    Phong.SoNguoiToiDa = Doc.GetInt32(5);
+                    Phong.DaXoa = Doc.GetString(6);
                 }
             }
             catch (Exception ex)
@@ -290,7 +292,8 @@ namespace DAO
                     {
                         Phong.TinhTrang = "";
                     }
-                    Phong.DaXoa = Doc.GetString(5);
+                    Phong.SoNguoiToiDa = Doc.GetInt32(5);
+                    Phong.DaXoa = Doc.GetString(6);
                 }
             }
             catch (Exception ex)
@@ -340,7 +343,8 @@ namespace DAO
                     {
                         phg.TinhTrang = "";
                     }
-                    phg.DaXoa = Doc.GetString(5);
+                    phg.SoNguoiToiDa = Doc.GetInt32(5);
+                    phg.DaXoa = Doc.GetString(6);
                     dsPhong.Add(phg);
                 }
             }
