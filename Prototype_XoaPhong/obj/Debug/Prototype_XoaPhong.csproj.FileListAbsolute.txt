@@ -14,3 +14,5 @@ C:\Users\MinhQuan\Documents\Downloads\Compressed\Prototype_XoaPhong\Prototype_Xo
 C:\Users\MinhQuan\Documents\Downloads\Compressed\Prototype_XoaPhong\Prototype_XoaPhong\Prototype_XoaPhong\obj\Debug\Prototype_XoaPhong.Form1.resources
 C:\Users\MinhQuan\Documents\Downloads\Compressed\Prototype_XoaPhong\Prototype_XoaPhong\Prototype_XoaPhong\obj\Debug\Prototype_XoaPhong.Properties.Resources.resources
 C:\Users\MinhQuan\Documents\Downloads\Compressed\Prototype_XoaPhong\Prototype_XoaPhong\Prototype_XoaPhong\obj\Debug\Prototype_XoaPhong.csproj.GenerateResource.Cache
+C:\Users\NDPhu\Desktop\xdpm checkout\Prototype_XoaPhong\obj\Debug\Prototype_XoaPhong.exe
+C:\Users\NDPhu\Desktop\xdpm checkout\Prototype_XoaPhong\obj\Debug\Prototype_XoaPhong.pdb
