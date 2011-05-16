@@ -55,10 +55,10 @@ namespace QLKS
             arrDoanhThu = PHONGBUS.LapBaoCaoDoanhThu(thang);
 
             List<int> dstb = new List<int>();
-            dstb = PHONGBUS.layDSThietBiThang(thang);
+            
             dataGridView1.Rows.Clear();
             for(int i=0; i<dsphg.Count;i++)
-                dataGridView1.Rows.Add(i+1, dsphg[i].MaPhong, arrDoanhThu[i], dstb[i]);
+                dataGridView1.Rows.Add(i+1, dsphg[i].MaPhong, arrDoanhThu[i]);
         }
         private void button2_Click(object sender, EventArgs e)
         {

@@ -22,17 +22,25 @@ namespace QLKS
         #region 0812388
         private void btnTim_Click(object sender, EventArgs e)
         {
-            dgvDanhSachPhieuThue.Rows.Clear();
-            List<NhomDTO> dsNhom = BUS.NhomBUS.LayDSNhomTheoMaKhach(BUS.KHACHHANGBUS.LayKhachTheoSoGiayToChinhXac(txtCMND.Text).MaKH);
-           
-            foreach (NhomDTO nhom in dsNhom)
+            try
             {
-                List<PHIEUTHUE> dsPt = BUS.PHIEUTHUEBUS.LayDSPhieuThueTheoMaNhom(nhom.MaNhom);
-                foreach (PHIEUTHUE pt in dsPt)
+                dgvDanhSachPhieuThue.Rows.Clear();
+                List<NhomDTO> dsNhom = BUS.NhomBUS.LayDSNhomTheoMaKhach(BUS.KHACHHANGBUS.LayKhachTheoSoGiayToChinhXac(txtCMND.Text).MaKH);
+
+                foreach (NhomDTO nhom in dsNhom)
                 {
-                    dgvDanhSachPhieuThue.Rows.Add(pt.MaPhong, pt.MaPhieuThue, pt.NgayThue, pt.SoNgayThue, pt.TenKhachHangDaiDien);
+                    List<PHIEUTHUE> dsPt = BUS.PHIEUTHUEBUS.LayDSPhieuThueTheoMaNhom(nhom.MaNhom);
+                    foreach (PHIEUTHUE pt in dsPt)
+                    {
+                        dgvDanhSachPhieuThue.Rows.Add(pt.MaPhong, pt.MaPhieuThue, pt.NgayThue, pt.SoNgayThue, pt.TenKhachHangDaiDien);
+                    }
                 }
             }
+            catch (System.Exception ex)
+            {
+            	
+            }
+            
         }
         
         private void btnThoat_Click(object sender, EventArgs e)

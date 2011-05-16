@@ -79,6 +79,7 @@ namespace QLKS
                 }
                 cmbLoaiKhacHang.DataSource = str_dsLoaiKhacHang;
                 txtSoNgay.Text = "1";
+                TinhNgayTraPhong();
             }
             catch (System.Exception ex)
             {
@@ -262,21 +263,7 @@ namespace QLKS
 
         private void dtpNgayThue_ValueChanged(object sender, EventArgs e)
         {
-            int soNgayThue = 0;
-            try
-            {
-                soNgayThue = int.Parse(txtSoNgay.Text.Trim());
-                if (soNgayThue < 1)
-                {
-                    throw new Exception();
-                }
-                DateTime ngayTra = dtpNgayThue.Value.AddDays(soNgayThue);
-                txtNgayTra.Text = ngayTra.ToShortDateString();
-            }
-            catch
-            {
-            	MessageBox.Show("Lỗi ở số ngày");
-            }
+            TinhNgayTraPhong();
         }
 
         private void txtSoNgay_TextChanged(object sender, EventArgs e)
@@ -286,26 +273,38 @@ namespace QLKS
 
         private void txtSoNgay_Leave(object sender, EventArgs e)
         {
+            
+        }
+        private void TinhNgayTraPhong()
+        {
             int soNgayThue = 0;
             try
             {
-                soNgayThue = int.Parse(txtSoNgay.Text.Trim());
-                if (soNgayThue < 1)
+                if (txtSoNgay.Text.Trim()!="")
                 {
-                    throw new Exception();
+                    soNgayThue = int.Parse(txtSoNgay.Text.Trim());
+                    if (soNgayThue < 1)
+                    {
+                        throw new Exception();
+                    }
+                    DateTime ngayTra = dtpNgayThue.Value.AddDays(soNgayThue);
+                    txtNgayTra.Text = ngayTra.ToShortDateString();
                 }
-                DateTime ngayTra = dtpNgayThue.Value.AddDays(soNgayThue);
-                txtNgayTra.Text = ngayTra.ToShortDateString();
+                
             }
             catch
             {
                 MessageBox.Show("Lỗi ở số ngày");
             }
         }
-
         private void txtSoNgay_ModifiedChanged(object sender, EventArgs e)
         {
             
+        }
+
+        private void txtSoNgay_KeyUp(object sender, KeyEventArgs e)
+        {
+            TinhNgayTraPhong();
         }
     }
 }

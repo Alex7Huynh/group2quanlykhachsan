@@ -364,84 +364,100 @@ namespace BUS
         /// <returns>Sơ đồ tình trạng phòng</returns>
         public static int[][] ToiUuPhieuThue(PHIEUTHUE phieuThueMoi, string maLoaiPhong, List<PHIEUTHUE> danhSachPhieuThueCanToiUu, ref int viTriNgay)
         {
-            int[][] soDoTinhTrangPhong = new int[0][];
-            List<PHIEUTHUE> ketQua = new List<PHIEUTHUE>();
-            ketQua = danhSachPhieuThueCanToiUu;
-
-            int soPhong = LaySoPhongTheoLoai(maLoaiPhong);
-            int max = 0;
-
-            DateTime ngayPhieuThueCuNhat = LayNgayPhieuThueCuNhat(danhSachPhieuThueCanToiUu);
-            PHIEUTHUE phieuThueXaNhat = LayPhieuThueXaNhat(danhSachPhieuThueCanToiUu);
-            DateTime ngayPhieuThueMoiNhat = phieuThueXaNhat.NgayThue.AddDays(phieuThueXaNhat.SoNgayThue);
-
-            int soNgayThue = ngayPhieuThueMoiNhat.DayOfYear - ngayPhieuThueCuNhat.DayOfYear;
-            if (soNgayThue < phieuThueMoi.SoNgayThue)
+            try
             {
-                soNgayThue = phieuThueMoi.SoNgayThue;
-            }
+                // khoi tao ma tran de danh gia
+                int[][] soDoTinhTrangPhong = new int[0][];
+                List<PHIEUTHUE> ketQua = new List<PHIEUTHUE>();
+                ketQua = danhSachPhieuThueCanToiUu;
 
-            viTriNgay = phieuThueMoi.NgayThue.DayOfYear - ngayPhieuThueCuNhat.DayOfYear;
+                int soPhong = LaySoPhongTheoLoai(maLoaiPhong);
+                int max = 0;
 
-            Init(ref soDoTinhTrangPhong, danhSachPhieuThueCanToiUu, soPhong, soNgayThue);
-            Stack<List<PHIEUTHUE>> st = new Stack<List<PHIEUTHUE>>();
-            if (Rate(soDoTinhTrangPhong, soNgayThue, soPhong) > max)
-                st.Push(danhSachPhieuThueCanToiUu);
-            while (st.Count != 0)
-            {
-                danhSachPhieuThueCanToiUu = st.Pop();
+                DateTime ngayPhieuThueCuNhat = LayNgayPhieuThueCuNhat(danhSachPhieuThueCanToiUu);
+                PHIEUTHUE phieuThueXaNhat = LayPhieuThueXaNhat(danhSachPhieuThueCanToiUu);
+                DateTime ngayPhieuThueMoiNhat = phieuThueXaNhat.NgayThue.AddDays(phieuThueXaNhat.SoNgayThue);
 
-                Init(ref soDoTinhTrangPhong, danhSachPhieuThueCanToiUu, soPhong, soNgayThue);
-                if (Rate(soDoTinhTrangPhong, soNgayThue, soPhong) == max)
+                int soNgayThue = ngayPhieuThueMoiNhat.DayOfYear - ngayPhieuThueCuNhat.DayOfYear;
+                if (soNgayThue < phieuThueMoi.SoNgayThue)
                 {
-                    ketQua = new List<PHIEUTHUE>();
-                    for (int ii = 0; ii < danhSachPhieuThueCanToiUu.Count; ++ii)
-                    {
-                        ketQua.Add(new PHIEUTHUE { DangThue = danhSachPhieuThueCanToiUu[ii].DangThue, MaPhong = danhSachPhieuThueCanToiUu[ii].MaPhong, NgayThue = danhSachPhieuThueCanToiUu[ii].NgayThue, SoNgayThue = danhSachPhieuThueCanToiUu[ii].SoNgayThue });
-                    }
+                    soNgayThue = phieuThueMoi.SoNgayThue;
                 }
-                for (int i = 0; i < danhSachPhieuThueCanToiUu.Count; ++i)
+                if (ngayPhieuThueCuNhat < phieuThueMoi.NgayThue)
+                    viTriNgay = phieuThueMoi.NgayThue.DayOfYear - ngayPhieuThueCuNhat.DayOfYear;
+                else
+                    viTriNgay = 0;
+                // khoi tao tinh trang ban dau
+                KhoiTao(ref soDoTinhTrangPhong, danhSachPhieuThueCanToiUu, soPhong, soNgayThue);
+
+                Stack<List<PHIEUTHUE>> nganXep = new Stack<List<PHIEUTHUE>>();
+                // dua vao ngan xep
+                if (DanhGia(soDoTinhTrangPhong, soNgayThue, soPhong) > max)
+                    nganXep.Push(danhSachPhieuThueCanToiUu);
+                // chay thuat toan
+                while (nganXep.Count != 0)
                 {
-                    for (int j = 0; j < soPhong; ++j)
+                    danhSachPhieuThueCanToiUu = nganXep.Pop();
+
+                    KhoiTao(ref soDoTinhTrangPhong, danhSachPhieuThueCanToiUu, soPhong, soNgayThue);
+
+                    if (DanhGia(soDoTinhTrangPhong, soNgayThue, soPhong) == max) // khi da tim duoc loi giai
                     {
-                        int maPhong = int.Parse(danhSachPhieuThueCanToiUu[i].MaPhong.Substring(1));
-                        int ngayBatDau = danhSachPhieuThueCanToiUu[i].NgayThue.DayOfYear - ngayPhieuThueCuNhat.DayOfYear;
-
-                        if (danhSachPhieuThueCanToiUu[i].SoNgayThue <= soDoTinhTrangPhong[j][/*_lsPt[i].NgayBatDau*/ngayBatDau] && !danhSachPhieuThueCanToiUu[i].DangThue)
+                        ketQua = new List<PHIEUTHUE>();
+                        for (int ii = 0; ii < danhSachPhieuThueCanToiUu.Count; ++ii)
                         {
-                            string strMaPhong = danhSachPhieuThueCanToiUu[i].MaPhong[0].ToString();
-                            danhSachPhieuThueCanToiUu[i].MaPhong = strMaPhong + (j + 1).ToString("000");
-                            //_lsPt[i].MaPhong = j + 1;
+                            ketQua.Add(new PHIEUTHUE { DangThue = danhSachPhieuThueCanToiUu[ii].DangThue, MaPhong = danhSachPhieuThueCanToiUu[ii].MaPhong, NgayThue = danhSachPhieuThueCanToiUu[ii].NgayThue, SoNgayThue = danhSachPhieuThueCanToiUu[ii].SoNgayThue });
+                        }
+                    }
 
-                            Init(ref soDoTinhTrangPhong, danhSachPhieuThueCanToiUu, soPhong, soNgayThue);
-                            if (Rate(soDoTinhTrangPhong, soNgayThue, soPhong) > max)
+                    for (int i = 0; i < danhSachPhieuThueCanToiUu.Count; ++i)
+                    {
+                        for (int j = 0; j < soPhong; ++j)
+                        {
+                            int maPhong = int.Parse(danhSachPhieuThueCanToiUu[i].MaPhong.Substring(1));
+                            int ngayBatDau = danhSachPhieuThueCanToiUu[i].NgayThue.DayOfYear - ngayPhieuThueCuNhat.DayOfYear;
+
+                            if (danhSachPhieuThueCanToiUu[i].SoNgayThue <= soDoTinhTrangPhong[j][ngayBatDau] && !danhSachPhieuThueCanToiUu[i].DangThue)
                             {
-                                max = Rate(soDoTinhTrangPhong, soNgayThue, soPhong);
-                                ketQua = new List<PHIEUTHUE>();
-                                for (int ii = 0; ii < danhSachPhieuThueCanToiUu.Count; ++ii)
-                                {
-                                    ketQua.Add(new PHIEUTHUE
-                                    {
-                                        MaPhieuThue = danhSachPhieuThueCanToiUu[ii].MaPhieuThue,
-                                        DangThue = danhSachPhieuThueCanToiUu[ii].DangThue,
-                                        MaPhong = danhSachPhieuThueCanToiUu[ii].MaPhong,
-                                        NgayThue = danhSachPhieuThueCanToiUu[ii].NgayThue,
-                                        SoNgayThue = danhSachPhieuThueCanToiUu[ii].SoNgayThue,
-                                        TenKhachHangDaiDien = danhSachPhieuThueCanToiUu[ii].TenKhachHangDaiDien
-                                    });
+                                string strMaPhong = danhSachPhieuThueCanToiUu[i].MaPhong[0].ToString();
+                                danhSachPhieuThueCanToiUu[i].MaPhong = strMaPhong + (j + 1).ToString("000");
+                               
+                                KhoiTao(ref soDoTinhTrangPhong, danhSachPhieuThueCanToiUu, soPhong, soNgayThue);
 
+                                if (DanhGia(soDoTinhTrangPhong, soNgayThue, soPhong) > max)
+                                {
+                                    max = DanhGia(soDoTinhTrangPhong, soNgayThue, soPhong);
+                                    ketQua = new List<PHIEUTHUE>();
+                                    for (int ii = 0; ii < danhSachPhieuThueCanToiUu.Count; ++ii)
+                                    {
+                                        ketQua.Add(new PHIEUTHUE
+                                        {
+                                            MaPhieuThue = danhSachPhieuThueCanToiUu[ii].MaPhieuThue,
+                                            DangThue = danhSachPhieuThueCanToiUu[ii].DangThue,
+                                            MaPhong = danhSachPhieuThueCanToiUu[ii].MaPhong,
+                                            NgayThue = danhSachPhieuThueCanToiUu[ii].NgayThue,
+                                            SoNgayThue = danhSachPhieuThueCanToiUu[ii].SoNgayThue,
+                                            TenKhachHangDaiDien = danhSachPhieuThueCanToiUu[ii].TenKhachHangDaiDien
+                                        });
+                                    }
+                                    nganXep.Push(danhSachPhieuThueCanToiUu);
                                 }
-                                st.Push(danhSachPhieuThueCanToiUu);
                             }
                         }
                     }
+
                 }
 
+                KhoiTao(ref soDoTinhTrangPhong, ketQua, soPhong, soNgayThue);
+                CapNhatPhieuThueDaToiUu(ketQua);
+
+                return soDoTinhTrangPhong;
             }
-            Init(ref soDoTinhTrangPhong, ketQua, soPhong, soNgayThue);
-            //CapNhatPhieuThueDaToiUu(danhSachPhieuThueCanToiUu, ketQua);
-            CapNhatPhieuThueDaToiUu(ketQua);
-            return soDoTinhTrangPhong;
+            catch (System.Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+            
         }
         /// <summary>
         /// Khởi tạo sơ đồ tình trạng phòng 
@@ -450,7 +466,7 @@ namespace BUS
         /// <param name="dsPhieuThue">Danh sách các phiếu thuê muốn lập sơ đồ tình trạng phòng</param>
         /// <param name="soPhong">Số lượng phòng tổng cộng</param>
         /// <param name="soNgay">Số ngày (tính từ ngày của phiếu thuê có ngày sớm nhất đến phiếu thuê kết thúc trễ nhất)</param>
-        private static void Init(ref int[][] mangDuLieu, List<PHIEUTHUE> dsPhieuThue, int soPhong, int soNgay)
+        private static void KhoiTao(ref int[][] mangDuLieu, List<PHIEUTHUE> dsPhieuThue, int soPhong, int soNgay)
         {
             mangDuLieu = new int[soPhong][];
             for (int i = 0; i < soPhong; ++i)
@@ -494,7 +510,7 @@ namespace BUS
         /// <param name="soNgay">Số ngày</param>
         /// <param name="soPhong">Số phòng</param>
         /// <returns>Trị số lượng giá cho sơ đồ tình trạng phòng tương ứng</returns>
-        private static int Rate(int[][] mangDuLieu, int soNgay, int soPhong)
+        private static int DanhGia(int[][] mangDuLieu, int soNgay, int soPhong)
         {
             int count = 0;
             for (int i = 0; i < soNgay; ++i)

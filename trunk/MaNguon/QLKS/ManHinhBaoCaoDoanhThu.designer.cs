@@ -34,12 +34,11 @@
             this.button2 = new System.Windows.Forms.Button();
             this.cmb = new System.Windows.Forms.ComboBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.BT_ThuNho = new System.Windows.Forms.Button();
+            this.BT_Thoat = new System.Windows.Forms.Button();
             this.clSTT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clMP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cldoanhthu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clTB = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BT_ThuNho = new System.Windows.Forms.Button();
-            this.BT_Thoat = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -51,12 +50,13 @@
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.clSTT,
             this.clMP,
-            this.cldoanhthu,
-            this.clTB});
+            this.cldoanhthu});
             this.dataGridView1.GridColor = System.Drawing.Color.OliveDrab;
             this.dataGridView1.Location = new System.Drawing.Point(50, 372);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(925, 345);
             this.dataGridView1.TabIndex = 3;
             // 
@@ -97,6 +97,7 @@
             // cmb
             // 
             this.cmb.BackColor = System.Drawing.Color.White;
+            this.cmb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.cmb.ForeColor = System.Drawing.Color.Black;
             this.cmb.FormattingEnabled = true;
@@ -117,7 +118,6 @@
             this.cmb.Name = "cmb";
             this.cmb.Size = new System.Drawing.Size(660, 24);
             this.cmb.TabIndex = 5;
-            this.cmb.Text = "1";
             // 
             // pictureBox1
             // 
@@ -127,30 +127,6 @@
             this.pictureBox1.Size = new System.Drawing.Size(1024, 768);
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
-            // 
-            // clSTT
-            // 
-            this.clSTT.HeaderText = "STT";
-            this.clSTT.Name = "clSTT";
-            this.clSTT.Width = 75;
-            // 
-            // clMP
-            // 
-            this.clMP.HeaderText = "Mã phòng";
-            this.clMP.Name = "clMP";
-            this.clMP.Width = 200;
-            // 
-            // cldoanhthu
-            // 
-            this.cldoanhthu.HeaderText = "Doanh thu";
-            this.cldoanhthu.Name = "cldoanhthu";
-            this.cldoanhthu.Width = 300;
-            // 
-            // clTB
-            // 
-            this.clTB.HeaderText = "Khấu trừ thiết bị";
-            this.clTB.Name = "clTB";
-            this.clTB.Width = 300;
             // 
             // BT_ThuNho
             // 
@@ -186,13 +162,34 @@
             this.BT_Thoat.Click += new System.EventHandler(this.BT_Thoat_Click);
             this.BT_Thoat.MouseEnter += new System.EventHandler(this.BT_Thoat_MouseEnter);
             // 
+            // clSTT
+            // 
+            this.clSTT.HeaderText = "STT";
+            this.clSTT.Name = "clSTT";
+            this.clSTT.ReadOnly = true;
+            this.clSTT.Width = 75;
+            // 
+            // clMP
+            // 
+            this.clMP.HeaderText = "Mã phòng";
+            this.clMP.Name = "clMP";
+            this.clMP.ReadOnly = true;
+            this.clMP.Width = 400;
+            // 
+            // cldoanhthu
+            // 
+            this.cldoanhthu.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.cldoanhthu.HeaderText = "Doanh thu";
+            this.cldoanhthu.Name = "cldoanhthu";
+            this.cldoanhthu.ReadOnly = true;
+            // 
             // frmBaoCaoDoanhThu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1024, 790);
+            this.ClientSize = new System.Drawing.Size(1024, 780);
             this.Controls.Add(this.BT_ThuNho);
             this.Controls.Add(this.BT_Thoat);
             this.Controls.Add(this.cmb);
@@ -220,11 +217,10 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.ComboBox cmb;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button BT_ThuNho;
+        private System.Windows.Forms.Button BT_Thoat;
         private System.Windows.Forms.DataGridViewTextBoxColumn clSTT;
         private System.Windows.Forms.DataGridViewTextBoxColumn clMP;
         private System.Windows.Forms.DataGridViewTextBoxColumn cldoanhthu;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clTB;
-        private System.Windows.Forms.Button BT_ThuNho;
-        private System.Windows.Forms.Button BT_Thoat;
     }
 }
