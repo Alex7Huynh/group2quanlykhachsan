@@ -197,18 +197,7 @@ namespace BUS
             }
             return arrDoanhThu;
         }
-        public static List<int> layDSThietBiThang(int thang)
-        {
-            List<int> arr = new List<int>();
-            arr = PHONGDAO.layDSThietBiThang(thang);
-            List<PHONG> dsphg = new List<PHONG>();
-            dsphg = PHONGDAO.LayDSPhong();
-            int temp = arr.Count;
-            if (temp < dsphg.Count)
-                for (int i = 0; i < dsphg.Count - temp; i++)
-                    arr.Add(0);
-            return arr;
-        }
+        
         public static bool KiemTraMaPhongHopLe(string maPhong)
         {
             if ((maPhong.Length > 5)||(maPhong[0] < 'A') || (maPhong[0] > 'Z'))

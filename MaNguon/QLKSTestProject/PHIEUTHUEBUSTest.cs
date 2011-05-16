@@ -131,7 +131,7 @@ namespace QLKSTestProject
             
             
 
-            PHIEUTHUEBUS_Accessor.Init(ref mangDuLieu, dsPhieuThue, soPhong, soNgay);
+            PHIEUTHUEBUS_Accessor.KhoiTao(ref mangDuLieu, dsPhieuThue, soPhong, soNgay);
             for (int i = 0; i < soPhong; ++i)
                 for (int j = 0; j < soNgay; ++j)
                     Assert.AreEqual(mangDuLieu[i][j], mangDuLieuExpected[i][j]);
@@ -273,7 +273,7 @@ namespace QLKSTestProject
             int expected = 40; 
 
             int actual;
-            actual = PHIEUTHUEBUS_Accessor.Rate(mangDuLieu, soNgay, soPhong);
+            actual = PHIEUTHUEBUS_Accessor.DanhGia(mangDuLieu, soNgay, soPhong);
             Assert.AreEqual(expected, actual);            
         }
         #endregion

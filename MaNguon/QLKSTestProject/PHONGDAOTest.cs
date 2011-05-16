@@ -166,19 +166,7 @@ namespace QLKSTestProject
             Assert.Inconclusive("Verify the correctness of this test method.");
         }
 
-        /// <summary>
-        ///A test for layDSThietBiThang
-        ///</summary>
-        [TestMethod()]
-        public void layDSThietBiThangTest()
-        {
-            int thang = 0; // TODO: Initialize to an appropriate value
-            List<int> expected = null; // TODO: Initialize to an appropriate value
-            List<int> actual;
-            actual = PHONGDAO.layDSThietBiThang(thang);
-            Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
-        }
+        
 
         /// <summary>
         ///A test for LayDSPhongTheoLoaiPhong

@@ -101,6 +101,7 @@
             this.txtSoNgay.TabIndex = 15;
             this.txtSoNgay.TextChanged += new System.EventHandler(this.txtSoNgay_TextChanged);
             this.txtSoNgay.Leave += new System.EventHandler(this.txtSoNgay_Leave);
+            this.txtSoNgay.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtSoNgay_KeyUp);
             this.txtSoNgay.ModifiedChanged += new System.EventHandler(this.txtSoNgay_ModifiedChanged);
             // 
             // dtpNgayThue
