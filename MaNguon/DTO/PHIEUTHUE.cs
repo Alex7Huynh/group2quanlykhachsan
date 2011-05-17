@@ -66,5 +66,13 @@ namespace DTO
             get { return phong; }
             set { phong = value; }
         }
+
+        bool _daThanhToan;
+
+        public bool DaThanhToan
+        {
+            get { return _daThanhToan; }
+            set { _daThanhToan = value; }
+        }
     }
 }

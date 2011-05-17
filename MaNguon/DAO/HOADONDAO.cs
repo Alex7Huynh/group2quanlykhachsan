@@ -9,7 +9,7 @@ namespace DAO
 {
     public class HOADONDAO :ABSDAO
     {
-        public static List<HOADON> layDSHoaDon()
+        public static List<HOADON> LayDSHoaDon()
         {
             OleDbConnection link = null;
             List<HOADON> dsHoaDon = new List<HOADON>();
@@ -41,6 +41,65 @@ namespace DAO
                     link.Close();
             }
             return dsHoaDon;
+        }
+
+        public static int DemSoLuongHoaDon()
+        {
+            OleDbConnection link = null;
+            int maHoaDon = -1;
+            try
+            {
+                link = KetNoi();
+                string chuoiLenh = "select count(*) from HOADON";
+                OleDbCommand lenh = new OleDbCommand(chuoiLenh, link);
+
+                OleDbDataReader Doc = lenh.ExecuteReader();
+                Doc.Read();
+                maHoaDon = Doc.GetInt32(0);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Lỗi đọc dữ liệu" + ex.Message);
+            }
+            finally
+            {
+                if (link != null && link.State == System.Data.ConnectionState.Open)
+                    link.Close();
+            }
+            return maHoaDon;
+        }
+
+        public static bool ThemHoaDonMoi(HOADON hd)
+        {
+            OleDbConnection link = null;
+            
+            try
+            {
+                link = KetNoi();
+                string chuoiLenh = "INSERT INTO HOADON VALUES(@MaHoaDon,@TenKhachHangThanhToan,@NgayThanhToan,@ThanhTien,@MaPhieuThue)";
+                OleDbCommand lenh = new OleDbCommand(chuoiLenh, link);
+                lenh.Parameters.AddWithValue("@MaHoaDon", hd.MaHoaDon);
+                lenh.Parameters.AddWithValue("@TenKhachHangThanhToan", hd.TenKhachHangThanhToan);
+
+//                 OleDbParameter param = new OleDbParameter("@NgayThanhToan", hd.NgayThanhToan);
+//                 param.DbType = System.Data.DbType.Date;
+//                 lenh.Parameters.Add(param);
+                lenh.Parameters.AddWithValue("@NgayThanhToan", hd.NgayThanhToan.Date);
+
+                lenh.Parameters.AddWithValue("@ThanhTien", hd.Thanhtien);
+                lenh.Parameters.AddWithValue("@MaPhieuThue", hd.MaPhieuThue);
+                lenh.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Lỗi đọc dữ liệu" + ex.Message);
+            }
+            finally
+            {
+                if (link != null && link.State == System.Data.ConnectionState.Open)
+                    link.Close();
+            }
+            return true;
         }
     }
 }

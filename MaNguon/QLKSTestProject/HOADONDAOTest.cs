@@ -73,7 +73,7 @@ namespace QLKSTestProject
         {
             List<HOADON> expected = null; // TODO: Initialize to an appropriate value
             List<HOADON> actual;
-            actual = HOADONDAO.layDSHoaDon();
+            actual = HOADONDAO.LayDSHoaDon();
             Assert.AreEqual(expected, actual);
             
         }

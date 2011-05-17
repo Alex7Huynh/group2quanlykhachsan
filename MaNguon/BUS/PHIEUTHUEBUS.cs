@@ -690,5 +690,10 @@ namespace BUS
         {
             return DAO.PHIEUTHUEDAO.CheckinPhieuThue(p);
         }
+
+        public static bool CheckOutPhieuThue(string p)
+        {
+            return DAO.PHIEUTHUEDAO.CheckoutPhieuThue(p);
+        }
     }
 }

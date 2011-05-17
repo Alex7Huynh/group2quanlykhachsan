@@ -99,5 +99,10 @@ namespace QLKS
             button_temp.Size = new Size(button_temp.Size.Width - 2, button_temp.Size.Height - 2);
             button_temp.Image = null;
         }
+
+        private void ucDatPhong1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
