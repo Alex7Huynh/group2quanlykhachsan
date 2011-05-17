@@ -22,6 +22,13 @@ namespace QLKS
         #region 0812388
         private void btnTim_Click(object sender, EventArgs e)
         {
+            KhoiTaoDanhSachPhieuThue();
+            
+        }
+
+        private void KhoiTaoDanhSachPhieuThue()
+        {
+            dgvDanhSachPhieuThue.Rows.Clear();
             try
             {
                 dgvDanhSachPhieuThue.Rows.Clear();
@@ -29,7 +36,7 @@ namespace QLKS
 
                 foreach (NhomDTO nhom in dsNhom)
                 {
-                    List<PHIEUTHUE> dsPt = BUS.PHIEUTHUEBUS.LayDSPhieuThueTheoMaNhom(nhom.MaNhom);
+                    List<PHIEUTHUE> dsPt = BUS.PHIEUTHUEBUS.LayDSPhieuThueChuaCheckinTheoMaNhom(nhom.MaNhom);
                     foreach (PHIEUTHUE pt in dsPt)
                     {
                         dgvDanhSachPhieuThue.Rows.Add(pt.MaPhong, pt.MaPhieuThue, pt.NgayThue, pt.SoNgayThue, pt.TenKhachHangDaiDien);
@@ -40,7 +47,6 @@ namespace QLKS
             {
                 MessageBox.Show(ex.Message);
             }
-            
         }
         
         private void btnThoat_Click(object sender, EventArgs e)
@@ -50,13 +56,24 @@ namespace QLKS
 
         private void btnNhanPhong_Click(object sender, EventArgs e)
         {
-            if (dgvDanhSachPhieuThue.SelectedRows.Count == 1)
+            try
             {
-                if (dgvDanhSachPhieuThue.SelectedRows[0].Cells[1] != null && BUS.PHIEUTHUEBUS.CheckinPhieuThue(dgvDanhSachPhieuThue.SelectedRows[0].Cells[1].Value.ToString()))
-                    MessageBox.Show("Checkin thành công");
-                else
-                    MessageBox.Show("Checkin thất bại");
+                if (dgvDanhSachPhieuThue.SelectedRows.Count == 1)
+                {
+                    if (dgvDanhSachPhieuThue.SelectedRows[0].Cells[1] != null && BUS.PHIEUTHUEBUS.CheckinPhieuThue(dgvDanhSachPhieuThue.SelectedRows[0].Cells[1].Value.ToString()))
+                    {
+                        MessageBox.Show("Checkin thành công");
+                        KhoiTaoDanhSachPhieuThue();
+                    }
+                    else
+                        MessageBox.Show("Checkin thất bại");
+                }
             }
+            catch (System.Exception ex)
+            {
+                MessageBox.Show("Phiếu thuê không hợp lệ");
+            }
+            
         }
 
 
@@ -71,7 +88,10 @@ namespace QLKS
                     kiemTra = BUS.PHIEUTHUEBUS.CheckinPhieuThue(dgr.Cells[1].Value.ToString());
             }
             if (kiemTra)
+            {
                 MessageBox.Show("Checkin tất cả thành công");
+                KhoiTaoDanhSachPhieuThue();
+            }
             else
                 MessageBox.Show("Checkin tất cả thất bại");
         }
@@ -115,6 +135,20 @@ namespace QLKS
             button_temp.Location = new Point(button_temp.Location.X - 1, button_temp.Location.Y - 1);
             button_temp.Size = new Size(button_temp.Size.Width + 2, button_temp.Size.Height + 2);
             button_temp.Image = Properties.Resources.ButtonQuayLaiFocus;
+        }
+
+        private void dgvDanhSachPhieuThue_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dgvDanhSachPhieuThue.SelectedRows.Count == 0 || (dgvDanhSachPhieuThue.SelectedRows.Count == 1 && dgvDanhSachPhieuThue.SelectedRows[0].Cells[0].Value == null))
+            {
+                btnNhanHet.Enabled = false;
+                btnNhanPhong.Enabled = false;
+            }
+            else
+            {
+                btnNhanHet.Enabled = true;
+                btnNhanPhong.Enabled = true;
+            }
         }
     }
 }

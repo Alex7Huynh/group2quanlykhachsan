@@ -832,7 +832,7 @@ namespace DAO
 
             }
         // 0812388
-        public static List<PHIEUTHUE> LayDSPhieuThueTheoMaNhom(int p)
+        public static List<PHIEUTHUE> LayDSPhieuThueChuaThanhToanTheoMaNhom(int p)
         {
             OleDbConnection link = null;
             List<PHIEUTHUE> dsPhieu = new List<PHIEUTHUE>();
@@ -872,6 +872,7 @@ namespace DAO
             return dsPhieu;
         }
 
+        
         public static bool CheckinPhieuThue(string p)
         {
             OleDbConnection link = null;
@@ -896,6 +897,7 @@ namespace DAO
             }
             
         }
+        // 0812388
         public static bool CheckoutPhieuThue(string p)
         {
             OleDbConnection link = null;
@@ -919,6 +921,46 @@ namespace DAO
                     link.Close();
             }
 
+        }
+
+        public static List<PHIEUTHUE> LayDSPhieuThueChuaCheckinTheoMaNhom(int p)
+        {
+            OleDbConnection link = null;
+            List<PHIEUTHUE> dsPhieu = new List<PHIEUTHUE>();
+
+            OleDbCommand lenh = new OleDbCommand();
+            try
+            {
+                link = KetNoi();
+                string chuoiLenh = "select * from PHIEUTHUE where MaNhom=@MaNhom and DangThue=@DangThue";
+                lenh = new OleDbCommand(chuoiLenh, link);
+                lenh.Parameters.AddWithValue("@MaNhom", p);
+                lenh.Parameters.AddWithValue("@DangThue", false);
+                OleDbDataReader boDoc = lenh.ExecuteReader();
+                while (boDoc.Read())
+                {
+                    dsPhieu.Add(new PHIEUTHUE
+                    {
+                        MaPhieuThue = boDoc.GetString(0),
+                        MaPhong = boDoc.GetString(1),
+                        NgayThue = boDoc.GetDateTime(2),
+                        SoNgayThue = int.Parse(boDoc.GetValue(3).ToString()),
+                        TenKhachHangDaiDien = boDoc.GetString(4),
+                        DangThue = boDoc.GetBoolean(5),
+                        MaNhom = boDoc.GetInt32(6),
+                    });
+                }
+            }
+            catch (Exception ex)
+            {
+                dsPhieu = new List<PHIEUTHUE>();
+            }
+            finally
+            {
+                if (link != null && link.State == System.Data.ConnectionState.Open)
+                    link.Close();
+            }
+            return dsPhieu;
         }
     }
 }

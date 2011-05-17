@@ -683,7 +683,7 @@ namespace BUS
         // 0812388
         public static List<PHIEUTHUE> LayDSPhieuThueTheoMaNhom(int p)
         {
-            return DAO.PHIEUTHUEDAO.LayDSPhieuThueTheoMaNhom(p);
+            return DAO.PHIEUTHUEDAO.LayDSPhieuThueChuaThanhToanTheoMaNhom(p);
         }
 
         public static bool CheckinPhieuThue(string p)
@@ -694,6 +694,11 @@ namespace BUS
         public static bool CheckOutPhieuThue(string p)
         {
             return DAO.PHIEUTHUEDAO.CheckoutPhieuThue(p);
+        }
+
+        public static List<PHIEUTHUE> LayDSPhieuThueChuaCheckinTheoMaNhom(int p)
+        {
+            return DAO.PHIEUTHUEDAO.LayDSPhieuThueChuaCheckinTheoMaNhom(p);
         }
     }
 }
