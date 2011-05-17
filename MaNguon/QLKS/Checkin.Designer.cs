@@ -94,6 +94,7 @@
             this.dgvDanhSachPhieuThue.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvDanhSachPhieuThue.Size = new System.Drawing.Size(402, 157);
             this.dgvDanhSachPhieuThue.TabIndex = 12;
+            this.dgvDanhSachPhieuThue.SelectionChanged += new System.EventHandler(this.dgvDanhSachPhieuThue_SelectionChanged);
             // 
             // maPhong
             // 
@@ -125,7 +126,7 @@
             this.btnTim.BackgroundImage = global::QLKS.Properties.Resources.ButtonSearch;
             this.btnTim.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnTim.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTim.Location = new System.Drawing.Point(232, 145);
+            this.btnTim.Location = new System.Drawing.Point(234, 146);
             this.btnTim.Name = "btnTim";
             this.btnTim.Size = new System.Drawing.Size(188, 47);
             this.btnTim.TabIndex = 13;
