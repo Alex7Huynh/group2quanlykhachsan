@@ -72,7 +72,7 @@ namespace QLKSTestProject
         {
             frmCheckOut_Accessor target = new frmCheckOut_Accessor(); // TODO: Initialize to an appropriate value
             target.InitializeComponent();
-            Assert.Inconclusive("A method that does not return a value cannot be verified.");
+            
         }
 
         /// <summary>
@@ -85,7 +85,7 @@ namespace QLKSTestProject
             frmCheckOut_Accessor target = new frmCheckOut_Accessor(); // TODO: Initialize to an appropriate value
             bool disposing = false; // TODO: Initialize to an appropriate value
             target.Dispose(disposing);
-            Assert.Inconclusive("A method that does not return a value cannot be verified.");
+            
         }
 
         /// <summary>
@@ -95,7 +95,6 @@ namespace QLKSTestProject
         public void frmCheckOutConstructorTest()
         {
             frmCheckOut target = new frmCheckOut();
-            Assert.Inconclusive("TODO: Implement code to verify target");
         }
     }
 }

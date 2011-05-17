@@ -73,7 +73,6 @@ namespace QLKSTestProject
         public void PHIEUTHUEBUSConstructorTest()
         {
             PHIEUTHUEBUS target = new PHIEUTHUEBUS();
-            Assert.Inconclusive("TODO: Implement code to verify target");
         }
 
         /// <summary>
@@ -86,7 +85,7 @@ namespace QLKSTestProject
             List<PHIEUTHUE> nguon = null; // TODO: Initialize to an appropriate value
             List<PHIEUTHUE> dich = null; // TODO: Initialize to an appropriate value
             PHIEUTHUEBUS_Accessor.CapNhatPhieuThueDaToiUu(nguon, dich);
-            Assert.Inconclusive("A method that does not return a value cannot be verified.");
+            
         }
 
         /// <summary>
@@ -102,7 +101,7 @@ namespace QLKSTestProject
             string actual;
             actual = PHIEUTHUEBUS.DatPhieuThue(phieuThue, strLoaiPhong);
             Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
+            
         }
         #region Phú - 0812388
         /// <summary>
@@ -135,7 +134,7 @@ namespace QLKSTestProject
             for (int i = 0; i < soPhong; ++i)
                 for (int j = 0; j < soNgay; ++j)
                     Assert.AreEqual(mangDuLieu[i][j], mangDuLieuExpected[i][j]);
-            //Assert.Inconclusive("A method that does not return a value cannot be verified.");
+            //
         }
         #endregion
         /// <summary>
@@ -149,7 +148,7 @@ namespace QLKSTestProject
             List<PHIEUTHUE> actual;
             actual = PHIEUTHUEBUS.LayDSPhieuThueTheoPhong(phong);
             Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
+            
         }
 
         /// <summary>
@@ -163,7 +162,7 @@ namespace QLKSTestProject
             List<PHIEUTHUE> actual;
             actual = PHIEUTHUEBUS.LayDSPhieuThueTheoTinhTrangPhong(phong);
             Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
+            
         }
 
         /// <summary>
@@ -183,7 +182,7 @@ namespace QLKSTestProject
             DateTime actual;
             actual = PHIEUTHUEBUS_Accessor.LayNgayPhieuThueCuNhat(danhSachPhieuThue);
             Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
+            
         }
 
         /// <summary>
@@ -203,7 +202,7 @@ namespace QLKSTestProject
             DateTime actual;
             actual = PHIEUTHUEBUS_Accessor.LayNgayPhieuThueXaNhat(danhSachPhieuThue);
             Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
+            
         }
 
         /// <summary>
@@ -223,7 +222,7 @@ namespace QLKSTestProject
             PHIEUTHUE actual;
             actual = PHIEUTHUEBUS_Accessor.LayPhieuThueXaNhat(danhSachPhieuThue);
             Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
+            
         }
 
         /// <summary>
@@ -238,7 +237,7 @@ namespace QLKSTestProject
             int actual;
             actual = PHIEUTHUEBUS_Accessor.LaySoPhongTheoLoai(strLoaiPhong);
             Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
+            
         }
 
         /// <summary>
@@ -252,7 +251,7 @@ namespace QLKSTestProject
             int actual;
             actual = PHIEUTHUEBUS.layTongSoNgayThue(phong);
             Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
+            
         }
         #region Phú - 0812388
         /// <summary>
@@ -288,7 +287,7 @@ namespace QLKSTestProject
             bool actual;
             actual = PHIEUTHUEBUS.ThemPhieu(phieu);
             Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
+            
         }
 
         /// <summary>
@@ -311,7 +310,7 @@ namespace QLKSTestProject
             string actual;
             actual = PHIEUTHUEBUS.ThemPhieuThue(phieu);
             Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
+            
         }
 
         /// <summary>
@@ -330,7 +329,7 @@ namespace QLKSTestProject
             List<PHIEUTHUE> actual;
             actual = PHIEUTHUEBUS.TimPhieu(kieuTimKiem, maPhieuThue, tenPhong, tenKhachHangDaiDien, ngayBatDauThue, soNgayThue);
             Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
+            
         }
 
         /// <summary>
@@ -346,7 +345,7 @@ namespace QLKSTestProject
             int actual;
             actual = PHIEUTHUEBUS_Accessor.TimPhongTotNhat(phieuThueMoi, null, viTriLoaiPhong);
             Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
+            
         }
 
         /// <summary>
@@ -360,7 +359,7 @@ namespace QLKSTestProject
             int actual;
             actual = PHIEUTHUEBUS_Accessor.TinhChiSoPhongTrong();
             Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
+            
         }
 
         /// <summary>
@@ -374,7 +373,7 @@ namespace QLKSTestProject
             bool actual;
             actual = PHIEUTHUEBUS.ToiUuPhieuThue(loaiPhong);
             Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
+            
         }
         #region Phú - 0812388
         /// <summary>
@@ -404,7 +403,7 @@ namespace QLKSTestProject
                 for (int j = 0; j < expected[i].Length; ++j)
                     Assert.AreEqual(expected[i][j], actual[i][j]);
 
-            //Assert.Inconclusive("Verify the correctness of this test method.");
+            //
         }
         #endregion
         /// <summary>
@@ -419,7 +418,7 @@ namespace QLKSTestProject
             bool actual;
             actual = PHIEUTHUEBUS_Accessor.TryToiUuPhieuThue(phieuThue);
             Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
+            
         }
 
         /// <summary>
@@ -433,7 +432,7 @@ namespace QLKSTestProject
             bool actual;
             actual = PHIEUTHUEBUS.XoaPhieuThue(phieuThue);
             Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
+            
         }
 
         /// <summary>
@@ -447,7 +446,7 @@ namespace QLKSTestProject
             PHIEUTHUEBUS.LoaiPhongCanToiUu = expected;
             actual = PHIEUTHUEBUS.LoaiPhongCanToiUu;
             Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
+            
         }
     }
 }

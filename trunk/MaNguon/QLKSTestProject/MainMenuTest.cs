@@ -78,7 +78,7 @@ namespace QLKSTestProject
             target.StartPoint = expected;
             actual = target.StartPoint;
             Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
+            
         }
 
         /// <summary>
@@ -92,7 +92,6 @@ namespace QLKSTestProject
             object sender = null; // TODO: Initialize to an appropriate value
             EventArgs e = null; // TODO: Initialize to an appropriate value
             target.PB_XoaPhong_Click(sender, e);
-            Assert.Inconclusive("A method that does not return a value cannot be verified.");
         }
 
         /// <summary>
@@ -106,7 +105,6 @@ namespace QLKSTestProject
             object sender = null; // TODO: Initialize to an appropriate value
             EventArgs e = null; // TODO: Initialize to an appropriate value
             target.PB_TraCuuPhong_Click(sender, e);
-            Assert.Inconclusive("A method that does not return a value cannot be verified.");
         }
 
         /// <summary>
@@ -120,7 +118,6 @@ namespace QLKSTestProject
             object sender = null; // TODO: Initialize to an appropriate value
             EventArgs e = null; // TODO: Initialize to an appropriate value
             target.PB_TraCuuPhieuThue_Click(sender, e);
-            Assert.Inconclusive("A method that does not return a value cannot be verified.");
         }
 
         /// <summary>
@@ -134,7 +131,6 @@ namespace QLKSTestProject
             object sender = null; // TODO: Initialize to an appropriate value
             EventArgs e = null; // TODO: Initialize to an appropriate value
             target.PB_ThemPhong_Click(sender, e);
-            Assert.Inconclusive("A method that does not return a value cannot be verified.");
         }
 
         /// <summary>
@@ -148,7 +144,6 @@ namespace QLKSTestProject
             object sender = null; // TODO: Initialize to an appropriate value
             EventArgs e = null; // TODO: Initialize to an appropriate value
             target.PB_SuaPhong_Click(sender, e);
-            Assert.Inconclusive("A method that does not return a value cannot be verified.");
         }
 
         /// <summary>
@@ -162,7 +157,7 @@ namespace QLKSTestProject
             object sender = null; // TODO: Initialize to an appropriate value
             MouseEventArgs e = null; // TODO: Initialize to an appropriate value
             target.PB_MainMenu_MouseMove(sender, e);
-            Assert.Inconclusive("A method that does not return a value cannot be verified.");
+            
         }
 
         /// <summary>
@@ -176,7 +171,7 @@ namespace QLKSTestProject
             object sender = null; // TODO: Initialize to an appropriate value
             MouseEventArgs e = null; // TODO: Initialize to an appropriate value
             target.PB_MainMenu_MouseDown(sender, e);
-            Assert.Inconclusive("A method that does not return a value cannot be verified.");
+            
         }
 
         /// <summary>
@@ -190,7 +185,7 @@ namespace QLKSTestProject
             object sender = null; // TODO: Initialize to an appropriate value
             EventArgs e = null; // TODO: Initialize to an appropriate value
             target.PB_DatPhong_Click(sender, e);
-            Assert.Inconclusive("A method that does not return a value cannot be verified.");
+            
         }
 
         /// <summary>
@@ -204,7 +199,7 @@ namespace QLKSTestProject
             object sender = null; // TODO: Initialize to an appropriate value
             EventArgs e = null; // TODO: Initialize to an appropriate value
             target.PB_BaoCaoDoanhThu_Click(sender, e);
-            Assert.Inconclusive("A method that does not return a value cannot be verified.");
+            
         }
 
         /// <summary>
@@ -216,7 +211,7 @@ namespace QLKSTestProject
             QLKS.MainMenu target = new QLKS.MainMenu(); // TODO: Initialize to an appropriate value
             Point distance = new Point(); // TODO: Initialize to an appropriate value
             target.MoveForm(distance);
-            Assert.Inconclusive("A method that does not return a value cannot be verified.");
+            
         }
 
         /// <summary>
@@ -230,7 +225,7 @@ namespace QLKSTestProject
             object sender = null; // TODO: Initialize to an appropriate value
             EventArgs e = null; // TODO: Initialize to an appropriate value
             target.MainMenu_Load(sender, e);
-            Assert.Inconclusive("A method that does not return a value cannot be verified.");
+            
         }
 
         /// <summary>
@@ -242,7 +237,7 @@ namespace QLKSTestProject
         {
             MainMenu_Accessor target = new MainMenu_Accessor(); // TODO: Initialize to an appropriate value
             target.InitializeComponent();
-            Assert.Inconclusive("A method that does not return a value cannot be verified.");
+            
         }
 
         /// <summary>
@@ -255,7 +250,7 @@ namespace QLKSTestProject
             MainMenu_Accessor target = new MainMenu_Accessor(); // TODO: Initialize to an appropriate value
             bool disposing = false; // TODO: Initialize to an appropriate value
             target.Dispose(disposing);
-            Assert.Inconclusive("A method that does not return a value cannot be verified.");
+            
         }
 
         /// <summary>
@@ -269,7 +264,7 @@ namespace QLKSTestProject
             object sender = null; // TODO: Initialize to an appropriate value
             EventArgs e = null; // TODO: Initialize to an appropriate value
             target.BT_ThuNho_Click(sender, e);
-            Assert.Inconclusive("A method that does not return a value cannot be verified.");
+            
         }
 
         /// <summary>
@@ -283,7 +278,7 @@ namespace QLKSTestProject
             object sender = null; // TODO: Initialize to an appropriate value
             EventArgs e = null; // TODO: Initialize to an appropriate value
             target.BT_Thoat_Click(sender, e);
-            Assert.Inconclusive("A method that does not return a value cannot be verified.");
+            
         }
         
         /// <summary>
@@ -297,7 +292,7 @@ namespace QLKSTestProject
             object sender = null; // TODO: Initialize to an appropriate value
             EventArgs e = null; // TODO: Initialize to an appropriate value
             target.BT_TCKH_Click(sender, e);
-            Assert.Inconclusive("A method that does not return a value cannot be verified.");
+            
         }        
 
         /// <summary>
@@ -307,7 +302,6 @@ namespace QLKSTestProject
         public void MainMenuConstructorTest()
         {
             QLKS.MainMenu target = new QLKS.MainMenu();
-            Assert.Inconclusive("TODO: Implement code to verify target");
         }
     }
 }

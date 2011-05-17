@@ -74,7 +74,6 @@ namespace QLKSTestProject
             OleDbConnection actual;
             actual = ABSDAO.KetNoi();
             Assert.AreNotEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
         }
 
         /// <summary>
@@ -84,7 +83,6 @@ namespace QLKSTestProject
         public void ABSDAOConstructorTest()
         {
             ABSDAO target = new ABSDAO();
-            Assert.Inconclusive("TODO: Implement code to verify target");
         }
     }
 }

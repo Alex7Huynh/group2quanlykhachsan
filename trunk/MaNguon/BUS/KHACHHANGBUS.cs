@@ -84,6 +84,10 @@ namespace BUS
             return dsKH;
         }
         //0812033
+        /// <summary>
+        /// tự động lấy mã cho khách hàng tiếp theo
+        /// </summary>
+        /// <returns>mã khách hàng</returns>
         public static string TuDongLayMaKhachHang()
         {
             try
@@ -96,6 +100,10 @@ namespace BUS
             }
             
         }
+        /// <summary>
+        /// thêm một khách hàng mới vào csdl
+        /// </summary>
+        /// <param name="khachHang"> KHACHHANG</param>
         public static void ThemKhachHang(KHACHHANG khachHang)
         {
             try

@@ -38,7 +38,7 @@ namespace QLKS
             }
             catch (System.Exception ex)
             {
-            	
+                MessageBox.Show(ex.Message);
             }
             
         }

@@ -75,7 +75,7 @@ namespace QLKSTestProject
             PrivateObject param0 = null; // TODO: Initialize to an appropriate value
             frmReservation_Accessor target = new frmReservation_Accessor(param0); // TODO: Initialize to an appropriate value
             target.UpdateDuration();
-            Assert.Inconclusive("A method that does not return a value cannot be verified.");
+            
         }
 
         /// <summary>
@@ -88,7 +88,7 @@ namespace QLKSTestProject
             PrivateObject param0 = null; // TODO: Initialize to an appropriate value
             frmReservation_Accessor target = new frmReservation_Accessor(param0); // TODO: Initialize to an appropriate value
             target.SetInputValue();
-            Assert.Inconclusive("A method that does not return a value cannot be verified.");
+            
         }
 
         /// <summary>
@@ -101,7 +101,7 @@ namespace QLKSTestProject
             PrivateObject param0 = null; // TODO: Initialize to an appropriate value
             frmReservation_Accessor target = new frmReservation_Accessor(param0); // TODO: Initialize to an appropriate value
             target.InitializeComponent();
-            Assert.Inconclusive("A method that does not return a value cannot be verified.");
+            
         }
 
         /// <summary>
@@ -117,7 +117,6 @@ namespace QLKSTestProject
             PHIEUTHUE actual;
             actual = target.GetPhieuThue();
             Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
         }
 
         /// <summary>
@@ -132,7 +131,7 @@ namespace QLKSTestProject
             object sender = null; // TODO: Initialize to an appropriate value
             EventArgs e = null; // TODO: Initialize to an appropriate value
             target.frmReservation_Load(sender, e);
-            Assert.Inconclusive("A method that does not return a value cannot be verified.");
+            
         }
 
         /// <summary>
@@ -147,7 +146,7 @@ namespace QLKSTestProject
             object sender = null; // TODO: Initialize to an appropriate value
             EventArgs e = null; // TODO: Initialize to an appropriate value
             target.dtpEndDate_ValueChanged(sender, e);
-            Assert.Inconclusive("A method that does not return a value cannot be verified.");
+            
         }
 
         /// <summary>
@@ -162,7 +161,7 @@ namespace QLKSTestProject
             object sender = null; // TODO: Initialize to an appropriate value
             EventArgs e = null; // TODO: Initialize to an appropriate value
             target.dtpBeginDate_ValueChanged(sender, e);
-            Assert.Inconclusive("A method that does not return a value cannot be verified.");
+            
         }
 
         /// <summary>
@@ -176,7 +175,7 @@ namespace QLKSTestProject
             frmReservation_Accessor target = new frmReservation_Accessor(param0); // TODO: Initialize to an appropriate value
             bool disposing = false; // TODO: Initialize to an appropriate value
             target.Dispose(disposing);
-            Assert.Inconclusive("A method that does not return a value cannot be verified.");
+            
         }
 
         /// <summary>
@@ -189,7 +188,7 @@ namespace QLKSTestProject
             PrivateObject param0 = null; // TODO: Initialize to an appropriate value
             frmReservation_Accessor target = new frmReservation_Accessor(param0); // TODO: Initialize to an appropriate value
             target.CheckInputValue();
-            Assert.Inconclusive("A method that does not return a value cannot be verified.");
+            
         }
 
         /// <summary>
@@ -204,7 +203,7 @@ namespace QLKSTestProject
             object sender = null; // TODO: Initialize to an appropriate value
             EventArgs e = null; // TODO: Initialize to an appropriate value
             target.cboPhong_SelectedIndexChanged(sender, e);
-            Assert.Inconclusive("A method that does not return a value cannot be verified.");
+            
         }
 
         /// <summary>
@@ -219,38 +218,12 @@ namespace QLKSTestProject
             object sender = null; // TODO: Initialize to an appropriate value
             EventArgs e = null; // TODO: Initialize to an appropriate value
             target.cboLoaiPhong_SelectedIndexChanged(sender, e);
-            Assert.Inconclusive("A method that does not return a value cannot be verified.");
+            
         }
 
-        /// <summary>
-        ///A test for btnOk_Click
-        ///</summary>
-        [TestMethod()]
-        [DeploymentItem("QLKS.exe")]
-        public void btnOk_ClickTest()
-        {
-            PrivateObject param0 = null; // TODO: Initialize to an appropriate value
-            frmReservation_Accessor target = new frmReservation_Accessor(param0); // TODO: Initialize to an appropriate value
-            object sender = null; // TODO: Initialize to an appropriate value
-            EventArgs e = null; // TODO: Initialize to an appropriate value
-            target.btnOk_Click(sender, e);
-            Assert.Inconclusive("A method that does not return a value cannot be verified.");
-        }
 
-        /// <summary>
-        ///A test for btnCancel_Click
-        ///</summary>
-        [TestMethod()]
-        [DeploymentItem("QLKS.exe")]
-        public void btnCancel_ClickTest()
-        {
-            PrivateObject param0 = null; // TODO: Initialize to an appropriate value
-            frmReservation_Accessor target = new frmReservation_Accessor(param0); // TODO: Initialize to an appropriate value
-            object sender = null; // TODO: Initialize to an appropriate value
-            EventArgs e = null; // TODO: Initialize to an appropriate value
-            target.btnCancel_Click(sender, e);
-            Assert.Inconclusive("A method that does not return a value cannot be verified.");
-        }
+
+
 
         /// <summary>
         ///A test for frmReservation Constructor
@@ -261,7 +234,6 @@ namespace QLKSTestProject
             bool keoTha = false; // TODO: Initialize to an appropriate value
             string soPhong = "A111"; // TODO: Initialize to an appropriate value
             frmReservation target = new frmReservation(keoTha, soPhong);
-            Assert.Inconclusive("TODO: Implement code to verify target");
         }
     }
 }

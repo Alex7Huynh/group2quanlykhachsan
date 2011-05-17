@@ -72,7 +72,7 @@ namespace QLKSTestProject
         //{
         //    frmCheckin target = new frmCheckin(); // TODO: Initialize to an appropriate value
         //    target.KhoiTaoComboBox();
-        //    Assert.Inconclusive("A method that does not return a value cannot be verified.");
+        //    
         //}
 
         /// <summary>
@@ -84,7 +84,7 @@ namespace QLKSTestProject
         {
             frmCheckin_Accessor target = new frmCheckin_Accessor(); // TODO: Initialize to an appropriate value
             target.InitializeComponent();
-            Assert.Inconclusive("A method that does not return a value cannot be verified.");
+            
         }
 
         /// <summary>
@@ -97,7 +97,7 @@ namespace QLKSTestProject
             frmCheckin_Accessor target = new frmCheckin_Accessor(); // TODO: Initialize to an appropriate value
             bool disposing = false; // TODO: Initialize to an appropriate value
             target.Dispose(disposing);
-            Assert.Inconclusive("A method that does not return a value cannot be verified.");
+            
         }
 
         /// <summary>
@@ -111,7 +111,7 @@ namespace QLKSTestProject
         //    object sender = null; // TODO: Initialize to an appropriate value
         //    EventArgs e = null; // TODO: Initialize to an appropriate value
         //    target.comboBox1_SelectedIndexChanged(sender, e);
-        //    Assert.Inconclusive("A method that does not return a value cannot be verified.");
+        //    
         //}
 
         /// <summary>
@@ -125,7 +125,7 @@ namespace QLKSTestProject
         //    object sender = null; // TODO: Initialize to an appropriate value
         //    EventArgs e = null; // TODO: Initialize to an appropriate value
         //    target.button1_Click(sender, e);
-        //    Assert.Inconclusive("A method that does not return a value cannot be verified.");
+        //    
         //}
 
         /// <summary>
@@ -135,7 +135,6 @@ namespace QLKSTestProject
         public void frmCheckinConstructorTest()
         {
             frmCheckin target = new frmCheckin();
-            Assert.Inconclusive("TODO: Implement code to verify target");
         }
     }
 }

@@ -75,7 +75,7 @@ namespace QLKSTestProject
             List<KHACHHANG> actual;
             actual = KHACHHANGDAO.LayDSKhach();
             Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
+            
         }
 
         /// <summary>
@@ -85,7 +85,6 @@ namespace QLKSTestProject
         public void KHACHHANGDAOConstructorTest()
         {
             KHACHHANGDAO target = new KHACHHANGDAO();
-            Assert.Inconclusive("TODO: Implement code to verify target");
         }
     }
 }
