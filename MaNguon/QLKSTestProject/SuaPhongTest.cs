@@ -75,7 +75,7 @@ namespace QLKSTestProject
             object sender = null; // TODO: Initialize to an appropriate value
             EventArgs e = null; // TODO: Initialize to an appropriate value
             target.SuaPhong_Load(sender, e);
-            Assert.Inconclusive("A method that does not return a value cannot be verified.");
+            
         }
 
         /// <summary>
@@ -87,7 +87,7 @@ namespace QLKSTestProject
         {
             SuaPhong_Accessor target = new SuaPhong_Accessor(); // TODO: Initialize to an appropriate value
             target.InitializeComponent();
-            Assert.Inconclusive("A method that does not return a value cannot be verified.");
+            
         }
 
         /// <summary>
@@ -100,7 +100,7 @@ namespace QLKSTestProject
             SuaPhong_Accessor target = new SuaPhong_Accessor(); // TODO: Initialize to an appropriate value
             bool disposing = false; // TODO: Initialize to an appropriate value
             target.Dispose(disposing);
-            Assert.Inconclusive("A method that does not return a value cannot be verified.");
+            
         }
 
         /// <summary>
@@ -114,36 +114,10 @@ namespace QLKSTestProject
             object sender = null; // TODO: Initialize to an appropriate value
             EventArgs e = null; // TODO: Initialize to an appropriate value
             target.cmbMP_SelectedIndexChanged(sender, e);
-            Assert.Inconclusive("A method that does not return a value cannot be verified.");
+            
         }
 
-        /// <summary>
-        ///A test for btnThoat_Click
-        ///</summary>
-        [TestMethod()]
-        [DeploymentItem("QLKS.exe")]
-        public void btnThoat_ClickTest()
-        {
-            SuaPhong_Accessor target = new SuaPhong_Accessor(); // TODO: Initialize to an appropriate value
-            object sender = null; // TODO: Initialize to an appropriate value
-            EventArgs e = null; // TODO: Initialize to an appropriate value
-            target.btnThoat_Click(sender, e);
-            Assert.Inconclusive("A method that does not return a value cannot be verified.");
-        }
 
-        /// <summary>
-        ///A test for btnSua_Click
-        ///</summary>
-        [TestMethod()]
-        [DeploymentItem("QLKS.exe")]
-        public void btnSua_ClickTest()
-        {
-            SuaPhong_Accessor target = new SuaPhong_Accessor(); // TODO: Initialize to an appropriate value
-            object sender = null; // TODO: Initialize to an appropriate value
-            EventArgs e = null; // TODO: Initialize to an appropriate value
-            target.btnSua_Click(sender, e);
-            Assert.Inconclusive("A method that does not return a value cannot be verified.");
-        }
 
         /// <summary>
         ///A test for SuaPhong Constructor
@@ -152,7 +126,7 @@ namespace QLKSTestProject
         public void SuaPhongConstructorTest()
         {
             SuaPhong target = new SuaPhong();
-            Assert.Inconclusive("TODO: Implement code to verify target");
+            
         }
     }
 }

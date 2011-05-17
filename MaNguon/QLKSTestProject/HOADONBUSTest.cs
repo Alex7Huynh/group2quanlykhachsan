@@ -72,7 +72,7 @@ namespace QLKSTestProject
         public void HOADONBUSConstructorTest()
         {
             HOADONBUS target = new HOADONBUS();
-            Assert.Inconclusive("TODO: Implement code to verify target");
+            
         }
 
         /// <summary>
@@ -85,7 +85,6 @@ namespace QLKSTestProject
             List<HOADON> actual;
             actual = HOADONBUS.layDSHoaDon();
             Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
         }
     }
 }

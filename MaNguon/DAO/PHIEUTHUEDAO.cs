@@ -222,6 +222,40 @@ namespace DAO
             }
             return true;
         }
+        public static bool TraPhong(List<PHIEUTHUE> danhSachCapNhat)
+        {
+            OleDbConnection link = null;
+            try
+            {
+                link = KetNoi();
+                string chuoiLenh;
+                for (int i = 0; i < danhSachCapNhat.Count; i++)
+                {
+                    chuoiLenh = "Update PHIEUTHUE Set DangThue = 1, DaXoa = 1 Where MaPhieuThue = '" + danhSachCapNhat[i].MaPhieuThue + "'";
+                    OleDbCommand lenh = new OleDbCommand(chuoiLenh, link);
+
+                    try
+                    {
+                        lenh.ExecuteNonQuery();
+                    }
+                    catch (System.Exception e)
+                    {
+                        throw new Exception("Cập nhật thất bại! Vui lòng kiểm tra lại thông tin và làm lại 1 lần nữa.");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+                return false;
+            }
+            finally
+            {
+                if (link != null && link.State == System.Data.ConnectionState.Open)
+                    link.Close();
+            }
+            return true;
+        }
         public static bool XoaPhieuThue(PHIEUTHUE phieuThue)
         {
             OleDbConnection link = null;
@@ -469,6 +503,36 @@ namespace DAO
             }
             return lonNhat;
         }
+        public static List<int> LayDonGia(List<PHIEUTHUE> dsPhieu)
+        {
+            OleDbConnection link = null;
+            List<int> ds = new List<int>();
+            try
+            {
+                link = KetNoi();
+                string chuoiLenh;
+                string maLoaiPhong = "";
+                for (int index = 0; index < dsPhieu.Count; ++index )
+                {
+                    maLoaiPhong = dsPhieu[index].MaPhong.Substring(0, 1);
+                    chuoiLenh = "select DonGia From LOAIPHONG Where MaLoaiPhong = " + "'" + maLoaiPhong + "'";
+                    OleDbCommand lenh = new OleDbCommand(chuoiLenh, link);
+                    OleDbDataReader Doc = lenh.ExecuteReader();
+                    while (Doc.Read())
+                    {
+                        int donGia = Doc.GetInt32(0);
+                        ds.Add(donGia);
+
+                    }
+                }
+                return ds;
+            }
+            catch
+            {
+                throw new Exception("Không lấy đơn giá được");
+            }
+        }
+        
         //// ket thuc ma nguon cua 0812033
         #endregion
 

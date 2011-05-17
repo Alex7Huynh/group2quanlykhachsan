@@ -109,6 +109,11 @@ namespace BUS
 
         #region 0812033 - Bình
         ///////0812033
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="phieu"></param>
+        /// <returns></returns>
         public static string ThemPhieuThue(PHIEUTHUE phieu)
         {
             try
@@ -120,6 +125,11 @@ namespace BUS
                 throw new Exception(e.Message);
             }
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="phieuThue"></param>
+        /// <returns></returns>
         public static bool XoaPhieuThue(PHIEUTHUE phieuThue)
         {
             try
@@ -131,7 +141,11 @@ namespace BUS
                 throw new Exception(e.Message);
             }
         }
-        // lay phieu thue co ngay thue nho nhat
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="danhSachPhieuThue"></param>
+        /// <returns></returns>
         private static DateTime LayNgayPhieuThueCuNhat(List<PHIEUTHUE> danhSachPhieuThue)
         {
             DateTime ngayCuNhat = danhSachPhieuThue[0].NgayThue;
@@ -144,6 +158,11 @@ namespace BUS
             }
             return ngayCuNhat;
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="danhSachPhieuThue"></param>
+        /// <returns></returns>
         private static DateTime LayNgayPhieuThueXaNhat(List<PHIEUTHUE> danhSachPhieuThue)
         {
             DateTime ngayXaNhat = danhSachPhieuThue[0].NgayThue;
@@ -156,6 +175,11 @@ namespace BUS
             }
             return ngayXaNhat;
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="danhSachPhieuThue"></param>
+        /// <returns></returns>
         private static PHIEUTHUE LayPhieuThueXaNhat(List<PHIEUTHUE> danhSachPhieuThue)
         {
             DateTime ngayXaNhat = danhSachPhieuThue[0].NgayThue;
@@ -170,6 +194,14 @@ namespace BUS
             }
             return danhSachPhieuThue[index];
         }
+        /// <summary>
+        /// 
+        /// 
+        /// </summary>
+        /// <param name="phieuThueMoi"></param>
+        /// <param name="maPhong"></param>
+        /// <param name="viTriLoaiPhong"></param>
+        /// <returns></returns>
         private static int TimPhongTotNhat(PHIEUTHUE phieuThueMoi, string maPhong, int viTriLoaiPhong)
         {
             int viTriPhong = -1;
@@ -210,6 +242,12 @@ namespace BUS
             }
 
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="phieuThue"></param>
+        /// <param name="strLoaiPhong"></param>
+        /// <returns></returns>
         public static string DatPhieuThue(PHIEUTHUE phieuThue, string strLoaiPhong)
         {
             string phongDuocDat = string.Empty;
@@ -240,6 +278,13 @@ namespace BUS
             }
 
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="phieuThue"></param>
+        /// <param name="strLoaiPhong"></param>
+        /// <param name="dsMaPhieuThueDuocDat"></param>
+        /// <returns></returns>
         public static string KiemTraDatPhieuThue(PHIEUTHUE phieuThue, string strLoaiPhong, ref List<string> dsMaPhieuThueDuocDat)
         {
             string phongDuocDat = string.Empty;
@@ -273,6 +318,11 @@ namespace BUS
 
         }
         // dieu chinh thuoc tinh dangThue cua danh sach phieu thue
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="strLoaiPhong"></param>
+        /// <returns></returns>
         private static int LaySoPhongTheoLoai(string strLoaiPhong)
         {
             LOAIPHONG loaiPhong = new LOAIPHONG();
@@ -287,6 +337,11 @@ namespace BUS
             }
 
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="nguon"></param>
+        /// <param name="dich"></param>
         private static void CapNhatPhieuThueDaToiUu(List<PHIEUTHUE> nguon, List<PHIEUTHUE> dich)
         {
             for (int i = 0; i < nguon.Count; i++)
@@ -303,6 +358,10 @@ namespace BUS
 
             }
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="dich"></param>
         private static void CapNhatPhieuThueDaToiUu(List<PHIEUTHUE> dich)
         {
                 try
@@ -314,6 +373,13 @@ namespace BUS
                     throw new Exception(ex.Message);
                 }
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="phieu"></param>
+        /// <param name="soNguoi"></param>
+        /// <param name="dsMaPhieuThueDuocDat"></param>
+        /// <returns></returns>
         public static List<string> KiemTra(PHIEUTHUE phieu, ref int soNguoi, ref List<string> dsMaPhieuThueDuocDat)
         {
             List<string> dsPhongDuocDat = new List<string>();
@@ -342,13 +408,76 @@ namespace BUS
             }
             return dsPhongDuocDat;
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="danhSachCapNhat"></param>
+        /// <returns></returns>
+        public static bool TraPhong(List<PHIEUTHUE> danhSachCapNhat)
+        {
+            return PHIEUTHUEDAO.TraPhong(danhSachCapNhat);
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="dsMaPhieuThue"></param>
+        /// <returns></returns>
         public static bool XoaPhieuThue(List<string> dsMaPhieuThue)
         {
             return PHIEUTHUEDAO.XoaPhieuThue(dsMaPhieuThue);
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="dsMaPhieuThue"></param>
+        /// <returns></returns>
         public static bool XoaTamPhieuThue(List<string> dsMaPhieuThue)
         {
             return PHIEUTHUEDAO.XoaTamPhieuThue(dsMaPhieuThue);
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="dsPhieu"></param>
+        /// <returns></returns>
+        public static string TinhTien(List<PHIEUTHUE> dsPhieu)
+        {
+            try
+            {
+                List<int> dsDonGia = PHIEUTHUEDAO.LayDonGia(dsPhieu);
+                string thanhTien = "";
+                long soTien = 0;
+                int index = 0;
+                for (; index < dsDonGia.Count; ++index)
+                {
+                    soTien += (dsPhieu[index].SoNgayThue * dsDonGia[index]);
+                }
+                return DinhDangTien(soTien);
+            }
+            catch (System.Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+        private static string DinhDangTien(long soTien)
+        {
+            string giaTien = soTien.ToString();
+            string temp = "000 VNĐ";
+            string t = "";
+            for (int c = giaTien.Length - 1; c >= 0; c -= 3)
+            {
+                if (c - 3 >= 0)
+                {
+                    t = giaTien.Substring(c - 2, c + 1);
+
+                }
+                else
+                {
+                    t = giaTien.Substring(0, c + 1);
+                }
+                temp = t.Insert(t.Length - 1, ".") + temp;
+            }
+            return temp;
         }
         #endregion
 

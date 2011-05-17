@@ -12,6 +12,10 @@ namespace BUS
     /// </summary>
     public class NhomBUS
     {
+        /// <summary>
+        /// Thêm nhóm mới
+        /// </summary>
+        /// <param name="nhom">đối tượng kieu NhomDTO</param>
         public static void ThemNhom(NhomDTO nhom)
         {
             try
@@ -23,6 +27,10 @@ namespace BUS
                 throw new Exception(e.Message);
             }
         }
+        /// <summary>
+        /// Tự động lấy mã cho nhóm sắp thêm vào csdl
+        /// </summary>
+        /// <returns> mã nhóm</returns>
         public static int TuDongLayMaNhom()
         {
             try

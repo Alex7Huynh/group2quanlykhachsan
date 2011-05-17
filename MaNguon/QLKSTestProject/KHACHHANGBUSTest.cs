@@ -72,7 +72,6 @@ namespace QLKSTestProject
         public void KHACHHANGBUSConstructorTest()
         {
             KHACHHANGBUS target = new KHACHHANGBUS();
-            Assert.Inconclusive("TODO: Implement code to verify target");
         }
 
         /// <summary>
@@ -85,7 +84,6 @@ namespace QLKSTestProject
             List<KHACHHANG> actual;
             actual = KHACHHANGBUS.LayDSKhach();
             Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
         }
     }
 }

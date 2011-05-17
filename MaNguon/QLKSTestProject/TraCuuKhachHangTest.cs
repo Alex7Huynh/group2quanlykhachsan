@@ -71,7 +71,7 @@ namespace QLKSTestProject
         {
             TraCuuKhachHang_Accessor target = new TraCuuKhachHang_Accessor(); // TODO: Initialize to an appropriate value
             target.InitializeComponent();
-            Assert.Inconclusive("A method that does not return a value cannot be verified.");
+            
         }
 
         /// <summary>
@@ -84,7 +84,7 @@ namespace QLKSTestProject
             TraCuuKhachHang_Accessor target = new TraCuuKhachHang_Accessor(); // TODO: Initialize to an appropriate value
             bool disposing = false; // TODO: Initialize to an appropriate value
             target.Dispose(disposing);
-            Assert.Inconclusive("A method that does not return a value cannot be verified.");
+            
         }
 
         /// <summary>
@@ -94,7 +94,6 @@ namespace QLKSTestProject
         public void TraCuuKhachHangConstructorTest()
         {
             TraCuuKhachHang target = new TraCuuKhachHang();
-            Assert.Inconclusive("TODO: Implement code to verify target");
         }
     }
 }

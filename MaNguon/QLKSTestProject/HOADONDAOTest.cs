@@ -75,7 +75,7 @@ namespace QLKSTestProject
             List<HOADON> actual;
             actual = HOADONDAO.layDSHoaDon();
             Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
+            
         }
 
         /// <summary>
@@ -85,7 +85,6 @@ namespace QLKSTestProject
         public void HOADONDAOConstructorTest()
         {
             HOADONDAO target = new HOADONDAO();
-            Assert.Inconclusive("TODO: Implement code to verify target");
         }
     }
 }

@@ -78,7 +78,7 @@ namespace QLKSTestProject
             bool actual;
             actual = PHIEUTHUEDAO.XoaPhieuThue(phieuThue);
             Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
+            
         }
 
         /// <summary>
@@ -94,7 +94,7 @@ namespace QLKSTestProject
             string actual;
             actual = PHIEUTHUEDAO_Accessor.TuDongLayMaPhieuThue(maPhong, link);
             Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
+            
         }
 
         /// <summary>
@@ -109,7 +109,7 @@ namespace QLKSTestProject
             int actual;
             actual = PHIEUTHUEDAO_Accessor.TimSoLonNhat(danhSach);
             Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
+            
         }
 
         /// <summary>
@@ -128,7 +128,7 @@ namespace QLKSTestProject
             List<PHIEUTHUE> actual;
             actual = PHIEUTHUEDAO.TimPhieu(kieuTimKiem, maPhieuThue, tenPhong, tenKhachHangDaiDien, ngayBatDauThue, soNgayThue);
             Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
+            
         }
 
         /// <summary>
@@ -151,7 +151,7 @@ namespace QLKSTestProject
             string actual;
             actual = PHIEUTHUEDAO.ThemPhieuThue(phieu);
             Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
+            
         }
 
         /// <summary>
@@ -165,7 +165,7 @@ namespace QLKSTestProject
             bool actual;
             actual = PHIEUTHUEDAO.ThemPhieu(phieu);
             Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
+            
         }
 
         /// <summary>
@@ -190,7 +190,7 @@ namespace QLKSTestProject
             int actual;
             actual = PHIEUTHUEDAO.layTongSoNgayThue(phong);
             Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
+            
         }
 
         /// <summary>
@@ -204,7 +204,7 @@ namespace QLKSTestProject
             List<PHIEUTHUE> actual;
             actual = PHIEUTHUEDAO.LayDSPhieuThueTheoTinhTrangPhong(phong);
             Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
+            
         }
 
         /// <summary>
@@ -218,7 +218,7 @@ namespace QLKSTestProject
             List<PHIEUTHUE> actual;
             actual = PHIEUTHUEDAO.LayDSPhieuThueTheoPhong(phong);
             Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
+            
         }
 
         /// <summary>
@@ -252,7 +252,7 @@ namespace QLKSTestProject
             List<PHIEUTHUE> actual;
             actual = PHIEUTHUEDAO.LayDSPhieuThueCanToiUu(phieu, strLoaiPhong);
             Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
+            
         }
 
         /// <summary>
@@ -273,7 +273,6 @@ namespace QLKSTestProject
                 DangThue = false
             }; // TODO: Initialize to an appropriate value
             PHIEUTHUEDAO.KiemTraPhieuThue(ketNoi, phieu);
-            Assert.Inconclusive("A method that does not return a value cannot be verified.");
         }
 
         /// <summary>
@@ -288,7 +287,7 @@ namespace QLKSTestProject
             bool actual;
             actual = PHIEUTHUEDAO.CapNhatPhieuThue(phieuThue);
             Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");*/
+            */
         }
 
         /// <summary>
@@ -298,7 +297,6 @@ namespace QLKSTestProject
         public void PHIEUTHUEDAOConstructorTest()
         {
             PHIEUTHUEDAO target = new PHIEUTHUEDAO();
-            Assert.Inconclusive("TODO: Implement code to verify target");
         }
     }
 }

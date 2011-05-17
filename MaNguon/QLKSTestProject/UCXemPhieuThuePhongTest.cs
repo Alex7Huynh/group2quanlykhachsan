@@ -77,7 +77,7 @@ namespace QLKSTestProject
             UCXemPhieuThuePhong.Ngaythue = expected;
             actual = UCXemPhieuThuePhong.Ngaythue;
             Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
+            
         }
 
         /// <summary>
@@ -91,7 +91,7 @@ namespace QLKSTestProject
             UCXemPhieuThuePhong.Kethuc = expected;
             actual = UCXemPhieuThuePhong.Kethuc;
             Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
+            
         }
 
         /// <summary>
@@ -106,7 +106,7 @@ namespace QLKSTestProject
             target.flag = expected;
             actual = target.flag;
             Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
+            
         }
 
         /// <summary>
@@ -117,7 +117,7 @@ namespace QLKSTestProject
         {
             UCXemPhieuThuePhong target = new UCXemPhieuThuePhong(); // TODO: Initialize to an appropriate value
             target.UpdateRowsAndColumns();
-            Assert.Inconclusive("A method that does not return a value cannot be verified.");
+            
         }
 
         /// <summary>
@@ -129,7 +129,7 @@ namespace QLKSTestProject
         {
             UCXemPhieuThuePhong_Accessor target = new UCXemPhieuThuePhong_Accessor(); // TODO: Initialize to an appropriate value
             target.UpdateRows();
-            Assert.Inconclusive("A method that does not return a value cannot be verified.");
+            
         }
 
         /// <summary>
@@ -141,7 +141,7 @@ namespace QLKSTestProject
         {
             UCXemPhieuThuePhong_Accessor target = new UCXemPhieuThuePhong_Accessor(); // TODO: Initialize to an appropriate value
             target.UpdateMau();
-            Assert.Inconclusive("A method that does not return a value cannot be verified.");
+            
         }
 
         /// <summary>
@@ -153,7 +153,7 @@ namespace QLKSTestProject
         {
             UCXemPhieuThuePhong_Accessor target = new UCXemPhieuThuePhong_Accessor(); // TODO: Initialize to an appropriate value
             target.UpdateColumns();
-            Assert.Inconclusive("A method that does not return a value cannot be verified.");
+            
         }
 
         /// <summary>
@@ -165,7 +165,7 @@ namespace QLKSTestProject
             UCXemPhieuThuePhong target = new UCXemPhieuThuePhong(); // TODO: Initialize to an appropriate value
             PHONG phong = null; // TODO: Initialize to an appropriate value
             target.RemovePhong(phong);
-            Assert.Inconclusive("A method that does not return a value cannot be verified.");
+            
         }
 
         /// <summary>
@@ -176,7 +176,7 @@ namespace QLKSTestProject
         {
             UCXemPhieuThuePhong target = new UCXemPhieuThuePhong(); // TODO: Initialize to an appropriate value
             target.RemoveAll();
-            Assert.Inconclusive("A method that does not return a value cannot be verified.");
+            
         }
 
         /// <summary>
@@ -193,7 +193,7 @@ namespace QLKSTestProject
             bool actual;
             actual = target.kiemtraPhongThueHopLe(_rowdown, _rowup);
             Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
+            
         }
 
         /// <summary>
@@ -211,7 +211,7 @@ namespace QLKSTestProject
             bool actual;
             actual = target.kiemTraPhieuThue(phong, dtbatdau, dtketthuc);
             Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
+            
         }
 
         /// <summary>
@@ -227,7 +227,7 @@ namespace QLKSTestProject
             bool actual;
             actual = target.kiemtraNgayThueHopLe(_ngaythue);
             Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
+            
         }
 
         /// <summary>
@@ -239,7 +239,7 @@ namespace QLKSTestProject
         {
             UCXemPhieuThuePhong_Accessor target = new UCXemPhieuThuePhong_Accessor(); // TODO: Initialize to an appropriate value
             target.InitializeComponent();
-            Assert.Inconclusive("A method that does not return a value cannot be verified.");
+            
         }
 
         /// <summary>
@@ -253,7 +253,7 @@ namespace QLKSTestProject
             object sender = null; // TODO: Initialize to an appropriate value
             PaintEventArgs e = null; // TODO: Initialize to an appropriate value
             target.dtgTheHienPhieuThuePhong_Paint(sender, e);
-            Assert.Inconclusive("A method that does not return a value cannot be verified.");
+            
         }
 
         /// <summary>
@@ -267,7 +267,7 @@ namespace QLKSTestProject
             object sender = null; // TODO: Initialize to an appropriate value
             DataGridViewCellPaintingEventArgs e = null; // TODO: Initialize to an appropriate value
             target.dtgTheHienPhieuThuePhong_CellPainting(sender, e);
-            Assert.Inconclusive("A method that does not return a value cannot be verified.");
+            
         }
 
         /// <summary>
@@ -281,7 +281,7 @@ namespace QLKSTestProject
             object sender = null; // TODO: Initialize to an appropriate value
             DataGridViewCellMouseEventArgs e = null; // TODO: Initialize to an appropriate value
             target.dtgTheHienPhieuThuePhong_CellMouseUp(sender, e);
-            Assert.Inconclusive("A method that does not return a value cannot be verified.");
+            
         }
 
         /// <summary>
@@ -295,7 +295,7 @@ namespace QLKSTestProject
             object sender = null; // TODO: Initialize to an appropriate value
             DataGridViewCellMouseEventArgs e = null; // TODO: Initialize to an appropriate value
             target.dtgTheHienPhieuThuePhong_CellMouseDown(sender, e);
-            Assert.Inconclusive("A method that does not return a value cannot be verified.");
+            
         }
 
         /// <summary>
@@ -309,7 +309,7 @@ namespace QLKSTestProject
             object sender = null; // TODO: Initialize to an appropriate value
             DataGridViewCellFormattingEventArgs e = null; // TODO: Initialize to an appropriate value
             target.dtgTheHienPhieuThuePhong_CellFormatting(sender, e);
-            Assert.Inconclusive("A method that does not return a value cannot be verified.");
+            
         }
 
         /// <summary>
@@ -322,7 +322,7 @@ namespace QLKSTestProject
             UCXemPhieuThuePhong_Accessor target = new UCXemPhieuThuePhong_Accessor(); // TODO: Initialize to an appropriate value
             bool disposing = false; // TODO: Initialize to an appropriate value
             target.Dispose(disposing);
-            Assert.Inconclusive("A method that does not return a value cannot be verified.");
+            
         }
 
         /// <summary>
@@ -334,7 +334,7 @@ namespace QLKSTestProject
             UCXemPhieuThuePhong target = new UCXemPhieuThuePhong(); // TODO: Initialize to an appropriate value
             PHONG phong = null; // TODO: Initialize to an appropriate value
             target.AddPhong(phong);
-            Assert.Inconclusive("A method that does not return a value cannot be verified.");
+            
         }
 
         /// <summary>
@@ -347,7 +347,7 @@ namespace QLKSTestProject
             DateTime BeginDate = new DateTime(); // TODO: Initialize to an appropriate value
             DateTime EndDate = new DateTime(); // TODO: Initialize to an appropriate value
             target.AddDateRange(BeginDate, EndDate);
-            Assert.Inconclusive("A method that does not return a value cannot be verified.");
+            
         }
 
         /// <summary>
@@ -357,7 +357,6 @@ namespace QLKSTestProject
         public void UCXemPhieuThuePhongConstructorTest()
         {
             UCXemPhieuThuePhong target = new UCXemPhieuThuePhong();
-            Assert.Inconclusive("TODO: Implement code to verify target");
         }
     }
 }

@@ -73,7 +73,6 @@ namespace QLKSTestProject
         {
             frmBaoCaoDoanhThu_Accessor target = new frmBaoCaoDoanhThu_Accessor(); // TODO: Initialize to an appropriate value
             target.InitializeComponent();
-            Assert.Inconclusive("A method that does not return a value cannot be verified.");
         }
 
         /// <summary>
@@ -86,35 +85,6 @@ namespace QLKSTestProject
             frmBaoCaoDoanhThu_Accessor target = new frmBaoCaoDoanhThu_Accessor(); // TODO: Initialize to an appropriate value
             bool disposing = false; // TODO: Initialize to an appropriate value
             target.Dispose(disposing);
-            Assert.Inconclusive("A method that does not return a value cannot be verified.");
-        }
-
-        /// <summary>
-        ///A test for button2_Click
-        ///</summary>
-        [TestMethod()]
-        [DeploymentItem("QLKS.exe")]
-        public void button2_ClickTest()
-        {
-            frmBaoCaoDoanhThu_Accessor target = new frmBaoCaoDoanhThu_Accessor(); // TODO: Initialize to an appropriate value
-            object sender = null; // TODO: Initialize to an appropriate value
-            EventArgs e = null; // TODO: Initialize to an appropriate value
-            target.button2_Click(sender, e);
-            Assert.Inconclusive("A method that does not return a value cannot be verified.");
-        }
-
-        /// <summary>
-        ///A test for button1_Click
-        ///</summary>
-        [TestMethod()]
-        [DeploymentItem("QLKS.exe")]
-        public void button1_ClickTest()
-        {
-            frmBaoCaoDoanhThu_Accessor target = new frmBaoCaoDoanhThu_Accessor(); // TODO: Initialize to an appropriate value
-            object sender = null; // TODO: Initialize to an appropriate value
-            EventArgs e = null; // TODO: Initialize to an appropriate value
-            target.button1_Click(sender, e);
-            Assert.Inconclusive("A method that does not return a value cannot be verified.");
         }
 
         /// <summary>
@@ -128,7 +98,7 @@ namespace QLKSTestProject
             object sender = null; // TODO: Initialize to an appropriate value
             EventArgs e = null; // TODO: Initialize to an appropriate value
             target.BaoCaoDoanhThu_Load(sender, e);
-            Assert.Inconclusive("A method that does not return a value cannot be verified.");
+            
         }
 
         /// <summary>
@@ -138,7 +108,6 @@ namespace QLKSTestProject
         public void frmBaoCaoDoanhThuConstructorTest()
         {
             frmBaoCaoDoanhThu target = new frmBaoCaoDoanhThu();
-            Assert.Inconclusive("TODO: Implement code to verify target");
         }
     }
 }

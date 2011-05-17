@@ -19,40 +19,46 @@ namespace QLKS
 
         private void rdoTenPhong_CheckedChanged(object sender, EventArgs e)
         {
-            if (rdoTenPhong.Checked)
-            {
-                txtTenPhong.ReadOnly = false;
-                txtCMND1.ReadOnly = true;
-                gbThanhTien.Enabled = false;
-            }
-            else
-            {
-                txtTenPhong.ReadOnly = true;
-                txtCMND1.ReadOnly = false;
-            }
+            
         }
 
         private void frmCheckOut_Load(object sender, EventArgs e)
         {
-            rdoTraPhongDon.Checked = true;
-            rdoTenPhong.Checked = true;
+            
         }
 
         private void rdoTraPhongDon_CheckedChanged(object sender, EventArgs e)
         {
-            if (rdoTraPhongDon.Checked == true)
-            {
-                rdoTraPhongDoan.Checked = false;
-                gbTraPhongDoan.Enabled = false;
-            }
+            
         }
 
         private void rdoTraPhongDoan_CheckedChanged(object sender, EventArgs e)
         {
-            if (rdoTraPhongDoan.Checked == true)
+        }
+
+        private void btnTraPhong_Click(object sender, EventArgs e)
+        {
+            try
             {
-                rdoTraPhongDon.Checked = false;
-                gbTraPhongDon.Enabled = false;
+                if (txtCMND2.Text.Trim() == "")
+                {
+                    throw new Exception("Bạn chưa nhập số CMND/PassPort");
+                }
+                string soGiayTo = txtCMND2.Text.Trim();
+                string maKhach = KHACHHANGBUS.LayKhachTheoSoGiayToChinhXac(soGiayTo).MaKH;
+                List<NhomDTO> dsNhom = NhomBUS.LayDSNhomTheoMaKhach(maKhach);
+                List<PHIEUTHUE> dsPt = new List<PHIEUTHUE>();
+                foreach (NhomDTO nhom in dsNhom)
+                {
+                    dsPt = BUS.PHIEUTHUEBUS.LayDSPhieuThueTheoMaNhom(nhom.MaNhom);
+                }
+                string thanhTien = PHIEUTHUEBUS.TinhTien(dsPt);
+                txtThanhTien.Text = thanhTien;
+                PHIEUTHUEBUS.TraPhong(dsPt);
+            }
+            catch (System.Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
 

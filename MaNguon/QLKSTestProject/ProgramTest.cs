@@ -70,7 +70,6 @@ namespace QLKSTestProject
         public void MainTest()
         {
             Program_Accessor.Main();
-            Assert.Inconclusive("A method that does not return a value cannot be verified.");
         }
     }
 }

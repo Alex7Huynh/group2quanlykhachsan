@@ -73,7 +73,7 @@ namespace QLKSTestProject
         {
             string MaPhong = string.Empty; // TODO: Initialize to an appropriate value
             PHONGDAO.XoaPhong(MaPhong);
-            Assert.Inconclusive("A method that does not return a value cannot be verified.");
+            
         }
 
         /// <summary>
@@ -84,7 +84,7 @@ namespace QLKSTestProject
         {
             string maPhong = string.Empty; // TODO: Initialize to an appropriate value
             PHONGDAO.Xoa(maPhong);
-            Assert.Inconclusive("A method that does not return a value cannot be verified.");
+            
         }
 
         /// <summary>
@@ -98,7 +98,7 @@ namespace QLKSTestProject
             bool actual;
             actual = PHONGDAO.UpdateTinhTrangPhong(phong);
             Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
+            
         }
 
         /// <summary>
@@ -124,7 +124,7 @@ namespace QLKSTestProject
             List<PHONG> actual;
             actual = PHONGDAO.TimPhong(maPhong, tenPhong, loaiPhong, tinhTrang, timChinhXac);
             Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
+            
         }
 
         /// <summary>
@@ -135,7 +135,7 @@ namespace QLKSTestProject
         {
             PHONG phong = null; // TODO: Initialize to an appropriate value
             PHONGDAO.ThemPhong(phong);
-            Assert.Inconclusive("A method that does not return a value cannot be verified.");
+            
         }
 
         /// <summary>
@@ -149,7 +149,7 @@ namespace QLKSTestProject
             PHONG actual;
             actual = PHONGDAO.LayPhongTheoTenPhong(tenPhong);
             Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
+            
         }
 
         /// <summary>
@@ -163,7 +163,7 @@ namespace QLKSTestProject
             PHONG actual;
             actual = PHONGDAO.LayPhongTheoMa(maPhong);
             Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
+            
         }
 
         
@@ -179,7 +179,7 @@ namespace QLKSTestProject
             List<PHONG> actual;
             actual = PHONGDAO.LayDSPhongTheoLoaiPhong(loaiPhong);
             Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
+            
         }
 
         /// <summary>
@@ -192,7 +192,7 @@ namespace QLKSTestProject
             List<PHONG> actual;
             actual = PHONGDAO.LayDSPhong();
             Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
+            
         }
 
         /// <summary>
@@ -205,7 +205,7 @@ namespace QLKSTestProject
             List<LOAIPHONG> actual;
             actual = PHONGDAO.LayDSLoaiPhong();
             Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
+            
         }
 
         /// <summary>
@@ -219,7 +219,7 @@ namespace QLKSTestProject
             int actual;
             actual = PHONGDAO.LayDonGiaTheoPhong(phong);
             Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
+            
         }
 
         /// <summary>
@@ -231,7 +231,7 @@ namespace QLKSTestProject
             PHONG phong = null; // TODO: Initialize to an appropriate value
            
             PHONGDAO.CapNhatPhong(phong);
-            Assert.Inconclusive("A method that does not return a value cannot be verified.");
+            
         }
 
         /// <summary>
@@ -241,7 +241,6 @@ namespace QLKSTestProject
         public void PHONGDAOConstructorTest()
         {
             PHONGDAO target = new PHONGDAO();
-            Assert.Inconclusive("TODO: Implement code to verify target");
         }
     }
 }

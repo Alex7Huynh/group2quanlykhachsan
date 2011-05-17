@@ -75,7 +75,7 @@ namespace QLKSTestProject
             object sender = null; // TODO: Initialize to an appropriate value
             EventArgs e = null; // TODO: Initialize to an appropriate value
             target.TraCuuPhong_Load(sender, e);
-            Assert.Inconclusive("A method that does not return a value cannot be verified.");
+            
         }
 
         /// <summary>
@@ -87,7 +87,7 @@ namespace QLKSTestProject
         {
             TraCuuPhong_Accessor target = new TraCuuPhong_Accessor(); // TODO: Initialize to an appropriate value
             target.LayDanhSachTenLoaiPhong();
-            Assert.Inconclusive("A method that does not return a value cannot be verified.");
+            
         }
 
         /// <summary>
@@ -99,7 +99,7 @@ namespace QLKSTestProject
         {
             TraCuuPhong_Accessor target = new TraCuuPhong_Accessor(); // TODO: Initialize to an appropriate value
             target.LayDanhSachMaLoaiPhong();
-            Assert.Inconclusive("A method that does not return a value cannot be verified.");
+            
         }
 
         /// <summary>
@@ -111,7 +111,7 @@ namespace QLKSTestProject
         {
             TraCuuPhong_Accessor target = new TraCuuPhong_Accessor(); // TODO: Initialize to an appropriate value
             target.InitializeComponent();
-            Assert.Inconclusive("A method that does not return a value cannot be verified.");
+            
         }
 
         /// <summary>
@@ -124,36 +124,10 @@ namespace QLKSTestProject
             TraCuuPhong_Accessor target = new TraCuuPhong_Accessor(); // TODO: Initialize to an appropriate value
             bool disposing = false; // TODO: Initialize to an appropriate value
             target.Dispose(disposing);
-            Assert.Inconclusive("A method that does not return a value cannot be verified.");
+            
         }
 
-        /// <summary>
-        ///A test for btnTim_Click
-        ///</summary>
-        [TestMethod()]
-        [DeploymentItem("QLKS.exe")]
-        public void btnTim_ClickTest()
-        {
-            TraCuuPhong_Accessor target = new TraCuuPhong_Accessor(); // TODO: Initialize to an appropriate value
-            object sender = null; // TODO: Initialize to an appropriate value
-            EventArgs e = null; // TODO: Initialize to an appropriate value
-            target.btnTim_Click(sender, e);
-            Assert.Inconclusive("A method that does not return a value cannot be verified.");
-        }
 
-        /// <summary>
-        ///A test for btnThoat_Click
-        ///</summary>
-        [TestMethod()]
-        [DeploymentItem("QLKS.exe")]
-        public void btnThoat_ClickTest()
-        {
-            TraCuuPhong_Accessor target = new TraCuuPhong_Accessor(); // TODO: Initialize to an appropriate value
-            object sender = null; // TODO: Initialize to an appropriate value
-            EventArgs e = null; // TODO: Initialize to an appropriate value
-            target.btnThoat_Click(sender, e);
-            Assert.Inconclusive("A method that does not return a value cannot be verified.");
-        }
 
         /// <summary>
         ///A test for TraCuuPhong Constructor
@@ -162,7 +136,6 @@ namespace QLKSTestProject
         public void TraCuuPhongConstructorTest()
         {
             TraCuuPhong target = new TraCuuPhong();
-            Assert.Inconclusive("TODO: Implement code to verify target");
         }
     }
 }

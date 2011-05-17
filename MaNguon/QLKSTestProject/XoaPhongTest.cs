@@ -76,7 +76,7 @@ namespace QLKSTestProject
             object sender = null; // TODO: Initialize to an appropriate value
             EventArgs e = null; // TODO: Initialize to an appropriate value
             target.XoaPhong_Load(sender, e);
-            Assert.Inconclusive("A method that does not return a value cannot be verified.");
+            
         }
 
         /// <summary>
@@ -88,7 +88,7 @@ namespace QLKSTestProject
         {
             XoaPhong_Accessor target = new XoaPhong_Accessor(); // TODO: Initialize to an appropriate value
             target.ReLoad();
-            Assert.Inconclusive("A method that does not return a value cannot be verified.");
+            
         }
 
         /// <summary>
@@ -100,7 +100,7 @@ namespace QLKSTestProject
         {
             XoaPhong_Accessor target = new XoaPhong_Accessor(); // TODO: Initialize to an appropriate value
             target.InitializeComponent();
-            Assert.Inconclusive("A method that does not return a value cannot be verified.");
+            
         }
         
         /// <summary>
@@ -113,49 +113,7 @@ namespace QLKSTestProject
             XoaPhong_Accessor target = new XoaPhong_Accessor(); // TODO: Initialize to an appropriate value
             bool disposing = false; // TODO: Initialize to an appropriate value
             target.Dispose(disposing);
-            Assert.Inconclusive("A method that does not return a value cannot be verified.");
-        }
-
-        /// <summary>
-        ///A test for btnXoa_Click
-        ///</summary>
-        [TestMethod()]
-        [DeploymentItem("QLKS.exe")]
-        public void btnXoa_ClickTest()
-        {
-            XoaPhong_Accessor target = new XoaPhong_Accessor(); // TODO: Initialize to an appropriate value
-            object sender = null; // TODO: Initialize to an appropriate value
-            EventArgs e = null; // TODO: Initialize to an appropriate value
-            target.btnXoa_Click(sender, e);
-            Assert.Inconclusive("A method that does not return a value cannot be verified.");
-        }
-
-        /// <summary>
-        ///A test for btnThoat_Click
-        ///</summary>
-        [TestMethod()]
-        [DeploymentItem("QLKS.exe")]
-        public void btnThoat_ClickTest()
-        {
-            XoaPhong_Accessor target = new XoaPhong_Accessor(); // TODO: Initialize to an appropriate value
-            object sender = null; // TODO: Initialize to an appropriate value
-            EventArgs e = null; // TODO: Initialize to an appropriate value
-            target.btnThoat_Click(sender, e);
-            Assert.Inconclusive("A method that does not return a value cannot be verified.");
-        }
-
-        /// <summary>
-        ///A test for btnRe_Click
-        ///</summary>
-        [TestMethod()]
-        [DeploymentItem("QLKS.exe")]
-        public void btnRe_ClickTest()
-        {
-            XoaPhong_Accessor target = new XoaPhong_Accessor(); // TODO: Initialize to an appropriate value
-            object sender = null; // TODO: Initialize to an appropriate value
-            EventArgs e = null; // TODO: Initialize to an appropriate value
-            target.btnRe_Click(sender, e);
-            Assert.Inconclusive("A method that does not return a value cannot be verified.");
+            
         }
 
         /// <summary>
@@ -165,7 +123,7 @@ namespace QLKSTestProject
         public void XoaPhongConstructorTest()
         {
             XoaPhong target = new XoaPhong();
-            Assert.Inconclusive("TODO: Implement code to verify target");
+            
         }
     }
 }

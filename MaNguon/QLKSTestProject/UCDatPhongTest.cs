@@ -78,7 +78,7 @@ namespace QLKSTestProject
             UCDatPhong.CurrentLoaiPhong = expected;
             actual = UCDatPhong.CurrentLoaiPhong;
             Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
+            
         }
 
         /// <summary>
@@ -92,7 +92,7 @@ namespace QLKSTestProject
             UCDatPhong.ArrPhong = expected;
             actual = UCDatPhong.ArrPhong;
             Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
+            
         }
 
         /// <summary>
@@ -106,7 +106,7 @@ namespace QLKSTestProject
             UCDatPhong.ArrLoaiPhong = expected;
             actual = UCDatPhong.ArrLoaiPhong;
             Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
+            
         }
 
         /// <summary>
@@ -118,7 +118,7 @@ namespace QLKSTestProject
         {
             UCDatPhong_Accessor target = new UCDatPhong_Accessor(); // TODO: Initialize to an appropriate value
             target.UpdateDateTime();
-            Assert.Inconclusive("A method that does not return a value cannot be verified.");
+            
         }
 
         /// <summary>
@@ -130,7 +130,7 @@ namespace QLKSTestProject
         {
             UCDatPhong_Accessor target = new UCDatPhong_Accessor(); // TODO: Initialize to an appropriate value
             target.UpdateDanhSachPhong();
-            Assert.Inconclusive("A method that does not return a value cannot be verified.");
+            
         }
               
         /// <summary>
@@ -143,7 +143,7 @@ namespace QLKSTestProject
             UCDatPhong_Accessor target = new UCDatPhong_Accessor(); // TODO: Initialize to an appropriate value
             List<PHONG> dsPhong = null; // TODO: Initialize to an appropriate value
             target.sortDSPhong(dsPhong);
-            Assert.Inconclusive("A method that does not return a value cannot be verified.");
+            
         }
 
         /// <summary>
@@ -157,7 +157,7 @@ namespace QLKSTestProject
             object sender = null; // TODO: Initialize to an appropriate value
             DateRangeEventArgs e = null; // TODO: Initialize to an appropriate value
             target.mclCalendar_DateChanged(sender, e);
-            Assert.Inconclusive("A method that does not return a value cannot be verified.");
+            
         }
 
         /// <summary>
@@ -169,7 +169,7 @@ namespace QLKSTestProject
             UCDatPhong target = new UCDatPhong(); // TODO: Initialize to an appropriate value
             List<PHONG> dsPhong = null; // TODO: Initialize to an appropriate value
             target.LoadDanhSachPhong(dsPhong);
-            Assert.Inconclusive("A method that does not return a value cannot be verified.");
+            
         }
 
         /// <summary>
@@ -181,7 +181,7 @@ namespace QLKSTestProject
         {
             UCDatPhong_Accessor target = new UCDatPhong_Accessor(); // TODO: Initialize to an appropriate value
             target.LoadDanhSachLoaiPhong();
-            Assert.Inconclusive("A method that does not return a value cannot be verified.");
+            
         }
 
         /// <summary>
@@ -193,7 +193,7 @@ namespace QLKSTestProject
         {
             UCDatPhong_Accessor target = new UCDatPhong_Accessor(); // TODO: Initialize to an appropriate value
             target.InitializeComponent();
-            Assert.Inconclusive("A method that does not return a value cannot be verified.");
+            
         }
 
         /// <summary>
@@ -208,7 +208,7 @@ namespace QLKSTestProject
             DateTime actual;
             actual = target.GetLastDayOfMonth(dateTime);
             Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
+            
         }
 
         /// <summary>
@@ -223,7 +223,7 @@ namespace QLKSTestProject
             DateTime actual;
             actual = target.GetFirstDayOfMonth(dateTime);
             Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
+            
         }
 
         /// <summary>
@@ -236,77 +236,7 @@ namespace QLKSTestProject
             UCDatPhong_Accessor target = new UCDatPhong_Accessor(); // TODO: Initialize to an appropriate value
             bool disposing = false; // TODO: Initialize to an appropriate value
             target.Dispose(disposing);
-            Assert.Inconclusive("A method that does not return a value cannot be verified.");
-        }
-
-        /// <summary>
-        ///A test for btnReservation_Click
-        ///</summary>
-        [TestMethod()]
-        [DeploymentItem("QLKS.exe")]
-        public void btnReservation_ClickTest()
-        {
-            UCDatPhong_Accessor target = new UCDatPhong_Accessor(); // TODO: Initialize to an appropriate value
-            object sender = null; // TODO: Initialize to an appropriate value
-            EventArgs e = null; // TODO: Initialize to an appropriate value
-            target.btnReservation_Click(sender, e);
-            Assert.Inconclusive("A method that does not return a value cannot be verified.");
-        }
-
-        /// <summary>
-        ///A test for btnPreviousLoaiPhong_Click
-        ///</summary>
-        [TestMethod()]
-        [DeploymentItem("QLKS.exe")]
-        public void btnPreviousLoaiPhong_ClickTest()
-        {
-            UCDatPhong_Accessor target = new UCDatPhong_Accessor(); // TODO: Initialize to an appropriate value
-            object sender = null; // TODO: Initialize to an appropriate value
-            EventArgs e = null; // TODO: Initialize to an appropriate value
-            target.btnPreviousLoaiPhong_Click(sender, e);
-            Assert.Inconclusive("A method that does not return a value cannot be verified.");
-        }
-
-        /// <summary>
-        ///A test for btnNextLoaiPhong_Click
-        ///</summary>
-        [TestMethod()]
-        [DeploymentItem("QLKS.exe")]
-        public void btnNextLoaiPhong_ClickTest()
-        {
-            UCDatPhong_Accessor target = new UCDatPhong_Accessor(); // TODO: Initialize to an appropriate value
-            object sender = null; // TODO: Initialize to an appropriate value
-            EventArgs e = null; // TODO: Initialize to an appropriate value
-            target.btnNextLoaiPhong_Click(sender, e);
-            Assert.Inconclusive("A method that does not return a value cannot be verified.");
-        }
-
-        /// <summary>
-        ///A test for btnCheckOut_Click
-        ///</summary>
-        [TestMethod()]
-        [DeploymentItem("QLKS.exe")]
-        public void btnCheckOut_ClickTest()
-        {
-            UCDatPhong_Accessor target = new UCDatPhong_Accessor(); // TODO: Initialize to an appropriate value
-            object sender = null; // TODO: Initialize to an appropriate value
-            EventArgs e = null; // TODO: Initialize to an appropriate value
-            target.btnCheckOut_Click(sender, e);
-            Assert.Inconclusive("A method that does not return a value cannot be verified.");
-        }
-
-        /// <summary>
-        ///A test for btnCheckIn_Click
-        ///</summary>
-        [TestMethod()]
-        [DeploymentItem("QLKS.exe")]
-        public void btnCheckIn_ClickTest()
-        {
-            UCDatPhong_Accessor target = new UCDatPhong_Accessor(); // TODO: Initialize to an appropriate value
-            object sender = null; // TODO: Initialize to an appropriate value
-            EventArgs e = null; // TODO: Initialize to an appropriate value
-            target.btnCheckIn_Click(sender, e);
-            Assert.Inconclusive("A method that does not return a value cannot be verified.");
+            
         }
 
         /// <summary>
@@ -316,7 +246,6 @@ namespace QLKSTestProject
         public void UCDatPhongConstructorTest()
         {
             UCDatPhong target = new UCDatPhong();
-            Assert.Inconclusive("TODO: Implement code to verify target");
         }
     }
 }

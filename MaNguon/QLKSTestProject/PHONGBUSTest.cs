@@ -73,7 +73,7 @@ namespace QLKSTestProject
         {
             string maPhong = string.Empty; // TODO: Initialize to an appropriate value
             PHONGBUS.XoaPhong(maPhong);
-            Assert.Inconclusive("A method that does not return a value cannot be verified.");
+            
         }
 
         /// <summary>
@@ -84,7 +84,7 @@ namespace QLKSTestProject
         {
             string maPhong = string.Empty; // TODO: Initialize to an appropriate value
             PHONGBUS.Xoa(maPhong);
-            Assert.Inconclusive("A method that does not return a value cannot be verified.");
+            
         }
 
         /// <summary>
@@ -98,7 +98,7 @@ namespace QLKSTestProject
             bool actual;
             actual = PHONGBUS.UpdateTinhTrangPhong(phong);
             Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
+            
         }
 
         /// <summary>
@@ -124,7 +124,7 @@ namespace QLKSTestProject
             List<PHONG> actual;
             actual = PHONGBUS.TimPhong(maPhong, tenPhong, loaiPhong, tinhTrang, timChinhXac);
             Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
+            
         }
 
         /// <summary>
@@ -135,7 +135,7 @@ namespace QLKSTestProject
         {
             PHONG phong = null; // TODO: Initialize to an appropriate value
             PHONGBUS.ThemPhong(phong);
-            Assert.Inconclusive("A method that does not return a value cannot be verified.");
+            
         }
 
         /// <summary>
@@ -149,7 +149,7 @@ namespace QLKSTestProject
             PHONG actual;
             actual = PHONGBUS.LayPhongTheoTenPhong(tenPhong);
             Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
+            
         }
 
         /// <summary>
@@ -163,7 +163,7 @@ namespace QLKSTestProject
             PHONG actual;
             actual = PHONGBUS.LayPhongTheoMa(maPhong);
             Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
+            
         }
 
        
@@ -185,7 +185,7 @@ namespace QLKSTestProject
         {
             PHONG phong = null; // TODO: Initialize to an appropriate value
             PHONGBUS.CapNhatPhong(phong);
-            Assert.Inconclusive("A method that does not return a value cannot be verified.");
+            
         }
 
         /// <summary>
@@ -199,7 +199,7 @@ namespace QLKSTestProject
             bool actual;
             actual = PHONGBUS.KiemTraLoaiPhong(loaiPhong);
             Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
+            
         }
 
         /// <summary>
@@ -213,7 +213,7 @@ namespace QLKSTestProject
             int[] actual;
             actual = PHONGBUS.LapBaoCaoDoanhThu(thang);
             Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
+            
         }
 
         /// <summary>
@@ -227,7 +227,7 @@ namespace QLKSTestProject
             int actual;
             actual = PHONGBUS.LayDonGiaTheoPhong(phong);
             Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
+            
         }
 
         /// <summary>
@@ -240,7 +240,7 @@ namespace QLKSTestProject
             List<LOAIPHONG> actual;
             actual = PHONGBUS.LayDSLoaiPhong();
             Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
+            
         }
 
         /// <summary>
@@ -253,7 +253,7 @@ namespace QLKSTestProject
             List<PHONG> actual;
             actual = PHONGBUS.LayDSPhong();
             Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
+            
         }
 
         /// <summary>
@@ -267,7 +267,7 @@ namespace QLKSTestProject
             List<PHONG> actual;
             actual = PHONGBUS.LayDSPhongTheoLoaiPhong(loaiPhong);
             Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
+            
         }
 
         /// <summary>
@@ -281,7 +281,7 @@ namespace QLKSTestProject
             bool actual;
             actual = PHONGBUS.KiemTraLoaiPhong(loaiPhong);
             Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
+            
         }
 
         /// <summary>
@@ -295,7 +295,7 @@ namespace QLKSTestProject
             bool actual;
             actual = PHONGBUS.KiemTraMaPhong(maPhong);
             Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
+            
         }
 
         /// <summary>
@@ -309,7 +309,7 @@ namespace QLKSTestProject
             bool actual;
             actual = PHONGBUS.KiemTraPhong(phong);
             Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
+            
         }
 
         /// <summary>
@@ -323,7 +323,7 @@ namespace QLKSTestProject
             bool actual;
             actual = PHONGBUS.KiemTraMaPhongHopLe(maPhong);
             Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
+            
         }
     }
 }
