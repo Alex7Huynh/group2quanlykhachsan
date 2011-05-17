@@ -249,5 +249,10 @@ namespace BUS
                     return true;
             return false;
         }
+        // 0812388
+        public static int LayDonGiaTheoMa(string p)
+        {
+            return DAO.PHONGDAO.LayDonGiaTheoMaPhong(p);
+        }
     }
 }

@@ -38,7 +38,8 @@ namespace QLKS
 
         private void btnTraPhong_Click(object sender, EventArgs e)
         {
-            try
+            //Bình
+            /*try
             {
                 if (txtCMND2.Text.Trim() == "")
                 {
@@ -59,12 +60,109 @@ namespace QLKS
             catch (System.Exception ex)
             {
                 MessageBox.Show(ex.Message);
+            }*/
+
+            DialogResult dlr = MessageBox.Show("Bạn có thật sự muốn trả " + dgvDanhSachPhieuThue.SelectedRows.Count.ToString() + " phòng hay không?", "Thông báo", MessageBoxButtons.YesNo);
+
+            if (dlr == DialogResult.No)
+                return;
+
+            //Phú
+            foreach (DataGridViewRow dgvr in dgvDanhSachPhieuThue.SelectedRows)
+            {
+                try
+                {
+                    HOADON hd = new HOADON();
+                    hd.MaHoaDon = BUS.HOADONBUS.LayMaHoaDon();
+                    hd.MaPhieuThue = dgvr.Cells[0].Value.ToString();
+                    hd.NgayThanhToan = DateTime.Now;
+                    hd.TenKhachHangThanhToan = kh.HoTen;
+                    hd.Thanhtien = int.Parse(txtTongTien.Text);
+
+                    if (BUS.HOADONBUS.ThemHoaDonMoi(hd))
+                    {
+                        BUS.PHIEUTHUEBUS.CheckOutPhieuThue(dgvr.Cells[0].Value.ToString());
+                    }
+                    else
+                    {
+                        MessageBox.Show("Thêm hóa đơn mới thất bại");
+                        break;
+                    }
+                }
+                catch (System.Exception ex)
+                {
+                    // Chổ này không xử lý vì exception này chỉ xảy ra khi người dùng có chọn dòng trống
+                }
             }
+            MessageBox.Show("Check out thành công");
+            KhoiTaoDanhSachPhieuThue();
         }
 
         private void btnThoat_Click(object sender, EventArgs e)
         {
             Close();
+        }
+        KHACHHANG kh;
+        private void btnTim_Click(object sender, EventArgs e)
+        {
+            
+            // Phú
+            KhoiTaoDanhSachPhieuThue();
+        }
+
+        private void KhoiTaoDanhSachPhieuThue()
+        {
+            try
+            {
+                dgvDanhSachPhieuThue.Rows.Clear();
+                kh = BUS.KHACHHANGBUS.LayKhachTheoSoGiayToChinhXac(txtCMND2.Text);
+                if (kh == null)
+                {
+                    MessageBox.Show("Không tìm được khách hàng nào có số giấy tờ tùy thân tương ứng");
+                    return;
+                }
+                List<NhomDTO> dsNhom = BUS.NhomBUS.LayDSNhomTheoMaKhach(kh.MaKH);
+
+                foreach (NhomDTO nhom in dsNhom)
+                {
+                    List<PHIEUTHUE> dsPhieuThue = BUS.PHIEUTHUEBUS.LayDSPhieuThueTheoMaNhom(nhom.MaNhom);
+
+                    foreach (PHIEUTHUE phieuthue in dsPhieuThue)
+                    {
+                        int dongia = BUS.PHONGBUS.LayDonGiaTheoMa(phieuthue.MaPhong);
+                        int thanhtien = dongia * phieuthue.SoNgayThue;
+                        dgvDanhSachPhieuThue.Rows.Add(phieuthue.MaPhieuThue, phieuthue.TenKhachHangDaiDien, phieuthue.MaPhong, phieuthue.NgayThue.ToString("dd/mm/yyyy"), phieuthue.SoNgayThue, dongia, thanhtien);
+                    }
+                }
+            }
+            catch (System.Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void dgvDanhSachPhieuThue_SelectionChanged(object sender, EventArgs e)
+        {
+            
+            int tongtien = 0;
+
+            if (kh == null || dgvDanhSachPhieuThue.SelectedRows.Count == 0 || (dgvDanhSachPhieuThue.SelectedRows.Count == 1 && dgvDanhSachPhieuThue.SelectedRows[0].Cells[0].Value == null))
+                btnTraPhong.Enabled = false;
+            else
+                btnTraPhong.Enabled = true;
+
+            foreach (DataGridViewRow dgvr in dgvDanhSachPhieuThue.SelectedRows)
+            {
+                try
+                {
+                    tongtien += int.Parse(dgvr.Cells[6].Value.ToString());
+                }
+                catch (System.Exception ex)
+                {
+                    // Chổ này không xử lý vì exception này chỉ xảy ra khi người dùng có chọn dòng trống
+                }
+            }
+            txtTongTien.Text = tongtien.ToString();
         }
 
         

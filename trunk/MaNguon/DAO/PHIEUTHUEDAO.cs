@@ -841,9 +841,10 @@ namespace DAO
             try
             {
                 link = KetNoi();
-                string chuoiLenh = "select * from PHIEUTHUE where MaNhom=@MaNhom";
+                string chuoiLenh = "select * from PHIEUTHUE where MaNhom=@MaNhom and DaThanhToan=@DaThanhToan";
                 lenh = new OleDbCommand(chuoiLenh, link);
                 lenh.Parameters.AddWithValue("@MaNhom", p);
+                lenh.Parameters.AddWithValue("@DaThanhToan", false);
                 OleDbDataReader boDoc = lenh.ExecuteReader();
                 while (boDoc.Read())
                 {
@@ -893,7 +894,31 @@ namespace DAO
                 if (link != null && link.State == System.Data.ConnectionState.Open)
                     link.Close();
             }
-            return true;
+            
+        }
+        public static bool CheckoutPhieuThue(string p)
+        {
+            OleDbConnection link = null;
+            OleDbCommand lenh = new OleDbCommand();
+            try
+            {
+                link = KetNoi();
+                string chuoiLenh = "UPDATE PHIEUTHUE SET DaThanhToan = true where MaPhieuThue=@MaPhieuThue";
+                lenh = new OleDbCommand(chuoiLenh, link);
+                lenh.Parameters.AddWithValue("@MaPhieuThue", p);
+                lenh.ExecuteNonQuery();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+            finally
+            {
+                if (link != null && link.State == System.Data.ConnectionState.Open)
+                    link.Close();
+            }
+
         }
     }
 }

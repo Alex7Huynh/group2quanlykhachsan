@@ -563,5 +563,43 @@ namespace DAO
             }
             return DonGia;
         }
+        // 0812388
+        public static int LayDonGiaTheoMaPhong(string maPhong)
+        {
+            int DonGia = 0;
+            OleDbConnection link = null;
+
+            try
+            {
+                link = KetNoi();
+                string chuoiLenh = "Select lp.MaLoaiPhong,lp.TenLoaiPhong,lp.DonGia,lp.SLKhachToiDa from PHONG p, LOAIPHONG lp where p.MaPhong = @MaPhong";
+                
+                OleDbCommand lenh = new OleDbCommand(chuoiLenh, link);                
+                lenh.Parameters.AddWithValue("@MaPhong",maPhong);
+
+                OleDbDataReader Doc = lenh.ExecuteReader();
+                while (Doc.Read())
+                {
+                    LOAIPHONG phg = new LOAIPHONG();
+                    phg.MaLoaiPhong = Doc.GetString(0);
+                    phg.TenLoaiPhong = Doc.GetString(1);
+                    phg.DonGia = int.Parse(Doc.GetValue(2).ToString());
+                    phg.SLKhachToiDa = int.Parse(Doc.GetValue(3).ToString()); ;
+
+                    DonGia = phg.DonGia;
+
+                }
+            }
+            catch (Exception ex)
+            {
+
+            }
+            finally
+            {
+                if (link != null && link.State == System.Data.ConnectionState.Open)
+                    link.Close();
+            }
+            return DonGia;
+        }
     }
 }
