@@ -102,7 +102,6 @@
             this.btnCheckOut.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.btnCheckOut.BackgroundImage = global::QLKS.Properties.Resources.ButtonTraPhong;
             this.btnCheckOut.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnCheckOut.Enabled = false;
             this.btnCheckOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCheckOut.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnCheckOut.ForeColor = System.Drawing.SystemColors.ControlLightLight;
