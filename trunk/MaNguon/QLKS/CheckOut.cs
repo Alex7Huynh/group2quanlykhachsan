@@ -127,6 +127,12 @@ namespace QLKS
                 {
                     List<PHIEUTHUE> dsPhieuThue = BUS.PHIEUTHUEBUS.LayDSPhieuThueTheoMaNhom(nhom.MaNhom);
 
+                    if (dsPhieuThue.Count == 0)
+                    {
+                        MessageBox.Show("Không tìm được phiếu thuê nào tương ứng!" + "\n" + "Có thể khách hàng này đã trả phòng rồi.");
+                        return;
+                    }
+
                     foreach (PHIEUTHUE phieuthue in dsPhieuThue)
                     {
                         int dongia = BUS.PHONGBUS.LayDonGiaTheoMa(phieuthue.MaPhong);
