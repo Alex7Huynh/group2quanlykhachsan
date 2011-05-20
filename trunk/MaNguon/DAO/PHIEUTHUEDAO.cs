@@ -905,7 +905,7 @@ namespace DAO
             try
             {
                 link = KetNoi();
-                string chuoiLenh = "UPDATE PHIEUTHUE SET DaThanhToan = true where MaPhieuThue=@MaPhieuThue";
+                string chuoiLenh = "UPDATE PHIEUTHUE SET DangThue = false, DaXoa = true, DaThanhToan = true where MaPhieuThue=@MaPhieuThue";
                 lenh = new OleDbCommand(chuoiLenh, link);
                 lenh.Parameters.AddWithValue("@MaPhieuThue", p);
                 lenh.ExecuteNonQuery();
