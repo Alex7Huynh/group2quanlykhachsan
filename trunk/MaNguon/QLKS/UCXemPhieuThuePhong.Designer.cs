@@ -61,7 +61,9 @@
             this.dtgTheHienPhieuThuePhong.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dtgTheHienPhieuThuePhong_CellFormatting);
             this.dtgTheHienPhieuThuePhong.CellMouseEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgTheHienPhieuThuePhong_CellMouseEnter);
             this.dtgTheHienPhieuThuePhong.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.dtgTheHienPhieuThuePhong_CellPainting);
+            this.dtgTheHienPhieuThuePhong.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgTheHienPhieuThuePhong_CellClick);
             this.dtgTheHienPhieuThuePhong.Paint += new System.Windows.Forms.PaintEventHandler(this.dtgTheHienPhieuThuePhong_Paint);
+            this.dtgTheHienPhieuThuePhong.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgTheHienPhieuThuePhong_CellContentClick);
             // 
             // TTip_MaPhieuThue
             // 

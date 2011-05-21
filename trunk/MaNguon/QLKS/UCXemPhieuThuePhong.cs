@@ -48,6 +48,22 @@ namespace QLKS
         private DateTime _beginDate;
 
         private DateTime _endDate;
+
+        private static Color colorOfCurrentCell = new Color();
+
+        public static Color ColorOfCurrentCell
+        {
+            get { return UCXemPhieuThuePhong.colorOfCurrentCell; }
+            set { UCXemPhieuThuePhong.colorOfCurrentCell = value; }
+        }
+
+        private static string contentOfCurrentCell;
+
+        public static string ContentOfCurrentCell
+        {
+            get { return UCXemPhieuThuePhong.contentOfCurrentCell; }
+            set { UCXemPhieuThuePhong.contentOfCurrentCell = value; }
+        }
         #endregion
 
         #region Method
@@ -679,6 +695,22 @@ namespace QLKS
         private void dtgTheHienPhieuThuePhong_CellMouseLeave(object sender, DataGridViewCellEventArgs e)
         {
             TTip_MaPhieuThue.Hide(dtgTheHienPhieuThuePhong);
+        }
+
+        private void dtgTheHienPhieuThuePhong_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //colorOfCurrentCell = dtgTheHienPhieuThuePhong.CurrentCell.Style.BackColor;
+            //contentOfCurrentCell = dtgTheHienPhieuThuePhong.CurrentCell.Tag.ToString();
+        }
+
+        private void dtgTheHienPhieuThuePhong_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dtgTheHienPhieuThuePhong.CurrentCell != null)
+            {
+                colorOfCurrentCell = dtgTheHienPhieuThuePhong.CurrentCell.Style.BackColor;
+                if (dtgTheHienPhieuThuePhong.CurrentCell.Tag != null)
+                    contentOfCurrentCell = dtgTheHienPhieuThuePhong.CurrentCell.Tag.ToString();
+            }
         }
     }
 
