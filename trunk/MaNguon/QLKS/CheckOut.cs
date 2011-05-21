@@ -12,6 +12,7 @@ namespace QLKS
 {
     public partial class frmCheckOut : Form
     {
+
         public frmCheckOut()
         {
             InitializeComponent();
@@ -19,12 +20,24 @@ namespace QLKS
 
         private void rdoTenPhong_CheckedChanged(object sender, EventArgs e)
         {
-            
+           
         }
 
         private void frmCheckOut_Load(object sender, EventArgs e)
         {
-            
+            string maPhieuThue ="";
+            if (UCXemPhieuThuePhong.ColorOfCurrentCell != Color.White)
+                maPhieuThue = UCXemPhieuThuePhong.ContentOfCurrentCell;
+            List<PHIEUTHUE> dsPhieuThue = PHIEUTHUEBUS.LayPhieuThueTheoMa(maPhieuThue);
+
+            foreach (PHIEUTHUE phieuThue in dsPhieuThue)
+            {
+                int dongia = PHONGBUS.LayDonGiaTheoMa(phieuThue.MaPhong);
+                int thanhtien = dongia * phieuThue.SoNgayThue;
+                dgvDanhSachPhieuThue.Rows.Add(phieuThue.MaPhieuThue, phieuThue.TenKhachHangDaiDien, phieuThue.MaPhong,
+                                              phieuThue.NgayThue.ToString("dd/mm/yyyy"), phieuThue.SoNgayThue,
+                                              dongia, thanhtien);
+            }
         }
 
         private void rdoTraPhongDon_CheckedChanged(object sender, EventArgs e)
