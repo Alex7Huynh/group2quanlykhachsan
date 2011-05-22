@@ -7,6 +7,9 @@ namespace DTO
 {
     public class CHITIETPHIEUTHUE
     {
+        /// <summary>
+        /// Mã phiếu thuê
+        /// </summary>
         private string maPhieuThue;
 
         public string MaPhieuThue
@@ -15,6 +18,9 @@ namespace DTO
             set { maPhieuThue = value; }
         }
 
+        /// <summary>
+        /// Mã khách hàng
+        /// </summary>
         private string maKH;
 
         public string MaKH
@@ -23,6 +29,9 @@ namespace DTO
             set { maKH = value; }
         }
 
+        /// <summary>
+        /// Mã chi tiết phiếu thuê
+        /// </summary>
         private string maChiTietPhieuThue;
 
         public string MaChiTietPhieuThue
