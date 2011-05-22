@@ -9,6 +9,10 @@ namespace BUS
 {
     public class LOAIKHACHBUS
     {
+        /// <summary>
+        /// Lay danh sach loai khach
+        /// </summary>
+        /// <returns>Tra ve danh sach loai khach</returns>
         public static List<LOAIKHACH> layDSLoaiKhach()
         {
             List<LOAIKHACH> dsLoaiKH = new List<LOAIKHACH>();

@@ -9,6 +9,10 @@ namespace DAO
 {
     public class KHACHHANGDAO : ABSDAO
     {
+        /// <summary>
+        /// Lay danh sach khach hang
+        /// </summary>
+        /// <returns>Tra ve danh sach khach hang</returns>
         public static List<KHACHHANG> LayDSKhach()
         {
             OleDbConnection link = null;
@@ -44,9 +48,8 @@ namespace DAO
             }
             return dsKH;
         }
-
         /// <summary>
-        /// Lấy danh sách khách hàng theo mã KH
+        /// Lay danh sach khach hang theo ma khach hang
         /// </summary>
         /// <author>Nhóm 13</author>
         /// <param name="maKH">Mã KH kiểu string</param>
@@ -91,12 +94,11 @@ namespace DAO
             }
             return dsKH;
         }
-
         /// <summary>
-        /// 
+        /// Lay danh sach khach hang theo ho ten
         /// </summary>
         /// <param name="maKH"></param>
-        /// <returns></returns>
+        /// <returns>Tra ve danh sach khach hang</returns>
         public static List<KHACHHANG> LayDSKhachTheoHoTen(string HoTen)
         {
             OleDbConnection link = null;
@@ -132,7 +134,11 @@ namespace DAO
             }
             return dsKH;
         }
-
+        /// <summary>
+        /// Lay danh sach khach hang theo so giay to
+        /// </summary>
+        /// <param name="SoGiayTo"></param>
+        /// <returns>Tra ve danh sach khach hang</returns>
         public static List<KHACHHANG> LayDSKhachTheoSoGiayTo(string SoGiayTo)
         {
             OleDbConnection link = null;
@@ -167,13 +173,12 @@ namespace DAO
                     link.Close();
             }
             return dsKH;
-        }
-        #region 0812388
+        }        
         /// <summary>
         /// Lay chinh xac khach hang theo so giay to tuy than
         /// </summary>
         /// <param name="SoGiayTo">so giay to tuy than</param>
-        /// <returns>khach hang tuong ung</returns>
+        /// <returns>Tra ve khach hang tuong ung</returns>
         public static KHACHHANG LayKhachTheoSoGiayToChinhXac(string SoGiayTo)
         {
             OleDbConnection link = null;
@@ -207,8 +212,11 @@ namespace DAO
             }
             return kh;
         }
-        #endregion
-
+        /// <summary>
+        /// Lay danh sach khach hang theo dia chi
+        /// </summary>
+        /// <param name="DiaChi"></param>
+        /// <returns>Tra ve danh sach khach hang</returns>
         public static List<KHACHHANG> LayDSKhachTheoDiaChi(string DiaChi)
         {
             OleDbConnection link = null;
@@ -244,7 +252,11 @@ namespace DAO
             }
             return dsKH;
         }
-
+        /// <summary>
+        /// Lay danh sach khach hang theo loai khach hang
+        /// </summary>
+        /// <param name="LoaiKH"></param>
+        /// <returns>Tra ve danh sach khach hang</returns>
         public static List<KHACHHANG> LayDSKhachTheoLoaiKH(string LoaiKH)
         {
             OleDbConnection link = null;
@@ -278,7 +290,10 @@ namespace DAO
             }
             return dsKH;
         }
-        //0812033
+        /// <summary>
+        /// Tu dong lay ma khach hang
+        /// </summary>
+        /// <returns>Tra ve ma khach hang</returns>
         public static string TuDongLayMaKhachHang()
         {
             string maKhachHang = "";
@@ -311,6 +326,11 @@ namespace DAO
             }
             return maKhachHang;
         }
+        /// <summary>
+        /// Tim so lon nhat
+        /// </summary>
+        /// <param name="danhSach"></param>
+        /// <returns>Tra ve so lon nhat</returns>
         private static int TimSoLonNhat(List<int> danhSach)
         {
             int lonNhat = danhSach[0];
@@ -323,6 +343,10 @@ namespace DAO
             }
             return lonNhat;
         }
+        /// <summary>
+        /// Them khach hang
+        /// </summary>
+        /// <param name="khachHang"></param>
         public static void ThemKhachHang(KHACHHANG khachHang)
         {
             OleDbConnection link = null;
@@ -362,6 +386,5 @@ namespace DAO
                     link.Close();
             }
         }
-        //end 0812033
     }
 }

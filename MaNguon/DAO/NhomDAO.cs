@@ -9,9 +9,14 @@ namespace DAO
 {
     public class NhomDAO : ABSDAO
     {
+        /// <summary>
+        /// Tu dong lay ma nhom (can OleDbConnection)
+        /// </summary>
+        /// <param name="link"></param>
+        /// <returns>Tra ve ma nhom</returns>
         private static int TuDongLayMaNhom(OleDbConnection link)
         {
-            int maNhom = 0;
+            //int maNhom = 0;
             try
             {
                 //link = KetNoi();
@@ -25,9 +30,13 @@ namespace DAO
                 throw new Exception("Không lấy được mã nhóm");
             }
         }
+        /// <summary>
+        /// Tu dong lay ma nhom
+        /// </summary>
+        /// <returns>Tra ve ma nhom</returns>
         public static int TuDongLayMaNhom()
         {
-            int maNhom = 0;
+            //int maNhom = 0;
             OleDbConnection link = null;
             try
             {
@@ -48,6 +57,11 @@ namespace DAO
                 throw new Exception("Không lấy được mã nhóm");
             }
         }
+        /// <summary>
+        /// Them nhom
+        /// </summary>
+        /// <param name="nhom"></param>
+        /// <returns>Tra ve ma nhom</returns>
         public static int ThemNhom(NhomDTO nhom)
         {
             OleDbConnection link = null;
@@ -79,14 +93,12 @@ namespace DAO
                     link.Close();
             }
             return ma;
-        }
-
-        //0812388
+        }        
         /// <summary>
         /// Lay danh sach nhom theo khach hang
         /// </summary>
         /// <param name="maKH">ma khach hang tuong ung</param>
-        /// <returns>danh sach cac nhom ma khach hang nay lam chu</returns>
+        /// <returns>Tra ve danh sach cac nhom ma khach hang nay lam chu</returns>
         public static List<NhomDTO> LayDSNhomTheoMaKhach(string maKH)
         {
             List<NhomDTO> ret = null;

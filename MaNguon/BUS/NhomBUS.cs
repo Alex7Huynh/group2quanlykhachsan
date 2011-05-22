@@ -43,8 +43,11 @@ namespace BUS
             }
             
         }
-        // 0812388
-
+        /// <summary>
+        /// Lay danh sach nhom theo ma khach
+        /// </summary>
+        /// <param name="p"></param>
+        /// <returns>Tra ve danh sach nhom</returns>
         public static List<NhomDTO> LayDSNhomTheoMaKhach(string p)
         {
             return DAO.NhomDAO.LayDSNhomTheoMaKhach(p);

@@ -9,6 +9,10 @@ namespace DAO
 {
     public class PHONGDAO : ABSDAO
     {
+        /// <summary>
+        /// Lay danh sach phong
+        /// </summary>
+        /// <returns>Tra ve danh sach phong</returns>
         public static List<PHONG> LayDSPhong()
         {
             OleDbConnection link = null;
@@ -44,6 +48,10 @@ namespace DAO
             }
             return dsPhong;
         }
+        /// <summary>
+        /// Lay danh sach loai phong
+        /// </summary>
+        /// <returns>Tra ve danh sach loai phong</returns>
         public static List<LOAIPHONG> LayDSLoaiPhong()
         {
             OleDbConnection link = null;
@@ -75,6 +83,10 @@ namespace DAO
             }
             return dsPhong;
         }
+        /// <summary>
+        /// Them phong
+        /// </summary>
+        /// <param name="phong"></param>
         public static void ThemPhong(PHONG phong)
         {
             OleDbConnection link = null;
@@ -116,6 +128,10 @@ namespace DAO
                     link.Close();
             }
         }
+        /// <summary>
+        /// Xoa phong (xoa vinh vien)
+        /// </summary>
+        /// <param name="MaPhong"></param>
         public static void XoaPhong(string MaPhong)
         {
             OleDbConnection link = null;
@@ -140,6 +156,10 @@ namespace DAO
                     link.Close();
             }
         }
+        /// <summary>
+        /// Xoa phong (xoa tam thoi)
+        /// </summary>
+        /// <param name="maPhong"></param>
         public static void Xoa(string maPhong)
         {
             OleDbConnection link = null;
@@ -169,6 +189,10 @@ namespace DAO
                     link.Close();
             }
         }
+        /// <summary>
+        /// Cap nhat thong tin phong
+        /// </summary>
+        /// <param name="phong"></param>
         public static void CapNhatPhong(PHONG phong)
         {
             OleDbConnection link = null;
@@ -207,6 +231,11 @@ namespace DAO
                     link.Close();
             }
         }
+        /// <summary>
+        /// Lay phong theo ten phong
+        /// </summary>
+        /// <param name="tenPhong"></param>
+        /// <returns>Tra ve phong neu tim thay</returns>
         public static PHONG LayPhongTheoTenPhong(string tenPhong)
         {
             OleDbConnection link = null;
@@ -257,6 +286,11 @@ namespace DAO
             }
             return Phong;
         }
+        /// <summary>
+        /// Lay phong theo ma phong
+        /// </summary>
+        /// <param name="maPhong"></param>
+        /// <returns>Tra ve phong neu tim thay</returns>
         public static PHONG LayPhongTheoMa(string maPhong)
         {
             OleDbConnection link = null;
@@ -307,6 +341,11 @@ namespace DAO
             }
             return Phong;
         }
+        /// <summary>
+        /// Lay danh sach phong theo loai phong
+        /// </summary>
+        /// <param name="loaiPhong"></param>
+        /// <returns>Tra ve danh sach phong</returns>
         public static List<PHONG> LayDSPhongTheoLoaiPhong(LOAIPHONG loaiPhong)
         {
             OleDbConnection link = null;
@@ -358,10 +397,7 @@ namespace DAO
                     link.Close();
             }
             return dsPhong;
-        }
-        #region 0812033 - Bình
-        ////////////
-        // 0812033
+        }        
         /// <summary>
         /// Tim tat ca cac phong thoa thong tin la cac tham so truyen vao
         /// </summary>
@@ -460,6 +496,11 @@ namespace DAO
             }
             return danhSachPhong;
         }
+        /// <summary>
+        /// Lay so nguoi toi da trong mot phong dua vao ma phong
+        /// </summary>
+        /// <param name="maPhong"></param>
+        /// <returns>Tra ve so nguoi toi da</returns>
         public static int LaySoNguoiToiDa(string maPhong)
         {
             OleDbConnection link = null;
@@ -487,11 +528,12 @@ namespace DAO
                     link.Close();
             }
             return soNguoi;
-        }
-        #endregion
-
-        
-        // 0812251 nhom 13 them test chuc nang checkin
+        }      
+        /// <summary>
+        /// Cap nhat tinh trang phong
+        /// </summary>
+        /// <param name="phong"></param>
+        /// <returns>Tra ve ket qua thanh cong hay that bai</returns>
         public static bool UpdateTinhTrangPhong(PHONG phong)
         {
             bool ketQua = true;
@@ -524,7 +566,11 @@ namespace DAO
             }
             return ketQua;
         }
-
+        /// <summary>
+        /// Lay don gia theo phong
+        /// </summary>
+        /// <param name="phong"></param>
+        /// <returns>Tra ve don gia cua phong</returns>
         public static int LayDonGiaTheoPhong(PHONG phong)
         {
             int DonGia = 0;
@@ -563,7 +609,11 @@ namespace DAO
             }
             return DonGia;
         }
-        // 0812388
+        /// <summary>
+        /// Lay don gia theo ma phong
+        /// </summary>
+        /// <param name="maPhong"></param>
+        /// <returns>Tra ve don gia cua phong</returns>
         public static int LayDonGiaTheoMaPhong(string maPhong)
         {
             int DonGia = 0;

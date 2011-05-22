@@ -9,6 +9,10 @@ namespace DAO
     public class ABSDAO
     {
         private static string chuoiKetNoi = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=QLKS.mdb";
+        /// <summary>
+        /// Ket noi den co so du lieu
+        /// </summary>
+        /// <returns>Tra ve OleDbConnection</returns>
         public static OleDbConnection KetNoi()
         {
             OleDbConnection ketNoi = new OleDbConnection(chuoiKetNoi);

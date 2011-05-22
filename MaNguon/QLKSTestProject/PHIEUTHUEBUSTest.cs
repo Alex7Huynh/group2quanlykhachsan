@@ -241,7 +241,7 @@ namespace QLKSTestProject
         }
 
         /// <summary>
-        ///A test for layTongSoNgayThue
+        ///A test for LayTongSoNgayThue
         ///</summary>
         [TestMethod()]
         public void layTongSoNgayThueTest()
@@ -249,7 +249,7 @@ namespace QLKSTestProject
             PHONG phong = null; // TODO: Initialize to an appropriate value
             int expected = 0; // TODO: Initialize to an appropriate value
             int actual;
-            actual = PHIEUTHUEBUS.layTongSoNgayThue(phong);
+            actual = PHIEUTHUEBUS.LayTongSoNgayThue(phong);
             Assert.AreEqual(expected, actual);
             
         }
