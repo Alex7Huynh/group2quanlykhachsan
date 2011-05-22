@@ -97,6 +97,11 @@ namespace QLKS
         }
         #endregion
 
+        /// <summary>
+        /// Sự kiện thoát chuột
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnTim_MouseLeave(object sender, EventArgs e)
         {
             Button button_temp = (Button)sender;
@@ -105,6 +110,11 @@ namespace QLKS
             button_temp.Image = null;
         }
 
+        /// <summary>
+        /// Sự kiện bắt chuột
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnTim_MouseEnter(object sender, EventArgs e)
         {
             Button button_temp = (Button)sender;
@@ -113,6 +123,11 @@ namespace QLKS
             button_temp.Image = Properties.Resources.ButtonSearchFocus;
         }
 
+        /// <summary>
+        /// Sự kiện nhấn butoon đặt phòng
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnNhanPhong_MouseEnter(object sender, EventArgs e)
         {
             Button button_temp = (Button)sender;
@@ -121,6 +136,11 @@ namespace QLKS
             button_temp.Image = Properties.Resources.ButtonNhanPhongFocus;
         }
 
+        /// <summary>
+        /// Sự kiện khi enter button Nhận Hết
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnNhanHet_MouseEnter(object sender, EventArgs e)
         {
             Button button_temp = (Button)sender;
@@ -129,6 +149,11 @@ namespace QLKS
             button_temp.Image = Properties.Resources.ButtonNhanHetFocus;
         }
 
+        /// <summary>
+        /// Sự kiện khi nhấn button Thoát
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnThoat_MouseEnter(object sender, EventArgs e)
         {
             Button button_temp = (Button)sender;
@@ -137,6 +162,11 @@ namespace QLKS
             button_temp.Image = Properties.Resources.ButtonQuayLaiFocus;
         }
 
+        /// <summary>
+        /// Sự kiện thay đổi trong datagrid view
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void dgvDanhSachPhieuThue_SelectionChanged(object sender, EventArgs e)
         {
             if (dgvDanhSachPhieuThue.SelectedRows.Count == 0 || (dgvDanhSachPhieuThue.SelectedRows.Count == 1 && dgvDanhSachPhieuThue.SelectedRows[0].Cells[0].Value == null))
