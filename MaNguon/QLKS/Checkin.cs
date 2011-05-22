@@ -20,12 +20,20 @@ namespace QLKS
 
         }
         #region 0812388
+        /// <summary>
+        /// Hàm tìm danh sách thiếu thêu
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnTim_Click(object sender, EventArgs e)
         {
             KhoiTaoDanhSachPhieuThue();
             
         }
 
+        /// <summary>
+        /// Hàm khởi tạo danh sách phiếu thuê
+        /// </summary>
         private void KhoiTaoDanhSachPhieuThue()
         {
             dgvDanhSachPhieuThue.Rows.Clear();
@@ -48,12 +56,21 @@ namespace QLKS
                 MessageBox.Show(ex.Message);
             }
         }
-        
+        /// <summary>
+        /// Sự kiện thoát
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnThoat_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
+        /// <summary>
+        /// Sự kiện nhận phòng
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnNhanPhong_Click(object sender, EventArgs e)
         {
             try
