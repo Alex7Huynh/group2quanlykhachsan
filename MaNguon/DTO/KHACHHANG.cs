@@ -7,6 +7,9 @@ namespace DTO
 {
     public class KHACHHANG
     {
+        /// <summary>
+        /// Mã khách hàng
+        /// </summary>
         private string maKH;
 
         public string MaKH
@@ -14,6 +17,9 @@ namespace DTO
             get { return maKH; }
             set { maKH = value; }
         }
+        /// <summary>
+        /// Họ tên
+        /// </summary>
         private string hoTen;
 
         public string HoTen
@@ -21,6 +27,9 @@ namespace DTO
             get { return hoTen; }
             set { hoTen = value; }
         }
+        /// <summary>
+        /// Mã loại khách hàng
+        /// </summary>
         private string maLoaiKH;
 
         public string MaLoaiKH
@@ -28,6 +37,9 @@ namespace DTO
             get { return maLoaiKH; }
             set { maLoaiKH = value; }
         }
+        /// <summary>
+        /// Địa chỉ
+        /// </summary>
         private string diaChi;
 
         public string DiaChi
@@ -35,6 +47,9 @@ namespace DTO
             get { return diaChi; }
             set { diaChi = value; }
         }
+        /// <summary>
+        /// Số giấy tờ
+        /// </summary>
         private string soGiayTo;
 
         public string SoGiayTo
