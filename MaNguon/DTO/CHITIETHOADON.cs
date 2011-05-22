@@ -7,6 +7,9 @@ namespace DTO
 {
     public class CHITIETHOADON
     {
+        /// <summary>
+        /// Mã chi tiết hóa đơn
+        /// </summary>
         private string maChiTietHoaDon;
 
         public string MaChiTietHoaDon
@@ -15,6 +18,9 @@ namespace DTO
             set { maChiTietHoaDon = value; }
         }
 
+        /// <summary>
+        /// Mã hóa đơn
+        /// </summary>
         private string maHoaDon;
 
         public string MaHoaDon
@@ -22,6 +28,10 @@ namespace DTO
             get { return maHoaDon; }
             set { maHoaDon = value; }
         }
+
+        /// <summary>
+        /// Tổng cộng
+        /// </summary>
         private int tongCong;
 
         public int TongCong
@@ -29,6 +39,9 @@ namespace DTO
             get { return tongCong; }
             set { tongCong = value; }
         }
+        /// <summary>
+        /// Phiếu thuê
+        /// </summary>
         private PHIEUTHUE phieuthue;
 
         public PHIEUTHUE Phieuthue
