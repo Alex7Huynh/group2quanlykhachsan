@@ -9,6 +9,10 @@ namespace DAO
 {
     public class LOAIKHACHDAO : ABSDAO
     {
+        /// <summary>
+        /// Lay danh sach loai khach hang
+        /// </summary>
+        /// <returns>Tra ve danh sach loai khach hang</returns>
         public static List<LOAIKHACH> LayDSLoaiKhach()
         {
             OleDbConnection link = null;

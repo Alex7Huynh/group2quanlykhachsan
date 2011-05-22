@@ -9,6 +9,10 @@ namespace DAO
 {
     public class HOADONDAO :ABSDAO
     {
+        /// <summary>
+        /// Lay danh sach hoa don
+        /// </summary>
+        /// <returns>Tra ve danh sach hoa don</returns>
         public static List<HOADON> LayDSHoaDon()
         {
             OleDbConnection link = null;
@@ -42,7 +46,10 @@ namespace DAO
             }
             return dsHoaDon;
         }
-
+        /// <summary>
+        /// Dem so luong hoa don
+        /// </summary>
+        /// <returns>Tra ve so luong hoa don</returns>
         public static int DemSoLuongHoaDon()
         {
             OleDbConnection link = null;
@@ -68,7 +75,11 @@ namespace DAO
             }
             return maHoaDon;
         }
-
+        /// <summary>
+        /// Them hoa don moi
+        /// </summary>
+        /// <param name="hd"></param>
+        /// <returns>Tra ve ket qua thanh cong hay that bai</returns>
         public static bool ThemHoaDonMoi(HOADON hd)
         {
             OleDbConnection link = null;

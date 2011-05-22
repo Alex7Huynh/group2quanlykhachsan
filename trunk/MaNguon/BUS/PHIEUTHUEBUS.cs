@@ -10,7 +10,6 @@ namespace BUS
     public class PHIEUTHUEBUS
     {
         static LOAIPHONG _loaiPhongCanToiUu;
-
         public static LOAIPHONG LoaiPhongCanToiUu
         {
             get { return _loaiPhongCanToiUu; }
@@ -18,23 +17,33 @@ namespace BUS
         }
 
         static List<PHONG> _dsPhong = new List<PHONG>();
-
         static List<PHIEUTHUE> _dsPhieuThue = new List<PHIEUTHUE>();
-
         static int _chiSoPhongTrongMax = 0;
 
-
+        /// <summary>
+        /// Them phieu
+        /// </summary>
+        /// <param name="phieu"></param>
+        /// <returns>Tra ve ket qua thanh cong hay that bai</returns>
         public static bool ThemPhieu(PHIEUTHUE phieu)
         {
             return PHIEUTHUEDAO.ThemPhieu(phieu);
         }
+        /// <summary>
+        /// Lay danh sach phieu thue theo phong
+        /// </summary>
+        /// <param name="phong"></param>
+        /// <returns>Tra ve danh sach phieu thue</returns>
         public static List<PHIEUTHUE> LayDSPhieuThueTheoPhong(PHONG phong)
         {
             return PHIEUTHUEDAO.LayDSPhieuThueTheoPhong(phong);
         }
-
-
-        #region Ma giả thuat toan toi uu 0812517
+        #region Ma gia thuat toan toi uu 0812517
+        /// <summary>
+        /// Toi uu phieu thue
+        /// </summary>
+        /// <param name="loaiPhong"></param>
+        /// <returns>Tra ve ket qua thanh cong hay that bai</returns>
         public static bool ToiUuPhieuThue(LOAIPHONG loaiPhong)
         {
             //gán loại phòng cần tối ưu các phiếu thuê phòng
@@ -51,7 +60,11 @@ namespace BUS
 
             return TryToiUuPhieuThue(0);
         }
-
+        /// <summary>
+        /// Thu toi uu phieu thue
+        /// </summary>
+        /// <param name="phieuThue"></param>
+        /// <returns>Tra ve ket qua thanh cong hay that bai</returns>
         private static bool TryToiUuPhieuThue(int phieuThue)
         {
             if (phieuThue >= _dsPhieuThue.Count)
@@ -84,7 +97,10 @@ namespace BUS
             }
             return false;
         }
-
+        /// <summary>
+        /// Tinh chi so phong trong
+        /// </summary>
+        /// <returns>Tra ve ket qua thanh cong hay that bai</returns>
         private static int TinhChiSoPhongTrong()
         {
             //lấy ngày đầu tiên (làm chuẩn)
@@ -107,13 +123,12 @@ namespace BUS
         }
         #endregion
 
-        #region 0812033 - Bình
-        ///////0812033
+        #region 0812033 - Bình        
         /// <summary>
-        /// 
+        /// Them phieu thue
         /// </summary>
         /// <param name="phieu"></param>
-        /// <returns></returns>
+        /// <returns>Tra ve ma phieu thue</returns>
         public static string ThemPhieuThue(PHIEUTHUE phieu)
         {
             try
@@ -126,10 +141,10 @@ namespace BUS
             }
         }
         /// <summary>
-        /// 
+        /// Xoa phieu thue
         /// </summary>
         /// <param name="phieuThue"></param>
-        /// <returns></returns>
+        /// <returns>Tra ve ket qua thanh cong hay that bai</returns>
         public static bool XoaPhieuThue(PHIEUTHUE phieuThue)
         {
             try
@@ -142,10 +157,10 @@ namespace BUS
             }
         }
         /// <summary>
-        /// 
+        /// Lay ngay phieu thue cu nhat
         /// </summary>
         /// <param name="danhSachPhieuThue"></param>
-        /// <returns></returns>
+        /// <returns>Tra ve ngay phieu thue cu nhat</returns>
         private static DateTime LayNgayPhieuThueCuNhat(List<PHIEUTHUE> danhSachPhieuThue)
         {
             DateTime ngayCuNhat = danhSachPhieuThue[0].NgayThue;
@@ -159,10 +174,10 @@ namespace BUS
             return ngayCuNhat;
         }
         /// <summary>
-        /// 
+        /// Lay ngay phieu thue xa nhat
         /// </summary>
         /// <param name="danhSachPhieuThue"></param>
-        /// <returns></returns>
+        /// <returns>Tra ve ngay phieu thue xa nhat</returns>
         private static DateTime LayNgayPhieuThueXaNhat(List<PHIEUTHUE> danhSachPhieuThue)
         {
             DateTime ngayXaNhat = danhSachPhieuThue[0].NgayThue;
@@ -176,10 +191,10 @@ namespace BUS
             return ngayXaNhat;
         }
         /// <summary>
-        /// 
+        /// Lay phieu thue xa nhat
         /// </summary>
         /// <param name="danhSachPhieuThue"></param>
-        /// <returns></returns>
+        /// <returns>Tra ve phieu thue xa nhat</returns>
         private static PHIEUTHUE LayPhieuThueXaNhat(List<PHIEUTHUE> danhSachPhieuThue)
         {
             DateTime ngayXaNhat = danhSachPhieuThue[0].NgayThue;
@@ -195,13 +210,12 @@ namespace BUS
             return danhSachPhieuThue[index];
         }
         /// <summary>
-        /// 
-        /// 
+        /// Tim phong tot nhat
         /// </summary>
         /// <param name="phieuThueMoi"></param>
         /// <param name="maPhong"></param>
         /// <param name="viTriLoaiPhong"></param>
-        /// <returns></returns>
+        /// <returns>Tra ve vi tri phong</returns>
         private static int TimPhongTotNhat(PHIEUTHUE phieuThueMoi, string maPhong, int viTriLoaiPhong)
         {
             int viTriPhong = -1;
@@ -243,11 +257,11 @@ namespace BUS
 
         }
         /// <summary>
-        /// 
+        /// Dat phieu thue
         /// </summary>
         /// <param name="phieuThue"></param>
         /// <param name="strLoaiPhong"></param>
-        /// <returns></returns>
+        /// <returns>Tra ve ma phong duoc dat</returns>
         public static string DatPhieuThue(PHIEUTHUE phieuThue, string strLoaiPhong)
         {
             string phongDuocDat = string.Empty;
@@ -279,12 +293,12 @@ namespace BUS
 
         }
         /// <summary>
-        /// 
+        /// Kiem tra dat phieu thue
         /// </summary>
         /// <param name="phieuThue"></param>
         /// <param name="strLoaiPhong"></param>
         /// <param name="dsMaPhieuThueDuocDat"></param>
-        /// <returns></returns>
+        /// <returns>Tra ve ma phong</returns>
         public static string KiemTraDatPhieuThue(PHIEUTHUE phieuThue, string strLoaiPhong, ref List<string> dsMaPhieuThueDuocDat)
         {
             string phongDuocDat = string.Empty;
@@ -319,10 +333,10 @@ namespace BUS
         }
         // dieu chinh thuoc tinh dangThue cua danh sach phieu thue
         /// <summary>
-        /// 
+        /// Lay so phong theo loai
         /// </summary>
         /// <param name="strLoaiPhong"></param>
-        /// <returns></returns>
+        /// <returns>Tra ve so phong</returns>
         private static int LaySoPhongTheoLoai(string strLoaiPhong)
         {
             LOAIPHONG loaiPhong = new LOAIPHONG();
@@ -338,7 +352,7 @@ namespace BUS
 
         }
         /// <summary>
-        /// 
+        /// Cap nhat phieu thue da toi uu (can 2 danh sach phieu thue)
         /// </summary>
         /// <param name="nguon"></param>
         /// <param name="dich"></param>
@@ -359,7 +373,7 @@ namespace BUS
             }
         }
         /// <summary>
-        /// 
+        /// Cap nhat phieu the da toi uu 
         /// </summary>
         /// <param name="dich"></param>
         private static void CapNhatPhieuThueDaToiUu(List<PHIEUTHUE> dich)
@@ -374,12 +388,12 @@ namespace BUS
                 }
         }
         /// <summary>
-        /// 
+        /// Kiem tra
         /// </summary>
         /// <param name="phieu"></param>
         /// <param name="soNguoi"></param>
         /// <param name="dsMaPhieuThueDuocDat"></param>
-        /// <returns></returns>
+        /// <returns>Tra ve mang chuoi</returns>
         public static List<string> KiemTra(PHIEUTHUE phieu, ref int soNguoi, ref List<string> dsMaPhieuThueDuocDat)
         {
             List<string> dsPhongDuocDat = new List<string>();
@@ -409,43 +423,43 @@ namespace BUS
             return dsPhongDuocDat;
         }
         /// <summary>
-        /// 
+        /// Tra phong
         /// </summary>
         /// <param name="danhSachCapNhat"></param>
-        /// <returns></returns>
+        /// <returns>Tra ve ket qua thanh cong hay that bai</returns>
         public static bool TraPhong(List<PHIEUTHUE> danhSachCapNhat)
         {
             return PHIEUTHUEDAO.TraPhong(danhSachCapNhat);
         }
         /// <summary>
-        /// 
+        /// Xoa phieu thue
         /// </summary>
         /// <param name="dsMaPhieuThue"></param>
-        /// <returns></returns>
+        /// <returns>Tra ve ket qua thanh cong hay that bai</returns>
         public static bool XoaPhieuThue(List<string> dsMaPhieuThue)
         {
             return PHIEUTHUEDAO.XoaPhieuThue(dsMaPhieuThue);
         }
         /// <summary>
-        /// 
+        /// Xoa tam phieu thue
         /// </summary>
         /// <param name="dsMaPhieuThue"></param>
-        /// <returns></returns>
+        /// <returns>Tra ve ket qua thanh cong hay that bai</returns>
         public static bool XoaTamPhieuThue(List<string> dsMaPhieuThue)
         {
             return PHIEUTHUEDAO.XoaTamPhieuThue(dsMaPhieuThue);
         }
         /// <summary>
-        /// 
+        /// Tinh tien
         /// </summary>
         /// <param name="dsPhieu"></param>
-        /// <returns></returns>
+        /// <returns>Tra ve dinh dang tien</returns>
         public static string TinhTien(List<PHIEUTHUE> dsPhieu)
         {
             try
             {
                 List<int> dsDonGia = PHIEUTHUEDAO.LayDonGia(dsPhieu);
-                string thanhTien = "";
+                //string thanhTien = "";
                 long soTien = 0;
                 int index = 0;
                 for (; index < dsDonGia.Count; ++index)
@@ -459,6 +473,11 @@ namespace BUS
                 throw new Exception(ex.Message);
             }
         }
+        /// <summary>
+        /// Dinh dang tien
+        /// </summary>
+        /// <param name="soTien"></param>
+        /// <returns>Tra ve so tien bang chuoi</returns>
         private static string DinhDangTien(long soTien)
         {
             string giaTien = soTien.ToString();
@@ -481,9 +500,7 @@ namespace BUS
         }
         #endregion
 
-        #region 0812388 - Phú
-        //////////////
-        //// 0812388 - Phú
+        #region 0812388 - Phú        
         /// <summary>
         /// Hàm thực hiện tối ưu hóa các phiếu thuê phòng
         /// </summary>
@@ -649,53 +666,99 @@ namespace BUS
                         count += mangDuLieu[j][i];
                 }
             return count;
-        }
-        ///Hết phần Code của 0812388
+        }        
         #endregion 0812388 - Phú
-
+        /// <summary>
+        /// Tim phieu thue
+        /// </summary>
+        /// <param name="kieuTimKiem"></param>
+        /// <param name="maPhieuThue"></param>
+        /// <param name="tenPhong"></param>
+        /// <param name="tenKhachHangDaiDien"></param>
+        /// <param name="ngayBatDauThue"></param>
+        /// <param name="soNgayThue"></param>
+        /// <returns>Tra ve phieu thue neu tim thay</returns>
         public static List<PHIEUTHUE> TimPhieu(string kieuTimKiem, string maPhieuThue, string tenPhong, string tenKhachHangDaiDien, DateTime ngayBatDauThue, int soNgayThue)
         {
             return PHIEUTHUEDAO.TimPhieu(kieuTimKiem, maPhieuThue, tenPhong, tenKhachHangDaiDien, ngayBatDauThue, soNgayThue);
         }
-
-        //0812251 nhom 13 them test checkin
+        /// <summary>
+        /// Lay danh sach phieu thue theo tinh trang phong
+        /// </summary>
+        /// <param name="phong"></param>
+        /// <returns>Tra ve danh sach phieu thue</returns>        
         public static List<PHIEUTHUE> LayDSPhieuThueTheoTinhTrangPhong(PHONG phong)
         {
             return PHIEUTHUEDAO.LayDSPhieuThueTheoTinhTrangPhong(phong);
         }
-
-        public static int layTongSoNgayThue(PHONG phong)
+        /// <summary>
+        /// Lay tong so ngay thue
+        /// </summary>
+        /// <param name="phong"></param>
+        /// <returns>Tra ve so ngay thue</returns>
+        public static int LayTongSoNgayThue(PHONG phong)
         {
-            return PHIEUTHUEDAO.layTongSoNgayThue(phong);
+            return PHIEUTHUEDAO.LayTongSoNgayThue(phong);
         }
+        /// <summary>
+        /// Lay danh sach phieu thue chua checkin
+        /// </summary>
+        /// <returns>Tra ve danh sach phieu thue</returns>
         public static List<PHIEUTHUE> LayDSPhieuThueChuaCheckin()
         {
             return PHIEUTHUEDAO.LayDSPhieuThueChuaCheckin();
         }
+        /// <summary>
+        /// Lay phieu thue theo ma
+        /// </summary>
+        /// <param name="_maphieuthue"></param>
+        /// <returns>Tra ve danh sach phieu thue</returns>
         public static List<PHIEUTHUE> LayPhieuThueTheoMa(string _maphieuthue)
         {
             return PHIEUTHUEDAO.LayPhieuThueTheoMa(_maphieuthue);
         }
+        /// <summary>
+        /// Cap nhat checkin
+        /// </summary>
+        /// <param name="pt"></param>
+        /// <param name="_Dangthue"></param>
+        /// <returns>Tra ve ket qua thanh cong hay that bai</returns>
         public static bool UpdateCheckin(PHIEUTHUE pt, bool _Dangthue)
         {
             return PHIEUTHUEDAO.UpdateCheckin(pt, _Dangthue);
         }
-        // 0812388
+        /// <summary>
+        /// Lay danh sach phieu thue theo ma nhom
+        /// </summary>
+        /// <param name="p"></param>
+        /// <returns>Tra ve danh sach phieu thue</returns>
         public static List<PHIEUTHUE> LayDSPhieuThueTheoMaNhom(int p)
         {
             return DAO.PHIEUTHUEDAO.LayDSPhieuThueChuaThanhToanTheoMaNhom(p);
         }
-
+        /// <summary>
+        /// Check in phieu thue
+        /// </summary>
+        /// <param name="p"></param>
+        /// <returns>Tra ve ket qua thanh cong hay that bai</returns>
         public static bool CheckinPhieuThue(string p)
         {
             return DAO.PHIEUTHUEDAO.CheckinPhieuThue(p);
         }
-
+        /// <summary>
+        /// Checkout phieu thue
+        /// </summary>
+        /// <param name="p"></param>
+        /// <returns>Tra ve ket qua thanh cong hay that bai</returns>
         public static bool CheckOutPhieuThue(string p)
         {
             return DAO.PHIEUTHUEDAO.CheckoutPhieuThue(p);
         }
-
+        /// <summary>
+        /// Lay danh sach phieu thue chua checkin theo ma nhom
+        /// </summary>
+        /// <param name="p"></param>
+        /// <returns></returns>
         public static List<PHIEUTHUE> LayDSPhieuThueChuaCheckinTheoMaNhom(int p)
         {
             return DAO.PHIEUTHUEDAO.LayDSPhieuThueChuaCheckinTheoMaNhom(p);

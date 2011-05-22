@@ -9,6 +9,11 @@ namespace DAO
 {
     public class PHIEUTHUEDAO : ABSDAO
     {
+        /// <summary>
+        /// Them phieu thue
+        /// </summary>
+        /// <param name="phieu"></param>
+        /// <returns>Tra ve ket qua thanh cong hay that bai</returns>
         public static bool ThemPhieu(PHIEUTHUE phieu)
         {
             OleDbConnection link = null;
@@ -51,6 +56,10 @@ namespace DAO
             }
             return true;
         }
+        /// <summary>
+        /// Them chi tiet phieu thue
+        /// </summary>
+        /// <param name="chiTietPhieu"></param>
         public static void ThemCTPT(CHITIETPHIEUTHUE chiTietPhieu)
         {
             OleDbConnection link = null;
@@ -80,6 +89,11 @@ namespace DAO
                     link.Close();
             }
         }
+        /// <summary>
+        /// Lay danh sach phue thue theo phong
+        /// </summary>
+        /// <param name="phong"></param>
+        /// <returns>Tra ve danh sach cac phieu thue</returns>
         public static List<PHIEUTHUE> LayDSPhieuThueTheoPhong(PHONG phong)
         {
             OleDbConnection link = null;
@@ -118,9 +132,11 @@ namespace DAO
             }
             return dsPhieu;
         }
-        #region 0812033- Bình
-        ///////////
-        //0812033
+        /// <summary>
+        /// Them phieu thue
+        /// </summary>
+        /// <param name="phieu"></param>
+        /// <returns>Tra ve ma phong duoc dat</returns>
         public static string ThemPhieuThue(PHIEUTHUE phieu)
         {
             OleDbConnection link = null;
@@ -141,7 +157,7 @@ namespace DAO
 
                 chuoiLenh = "insert into PHIEUTHUE values('"
                     + phieu.MaPhieuThue + "', '" + phieu.MaPhong + "', '" + phieu.NgayThue + "'," + phieu.SoNgayThue
-                    + ", '" + phieu.TenKhachHangDaiDien + "', 0," +phieu.SoNgayThue + ",0)";
+                    + ", '" + phieu.TenKhachHangDaiDien + "', 0," + phieu.SoNgayThue + ",0)";
                 OleDbCommand lenh = new OleDbCommand(chuoiLenh, link);
 
                 try
@@ -167,7 +183,7 @@ namespace DAO
             return phongDuocDat;
         }
         /// <summary>
-        /// kiem tra phong con trong hay khong
+        /// Kiem tra phong con trong hay khong
         /// </summary>
         /// <param name="phieu"></param>
         public static void KiemTraPhieuThue(OleDbConnection ketNoi, PHIEUTHUE phieu)
@@ -188,6 +204,11 @@ namespace DAO
             if (Doc.HasRows)
                 throw new Exception("Phòng không còn trống! Vui lòng đặt phòng khác.");
         }
+        /// <summary>
+        /// Cap nhat phieu thue
+        /// </summary>
+        /// <param name="danhSachCapNhat"></param>
+        /// <returns>Tra ve ket qua thanh cong hay that bai</returns>
         public static bool CapNhatPhieuThue(List<PHIEUTHUE> danhSachCapNhat)
         {
             OleDbConnection link = null;
@@ -195,7 +216,7 @@ namespace DAO
             {
                 link = KetNoi();
                 string chuoiLenh;
-                for (int i = 0; i < danhSachCapNhat.Count; i++ )
+                for (int i = 0; i < danhSachCapNhat.Count; i++)
                 {
                     chuoiLenh = "Update PHIEUTHUE Set MaPhong = '" + danhSachCapNhat[i].MaPhong + "' Where MaPhieuThue = '" + danhSachCapNhat[i].MaPhieuThue + "'";
                     OleDbCommand lenh = new OleDbCommand(chuoiLenh, link);
@@ -222,6 +243,11 @@ namespace DAO
             }
             return true;
         }
+        /// <summary>
+        /// Tra phong
+        /// </summary>
+        /// <param name="danhSachCapNhat"></param>
+        /// <returns>Tra ve ket qua thanh cong hay that bai</returns>
         public static bool TraPhong(List<PHIEUTHUE> danhSachCapNhat)
         {
             OleDbConnection link = null;
@@ -256,6 +282,11 @@ namespace DAO
             }
             return true;
         }
+        /// <summary>
+        /// Xoa phieu thue
+        /// </summary>
+        /// <param name="phieuThue"></param>
+        /// <returns>Tra ve ket qua thanh cong hay that bai</returns>
         public static bool XoaPhieuThue(PHIEUTHUE phieuThue)
         {
             OleDbConnection link = null;
@@ -289,6 +320,11 @@ namespace DAO
             }
             return true;
         }
+        /// <summary>
+        /// Xoa tam phieu thue
+        /// </summary>
+        /// <param name="dsMaPhieuThue"></param>
+        /// <returns>Tra ve ket qua thanh cong hay that bai</returns>
         public static bool XoaTamPhieuThue(List<string> dsMaPhieuThue)
         {
             OleDbConnection link = null;
@@ -324,6 +360,11 @@ namespace DAO
             }
             return true;
         }
+        /// <summary>
+        /// Xoa tat ca phieu thue trong danh sach phieu thue
+        /// </summary>
+        /// <param name="dsMaPhieuThue"></param>
+        /// <returns>Tra ve ket qua thanh cong hay that bai</returns>
         public static bool XoaPhieuThue(List<string> dsMaPhieuThue)
         {
             OleDbConnection link = null;
@@ -359,6 +400,12 @@ namespace DAO
             }
             return true;
         }
+        /// <summary>
+        /// Lay danh sach phieu thue can toi uu
+        /// </summary>
+        /// <param name="phieuThue"></param>
+        /// <param name="strLoaiPhong"></param>
+        /// <returns>Tra ve danh sach phieu thue</returns>
         public static List<PHIEUTHUE> LayDSPhieuThueCanToiUu(PHIEUTHUE phieuThue, string strLoaiPhong)
         {
             OleDbConnection link = null;
@@ -428,6 +475,12 @@ namespace DAO
             }
             return dsPhieu;
         }
+        /// <summary>
+        /// Tu dong lay ma phieu thue (can OleDbConnection)
+        /// </summary>
+        /// <param name="maPhong"></param>
+        /// <param name="link"></param>
+        /// <returns>Tra ve ma phieu thue</returns>
         private static string TuDongLayMaPhieuThue(string maPhong, OleDbConnection link)
         {
             string maPhieuThue = "";
@@ -459,6 +512,11 @@ namespace DAO
             }
             return maPhieuThue;
         }
+        /// <summary>
+        /// Tu dong lay ma phieu thue
+        /// </summary>
+        /// <param name="maPhong"></param>
+        /// <returns>Tra ve ma phieu thue</returns>
         public static string TuDongLayMaPhieuThue(string maPhong)
         {
             string maPhieuThue = "";
@@ -491,6 +549,11 @@ namespace DAO
             }
             return maPhieuThue;
         }
+        /// <summary>
+        /// Tim so lon nhat
+        /// </summary>
+        /// <param name="danhSach"></param>
+        /// <returns>Tra ve so lon nhat</returns>
         private static int TimSoLonNhat(List<int> danhSach)
         {
             int lonNhat = danhSach[0];
@@ -503,6 +566,11 @@ namespace DAO
             }
             return lonNhat;
         }
+        /// <summary>
+        /// Lay don gia trong danh sach phieu thue
+        /// </summary>
+        /// <param name="dsPhieu"></param>
+        /// <returns>Tra ve danh sach don gia</returns>
         public static List<int> LayDonGia(List<PHIEUTHUE> dsPhieu)
         {
             OleDbConnection link = null;
@@ -512,7 +580,7 @@ namespace DAO
                 link = KetNoi();
                 string chuoiLenh;
                 string maLoaiPhong = "";
-                for (int index = 0; index < dsPhieu.Count; ++index )
+                for (int index = 0; index < dsPhieu.Count; ++index)
                 {
                     maLoaiPhong = dsPhieu[index].MaPhong.Substring(0, 1);
                     chuoiLenh = "select DonGia From LOAIPHONG Where MaLoaiPhong = " + "'" + maLoaiPhong + "'";
@@ -532,10 +600,16 @@ namespace DAO
                 throw new Exception("Không lấy đơn giá được");
             }
         }
-        
-        //// ket thuc ma nguon cua 0812033
-        #endregion
-
+        /// <summary>
+        /// Tim phieu thue
+        /// </summary>
+        /// <param name="kieuTimKiem"></param>
+        /// <param name="maPhieuThue"></param>
+        /// <param name="tenPhong"></param>
+        /// <param name="tenKhachHangDaiDien"></param>
+        /// <param name="ngayBatDauThue"></param>
+        /// <param name="soNgayThue"></param>
+        /// <returns>Tra ve danh sach phieu thue</returns>
         public static List<PHIEUTHUE> TimPhieu(string kieuTimKiem, string maPhieuThue, string tenPhong, string tenKhachHangDaiDien, DateTime ngayBatDauThue, int soNgayThue)
         {
             OleDbConnection ketNoi = null;
@@ -649,8 +723,12 @@ namespace DAO
             }
             return dsPhieuThue;
         }
-
         //0812251...Nhom 13 them de test chuc nang checkin do chuc nang dat phong chua co. Nen test = tinh trang dang free
+        /// <summary>
+        /// Lay danh sach phieu thue theo tinh trang phong
+        /// </summary>
+        /// <param name="phong"></param>
+        /// <returns>Tra ve danh sach phieu thue</returns>
         public static List<PHIEUTHUE> LayDSPhieuThueTheoTinhTrangPhong(PHONG phong)
         {
             OleDbConnection link = null;
@@ -689,8 +767,12 @@ namespace DAO
             }
             return dsPhieu;
         }
-
-        public static int layTongSoNgayThue(PHONG phong)
+        /// <summary>
+        /// Lay tong so ngay thue phong
+        /// </summary>
+        /// <param name="phong"></param>
+        /// <returns>Tra ve tong so ngay thue phong</returns>
+        public static int LayTongSoNgayThue(PHONG phong)
         {
             int ketqua = 0;
             OleDbConnection link = null;
@@ -730,7 +812,11 @@ namespace DAO
             return ketqua;
 
         }
-         public static List<PHIEUTHUE> LayDSPhieuThueChuaCheckin()
+        /// <summary>
+        /// Lay danh sach phieu thue chua checkin
+        /// </summary>
+        /// <returns>Tra ve danh sach phieu thue</returns>
+        public static List<PHIEUTHUE> LayDSPhieuThueChuaCheckin()
         {
             OleDbConnection link = null;
             List<PHIEUTHUE> dsPhieu = new List<PHIEUTHUE>();
@@ -739,42 +825,7 @@ namespace DAO
             try
             {
                 link = KetNoi();
-                string chuoiLenh = "select pt.MaPhieuThue,pt.MaPhong, pt.NgayThue, pt.SoNgayThue, pt.TenKhachHangDaiDien from PHIEUTHUE pt  where pt.dangthue=" +false.ToString();
-                lenh = new OleDbCommand(chuoiLenh, link);
-                 OleDbDataReader Doc = lenh.ExecuteReader();
-                while (Doc.Read())
-                {
-                    PHIEUTHUE phieu = new PHIEUTHUE();
-                    phieu.MaPhieuThue = Doc.GetString(0);
-                    phieu.MaPhong = Doc.GetString(1);
-                    phieu.NgayThue = Doc.GetDateTime(2);
-                    phieu.SoNgayThue = int.Parse(Doc.GetValue(3).ToString());
-                    phieu.TenKhachHangDaiDien = Doc.GetString(4);
-                    dsPhieu.Add(phieu);
-                }
-            }
-            catch (Exception ex)
-            {
-                dsPhieu = new List<PHIEUTHUE>();
-                throw new Exception(ex.Message);
-            }
-            finally
-            {
-                if (link != null && link.State == System.Data.ConnectionState.Open)
-                    link.Close();
-            }
-            return dsPhieu;
-        }
-        public static List<PHIEUTHUE> LayPhieuThueTheoMa(string _maphieuthue)
-        {
-            OleDbConnection link = null;
-            List<PHIEUTHUE> dsPhieu = new List<PHIEUTHUE>();
-            OleDbParameter thamSo = new OleDbParameter();
-            OleDbCommand lenh = new OleDbCommand();
-            try
-            {
-                link = KetNoi();
-                string chuoiLenh = "select pt.MaPhieuThue,pt.MaPhong, pt.NgayThue, pt.SoNgayThue, pt.TenKhachHangDaiDien from PHIEUTHUE pt  where pt.MaPhieuThue like '" + _maphieuthue+ "'";
+                string chuoiLenh = "select pt.MaPhieuThue,pt.MaPhong, pt.NgayThue, pt.SoNgayThue, pt.TenKhachHangDaiDien from PHIEUTHUE pt  where pt.dangthue=" + false.ToString();
                 lenh = new OleDbCommand(chuoiLenh, link);
                 OleDbDataReader Doc = lenh.ExecuteReader();
                 while (Doc.Read())
@@ -800,7 +851,53 @@ namespace DAO
             }
             return dsPhieu;
         }
-        public static bool UpdateCheckin(PHIEUTHUE pt,bool _Dangthue)
+        /// <summary>
+        /// Lay danh sach phieu thue theo ma phieu thue
+        /// </summary>
+        /// <param name="_maphieuthue"></param>
+        /// <returns>Tra ve danh sach phieu thue</returns>
+        public static List<PHIEUTHUE> LayPhieuThueTheoMa(string _maphieuthue)
+        {
+            OleDbConnection link = null;
+            List<PHIEUTHUE> dsPhieu = new List<PHIEUTHUE>();
+            OleDbParameter thamSo = new OleDbParameter();
+            OleDbCommand lenh = new OleDbCommand();
+            try
+            {
+                link = KetNoi();
+                string chuoiLenh = "select pt.MaPhieuThue,pt.MaPhong, pt.NgayThue, pt.SoNgayThue, pt.TenKhachHangDaiDien from PHIEUTHUE pt  where pt.MaPhieuThue like '" + _maphieuthue + "'";
+                lenh = new OleDbCommand(chuoiLenh, link);
+                OleDbDataReader Doc = lenh.ExecuteReader();
+                while (Doc.Read())
+                {
+                    PHIEUTHUE phieu = new PHIEUTHUE();
+                    phieu.MaPhieuThue = Doc.GetString(0);
+                    phieu.MaPhong = Doc.GetString(1);
+                    phieu.NgayThue = Doc.GetDateTime(2);
+                    phieu.SoNgayThue = int.Parse(Doc.GetValue(3).ToString());
+                    phieu.TenKhachHangDaiDien = Doc.GetString(4);
+                    dsPhieu.Add(phieu);
+                }
+            }
+            catch (Exception ex)
+            {
+                dsPhieu = new List<PHIEUTHUE>();
+                throw new Exception(ex.Message);
+            }
+            finally
+            {
+                if (link != null && link.State == System.Data.ConnectionState.Open)
+                    link.Close();
+            }
+            return dsPhieu;
+        }
+        /// <summary>
+        /// Cap nhat checkin
+        /// </summary>
+        /// <param name="pt"></param>
+        /// <param name="_Dangthue"></param>
+        /// <returns>Tra ve ket qua thanh cong hay that bai</returns>
+        public static bool UpdateCheckin(PHIEUTHUE pt, bool _Dangthue)
         {
             bool kq = false;
             OleDbConnection link = null;
@@ -810,16 +907,16 @@ namespace DAO
             try
             {
                 link = KetNoi();
-                string chuoiLenh = "update  PHIEUTHUE set dangthue= "+ _Dangthue + " where Maphieuthue like'"+pt.MaPhieuThue +"'";
+                string chuoiLenh = "update  PHIEUTHUE set dangthue= " + _Dangthue + " where Maphieuthue like'" + pt.MaPhieuThue + "'";
                 lenh = new OleDbCommand(chuoiLenh, link);
                 lenh.ExecuteNonQuery();
                 kq = true;
             }
             catch (Exception ex)
             {
-                dsPhieu = new List<PHIEUTHUE>();                
+                dsPhieu = new List<PHIEUTHUE>();
                 throw new Exception(ex.Message);
-                 
+
             }
             finally
             {
@@ -830,13 +927,17 @@ namespace DAO
 
 
 
-            }
-        // 0812388
+        }
+        /// <summary>
+        /// Lay danh sach phieu thue chua thanh toan theo ma nhom
+        /// </summary>
+        /// <param name="p"></param>
+        /// <returns>Tra ve danh sach phieu thue</returns>
         public static List<PHIEUTHUE> LayDSPhieuThueChuaThanhToanTheoMaNhom(int p)
         {
             OleDbConnection link = null;
             List<PHIEUTHUE> dsPhieu = new List<PHIEUTHUE>();
-           
+
             OleDbCommand lenh = new OleDbCommand();
             try
             {
@@ -871,8 +972,11 @@ namespace DAO
             }
             return dsPhieu;
         }
-
-        
+        /// <summary>
+        /// Checkin phieu thue
+        /// </summary>
+        /// <param name="p"></param>
+        /// <returns>Tra ve ket qua thanh cong hay that bai</returns>
         public static bool CheckinPhieuThue(string p)
         {
             OleDbConnection link = null;
@@ -895,9 +999,13 @@ namespace DAO
                 if (link != null && link.State == System.Data.ConnectionState.Open)
                     link.Close();
             }
-            
+
         }
-        // 0812388
+        /// <summary>
+        /// Checkout phieu thue
+        /// </summary>
+        /// <param name="p"></param>
+        /// <returns>Tra ve ket qua thanh cong hay that bai</returns>
         public static bool CheckoutPhieuThue(string p)
         {
             OleDbConnection link = null;
@@ -922,7 +1030,11 @@ namespace DAO
             }
 
         }
-
+        /// <summary>
+        /// Lay danh sach phieu thue chua checkin theo ma nhom
+        /// </summary>
+        /// <param name="p"></param>
+        /// <returns>Tra ve danh sach phieu thue</returns>
         public static List<PHIEUTHUE> LayDSPhieuThueChuaCheckinTheoMaNhom(int p)
         {
             OleDbConnection link = null;

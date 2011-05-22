@@ -13,8 +13,6 @@ namespace QLKSTestProject
     [TestClass()]
     public class ABSDAOTest
     {
-
-
         private TestContext testContextInstance;
 
         /// <summary>

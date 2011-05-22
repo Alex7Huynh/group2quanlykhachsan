@@ -9,11 +9,19 @@ namespace BUS
 {
     public class KHACHHANGBUS
     {
+        /// <summary>
+        /// Lay danh sach khach
+        /// </summary>
+        /// <returns>Tra ve danh sach khach</returns>
         public static List<KHACHHANG> LayDSKhach()
         {
             return KHACHHANGDAO.LayDSKhach();
         }
-
+        /// <summary>
+        /// Lay danh sach khach theo ma khach hang
+        /// </summary>
+        /// <param name="maKH"></param>
+        /// <returns>Tra ve danh sach khach hang</returns>
         public static List<KHACHHANG> LayDSKhachTheoMaKH(string maKH)
         {
             List<KHACHHANG> dsKH = new List<KHACHHANG>();
@@ -27,7 +35,11 @@ namespace BUS
             }
             return dsKH;
         }
-
+        /// <summary>
+        /// Lay danh sach khac hang theo ho ten
+        /// </summary>
+        /// <param name="HoTen"></param>
+        /// <returns>Tra ve danh sach khach hang</returns>
         public static List<KHACHHANG> LayDSKhachTheoHoTen(string HoTen)
         {
             List<KHACHHANG> dsKH = new List<KHACHHANG>();
@@ -41,7 +53,11 @@ namespace BUS
             }
             return dsKH;
         }
-
+        /// <summary>
+        /// Lay danh sach khach hang theo so giay to
+        /// </summary>
+        /// <param name="SoGiayTo"></param>
+        /// <returns>Tra ve danh sach khach hang</returns>
         public static List<KHACHHANG> LayDSKhachTheoSoGiayTo(string SoGiayTo)
         {
             List<KHACHHANG> dsKH = new List<KHACHHANG>();
@@ -55,7 +71,11 @@ namespace BUS
             }
             return dsKH;
         }
-
+        /// <summary>
+        /// Lay danh sach khach hang theo dia chi
+        /// </summary>
+        /// <param name="DiaChi"></param>
+        /// <returns>Tra ve danh sach khach hang</returns>
         public static List<KHACHHANG> LayDSKhachTheoDiaChi(string DiaChi)
         {
             List<KHACHHANG> dsKH = new List<KHACHHANG>();
@@ -69,7 +89,11 @@ namespace BUS
             }
             return dsKH;
         }
-
+        /// <summary>
+        /// Lay danh sach khach hang theo loai khach hang
+        /// </summary>
+        /// <param name="LoaiKH"></param>
+        /// <returns>Tra ve danh sach khach hang</returns>
         public static List<KHACHHANG> LayDSKhachTheoLoaiKH(string LoaiKH)
         {
             List<KHACHHANG> dsKH = new List<KHACHHANG>();
@@ -82,12 +106,11 @@ namespace BUS
                 throw ex;
             }
             return dsKH;
-        }
-        //0812033
+        }        
         /// <summary>
-        /// tự động lấy mã cho khách hàng tiếp theo
+        /// Tự động lấy mã cho khách hàng tiếp theo
         /// </summary>
-        /// <returns>mã khách hàng</returns>
+        /// <returns>Trả về mã khách hàng</returns>
         public static string TuDongLayMaKhachHang()
         {
             try
@@ -101,7 +124,7 @@ namespace BUS
             
         }
         /// <summary>
-        /// thêm một khách hàng mới vào csdl
+        /// Thêm một khách hàng mới vào csdl
         /// </summary>
         /// <param name="khachHang"> KHACHHANG</param>
         public static void ThemKhachHang(KHACHHANG khachHang)
@@ -116,8 +139,11 @@ namespace BUS
             }
             
         }
-        //end 0812033
-        // 0812388
+        /// <summary>
+        /// Tim khach hang theo so giay to chinh xac
+        /// </summary>
+        /// <param name="p"></param>
+        /// <returns>Tra ve khach hang neu tim thay</returns>
         public static KHACHHANG LayKhachTheoSoGiayToChinhXac(string p)
         {
             return DAO.KHACHHANGDAO.LayKhachTheoSoGiayToChinhXac(p);
