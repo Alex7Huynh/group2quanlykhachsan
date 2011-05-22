@@ -7,6 +7,9 @@ namespace DTO
 {
     public class NhomDTO
     {
+        /// <summary>
+        /// Mã nhóm
+        /// </summary>
         private int _maNhom;
 
         public int MaNhom
@@ -14,6 +17,9 @@ namespace DTO
             get { return _maNhom; }
             set { _maNhom = value; }
         }
+        /// <summary>
+        /// Mã khách hàng
+        /// </summary>
         private string _maKhacHang;
 
         public string MaKhacHang
