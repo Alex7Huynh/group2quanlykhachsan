@@ -7,6 +7,9 @@ namespace DTO
 {
     public class PHONG
     {
+        /// <summary>
+        /// Mã phòng
+        /// </summary>
         private string maPhong;
 
         public string MaPhong
@@ -14,6 +17,9 @@ namespace DTO
             get { return maPhong; }
             set { maPhong = value; }
         }
+        /// <summary>
+        /// Tên phòng
+        /// </summary>
         private string tenPhong;
 
         public string TenPhong
@@ -21,6 +27,10 @@ namespace DTO
             get { return tenPhong; }
             set { tenPhong = value; }
         }
+
+        /// <summary>
+        /// Mã loại phòng
+        /// </summary>
         private string maLoaiPhong;
 
         public string MaLoaiPhong
@@ -29,6 +39,9 @@ namespace DTO
             set { maLoaiPhong = value; }
         }
 
+        /// <summary>
+        /// Ghi chú
+        /// </summary>
         private string ghiChu;
 
         public string GhiChu
@@ -36,6 +49,9 @@ namespace DTO
             get { return ghiChu; }
             set { ghiChu = value; }
         }
+        /// <summary>
+        /// Tình trạng
+        /// </summary>
         private string tinhTrang;
 
         public string TinhTrang
@@ -43,7 +59,14 @@ namespace DTO
             get { return tinhTrang; }
             set { tinhTrang = value; }
         }
+
+        /// <summary>
+        /// Đã xóa
+        /// </summary>
         private string daXoa;
+        /// <summary>
+        /// Số người tối đa
+        /// </summary>
         private int soNguoiToiDa;
 
         public int SoNguoiToiDa
