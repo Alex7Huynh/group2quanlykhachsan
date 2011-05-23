@@ -157,7 +157,7 @@ namespace DAO
 
                 chuoiLenh = "insert into PHIEUTHUE values('"
                     + phieu.MaPhieuThue + "', '" + phieu.MaPhong + "', '" + phieu.NgayThue + "'," + phieu.SoNgayThue
-                    + ", '" + phieu.TenKhachHangDaiDien + "', 0," + phieu.SoNgayThue + ",0)";
+                    + ", '" + phieu.TenKhachHangDaiDien + "', 0," + phieu.MaNhom + ",0,0)";
                 OleDbCommand lenh = new OleDbCommand(chuoiLenh, link);
 
                 try
