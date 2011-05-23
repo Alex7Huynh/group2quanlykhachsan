@@ -29,10 +29,6 @@
         private void InitializeComponent()
         {
             this.txtCMND2 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.gbTraPhongDoan = new System.Windows.Forms.GroupBox();
-            this.btnTim = new System.Windows.Forms.Button();
             this.btnTraPhong = new System.Windows.Forms.Button();
             this.btnThoat = new System.Windows.Forms.Button();
             this.dgvDanhSachPhieuThue = new System.Windows.Forms.DataGridView();
@@ -43,86 +39,52 @@
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label2 = new System.Windows.Forms.Label();
             this.txtTongTien = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.gbTraPhongDoan.SuspendLayout();
+            this.btnTim = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDanhSachPhieuThue)).BeginInit();
             this.SuspendLayout();
             // 
             // txtCMND2
             // 
-            this.txtCMND2.Location = new System.Drawing.Point(214, 32);
+            this.txtCMND2.Location = new System.Drawing.Point(20, 155);
+            this.txtCMND2.Multiline = true;
             this.txtCMND2.Name = "txtCMND2";
-            this.txtCMND2.Size = new System.Drawing.Size(403, 20);
+            this.txtCMND2.Size = new System.Drawing.Size(188, 47);
             this.txtCMND2.TabIndex = 16;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(6, 33);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(202, 17);
-            this.label5.TabIndex = 15;
-            this.label5.Text = "CMND/PassPort người đại diện";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Blue;
-            this.label1.Location = new System.Drawing.Point(345, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(112, 26);
-            this.label1.TabIndex = 14;
-            this.label1.Text = "Trả Phòng";
-            // 
-            // gbTraPhongDoan
-            // 
-            this.gbTraPhongDoan.Controls.Add(this.btnTim);
-            this.gbTraPhongDoan.Controls.Add(this.label5);
-            this.gbTraPhongDoan.Controls.Add(this.txtCMND2);
-            this.gbTraPhongDoan.Location = new System.Drawing.Point(58, 51);
-            this.gbTraPhongDoan.Name = "gbTraPhongDoan";
-            this.gbTraPhongDoan.Size = new System.Drawing.Size(704, 71);
-            this.gbTraPhongDoan.TabIndex = 17;
-            this.gbTraPhongDoan.TabStop = false;
-            this.gbTraPhongDoan.Text = "Thông tin";
-            // 
-            // btnTim
-            // 
-            this.btnTim.Location = new System.Drawing.Point(623, 30);
-            this.btnTim.Name = "btnTim";
-            this.btnTim.Size = new System.Drawing.Size(75, 23);
-            this.btnTim.TabIndex = 17;
-            this.btnTim.Text = "Tìm";
-            this.btnTim.UseVisualStyleBackColor = true;
-            this.btnTim.Click += new System.EventHandler(this.btnTim_Click);
             // 
             // btnTraPhong
             // 
+            this.btnTraPhong.BackgroundImage = global::QLKS.Properties.Resources.ButtonTraPhong;
+            this.btnTraPhong.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnTraPhong.Enabled = false;
-            this.btnTraPhong.Location = new System.Drawing.Point(561, 320);
+            this.btnTraPhong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTraPhong.Location = new System.Drawing.Point(448, 143);
             this.btnTraPhong.Name = "btnTraPhong";
-            this.btnTraPhong.Size = new System.Drawing.Size(75, 23);
+            this.btnTraPhong.Size = new System.Drawing.Size(188, 47);
             this.btnTraPhong.TabIndex = 19;
-            this.btnTraPhong.Text = "Trả Phòng";
             this.btnTraPhong.UseVisualStyleBackColor = true;
+            this.btnTraPhong.MouseLeave += new System.EventHandler(this.btnTim_MouseLeave);
             this.btnTraPhong.Click += new System.EventHandler(this.btnTraPhong_Click);
+            this.btnTraPhong.MouseEnter += new System.EventHandler(this.btnTraPhong_MouseEnter);
             // 
             // btnThoat
             // 
-            this.btnThoat.Location = new System.Drawing.Point(681, 320);
+            this.btnThoat.BackgroundImage = global::QLKS.Properties.Resources.ButtonQuayLai;
+            this.btnThoat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnThoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThoat.Location = new System.Drawing.Point(448, 216);
             this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(75, 23);
+            this.btnThoat.Size = new System.Drawing.Size(188, 47);
             this.btnThoat.TabIndex = 20;
-            this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = true;
+            this.btnThoat.MouseLeave += new System.EventHandler(this.btnTim_MouseLeave);
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
+            this.btnThoat.MouseEnter += new System.EventHandler(this.btnThoat_MouseEnter);
             // 
             // dgvDanhSachPhieuThue
             // 
+            this.dgvDanhSachPhieuThue.BackgroundColor = System.Drawing.Color.Indigo;
             this.dgvDanhSachPhieuThue.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dgvDanhSachPhieuThue.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDanhSachPhieuThue.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -133,12 +95,12 @@
             this.Column5,
             this.Column6,
             this.Column7});
-            this.dgvDanhSachPhieuThue.Location = new System.Drawing.Point(58, 128);
+            this.dgvDanhSachPhieuThue.Location = new System.Drawing.Point(17, 308);
             this.dgvDanhSachPhieuThue.Name = "dgvDanhSachPhieuThue";
             this.dgvDanhSachPhieuThue.ReadOnly = true;
             this.dgvDanhSachPhieuThue.RowHeadersVisible = false;
             this.dgvDanhSachPhieuThue.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDanhSachPhieuThue.Size = new System.Drawing.Size(704, 150);
+            this.dgvDanhSachPhieuThue.Size = new System.Drawing.Size(631, 103);
             this.dgvDanhSachPhieuThue.TabIndex = 22;
             this.dgvDanhSachPhieuThue.SelectionChanged += new System.EventHandler(this.dgvDanhSachPhieuThue_SelectionChanged);
             // 
@@ -184,21 +146,13 @@
             this.Column7.Name = "Column7";
             this.Column7.ReadOnly = true;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(448, 285);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(93, 13);
-            this.label2.TabIndex = 23;
-            this.label2.Text = "Tổng tiền phải trả:";
-            // 
             // txtTongTien
             // 
-            this.txtTongTien.Location = new System.Drawing.Point(547, 282);
+            this.txtTongTien.Location = new System.Drawing.Point(20, 241);
+            this.txtTongTien.Multiline = true;
             this.txtTongTien.Name = "txtTongTien";
             this.txtTongTien.ReadOnly = true;
-            this.txtTongTien.Size = new System.Drawing.Size(154, 20);
+            this.txtTongTien.Size = new System.Drawing.Size(188, 47);
             this.txtTongTien.TabIndex = 24;
             this.txtTongTien.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -211,24 +165,37 @@
             this.label3.TabIndex = 25;
             this.label3.Text = ".000 VND";
             // 
+            // btnTim
+            // 
+            this.btnTim.BackgroundImage = global::QLKS.Properties.Resources.ButtonSearch;
+            this.btnTim.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnTim.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTim.Location = new System.Drawing.Point(219, 155);
+            this.btnTim.Name = "btnTim";
+            this.btnTim.Size = new System.Drawing.Size(188, 47);
+            this.btnTim.TabIndex = 17;
+            this.btnTim.UseVisualStyleBackColor = true;
+            this.btnTim.MouseLeave += new System.EventHandler(this.btnTim_MouseLeave);
+            this.btnTim.Click += new System.EventHandler(this.btnTim_Click);
+            this.btnTim.MouseEnter += new System.EventHandler(this.btnTim_MouseEnter);
+            // 
             // frmCheckOut
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(779, 364);
+            this.BackgroundImage = global::QLKS.Properties.Resources.TraPhong;
+            this.ClientSize = new System.Drawing.Size(665, 426);
+            this.Controls.Add(this.btnTim);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtTongTien);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.txtCMND2);
             this.Controls.Add(this.dgvDanhSachPhieuThue);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.btnTraPhong);
-            this.Controls.Add(this.gbTraPhongDoan);
-            this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmCheckOut";
-            this.Text = "CheckOut";
+            this.Text = "Trả phòng";
             this.Load += new System.EventHandler(this.frmCheckOut_Load);
-            this.gbTraPhongDoan.ResumeLayout(false);
-            this.gbTraPhongDoan.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDanhSachPhieuThue)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -238,12 +205,8 @@
         #endregion
 
         private System.Windows.Forms.TextBox txtCMND2;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.GroupBox gbTraPhongDoan;
         private System.Windows.Forms.Button btnTraPhong;
         private System.Windows.Forms.Button btnThoat;
-        private System.Windows.Forms.Button btnTim;
         private System.Windows.Forms.DataGridView dgvDanhSachPhieuThue;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
@@ -252,8 +215,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtTongTien;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btnTim;
     }
 }

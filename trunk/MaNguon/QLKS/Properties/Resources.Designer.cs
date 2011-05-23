@@ -458,5 +458,12 @@ namespace QLKS.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        internal static System.Drawing.Bitmap TraPhong {
+            get {
+                object obj = ResourceManager.GetObject("TraPhong", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }
