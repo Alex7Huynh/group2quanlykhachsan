@@ -1,0 +1,455 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DA610046-C2C8-4454-A35A-63D840276603}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>QLKS</RootNamespace>
+    <AssemblyName>QLKS</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Enterprise.Framework, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Enterprise.InfoStore, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Windows\assembly\GAC_MSIL\System.Web.Services\2.0.0.0__b03f5f7f11d50a3a\System.Web.Services.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Checkin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Checkin.Designer.cs">
+      <DependentUpon>Checkin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CheckOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CheckOut.Designer.cs">
+      <DependentUpon>CheckOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainMenu.designer.cs">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManDinhDatPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManDinhDatPhong.Designer.cs">
+      <DependentUpon>ManDinhDatPhong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManHinhBaoCaoDoanhThu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManHinhBaoCaoDoanhThu.designer.cs">
+      <DependentUpon>ManHinhBaoCaoDoanhThu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Checkin.resx">
+      <DependentUpon>Checkin.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CheckOut.resx">
+      <DependentUpon>CheckOut.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainMenu.resx">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManDinhDatPhong.resx">
+      <DependentUpon>ManDinhDatPhong.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManHinhBaoCaoDoanhThu.resx">
+      <DependentUpon>ManHinhBaoCaoDoanhThu.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reservation.resx">
+      <DependentUpon>Reservation.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SuaPhong.resx">
+      <DependentUpon>SuaPhong.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThemPhong.resx">
+      <DependentUpon>ThemPhong.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TiepNhanDatPhong.resx">
+      <DependentUpon>TiepNhanDatPhong.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TraCuuKhachHang.resx">
+      <DependentUpon>TraCuuKhachHang.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TraCuuPhieuThue.resx">
+      <DependentUpon>TraCuuPhieuThue.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TraCuuPhong.resx">
+      <DependentUpon>TraCuuPhong.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCDatPhong.resx">
+      <DependentUpon>UCDatPhong.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCXemPhieuThuePhong.resx">
+      <DependentUpon>UCXemPhieuThuePhong.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XoaPhong.resx">
+      <DependentUpon>XoaPhong.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Reservation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reservation.Designer.cs">
+      <DependentUpon>Reservation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SuaPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SuaPhong.Designer.cs">
+      <DependentUpon>SuaPhong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThemPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThemPhong.Designer.cs">
+      <DependentUpon>ThemPhong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TiepNhanDatPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TiepNhanDatPhong.Designer.cs">
+      <DependentUpon>TiepNhanDatPhong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TraCuuKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TraCuuKhachHang.Designer.cs">
+      <DependentUpon>TraCuuKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TraCuuPhieuThue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TraCuuPhieuThue.designer.cs">
+      <DependentUpon>TraCuuPhieuThue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TraCuuPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TraCuuPhong.designer.cs">
+      <DependentUpon>TraCuuPhong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCDatPhong.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCDatPhong.Designer.cs">
+      <DependentUpon>UCDatPhong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCXemPhieuThuePhong.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCXemPhieuThuePhong.Designer.cs">
+      <DependentUpon>UCXemPhieuThuePhong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XoaPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XoaPhong.Designer.cs">
+      <DependentUpon>XoaPhong.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BUS\BUS.csproj">
+      <Project>{9B5D60F5-FEAC-4ED2-B8B7-ED1CB0BE0C76}</Project>
+      <Name>BUS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DTO\DTO.csproj">
+      <Project>{59F30D7A-11A7-40AD-94A3-196FF882EADB}</Project>
+      <Name>DTO</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MHDatPhong.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reservation.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\runningman.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MHThemPhong.png" />
+    <None Include="Resources\MHSuaPhong.png" />
+    <None Include="Resources\MHXoaPhong.png" />
+    <None Include="Resources\MHTCPhong.png" />
+    <None Include="Resources\MHTCPhieuThue.png" />
+    <None Include="Resources\MHTCKhachHang.png" />
+    <None Include="Resources\MHTiepNhanDatPhong.png" />
+    <None Include="Resources\20101109033253_report.jpg" />
+    <None Include="Resources\MainMenu.png" />
+    <None Include="Resources\ButtonAdd.png" />
+    <None Include="Resources\ButtonDelete.png" />
+    <None Include="Resources\ButtonFix.png" />
+    <None Include="Resources\ButtonRoom.png" />
+    <None Include="Resources\ButtonTick.png" />
+    <None Include="Resources\ButtonCustomer.png" />
+    <None Include="Resources\ButtonChecked.png" />
+    <None Include="Resources\ButtonMoneyReport.png" />
+    <None Include="Resources\ButtonMinimize.png" />
+    <None Include="Resources\ButtonExit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MHDatPhong1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ButtonLui.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ButtonToi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ButtonAddFocus.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ButtonCustomerFocus.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ButtonCheckedFocus.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ButtonDeleteFocus.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ButtonExitFocus.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ButtonFixFocus.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ButtonFocus.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ButtonFocus_Lui.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ButtonFocus_Toi.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ButtonMinimizeFocus.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ButtonMoneyReportFocus.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ButtonRoomFocus.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ButtonTickFocus.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ButtonThemFocus.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ButtonThem.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ButtonXoaFocus.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ButtonXoa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ButtonXacNhanFocus.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ButtonXacNhan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ButtonQuayLaiFocus.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MHXoaPhong1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ButtonQuayLai.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MHSuaPhong1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MHTraCuuPhong.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ButtonSearchFocus.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ButtonSearch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MHTraCuuPhieuThue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MHTraCuuKhachHang.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ButtonMatrixTick.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ButtonMatrixTickFocus.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ButtonDatPhong.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ButtonDatPhongFocus.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TraPhong.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
