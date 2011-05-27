@@ -23,7 +23,7 @@ namespace DAO
             try
             {
                 link = KetNoi();
-                string chuoiLenh = "select * from PHIEUTHUE where PHIEUTHUE.MaPhong=@MaPhong";
+                string chuoiLenh = "select * from PHIEUTHUE where PHIEUTHUE.MaPhong=@MaPhong and PHIEUTHUE.DaXoa = 0";
                 lenh = new OleDbCommand(chuoiLenh, link);
                 thamSo = new OleDbParameter("@MaPhong", OleDbType.LongVarChar);
                 thamSo.Value = phong.MaPhong;
@@ -335,7 +335,7 @@ namespace DAO
             try
             {
                 link = KetNoi();
-                string chuoiLenh = "select * from PHIEUTHUE Where MaPhong like @LoaiPhong and DaXoa = 0";
+                string chuoiLenh = "select * from PHIEUTHUE Where MaPhong like @LoaiPhong and DaXoa = 0 and DangThue = true";
                 lenh = new OleDbCommand(chuoiLenh, link);
                 thamSo = new OleDbParameter("@LoaiPhong", OleDbType.LongVarChar);
                 thamSo.Value = strLoaiPhong + "%";
@@ -785,7 +785,7 @@ namespace DAO
             try
             {
                 link = KetNoi();
-                string chuoiLenh = "select pt.MaPhieuThue,pt.MaPhong, pt.NgayThue, pt.SoNgayThue, pt.TenKhachHangDaiDien from PHIEUTHUE pt  where pt.MaPhieuThue like '" + _maphieuthue + "'";
+                string chuoiLenh = "select pt.MaPhieuThue,pt.MaPhong, pt.NgayThue, pt.SoNgayThue, pt.TenKhachHangDaiDien, pt.DangThue, pt.DaThanhToan from PHIEUTHUE pt  where pt.MaPhieuThue like '" + _maphieuthue + "'";
                 lenh = new OleDbCommand(chuoiLenh, link);
                 OleDbDataReader Doc = lenh.ExecuteReader();
                 while (Doc.Read())
@@ -796,6 +796,8 @@ namespace DAO
                     phieu.NgayThue = Doc.GetDateTime(2);
                     phieu.SoNgayThue = int.Parse(Doc.GetValue(3).ToString());
                     phieu.TenKhachHangDaiDien = Doc.GetString(4);
+                    phieu.DangThue = Doc.GetBoolean(5);
+                    phieu.DaThanhToan = Doc.GetBoolean(6);
                     dsPhieu.Add(phieu);
                 }
             }

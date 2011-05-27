@@ -27,16 +27,24 @@ namespace QLKS
         {
             string maPhieuThue ="";
             if (UCXemPhieuThuePhong.ColorOfCurrentCell != Color.White)
-                maPhieuThue = UCXemPhieuThuePhong.ContentOfCurrentCell;
-            List<PHIEUTHUE> dsPhieuThue = PHIEUTHUEBUS.LayPhieuThueTheoMa(maPhieuThue);
-
-            foreach (PHIEUTHUE phieuThue in dsPhieuThue)
             {
-                int dongia = PHONGBUS.LayDonGiaTheoMa(phieuThue.MaPhong);
-                int thanhtien = dongia * phieuThue.SoNgayThue;
-                dgvDanhSachPhieuThue.Rows.Add(phieuThue.MaPhieuThue, phieuThue.TenKhachHangDaiDien, phieuThue.MaPhong,
-                                              phieuThue.NgayThue.ToString("dd/mm/yyyy"), phieuThue.SoNgayThue,
-                                              dongia, thanhtien);
+                maPhieuThue = UCXemPhieuThuePhong.ContentOfCurrentCell;
+            
+                List<PHIEUTHUE> dsPhieuThue = PHIEUTHUEBUS.LayPhieuThueTheoMa(maPhieuThue);
+                if (dsPhieuThue == null)
+                    return;
+
+                foreach (PHIEUTHUE phieuThue in dsPhieuThue)
+                {
+                    if (!phieuThue.DaThanhToan)
+                    {
+                        int dongia = PHONGBUS.LayDonGiaTheoMa(phieuThue.MaPhong);
+                        int thanhtien = dongia * phieuThue.SoNgayThue;
+                        dgvDanhSachPhieuThue.Rows.Add(phieuThue.MaPhieuThue, phieuThue.TenKhachHangDaiDien, phieuThue.MaPhong,
+                                                      phieuThue.NgayThue.ToString("dd/mm/yyyy"), phieuThue.SoNgayThue,
+                                                      dongia, thanhtien);
+                    }
+                }
             }
         }
 
@@ -79,7 +87,7 @@ namespace QLKS
 
             if (dlr == DialogResult.No)
                 return;
-
+            
             //Phú
             foreach (DataGridViewRow dgvr in dgvDanhSachPhieuThue.SelectedRows)
             {
@@ -89,7 +97,10 @@ namespace QLKS
                     hd.MaHoaDon = BUS.HOADONBUS.LayMaHoaDon();
                     hd.MaPhieuThue = dgvr.Cells[0].Value.ToString();
                     hd.NgayThanhToan = DateTime.Now;
-                    hd.TenKhachHangThanhToan = kh.HoTen;
+                    if (kh != null)
+                        hd.TenKhachHangThanhToan = kh.HoTen;
+                    else
+                        hd.TenKhachHangThanhToan = "";
                     hd.Thanhtien = int.Parse(txtTongTien.Text);
 
                     if (BUS.HOADONBUS.ThemHoaDonMoi(hd))
@@ -107,7 +118,7 @@ namespace QLKS
                     // Chổ này không xử lý vì exception này chỉ xảy ra khi người dùng có chọn dòng trống
                 }
             }
-            MessageBox.Show("Check out thành công");
+            MessageBox.Show("Trả phòng thành công");
             KhoiTaoDanhSachPhieuThue();
         }
 
@@ -120,6 +131,13 @@ namespace QLKS
         {
             
             // Phú
+            dgvDanhSachPhieuThue.Rows.Clear();
+            kh = BUS.KHACHHANGBUS.LayKhachTheoSoGiayToChinhXac(txtCMND2.Text);
+            if (kh == null)
+            {
+                MessageBox.Show("Không tìm được khách hàng nào có số giấy tờ tùy thân tương ứng");
+                return;
+            }
             KhoiTaoDanhSachPhieuThue();
         }
 
@@ -128,29 +146,30 @@ namespace QLKS
             try
             {
                 dgvDanhSachPhieuThue.Rows.Clear();
-                kh = BUS.KHACHHANGBUS.LayKhachTheoSoGiayToChinhXac(txtCMND2.Text);
-                if (kh == null)
+                if (kh != null)
                 {
-                    MessageBox.Show("Không tìm được khách hàng nào có số giấy tờ tùy thân tương ứng");
-                    return;
-                }
-                List<NhomDTO> dsNhom = BUS.NhomBUS.LayDSNhomTheoMaKhach(kh.MaKH);
+                    
+                    List<NhomDTO> dsNhom = BUS.NhomBUS.LayDSNhomTheoMaKhach(kh.MaKH);
 
-                foreach (NhomDTO nhom in dsNhom)
-                {
-                    List<PHIEUTHUE> dsPhieuThue = BUS.PHIEUTHUEBUS.LayDSPhieuThueTheoMaNhom(nhom.MaNhom);
-
-                    if (dsPhieuThue.Count == 0)
+                    foreach (NhomDTO nhom in dsNhom)
                     {
-                        MessageBox.Show("Không tìm được phiếu thuê nào tương ứng!" + "\n" + "Có thể khách hàng này đã trả phòng rồi.");
-                        return;
-                    }
+                        List<PHIEUTHUE> dsPhieuThue = BUS.PHIEUTHUEBUS.LayDSPhieuThueTheoMaNhom(nhom.MaNhom);
 
-                    foreach (PHIEUTHUE phieuthue in dsPhieuThue)
-                    {
-                        int dongia = BUS.PHONGBUS.LayDonGiaTheoMa(phieuthue.MaPhong);
-                        int thanhtien = dongia * phieuthue.SoNgayThue;
-                        dgvDanhSachPhieuThue.Rows.Add(phieuthue.MaPhieuThue, phieuthue.TenKhachHangDaiDien, phieuthue.MaPhong, phieuthue.NgayThue.ToString("dd/mm/yyyy"), phieuthue.SoNgayThue, dongia, thanhtien);
+                        if (dsPhieuThue.Count == 0)
+                        {
+                            MessageBox.Show("Không tìm được phiếu thuê nào tương ứng!" + "\n" + "Có thể khách hàng này đã trả phòng rồi.");
+                            return;
+                        }
+
+                        foreach (PHIEUTHUE phieuthue in dsPhieuThue)
+                        {
+                            if (!phieuthue.DaThanhToan)
+                            {
+                                int dongia = BUS.PHONGBUS.LayDonGiaTheoMa(phieuthue.MaPhong);
+                                int thanhtien = dongia * phieuthue.SoNgayThue;
+                                dgvDanhSachPhieuThue.Rows.Add(phieuthue.MaPhieuThue, phieuthue.TenKhachHangDaiDien, phieuthue.MaPhong, phieuthue.NgayThue.ToString("dd/mm/yyyy"), phieuthue.SoNgayThue, dongia, thanhtien);
+                            }
+                        }
                     }
                 }
             }
@@ -165,10 +184,10 @@ namespace QLKS
             
             int tongtien = 0;
 
-            if (kh == null || dgvDanhSachPhieuThue.SelectedRows.Count == 0 || (dgvDanhSachPhieuThue.SelectedRows.Count == 1 && dgvDanhSachPhieuThue.SelectedRows[0].Cells[0].Value == null))
+            /*if (kh == null || dgvDanhSachPhieuThue.SelectedRows.Count == 0 || (dgvDanhSachPhieuThue.SelectedRows.Count == 1 && dgvDanhSachPhieuThue.SelectedRows[0].Cells[0].Value == null))
                 btnTraPhong.Enabled = false;
             else
-                btnTraPhong.Enabled = true;
+                btnTraPhong.Enabled = true;*/
 
             foreach (DataGridViewRow dgvr in dgvDanhSachPhieuThue.SelectedRows)
             {

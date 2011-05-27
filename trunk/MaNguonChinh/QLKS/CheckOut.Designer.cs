@@ -57,7 +57,6 @@
             // 
             this.btnTraPhong.BackgroundImage = global::QLKS.Properties.Resources.ButtonTraPhong;
             this.btnTraPhong.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnTraPhong.Enabled = false;
             this.btnTraPhong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTraPhong.Location = new System.Drawing.Point(448, 143);
             this.btnTraPhong.Name = "btnTraPhong";
