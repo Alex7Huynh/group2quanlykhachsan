@@ -8,7 +8,8 @@ namespace DAO
 {
     public class ABSDAO
     {
-        private static string chuoiKetNoi = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=QLKS.mdb";
+        public static string duongDanDuLieu = @"../../DataBase/QLKS.mdb";
+        private static string chuoiKetNoi = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + duongDanDuLieu;
 
         public static string ChuoiKetNoi
         {
