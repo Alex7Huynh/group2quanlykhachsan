@@ -22,9 +22,16 @@ namespace DAO
         /// <returns>Tra ve OleDbConnection</returns>
         public static OleDbConnection KetNoi()
         {
-            OleDbConnection ketNoi = new OleDbConnection(chuoiKetNoi);
-            ketNoi.Open();
-            return ketNoi;
+            try
+            {
+                OleDbConnection ketNoi = new OleDbConnection(chuoiKetNoi);
+                ketNoi.Open();
+                return ketNoi;
+            }
+            catch (System.Exception e)
+            {
+                throw new Exception("Không thể kết nối cơ sở dữ liệu");
+            }
         }
     }
 }
