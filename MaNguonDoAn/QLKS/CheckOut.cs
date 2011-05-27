@@ -23,6 +23,13 @@ namespace QLKS
            
         }
 
+        /// <summary>
+        /// Kiểm tra có phiếu thuê phòng nào được chọn trên UCXemPhieuThuePhong trước khi click nút "Trả phòng" ở 
+        /// form ManDinhDatPhong.
+        /// Nếu có, load mã phiếu thuê đang được chọn để check out.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void frmCheckOut_Load(object sender, EventArgs e)
         {
             string maPhieuThue ="";
