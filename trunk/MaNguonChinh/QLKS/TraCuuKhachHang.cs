@@ -11,6 +11,10 @@ using DTO;
 
 namespace QLKS
 {
+    /// <summary>
+    /// Lop tra cuu khách hàng
+    /// <author> 0812251 - Trần Tấn Kiệt</author>
+    /// </summary>
     public partial class TraCuuKhachHang : Form
     {
         // Dành cho di chuyển
@@ -57,7 +61,12 @@ namespace QLKS
                 cbLoaiKH.Items.Add(dsLoaiKH[i].TenLoaiKH);
             }
         }
-
+        /// <summary>
+        /// Sự kiện thay đổi trong radioButton MaKH
+        /// </summary>
+        /// <author> 0812251 - Trần Tấn Kiệt</author>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void rbtnMaKH_CheckedChanged(object sender, EventArgs e)
         {
             if (rbtnMaKH.Checked)
@@ -66,6 +75,13 @@ namespace QLKS
                 tbMaKH.Enabled = false;
         }
 
+        /// <summary>
+        /// Sự kiện thay đổi trong radioButton HoTen
+        /// </summary>
+        /// <author> 0812251 - Trần Tấn Kiệt</author>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        /// 
         private void rbtnHoTen_CheckedChanged(object sender, EventArgs e)
         {
             if (rbtnHoTen.Checked)
@@ -73,6 +89,14 @@ namespace QLKS
             else
                 tbHoTen.Enabled = false;
         }
+
+        /// <summary>
+        /// Sự kiện thay đổi trong radioButton LoaiKH
+        /// </summary>
+        ///<author> 0812251 - Trần Tấn Kiệt</author>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        /// 
 
         private void rbtnLoaiKH_CheckedChanged(object sender, EventArgs e)
         {
@@ -82,6 +106,13 @@ namespace QLKS
                 cbLoaiKH.Enabled = false;
         }
 
+        /// <summary>
+        /// Sự kiện thay đổi trong radioButton SoGiayTo
+        /// </summary>
+        /// <author> 0812251 - Trần Tấn Kiệt</author>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        /// 
         private void rbtnSoGiayTo_CheckedChanged(object sender, EventArgs e)
         {
             if (rbtnSoGiayTo.Checked)
@@ -90,6 +121,13 @@ namespace QLKS
                 tbSoGiayTo.Enabled = false;
         }
 
+        /// <summary>
+        /// Sự kiện thay đổi trong radioButton DiaChi
+        /// </summary>
+        /// <author> 0812251 - Trần Tấn Kiệt</author>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        /// 
         private void rbtnDiaChi_CheckedChanged(object sender, EventArgs e)
         {
             if (rbtnDiaChi.Checked)
@@ -98,6 +136,13 @@ namespace QLKS
                 tbDiaChi.Enabled = false;
         }
 
+        /// <summary>
+        /// Sự kiện click button tra cuu
+        /// </summary>
+        /// <author> 0812251 - Trần Tấn Kiệt</author>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        /// 
         private void btnTraCuu_Click(object sender, EventArgs e)
         {
             dataGrid_ThongTinKH.Rows.Clear();

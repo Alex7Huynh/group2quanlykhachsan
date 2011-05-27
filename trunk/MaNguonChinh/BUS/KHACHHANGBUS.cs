@@ -9,6 +9,12 @@ namespace BUS
 {
     public class KHACHHANGBUS
     {
+        /// <summary>
+        /// Lay danh sach khac hang theo MaKH
+        /// </summary>
+        /// <author>Nhóm 13- 0812251- Trần Tấn Kiệt</author> 
+        /// <param name="maKH"></param>
+        /// <returns>Tra ve danh sach khach hang</returns>
         public static List<KHACHHANG> LayDSKhachTheoMaKH(string maKH)
         {
             List<KHACHHANG> dsKH = new List<KHACHHANG>();
@@ -25,6 +31,7 @@ namespace BUS
         /// <summary>
         /// Lay danh sach khac hang theo ho ten
         /// </summary>
+        /// <author>Nhóm 13- 0812251- Trần Tấn Kiệt</author> 
         /// <param name="HoTen"></param>
         /// <returns>Tra ve danh sach khach hang</returns>
         public static List<KHACHHANG> LayDSKhachTheoHoTen(string HoTen)
@@ -43,6 +50,7 @@ namespace BUS
         /// <summary>
         /// Lay danh sach khach hang theo so giay to
         /// </summary>
+        /// <author>Nhóm 13- 0812251- Trần Tấn Kiệt</author> 
         /// <param name="SoGiayTo"></param>
         /// <returns>Tra ve danh sach khach hang</returns>
         public static List<KHACHHANG> LayDSKhachTheoSoGiayTo(string SoGiayTo)
@@ -61,6 +69,7 @@ namespace BUS
         /// <summary>
         /// Lay danh sach khach hang theo dia chi
         /// </summary>
+        /// <author>Nhóm 13- 0812251- Trần Tấn Kiệt</author> 
         /// <param name="DiaChi"></param>
         /// <returns>Tra ve danh sach khach hang</returns>
         public static List<KHACHHANG> LayDSKhachTheoDiaChi(string DiaChi)
@@ -79,6 +88,7 @@ namespace BUS
         /// <summary>
         /// Lay danh sach khach hang theo loai khach hang
         /// </summary>
+        /// <author>Nhóm 13- 0812251- Trần Tấn Kiệt</author> 
         /// <param name="LoaiKH"></param>
         /// <returns>Tra ve danh sach khach hang</returns>
         public static List<KHACHHANG> LayDSKhachTheoLoaiKH(string LoaiKH)
@@ -97,6 +107,7 @@ namespace BUS
         /// <summary>
         /// Tự động lấy mã cho khách hàng tiếp theo
         /// </summary>
+        /// <author>Nhóm 13- 0812251- Trần Tấn Kiệt</author> 
         /// <returns>Trả về mã khách hàng</returns>
         public static string TuDongLayMaKhachHang()
         {
@@ -113,6 +124,7 @@ namespace BUS
         /// <summary>
         /// Thêm một khách hàng mới vào csdl
         /// </summary>
+        /// <author>Nhóm 13- 0812251- Trần Tấn Kiệt</author> 
         /// <param name="khachHang"> KHACHHANG</param>
         public static void ThemKhachHang(KHACHHANG khachHang)
         {
@@ -129,6 +141,7 @@ namespace BUS
         /// <summary>
         /// Tim khach hang theo so giay to chinh xac
         /// </summary>
+        /// <author>Nhóm 13- 0812251- Trần Tấn Kiệt</author> 
         /// <param name="p"></param>
         /// <returns>Tra ve khach hang neu tim thay</returns>
         public static KHACHHANG LayKhachTheoSoGiayToChinhXac(string p)

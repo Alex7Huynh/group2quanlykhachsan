@@ -13,7 +13,7 @@ namespace DAO
         /// <summary>
         /// Lay danh sach khach hang theo ma khach hang
         /// </summary>
-        /// <author>Nhóm 13</author>
+        /// <author>Nhóm 13- 0812251- Trần Tấn Kiệt</author>
         /// <param name="maKH">Mã KH kiểu string</param>
         /// <returns>Danh sach khach hang</returns>
         public static List<KHACHHANG> LayDSKhachTheoMaKH(string maKH)
@@ -59,6 +59,7 @@ namespace DAO
         /// <summary>
         /// Lay danh sach khach hang theo ho ten
         /// </summary>
+        /// <author> 0812251 - Trần Tấn Kiệt</author>
         /// <param name="maKH"></param>
         /// <returns>Tra ve danh sach khach hang</returns>
         public static List<KHACHHANG> LayDSKhachTheoHoTen(string HoTen)
@@ -177,6 +178,7 @@ namespace DAO
         /// <summary>
         /// Lay danh sach khach hang theo dia chi
         /// </summary>
+        /// <author> 0812251 - Trần Tấn Kiệt</author>
         /// <param name="DiaChi"></param>
         /// <returns>Tra ve danh sach khach hang</returns>
         public static List<KHACHHANG> LayDSKhachTheoDiaChi(string DiaChi)
@@ -217,6 +219,7 @@ namespace DAO
         /// <summary>
         /// Lay danh sach khach hang theo loai khach hang
         /// </summary>
+        /// <author> 0812251 - Trần Tấn Kiệt</author>
         /// <param name="LoaiKH"></param>
         /// <returns>Tra ve danh sach khach hang</returns>
         public static List<KHACHHANG> LayDSKhachTheoLoaiKH(string LoaiKH)
@@ -255,6 +258,7 @@ namespace DAO
         /// <summary>
         /// Tu dong lay ma khach hang
         /// </summary>
+        /// <author> 0812251 - Trần Tấn Kiệt</author>
         /// <returns>Tra ve ma khach hang</returns>
         public static string TuDongLayMaKhachHang()
         {
@@ -291,6 +295,7 @@ namespace DAO
         /// <summary>
         /// Tim so lon nhat
         /// </summary>
+        /// <author> 0812251 - Trần Tấn Kiệt</author>
         /// <param name="danhSach"></param>
         /// <returns>Tra ve so lon nhat</returns>
         private static int TimSoLonNhat(List<int> danhSach)
