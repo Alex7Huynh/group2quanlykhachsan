@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using BUS;
 
 namespace QLKS
 {
@@ -28,6 +29,15 @@ namespace QLKS
         private void MainMenu_Load(object sender, EventArgs e)
         {
             //BT_ThemPhong.BackColor = Color.Transparent;
+            try
+            {
+                QLKSBUS.KiemTraKetNoi();
+            }
+            catch
+            {
+                MessageBox.Show("Không kết nối được cơ sở dữ liệu. Vui lòng kiểm tra file dữ liệu trong thu mục /DataBase/ và chạy lại chương trình.");
+                Application.Exit();
+            }
             BT_ThemPhong.Focus();
         }
 
