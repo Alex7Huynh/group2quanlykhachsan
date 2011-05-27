@@ -1,4 +1,12 @@
-﻿using System;
+﻿/*!
+ * \file TraCuuKhachHang.cs
+ * \brief Thực hiện việc tra cứu khách hàng
+ * \author Trần Tấn Kiệt 0812251, Phạm Đăng Khoa 0812234
+ * \date 10/5/2011
+*/
+
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,28 +19,43 @@ using DTO;
 
 namespace QLKS
 {
-    /// <summary>
-    /// Lop tra cuu khách hàng
-    /// <author> 0812251 - Trần Tấn Kiệt</author>
+    // <summary>
+    /// Quản lý giao diện Tra Cứu Khách Hàng
+    /// /author Trần Tấn Kiệt 0812251, Phạm Đăng Khoa 0812234
     /// </summary>
     public partial class TraCuuKhachHang : Form
     {
         // Dành cho di chuyển
         Point startPoint = new Point();
+
+        /// <summary>
+        /// Dành cho di chuyển
+        /// </summary>
         public Point StartPoint
         {
             get { return startPoint; }
             set { startPoint = value; }
         }
 
+        /// <summary>
+        /// Tham chiếu đến Form Cha (MainMenu)
+        /// </summary>
         public Form ParentForm;
 
-        // Hàm di chuyển menu
+        /// <summary>
+        /// Hàm di chuyển menu
+        /// </summary>
+        /// <param name="sender">đối tượng gọi</param>
+        /// <param name="e">Tham số chuột</param>
         private void PB_MainMenu_MouseDown(object sender, MouseEventArgs e)
         {
             StartPoint = new Point(e.X, e.Y);
         }
 
+        /// <summary>
+        /// Di chuyển form
+        /// </summary>
+        /// <param name="distance">khoảng cách cần di chuyển</param>
         public void MoveForm(Point distance)
         {
             this.Location = new Point(this.Location.X + distance.X, this.Location.Y + distance.Y);
@@ -44,6 +67,9 @@ namespace QLKS
                 MoveForm(new Point(e.X - StartPoint.X, e.Y - StartPoint.Y));
         }
 
+        /// <summary>
+        /// Lấy danh sách loại khách để tra cứu
+        /// </summary>
         public TraCuuKhachHang()
         {
             InitializeComponent();
@@ -78,7 +104,7 @@ namespace QLKS
         /// <summary>
         /// Sự kiện thay đổi trong radioButton HoTen
         /// </summary>
-        /// <author> 0812251 - Trần Tấn Kiệt</author>
+        /// <author> 0812234 - Phạm Đăng Khoa</author>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         /// 
@@ -93,7 +119,7 @@ namespace QLKS
         /// <summary>
         /// Sự kiện thay đổi trong radioButton LoaiKH
         /// </summary>
-        ///<author> 0812251 - Trần Tấn Kiệt</author>
+        ///<author> 0812234 - Phạm Đăng Khoa</author>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         /// 
@@ -137,12 +163,10 @@ namespace QLKS
         }
 
         /// <summary>
-        /// Sự kiện click button tra cuu
+        /// Thưc hiện việc tra cứu khi ấn nút Tra Cứu
         /// </summary>
-        /// <author> 0812251 - Trần Tấn Kiệt</author>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        /// 
+        /// <param name="sender">đối tượng gọi thực hiện</param>
+        /// <param name="e">tham số của sự kiện click</param>
         private void btnTraCuu_Click(object sender, EventArgs e)
         {
             dataGrid_ThongTinKH.Rows.Clear();
@@ -294,11 +318,21 @@ namespace QLKS
             this.Close();
         }
 
+        /// <summary>
+        /// Thu nhỏ form Tra Cứu Khách Hàng
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BT_ThuNho_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
         }
 
+        /// <summary>
+        /// Thoát khỏi giao diện Tra Cứu Khách Hàng
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnQuayLai_Click(object sender, EventArgs e)
         {
             this.Close();
