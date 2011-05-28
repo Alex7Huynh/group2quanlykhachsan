@@ -13,6 +13,8 @@ namespace QLKSTestProject
     [TestClass()]
     public class ABSDAOTest
     {
+
+
         private TestContext testContextInstance;
 
         /// <summary>
@@ -61,7 +63,6 @@ namespace QLKSTestProject
         //
         #endregion
 
-
         /// <summary>
         ///A test for KetNoi
         ///</summary>
@@ -72,15 +73,6 @@ namespace QLKSTestProject
             OleDbConnection actual;
             actual = ABSDAO.KetNoi();
             Assert.AreNotEqual(expected, actual);
-        }
-
-        /// <summary>
-        ///A test for ABSDAO Constructor
-        ///</summary>
-        [TestMethod()]
-        public void ABSDAOConstructorTest()
-        {
-            ABSDAO target = new ABSDAO();
         }
     }
 }
