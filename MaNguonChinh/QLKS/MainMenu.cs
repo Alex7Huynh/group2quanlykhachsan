@@ -258,7 +258,7 @@ namespace QLKS
 
         private void button1_Click(object sender, EventArgs e)
         {
-            TiepNhanDatPhong frmDatPhong = new TiepNhanDatPhong();
+            TiepNhanDatPhong frmDatPhong = new TiepNhanDatPhong(false, "");
             frmDatPhong.Show();
             frmDatPhong.Location = Location;
             frmDatPhong.ParentForm = this;

@@ -78,13 +78,14 @@
             this.ucDatPhong1.Name = "ucDatPhong1";
             this.ucDatPhong1.Size = new System.Drawing.Size(1024, 768);
             this.ucDatPhong1.TabIndex = 1;
+            this.ucDatPhong1.Load += new System.EventHandler(this.ucDatPhong1_Load_1);
             // 
             // frmManDinhDatPhong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1024, 746);
+            this.ClientSize = new System.Drawing.Size(1024, 742);
             this.Controls.Add(this.BT_ThuNho);
             this.Controls.Add(this.BT_Thoat);
             this.Controls.Add(this.ucDatPhong1);

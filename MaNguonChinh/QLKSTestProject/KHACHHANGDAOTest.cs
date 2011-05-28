@@ -78,13 +78,5 @@ namespace QLKSTestProject
             
         }
 
-        /// <summary>
-        ///A test for KHACHHANGDAO Constructor
-        ///</summary>
-        [TestMethod()]
-        public void KHACHHANGDAOConstructorTest()
-        {
-            KHACHHANGDAO target = new KHACHHANGDAO();
-        }
     }
 }
