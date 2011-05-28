@@ -66,21 +66,6 @@ namespace QLKSTestProject
         //
         #endregion
 
-
-        /// <summary>
-        ///A test for XoaPhieuThue
-        ///</summary>
-        [TestMethod()]
-        public void XoaPhieuThueTest()
-        {
-            PHIEUTHUE phieuThue = null; // TODO: Initialize to an appropriate value
-            bool expected = false; // TODO: Initialize to an appropriate value
-            bool actual;
-            actual = PHIEUTHUEDAO.XoaPhieuThue(phieuThue);
-            Assert.AreEqual(expected, actual);
-            
-        }
-
         /// <summary>
         ///A test for TuDongLayMaPhieuThue
         ///</summary>

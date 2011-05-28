@@ -67,40 +67,18 @@ namespace QLKSTestProject
 
 
         /// <summary>
-        ///A test for PHIEUTHUEBUS Constructor
-        ///</summary>
-        [TestMethod()]
-        public void PHIEUTHUEBUSConstructorTest()
-        {
-            PHIEUTHUEBUS target = new PHIEUTHUEBUS();
-        }
-
-        /// <summary>
-        ///A test for CapNhatPhieuThueDaToiUu
-        ///</summary>
-        [TestMethod()]
-        [DeploymentItem("BUS.dll")]
-        public void CapNhatPhieuThueDaToiUuTest()
-        {
-            List<PHIEUTHUE> nguon = null; // TODO: Initialize to an appropriate value
-            List<PHIEUTHUE> dich = null; // TODO: Initialize to an appropriate value
-            PHIEUTHUEBUS_Accessor.CapNhatPhieuThueDaToiUu(nguon, dich);
-            
-        }
-
-        /// <summary>
         ///A test for DatPhieuThue
         ///</summary>
         [TestMethod()]
         public void DatPhieuThueTest()
         {
-            PHIEUTHUE phieuThue = new PHIEUTHUE{MaPhieuThue = "", MaPhong = "C", NgayThue = new DateTime(2011, 4,23), SoNgayThue = 1, 
+            PHIEUTHUE phieuThue = new PHIEUTHUE{MaPhieuThue = "", MaPhong = "C", NgayThue = new DateTime(2011, 12,23), SoNgayThue = 1, 
                 TenKhachHangDaiDien = "Nguyen", DangThue = false}; // TODO: Initialize to an appropriate value
             string strLoaiPhong = "C"; // TODO: Initialize to an appropriate value
-            string expected = "PTC001001"; // TODO: Initialize to an appropriate value
+            string expected = string.Empty; // TODO: Initialize to an appropriate value
             string actual;
             actual = PHIEUTHUEBUS.DatPhieuThue(phieuThue, strLoaiPhong);
-            Assert.AreEqual(expected, actual);
+            Assert.AreNotEqual(expected, actual);
             
         }
         #region Phú - 0812388
@@ -288,15 +266,15 @@ namespace QLKSTestProject
             {
                 MaPhieuThue = "",
                 MaPhong = "C002",
-                NgayThue = new DateTime(2011, 4, 23),
+                NgayThue = new DateTime(2011, 12, 23),
                 SoNgayThue = 1,
                 TenKhachHangDaiDien = "Nguyen",
                 DangThue = false
             }; // TODO: Initialize to an appropriate value
-            string expected = "PTCOO2OO4"; // TODO: Initialize to an appropriate value
-            string actual;
+            string expected = string.Empty; // TODO: Initialize to an appropriate value
+            string actual = string.Empty;
             actual = PHIEUTHUEBUS.ThemPhieuThue(phieu);
-            Assert.AreEqual(expected, actual);
+            Assert.AreNotEqual(expected, actual);
             
         }
 
@@ -319,35 +297,6 @@ namespace QLKSTestProject
             
         }
 
-        /// <summary>
-        ///A test for TimPhongTotNhat
-        ///</summary>
-        [TestMethod()]
-        [DeploymentItem("BUS.dll")]
-        public void TimPhongTotNhatTest()
-        {
-            PHIEUTHUE phieuThueMoi = null; // TODO: Initialize to an appropriate value
-            int viTriLoaiPhong = 0; // TODO: Initialize to an appropriate value
-            int expected = 0; // TODO: Initialize to an appropriate value
-            int actual;
-            actual = PHIEUTHUEBUS_Accessor.TimPhongTotNhat(phieuThueMoi, null, viTriLoaiPhong);
-            Assert.AreEqual(expected, actual);
-            
-        }
-
-        /// <summary>
-        ///A test for ToiUuPhieuThue
-        ///</summary>
-        [TestMethod()]
-        public void ToiUuPhieuThueTest1()
-        {
-            LOAIPHONG loaiPhong = null; // TODO: Initialize to an appropriate value
-            bool expected = false; // TODO: Initialize to an appropriate value
-            bool actual;
-            //actual = PHIEUTHUEBUS.ToiUuPhieuThue(loaiPhong);
-            //Assert.AreEqual(expected, actual);
-            
-        }
         #region Phú - 0812388
         /// <summary>
         ///A test for ToiUuPhieuThue
@@ -387,26 +336,13 @@ namespace QLKSTestProject
         [TestMethod()]
         public void XoaPhieuThueTest()
         {
-            PHIEUTHUE phieuThue = null; // TODO: Initialize to an appropriate value
-            bool expected = false; // TODO: Initialize to an appropriate value
+            string maPhieuThue = "PTA001001"; // TODO: Initialize to an appropriate value
+            bool expected = true; // TODO: Initialize to an appropriate value
             bool actual;
-            actual = PHIEUTHUEBUS.XoaPhieuThue(phieuThue);
+            actual = PHIEUTHUEBUS.XoaPhieuThue(maPhieuThue);
             Assert.AreEqual(expected, actual);
             
         }
 
-        /// <summary>
-        ///A test for LoaiPhongCanToiUu
-        ///</summary>
-        [TestMethod()]
-        public void LoaiPhongCanToiUuTest()
-        {
-            LOAIPHONG expected = null; // TODO: Initialize to an appropriate value
-            LOAIPHONG actual;
-            PHIEUTHUEBUS.LoaiPhongCanToiUu = expected;
-            actual = PHIEUTHUEBUS.LoaiPhongCanToiUu;
-            Assert.AreEqual(expected, actual);
-            
-        }
     }
 }

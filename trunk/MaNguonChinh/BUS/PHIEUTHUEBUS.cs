@@ -52,11 +52,11 @@ namespace BUS
         /// </summary>
         /// <param name="phieuThue"></param>
         /// <returns>Tra ve ket qua thanh cong hay that bai</returns>
-        public static bool XoaPhieuThue(PHIEUTHUE phieuThue)
+        public static bool XoaPhieuThue(string maPhieuThue)
         {
             try
             {
-                return PHIEUTHUEDAO.XoaPhieuThue(phieuThue);
+                return PHIEUTHUEDAO.XoaPhieuThue(maPhieuThue);
             }
             catch (System.Exception e)
             {
@@ -132,28 +132,15 @@ namespace BUS
             try
             {
                 List<PHIEUTHUE> danhSachPhieuThue = PHIEUTHUEDAO.LayDSPhieuThueCanToiUu(phieuThueMoi, maPhong);
-                // neu cac phong deu trong thi mac dinh chon phong thu nhat
-                if (danhSachPhieuThue.Count == 0)
+                if (danhSachPhieuThue.Count > 0)
                 {
-                    return 0;
+                    soDoTinhTrangPhong = ToiUuPhieuThue(phieuThueMoi, maPhong, danhSachPhieuThue, ref viTriNgay);
+                    LayPhongTotNhat(phieuThueMoi, soDoTinhTrangPhong, viTriNgay);
                 }
-                soDoTinhTrangPhong = ToiUuPhieuThue(phieuThueMoi, maPhong, danhSachPhieuThue, ref viTriNgay);
-                if (soDoTinhTrangPhong.Length > 0)
+                else
                 {
-                    for (int i = 0; i < soDoTinhTrangPhong.Length; i++)
-                    {
-                        if (soDoTinhTrangPhong[i][viTriNgay] == phieuThueMoi.SoNgayThue)
-                        {
-                            viTriPhong = i;
-                            // thoat vong lap
-                            i = soDoTinhTrangPhong.Length;
-                        }
-                        else if (soDoTinhTrangPhong[i][viTriNgay] < max && phieuThueMoi.SoNgayThue < soDoTinhTrangPhong[i][viTriNgay])
-                        {
-                            max = soDoTinhTrangPhong[i][phieuThueMoi.SoNgayThue - 1];
-                            viTriPhong = i;
-                        }
-                    }
+                    // neu cac phong deu trong thi mac dinh chon phong thu nhat
+                    viTriPhong = 0;
                 }
                 return viTriPhong;
             }
@@ -162,6 +149,33 @@ namespace BUS
                 throw new Exception(ex.Message);
             }
 
+        }
+        /// <summary>
+        /// lấy ra phòng tốt nhất dựa vào sơ đồ tình trạng phòng
+        /// </summary>
+        /// <param name="phieuThueMoi">phiếu thuê đang xét</param>
+        /// <param name="soDoTinhTrangPhong">sơ đồ tình trạng phòng</param>
+        /// <param name="viTriNgay">vị trí ngày thuê trên mảng soDoTinhTrangPhong</param>
+        /// <returns>vị trí phòng tốt nhất</returns>
+        private static int LayPhongTotNhat(PHIEUTHUE phieuThueMoi, int[][] soDoTinhTrangPhong, int viTriNgay)
+        {
+            int viTriPhong = -1;
+            int max = 0;
+            for (int i = 0; i < soDoTinhTrangPhong.Length; i++)
+            {
+                if (soDoTinhTrangPhong[i][viTriNgay] == phieuThueMoi.SoNgayThue)
+                {
+                    viTriPhong = i;
+                    // thoat vong lap
+                    i = soDoTinhTrangPhong.Length;
+                }
+                else if (soDoTinhTrangPhong[i][viTriNgay] < max && phieuThueMoi.SoNgayThue < soDoTinhTrangPhong[i][viTriNgay])
+                {
+                    max = soDoTinhTrangPhong[i][phieuThueMoi.SoNgayThue - 1];
+                    viTriPhong = i;
+                }
+            }
+            return viTriPhong;
         }
         /// <summary>
         /// Dat phieu thue
@@ -175,22 +189,9 @@ namespace BUS
             try
             {
                 List<PHONG> danhSachLoaiPhong = PHONGDAO.LayDSPhong();
-                int viTriPhongThue = 0;
-                for (int i = 0; i < danhSachLoaiPhong.Count; i++)
-                {
-                    if (danhSachLoaiPhong[i].MaPhong.Substring(0, 1).CompareTo(strLoaiPhong) == 0)
-                    {
-                        viTriPhongThue = i;
-                        i = danhSachLoaiPhong.Count;
-                    }
-                }
+                int viTriPhongThue = LayViTriPhongThue(strLoaiPhong, danhSachLoaiPhong);
                 int phongTotNhat = TimPhongTotNhat(phieuThue, strLoaiPhong, viTriPhongThue);
-                if (phongTotNhat != -1)
-                {
-                    string maPhong = strLoaiPhong + (phongTotNhat + 1).ToString("000");
-                    phieuThue.MaPhong = maPhong;
-                    phongDuocDat = PHIEUTHUEDAO.ThemPhieuThue(phieuThue);
-                }
+                phongDuocDat = DatPhong(phieuThue, strLoaiPhong, phongTotNhat);
                 return phongDuocDat;
             }
             catch (System.Exception ex)
@@ -198,6 +199,51 @@ namespace BUS
                 throw new Exception(ex.Message);
             }
 
+        }
+        /// <summary>
+        /// thực hiện đặt phòng
+        /// </summary>
+        /// <param name="phieuThue"> phiếu thuê đang xét</param>
+        /// <param name="strLoaiPhong"> loại phòng</param>
+        /// <param name="phongTotNhat">vị trí phòng tốt nhất</param>
+        /// <returns>mã phiếu thuê được đặt</returns>
+        private static string DatPhong(PHIEUTHUE phieuThue, string strLoaiPhong, int phongTotNhat)
+        {
+            string phongDuocDat = string.Empty;
+            if (phongTotNhat != -1)
+            {
+                string maPhong = strLoaiPhong + (phongTotNhat + 1).ToString("000");
+                phieuThue.MaPhong = maPhong;
+                try
+                {
+                    phongDuocDat = PHIEUTHUEDAO.ThemPhieuThue(phieuThue);
+                }
+                catch (System.Exception e)
+                {
+                    throw e;
+                }
+               
+            }
+            return phongDuocDat;
+        }
+        /// <summary>
+        /// Lấy vị trí phòng thuê
+        /// </summary>
+        /// <param name="strLoaiPhong">loại phòng</param>
+        /// <param name="danhSachLoaiPhong">danh sách loại phòng</param>
+        /// <returns>vị trí phòng thuê</returns>
+        private static int LayViTriPhongThue(string strLoaiPhong, List<PHONG> danhSachLoaiPhong)
+        {
+            int viTriPhongThue = 0;
+            for (int i = 0; i < danhSachLoaiPhong.Count; i++)
+            {
+                if (danhSachLoaiPhong[i].MaPhong.Substring(0, 1).CompareTo(strLoaiPhong) == 0)
+                {
+                    viTriPhongThue = i;
+                    i = danhSachLoaiPhong.Count;
+                }
+            }
+            return viTriPhongThue;
         }
         /// <summary>
         /// Kiem tra dat phieu thue
@@ -212,24 +258,9 @@ namespace BUS
             try
             {
                 List<PHONG> danhSachLoaiPhong = PHONGDAO.LayDSPhong();
-                int viTriPhongThue = 0;
-                for (int i = 0; i < danhSachLoaiPhong.Count; i++)
-                {
-                    if (danhSachLoaiPhong[i].MaPhong.Substring(0, 1).CompareTo(strLoaiPhong) == 0)
-                    {
-                        viTriPhongThue = i;
-                        i = danhSachLoaiPhong.Count;
-                    }
-                }
+                int viTriPhongThue = LayViTriPhongThue(strLoaiPhong, danhSachLoaiPhong);
                 int phongTotNhat = TimPhongTotNhat(phieuThue, strLoaiPhong, viTriPhongThue);
-                if (phongTotNhat != -1)
-                {
-                    string maPhong = strLoaiPhong + (phongTotNhat + 1).ToString("000");
-                    phieuThue.MaPhong = maPhong;
-                    phongDuocDat = maPhong;
-                    string maPhieuThue = PHIEUTHUEDAO.ThemPhieuThue(phieuThue);
-                    dsMaPhieuThueDuocDat.Add(maPhieuThue);
-                }
+                phongDuocDat = DatPhong(phieuThue, strLoaiPhong, phongTotNhat, ref dsMaPhieuThueDuocDat);
                 return phongDuocDat;
             }
             catch (System.Exception ex)
@@ -237,6 +268,20 @@ namespace BUS
                 throw new Exception(ex.Message);
             }
 
+        }
+
+        private static string DatPhong(PHIEUTHUE phieuThue, string strLoaiPhong, int phongTotNhat, ref List<string> dsMaPhieuThueDuocDat)
+        {
+            string phongDuocDat = string.Empty;
+            if (phongTotNhat != -1)
+            {
+                string maPhong = strLoaiPhong + (phongTotNhat + 1).ToString("000");
+                phieuThue.MaPhong = maPhong;
+                phongDuocDat = maPhong;
+                string maPhieuThue = PHIEUTHUEDAO.ThemPhieuThue(phieuThue);
+                dsMaPhieuThueDuocDat.Add(maPhieuThue);
+            }
+            return phongDuocDat;
         }
         // dieu chinh thuoc tinh dangThue cua danh sach phieu thue
         /// <summary>
@@ -257,27 +302,6 @@ namespace BUS
                 throw new Exception(ex.Message);
             }
 
-        }
-        /// <summary>
-        /// Cap nhat phieu thue da toi uu (can 2 danh sach phieu thue)
-        /// </summary>
-        /// <param name="nguon"></param>
-        /// <param name="dich"></param>
-        private static void CapNhatPhieuThueDaToiUu(List<PHIEUTHUE> nguon, List<PHIEUTHUE> dich)
-        {
-            for (int i = 0; i < nguon.Count; i++)
-            {
-                try
-                {
-                    PHIEUTHUEDAO.XoaPhieuThue(nguon[i]);
-                    PHIEUTHUEDAO.ThemPhieuThue(dich[i]);
-                }
-                catch (System.Exception ex)
-                {
-                    throw new Exception(ex.Message);
-                }
-
-            }
         }
         /// <summary>
         /// Cap nhat phieu the da toi uu 
