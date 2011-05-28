@@ -64,16 +64,6 @@ namespace QLKSTestProject
         //
         #endregion
 
-
-        /// <summary>
-        ///A test for KHACHHANGBUS Constructor
-        ///</summary>
-        [TestMethod()]
-        public void KHACHHANGBUSConstructorTest()
-        {
-            KHACHHANGBUS target = new KHACHHANGBUS();
-        }
-
         /// <summary>
         ///A test for LayDSKhach
         ///</summary>

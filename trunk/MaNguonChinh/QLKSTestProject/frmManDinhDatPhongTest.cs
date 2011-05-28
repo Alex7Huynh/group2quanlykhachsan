@@ -119,55 +119,5 @@ namespace QLKSTestProject
             target.MoveForm(distance);
             
         }
-
-        /// <summary>
-        ///A test for InitializeComponent
-        ///</summary>
-        [TestMethod()]
-        [DeploymentItem("QLKS.exe")]
-        public void InitializeComponentTest()
-        {
-            frmManDinhDatPhong_Accessor target = new frmManDinhDatPhong_Accessor(); // TODO: Initialize to an appropriate value
-            target.InitializeComponent();
-            
-        }
-        
-        /// <summary>
-        ///A test for frmManDinhDatPhong_FormClosing
-        ///</summary>
-        [TestMethod()]
-        [DeploymentItem("QLKS.exe")]
-        public void frmManDinhDatPhong_FormClosingTest()
-        {
-            frmManDinhDatPhong_Accessor target = new frmManDinhDatPhong_Accessor(); // TODO: Initialize to an appropriate value
-            object sender = null; // TODO: Initialize to an appropriate value
-            FormClosingEventArgs e = null; // TODO: Initialize to an appropriate value
-            target.frmManDinhDatPhong_FormClosing(sender, e);
-            
-        }
-
-        /// <summary>
-        ///A test for Dispose
-        ///</summary>
-        [TestMethod()]
-        [DeploymentItem("QLKS.exe")]
-        public void DisposeTest()
-        {
-            frmManDinhDatPhong_Accessor target = new frmManDinhDatPhong_Accessor(); // TODO: Initialize to an appropriate value
-            bool disposing = false; // TODO: Initialize to an appropriate value
-            target.Dispose(disposing);
-            
-        }
-
-        
-
-        /// <summary>
-        ///A test for frmManDinhDatPhong Constructor
-        ///</summary>
-        [TestMethod()]
-        public void frmManDinhDatPhongConstructorTest()
-        {
-            frmManDinhDatPhong target = new frmManDinhDatPhong();
-        }
     }
 }
