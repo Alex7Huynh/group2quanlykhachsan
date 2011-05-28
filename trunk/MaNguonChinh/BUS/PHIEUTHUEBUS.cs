@@ -269,7 +269,14 @@ namespace BUS
             }
 
         }
-
+        /// <summary>
+        /// thực hiện đặt phòng
+        /// </summary>
+        /// <param name="phieuThue"> phiếu thuê đang xét</param>
+        /// <param name="strLoaiPhong"> loại phòng</param>
+        /// <param name="phongTotNhat">vị trí phòng tốt nhất</param>
+        /// <param name="dsMaPhieuThueDuocDat">danh sach các mã phiếu thuê có thể được đặt</param>
+        /// <returns>mã phiếu thuê được đặt</returns>
         private static string DatPhong(PHIEUTHUE phieuThue, string strLoaiPhong, int phongTotNhat, ref List<string> dsMaPhieuThueDuocDat)
         {
             string phongDuocDat = string.Empty;

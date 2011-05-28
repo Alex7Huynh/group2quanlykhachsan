@@ -118,133 +118,182 @@ namespace QLKS
             // lấy khach hang
             KHACHHANG khachHangDaiDien = new KHACHHANG();
             PHIEUTHUE phieuThue = new PHIEUTHUE();
+            NhomDTO nhom = new NhomDTO();
+            int soNguoi = 0;
+            int soNguoiLucDau = 0;
             try
             {
-                try
-                {
-                    khachHangDaiDien.MaKH = KHACHHANGBUS.TuDongLayMaKhachHang();
-                    if (txtTenKhachHang.Text == "")
-                    {
-                        throw new Exception("Chưa nhập tên khách hàng");
-                    }
-                    khachHangDaiDien.HoTen = txtTenKhachHang.Text.Trim();
-                    khachHangDaiDien.DiaChi = txtDiaChi.Text.Trim();
-                    if (txtCMND_PassPort.Text == "")
-                    {
-                        throw new Exception("Chưa nhập CMND/Passport");
-                    }
-                    khachHangDaiDien.SoGiayTo = txtCMND_PassPort.Text.Trim();
-                    khachHangDaiDien.MaLoaiKH = dsLoaiKhach[cmbLoaiKhacHang.SelectedIndex].MaLoaiKH;
-                    phieuThue.NgayThue = dtpNgayThue.Value.Date;
-                }
-                catch
-                {
-                    throw new Exception("Lỗi đọc dự liệu");
-                }
-
+                // lay thong tin khach hang
+                LayThongTinKhachHang(ref khachHangDaiDien);
                 //tao nhom moi
-                NhomDTO nhom = new NhomDTO();
-                int maNhom = NhomBUS.TuDongLayMaNhom();
-
-
-                if (maNhom <= 0)
-                {
-                    throw new Exception("Không lấy mã nhóm được");
-                }
-                nhom.MaNhom = maNhom;
-                nhom.MaKhacHang = khachHangDaiDien.MaKH;
-
+                TaoNhomMoi(khachHangDaiDien, ref nhom);
                 // lay thong tin dat phong
-
-                phieuThue.TenKhachHangDaiDien = khachHangDaiDien.HoTen;
-                phieuThue.MaNhom = nhom.MaNhom;
-                try
-                {
-                    phieuThue.SoNgayThue = int.Parse(txtSoNgay.Text.Trim());
-                }
-                catch (System.Exception ex)
-                {
-                    throw new Exception("Có lỗi ở textbox số ngày");
-                }
-                phieuThue.MaPhong = dsLoaiPhong[cmbLoaiPhong.SelectedIndex].MaLoaiPhong;
-                int soNguoi = 0;
-                try
-                {
-                    soNguoi = int.Parse(txtSoNguoi.Text.Trim());
-                }
-                catch
-                {
-                    throw new Exception("số người không phải là số hoặc quá nhiều");
-                }
-                if (soNguoi < 0)
-                    throw new Exception("số người không được âm");
-                int soNguoiLucDau = soNguoi;
+                LayThongTinDatPhong(khachHangDaiDien, ref phieuThue, nhom, ref soNguoi, ref soNguoiLucDau);
                 if (_keoTha)
                 {
-                    phieuThue.MaPhong = _maPhongDuocDat;
-                    try
-                    {
-                        string phongDuocDat = "";
-                        phongDuocDat = PHIEUTHUEBUS.ThemPhieuThue(phieuThue);
-                        if (phongDuocDat != string.Empty)
-                        {
-                            DialogResult rs = MessageBox.Show("Bạn có muốn đặt phòng " + phieuThue.MaPhong + " không?","Thông Báo", MessageBoxButtons.YesNo);
-                            if(rs == DialogResult.Yes)
-                            {
-                                KHACHHANGBUS.ThemKhachHang(khachHangDaiDien);
-                                NhomBUS.ThemNhom(nhom);
-                                MessageBox.Show("Đặt phòng " + phieuThue.MaPhong + " thành công");
-                            }
-                            else 
-                            {
-                                PHIEUTHUEBUS.XoaPhieuThue(phongDuocDat);
-                            }
-                        }
-                        else
-                            MessageBox.Show("Khong co phong trong trong thoi gian ban muon thue, vui long dat phong vao ngay khac!");
-                    }
-                    catch (System.Exception ex)
-                    {
-                        MessageBox.Show(ex.Message);
-                    }
+                    DatPhongTrucTiep(khachHangDaiDien, phieuThue, nhom);
                 }
                 else
                 {
-                    try
+                    DatPhongCoKiemTra(khachHangDaiDien, phieuThue, nhom, soNguoi, soNguoiLucDau);
+                }
+            }
+            catch (System.Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        /// <summary>
+        /// Lấy thông tin đặt phòng từ form nhập liệu
+        /// </summary>
+        /// <param name="khachHangDaiDien">khách hàng đại diện</param>
+        /// <param name="phieuThue">phiếu thuê</param>
+        /// <param name="nhom">nhóm mới cho phiếu thuê</param>
+        /// <param name="soNguoi">số người thuê</param>
+        /// <param name="soNguoiLucDau">biến tạm giữ giá trị số người</param>
+        private void LayThongTinDatPhong(KHACHHANG khachHangDaiDien, ref PHIEUTHUE phieuThue, NhomDTO nhom, ref int soNguoi, ref int soNguoiLucDau)
+        {
+            phieuThue.TenKhachHangDaiDien = khachHangDaiDien.HoTen;
+            phieuThue.MaNhom = nhom.MaNhom;
+            phieuThue.NgayThue = dtpNgayThue.Value.Date;
+            try
+            {
+                phieuThue.SoNgayThue = int.Parse(txtSoNgay.Text.Trim());
+            }
+            catch (System.Exception ex)
+            {
+                throw new Exception("Có lỗi ở textbox số ngày");
+            }
+            phieuThue.MaPhong = dsLoaiPhong[cmbLoaiPhong.SelectedIndex].MaLoaiPhong;
+            soNguoi = 0;
+            try
+            {
+                soNguoi = int.Parse(txtSoNguoi.Text.Trim());
+            }
+            catch
+            {
+                throw new Exception("số người không phải là số hoặc quá nhiều");
+            }
+            if (soNguoi < 0)
+                throw new Exception("số người không được âm");
+            soNguoiLucDau = soNguoi;
+        }
+        /// <summary>
+        /// tạo nhóm mới cho phiếu thuê mới
+        /// </summary>
+        /// <param name="khachHangDaiDien">khách hàng đại diện</param>
+        /// <param name="nhom">biến giữ thông tin nhóm</param>
+        private static void TaoNhomMoi(KHACHHANG khachHangDaiDien,ref NhomDTO nhom)
+        {
+            int maNhom = NhomBUS.TuDongLayMaNhom();
+            if (maNhom <= 0)
+            {
+                throw new Exception("Không lấy mã nhóm được");
+            }
+            nhom.MaNhom = maNhom;
+            nhom.MaKhacHang = khachHangDaiDien.MaKH;
+        }
+        /// <summary>
+        /// Lấy thông tin khách hàng từ form nhập liệu
+        /// </summary>
+        /// <param name="khachHangDaiDien"> biến giữ thông tin khách hàng </param>
+        private void LayThongTinKhachHang(ref KHACHHANG khachHangDaiDien)
+        {
+            try
+            {
+                khachHangDaiDien.MaKH = KHACHHANGBUS.TuDongLayMaKhachHang();
+                if (txtTenKhachHang.Text == "")
+                {
+                    throw new Exception("Chưa nhập tên khách hàng");
+                }
+                khachHangDaiDien.HoTen = txtTenKhachHang.Text.Trim();
+                khachHangDaiDien.DiaChi = txtDiaChi.Text.Trim();
+                if (txtCMND_PassPort.Text == "")
+                {
+                    throw new Exception("Chưa nhập CMND/Passport");
+                }
+                khachHangDaiDien.SoGiayTo = txtCMND_PassPort.Text.Trim();
+                khachHangDaiDien.MaLoaiKH = dsLoaiKhach[cmbLoaiKhacHang.SelectedIndex].MaLoaiKH;
+            }
+            catch
+            {
+                throw new Exception("Lỗi đọc dự liệu");
+            }
+        }
+        /// <summary>
+        /// Đặt phòng dựa vào sự kiểm tra có phòng trống hay không
+        /// </summary>
+        /// <param name="khachHangDaiDien"> khách hàng đại diện thuê phòng</param>
+        /// <param name="phieuThue">phiếu thuê đang xét</param>
+        /// <param name="nhom"> nhóm mới cho phiếu thuê</param>
+        /// <param name="soNguoi">số người thuê</param>
+        /// <param name="soNguoiLucDau">biến tạm giữ giá trị số người</param>
+        private void DatPhongCoKiemTra(KHACHHANG khachHangDaiDien, PHIEUTHUE phieuThue, NhomDTO nhom, int soNguoi, int soNguoiLucDau)
+        {
+            try
+            {
+                List<string> dsPhieuThueDuocDat = new List<string>();
+                List<string> dsPhongDatDuoc = PHIEUTHUEBUS.KiemTra(phieuThue, ref soNguoi, ref dsPhieuThueDuocDat);
+                DialogResult result;
+                if (dsLoaiPhong.Count > 0)
+                {
+                    if (soNguoi <= 0)
                     {
-                        List<string> dsPhieuThueDuocDat = new List<string>();
-                        List<string> dsPhongDatDuoc = PHIEUTHUEBUS.KiemTra(phieuThue, ref soNguoi, ref dsPhieuThueDuocDat);
-                        DialogResult result;
-                        if (dsLoaiPhong.Count > 0)
-                        {
-                            if (soNguoi <= 0)
-                            {
-                                result = MessageBox.Show("Phiếu thuê có thể được đặt. Bạn có muốn đặt phiếu thuê này không?", "Thông Báo", MessageBoxButtons.YesNo);
-                            }
-                            else if (soNguoi != soNguoiLucDau)
-                            {
-                                result = MessageBox.Show("Phiếu thuê chỉ được đặt cho " + (soNguoiLucDau - soNguoi).ToString() + "người. Xin vui lòng chọn loại phòng khác cho số khách còn lại. Bạn có muốn đặt phiếu thuê này không?", "Thông Báo", MessageBoxButtons.YesNo);
-                            }
-                            else
-                            {
-                                result = MessageBox.Show("Loại phòng " + phieuThue.MaPhong + " không còn phòng trống! Vui lòng chọn loại phòng khác.");
-                            }
-                            if (result == DialogResult.Yes)
-                            {
-                                KHACHHANGBUS.ThemKhachHang(khachHangDaiDien);
-                                NhomBUS.ThemNhom(nhom);
-                            }
-                            else if (result == DialogResult.No)
-                            {
-                                PHIEUTHUEBUS.XoaPhieuThue(dsPhieuThueDuocDat);
-                            }
-                        }
+                        result = MessageBox.Show("Phiếu thuê có thể được đặt. Bạn có muốn đặt phiếu thuê này không?", "Thông Báo", MessageBoxButtons.YesNo);
                     }
-                    catch (System.Exception ex)
+                    else if (soNguoi != soNguoiLucDau)
                     {
-                        throw new Exception(ex.Message);
+                        result = MessageBox.Show("Phiếu thuê chỉ được đặt cho " + (soNguoiLucDau - soNguoi).ToString() + "người. Xin vui lòng chọn loại phòng khác cho số khách còn lại. Bạn có muốn đặt phiếu thuê này không?", "Thông Báo", MessageBoxButtons.YesNo);
+                    }
+                    else
+                    {
+                        result = MessageBox.Show("Loại phòng " + phieuThue.MaPhong + " không còn phòng trống! Vui lòng chọn loại phòng khác.");
+                    }
+                    if (result == DialogResult.Yes)
+                    {
+                        KHACHHANGBUS.ThemKhachHang(khachHangDaiDien);
+                        NhomBUS.ThemNhom(nhom);
+                    }
+                    else if (result == DialogResult.No)
+                    {
+                        PHIEUTHUEBUS.XoaPhieuThue(dsPhieuThueDuocDat);
                     }
                 }
+            }
+            catch (System.Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+        /// <summary>
+        /// dặt phòng trực tiếp 
+        /// </summary>
+        /// <param name="khachHangDaiDien"> khách hàng đại diện thuê phòng</param>
+        /// <param name="phieuThue">phiếu thuê đang xét</param>
+        /// <param name="nhom"> nhóm mới cho phiếu thuê</param>
+        private void DatPhongTrucTiep(KHACHHANG khachHangDaiDien, PHIEUTHUE phieuThue, NhomDTO nhom)
+        {
+            phieuThue.MaPhong = _maPhongDuocDat;
+            try
+            {
+                string phongDuocDat = "";
+                phongDuocDat = PHIEUTHUEBUS.ThemPhieuThue(phieuThue);
+                if (phongDuocDat != string.Empty)
+                {
+                    DialogResult rs = MessageBox.Show("Bạn có muốn đặt phòng " + phieuThue.MaPhong + " không?", "Thông Báo", MessageBoxButtons.YesNo);
+                    if (rs == DialogResult.Yes)
+                    {
+                        KHACHHANGBUS.ThemKhachHang(khachHangDaiDien);
+                        NhomBUS.ThemNhom(nhom);
+                        MessageBox.Show("Đặt phòng " + phieuThue.MaPhong + " thành công");
+                    }
+                    else
+                    {
+                        PHIEUTHUEBUS.XoaPhieuThue(phongDuocDat);
+                    }
+                }
+                else
+                    MessageBox.Show("Khong co phong trong trong thoi gian ban muon thue, vui long dat phong vao ngay khac!");
             }
             catch (System.Exception ex)
             {
