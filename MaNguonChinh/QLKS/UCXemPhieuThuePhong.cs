@@ -590,8 +590,8 @@ namespace QLKS
                         int index = dtgTheHienPhieuThuePhong.CurrentRow.Index;
                         int soPhong = 0;
                         string maPhong = _arrPhong[index].MaPhong;
-                        frmReservation a = new frmReservation(true, maPhong);
-                        a.ShowDialog();
+                        TiepNhanDatPhong a = new TiepNhanDatPhong(true, maPhong);
+                        a.Show();
                     }
 
                 }  
