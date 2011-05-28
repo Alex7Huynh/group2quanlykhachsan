@@ -23,7 +23,7 @@ namespace DAO
             try
             {
                 link = KetNoi();
-                string chuoiLenh = "select * from PHIEUTHUE where PHIEUTHUE.MaPhong=@MaPhong and PHIEUTHUE.DaXoa = 0";
+                string chuoiLenh = "select * from PHIEUTHUE where PHIEUTHUE.MaPhong=@MaPhong";
                 lenh = new OleDbCommand(chuoiLenh, link);
                 thamSo = new OleDbParameter("@MaPhong", OleDbType.LongVarChar);
                 thamSo.Value = phong.MaPhong;
@@ -207,7 +207,7 @@ namespace DAO
         /// </summary>
         /// <param name="phieuThue"></param>
         /// <returns>Tra ve ket qua thanh cong hay that bai</returns>
-        public static bool XoaPhieuThue(PHIEUTHUE phieuThue)
+        public static bool XoaPhieuThue(string maPhieuThue)
         {
             OleDbConnection link = null;
             try
@@ -215,7 +215,7 @@ namespace DAO
                 link = KetNoi();
                 string chuoiLenh;
 
-                chuoiLenh = "Update PHIEUTHUE Set DaXoa = 1 Where MaPhieuThue = '" + phieuThue.MaPhieuThue + "'";
+                chuoiLenh = "Delete From PHIEUTHUE Where MaPhieuThue = '" + maPhieuThue + "'";
                 OleDbCommand lenh = new OleDbCommand(chuoiLenh, link);
 
 
@@ -254,7 +254,7 @@ namespace DAO
                 string chuoiLenh;
                 for (int i = 0; i < dsMaPhieuThue.Count; i++)
                 {
-                    chuoiLenh = "Update PHIEUTHUE Set DaXoa = 1 Where MaPhieuThue = '" + dsMaPhieuThue[i] + "'";
+                    chuoiLenh = "Delete From PHIEUTHUE Where MaPhieuThue = '" + dsMaPhieuThue[i] + "'";
                     OleDbCommand lenh = new OleDbCommand(chuoiLenh, link);
 
 
@@ -335,7 +335,7 @@ namespace DAO
             try
             {
                 link = KetNoi();
-                string chuoiLenh = "select * from PHIEUTHUE Where MaPhong like @LoaiPhong and DaXoa = 0 and DangThue = true";
+                string chuoiLenh = "select * from PHIEUTHUE Where MaPhong like @LoaiPhong and DaXoa = 0";
                 lenh = new OleDbCommand(chuoiLenh, link);
                 thamSo = new OleDbParameter("@LoaiPhong", OleDbType.LongVarChar);
                 thamSo.Value = strLoaiPhong + "%";
@@ -785,7 +785,7 @@ namespace DAO
             try
             {
                 link = KetNoi();
-                string chuoiLenh = "select pt.MaPhieuThue,pt.MaPhong, pt.NgayThue, pt.SoNgayThue, pt.TenKhachHangDaiDien, pt.DangThue, pt.DaThanhToan from PHIEUTHUE pt  where pt.MaPhieuThue like '" + _maphieuthue + "'";
+                string chuoiLenh = "select pt.MaPhieuThue,pt.MaPhong, pt.NgayThue, pt.SoNgayThue, pt.TenKhachHangDaiDien from PHIEUTHUE pt  where pt.MaPhieuThue like '" + _maphieuthue + "'";
                 lenh = new OleDbCommand(chuoiLenh, link);
                 OleDbDataReader Doc = lenh.ExecuteReader();
                 while (Doc.Read())
@@ -796,8 +796,6 @@ namespace DAO
                     phieu.NgayThue = Doc.GetDateTime(2);
                     phieu.SoNgayThue = int.Parse(Doc.GetValue(3).ToString());
                     phieu.TenKhachHangDaiDien = Doc.GetString(4);
-                    phieu.DangThue = Doc.GetBoolean(5);
-                    phieu.DaThanhToan = Doc.GetBoolean(6);
                     dsPhieu.Add(phieu);
                 }
             }
