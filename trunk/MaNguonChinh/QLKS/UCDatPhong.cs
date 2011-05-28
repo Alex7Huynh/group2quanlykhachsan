@@ -143,23 +143,20 @@ namespace QLKS
 
         private void btnReservation_Click(object sender, EventArgs e)
         {
-            Form frm = new frmReservation(false, "");
-            frm.ShowDialog();
-            UpdateDanhSachPhong();
+            Form frm = new TiepNhanDatPhong(false, "");
+            frm.ShowDialog();            
         }
 
         private void btnCheckIn_Click(object sender, EventArgs e)
         {
             frmCheckin frm = new frmCheckin();
             frm.ShowDialog();
-            UpdateDanhSachPhong();
         }
 
         private void btnCheckOut_Click(object sender, EventArgs e)
         {
             frmCheckOut frm = new frmCheckOut();
             frm.ShowDialog();
-            UpdateDanhSachPhong();
         }
 
         private void btnPreviousLoaiPhong_MouseLeave(object sender, EventArgs e)
