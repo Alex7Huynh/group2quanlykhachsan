@@ -203,6 +203,11 @@ namespace QLKS
             txtTongTien.Text = tongtien.ToString();
         }
 
+        /// <summary>
+        /// Hàm xử lý sự kiện MouseEnter của nút Tìm
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnTim_MouseEnter(object sender, EventArgs e)
         {
             Button button_temp = (Button)sender;
@@ -211,6 +216,11 @@ namespace QLKS
             button_temp.Image = Properties.Resources.ButtonSearchFocus;
         }
 
+        /// <summary>
+        /// Hàm xử lý sự kiện MouseLeave của nút Tìm
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnTim_MouseLeave(object sender, EventArgs e)
         {
             Button button_temp = (Button)sender;
@@ -219,6 +229,11 @@ namespace QLKS
             button_temp.Image = null;
         }
 
+        /// <summary>
+        /// Hàm xử lý sự kiện MouseEnter của nút Trả phòng
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnTraPhong_MouseEnter(object sender, EventArgs e)
         {
             Button button_temp = (Button)sender;
@@ -227,6 +242,11 @@ namespace QLKS
             button_temp.Image = Properties.Resources.ButtonTraPhongFocus;
         }
 
+        /// <summary>
+        /// Hàm xử lý sự kiện MouseEnter của nút Thoát
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnThoat_MouseEnter(object sender, EventArgs e)
         {
             Button button_temp = (Button)sender;
