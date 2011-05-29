@@ -1,5 +1,0 @@
-E:\tanbinh\HK2_10-11\XDPM\DA\group2quanlykhachsan\MaNguonDoAn\DTO\bin\Debug\DTO.dll
-E:\tanbinh\HK2_10-11\XDPM\DA\group2quanlykhachsan\MaNguonDoAn\DTO\bin\Debug\DTO.pdb
-E:\tanbinh\HK2_10-11\XDPM\DA\group2quanlykhachsan\MaNguonDoAn\DTO\obj\Debug\ResolveAssemblyReference.cache
-E:\tanbinh\HK2_10-11\XDPM\DA\group2quanlykhachsan\MaNguonDoAn\DTO\obj\Debug\DTO.dll
-E:\tanbinh\HK2_10-11\XDPM\DA\group2quanlykhachsan\MaNguonDoAn\DTO\obj\Debug\DTO.pdb
