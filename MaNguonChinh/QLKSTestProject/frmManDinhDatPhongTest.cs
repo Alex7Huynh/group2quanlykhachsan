@@ -72,7 +72,7 @@ namespace QLKSTestProject
         [TestMethod()]
         public void StartPointTest()
         {
-            frmManDinhDatPhong target = new frmManDinhDatPhong(); // TODO: Initialize to an appropriate value
+            frmManHinhDatPhong target = new frmManHinhDatPhong(); // TODO: Initialize to an appropriate value
             Point expected = new Point(); // TODO: Initialize to an appropriate value
             Point actual;
             target.StartPoint = expected;
@@ -87,7 +87,7 @@ namespace QLKSTestProject
         [DeploymentItem("QLKS.exe")]
         public void PB_MainMenu_MouseMoveTest()
         {
-            frmManDinhDatPhong_Accessor target = new frmManDinhDatPhong_Accessor(); // TODO: Initialize to an appropriate value
+            frmManHinhDatPhong_Accessor target = new frmManHinhDatPhong_Accessor(); // TODO: Initialize to an appropriate value
             object sender = null; // TODO: Initialize to an appropriate value
             MouseEventArgs e = null; // TODO: Initialize to an appropriate value
             target.PB_MainMenu_MouseMove(sender, e);
@@ -101,7 +101,7 @@ namespace QLKSTestProject
         [DeploymentItem("QLKS.exe")]
         public void PB_MainMenu_MouseDownTest()
         {
-            frmManDinhDatPhong_Accessor target = new frmManDinhDatPhong_Accessor(); // TODO: Initialize to an appropriate value
+            frmManHinhDatPhong_Accessor target = new frmManHinhDatPhong_Accessor(); // TODO: Initialize to an appropriate value
             object sender = null; // TODO: Initialize to an appropriate value
             MouseEventArgs e = null; // TODO: Initialize to an appropriate value
             target.PB_MainMenu_MouseDown(sender, e);
@@ -114,7 +114,7 @@ namespace QLKSTestProject
         [TestMethod()]
         public void MoveFormTest()
         {
-            frmManDinhDatPhong target = new frmManDinhDatPhong(); // TODO: Initialize to an appropriate value
+            frmManHinhDatPhong target = new frmManHinhDatPhong(); // TODO: Initialize to an appropriate value
             Point distance = new Point(); // TODO: Initialize to an appropriate value
             target.MoveForm(distance);
             

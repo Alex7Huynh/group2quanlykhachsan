@@ -103,7 +103,7 @@ namespace QLKS
 
         private void PB_DatPhong_Click(object sender, EventArgs e)
         {
-            frmManDinhDatPhong frmDatPhong = new frmManDinhDatPhong();
+            frmManHinhDatPhong frmDatPhong = new frmManHinhDatPhong();
             frmDatPhong.Show();
 
             frmDatPhong.Location = Location;

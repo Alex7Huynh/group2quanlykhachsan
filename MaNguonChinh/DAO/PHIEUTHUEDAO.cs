@@ -23,7 +23,7 @@ namespace DAO
             try
             {
                 link = KetNoi();
-                string chuoiLenh = "select * from PHIEUTHUE where PHIEUTHUE.MaPhong=@MaPhong";
+                string chuoiLenh = "select * from PHIEUTHUE where PHIEUTHUE.MaPhong=@MaPhong and PHIEUTHUE.DaXoa = 0";
                 lenh = new OleDbCommand(chuoiLenh, link);
                 thamSo = new OleDbParameter("@MaPhong", OleDbType.LongVarChar);
                 thamSo.Value = phong.MaPhong;
@@ -335,7 +335,7 @@ namespace DAO
             try
             {
                 link = KetNoi();
-                string chuoiLenh = "select * from PHIEUTHUE Where MaPhong like @LoaiPhong and DaXoa = 0";
+                string chuoiLenh = "select * from PHIEUTHUE Where MaPhong like @LoaiPhong and DaXoa = 0 and DangThue = true";
                 lenh = new OleDbCommand(chuoiLenh, link);
                 thamSo = new OleDbParameter("@LoaiPhong", OleDbType.LongVarChar);
                 thamSo.Value = strLoaiPhong + "%";
