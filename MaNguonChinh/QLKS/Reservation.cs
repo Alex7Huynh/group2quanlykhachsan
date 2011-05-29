@@ -252,6 +252,11 @@ namespace QLKS
             }
         }
 
+        /// <summary>
+        /// Hàm xử lý sự kiện MouseLeave của nút Xác nhận
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnOk_MouseLeave(object sender, EventArgs e)
         {
             Button button_temp = (Button)sender;
@@ -260,6 +265,11 @@ namespace QLKS
             button_temp.Image = null;
         }
 
+        /// <summary>
+        /// Hàm xử lý sự kiện MouseEnter của nút Xác nhận
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnOk_MouseEnter(object sender, EventArgs e)
         {
             Button button_temp = (Button)sender;
@@ -268,6 +278,11 @@ namespace QLKS
             button_temp.Image = Properties.Resources.ButtonXacNhanFocus;
         }
 
+        /// <summary>
+        /// Hàm xử lý sự kiện MouseEnter của nút Quay lại
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnCancel_MouseEnter(object sender, EventArgs e)
         {
             Button button_temp = (Button)sender;
