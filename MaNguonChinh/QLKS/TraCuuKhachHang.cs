@@ -25,12 +25,10 @@ namespace QLKS
     /// </summary>
     public partial class TraCuuKhachHang : Form
     {
-        // Dành cho di chuyển
-        Point startPoint = new Point();
-
         /// <summary>
-        /// Dành cho di chuyển
+        /// Điểm bắt được khi có sự kiện MousePressed
         /// </summary>
+        Point startPoint = new Point();
         public Point StartPoint
         {
             get { return startPoint; }
@@ -38,22 +36,22 @@ namespace QLKS
         }
 
         /// <summary>
-        /// Tham chiếu đến Form Cha (MainMenu)
+        /// Lưu lại form gọi hiển thị màn hình này
         /// </summary>
         public Form ParentForm;
 
         /// <summary>
-        /// Hàm di chuyển menu
+        /// Hàm xử lý sự kiện MouseDown để lấy điểm bắt đầu di chuyển màn hình
         /// </summary>
-        /// <param name="sender">đối tượng gọi</param>
-        /// <param name="e">Tham số chuột</param>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void PB_MainMenu_MouseDown(object sender, MouseEventArgs e)
         {
             StartPoint = new Point(e.X, e.Y);
         }
 
         /// <summary>
-        /// Di chuyển form
+        /// Hàm di chuyển màn hình
         /// </summary>
         /// <param name="distance">khoảng cách cần di chuyển</param>
         public void MoveForm(Point distance)
@@ -61,6 +59,11 @@ namespace QLKS
             this.Location = new Point(this.Location.X + distance.X, this.Location.Y + distance.Y);
         }
 
+        /// <summary>
+        /// Hàm xử lý sự kiện MouseMove để cập nhật vị trí màn hình
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void PB_MainMenu_MouseMove(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
@@ -285,8 +288,11 @@ namespace QLKS
             }
         }
 
+        
+        // 0812604 - giao dien
+
         /// <summary>
-        /// 0812604 - giao dien
+        /// Hàm xử lý sự kiện Paint của gridview Thông tin khách hàng
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -307,19 +313,29 @@ namespace QLKS
             }
         }
         
+        /// <summary>
+        /// Hàm xử lý sự kiện FormClosing của màn hình
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void TraCuuPhong_FormClosing(object sender, FormClosingEventArgs e)
         {
             ParentForm.Visible = true;
             ParentForm.Location = this.Location;
         }
 
+        /// <summary>
+        /// Hàm xử lý sự kiện click của nút Thoát
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BT_Thoat_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
         /// <summary>
-        /// Thu nhỏ form Tra Cứu Khách Hàng
+        /// Hàm xử lý sự kiện click của nút Thu nhỏ
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -329,7 +345,7 @@ namespace QLKS
         }
 
         /// <summary>
-        /// Thoát khỏi giao diện Tra Cứu Khách Hàng
+        /// Hàm xử lý sự kiện click của nút Quay lại
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -338,6 +354,11 @@ namespace QLKS
             this.Close();
         }
 
+        /// <summary>
+        /// Hàm xử lý sự kiện MouseLeave của nút Thoát
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BT_Thoat_MouseLeave(object sender, EventArgs e)
         {
             Button button_temp = (Button)sender;
@@ -346,6 +367,11 @@ namespace QLKS
             button_temp.Image = null;
         }
 
+        /// <summary>
+        /// Hàm xử lý sự kiện MouseEnter của nút Thoát
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BT_Thoat_MouseEnter(object sender, EventArgs e)
         {
             Button button_temp = (Button)sender;
@@ -354,6 +380,11 @@ namespace QLKS
             button_temp.Image = Properties.Resources.ButtonExitFocus;
         }
 
+        /// <summary>
+        /// Hàm xử lý sự kiện MouseEnter của nút Thu nhỏ
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BT_ThuNho_MouseEnter(object sender, EventArgs e)
         {
             Button button_temp = (Button)sender;
@@ -362,6 +393,11 @@ namespace QLKS
             button_temp.Image = Properties.Resources.ButtonMinimizeFocus;
         }
 
+        /// <summary>
+        /// Hàm xử lý sự kiện MouseEnter của nút Tra cứu
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnTraCuu_MouseEnter(object sender, EventArgs e)
         {
             Button button_temp = (Button)sender;
@@ -370,6 +406,11 @@ namespace QLKS
             button_temp.Image = Properties.Resources.ButtonSearchFocus;
         }
 
+        /// <summary>
+        /// Hàm xử lý sự kiện MouseEnter của nút Quay lại
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnQuayLai_MouseEnter(object sender, EventArgs e)
         {
             Button button_temp = (Button)sender;
