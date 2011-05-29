@@ -49,8 +49,6 @@
             this.BT_ThuNho.UseVisualStyleBackColor = false;
             this.BT_ThuNho.MouseLeave += new System.EventHandler(this.BT_Thoat_MouseLeave);
             this.BT_ThuNho.Click += new System.EventHandler(this.BT_ThuNho_Click);
-            this.BT_ThuNho.Leave += new System.EventHandler(this.BT_ThuNho_Leave);
-            this.BT_ThuNho.Enter += new System.EventHandler(this.BT_ThuNho_Enter);
             this.BT_ThuNho.MouseEnter += new System.EventHandler(this.BT_ThuNho_MouseEnter);
             // 
             // BT_Thoat
@@ -68,8 +66,6 @@
             this.BT_Thoat.UseVisualStyleBackColor = false;
             this.BT_Thoat.MouseLeave += new System.EventHandler(this.BT_Thoat_MouseLeave);
             this.BT_Thoat.Click += new System.EventHandler(this.BT_Thoat_Click);
-            this.BT_Thoat.Leave += new System.EventHandler(this.BT_Thoat_Leave);
-            this.BT_Thoat.Enter += new System.EventHandler(this.BT_ThuNho_Enter);
             this.BT_Thoat.MouseEnter += new System.EventHandler(this.BT_Thoat_MouseEnter);
             // 
             // ucDatPhong1
@@ -78,7 +74,6 @@
             this.ucDatPhong1.Name = "ucDatPhong1";
             this.ucDatPhong1.Size = new System.Drawing.Size(1024, 768);
             this.ucDatPhong1.TabIndex = 1;
-            this.ucDatPhong1.Load += new System.EventHandler(this.ucDatPhong1_Load_1);
             // 
             // frmManDinhDatPhong
             // 
