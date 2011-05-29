@@ -519,6 +519,10 @@ namespace QLKS
         }
 
         #region Goi Ham To Mau 0812604
+
+        /// <summary>
+        /// 
+        /// </summary>
         List<int> dsMauTo = new List<int>();
 
         private void UpdateMau()
@@ -663,17 +667,12 @@ namespace QLKS
         #endregion       
 
         /// <summary>
-        /// 0812604-hien thi tooltip cho cell
+        /// Hiển thị tooltip cho cell khi xảy ra sự kiện MouseEnter
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void dtgTheHienPhieuThuePhong_CellMouseEnter(object sender, DataGridViewCellEventArgs e)
         {
-            //dtgTheHienPhieuThuePhong[e.ColumnIndex, e.RowIndex].ToolTipText = "aaaa";
-            //TTip_MaPhieuThue.Show(e.ColumnIndex.ToString() + "-" + e.RowIndex.ToString(), dtgTheHienPhieuThuePhong);
-            //TTip_MaPhieuThue.SetToolTip(dtgTheHienPhieuThuePhong, "mmm");
-            //MessageBox.Show(e.ColumnIndex.ToString() + "-" + e.RowIndex.ToString());
-
             Point mousePos = PointToClient(MousePosition);
             String tip = "";
             
@@ -685,6 +684,11 @@ namespace QLKS
                 }
         }
 
+        /// <summary>
+        /// Vẽ lại tooltip
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void TTip_MaPhieuThue_Draw(object sender, DrawToolTipEventArgs e)
         {
             e.Graphics.FillRectangle(Brushes.Black, e.Bounds);
@@ -692,6 +696,11 @@ namespace QLKS
             e.Graphics.DrawString(TTip_MaPhieuThue.ToolTipTitle + "\n " + e.ToolTipText, new Font("Consolas", 10, FontStyle.Bold), Brushes.White, e.Bounds);
         }
 
+        /// <summary>
+        /// Ẩn tooltip khi xảy ra sự kiện MouseLeave
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void dtgTheHienPhieuThuePhong_CellMouseLeave(object sender, DataGridViewCellEventArgs e)
         {
             TTip_MaPhieuThue.Hide(dtgTheHienPhieuThuePhong);
@@ -716,10 +725,14 @@ namespace QLKS
 
     #region class Dinh (0812604)
     /// <summary>
-    /// 0812604
+    /// Lớp đỉnh giành cho thao tác tô màu
+    /// Mỗi đỉnh được xem như một phiếu thuê
     /// </summary>
     class Dinh
     {
+        /// <summary>
+        /// Chỉ số tạm - dùng chung
+        /// </summary>
         int index = 0;
         public int Index
         {
@@ -727,75 +740,77 @@ namespace QLKS
             set { index = value; }
         }
 
+        /// <summary>
+        /// Bậc của đỉnh
+        /// </summary>
         int _bac = 0;
-
         public int Bac
         {
             get { return _bac; }
             set { _bac = value; }
         }
 
+        /// <summary>
+        /// Chỉ số màu
+        /// </summary>
         int _color = 0;
-
         public int Color
         {
             get { return _color; }
             set { _color = value; }
         }
 
-        // danh sách màu
+        /// <summary>
+        /// Danh sách màu
+        /// </summary>
         List<int> dsMau = new List<int>();
-
         public List<int> DsMau
         {
             get { return dsMau; }
             set { dsMau = value; }
         }
 
-        //danh sách đỉnh
+        /// <summary>
+        /// Danh sách đỉnh
+        /// </summary>
         List<Dinh> dsDinh = new List<Dinh>();
-
         internal List<Dinh> DsDinh
         {
             get { return dsDinh; }
             set { dsDinh = value; }
         }
 
-        // danh sách đỉnh kể của từng đỉnh
+        /// <summary>
+        /// Danh sách đỉnh kề của từng đỉnh
+        /// </summary>
         List<List<Dinh>> dsDinhKe = new List<List<Dinh>>();
-
         internal List<List<Dinh>> DsDinhKe
         {
             get { return dsDinhKe; }
             set { dsDinhKe = value; }
         }
 
+        /// <summary>
+        /// Tô màu - tức là gán chỉ số màu cho các phiếu sao cho các phiếu liền kề không cùng màu
+        /// </summary>
+        /// <param name="dsDinh"></param>
         public void ToMau(List<Dinh> dsDinh)
+        {
+            // sắp xếp các đỉnh theo thứ tự giảm dần của bậc
+            // đồng thời sắp lại mảng danh sách kề
+            SapXepDinh();            
+
+            // tô màu
+            XuLyToMau();            
+        }
+
+        /// <summary>
+        /// Xử lý tô màu
+        /// </summary>
+        private void XuLyToMau()
         {
             int i = 0;
             int j = 0;
-
-            // sắp xếp các đỉnh theo thứ tự giảm dần của bậc
-            // đồng thời sắp lại mảng danh sách kề
-            for (i = 0; i < dsDinh.Count - 1; i++)
-                for (j = i + 1; j < dsDinh.Count; j++)
-                {
-                    if (dsDinh[i]._bac < dsDinh[j]._bac)
-                    {
-                        Dinh temp = new Dinh();
-                        temp = dsDinh[i];
-                        dsDinh[i] = dsDinh[j];
-                        dsDinh[j] = temp;
-
-                        List<Dinh> dinh_temp = new List<Dinh>();
-                        dinh_temp = dsDinhKe[i];
-                        dsDinhKe[i] = dsDinhKe[j];
-                        dsDinhKe[j] = dinh_temp;
-                    }
-                }
-
-            // tô màu
-            i = 0;
             int k = 0;
             bool condinh = true; // còn đỉnh chưa tô màu
             int color = 1;       // màu đầu tiên để tô
@@ -804,46 +819,18 @@ namespace QLKS
             {
                 if (dsDinhKe.Count != 0)
                 {
-                    //neu khong co dinh ke nao thi danh mau tu do
+                    // nếu không có đỉnh kề nào thì tô màu tự do
                     if (dsDinhKe[k].Count == 0)
                     {
                         dsDinh[i]._color = color;
 
-                        // cap nhat mau trong danh sach cac dinh ke
-                        for (int m = 0; m < dsDinhKe.Count; m++)
-                        {
-                            for (int n = 0; n < dsDinhKe[m].Count; n++)
-                            {
-                                if (dsDinhKe[m][n].index == dsDinh[i].index)
-                                    dsDinhKe[m][n]._color = color;
-                            }
-                        }
+                        // cập nhật màu trong danh sách đỉnh kề
+                        CapNhatMau(i, color);                        
                     }
 
                     else
                     {
-                        for (j = 0; j < dsDinhKe[k].Count; j++)
-                        {
-                            if (dsDinhKe[k][j]._color == color)
-                            {
-                                j = -1;
-                                color++;
-                            }
-                            else if (j == dsDinhKe[k].Count - 1)
-                            {
-                                dsDinh[i]._color = color;
-
-                                // cap nhat mau trong danh sach cac dinh ke
-                                for (int m = 0; m < dsDinhKe.Count; m++)
-                                {
-                                    for (int n = 0; n < dsDinhKe[m].Count; n++)
-                                    {
-                                        if (dsDinhKe[m][n].index == dsDinh[i].index)
-                                            dsDinhKe[m][n]._color = color;
-                                    }
-                                }
-                            }
-                        }
+                        XuLyToMauCoDinhKe(j, k, color, i);                        
                     }
                     k++;
                     if (k == dsDinhKe.Count)
@@ -866,7 +853,77 @@ namespace QLKS
             }
         }
 
-        // tạo danh sách đỉnh từ danh sách các thẻ thuê phòng
+        /// <summary>
+        /// Xử lý tô màu đối với đỉnh có đỉnh kề
+        /// </summary>
+        /// <param name="j"></param>
+        /// <param name="k"></param>
+        /// <param name="color"></param>
+        /// <param name="i"></param>
+        private void XuLyToMauCoDinhKe(int j, int k, int color, int i)
+        {
+            for (j = 0; j < dsDinhKe[k].Count; j++)
+            {
+                if (dsDinhKe[k][j]._color == color)
+                {
+                    j = -1;
+                    color++;
+                }
+                else if (j == dsDinhKe[k].Count - 1)
+                {
+                    dsDinh[i]._color = color;
+
+                    // cập nhật màu trong danh sách đỉnh kề
+                    CapNhatMau(i, color);
+                }
+            }
+        }
+
+        /// <summary>
+        /// Cập nhật lại danh sách màu
+        /// </summary>
+        /// <param name="i"></param>
+        /// <param name="color"></param>
+        private void CapNhatMau(int i,int color)
+        {
+            for (int m = 0; m < dsDinhKe.Count; m++)
+            {
+                for (int n = 0; n < dsDinhKe[m].Count; n++)
+                {
+                    if (dsDinhKe[m][n].index == dsDinh[i].index)
+                        dsDinhKe[m][n]._color = color;
+                }
+            }
+        }
+
+        /// <summary>
+        /// Sắp xếp các đỉnh theo thứ tự giảm dần của bậc
+        /// Đồng thời sắp lại mảng danh sách kề
+        /// </summary>
+        private void SapXepDinh()
+        {
+            for (int i = 0; i < dsDinh.Count - 1; i++)
+                for (int j = i + 1; j < dsDinh.Count; j++)
+                {
+                    if (dsDinh[i]._bac < dsDinh[j]._bac)
+                    {
+                        Dinh temp = new Dinh();
+                        temp = dsDinh[i];
+                        dsDinh[i] = dsDinh[j];
+                        dsDinh[j] = temp;
+
+                        List<Dinh> dinh_temp = new List<Dinh>();
+                        dinh_temp = dsDinhKe[i];
+                        dsDinhKe[i] = dsDinhKe[j];
+                        dsDinhKe[j] = dinh_temp;
+                    }
+                }
+        }
+
+        /// <summary>
+        /// Tạo danh sách đỉnh từ danh sách các phiếu thuê phòng
+        /// </summary>
+        /// <param name="dsPhieu"></param>
         public void TaoDSDinh(List<PHIEUTHUE> dsPhieu)
         {
             for (int i = 0; i < dsPhieu.Count; i++)
@@ -878,7 +935,10 @@ namespace QLKS
             }
         }
 
-        // tính bậc cho đỉnh - phiếu thuê phòng
+        /// <summary>
+        /// Tính bậc cho đỉnh - tức là phiếu thuê phòng
+        /// </summary>
+        /// <param name="dsPhieu"></param>
         public void TinhBac(List<PHIEUTHUE> dsPhieu)
         {
             for (int i = 0; i < dsPhieu.Count - 1; i++)
@@ -892,7 +952,12 @@ namespace QLKS
                 }
         }
 
-        // xem phiếu này có liền kề phiếu kia hay không
+        /// <summary>
+        /// Xem phiếu này có liển kề với phiếu kia hay không
+        /// </summary>
+        /// <param name="phieu1"></param>
+        /// <param name="phieu2"></param>
+        /// <returns></returns>
         public bool LaLienKe(PHIEUTHUE phieu1, PHIEUTHUE phieu2)
         {
             string lastchar1 = phieu1.MaPhong.Substring(phieu1.MaPhong.Length - 3);
@@ -927,7 +992,10 @@ namespace QLKS
             return false;
         }
 
-        // tạo danh sách các đỉnh kề cho từng đỉnh
+        /// <summary>
+        /// Tạo danh sách các đỉnh kể cho từng đỉnh
+        /// </summary>
+        /// <param name="dsPhieu"></param>
         public void TaoDSDinhKe(List<PHIEUTHUE> dsPhieu)
         {
             for (int i = 0; i < dsPhieu.Count; i++)
@@ -945,10 +1013,13 @@ namespace QLKS
                 dsDinhKe.Add(dsTemp);
             }
         }
-
-        // tính màu dựa vào thông số _color của đỉnh
-        // hàm này làm luôn tất cả các bước để cho ra mảng màu cuối cùng
-
+        
+        /// <summary>
+        /// Tính màu dựa vào thông số _color của đỉnh
+        /// Hàm này làm luôn tất cả các bước để cho ra mảng màu cuối cùng
+        /// </summary>
+        /// <param name="dsPhieu"></param>
+        /// <returns></returns>
         public List<int> TinhMau(List<PHIEUTHUE> dsPhieu)
         {
             TaoDSDinh(dsPhieu);
@@ -956,7 +1027,7 @@ namespace QLKS
             TaoDSDinhKe(dsPhieu);
             ToMau(dsDinh);
 
-            // mảng lưu tạm màu (int) của các đỉnh
+            // mảng lưu tạm màu (int) của các đỉnh    
             List<int> dsTemp = new List<int>();
 
             for (int i = 0; i < dsDinh.Count; i++)
@@ -989,7 +1060,7 @@ namespace QLKS
             }
             dsMau.Add(0);
 
-            // sap xep lai dsMau theo index ban dau, luc chua sap xep theo bac
+            // sắp xếp lại dsMau theo index ban đầu, lúc chưa sắp xếp theo bậc
             for (int i = 0; i < dsDinh.Count; i++)
             {
                 int color = 0;
