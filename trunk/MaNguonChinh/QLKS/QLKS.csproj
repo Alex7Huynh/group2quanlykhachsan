@@ -103,11 +103,11 @@
     <Compile Include="MainMenu.designer.cs">
       <DependentUpon>MainMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="ManDinhDatPhong.cs">
+    <Compile Include="ManHinhDatPhong.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ManDinhDatPhong.Designer.cs">
-      <DependentUpon>ManDinhDatPhong.cs</DependentUpon>
+    <Compile Include="ManHinhDatPhong.Designer.cs">
+      <DependentUpon>ManHinhDatPhong.cs</DependentUpon>
     </Compile>
     <Compile Include="ManHinhBaoCaoDoanhThu.cs">
       <SubType>Form</SubType>
@@ -129,8 +129,8 @@
       <DependentUpon>MainMenu.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="ManDinhDatPhong.resx">
-      <DependentUpon>ManDinhDatPhong.cs</DependentUpon>
+    <EmbeddedResource Include="ManHinhDatPhong.resx">
+      <DependentUpon>ManHinhDatPhong.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="ManHinhBaoCaoDoanhThu.resx">
