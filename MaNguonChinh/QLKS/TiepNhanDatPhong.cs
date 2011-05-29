@@ -42,11 +42,8 @@ namespace QLKS
 
         private void frmManDinhDatPhong_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (ParentForm != null)
-            {
-                ParentForm.Visible = true;
-                ParentForm.Location = this.Location;
-            }
+            ParentForm.Visible = true;
+            ParentForm.Location = this.Location;
         }
 
         List<LOAIPHONG> dsLoaiPhong = new List<LOAIPHONG>();
@@ -73,36 +70,56 @@ namespace QLKS
             //load danh sach loai phong
             try
             {
-                dsLoaiPhong = PHONGBUS.LayDSLoaiPhong();
-                List<string> str_dsLoaiPhong = new List<string>();
-                for (int i = 0; i < dsLoaiPhong.Count; i++)
-                {
-                    str_dsLoaiPhong.Add(dsLoaiPhong[i].TenLoaiPhong);
-                }
-                cmbLoaiPhong.DataSource = str_dsLoaiPhong;
-                //load danh sach loai khach hang
-                dsLoaiKhach = LOAIKHACHBUS.layDSLoaiKhach();
-                List<string> str_dsLoaiKhacHang = new List<string>();
-                for (int i = 0; i < dsLoaiKhach.Count; i++)
-                {
-                    str_dsLoaiKhacHang.Add(dsLoaiKhach[i].TenLoaiKH);
-                }
-                cmbLoaiKhacHang.DataSource = str_dsLoaiKhacHang;
                 txtSoNgay.Text = "1";
-                if (_keoTha)
-                {
-                    LOAIPHONG a = UCDatPhong.ArrLoaiPhong[UCDatPhong.CurrentLoaiPhong];
-                    cmbLoaiPhong.Text = a.MaLoaiPhong;
-                    dtpNgayThue.Value = UCXemPhieuThuePhong.Ngaythue;
-                    int soNgayThue = UCXemPhieuThuePhong.Kethuc.DayOfYear - UCXemPhieuThuePhong.Ngaythue.DayOfYear;
-                    txtSoNgay.Text = (soNgayThue+1).ToString();
-                }
+                KhoiTaoDanhSachLoaiPhong();
+                KhoiTaoDanhSachLoaiKhachHang();
+                NhapLieuKhiKeoTha();
                 TinhNgayTraPhong();
             }
             catch (System.Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+        /// <summary>
+        /// nhập liệu cho các dữ liệu form khi đặt phòng từ sơ đồ phiếu thuê
+        /// </summary>
+        private void NhapLieuKhiKeoTha()
+        {
+            if (_keoTha)
+            {
+                LOAIPHONG a = UCDatPhong.ArrLoaiPhong[UCDatPhong.CurrentLoaiPhong];
+                cmbLoaiPhong.Text = a.MaLoaiPhong;
+                dtpNgayThue.Value = UCXemPhieuThuePhong.Ngaythue;
+                int soNgayThue = UCXemPhieuThuePhong.Kethuc.DayOfYear - UCXemPhieuThuePhong.Ngaythue.DayOfYear;
+                txtSoNgay.Text = (soNgayThue + 1).ToString();
+            }
+        }
+        /// <summary>
+        /// Khởi tạo danh sách loại khách hàng cho combobox loại khách hàng
+        /// </summary>
+        private void KhoiTaoDanhSachLoaiKhachHang()
+        {
+            dsLoaiKhach = LOAIKHACHBUS.layDSLoaiKhach();
+            List<string> str_dsLoaiKhacHang = new List<string>();
+            for (int i = 0; i < dsLoaiKhach.Count; i++)
+            {
+                str_dsLoaiKhacHang.Add(dsLoaiKhach[i].TenLoaiKH);
+            }
+            cmbLoaiKhacHang.DataSource = str_dsLoaiKhacHang;
+        }
+        /// <summary>
+        /// Khởi tạo danh sách loại phòng cho combobox loại phòng
+        /// </summary>
+        private void KhoiTaoDanhSachLoaiPhong()
+        {
+            dsLoaiPhong = PHONGBUS.LayDSLoaiPhong();
+            List<string> str_dsLoaiPhong = new List<string>();
+            for (int i = 0; i < dsLoaiPhong.Count; i++)
+            {
+                str_dsLoaiPhong.Add(dsLoaiPhong[i].TenLoaiPhong);
+            }
+            cmbLoaiPhong.DataSource = str_dsLoaiPhong;
         }
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
