@@ -184,5 +184,10 @@ namespace QLKS
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
+        private void frmBaoCaoDoanhThu_Load(object sender, EventArgs e)
+        {
+            cmb.SelectedIndex = 0;
+        }
     }
 }

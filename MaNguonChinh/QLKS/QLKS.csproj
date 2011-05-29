@@ -142,10 +142,6 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reservation.resx">
-      <DependentUpon>Reservation.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
     <EmbeddedResource Include="SuaPhong.resx">
       <DependentUpon>SuaPhong.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -196,12 +192,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
-    </Compile>
-    <Compile Include="Reservation.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Reservation.Designer.cs">
-      <DependentUpon>Reservation.cs</DependentUpon>
     </Compile>
     <Compile Include="SuaPhong.cs">
       <SubType>Form</SubType>

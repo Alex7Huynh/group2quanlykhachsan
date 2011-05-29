@@ -66,8 +66,11 @@ namespace QLKS
         /// <param name="e"></param>
         private void frmManDinhDatPhong_FormClosing(object sender, FormClosingEventArgs e)
         {
-            ParentForm.Visible = true;
-            ParentForm.Location = this.Location;
+            if (ParentForm != null)
+            {
+                ParentForm.Visible = true;
+                ParentForm.Location = this.Location;
+            }
         }
 
         List<LOAIPHONG> dsLoaiPhong = new List<LOAIPHONG>();
