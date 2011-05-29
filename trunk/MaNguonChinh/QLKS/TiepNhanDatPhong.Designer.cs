@@ -70,6 +70,7 @@
             // cmbLoaiKhacHang
             // 
             this.cmbLoaiKhacHang.BackColor = System.Drawing.Color.White;
+            this.cmbLoaiKhacHang.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbLoaiKhacHang.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.cmbLoaiKhacHang.ForeColor = System.Drawing.Color.Black;
             this.cmbLoaiKhacHang.FormattingEnabled = true;
@@ -117,6 +118,7 @@
             // cmbLoaiPhong
             // 
             this.cmbLoaiPhong.BackColor = System.Drawing.Color.White;
+            this.cmbLoaiPhong.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbLoaiPhong.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.cmbLoaiPhong.ForeColor = System.Drawing.Color.Black;
             this.cmbLoaiPhong.FormattingEnabled = true;

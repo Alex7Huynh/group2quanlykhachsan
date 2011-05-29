@@ -30,15 +30,15 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBaoCaoDoanhThu));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.clSTT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clMP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cldoanhthu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.cmb = new System.Windows.Forms.ComboBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.BT_ThuNho = new System.Windows.Forms.Button();
             this.BT_Thoat = new System.Windows.Forms.Button();
-            this.clSTT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clMP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cldoanhthu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -59,6 +59,27 @@
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(925, 345);
             this.dataGridView1.TabIndex = 3;
+            // 
+            // clSTT
+            // 
+            this.clSTT.HeaderText = "STT";
+            this.clSTT.Name = "clSTT";
+            this.clSTT.ReadOnly = true;
+            this.clSTT.Width = 75;
+            // 
+            // clMP
+            // 
+            this.clMP.HeaderText = "Mã phòng";
+            this.clMP.Name = "clMP";
+            this.clMP.ReadOnly = true;
+            this.clMP.Width = 400;
+            // 
+            // cldoanhthu
+            // 
+            this.cldoanhthu.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.cldoanhthu.HeaderText = "Doanh thu ( x 1000 VND)";
+            this.cldoanhthu.Name = "cldoanhthu";
+            this.cldoanhthu.ReadOnly = true;
             // 
             // button1
             // 
@@ -162,27 +183,6 @@
             this.BT_Thoat.Click += new System.EventHandler(this.BT_Thoat_Click);
             this.BT_Thoat.MouseEnter += new System.EventHandler(this.BT_Thoat_MouseEnter);
             // 
-            // clSTT
-            // 
-            this.clSTT.HeaderText = "STT";
-            this.clSTT.Name = "clSTT";
-            this.clSTT.ReadOnly = true;
-            this.clSTT.Width = 75;
-            // 
-            // clMP
-            // 
-            this.clMP.HeaderText = "Mã phòng";
-            this.clMP.Name = "clMP";
-            this.clMP.ReadOnly = true;
-            this.clMP.Width = 400;
-            // 
-            // cldoanhthu
-            // 
-            this.cldoanhthu.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.cldoanhthu.HeaderText = "Doanh thu";
-            this.cldoanhthu.Name = "cldoanhthu";
-            this.cldoanhthu.ReadOnly = true;
-            // 
             // frmBaoCaoDoanhThu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -201,6 +201,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmBaoCaoDoanhThu";
             this.Text = "Báo cáo doanh thu";
+            this.Load += new System.EventHandler(this.frmBaoCaoDoanhThu_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PB_MainMenu_MouseDown);
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmBaoCaoDoanhThu_FormClosing);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.PB_MainMenu_MouseMove);
