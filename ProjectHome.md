@@ -1,0 +1,1 @@
+Phần mềm quản lý khách sạn do nhóm lớn 2 môn Xây dựng phần mềm thực hiện.
